@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Current Inventory Value Report - Linked</title>
+    <link rel="StyleSheet" href="css/Inventory_Reports.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1322136">Current Inventory Value Report - Linked </a></div>
+      <div class="Body"><a name="1366561">This report displays the total value of products on-hand that are linked to </a>sales orders, transfers, and work orders. You can select to print the linked product information for each vendor or to print only the total value of linked products for each vendor.</div>
+      <div class="Body"><span style="font-weight: bold;"><a name="1366564">Menu Path:</a></span> Inventory &gt; Reports &gt; Inventory Valuation Reports &gt; Current Inventory Value Report - Linked </div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1366565&quot;);"><a name="1366565">Selection Criteria</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1366565", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1366565", false);</script>
+      <div class="Body"><a name="1366566">Use the following criteria to limit the information to print on the report:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366567">Division</a></span>. The highest possible grouping in your company (e.g., Eastern Division, Western Division).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366568">Region</a></span>. A subset of Division - if Division is used (e.g., Southeast Region, Northwestern Region).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366569">Warehouse</a></span>. The warehouse(s) to include on the report.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366570">Department</a></span>. A subset of warehouse. Typically used to separate expenses within a warehouse (e.g., accounting, sales, warehouse).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366571">Cost Center</a></span>. A subset of Department - if Department is used. Typically used to separate expenses within a warehouse or department (e.g., shipping, receiving, outside sales, inside sales).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366572">Product</a></span>. The product(s) to include on the report. Leave blank to include all product numbers.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366573">Product Type</a></span>. The products type(s) to include on the report. Leave blank to include all product types or choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1366574">N</a></span> - Rental item.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1366575">F</a></span> - Finished good.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1366576">R</a></span> - Raw material.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1366577">B</a></span> - Both finished and raw material.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1366578">E</a></span> - Expense item.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1366579">U</a></span> - Used item.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366580">Sort by (P)rodLine (V)endor</a></span>. Determines how you want to sort the report. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1366688">P</a></span> - Sort by product line.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1366692">V</a></span> - Sort by vendor.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366687">Primary Vendor</a></span>. The primary vendor(s) to include on the report. Leave blank to include all vendors.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366704">Product Line</a></span>. The product line(s) to include on the report. Leave blank to include all product lines.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1366581">Period</a></span>. The fiscal period to include on the report (e.g., 05-01 to view the value of the inventory for January 2005).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1366592&quot;);"><a name="1366592">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1366592", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1366592", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 404.24976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1514173">Column Heading</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1514175">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514177">Product </a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514179">The linked product number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514181">Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514183">The product description.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514189">N/S-oh</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514191">The current quantity of linked on-hand inventory. </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514194">U/M</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514196">The product’s unit of measure.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514198">N/S Value</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514200">The value of the total quantity of the linked items in inventory.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1726972">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1682294&quot;);"><a name="1682294">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1682294", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1682294", false);</script>
+      <pre class="Report"><a name="1508320">Activant Prelude                                                                                          User ID SEM   Page 1    </a></pre>
+      <pre class="Report"><a name="1819710">Current Inventory Value Report - Linked As Of 16:47:48 On 11/09/07                                                                </a></pre>
+      <pre class="Report"><a name="1819711">[Sort by (P)rodLine (V)endor = “V”]                                                                                                </a></pre>
+      <pre class="Report"><a name="1819712">Warehouse Philadelphia Branch           </a></pre>
+      <pre class="Report"><a name="1819713">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819714">Product                        Description                                                    N/S-Oh U/M     N/S Value</a></pre>
+      <pre class="Report"><a name="1819715">5230                           Ruby Red 5” Balloons, Bulk 720 Per Case                            10 EA          19.00</a></pre>
+      <pre class="Report"><a name="1819716">  </a></pre>
+      <pre class="Report"><a name="1819717">Totals For Vendor 100077 Unique Industries                                                                       19.00</a></pre>
+      <pre class="Report"><a name="1819718">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819719">  </a></pre>
+      <pre class="Report"><a name="1819720">Totals For Warehouse Philadelphia Branch                                                                         19.00</a></pre>
+      <pre class="Report"><a name="1819721">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819722">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819723">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819724">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819725">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819726">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819727">30242                          GroundMaster 228D 4WD                                               1 EA      12,515.00</a></pre>
+      <pre class="Report"><a name="1819728">  </a></pre>
+      <pre class="Report"><a name="1819729">Totals For Vendor 100003 Toro Inc                                                                            12,515.00</a></pre>
+      <pre class="Report"><a name="1819730">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819731">  </a></pre>
+      <pre class="Report"><a name="1819732">Totals For Warehouse Tempe Branch                                                                            12,515.00</a></pre>
+      <pre class="Report"><a name="1819733">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819734">&nbsp;</a></pre>
+      <pre class="Report"><a name="1819735">Grand Totals                                                                                                 12,534.00</a></pre>
+      <pre class="Report"><a name="1819736">&nbsp;</a></pre>
+      <div class="Body"><a name="1726979">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Inventory Valuation Reports", "ics", "Inventory_Reports.14.55.htm#1826942");
+          WWHAddRelatedTopic("Physical Inventory", "ics", "Physical_Inventory.12.1.htm#1457833");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Inventory_Reports.14.1.htm#1322136">Inventory Reports</a>:<a class="WebWorks_Breadcrumb_Link" href="Inventory_Reports.14.55.htm#1322136">Inventory Valuation Reports</a>:Current Inventory Value Report - Linked </div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

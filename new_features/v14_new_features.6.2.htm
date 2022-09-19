@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Order Processing</title>
+    <link rel="StyleSheet" href="css/v14_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="999147">Order Processing</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd999153&quot;);"><a name="999153">Sales Order Entry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd999153", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd999153", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999160">The Administrative Hold logic was modified to include direct (04) type sales orders.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999172">Purchasing and transfer information is now saved when a sales order is placed on </a>credit hold or on administrative hold or when the order is exited without generating the purchase order or transfer. Previously, when a sales order set up for automatic purchase order and/or transfer generation was placed on hold, the purchasing and transfer information was discarded. Therefore, when the order was released from hold, the user had to re-enter the order and walk through each line to set them up again for purchasing or transfer. This process was modified so that when a sales order set up for automatic purchase order and/or transfer generation is placed on hold, the user is prompted to retain or discard the purchasing and/or transfer information. If the information is retained, the user will only have to re-access the sales order. They will not have to walk through each line item. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="999181">Previously, when a sales order set up for automatic purchase order and/or transfer </a>generation was exited without generating the purchase order or transfer, the purchasing and transfer information was discarded. This process was modified to retain that information. Therefore, the user only has to re-access the sales order. They will not have to walk through each line item.</div>
+      <div class="Body"><a name="999193">When an order that has saved purchasing/transfer information is access, you are warned </a>that auto purchasing/transfer requests exist and allowed to retain the information or discard it. If you elect to retain the information, the original purchasing/ transfer information is used for automatic purchase order and/or transfer generation. If you elect to discard the information, each line item must be reprocessed to generate the purchase order and/or transfer needed to fill the order. </div>
+      <div class="Subhead"><a name="999202">Header Level</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999208">Order Type 14 was modified when changed from/to another order type. If an order is </a>changed to a type 14, the line item’s ship complete flag is set to Y if the line has a backordered quantity. Otherwise, the flag is left as N. if an order is changed from a type 14 to a type 01, the staging information is cleared and the line items ship complete flag is set to N. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999250">There is a new </a><span class="Italics">Order Type</span> of 16 which is used for order projections. Products entered on this type order will be completely backordered and will never automatically allocate. The user will have to manually allocate inventory to the order. Basically, this order is a projection of what the customer will order of certain products throughout the year. As the customer actually orders the items, the quantity is decreased on the projected order and the items are placed on a regular order. The system will not allocate to this order type. The products on this type order will have to be manually allocated meaning that the user will have to force a pick quantity for each line item. See System Maintenance Order Processing Controls for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999265">There is a new </a><span class="Italics">Order Type</span> 17 for Manufacturer Rep orders. This type order is used in situations where the customer orders direct from the vendor and receives the material from them but you receive commission from that sale. The manufacturer rep order is entered to recognize the request. This type order is processed similar to a type 04 direct order except this type order only updates sales information; customer sales and sales analysis. It is handled similar to a direct order in that no inventory commitments are made for the items on the order but the order will still appear in Inventory Inquiry until the order is billed. Unlike a direct order, accounts receivable is not affected by this type order. Special manufacturer rep accounts must be established in the General Ledger Table before utilizing this feature. This is also known as a Letter Of Credit order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="999280">Any product entered on this type order is processed like a service item since no inventory </a>commitment is made This type order will skip calculating taxes and the other charges on the completion screen. The order may only be suspended or completed for invoicing. When the order is completed and invoiced, the general ledger should reflect the commission due calculated as the gross profit of the sale.</div>
+      <div class="Body"><a name="999292">See System Maintenance Order Processing Controls, General Ledger G/L Table </a>Maintenance, and Order Processing Reports for more information. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999301">The </a><span class="Italics">Contact</span> field was modified to append the list of employees from Customer Maintenance to the end of the list of contacts.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999315">The </a><span class="Italics">Cust Release#</span> field was modified to require entry when the customer’s <span class="Italics">Require </span><span class="Italics">Release Number</span> flag is set to Y. The change was also made to Quotation Entry. See Customer Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999334">The </a><span class="Italics">Job Number</span> field was enhanced to work with the <span class="Italics">Keep Order Job Number Index </span>file update parameter. If the file update parameter is set to Y, when the user keys in a job number the system will check for a job number previously entered that matches any word of the job number just entered. For example, if an order is entered with a job number of Habitat Project then any order entered with a job number of Habitat or Project would display this order number. The system will display all orders that match any portion of the job number entered. If no match is found, the user is taken to the next prompt on the header screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="999351">When an order is deleted off the system, the index file is updated for the job number on </a>the sales order. Either the job number record is removed from the file if the sales order was the only order number referenced or the sales order number is removed from the job number record if more than one sales order number is referenced. See System File Update Parameter Maintenance for more information.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999363">F5-Add Info - </a><span class="Italics">Pick Ticket/Packing List Language Indicator</span> is a new field that defines the dialect used when printing pick tickets and packing lists for the order. This field defaults to the Language Indicator in the customer/customer ship-to record. If the customer ship-to record does not contain a language code then the default will be the Language Indicator from the customer record. (Invoices print the product description based on the language indicator from the customer record.) See Inventory Product Maintenance; and Order Processing Customer Maintenance and Customer Ship-To Maintenance for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span class="Bold"><a name="999378">Note: this feature requires User-Form modifications that are billable on a Time &amp; </a></span><span class="Bold">Material basis. Standard forms utilize both English and French.</span></div>
+      <div class="Subhead"><a name="999384">Line Item Level</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1013995">This screen was modified to work with the </a><span class="Italics">Auto Core Charge</span> option parameter. If the <span class="Italics">Auto Core Charge</span> option parameter is set to Y, the core item is automatically placed on the order for billing when an exchange item is entered. If the <span class="Italics">Auto Core Charge</span> option parameter is set to N, you are prompted to bill the core charge, not bill the core charge, or to apply a core bank item when an exchange item is entered. If Yes is chosen, the core product is added to the sales order. If No is chosen, the core product is <span class="Bold">not</span> added to the order but you are prompted for the <span class="Italics">Due Date</span>. This is the date the core should be returned by. When the order is invoiced, a PENDING.CORES record will be created if the <span class="Italics">Keep Pending Cores</span> file update parameter is set to Y. If Core Bank Credits is chosen, the system will display the customer’s core bank records and prompts you for the core bank item to apply. The system will not accept the core bank option if the customer does not have any banked cores. Note: this process allows the quantity applied from the core bank file to be different than the line item quantity. For example, if the line item is for a quantity of one but the core bank record contains a quantity of two then the two cores are applied against the one unit. The cost difference would be posted to the <span class="Italics">Core Cost Variance</span> account. See System Maintenance File Update Parameters, System Maintenance Order Processing Option Parameters, Inventory - Inventory Adjustment Entry, Inventory Processes, General Ledger G/L Table Maintenance, Inventory Misc Code File Maintenance, Order Processing Miscellaneous Reports, Inventory - Inventory Adjustment Reports, Order Processing Inquiries, Inventory Core Inquiries, System Processes Purge Utility Menu, and System Processes Rebuild Menu for more information. A complete write-up is available on this feature.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999441">This process was modified to perform automatic product substitution for customers </a>who accept substitutions. If the customer’s <span class="Italics">Accept Substitutes</span> flag is set to Y, one of the following steps will occur when a product that has substitutes defined is entered in sales order entry. See Inventory Product Maintenance for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="999458">If the original product’s </a><span class="Italics">Product Substitution Type</span> is set to B, the system will automatically replace the original product with the substitute product even if the original product has available quantity. Pricing will be based on the substitute product. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="999478">If the original product’s </a><span class="Italics">Product Substitution Type</span> is set to A or P then the system will determine if the quantity available for the original product is greater than 1.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="999503">If it is then you are taken into the line item detail screen. When the line item detail screen </a>is exited, the system will determine if there is a backordered quantity.</div>
+      <div class="Body"><a name="999515">If there is, the system will automatically replace the original product with the first substitute </a>product with enough available inventory to meet the requirement. If one is not found, no substitution will take place and the original product will remain on the order. Pricing for the line item will depend on the substitution type. If the substitution type is A then pricing will be based on the substitute product. If the substitution type is P then pricing will be based on the original product.</div>
+      <div class="Body"><a name="999532">If there is not a backordered quantity then the line item remains as is.</a></div>
+      <div class="Body"><a name="999541">If the quantity available for the original product is less than or equal to 1, then the system </a>will automatically replace the original product with the first substitute product with available inventory before taking you into the line item detail screen. Note: the replacing product may or may not have enough available inventory to meet the need. Pricing for the line item will depend on the substitution type. If the substitution type is A then pricing will be based on the substitute product. If the substitution type is P then pricing will be based on the original product.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999562">If the original product’s </a><span class="Italics">Product Substitution Type</span> is set to S or is null then you are taken into the line item detail screen where Sub is displayed to let you know the product has substitutes. You must manually enter the <span class="Italics">F6-Subs</span> screen to choose the substitute product. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="999584">If there is a substitution and if the original product contains substitution comments, those </a>comments are added to the order when the line item detail screen is exited.</div>
+      <div class="Subhead"><a name="999596">Line Item Detail Level</a></div>
+      <div class="Body"><a name="999602">The </a><span class="Italics">GP%</span> and <span class="Italics">Profit</span> fields were modified to disallow access if the user’s Display Cost field is set to N (to not display cost). Quote order entry will work the same way.</div>
+      <div class="Subhead"><a name="999618">F5-Add Info</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="999624">Cust P/O Line#</a></span> was modified to work with the <span class="Italics">Require P/O Line Number</span> flag in Customer Maintenance. If the customer’s flag is set to Y, the user is required to manually enter a customer P/O line number for each line item. This flag will work the same way in Quote Order Entry. See Customer Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="999645">Customer Acct Code</a></span> is a new field that allows you to assign a customer’s account code to the line item. Any sales order or quote entered for a customer whose <span class="Italics">Require </span><span class="Italics">Acct Code</span> flag is set to Y will require you to enter the customer account code. When exiting the line item detail screen, the system will check for an Account Code. If the line item does not contain one, a warning is displayed and you are automatically taken into the additional information screen to enter the code. You may not continue till an account code is entered. This logic only works if the line item detail screen in SOE and QOE is accessed. It will not work with Product Tagging and such features because the line item is automatically created without accessing the line item detail screen. You could, however, manually access each line item and enter the account code. If the sales order/quote has multiple lines, the <span class="Italics">Customer Acct Code</span> field will default to the code used on the previous line when you walk through the field.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="999665">This field also has the ability to do pattern matching against the strings identified in the </a>customer file and uses the following logic to do so. </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="999677">If the customer has one or more account code patterns, then the account code </a>entered is checked against these patterns.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="999689">If the entered account code does not match any of the identified patterns, and the </a>customer has a master customer assigned which has one or more account code patterns, then the account code is check against the account code patterns in the master customer record.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="999698">If a pattern match is not found in either of the above, then the user is informed that </a>a match has not been made against the valid account code patterns for that customer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="999707">If the customer’s </a><span class="Italics">Requires Acct Code</span> flag is set to Y, then the you are forced back to the <span class="Italics">Customer Acct Code</span> field until a valid match can be made against the account code patterns.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="999726">See Customer Maintenance for more information.</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="999738">Vendor Contract#</a></span> is a new field that allows you to define the vendor’s contract number to be used with purchase order EDI transmissions. If the sales order line item is linked to a purchase order, this information will carry over to the linked purchase order to then be used in EDI transmissions. This field defaults to the value in the price matrix if the sales order line item is priced using a price matrix. It may be overridden till the line item is linked to a purchase order. At which time, you can no longer access this field. When sourcing to a purchase order, this information only carries over to the purchase order if a new purchase order is created from the sourcing procedure. Note: this information is stored in the P/O line record but is not available for review in the purchase order. See Price Matrix Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="999753">Vendor Quote#</a></span> is a new field that allows you to define the vendor’s quote number to be used with purchase order EDI transmissions. If the sales order line item is linked to a purchase order, this information will carry over to the linked purchase order to then be used in EDI transmissions. This field defaults to the value in the price matrix if the sales order line item is priced using a price matrix. It may be overridden till the line item is linked to a purchase order. At which time, you can no longer access this field. When sourcing to a purchase order, this information only carries over to the purchase order if a new purchase order is created from the sourcing procedure. Note: this information is stored in the P/O line record but is not available for review in the purchase order. See Price Matrix Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="999765">Vendor Salesman#</a></span> is a new field that allows you to define the vendor’s salesman number to be used with purchase order EDI transmissions. If the sales order line item is linked to a purchase order, this information will carry over to the linked purchase order to then be used in EDI transmissions. This field defaults to the value in the price matrix if the sales order line item is priced using a price matrix. It may be overridden till the line item is linked to a purchase order. At which time, you can no longer access this field. When sourcing to a purchase order, this information only carries over to the purchase order if a new purchase order is created from the sourcing procedure. Note: this information is stored in the P/O line record but is not available for review in the purchase order. See Price Matrix Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="999777">N/S Additional Information screen (displayed for ‘*’ products)</a></div>
+      <div class="Body"><span class="Italics"><a name="999787">Cube</a></span> is a new field that allows you to define the cube weight for the non-stock asterisk product. This value is used in purchase order entry and conversion in calculating the total cumulative purchase order cube. See Purchasing Purchase Order Entry for more information. </div>
+      <div class="Subhead"><a name="999794">F6-Totals</a></div>
+      <div class="Body"><a name="999800">The </a><span class="Italics">Profit</span> and <span class="Italics">GP%</span> fields were modified to disallow access if the user’s Display Cost field is set to N (to not display cost). Quote order entry will work the same way.</div>
+      <div class="Subhead"><a name="999816">F8-Order Pad</a></div>
+      <div class="Body"><a name="999822">The </a><span class="Italics">Price</span> field was modified to check the user’s <span class="Italics">Price Override Code</span> in User Id Maintenance. If that code is set to N, you are not allowed into the <span class="Italics">Price</span> field to change the price. If that code is not set to N, then you are allowed into the <span class="Italics">Price</span> field to change the price. </div>
+      <div class="Subhead"><a name="999846">Completion Screen</a></div>
+      <div class="Body"><a name="999852">The tax flags for the freight and additional charges fields were removed from this screen </a>and placed on the F5-Tax Jur &gt; F5-Tax Flags screen. The system was modified to calculate tax on these fields according to the jurisdiction. In other words, the flag was changed from a single flag to a flag per jurisdiction for each field. For example, an order may have two jurisdiction; DAL and TXS. The <span class="Italics">Delivery</span> charge may be taxable for jurisdiction DAL but not for TXS. Previously, you could not split this out. Either the charge was taxed or it wasn’t. But now we can tax the charge for jurisdiction DAL and not for jurisdiction TXS.</div>
+      <div class="Subhead"><a name="999864">F5-Tax Jur</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999870">This screen was modified to display the </a><span class="Italics">Taxable</span> and <span class="Italics">Nontaxable</span> amount per jurisdiction. These fields display the amount of the order that is taxable or nontaxable taking into account freight, handling, and etc.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999886">F5-Tax Flags was moved here from the Completion screen. This screen was modified </a>from its original version and now displays each tax jurisdiction for the order and whether each of the fields is taxable or nontaxable. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="999896">F7-Tax Flags</a></span> was moved to the <span class="Italics">F5-Tax Jur</span> screen in a modified form. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd999912&quot;);"><a name="999912">Acknowledgment Printing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd999912", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd999912", false);</script>
+      <div class="Body"><a name="999918">The </a><span class="Italics">Print/Fax/Both</span> field defaults to the value in the order. This field was modified to check the customer’s <span class="Italics">Fax Acknowledgment</span> flag if the <span class="Italics">Acknowledge</span> <span class="Italics">Flag</span> in the sales order is set to N. If the <span class="Italics">Fax Acknowledgment</span> flag in the customer record is set to N, this field defaults to P. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd999948&quot;);"><a name="999948">Release Confirmation Entry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd999948", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd999948", false);</script>
+      <div class="Body"><a name="999955">The freight prompts displayed when the header screen is exited was modified to be more </a>intelligent. If Inbound Freight for the freight terms code is Y, the user is prompted for inbound freight if a value is not entered for inbound freight on the header. If the Outbound Freight flag for the freight terms code is set to Y, the user is only prompted for outbound freight if the ship-via does not contain a freight charge table and if a value is not entered for outbound freight on the header screen. If the ship-via contains a freight charge table, the user is not prompted for freight because the system will automatically calculate freight for the release. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd999967&quot;);"><a name="999967">Invoice Printing (Processing)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd999967", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd999967", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999973">This process was modified to capture, for each invoice, amounts eligible for a rebate. </a>If the customer is assigned to a rebate program, the system will calculate and store the total merchandise amount that is eligible for a rebate. This amount excludes all non-merchandise charges such as taxes and freight and also any merchandise amounts that are excluded from the rebate program. The system will also capture and store ineligible product amounts (products excluded from the rebate program), rebate period indicator (the Credit Report Freq. from Rebate Maintenance), and the rebate program the customer is assigned to. These fields are used in Cash Receipts Entry and with rebate reports to calculate the final rebate amount. See Customer Rebate Maintenance, Accounts Receivable Cash Receipts Entry, Accounts Receivable Customer Rebate Maintenance, and Order Processing Reports for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="999985">F6-Invoice Batch Reprint</a></span> allows you to batch reprint or fax invoices. This allows you to print or fax multiple invoices at once instead of having to print or fax them separately. The lookup on Invoice# allows you to view open, overdue, or all invoices for a customer. Invoices for multiple locations and customers may be entered. Note: you may only print invoices for multiple customers. Batch faxing is only allowed for one customer at a time. Batch print uses the form queue entered by the user. Continuous printing uses the printer in Warehouse Maintenance. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1000005&quot;);"><a name="1000005">Quotation Subsystem</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1000005", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1000005", false);</script>
+      <div class="Subhead"><a name="1000012">Quotation Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000018">Convert To Order Type</a></span> is a new field in the Standing Quote Maintenance screen that is displayed when the order type is set to 04 for Standard Quote. This field defines the type of order created by the conversion process. A standard quote cannot be converted to an order type 09, 10, 11, 16, or 17. You are also not allowed to enter a disallowed order type defined for the customer in Customer Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000035">The </a><span class="Italics">Contact</span> field was modified to append the list of employees from Customer Maintenance to the end of the list of contacts.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000046">The </a><span class="Italics">Job Number</span> field was enhanced to work with the <span class="Italics">Keep Quote Job Number Index </span>file update parameter. If the file update parameter is set to Y, when the user keys in a job number the system will check for a job number previously entered that matches any word of the job number just entered. For example, if a quote is entered with a job number of Habitat Project then any quote entered with a job number of Habitat or Project would display this quote number. The system will display all quotes that match any portion of the job number entered. If no match is found, the user is taken to the next prompt on the header screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1000063">When a quote is deleted off the system, the index file is updated for the job number on the </a>quote. Either the job number record is removed from the file if the quote was the only quote number referenced or the quote number is removed from the job number record if more than one quote number is referenced. See System File Update Parameter Maintenance for more information.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000075">F5-Add Info - </a><span class="Italics">Language Indicator</span> is a new field that defines the dialect used when printing quotes. This field defaults to the Language Indicator in the customer/ customer ship-to record. If the customer ship-to record does not contain a language code then the default is the Language Indicator from the customer record. See Inventory Product Maintenance; and Order Processing Customer Maintenance and Customer Ship-To Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span class="Bold"><a name="1000090">Note: this feature requires User-Form modifications that are billable on a Time &amp; </a></span><span class="Bold">Material basis. Standard forms utilize both English and French.</span></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1000096&quot;);"><a name="1000096">Commission Subsystem - Commission Matrix Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1000096", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1000096", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000104">There is a new matrix type of 12 for Customer/Ship-To/Product Group. User is </a>prompted for sales type (WHS or DIR), customer number, ship-to number, and product group. The ship-to field is not required but the others are. The product group is defined in the Major Group Code. See Inventory Maintenance for more information on product groups.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000120">F5-Add Rep</a></span> is a new option that allows you to define salesmen that will receive a commission in addition to the regular salesmen who receive commission for orders meeting the matrix. These salesmen are paid commissions along with the sales reps entered on the main screen and/or the sales reps defined in the sales order. For example, this may be used to pay your managers a commission. You may define as many salesmen as you want along with the method to calculate the commission. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1000130&quot;);"><a name="1000130">Manifest Subsystem</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1000130", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1000130", false);</script>
+      <div class="Body"><a name="1000137">This menu option was renamed from UPS Subsystem to the more generic title of Manifest </a>Subsystem. </div>
+      <div class="Body"><a name="1000143">This menu option is now controlled by the company module flag. If the </a><span class="Italics">Manifest </span><span class="Italics">Subsystem</span> module flag is set to Y, this menu option will display the UPS Subsystem menu. If the <span class="Italics">Manifest Subsystem</span> module flag is set to P, this menu option provides a link to the PSS manifest interface. If the <span class="Italics">Manifest Subsystem</span> module flag is set to N, this menu option is no longer displayed. See System Company Maintenance for more information.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1000164&quot;);"><a name="1000164">Processes - Release Pick Tickets</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1000164", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1000164", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000172">Sales Orders</a></span>, <span class="Italics">Work Orders</span>, and <span class="Italics">Transfers</span> are three new prompts that allows you to specify what documents to release. Based on how these flags are set (Y/N), the process will release the appropriate documents. The default for these fields is Y.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000193">Printer Form Queue</a></span> is a new prompt that allows you to redirect the print job for sales orders, transfers, and/or work orders to another form queue. These prompts are only accessible if this process is ran for a warehouse and if that warehouse is set up for continuous printing. For example, if in warehouse 10 sales order pick tickets are set up to print continuous but work order and transfer tickets are not, then you will only be prompted for a form queue for sales orders when this process is ran for warehouse 10. If the form queue is left blank, the standard default will apply. Note: if a pick ticket process that meets all the other requirements to prompt for a form queue is not selected, the system will skip the prompt. Using the previous example, if <span class="Italics">Sales Orders </span>is set to N then you will not be prompted for a form queue. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1000209">This field was modified so that if a form queue is entered, the system will check to see if </a>it is set up in Form Queue Maintenance. If it is, it will then verify that the form queue is valid for the specified warehouse. If the form queue is not established in Form Queue Maintenance, the system will print to that form queue without validating the warehouse. See System Maintenance Printer Set-up for more information. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1000221&quot;);"><a name="1000221">Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1000221", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1000221", false);</script>
+      <div class="Subhead"><a name="1000228">Customer Maintenance</a></div>
+      <div class="Subhead"><a name="1000234">F6-A/R</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000240">D&amp;B Number</a></span> is a new field used to define the customer’s D-U-N-S number assigned by Dun &amp; Bradstreet. This distinctive nine-digit identification sequence is an internationally recognized common company identifier in EDI and global electronic commerce transactions. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000255">D&amp;B PayDex Score</a></span> is a new field used to define the customer’s PayDex score given by Dun &amp; Bradstreet. This score is based on a 100-point scoring system that compares payment to terms of sale and scores the overall manner of payment. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000267">Override Exch Rate</a></span> is a new field that allows you to enter an overriding exchange rate for a customer. This field is only valid if the customer has a currency type other than native. If an overriding exchange rate is entered, it will indicate that there is a negotiated exchange rate for this customer and this rate will override the Daily Exchange Rate or the Currency Rate Table on sales orders and accounts receivable transactions for this customer. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1000277">F7-Order</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000283">Instructions </a></span>were moved to F10-Action &gt; Add’l Options on the main screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000300">Language Indicator</a></span> is a new field that defines in which dialect the product description will print on pick tickets, packing lists, quotes, and invoices for the customer. For example: if a customer is set to 2 for French, then the French description entered in Product Maintenance will print on the forms previously mentioned. This field is the default but may be overridden in sales order entry or in quotation entry. The dialect can also be defined at the ship-to level. See Inventory Product Maintenance; and Order Processing Customer Ship-To Maintenance, Sales Order Entry, and Quotation Entry.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span class="Bold"><a name="1000314">Note: this feature requires User-Form modifications that are billable on a Time &amp; </a></span><span class="Bold">Material basis. Standard forms utilize both English and French.</span></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000320">Require Acct Code</a></span> is a new field that determines if an accounting code must be entered for each sales order or quote line item for the customer. If this flag is set to N, then an accounting code may be entered for line items but it is not required. If this flag is set to Y, all line items on sales orders and quotes for the customer will require an accounting code to be entered. When exiting the line item detail screen, the system will check for an Accounting Code. If the line item does not contain one, a warning is displayed and you are automatically taken into the additional information screen to enter the code. You may not continue till an accounting code is entered. This logic only works if the line item detail screen in SOE and QOE is accessed. It will not work with Product Tagging and such features because the line item is automatically created without accessing the line item detail screen. You could, however, manually access each line item and enter the accounting code.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1000341">You also have the ability to enter a pattern (similar to P/O Number logic) to match the </a>accounting codes. This insures that a customers accounting code is entered correctly in sales order entry and quote order entry by checking a list of customer specified account code patterns for a match. Installing patterns in a customer’s record informs the system that any customer account code entered in sales order entry or quote order entry must be validated as a correct pattern. The <span class="Italics">Require Acct Code</span> field must be set to Y to access the screen where these codes are entered. After that you may turn the field off if the customer does not require an accounting code on every order but still perform pattern matching should the operator enter an accounting code. This means that pattern matching can be performed with or without requiring the accounting code to be entered. Patterns may include alpha, numeric, both alpha and number, dashes, and strings. Though unlimited patterns may be entered, only one pattern should be entered per line. Patterns may be entered in using the standard PICK pattern matching methodology. See Sales Order Entry for more information.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000365">The </a><span class="Italics">Customer Job Number</span> field was moved here from the F8-Contacts screen. This field allows you to enter a default job number to be used in sales order and quotation entry. It was modified to validate against the CUSTJOB file. In other words, the job number must be established in Customer Job Maintenance before entering it in this field. See General Information Job Accounting for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000381">Require Release Number</a></span> is a new field that defines if a release number is required on quotes and sales orders for the customer. If this flag is set to Y, any quote or sales order for the customer must contain a value in the <span class="Italics">Cust</span> <span class="Italics">Release#</span> field on the header screen before you can exit the screen and finish entering the quote or sales order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000399">Require P/O Line Number</a></span> is a new field that defines if the customer’s P/O line number must be manually entered in Sales Order Entry and Quote Order Entry. If this flag is set to N, the system will default the <span class="Italics">Cust P/O Line#</span> field to a sequential number for each line item. If this flag is set to Y, the <span class="Italics">Cust P/O Line#</span> field is not defaulted but instead the user is required to enter a value for each line item. See Sales Order Entry Line Item Level for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1000423">F5-Add Info</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000429">The </a><span class="Italics">Default Order Type</span> field was moved to the F7-Order &gt; F10-Action &gt; Order Types screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000447">The </a><span class="Italics">Print Price Label</span> field was moved into the Customer Label Information screen and is located in F10-Action &gt; Addl Options &gt; Label Information or in F7-Order &gt; F10-Action &gt; Labels. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1000468">F7-Whsing</a></div>
+      <div class="Body"><span class="Italics"><a name="1000474">Primary Case Picking</a></span> is a new field that determines if the customer requires primary full case picking considered first in the bin allocation hierarchy when using Advanced Warehousing Bin Allocation. </div>
+      <div class="Subhead"><a name="1000482">F10-Action </a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000488">Routes - </a><span class="Italics">Addl Collection Amt</span> is a new field that defines an additional collection amount for the customer. This is a user maintainable field that will only be displayed if warehousing and route processing are being used. If warehousing and route processing are used, this amount will display on the driver's manifest. If warehousing and route processing are not used, then this is only an informational field and will be accessed solely by user defined reports. See Warehousing Segment Processing for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1000506">Order Types</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000512">Disallowed Order Types</a></span> is a new field that defines the order types that are not valid for a customer and therefore, cannot be used in Sales Order Entry. If an order type is defined in this field, it cannot be used in sales order entry for the customer. Multiple order types may be entered. Order type 06 Confirmation cannot be disallowed. When disallowing consignment orders, both order type 07 Regular Consignment and 08 Confirmation Consign must be listed. You are not allowed to limit only one type of consignment order. Either disallow both consignment order types or allow both. When disallowing order type 02 Ship Complete, you must also include type 13 Ship Backorder Complete. The reason being that a type 13 order becomes a type 02 order after the first invoice cycle. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000554">RSO Default Order Type</a></span> is a new field that defines the default order type to be used in Remote Sales Order Entry for the customer. The system will first check to see if the customer has a default remote order type set. If not, the default remote order type set at the system level will be used. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1000565">F8-Contact</a></div>
+      <div class="Body"><a name="1000571">The </a><span class="Italics">Customer Job Number</span> field was moved to the F7-Order screen.</div>
+      <div class="Subhead"><a name="1000579">F10-Action - Addl Options</a></div>
+      <div class="Body"><span class="Italics"><a name="1000589">Instructions </a></span>were moved here from the F7-Order screen.</div>
+      <div class="Subhead"><a name="1000596">Customer Ship-To Maintenance &gt; F5</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000604">Language Indicator</a></span> is a new field that defines in which dialect the product description will print on pick tickets, packing lists, quotes, and invoices for the customer ship-to location. This field is the default but may be overridden in sales order entry or in quotation entry. If the Ship-To record does not contain a language code, the Language Indicator from the customer record is used. For example: a Canadian customer needs to see product descriptions in French but they have one location that needs to see descriptions in English. That location is set up with the English language code and the other ship-to locations are left blank which means they will see descriptions in French as defined by the language code in the customer record. See Inventory Product Maintenance; and Order Processing Customer Maintenance, Sales Order Entry, and Quotation Entry.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span class="Bold"><a name="1000617">Note: this feature requires User-Form modifications that are billable on a Time &amp; </a></span><span class="Bold">Material basis. Standard forms utilize both English and French.</span></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000623">Distribution Center Ship To</a></span> is a new field that defines the customer’s distribution center for the ship-to location. This value must be a valid ship-to number for the customer. This field is only used with shipping labels which can be modified to print the ship-to address (address for the distribution center) and the For-Store address (address for the current ship-to location). An example of how this field could be used would be if a customer’s locations are able to place orders but shipments are only made to the customer’s distribution centers. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1000642">Misc Code Files</a></div>
+      <div class="Body"><span class="Italics"><a name="1000648">Price Override Reason Codes</a></span> is a new option that allows you to set up and maintain codes used in sales order entry and quotation entry to define why a price was changed. This code is prompted for when a price is overridden in sales order entry and quotation entry if the <span class="Italics">Price Override Reason Prompt</span> option parameter is set to Y and the product is not an asterisk non-stock item. See Order Processing Listings, Order Processing Reports, and System Order Processing Option Parameters for more information. </div>
+      <div class="Subhead"><a name="1000661">Customer Control Files</a></div>
+      <div class="Subhead"><a name="1000667">Ship Via Codes - F6-Add Info</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000675">The options for the </a><span class="Italics">Prepaid Freight</span> field were modified. The Y option was changed to only prompt for inbound freight when the inbound freight flag for the terms code is set to Y. This option does not take the <span class="Italics">Prepaid Frt Minimum</span> into account for inbound freight. A new option of C was added to always prompt for inbound freight along with outbound freight when the order is less than the <span class="Italics">Prepaid Frt</span> <span class="Italics">Minimum</span>. This option will prompt the user for inbound freight if the order is less than the minimum even if the outbound freight flag for the terms code is set to N. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000711">Calc Frt On Credit</a></span> is a new field that determines if the ship-via freight table should be to calculate a freight amount on credit type sales orders. If this flag is set to Y, a freight amount will be calculated and added to the credit memo. If this flag is set to N, a freight amount will not be calculated or added to the credit memo. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1000729">Customer Rebates</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000735">Credit Report Freq.</a></span> has a new option of S for Semi-Monthly meaning that the customer rebate report can now be ran semi-monthly. See Order Processing reports for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000752">Eligible Days To Pay</a></span> is a new field that defines the number of days the invoice must be paid in to be eligible for a rebate. This is the number of days from the invoice date the invoice must be paid to receive a rebate. Cash Receipts Entry will calculate rebates on the amounts paid on invoices  in the eligible days. Amounts paid after this number of days will not be eligible for a rebate. See Accounts Receivable Cash Receipts Entry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000762">Exclusion Type</a></span> is a new field that defines the product group that will be excluded from the current rebate program. Options are G for Product Price Group, L for Product Line, P for Product, and V for Vendor. This field and the <span class="Italics">Exclusion List</span> field are used when there are products that are not eligible for a rebate. The combination of these two fields defines those products that are not eligible for rebates. See Invoice Processing for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000790">Exclusion List</a></span> is a new field that defines which products are excluded from the rebate program. Enter Vendor Number, Product Line, Product Price Group Number, or Product Number depending on how the <span class="Italics">Exclusion Type</span> field is set. Multiple entries may be made. F3-Lookup and validation is provided per <span class="Italics">Exclusion Type</span>. In other words, if the type is set to Vendor, then the F3-Lookup and validation is on the Vendor file. See Invoice Processing for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1000804">Order Entry Control Files - Override Shipping Whse Matrix</a></div>
+      <div class="Body"><a name="1000812">Added a new matrix type of 3 for Vendor/Selling Whse Override which allows you to </a>override the default shipping warehouse for a vendor/selling warehouse combination. The system looks at a product’s primary vendor to determine if it is applicable for this matrix type. The selling warehouse is pulled from the sales order. All products for the vendor sold from the defined selling warehouse will default to the defined shipping warehouse.</div>
+      <div class="Subhead"><a name="1000824">Pricing Structures</a></div>
+      <div class="Subhead"><a name="1000830">Price Matrix Maintenance</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000836">Modified the </a><span class="Italics">Mtd</span> field (for both price and rebate) to allow a $ method for matrix types that are not product . This allows you to use net pricing even when there is no product identified. When the <span class="Italics">Mtd</span> field is set to $, the system will determine if a product is involved. If not, you are warned that you are choosing net pricing on a non-product matrix. You may continue or return back to the method prompt.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000860">Added the ability to password the F5-Purchase Cost function key. This means that if </a>a password is set up, the user will be prompted for the password when this function key is selected. See System Program &amp; Menu Passwords for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000869">Previous Price</a></span> was moved to the F10-Action bar.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000879">F6-Commission Cost</a></span> is a new function key used to define a cost to use for commissions when the corresponding matrix is used to price a line item in Sales Order Entry. Commission cost for the line item is calculated based upon the <span class="Italics">Cost Method</span>. Options are * for percentage of a price/cost field, $ for a cost, or T for table. If a table is used, you are limited to a discount break table that uses an $ or * method. This only affects the commission cost and not the accounting cost. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1000911">F10-Action</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000917">Vend Info</a></span> is a new option that allows you to enter a <span class="Italics">Vendor Contract#,</span> a <span class="Italics">Vendor </span><span class="Italics">Quote#</span>, and a <span class="Italics">Vendor Salesman#</span> for the current matrix line item. If a sales order line item is priced using a price matrix that contains vendor information, then these fields are pulled into the line item. If the sales order line item is then linked to a purchase order, this information will carry over to the linked purchase order to then be used in EDI transmissions. This information is stored in the P/O line record but it cannot be viewed in purchase order entry. When sourcing to a purchase order, the vendor information only carries over to the purchase order if a new purchase order is created from the sourcing procedure. See Sales Order Line Item Level for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1000936">Previous Price</a></span> was moved here from the F6 function key on the main screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1000946">Price Matrix Mass Copy</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000952">The From </a><span class="Italics">Contract Number</span> was modified to only copy matrix line items that contain the entered contract number. Previously, the system would copy the entire matrix if one of the lines contained the contract number. Now the system will only copy the lines that contain the contract number. The reverse is also true. If this field is left blank, the system will only copy the lines that do not contain a contract number. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1000966">Added logic to the </a><span class="Italics">OV</span> field in the From section though it still has nothing to do with the select. This field is now really for the To section and determines the value of the OV field in the newly created matrices but only if the newly created matrices are for contract pricing. Otherwise, this field has no bearing on the new matrices.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1000977&quot;);"><a name="1000977">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1000977", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1000977", false);</script>
+      <div class="Subhead"><a name="1000984">History Sales Order Inquiry</a></div>
+      <div class="Body"><a name="1000990">For core items, the F10-Examine screen will now display the adjustment number that was </a>applied to the line item’s pending core record. See Order Processing Sales Order Entry Line Item Level, Inventory Processes Core Bank Issues Entry, Inventory Processes Automatic Core Application Process, and Inventory - Inventory Adjustment Entry for more information.</div>
+      <div class="Subhead"><a name="1000998">Customer Info Inquiries</a></div>
+      <div class="Body"><span class="Italics"><a name="1001004">Customer Product Cross-Reference Inquiry</a></span> is a new inquiry that displays all customer and customer product numbers set up for a product number. </div>
+      <div class="Subhead"><a name="1001011">Customer Sales History Inquiry </a></div>
+      <div class="Body"><a name="1001017">Added the </a><span class="Italics">F7-Select ShipTo</span> function key to give the user the ability to single out a ship-to for review. When this function key is selected, user is prompted for a Ship-To number. After the ship-to number is entered, press F2-Save to return to the inquiry screen. Only orders for the selected ship-to are displayed. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001025&quot;);"><a name="1001025">Listings - Miscellaneous Listings</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001025", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001025", false);</script>
+      <div class="Body"><span class="Italics"><a name="1001032">Price Override Reason Codes</a></span> is a new option that provides a listing of price override reason codes. This list may be printed to the screen or to the printer. See Order Processing Misc Code Files Maintenance for more information.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001039&quot;);"><a name="1001039">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001039", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001039", false);</script>
+      <div class="Subhead"><a name="1001046">Daily Order Detail Reports</a></div>
+      <div class="Body"><a name="1001052">The </a><span class="Italics">Price Override Audit</span> report was modified to display the price override reason code for each line on a sales order whose price was overridden. Total extensions by warehouse have also been added for the original price, revised price, and cost columns. See Order Processing Misc Code Files Maintenance and System Order Processing Option Parameters for more information.</div>
+      <div class="Subhead"><a name="1001060">Daily Accounting Reports</a></div>
+      <div class="Body"><span class="Italics"><a name="1001066">Manufacturers Rep Register</a></span> is a new report that lists all manufacturer rep orders invoiced on a user specified date and sorts by warehouse by invoice number. This report may also be run for a currency if the multiple currency flag is turned on. In this case, the report sorts by warehouse by currency by invoice number. See Sales Order Entry Header Level for more information.</div>
+      <div class="Subhead"><a name="1001073">Monthly Accounting Reports</a></div>
+      <div class="Body"><span class="Italics"><a name="1001079">Manufacturers Rep Invoice Register</a></span> is a new report that lists all manufacturer rep orders invoiced in a user specified fiscal period and sorts by warehouse by invoice date by invoice number. This report may also be run for a currency if the multiple currency flag is turned on. In this case, the report sorts by warehouse by currency by invoice date by invoice number. See Sales Order Entry Header Level for more information.</div>
+      <div class="Subhead"><a name="1001086">Miscellaneous Reports</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001099">The </a><span class="Italics">Customer Rebate Detail Report</span> is a new report that prints customer invoices eligible for a rebate for a given period of time and for a <span class="Italics">Credit Report Freq</span>. User is prompted for a customer number, rebate program number, rebate period (<span class="Italics">Credit </span><span class="Italics">Report Freq</span>), and a range of invoice dates. The rebate period and date range must be entered. User is also prompted for a report description that will print on the report. This allows you to define in more detail, what the report is for. This does not replace the report description but allows you to add to it. For example, the standard report description is Customer Rebate Detail Report. You could set this field to IHS Rebates – 1998. This would print on the fourth line of the header. This report displays for each invoice the invoice date, the invoice amount, the total merchandise amount, the amount eligible for a rebate, the amount paid  in the <span class="Italics">Eligible Days to Pay</span> days from the Invoice Date, the amount paid after the <span class="Italics">Eligible Days to Pay</span> days from the Invoice Date has passed, the unpaid balance, and the rebate amount. This report sorts and breaks by customer name. See Order Processing Invoice Processing and Accounts Receivable Cash Receipts Entry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001123">The </a><span class="Italics">Customer Rebate Summary Report</span> is a new report that prints customer rebate information for a given period of time and for a <span class="Italics">Credit Report Freq</span>. User is prompted for a customer number, rebate program number, rebate period (<span class="Italics">Credit Report Freq</span>), and a range of invoice dates. The rebate period and date range must be entered. User is also prompted for a report description that will print on the report. This allows you to define in more detail, what the report is for. This does not replace the report description but allows you to add to it. For example, the standard report description is Customer Rebate Summary Report. You could set this field to 1998 IHS Rebates – Summary. This would print on the fourth line of the header. This report displays for each customer the total amount for all invoices, total of merchandise amounts, total of amounts eligible for a rebate, total of amounts paid  in the <span class="Italics">Eligible Days to Pay</span> days from the Invoice Date, total of amounts paid after the <span class="Italics">Eligible Days to Pay</span> days from the Invoice Date has passed, total unpaid balance, and the total rebate amount. This report sorts and breaks by customer name. See Order Processing Invoice Processing and Accounts Receivable Cash Receipts Entry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Italics"><a name="1001144">Core Reports</a></span> is a new option to this screen.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001151">Pending Cores Due Report</a></span> is a new report that displays pending core records created because an exchange product was invoiced and the <span class="Italics">Bill Core Charge</span> flag was set to N. You are prompted for a beginning and ending customer number, warehouse, and a core due date. Any record with a due date less than or equal to this date would be displayed. This report will display for each warehouse the customer number, core product, order number, invoice number, invoice date, due date, the core quantity, the received date if applicable, and the received quantity if applicable. This report breaks and totals by warehouse by customer. See Sales Order Entry Line Item Level and System Maintenance Order Processing Option Parameters for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001170">Core Returns Due Aging Report</a></span> is a new report that displays pending cores that have not been received yet. It gives the user an idea as to what they have remaining to be returned and when it is expected to come in. This report prompts for a customer range, As Of date, and/or Core Code. If a customer range is not entered then all customers will be selected. The report displays when the cores are due or how long they are past due based on the due date relative to the entered As Of date. In other words, the data is put in the appropriate columns based on the <span class="Italics">As of Date</span> entered at run time and the <span class="Italics">Due Date </span>of the cores. For example, if a pending core record’s <span class="Italics">Due Date</span> is 9/1/99 and you enter an <span class="Italics">As Of Date</span> of 7/15/99 then the item would appear in the Future 31-60 bucket. But if you enter an <span class="Italics">As Of Date</span> of 8/15/99 then the item would appear in the Current bucket. Likewise, if 10/15/99 were entered, the item would appear in the Past Due 31-60 bucket. This report sorts by customer by core type code by product number and page breaks on customer. See Sales Order Entry Line Item Level for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001192">Core (Issues) Sold on Exchange Report</a></span> is a new report that displays core items sold on exchange. In other words, this report displays pending cores records created because an exchange product was invoiced and the <span class="Italics">Bill Core Charge</span> flag was set to N. You are prompted for warehouse, customer number, and an invoice date range. This report will display for each customer the invoice number, invoice date, order number, and ship date. For each invoice, the exchange product number, core product number, ship quantity, core charge, quantity applied, last applied date, quantity due, and the extended charges are displayed. This report sorts and breaks by customer by invoice number and totals on invoice number and customer number. See Sales Order Entry Line Item Level for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v14_new_features.6.1.htm#999147">V14 New Features</a>:Order Processing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

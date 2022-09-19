@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Cycle Counting</title>
+    <link rel="StyleSheet" href="css/opt_whs.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1110605">Cycle Counting</a></div>
+      <div class="Body"><a name="1110606">The cycle count system performs periodic physical counts at the bin level a given number </a>of times per year. A nightly process generates queue records with the appropriate number of bins to count in a given day. The radio frequency cycle count entry then directs the counter on what to count and records the counts entered. The goal is to undertake physical counts on a daily basis rather than performing annual or semi-annual counts of the entire warehouse. Emergency cycle counts are created when the system detects a potential error such as a negative bin quantity or a change during picking. The maintenance flags and procedures for cycle counts and emergency cycle counts are included in this document. Refer to <a href="javascript:WWHClickedPopup('whs', 'opt_whs.1.2.htm#1111433', '');">Cycle Count Options</a> for more information on setting up your warehouse for Cycle Counting.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110607&quot;);"><a name="1110607">Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110607", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110607", false);</script>
+      <div class="Subhead"><a name="1110608">Inventory Parameters</a></div>
+      <div class="Path"><a name="1110609">Path: Systems &gt; System Parameter &gt; Maintenance &gt; Option Parameters &gt; Inventory Parameters</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110610">Multiple Bin Locations: </a></span>This flag indicates that a product may exist in multiple bin locations and that the system tracks the quantity on-hand in each bin. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110611">Y</a></span> - This prompts for the default inventory adjustment reason code to be used by the cycle count system for behind the scenes inventory adjustments. (F3 for options). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110612">N</a></span> - Inventory is not tracked by bin.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1110639">Zone Maintenance</a></div>
+      <div class="Path"><a name="1110640">Path: Inventory &gt; Maintenance &gt; Bin Files &gt; Zone Maintenance (/ZM)</a></div>
+      <div class="Body"><a name="1110641">The </a><span class="Italics">Bin Count Frequency</span> field must be set up to use the cycle count system. Zones without a <span class="Italics">Bin Count Frequency</span> are excluded from cycle counting.<img class="Default" src="images/Cycle%20Counts%20Using%20Warehousing_GUI.3.1.2.jpg" width="415" height="290" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110645">Bin Count Frequency: </a></span>This field is used to indicate the number of times the bins located in the zone are scheduled for counting in a yearly period.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1110646">Bin Location Maintenance</a></div>
+      <div class="Path"><a name="1110647">Path: Inventory &gt; Maintenance &gt; Bin Files &gt; Bin Locations&gt; (/BLM)</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110651">Cycle Count Zone: </a></span>Defines the zone that controls the bins cycle count. This field must be set up to include the bin in the cycle counting process.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110652">Bin Type: </a></span>This field must be set to <span class="Bold">Pick, Bulk </span>or<span class="Bold"> Retail </span>to be selected for the cycle count process.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1110653">User Identification Maintenance</a></div>
+      <div class="Path"><a name="1110654">Path: System Parameter &gt; Maintenance &gt; User Id Maintenance (/USER.ID.MNT)</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110655">Cycle Counter: </a></span>Defines whether a user can perform cycle counts in the cycle count system. Set to<span class="Bold"> Y</span> to allow a user to update counts on the system. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1110656">Cost / Tolerance Maintenance</a></div>
+      <div class="Path"><a name="1110657">Path: Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Cost/Tolerance Maintenance (/</a>CYC.COUNT.TOL.MNT)</div>
+      <div class="Body"><a name="1110658">This maintenance routine defines tolerance levels for different cost ranges. Tolerance </a>levels may be defined by unit cost or by bin value. These tolerances are used in the 1st level cycle count entry to determine if a product needs a second count performed. This is discussed in more detail in the 1st level cycle count entry sections. Ranges of costs are entered in this routine and an associated tolerance percentage for each range.<img class="Default" src="images/Cycle%20Counts%20Using%20Warehousing_GUI.3.1.4.jpg" width="442" height="333" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110662">Cycle Count Type: </a></span>Indicates if the unit cost or the total bin value is used in determining variances.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110663">C</a></span> - (or null) Variances are calculated on the unit cost. This means that a one-piece unit cost is used to determine the variance. For example, using the above table, if a product with a cost of 122.95 is off by 10% or more it is placed into the second level count queue.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110664">B</a></span> - Variances are calculated on the bin value. This means that the system looks at a bin as a unit even though it could be made up of 100 pieces. For example, a bin could contain 100 pieces of an item costing $5.00, 5 pieces of an item costing $100.00, or 1 piece of an item costing $500.00. Whichever the case, only a variance of less than 5% would be allowed according to the above table. The bin value is determined by multiplying the product unit cost by the quantity in the bin. This method is useful if there are a lot of low priced products that are stocked in large quantities.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1110665">For example: a bin contains 100 pieces of an item costing $5.00. With the unit cost </a>method, a second count is required when the count is off by 15% (15 pieces) or more. With the bin value method, a second count is required when the count is off by 5% (5 pieces) or more.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110666">From Cost: </a></span>Defines the beginning unit cost or bin value for the range.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110667">To Cost: </a></span>Defines the ending unit cost or bin value for the range.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110668">Tolerance%: </a></span>Defines the tolerance % for the cost range. If the count is off by this percent or more, then a second count is required. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1110669">Cycle Count Control Maintenance</a></div>
+      <div class="Path"><a name="1110670">Path: Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Cycle Count Control Maintenance (/</a>CYC.COUNT.CONTROL.MNT)</div>
+      <div class="Body"><a name="1110671">This maintenance routine displays the number of daily counts that are scheduled per bin </a>count frequency. These figures may be overridden to increase or decrease the number of bin counts that are scheduled daily. Cycle counting can be halted or activated as necessary. This also displays bin count frequencies, number of count bins per bin count frequency, and the last bin counted for a bin count frequency.<img class="Default" src="images/Bin%20Replenishment_GUI.2.1.5.jpg" width="378" height="177" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110675">Warehouse Number</a></span>: Enter the number of the warehouse to be viewed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110676">Daily Cts</a></span>: Displays, for each bin count frequency, the number of bins that should be counted in each cycle count period. The Cycle Count Monthly Process generates this value for each bin count frequency. This figure may be overridden to increase or decrease the number of bin counts being scheduled daily.<br />NOTE: If overridden, this field is reset when Cycle Counting Monthly Processing is run. (See the section on Cycle Counting Monthly Processing for more information on how this value is calculated.)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110677">Count Freq: </a></span>Displays each frequency set up for cycle counting in the specified warehouse. The frequency is set up in Zone Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110678">Bins/Freq: </a></span>Displays the number of bins in each frequency. Cycle Counting Monthly Processing accumulates the number of bins in each bin count frequency. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110679">Last Bin: </a></span>Displays the last bin selected for each bin count frequency. This field is updated in Cycle Count Nightly Processing and is used to keep track of where it is in the list of bins. The nightly processing routine updates this field with the last bin selected so it knows the next time the routine is run where to start in the list to get the next set of bins to be counted. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110680"> ‘St: </a></span>Displays the current status of each frequency and allows you to change it. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110681">A</a></span> - Indicates the frequency is active which allows the frequency to continue generating daily counts.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110682">I </a></span>- Indicates the frequency is inactive which stops the daily counts.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110683&quot;);"><a name="1110683">Monthly / Nightly Processing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110683", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110683", false);</script>
+      <div class="Subhead"><a name="1110684">Cycle Count Monthly Processing</a></div>
+      <div class="Path"><a name="1110685">Path: Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Cycle Count Monthly Processing (/</a>CYC.COUNT.MONTHLY.PROCESS)</div>
+      <div class="Body"><a name="1110686">This routine is responsible for updating a control record for each warehouse with bin count </a>frequencies, number of bins per bin count frequency, number of daily bin counts per bin count frequency, and the list of bins per bin count frequency. Remember that only pick, bulk, and retail bins are selected for cycle counting.</div>
+      <div class="Subhead"><span class="Bold"><a name="1110687">There are two main purposes for running this monthly process:</a></span></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1110688">A cycle count control file is populated with the number of daily bin counts per bin count </a>frequency. In other words, monthly processing determines the number of bins that need to be counted per day for each frequency. The formula used for this is:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1110689">Number of Bins in a Given Count Frequency * Frequency</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1110690">Number of Count Days Per Warehouse</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1110691">If a zone has a bin count frequency of </a><span class="Bold">4 </span>(meaning all bins in that cycle count zone should be counted four times for the year). The total number of bins in that zone equals <span class="Bold">150,</span> and the warehouse counts bins <span class="Bold">200</span> days per year. The system would calculate the number of daily counts for that zone to be <span class="Bold">3</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1110692">Bins that need to be scheduled for counting are set up in a special control file used by </a>the cycle count nightly process. Monthly processing becomes an important process to run consistently in the case of bin location additions and/or deletions. Each time this process is run, the system selects the appropriate bins and sorts them by warehouse, bin count frequency, cycle count zone, and sort sequence. Any bins added since the last process run are added to the list. Any bins deleted since the last process run are removed from the list. The bin additions/deletions do not affect the nightly processing routine since it keeps track of where it is in the list and picks up from that point the next time it is run. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1110693">Cycle Count Nightly Processing</a></div>
+      <div class="Path"><a name="1110694">Path: Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Cycle Count Nightly Processing (/</a>CYC.COUNT.NIGHTLY.PROCESS)</div>
+      <div class="Body"><a name="1110695">The main purpose of the nightly processing routine is to populate a bin count queue record </a>with the bins to count in a given day. The bin count queue record is sorted by creation date in the actual counting process to assure a first in / first out counting methodology. A statistical measure of the <span class="Italics">number of times scheduled</span> is updated for each zone that has a bin scheduled in the daily count. This is to assure that a zone is not scheduled for counting more times than its allotted bin count frequency in a given year.</div>
+      <div class="NumberedIntro"><a name="1110696">When this process is run, the system performs the following:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1110697">First it checks the status of each frequency in Cycle Count Control Maintenance to </a>determine if it is included in the daily cycle count.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1110698">Next it determines for each frequency, the number of bins that should be counted for </a>that day (the number of daily count bins per frequency calculated by Monthly Processing). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1110699">The determined number of bins for each frequency is then obtained from the list of bins </a>for each frequency. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1110700">For example: If monthly processing determines for frequency </a><span class="Bold">6</span> that 3 bins should be counted each time, then nightly processing would determine the last bin selected and take the next 3 in the list for the next count cycle. This routine then updates a control file with the last bin selected for each count frequency. Once all bins in the list are counted, the system updates for each zone in the frequency, the number of times the zone was scheduled. If the zones have not been counted the maximum number of times for the year, the system starts over from the beginning of the list. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1111248&quot;);"><a name="1111248">Entering First-Level Counts</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1111248", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1111248", false);</script>
+      <div class="Subhead"><a name="1115281">Paper Site Count Sheet Printing</a></div>
+      <div class="Path"><a name="1111249">Path:  Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Paper Site Count Sheet printing (First </a>Level) (/CYCE)</div>
+      <div class="Body"><a name="1111250">These programs print lists of products to count for the number of bins. Actual counts are </a>entered on the sheets.</div>
+      <div class="Subhead"><a name="1110703">First Level Queue Report </a></div>
+      <div class="Path"><a name="1110704">Path: Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; First Level Queue Report (/</a>CYC.COUNT.FIRST.LEVEL.RPT)</div>
+      <div class="Body"><a name="1110705">This report shows bins to be counted from the bin count queue and the number of product </a>counts per bin to be counted.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110706">Division Number: </a></span>Optional field used to define a division for the first level queue report. If left blank, all divisions are selected.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110707">Warehouse Number: </a></span>Mandatory field. Defines the warehouse for the report.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110708">Zone: </a></span>Optional field used to define the zone where the count is to be performed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110709">Open or Assigned: </a></span>Determines whether assigned and/or non-assigned bins are printed on the report.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110710">O</a></span> - The system prints a list of only those bins in the first level big queue that have not yet been assigned to a cycle counter.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110711">A </a></span>- The system generates the list only for assigned bins.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1110712">If the field is left blank both open and assigned bins are included.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1110713">Once the process is executed, the system generates the first level queue report. The </a>report displays zones, zone descriptions, bin numbers, bin descriptions, counter assignments (for those bins that were assigned), count date, and the number of counts per bin.</div>
+      <div class="Subhead"><a name="1110714">Cycle Count Entry (1st Level) </a></div>
+      <div class="Path"><a name="1110715">Path: Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Radio Frequency Cycle Count Entry </a>(1st Level) (/RCCE)<br />Warehousing &gt; Handheld RF Menu &gt; Physical &gt; Cyc Cnt Ent. 1st (/RCCE)<br />Warehousing &gt; Truck Mount RF Menu &gt; Physical &gt; Cyc Cnt Ent. 1st (/TRCCE)</div>
+      <div class="Path"><a name="1115470">Path:  Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Cycle Count Entry (1st Level) (/CYCE)</a></div>
+      <div class="Body"><a name="1110719">This entry program is used to scan products and enter actual counts.<img class="Default" src="images/Cycle%20Counts%20Using%20Warehousing_GUI.3.1.7.jpg" width="253" height="144" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110720">Warehouse Number: </a></span>Specifies the warehouse for entering the cycle count results.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110721">Counter ID: </a></span>The person who performed this count.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110722">Zone: </a></span>The zone where this count was performed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110723"># Of Bins: </a></span>The number of bins this person counted.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1110727">Once these fields are filled in, the following screen displays:<img class="Default" src="images/Cycle%20Counts%20Using%20Warehousing_GUI.3.1.8.jpg" width="231" height="321" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110728">Zone: </a></span>Displays the zone specified on the previous screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110729">Bin: </a></span>Displays the first bin ID in the specified zone that needs to be counted.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110730">Product Number: </a></span>Displays the product number when the barcoded product is scanned. In versions 17 and higher, the product numbers are sorted in alphanumeric order for each bin location.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110731">Lot: </a></span>Prompts for a lot number if the product is lot controlled. If the product is not lot-controlled, this field is skipped.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110732">Quantity: </a></span>Prompts for the quantity counted for this product/bin/lot combination. The system compares the quantity entered (which is the actual count of the product) with the system onhand at that time. If no discrepancy exist, the system redisplays the screen for the next product number.<br />If there is a discrepancy between actual count and the system onhand, the system checks the cost of the item in the cost/tolerance maintenance record. If the count discrepancy percentage is less than or equal to the tolerance percentage in this file, the system performs an automatic inventory adjustment on the product when the current bin is updated. The system uses the default reason code defined in the Inventory Option Parameter Maintenance for this automatic inventory adjustment.<br />If the count discrepancy is not in tolerance, the user is warned and given a chance to recount. (This check is performed until the count is in the tolerance or until the user elects not to recount.) If the counter elects to recount, then the system returns to the <span class="Italics">Quantity</span> field so a new quantity can be entered. If the counter elects not to recount, the item is inserted into the cycle count second level queue for further analysis when the current bin is updated. The current bin onhand is adjusted up/down to match the count quantity entered and a fictitious bin called <span class="Italics">Cycle </span>is<span class="Italics"> </span>adjusted up/down the opposite way. The result of this transaction is a behind the scenes bin movement (between the count bin and the fictitious <span class="Italics">Cycle </span>bin). No inventory adjustment is performed at this time. Any needed inventory adjustment will be done with the second level queue count. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110733">F2-Upd Bin: </a></span>Saves the information entered. The system redisplays the screen, prompting for the next product number. Repeat the procedure explained above to enter the appropriate product number, lot number, and quantity for the specified bin.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110734">F6-Exit: </a></span>Exits the screen without updating the product. Note: if quantities have already been entered, the system will not save or update these quantities. To exit and save the quantities, use the <span class="Italics">F2-Update Bin</span> key. The message 5 Product/Lot Combinations Have Not Been Counted! Do You Wish To Continue? displays. When you respond ‘Yes to this prompt the message All Assigned Bins Were Not Counted. Uncounted Bins Will Be Returned To Queue! displays letting you know that the session was not completed and that the remaining items were returned to the cycle count queue to be counted. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1115298&quot;);"><a name="1115298">Entering Second-Level Counts</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1115298", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1115298", false);</script>
+      <div class="Subhead"><a name="1115375">Adding Products Directly to the Second-Level Queue</a></div>
+      <div class="Path"><a name="1115376">Menu Path: Warehousing &gt; Handheld RF Menu &gt; Physical &gt; Cyc Cnt Req Ent (/RFCCRE) </a><br />Warehousing &gt; Truck Mount RF Menu &gt; Physical &gt; Cyc Cnt Req Ent (/TRFCCRE)<br />Inventory &gt;Physical Inventory &gt;Cycle Counting Procedure &gt; Product Cycle Count Request Entry (CCRE)</div>
+      <div class="Body"><a name="1115377">These options within the warehousing module allow a manual cycle count request to be </a>generated for product(s) in a warehouse. These cycle count requests are added to the second level cycle count queue for counting. </div>
+      <div class="Subhead"><a name="1115305">Paper Site Count Sheet Printing</a></div>
+      <div class="Path"><a name="1115299">Path:  Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Paper Site Count Sheet Printing (2nd </a>Level) (/CYCS)</div>
+      <div class="Body"><a name="1115300">These programs print lists of products to count for the number of bins. Actual counts are </a>entered on the sheets.</div>
+      <div class="Subhead"><a name="1110735">Second Level Queue Report</a></div>
+      <div class="Path"><a name="1110736">Menu Path: Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Second Level Queue Report </a>(CYC.COUNT.SECOND.LEVEL.RPT)</div>
+      <div class="Body"><a name="1110737">This report shows products that have been inserted into the second level queue for </a>additional counting. This may be used to recount any products with discrepancies before proceeding to second level entry. Any products whose first level count created a discrepancy outside the cost/tolerance limits are included on this report. The report displays products, bin lists, problem bins, problem bin first level queue count discrepancies and current system quantities.</div>
+      <div class="Subhead"><a name="1110738">Entering Second-Level Counts</a></div>
+      <div class="Path"><a name="1110739">Menu Path: Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Radio Frequency Cycle Count </a>Entry (2nd Level)<br />Warehousing &gt; Handheld RF Menu &gt; Physical  &gt; Cyc Cnt Ent. 2nd (RCCS)<br />Warehousing  &gt; Truck Mount RF Menu &gt; Physical  &gt; Cyc Cnt Ent. 2nd (/TRCCS)</div>
+      <div class="Body"><a name="1110740">This step is performed whenever a bin count from the first level count does not match the </a>onhand quantity for that product and the difference between the actual count and the onhand quantity is greater than the tolerance allowed on the cost/tolerance maintenance record. During nightly processing, the system creates a bin queue count record for the actual counting process which is used with this entry program. This entry program cycles through all the product/bin/lot combinations until all products have been covered. Products with discrepancies should be recounted prior to this entry.<img class="Default" src="images/Cycle%20Counts%20Using%20Warehousing_GUI.3.1.9.jpg" width="232" height="318" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110744">Warehouse:  </a></span>This field is mandatory and defines the warehouse number for the second level counts.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110745"># Products: </a></span>This field can be used to enter the number of products to be displayed on the entry screen for the cycle counter. For example, if # Products = 3, three products appear when you press F3 to search. If the # Products field is left blank, all the products available for cycle counting for the warehouse number entered display.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110746">Counter ID: </a></span>The person who performed the count.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110747">Product Number: </a></span>Defines the product number for the second level count quantity. If the <span class="Italics">Default P/N in 2nd Level Entry </span>flag in Warehouse Maintenance is set to <span class="Bold">Y</span>, the product number is defaulted in the Product Number field. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110748">Bin: </a></span>Displays the bin number for the product specified. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110749">P: </a></span>Displays an asterisk to denote a first level problem count. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110750">C: </a></span>This field is blank until after the second level count has been entered.  Then an asterisk is displayed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110751">Qty: </a></span>Displays the count quantity entered during the first level count.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110752">U/M: </a></span>Displays the unit of measure for the product number entered.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110753">F2-Upd: </a></span>Updates the count after the correct quantity is entered.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110754">F6-Exit: </a></span>This function key is used to exit without updating the bins.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1110755">When the product number has been entered and the </a><span class="Italics">Bin</span> field is accepted, another screen displays to enter the second level count.<img class="Default" src="images/Cycle%20Counts%20Using%20Warehousing_GUI.3.1.10.jpg" width="240" height="271" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1110759">The system automatically displays the bin and product number as well as the count </a>quantity and the discrepancy quantity from the First Level Cycle Count Entry.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110760">Count: </a></span>Enter the second level count.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1110761">The prior summary screen comes back displaying the next bin for the current product - if </a>there is one. Repeat this process for each bin with an asterisk in the ‘<span class="Italics">P’ </span>field. If all problem bins are not counted, no further processing is done. Bins with no discrepancies for the warehouse/product combination do not have to be recounted but may be counted to reflect accurate counts among all of a product’s bins.</div>
+      <div class="Body"><a name="1110762">Once all bin counts for the product are entered, press &lt;F2&gt; to update. A dialog box </a>displays showing the quantity and extended value of the inventory adjustment that is about to take place. If you elect to proceed, the system performs an automatic inventory adjustment behind the scenes to bring the product’s onhand quantity in line with the count quantity.  The next product with a discrepancy may then be entered.</div>
+      <div class="Body"><span class="Bold"><a name="1110763">Lot Products: </a></span>The only difference with lot-controlled products is that the screen used to correct the count displays a <span class="Italics">P </span>field beside the <span class="Italics">Lot</span> field. This is used to define the lots that have a problem.</div>
+      <div class="Body"><a name="1110764">After the count is entered, the system displays the next lot number for the product. All lots </a>are cycled through. Press <span class="Italics">F2-Upd</span> to return to the first screen. If the product has another bin, that bin is displayed. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110768&quot;);"><a name="1110768">Bin Count Statistics Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110768", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110768", false);</script>
+      <div class="Path"><a name="1110769">Menu Path: Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure &gt; Bin Count Statistics Report </a>(BIN.COUNT.STAT.RPT)</div>
+      <div class="Body"><a name="1110770">In addition to the first and second level queue reports, the Cycle Counting Subsystem </a>offers a Bin Count Statistics Report. This report shows the number of times bins have been counted over the course of the year, the total number of actual product counts, the total number of product count rejects and the accuracy percentage.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110772">Warehouse Number: </a></span>The warehouse number for the report.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110773">Cycle Count Zone: </a></span>Defines the cycle count zone for the report. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110774">Bin Number: </a></span>The bin for the report.  Leave blank to include all bins.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110775">Last Cycle Count Date: </a></span>The beginning and endging <span class="Italics"> last cycle coun</span>t date to include in the report (e.g., based on the last time the bins were counted).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110776&quot;);"><a name="1110776">Emergency Cycle Counts</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110776", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110776", false);</script>
+      <div class="Body"><a name="1110777">Emergency cycle counts are created when the system detects a potential error (e.g. </a>negative bin quantity, change during picking).</div>
+      <div class="Subhead"><a name="1110778">Emergency Cycle Count Entry</a></div>
+      <div class="Path"><a name="1110779">Menu Path:  Warehousing &gt; Processes &gt; Emergency Cycle Count Entry (ECCE)</a></div>
+      <div class="Body"><a name="1110780">This allows a product and bin to be identified to put on the emergency cycle count queue.</a></div>
+      <div class="Subhead"><a name="1110781">RF Emergency Cycle Count Entry</a></div>
+      <div class="Path"><a name="1110782">Menu path:  Warehousing &gt; Handheld RF Menu &gt; Processes &gt; Emg Cycle Cnt Ent (/RECCE)</a><br />Warehousing &gt;Truck Mount RF Menu &gt; Processes &gt; Emg Cycle Cnt Ent (TRECCE)</div>
+      <div class="Body"><a name="1110783">These processes identify a product and bin to put on the emergency cycle count queue </a>using RF devices.</div>
+      <div class="Subhead"><a name="1110784">Emergency Cycle Count Inquiry</a></div>
+      <div class="Path"><a name="1110785">Menu Path:  Inventory &gt; Inquiries &gt; Emergency Cycle Count Inquiry (/ECCI)</a></div>
+      <div class="Body"><a name="1110786">This inquiry is used to monitor any product picking adjustments done throughout the day.  </a>If a transaction was short picked for example, the product automatically updates this inquiry.  The detail includes the product, bin location short picked, the user and the transaction (ex: sales order number).</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1114081&quot;);"><a name="1114081">Physical Inventory - RF/Tags</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1114081", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1114081", false);</script>
+      <div class="Path"><a name="1114082">Menu path:  Warehousing &gt; Handheld RF Menu &gt; Physical &gt; Phys.Tag Ent (/RF.PHYS.TAG.ENT)</a></div>
+      <div class="Body"><a name="1114083">RF physical tag entry is used to enter counts and generate tag numbers during a physical </a>inventory only if you will use RF to count. You do not need to print physical tags. All other physical inventory tag processing is the same. The RF unit replaces the manual physical tag printing and physical entry steps. You can enter a tag number (which is always new), product number, bin and count. These entries are updated as manual tags in the Physical Inventory Tag Procedure.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">Cycle Counting</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

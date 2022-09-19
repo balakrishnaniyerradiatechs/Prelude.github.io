@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Warehouse Pricing Screen</title>
+    <link rel="StyleSheet" href="css/pricing.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1308508">Warehouse Pricing Screen</a></div>
+      <div class="Body"><a name="1308509">The Warehouse Pricing screen allows you to enter price and cost values for </a>a product for each warehouse. You can also use this screen to calculate and recompute prices/costs. These values override the values entered at the product level in Product Maintenance (refer to the <a href="javascript:WWHClickedPopup('ics', 'product_pricing.htm#1309394', '');">Product Pricing Screen</a>). </div>
+      <div class="Body"><span style="font-weight: bold;"><a name="1391967">Menu Path:</a></span> Inventory &gt; Maintenance &gt; Product Maintenance &gt; Product Warehouse Maintenance &gt; F7-Price/Cost</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1308519&quot;);"><a name="1308519">Field &amp; Function Key Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1308519", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1308519", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 405.06408pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1308522">Field/Function Key</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1308524">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308526">Current</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308528">The current price or cost for this product warehouse record for each of </a>the columns listed below. Leave blank if using <span style="font-style: italic;">Percent</span> and <span style="font-style: italic;">Basis</span> to calculate the values. If you do enter a <span style="font-style: italic;">Percent </span>and <span style="font-style: italic;">Basis</span>, the calculated value displays in this column when you press <span style="font-weight: bold;">F5-Recompute</span>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1311396">Percent</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1357081">The percentage or multiplier to use with a </a><span style="font-style: italic;">Basis </span>column to calculate the price or cost for each of the columns. Leave blank if you entered a price under <span style="font-style: italic;">Current</span> and want to maintain the price manually. </div>
+            <div class="TableText"><a name="1357082">The calculated values depend on how the </a><span style="font-style: italic;">Prc/Cst Basis Calc Method</span> flag is set in Inventory Parameters.</div>
+            <div class="TableText"><a name="1357083">If </a><span style="font-style: italic;">Prc/Cst Basis Calc Method </span>is set to <span style="font-weight: bold;">G</span> for gross profit, enter the gross profit percent that you want to make for this product for this price level. The <span style="font-style: italic;">Percent </span>is used with the cost column indicated in <span style="font-style: italic;">Basis (</span>refer to the <span style="font-style: italic;">Basis</span> codes below)<span style="font-style: italic;"> </span>to calculate the price.</div>
+            <div class="TableText"><a name="1357084">For example:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-style: italic;"><a name="1357085">Replacement Cost </a></span>is 10.00.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1357086">If you want </a><span style="font-style: italic;">Price 1 </span>to provide 20% gross profit above <span style="font-style: italic;">Replacement </span><span style="font-style: italic;">Cost</span>, enter <span style="font-weight: bold;">20</span> under<span style="font-style: italic;"> Percent </span>and <span style="font-weight: bold;">R</span> under<span style="font-style: italic;"> Basis</span>. </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1357087">When you press </a><span style="font-weight: bold;">F5-Recompute</span>, 10.00 is divided by .80 to come up with a <span style="font-style: italic;">Price 1</span> of 12.50. Gross profit is 20%.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText"><a name="1357088">If </a><span style="font-style: italic;">Prc/Cst Basis Calc Method </span>is set to <span style="font-weight: bold;">M</span> for markup, enter the markup percent that you want for this product at this price level. The <span style="font-style: italic;">Percent</span> is used with the cost column indicated in <span style="font-style: italic;">Basis </span>to calculate the price.</div>
+            <div class="TableText"><a name="1357089">For example:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-style: italic;"><a name="1357090">Replacement Cost </a></span>is 10.00.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1357091">If you want</a><span style="font-style: italic;"> Price 1</span> to be 20% above the value of <span style="font-style: italic;">Replacement</span>, enter <span style="font-weight: bold;">20</span> under <span style="font-style: italic;">Percent</span> and <span style="font-weight: bold;">R</span> under <span style="font-style: italic;">Basis.</span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1357092">When you press </a><span style="font-weight: bold;">F5-Recompute</span>, 10 is multiplied by 1.20 to come up with a <span style="font-style: italic;">Price 1</span> of 12.00. The gross profit is 16.6%.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1311400">Basis</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1311402">The price/cost column to use to calculate new price/cost values if using </a>a percentage or multiplier. Refer to the above instructions for <span style="font-style: italic;">Percent</span> for information on using percentages or multipliers with a <span style="font-style: italic;">Basis</span>:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1311403">0 - Price column 0 (Suggested retail price).</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1311404">1 - Price column 1.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1311405">2 - Price column 2.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1311406">3 - Price column 3.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1311407">4 - Price column 4.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1311408">5 - Price column 5.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1311409">R - Replacement cost.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1311410">A - Average cost.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1311411">S - Standard cost.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1311412">O - Cost for sales.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1334991">H0 - Suggested retail price - from the product (header) level. </a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1334992">H1 - Price column 1 - from the product (header) level.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1334993">H2 - Price column 2 - from the product (header) level.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1334994">H3 - Price column 3 - from the product (header) level.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1334995">H4 - Price column 4 - from the product (header) level.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1334996">H5 - Price column 5 - from the product (header) level.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1334997">HR - Replacement cost - from the product (header) level.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1334999">HS - Standard cost - from the product (header) level.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1335000">HO - Cost for sales - from the product (header) level.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308538">Q/B</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308540">A </a><span style="font-weight: bold;">Y</span> displays if the price level uses column quantity breaks.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1311432">List - Price 5</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1311434">Default customer prices. Each customer is assigned a price code to use </a>if special pricing does not exist for this product. You can set these prices at the product level to use company wide or by warehouse in Product Warehouse Maintenance if prices vary by location.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308566">Replacement Cost</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308568">The cost to replace the product in this warehouse. This overrides the </a>cost at the product level in the <a href="javascript:WWHClickedPopup('ics', 'product_pricing.htm#1309394', '');">Product Pricing Screen</a>, but can be overridden at the product vendor level (refer to <a href="javascript:WWHClickedPopup('ics', 'pricing.4.23.htm#1311852', '');">Using Company Vendor Cost</a>), or the product/vendor/warehouse level in <a href="javascript:WWHClickedPopup('ics', 'Product_Records.2.39.htm#1403559', '');">Maintaining a Product by Warehouse/Vendor</a>). </div>
+            <div class="TableText"><a name="1357379">The </a><span style="font-style: italic;">Replacement Cost Update </span>flag in Inventory Parameters determines if replacement cost is updated in Purchase Order Entry, Stock Receipts Entry, or in Product or Product Warehouse Maintenance. </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1311478">Standard Cost</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1312815">If you use standard cost as the accounting cost for your company (</a><span style="font-style: italic;">G/L </span><span style="font-style: italic;">Cost</span> flag set to <span style="font-weight: bold;">S</span> in Company Maintenance), you can maintain the cost at the product level or in this field at the product warehouse level. You must set up general ledger accounts to post the differences between the standard costs and the actual costs from stock receipts, transfers, and vendor invoice reconciliation. Also, standard costs from all the components on a bill of material can be rolled up into one product.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1311482">Cost For Sales</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1343342">The cost for sales orders, which is different than the accounting cost. </a>You may want to use this to calculate gross profit for commission. </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1357599">Direct Ship Cost</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1357601">The cost to direct ship the product if it is different than the </a><span style="font-style: italic;">Replacement </span><span style="font-style: italic;">Cost</span>. You can override this cost at the company vendor/cost level, the product vendor level, or on a purchase order.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1478490">Minimum Price</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1478492">The minimum sales price to accept for this product without requiring a </a>password or placing the order on administrative order hold (<span style="font-style: italic;">AOH Type</span> =<span style="font-weight: bold;"> N</span>). This price overrides the minimum price in <span style="font-weight: bold;">Product Maintenance </span><span style="font-weight: bold;">&gt; F7-Pricing</span> &gt; <span style="font-style: italic;">Minimum Price</span>. </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1357682">Average Cost</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1357684">The average cost calculated from receipts.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1357614">Pricing U/M</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1357616">The unit of measure to use for this product on a sales order. Prices </a>defined in this screen should be defined in this unit of measure. If pricing, buying, and stocking unit of measures are different, refer to <a href="javascript:WWHClickedPopup('ics', 'pricing.4.4.htm#1339958', '');">Establishing a Unit of Measure</a>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1357621">Stocking U/M</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1357623">The unit of measure used for this product in inventory. Costs defined in </a>this screen should be defined in this unit of measure. If pricing and stocking unit of measures are different, refer to <a href="javascript:WWHClickedPopup('ics', 'pricing.4.4.htm#1339958', '');">Establishing a Unit of Measure</a>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308600">Add On Cost</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308602">The amount to add to the net cost per unit before the average cost is </a>calculated in stock receipts. Stock receipts distributes the total add-on amount to the cost absorption account defined in the G/L table and in the product line G/L accounts.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308604">Product Q/B</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1326628">Indicates if price quantity breaks are set up for this product. Refer to the </a><a href="javascript:WWHClickedPopup('ics', 'pricing.4.19.htm#1308687', '');">Warehouse Quantity Breaks Screen</a> for information on setting these up:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1326632">Y - Quantity break pricing is set up for this product. You can view and </a>edit these by pressing <span style="font-weight: bold;">F8-Prc QtyBrks.</span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1326633">N - Price quantity breaks are not set up for this product.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308608">F2-Save</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308610">Saves the warehouse pricing information.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308612">F5-Recompute</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1311525">Recalculates the prices and costs if you used </a><span style="font-style: italic;">Percent</span> and <span style="font-style: italic;">Basis</span> to calculate current values.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308616">F7-Col Qty Brks</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308621">Opens the </a><a href="javascript:WWHClickedPopup('ics', 'column_quantity_breaks.htm#1308655', '');">Column Quantity Breaks Screen</a> to allow you to determine price levels for different quantity levels.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308623">F8-Prc Qty Brks</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308628">Opens the </a><a href="javascript:WWHClickedPopup('ics', 'pricing.4.19.htm#1308687', '');">Warehouse Quantity Breaks Screen</a> to allow you to determine price levels for quantity breaks. </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308630">F9-Add Info</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308635">Opens the </a><a href="javascript:WWHClickedPopup('ics', 'add_warehouse_pricing.htm#1308719', '');">Additional Warehouse Pricing Screen</a> to allow you to enter or change acquired and landed cost for a product.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;" colspan="2">
+            <div class="TableText" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><a name="1308637">Action Bar</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308641">Future</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308643">Opens the </a><a href="javascript:WWHClickedPopup('ics', 'product_warehouse_future_pricing.htm#1308761', '');">Product Warehouse Future Pricing Screen</a> to allow you to enter future prices and the date these prices go into effect.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308645">Previous</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308647">Opens the </a><a href="javascript:WWHClickedPopup('ics', 'previous_prices_pwm.htm#1308803', '');">Previous Prices Screen</a> to allow you to view previous prices set up for this product warehouse record.</div>
+            <div class="TableText"><a name="1357861">Previous prices are only available if you chose </a><span style="font-weight: bold;">Y</span> to the “Save Previous Prices?” prompt when you updated a price. Refer to <a href="javascript:WWHClickedPopup('ics', 'pricing.4.32.htm#1314756', '');">Updating Prices and Costs</a>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308649">Add Prices</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1308651">Opens the </a><a href="javascript:WWHClickedPopup('ics', 'add_price_columns.htm#1312540', '');">Add. Price Columns Screen</a> to allow you to enter additional price column descriptions and prices for a product.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1488143">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Column Quantity Breaks Screen", "ics", "column_quantity_breaks.htm#1308655");
+          WWHAddRelatedTopic("Warehouse Quantity Breaks Screen", "ics", "pricing.4.19.htm#1308687");
+          WWHAddRelatedTopic("Additional Warehouse Pricing Screen", "ics", "add_warehouse_pricing.htm#1308719");
+          WWHAddRelatedTopic("Product Warehouse Future Pricing Screen", "ics", "product_warehouse_future_pricing.htm#1308761");
+          WWHAddRelatedTopic("Previous Prices Screen", "ics", "previous_prices_pwm.htm#1308803");
+          WWHAddRelatedTopic("Add. Price Columns Screen", "ics", "add_price_columns.htm#1312540");
+          WWHAddRelatedTopic("Implementing the Price/Cost Hierarchy", "ics", "pricing.4.2.htm#1352840");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="pricing.4.1.htm#1308508">Product Prices and Costs</a>:<a class="WebWorks_Breadcrumb_Link" href="pricing.4.16.htm#1308508">Entering Prices/Costs for a Product - by Warehouse </a>:Warehouse Pricing Screen</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

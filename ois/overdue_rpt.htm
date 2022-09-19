@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Overdue Sales Order Detail Report</title>
+    <link rel="StyleSheet" href="css/order_processing_%20reports.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1726554">Overdue Sales Order Detail Report</a></div>
+      <div class="Body" style="margin-bottom: 5.0pt;"><a name="1726555">The Overdue Sales Order Detail Report lists open sales orders for a </a><span style="font-style: italic;">Required Date</span> range. You can use this report to find orders that have not shipped and are past the date requested by the customer.</div>
+      <div class="Body"><span style="font-weight: bold;"><a name="1772909">Menu Path</a></span>: Order Processing &gt; Reports &gt; Daily Order Detail Reports &gt; Overdue Sales Order Detail</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1726557&quot;);"><a name="1726557">Selection Criteria</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1726557", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1726557", false);</script>
+      <div class="Body"><a name="1726558">Use the following criteria to limit the information to print on the report:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1726559">Division</a></span>. The highest possible grouping in your company (e.g., Eastern Division, Western Division).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1726560">Region</a></span>. A subset of Division - if Division is used (e.g., Southeast Region, Northwest Region).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1726561">Department</a></span>. A subset of warehouse. Typically used to separate expenses within a warehouse (e.g., accounting, sales, warehouse).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="2227941">Cost Center</a></span>. A subset of Department - if Department is used. Typically used to separate expenses within a warehouse or department (e.g., shipping, receiving, outside sales, inside sales).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="2227942">Warehouse</a></span>. The selling warehouse that receives credit for the sale, regardless of which warehouse ships the merchandise.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1753574">Salesrep</a></span>. The sales representatives to include.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1772905">Written By</a></span>. The user ID of the person who entered the orders.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1818672">Order Type</a></span>. The sales order types to include on the report. Choose one or more of the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753578">01</a></span> - Regular.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753579">02</a></span> - Ship complete.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753580">03</a></span> - Tag &amp; hold.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753581">04</a></span> - Direct ship.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753582">05</a></span> - Counter invoice.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753583">06</a></span> - Confirmation.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753584">07</a></span> - Regular consignment.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753585">08</a></span> - Confirmation consignment.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753586">09</a></span> - Return goods.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753587">10</a></span> - Repair orders.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753588">12</a></span> - Invoice when complete.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753589">13</a></span> - Ship backorder complete.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753590">14</a></span> - Ship line item complete.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753591">15</a></span> - Show order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753592">16</a></span> - Order projection.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753593">17</a></span> - Manufacturer’s representative.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1753594">18</a></span> - Crib replenishment.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1772901">Required Date Range</a></span>. The beginning and ending <span style="font-style: italic;">Required Date </span>range, at the order or line level, for which you want to view open sales orders.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1772889">Cust, Salesrep, WB</a></span>. The sort order for the report. Choose from the following to sort by:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1772890">C</a></span> - Customer number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1772891">S</a></span> - Sales representative number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1772892">W</a></span> - Written-by user ID.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1726565&quot;);"><a name="1726565">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1726565", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1726565", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 404.24976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1726568">Column Heading</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1726570">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1775702">Cust#</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1775704">Line 1: The number for the customer with open sales orders.</a></div>
+            <div class="TableText"><a name="1775705">Line 2: The customer description.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1775707">Ty</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1775709">The sales order type:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775710">01 - Regular.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775711">02 - Ship complete.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775712">03 - Tag &amp; hold.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775713">04 - Direct ship.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775714">05 - Counter invoice.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775715">06 - Confirmation.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775716">07 - Regular consignment.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775717">08 - Confirmation consignment.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775718">09 - Return goods.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775719">10 - Repair orders.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775720">12 - Invoice when complete.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775721">13 - Ship backorder complete.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775722">14 - Ship line item complete.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775723">15 - Show order.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775724">16 - Order projection.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775725">17 - Manufacturer’s representative.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1775726">18 - Crib replenishment.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText"><a name="2426884">Refer to </a><a href="javascript:WWHClickedPopup('ois', 'Sales%20Order%20Entry.4.2.htm#1465888', '');">Sales Order Types</a> for a detailed explanation of each order type.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1726580">Slsm</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1776545">The number for the sales representative assigned to the sales order.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1776551">Ord-Date</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1776553">The date the customer ordered the material.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1726588">Order#</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1726590">The sales order number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1774342">I</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1812507">Indicates the order’s invoice status:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1812508">Y - The order is flagged for invoicing.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1812509">H - The order is on hold and cannot be invoiced until released. </a>Refer to the <a href="javascript:WWHClickedPopup('ois', 'Administrative_Holds.15.16.htm#1426307', '');">Administrative Invoice Inquiry</a>.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1812510">Blank - The order is not yet flagged for invoicing.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1726596">Product Number</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1726598">The product on the open sales order.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1726600">Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1726602">The product description.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1726604">Req/Exp</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1726606">Line 1: The date the product is required by the customer.</a></div>
+            <div class="TableText"><a name="1777518">Line 2: The date the product is expected to arrive.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1853182">C</a></div>
+            <div class="TableText"><a name="2216167">&nbsp;</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1853184">Indicates if the line item is part of a kit:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1853185">K - Kit parent.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="2216171">C - Kit component.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1853188">S</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1853190">Line 1: The line item’s supply code (if one appears on the sales order):</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1853191">B - Purchase order.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1853192">E - Emergency purchase order.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1853193">D - Direct ship purchase order.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1853194">R - Emergency stock transfer.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1853195">T - Stock transfer.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1853196">W - Work order.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText"><a name="1853197">Line 2: The linked document number, if the product is linked to a </a>purchase order, transfer, or work order.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1775697">Qty-Opn</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1775699">The quantity on the sales order not yet shipped to the customer.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1775688">U/M</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1775690">The unit of measure of the product as entered on the sales order.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1775692">Price/Ext.</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1775694">Line 1: The price of the product for the unit of measure.</a></div>
+            <div class="TableText"><a name="1775695">Line 2: The extended price of the open quantity of the product (</a><span style="font-style: italic;">Qty-</span><span style="font-style: italic;">Opn x Price</span>).</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="2203683">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1726640&quot;);"><a name="1726640">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1726640", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1726640", false);</script>
+      <pre class="Report"><a name="1726641">Overdue Sales Order Detail Report As Of 09:52:09 On 12/05/07</a></pre>
+      <pre class="Report"><a name="2782507">SEL.WHSE = “40” [Required Date &gt;= “10/06/07” AND Required Date &lt;= “01/04/08” AND Cust, Salesrep, W/B = “C”]</a></pre>
+      <pre class="Report"><a name="2782508">Warehouse:40   Dallas Branch                 </a></pre>
+      <pre class="Report"><a name="2782509">&nbsp;</a></pre>
+      <pre class="Report"><a name="2782510">Cust#    Ty Slsm Ord-Date Order#    I Product Number                Description                  Req/Exp  CS Qty-</a>Opn U/M  Price/Ext.</pre>
+      <pre class="Report"><a name="2782511">-------- -- ---- -------- --------- - ----------------------------- ---------------------------- -------- -- ---</a>---- --- -----------</pre>
+      <pre class="Report"><a name="2782512">  000330 01  100 12/04/07 10000280    4CP19                         Cooper Tools Curved Thin Nos 12/05/07          2 </a>EA      18.9900</pre>
+      <pre class="Report"><a name="2782513">Anheuser Busch/baldwinsv                                            Pliers Cushion/foam 5”                                     37.98</a></pre>
+      <pre class="Report"><a name="2782514">&nbsp;</a></pre>
+      <pre class="Report"><a name="2782515">  000330 01  100 12/04/07 10000281    4CP16                         Cooper Xcelite Hard Wire 4”  12/05/07          1 </a>EA      36.4000</pre>
+      <pre class="Report"><a name="2782516">Anheuser Busch/baldwinsv                                            Cutter Cushion Handle                                      36.40</a></pre>
+      <pre class="Report"><a name="2782517">&nbsp;</a></pre>
+      <pre class="Report"><a name="2782518">  000330 01  100 12/04/07 10000291    4CP19                         Cooper Tools Curved Thin Nos 12/05/07          1 </a>EA      18.9900</pre>
+      <pre class="Report"><a name="2782519">Anheuser Busch/baldwinsv                                            Pliers Cushion/foam 5”                                     18.99</a></pre>
+      <pre class="Report"><a name="2782520">&nbsp;</a></pre>
+      <pre class="Report"><a name="2782521">  000330 01  100 12/04/07 10000292    4CP16                         Cooper Xcelite Hard Wire 4”  12/05/07          2 </a>EA      36.4000</pre>
+      <pre class="Report"><a name="2782522">Anheuser Busch/baldwinsv                                            Cutter Cushion Handle                                      72.80</a></pre>
+      <pre class="Report"><a name="2782523">                                      4CP19                         Cooper Tools Curved Thin Nos 12/05/07          2 EA      18.9900</a></pre>
+      <pre class="Report"><a name="2782524">                                                                    Pliers Cushion/foam 5”                                     37.98</a></pre>
+      <pre class="Report"><a name="2782525">                                                                                                                          ----------</a></pre>
+      <pre class="Report"><a name="2782526">                                                                                                                              110.78</a></pre>
+      <pre class="Report"><a name="2782527">&nbsp;</a></pre>
+      <pre class="Report"><a name="2782528">  000330 01  100 12/04/07 10000294    S185-R                        BOBCAT RENTAL                12/05/07  T       </a>1 MO     900.0000</pre>
+      <pre class="Report"><a name="2782529">Anheuser Busch/baldwinsv                                                                                                      900.00</a></pre>
+      <pre class="Report"><a name="2782530">                                      12X100                        1/2”od X 100’ Copper Coil    12/05/07  T       1 EA      68.3300</a></pre>
+      <pre class="Report"><a name="2782531">                                                                                                 11/19/07C                     68.33</a></pre>
+      <pre class="Report"><a name="2782532">                                                                                                                          ----------</a></pre>
+      <pre class="Report"><a name="2782533">                                                                                                                              968.33</a></pre>
+      <pre class="Report"><a name="2782534">&nbsp;</a></pre>
+      <pre class="Report"><a name="2782535">                                                                                                                          ==========</a></pre>
+      <pre class="Report"><a name="2782536">***Totals For Customer: Anheuser Busch/baldwinsville                                                                         </a>1172.48</pre>
+      <pre class="Report"><a name="2782537">                                                                                                                     1.98</a></pre>
+      <pre class="Report"><a name="2782538">&nbsp;</a></pre>
+      <pre class="Report"><a name="2782539"> </a></pre>
+      <pre class="Report"><a name="2782540">  045000 06  300 10/31/07 40000045    1202                          11 HP 175 PSI Compressor     11/01/07          1 </a>MO     240.0000</pre>
+      <pre class="Report"><a name="2782541">Gardner Construction                                                                                                          240.00</a></pre>
+      <pre class="Report"><a name="2782542">                                      1301                          50’ Air Hose                 11/01/07          2 MO      80.0000</a></pre>
+      <pre class="Report"><a name="2782543">                                                                                                                              160.00</a></pre>
+      <pre class="Report"><a name="2782544">                                                                                                                          ----------</a></pre>
+      <pre class="Report"><a name="2782545">                                                                                                                              400.00</a></pre>
+      <pre class="Report"><a name="2782546">&nbsp;</a></pre>
+      <pre class="Report"><a name="2782547">  045000 06  300 12/01/07 40000122    9808                          8000 Watt Generator          12/02/07          1 </a>MO     660.0000</pre>
+      <pre class="Report"><a name="2782548">Gardner Construction                                                                                                          660.00</a></pre>
+      <pre class="Report"><a name="2782549">&nbsp;</a></pre>
+      <pre class="Report"><a name="2782550">                                                                                                                          ==========</a></pre>
+      <pre class="Report"><a name="2782551">***Totals For Customer: Gardner Construction                                                                                 1060.00</a></pre>
+      <pre class="Report"><a name="2782552">&nbsp;</a></pre>
+      <pre class="Report"><a name="2782553">&nbsp;</a></pre>
+      <div class="Body"><a name="2203690">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Daily Order Detail Reports", "ois", "order_processing_%20reports.17.3.htm#1716004");
+          WWHAddRelatedTopic("Entering a Sales Order", "ois", "Sales%20Order%20Entry.4.3.htm#1420189");
+          WWHAddRelatedTopic("Sales Order Inquiry", "ois", "open_order_inq.htm#1434338");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="order_processing_%20reports.17.2.htm#1726554">Order Processing Reports</a>:<a class="WebWorks_Breadcrumb_Link" href="order_processing_%20reports.17.3.htm#1726554">Daily Order Detail Reports</a>:Overdue Sales Order Detail Report</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

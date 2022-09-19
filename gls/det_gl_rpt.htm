@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Detail General Ledger Report</title>
+    <link rel="StyleSheet" href="css/gl_reports.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1363444">Detail General Ledger Report</a></div>
+      <div class="Body"><a name="1363445">The Detail General Ledger Report lists a summary of the debits and credits </a>posted to each general ledger module for a range of fiscal periods. You can view the beginning balance, ending balance, and summary of postings for each period. The report is sorted by period, module, posting date.</div>
+      <div class="Body"><span style="font-weight: bold;"><a name="1363446">Menu Path</a></span>: Financial &gt; General Ledger &gt; Reports &gt; Detail General Ledger Report</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1363447&quot;);"><a name="1363447">Selection Criteria</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1363447", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1363447", false);</script>
+      <div class="Body"><a name="1363448">Use the following criteria to limit the information to print on the report:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1363449">Period range</a></span>. The beginning and ending fiscal periods to include.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373063">G/L Account Number range</a></span>. The beginning and ending general ledger account numbers to include. Leave blank to include all periods.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373064">Sort By Prefix Or G./L</a></span>. The sort order for the report:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373076">P</a></span> - Sort by general ledger prefix.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373080">G</a></span> - Sort by general ledger account number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1363450&quot;);"><a name="1363450">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1363450", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1363450", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 404.24976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1363453">Column Heading</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1363455">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363457">G/L Acct#</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363459">The general ledger account number posted to.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363461">Prefix</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363463">The general ledger prefix number. Refer to </a><a href="javascript:WWHClickedPopup('gls', 'general_ledger_%20table_%20maintenance.2.2.htm#1353363', '');">Setting up the General Ledger Hierarchy</a> for an explanation of how the prefix is determined for your company.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363465">Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363467">The description of the general ledger account. Refer to the </a><a href="javascript:WWHClickedPopup('gls', 'general_ledger_%20table_%20maintenance.2.6.htm#1345386', '');">Default Chart of Accounts</a> for a complete description of the account.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363469">Period</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363471">The fiscal period in which the module posted.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363473">PostDate</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363475">The date the module posted to the general ledger.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363477">Document#</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363479">The document number if the transaction is a journal entry.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363481">Src</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363483">The general ledger module posted to. Refer to the </a><a href="javascript:WWHClickedPopup('gls', 'general_ledger_balancing.4.3.htm#1342892', '');">General Ledger Module Code Definitions</a> for a complete list and explanation of modules.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363485">Debits</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363487">The amount debited to the general ledger account for the module on </a>the post date.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363489">Credits</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1428216">The amount credited to the general ledger account for the module on </a>the post date.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363493">Balance</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363495">The account balance at the end of the selected fiscal period.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1363498">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1363499&quot;);"><a name="1363499">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1363499", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1363499", false);</script>
+      <pre class="Report"><a name="1373099">Activant Prelude                                                                                           User Id SEM   Page 1</a></pre>
+      <pre class="Report"><a name="1427898">Detail General Ledger Report As Of 14:17:02 On 04/26/07</a></pre>
+      <pre class="Report"><a name="1427899">GL.NUM &gt;= “1010” AND GL.NUM &lt;= “2000” [Beginning Period = “07-01” AND Ending Period = “07-02” AND Sort By Prefix Or G/L = “G”]</a></pre>
+      <pre class="Report"><a name="1427900">&nbsp;</a></pre>
+      <pre class="Report"><a name="1427901">G/L Acct# Prefix           Description                          Period PostDate Document# Src      Debits     Credits     Balance</a></pre>
+      <pre class="Report"><a name="1427902">========= ================ ==================================== ====== ======== ========= === ============ ============ ============</a></pre>
+      <pre class="Report"><a name="1427903">1010      001!!10!!        Cash In Bank                                12/31/06           OPN                                -100.00</a></pre>
+      <pre class="Report"><a name="1427904">                                        Cash Receipts           07-02  02/28/07           CR          0.00       100.00</a></pre>
+      <pre class="Report"><a name="1427905">                                                                                              ------------ ------------ ------------</a></pre>
+      <pre class="Report"><a name="1427906">                                                               Ending Balance For Period 0702         0.00       100.00      -100.00</a></pre>
+      <pre class="Report"><a name="1427907">&nbsp;</a></pre>
+      <pre class="Report"><a name="1427908">                                                                                              ------------ ------------ ------------</a></pre>
+      <pre class="Report"><a name="1427909">    Totals For Prefix 001!!10!!                                    Ending Balance For Period          0.00       100.00      -200.00</a></pre>
+      <pre class="Report"><a name="1427910">&nbsp;</a></pre>
+      <pre class="Report"><a name="1427911">1010      001!!50!!        Cash In Bank                                12/31/06           OPN                                   0.00</a></pre>
+      <pre class="Report"><a name="1427912">                              A/P Check Disbursements           07-01  02/05/07           AC          0.00       133.33</a></pre>
+      <pre class="Report"><a name="1427913">                                    A/P Voided Checks           07-01  02/05/07           AV        133.33         0.00</a></pre>
+      <pre class="Report"><a name="1427914">                                        Cash Receipts           07-01  01/09/07           CR        146.45         0.00</a></pre>
+      <pre class="Report"><a name="1427915">                                        Cash Receipts           07-01  01/10/07           CR          0.00         0.00</a></pre>
+      <pre class="Report"><a name="1427916">                                        Cash Receipts           07-01  01/16/07           CR         10.00         0.00</a></pre>
+      <pre class="Report"><a name="1427917">                                        Cash Receipts           07-01  02/05/07           CR       5055.17         0.00</a></pre>
+      <pre class="Report"><a name="1427918">                                         post to cash           07-01  01/09/07 00008-070 JE          0.00      1000.00</a></pre>
+      <pre class="Report"><a name="1427919">                                     Order Processing           07-01  01/09/07           OE       1055.46         0.00</a></pre>
+      <pre class="Report"><a name="1427920">                                     Order Processing           07-01  01/12/07           OE       1965.60      1134.00</a></pre>
+      <pre class="Report"><a name="1427921">                                     Order Processing           07-01  01/16/07           OE         42.00         7.66</a></pre>
+      <pre class="Report"><a name="1427922">                                     Order Processing           07-01  02/05/07           OE         59.56         0.00</a></pre>
+      <pre class="Report"><a name="1427923">                                     Order Processing           07-01  04/26/07           OE         87.65         0.00</a></pre>
+      <pre class="Report"><a name="1427924">                                        Vendor Claims           07-01  01/12/07           VC          0.00         0.00</a></pre>
+      <pre class="Report"><a name="1427925">                                                                                              ------------ ------------ ------------</a></pre>
+      <pre class="Report"><a name="1427926">                                                               Ending Balance For Period 0701      8555.22      2274.99      6280.23</a></pre>
+      <pre class="Report"><a name="1427927">&nbsp;</a></pre>
+      <pre class="Report"><a name="1427928">                                    A/P Voided Checks           07-02  02/21/07           AV      61516.62         0.00</a></pre>
+      <pre class="Report"><a name="1427929">                                         post to cash           07-02  02/22/07 00008-070 JE          0.00      1000.00</a></pre>
+      <pre class="Report"><a name="1427930">                                                                                              ------------ ------------ ------------</a></pre>
+      <pre class="Report"><a name="1427931">                                                               Ending Balance For Period 0702     61516.62      1000.00     60516.62</a></pre>
+      <pre class="Report"><a name="1427932">&nbsp;</a></pre>
+      <pre class="Report"><a name="1427933">                                                                                              ------------ ------------ ------------</a></pre>
+      <pre class="Report"><a name="1427934">    Totals For Prefix 001!!50!!                                    Ending Balance For Period      70071.84      3274.99     66796.85</a></pre>
+      <pre class="Report"><a name="1427935">&nbsp;</a></pre>
+      <pre class="Report"><a name="1427936">1010      001!!60!!        Cash In Bank                                12/31/06           OPN                               25586.66</a></pre>
+      <pre class="Report"><a name="1427937">                              A/P Check Disbursements           07-01  04/26/07           AC          0.00      1000.00</a></pre>
+      <pre class="Report"><a name="1427938">                                        Cash Receipts           07-01  02/05/07           CR          0.00         0.00</a></pre>
+      <pre class="Report"><a name="1427939">                                        Cash Receipts           07-01  04/26/07           CR       3439.05       100.00</a></pre>
+      <pre class="Report"><a name="1427940">&nbsp;</a></pre>
+      <pre class="Report"><a name="1427941">&nbsp;</a></pre>
+      <pre class="Report"><a name="1427942">                                                                                              ------------ ------------ ------------</a></pre>
+      <pre class="Report"><a name="1427943">                                                               Ending Balance For Period 0701      3439.05      1100.00      2339.05</a></pre>
+      <pre class="Report"><a name="1427944">&nbsp;</a></pre>
+      <pre class="Report"><a name="1427945">                              A/P Check Disbursements           07-02  02/21/07           AC          0.00       117.59</a></pre>
+      <pre class="Report"><a name="1427946">                              A/P Check Disbursements           07-02  03/05/07           AC          0.00       111.14</a></pre>
+      <pre class="Report"><a name="1427947">                                        Cash Receipts           07-02  02/21/07           CR       6806.50         0.00</a></pre>
+      <pre class="Report"><a name="1427948">                                        Cash Receipts           07-02  02/22/07           CR        350.00         0.00</a></pre>
+      <pre class="Report"><a name="1427949">                                        Cash Receipts           07-02  02/26/07           CR        300.00         0.00</a></pre>
+      <pre class="Report"><a name="1427950">                                        Cash Receipts           07-02  02/27/07           CR       1002.13         0.00</a></pre>
+      <pre class="Report"><a name="1427951">                                        Cash Receipts           07-02  02/28/07           CR        100.00         0.00</a></pre>
+      <pre class="Report"><a name="1427952">                                        Cash Receipts           07-02  03/05/07           CR      16002.74         0.00</a></pre>
+      <pre class="Report"><a name="1427953">                                        Cash Receipts           07-02  04/26/07           CR         39.08         0.00</a></pre>
+      <pre class="Report"><a name="1427954">                                                                                              ------------ ------------ ------------</a></pre>
+      <pre class="Report"><a name="1427955">                                                               Ending Balance For Period 0702     24600.45       228.73     24371.72</a></pre>
+      <pre class="Report"><a name="1427956">&nbsp;</a></pre>
+      <pre class="Report"><a name="1427957">                                                                                              ------------ ------------ ------------</a></pre>
+      <pre class="Report"><a name="1427958">    Totals For Prefix 001!!60!!                                    Ending Balance For Period      28039.50      1328.73     52297.43</a></pre>
+      <pre class="Report"><a name="1427959">&nbsp;</a></pre>
+      <div class="Body"><a name="1439039">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("General Ledger Module Code Definitions", "gls", "general_ledger_balancing.4.3.htm#1342892");
+          WWHAddRelatedTopic("Posting to the General Ledger", "gls", "post_sub.htm#1348096");
+          WWHAddRelatedTopic("Maintaining the General Ledger Chart of Accounts", "gls", "general_ledger_%20table_%20maintenance.2.3.htm#1344918");
+          WWHAddRelatedTopic("General Ledger Reports", "gls", "gl_reports.10.1.htm#1332082");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="gl_reports.10.1.htm#1363444">General Ledger Reports</a>:Detail General Ledger Report</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

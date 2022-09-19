@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Vendor Claims Aging Report</title>
+    <link rel="StyleSheet" href="css/Inventory_Reports.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1322312">Vendor Claims Aging Report</a></div>
+      <div class="Body"><a name="1388255">The Vendor Claims Aging report displays claims updated in Vendor Claim Update Processing (refer to </a><a href="javascript:WWHClickedPopup('ics', 'vcu.htm#1371253', '');">Updating Vendor Claims</a>) but not yet reconciled with a vendor credit or replaced with another product (refer to <a href="javascript:WWHClickedPopup('ics', 'Vendor_Claims.10.15.htm#1312765', '');">Entering Warranty Replacements</a>). You can use this report to follow up with the vendor on old claims that still need a credit or a replacement. </div>
+      <div class="Body"><span style="font-weight: bold;"><a name="1388280">Menu Path:</a></span> Inventory &gt; Reports &gt; Vendor Claim Reports &gt; Vendor Claim Aging Report</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1388281&quot;);"><a name="1388281">Selection Criteria</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1388281", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1388281", false);</script>
+      <div class="Body"><a name="1388282">Use the following criteria to limit the information to print on the report:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1388283">Division</a></span>. The highest possible grouping in your company (e.g., Eastern Division, Western Division).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1388284">Region</a></span>. A subset of Division - if Division is used (e.g., Southeast Region, Northwestern Region).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1388285">Warehouse</a></span>. The warehouse where the claims were entered.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1388286">Department</a></span>. A subset of warehouse. Typically used to separate expenses within a warehouse (e.g., accounting, sales, warehouse).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1388287">Cost Center</a></span>. A subset of Department - if Department is used. Typically used to separate expenses within a warehouse or department (e.g., shipping, receiving, outside sales, inside sales).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1388302">Vendor</a></span>. The vendor to include on the report or leave blank to include all vendors.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1388379">Summary or Detail</a></span>. The type of aging information to include in the report. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1388386">S</a></span> - The summary of each claim for each vendor.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1388393">D</a></span> - The detail product information of each claim for each vendor.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1388378">Sort By (W)arehouse / (V)endor</a></span>. The report sort sequence. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1388303">W</a></span> - Sort by warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1388304">V</a></span> - Sort by vendor.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1388305&quot;);"><a name="1388305">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1388305", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1388305", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 404.24976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1514997">Column Heading</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1514999">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515001">Date/Clm </a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515003">Line 1: The date the vendor claim was entered.</a></div>
+            <div class="TableText"><a name="1515004">Line 2: The vendor claim release number (e.g., the claim number with </a>-1, -2).</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515006">Vend#</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515008">The vendor number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515010">Tag#/</a></div>
+            <div class="TableText"><a name="1515011">Doc#</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515013">Line 1: The warranty tag number if the claim was generated for a </a>warranty tag.</div>
+            <div class="TableText"><a name="1515014">Line 2: The document number associated with the warranty tag. The </a>prefix indicates how the tag was created:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1628779">S - The tag was created when a credit was issued to the customer </a>for the returned product (refer to <a href="javascript:WWHClickedPopup('ics', 'Vendor_Claims.10.4.htm#1312038', '');">Creating Warranty Tags in Credit Memo Entry</a>).</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1629156">A - The tag was created when the product was adjusted into </a>warranty inventory (refer to <a href="javascript:WWHClickedPopup('ics', 'Vendor_Claims.10.5.htm#1312129', '');">Creating Warranty Tags in Inventory Adjustment Entry</a>).</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1629166">No prefix - The tag was created when the product was rejected in </a>receiving (refer to <a href="javascript:WWHClickedPopup('ics', 'Vendor_Claims.10.6.htm#1312178', '');">Creating Warranty Tags in Stock Receipts Entry</a>).</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515016">Product# / </a>Description</div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515018">Line 1: The product number.</a></div>
+            <div class="TableText"><a name="1515019">Line 2: The description of the product.</a></div>
+            <div class="TableText"><a name="1515020">Line 3: The second line of description of the product, if applicable.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515022">Quantity</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515024">The quantity of the product on the vendor claim that was scrapped or </a>returned to the vendor.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515026">Current</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515028">The total value of vendor claims updated in Vendor Claims Update </a>Processing less than 30 days ago.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515030">31-60</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515032">The total value of vendor claims updated in Vendor Claims Update </a>Processing 31 to 60 days ago.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515034">61-90</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515036">The total value of vendor claims updated in Vendor Claims Update </a>Processing 61 to 90 days ago.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515038">91-120</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515040">The total value of vendor claims updated in Vendor Claims Update </a>Processing 91 to 120 days ago.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515042">121&amp;Over</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515044">The total value of vendor claims updated in Vendor Claims Update </a>Processing over 120 days ago.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515046">Tot Value</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1515048">The total value of vendor claims updated in Vendor Claims Update </a>Processing that are waiting for a credit or replacement.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1727645">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1682382&quot;);"><a name="1682382">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1682382", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1682382", false);</script>
+      <pre class="Report"><a name="1388278">Vendor Claims Aging Report As Of 09:52:23 On 05/05/07                                                                             </a></pre>
+      <pre class="Report"><a name="1818915">[Summary or Detail = “D” AND Sort by (W)arehouse/(V)endor = “W”]                                                                   </a></pre>
+      <pre class="Report"><a name="1818916">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818917">Date/Clm Vend#  Tag#/Doc#  Product# / Description        Quantity    Current      31-60      61-</a>90     91-120   121&amp;Over  Tot Value</pre>
+      <pre class="Report"><a name="1818918">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818919">02/24/07 000500 40000002   4JF50                               -2                           -</a>26.62                           -26.62</pre>
+      <pre class="Report"><a name="1818920">40000754-1      A-40000002 Ansell Perfect Fit Gloves Knit</a></pre>
+      <pre class="Report"><a name="1818921">                           Triple Strand Steel Size S    </a></pre>
+      <pre class="Report"><a name="1818922">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818923">01/13/07 100114            PK 10511                            -6                                     -</a>130.92               -130.92</pre>
+      <pre class="Report"><a name="1818924">40000576-1                 Muffler                       </a></pre>
+      <pre class="Report"><a name="1818925">                                                         </a></pre>
+      <pre class="Report"><a name="1818926">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818927">01/13/07 100114            PK 10601                           -25                                     -</a>227.28               -227.28</pre>
+      <pre class="Report"><a name="1818928">40000576-1                 Air Filter                    </a></pre>
+      <pre class="Report"><a name="1818929">                                                         </a></pre>
+      <pre class="Report"><a name="1818930">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818931">03/02/05 100099            4AD99                              -12                           -</a>84.00                           -84.00</pre>
+      <pre class="Report"><a name="1818932">10001220-1                 Ansell Perfect Fit Gloves Knit</a></pre>
+      <pre class="Report"><a name="1818933">                           Nitrasafe, Wrist Size 9       </a></pre>
+      <pre class="Report"><a name="1818934">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818935">03/02/07 100099            3AD35                               -1                            -</a>6.40                            -6.40</pre>
+      <pre class="Report"><a name="1818936">10001222-1                 Ansell Perfect Fit Gloves Knit</a></pre>
+      <pre class="Report"><a name="1818937">                           Nitrasafe, Wrist Size 10      </a></pre>
+      <pre class="Report"><a name="1818938">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818939">03/02/07 100099            4AD99                               -1                            -</a>6.40                            -6.40</pre>
+      <pre class="Report"><a name="1818940">10001224-1                 Ansell Perfect Fit Gloves Knit</a></pre>
+      <pre class="Report"><a name="1818941">                           Nitrasafe, Wrist Size 9       </a></pre>
+      <pre class="Report"><a name="1818942">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818943">03/02/07 100099            4JF50                               -1                           -</a>13.31                           -13.31</pre>
+      <pre class="Report"><a name="1818944">10001225-1                 Ansell Perfect Fit Gloves Knit</a></pre>
+      <pre class="Report"><a name="1818945">                           Triple Strand Steel Size S    </a></pre>
+      <pre class="Report"><a name="1818946">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818947">02/11/07 100103 10000001   6C239                              -12                           -</a>35.26                           -35.26</pre>
+      <pre class="Report"><a name="1818948">10000899-1      10000898-1 Stanley Phillips 1/4          </a></pre>
+      <pre class="Report"><a name="1818949">                           Screwdriver Length 4”         </a></pre>
+      <pre class="Report"><a name="1818950">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818951">02/11/07 100103 10000003   6C240                              -12                           -</a>51.48                           -51.48</pre>
+      <pre class="Report"><a name="1818952">10000904-1      10000903-1 Stanley Phillips 6”           </a></pre>
+      <pre class="Report"><a name="1818953">                           Screwdriver 1/16 Length No.3  </a></pre>
+      <pre class="Report"><a name="1818954">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818955">03/01/07 010000 10000013   4A844                              -17                           -</a>52.82                           -52.82</pre>
+      <pre class="Report"><a name="1818956">10001110-1      S-10135208 Klein 1/4” Slotted Screwdriver</a></pre>
+      <pre class="Report"><a name="1818957">                           1 1/2” Shank                  </a></pre>
+      <pre class="Report"><a name="1818958">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818959">02/03/07 100100            6C237                               -5                                      -</a>11.31                -11.31</pre>
+      <pre class="Report"><a name="1818960">10000795-1                 Stanley Phillips 1/8          </a></pre>
+      <pre class="Report"><a name="1818961">                           Screwdriver Length 2 3/4”     </a></pre>
+      <pre class="Report"><a name="1818962">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818963">02/04/07 100100            6C237                               -1                                       -</a>2.26                 -2.26</pre>
+      <pre class="Report"><a name="1818964">10000796-1                 Stanley Phillips 1/8          </a></pre>
+      <pre class="Report"><a name="1818965">                           Screwdriver Length 2 3/4”     </a></pre>
+      <pre class="Report"><a name="1818966">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818967">02/04/05 100100            6C237                               -1                                       -</a>2.26                 -2.26</pre>
+      <pre class="Report"><a name="1818968">10000798-1                 Stanley Phillips 1/8          </a></pre>
+      <pre class="Report"><a name="1818969">                           Screwdriver Length 2 3/4”     </a></pre>
+      <pre class="Report"><a name="1818970">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818971">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818972">03/23/05 010000 60000004   4A840                               -1                -14.82                                      </a>-14.82</pre>
+      <pre class="Report"><a name="1818973">60000024-1      A-60000003 Klein 8” Diagional Cut Pliers </a></pre>
+      <pre class="Report"><a name="1818974">                           “2000 Series” </a></pre>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Updating Vendor Claims", "ics", "vcu.htm#1371253");
+          WWHAddRelatedTopic("Entering Warranty Replacements", "ics", "Vendor_Claims.10.15.htm#1312765");
+          WWHAddRelatedTopic("Vendor Claim Inquiries", "ics", "Vendor_Claims.10.17.htm#1317244");
+          WWHAddRelatedTopic("Creating Vendor Claims", "ics", "Vendor_Claims.10.7.htm#1310495");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Inventory_Reports.14.1.htm#1322312">Inventory Reports</a>:<a class="WebWorks_Breadcrumb_Link" href="Inventory_Reports.14.79.htm#1322312">Vendor Claim Reports</a>:Vendor Claims Aging Report</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

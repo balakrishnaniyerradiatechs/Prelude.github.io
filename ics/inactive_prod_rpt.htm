@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Inactive Product Report</title>
+    <link rel="StyleSheet" href="css/Inventory_Reports.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1322132">Inactive Product Report</a></div>
+      <div class="Body"><a name="1385612">The Inactive Product report displays products with no activity for a time </a>period. You can use this report to identify incorrect part numbers and products to return, delete, or remove from inventory.</div>
+      <div class="Body"><span style="font-weight: bold;"><a name="1450781">Menu Path:</a></span> Inventory &gt; Reports &gt; Sales Status Reports &gt; Inactive Product Report</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1385650&quot;);"><a name="1385650">Selection Criteria</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1385650", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1385650", false);</script>
+      <div class="Body"><a name="1385651">Use the following criteria to limit the information to print on the report:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385652">Division</a></span>. The highest possible grouping in your company (e.g., Eastern Division, Western Division).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385653">Region</a></span>. A subset of Division - if Division is used (e.g., Southeast Region, Northwestern Region).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385654">Warehouse</a></span>. The warehouse(s) to include on the report.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385655">Department</a></span>. A subset of warehouse. Typically used to separate expenses within a warehouse (e.g., accounting, sales, warehouse).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385656">Cost Center</a></span>. A subset of Department - if Department is used. Typically used to separate expenses within a warehouse or department (e.g., shipping, receiving, outside sales, inside sales).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385657">Product</a></span>. The product(s) to include on the report. Leave blank to include all products.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385658">Product Type</a></span>. The products type(s) to include on the report. Leave blank to include all product types or choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1385659">N</a></span> - Rental item.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1385660">F</a></span> - Finished good.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1385661">R</a></span> - Raw material.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1385662">B</a></span> - Both finished and raw material.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1385663">E</a></span> - Expense item.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1385664">U</a></span> - Used item.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385665">Stocking Status Code</a></span>: The stock status codes to include on the report. Leave blank to include all status codes or choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1385666">S</a></span> - Stock.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1385667">N</a></span> - Nonstock.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1425681">C</a></span> - Consigned.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385672">Product Line</a></span>. The product line(s) to include on the report. Leave blank to include all product lines.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385673">Primary Vendor</a></span>. The vendor(s) to include on the report. Leave blank to include all vendors.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385742">Evaluation As Of Date</a></span>. The date up to which you want to view activity (i.e., ending date).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1628674">Inactivity Date</a></span>. The beginning date to review. For example, if you enter <span class="Typed-in.text">01/01/05</span> for the <span style="font-style: italic;">Inactivity Date</span> and <span class="Typed-in.text">06/01/06</span> for the <span style="font-style: italic;">Evaluation As </span><span style="font-style: italic;">of Date</span>, then the report will include all products with no activity from 01/01/05 until 06/01/05.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1387727">Onhand not equal to 0.</a></span> Determines if you want to only show products with an on-hand quantity. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1385861">Y</a></span> - Only display products with an on-hand quantity or negative on-hand quantity. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1385862">N </a></span>- Display all products, including products with an on-hand balance of zero.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1385747">TAI Type Exclusion List</a></span>. The transaction audit inquiry codes to exclude from the analysis. For example, if you want to exclude returned products. Refer to <a href="javascript:WWHClickedPopup('ics', 'transaction_audit_inq.htm#1428897', '');">Transaction Audit Inquiry Codes</a> for code definitions.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1385674&quot;);"><a name="1385674">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1385674", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1385674", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 404.24976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1514870">Column Heading</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1514872">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514874">Product </a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514876">The product number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514878">Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514880">Line 1: The product description.</a></div>
+            <div class="TableText"><a name="1514881">Line 2: The second line of description for the product, if applicable.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514883">Est-Date</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514885">The date the product was established in this warehouse.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514887">Last-Act</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514889">The last date activity occurred for the product.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514891">Onhand</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514893">The quantity of the product in on-hand inventory.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514895">U/M</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514897">The unit of measure for the product as it exists in inventory.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514899">Cost</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514901">The accounting cost of the product.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514903">Extension</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1514905">The total extended value of the quantity on-hand (</a><span style="font-style: italic;">Onhand</span> x <span style="font-style: italic;">Cost</span>).</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1727606">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1682370&quot;);"><a name="1682370">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1682370", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1682370", false);</script>
+      <pre class="Report"><a name="1385647">Inactive Product Report As Of 12:39:20 On 11/12/07                                                                                </a></pre>
+      <pre class="Report"><a name="1818743">WHSE.NUM = “10” [Evaluation As Of Date = “11/12/07” AND Inactivity Date = “08/14/07” AND Only Onhand not equal to 0 = “N”]         </a></pre>
+      <pre class="Report"><a name="1818744">Warehouse Philadelphia Branch           </a></pre>
+      <pre class="Report"><a name="1818745">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818746">Product                        Description                    Est-Date Last-Act   Onhand U/M        Cost    Extension</a></pre>
+      <pre class="Report"><a name="1818747">8300                           TPCX TEST PRODUCT              07/05/07                 0 EA        0.000         0.00</a></pre>
+      <pre class="Report"><a name="1818748">                                                             </a></pre>
+      <pre class="Report"><a name="1818749">9802                           2200 Watt Generator            05/11/05 06/30/07        3 EA      598.338     1,795.01</a></pre>
+      <pre class="Report"><a name="1818750">                                                             </a></pre>
+      <pre class="Report"><a name="1818751">9804                           4000 Watt Generator            05/11/05 05/11/07        2 EA      945.750     1,891.50</a></pre>
+      <pre class="Report"><a name="1818752">                                                             </a></pre>
+      <pre class="Report"><a name="1818753">9805                           5000 Watt Generator            05/11/05 05/11/07        4 EA     1183.650     4,734.60</a></pre>
+      <pre class="Report"><a name="1818754">                                                             </a></pre>
+      <pre class="Report"><a name="1818755">9806                           6000 Watt Generator            05/11/05 05/11/07        3 EA     1010.750     3,032.25</a></pre>
+      <pre class="Report"><a name="1818756">                                                             </a></pre>
+      <pre class="Report"><a name="1818757">9807                           7000 Watt Generator            05/11/05 05/11/07        2 EA     1621.100     3,242.20</a></pre>
+      <pre class="Report"><a name="1818758">                                                             </a></pre>
+      <pre class="Report"><a name="1818759">9808                           8000 Watt Generator            05/11/05 05/11/07        1 EA      844.350       844.35</a></pre>
+      <pre class="Report"><a name="1818760">                                                             </a></pre>
+      <pre class="Report"><a name="1818761">B46/D4A                        40’ Diesel 4x4 Articulated     05/11/05 05/23/07        2 EA    16250.000    32,500.00</a></pre>
+      <pre class="Report"><a name="1818762">                               Boom Lift                     </a></pre>
+      <pre class="Report"><a name="1818763">B46/D4A 8                      40’ Diesel 4x4 Articulated 8   05/11/05                 0 EA    40000.000         0.00</a></pre>
+      <pre class="Report"><a name="1818764">                               Boom Lift Foot Basket         </a></pre>
+      <pre class="Report"><a name="1818765">B46/D4T                        40’ Diesel 4x4 Telescopic Boom 05/11/05 05/19/07        2 EA    18200.000    36,400.00</a></pre>
+      <pre class="Report"><a name="1818766">                               Lift                          </a></pre>
+      <pre class="Report"><a name="1818767">B46/D4T 8                      40’ Diesel 4x4 Articulated 8   05/11/05                 0 EA    40000.000         0.00</a></pre>
+      <pre class="Report"><a name="1818768">                               Boom Lift Foot Basket         </a></pre>
+      <pre class="Report"><a name="1818769">B46/G4T                        40’ Gas 4x4 Telescopic Boom    05/11/05                 0 EA    40000.000         0.00</a></pre>
+      <pre class="Report"><a name="1818770">                               Lift                          </a></pre>
+      <pre class="Report"><a name="1818771">B66/D4A                        60’ Diesel Articulated 4x4     05/11/05 05/19/07        2 EA    20800.000    41,600.00</a></pre>
+      <pre class="Report"><a name="1818772">                               Boom Lift                     </a></pre>
+      <pre class="Report"><a name="1818773">B66/D4A 6                      60’ Diesel Articulated 4x4 6   05/11/05                 0 EA        0.000         0.00</a></pre>
+      <pre class="Report"><a name="1818774">&nbsp;</a></pre>
+      <pre class="Report"><a name="1818775">Product                        Description                    Est-Date Last-Act   Onhand U/M        Cost    Extension</a></pre>
+      <pre class="Report"><a name="1818776">B66/D4T                        60’ Diesel Telescopic 4x4 Boom 05/11/05 05/19/07        2 EA    20800.000    41,600.00</a></pre>
+      <pre class="Report"><a name="1818777">                               Lift                          </a></pre>
+      <pre class="Report"><a name="1818778">B66/D4T 8                      60’ Diesel Telescopic 4x4 Boom 05/11/05                 0 EA        0.000         0.00</a></pre>
+      <pre class="Report"><a name="1818779">                               Lift 8 Foot Basket            </a></pre>
+      <pre class="Report"><a name="1818780">B66/G4T                        60’ Gas Telescopic 4x4 Boom    05/11/05                 0 EA        0.000         0.00</a></pre>
+      <pre class="Report"><a name="1818781">                               Lift                          </a></pre>
+      <pre class="Report"><a name="1818782">BC.CP10                        Hose BC CP10                   08/13/07                 0 EA        2.000         0.00</a></pre>
+      <pre class="Report"><a name="1818783">                                                             </a></pre>
+      <pre class="Report"><a name="1818784">BRBJ83                         Bedrug Soft Bedliner           07/01/07                 0 EA      239.970         0.00</a></pre>
+      <pre class="Report"><a name="1818785">                                                             </a></pre>
+      <pre class="Report"><a name="1818786">BRQ74LB                        Bedrug Soft Bedliner           07/01/07                 0 EA      239.970         0.00</a></pre>
+      <pre class="Report"><a name="1818787">                                                             </a></pre>
+      <pre class="Report"><a name="1818788">BRT86SB                        Bedrug Soft Bedliner           07/01/07                 0 EA      239.970         0.00</a></pre>
+      <pre class="Report"><a name="1818789">                                                             </a></pre>
+      <pre class="Report"><a name="1818790">BRT95L                         Bedrug Soft Bedliner           07/01/07                 0 EA      239.970         0.00</a></pre>
+      <pre class="Report"><a name="1818791">                                                             </a></pre>
+      <pre class="Report"><a name="1818792">DUR-9000                       Duralon 9000 Sq In             07/01/07                 0 SI        0.000         0.00</a></pre>
+      <pre class="Report"><a name="1818793">                                                             </a></pre>
+      <pre class="Report"><a name="1818794">DUR-9000-60X120                Duralon 9000 60 x 120 sheet    07/01/07                 0 EA       40.000         0.00</a></pre>
+      <pre class="Report"><a name="1818795">                                                             </a></pre>
+      <pre class="Report"><a name="1818796">DUR-9000-60X180                Duralon 9000 60 x 180 sheet    07/01/07                 0 EA       50.000         0.00</a></pre>
+      <div class="Body"><a name="1727613">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Transaction Audit Inquiry", "ics", "transaction_audit_inq.htm#1365499");
+          WWHAddRelatedTopic("Sales Status Reports", "ics", "Inventory_Reports.14.72.htm#1321709");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Inventory_Reports.14.1.htm#1322132">Inventory Reports</a>:<a class="WebWorks_Breadcrumb_Link" href="Inventory_Reports.14.72.htm#1322132">Sales Status Reports</a>:Inactive Product Report</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

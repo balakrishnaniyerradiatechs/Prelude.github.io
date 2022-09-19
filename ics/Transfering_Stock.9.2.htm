@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Establishing Transfer Options</title>
+    <link rel="StyleSheet" href="css/Transfering_Stock.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1307543">Establishing Transfer Options</a></div>
+      <div class="Body"><a name="1346347">You must set flags in Inventory Parameters to determine how stock transfers </a>are generated, entered, received, and how they update inventory in both the shipping and receiving warehouses.</div>
+      <div class="NumberedIntro"><a name="1411240">To establish transfer options:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1411242">Select </a><span style="font-weight: bold;">System Parameters &gt; Maintenance &gt; Option Parameters &gt; </span><span style="font-weight: bold;">Inventory Parameters &gt; F5-Add Info</span> to open the Inventory Add. Parameters screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1346526">For </a><span style="font-style: italic;">Two Step Transfer Process, </span>determine if inventory at the receiving branch is updated when the transfer is shipped in Transfer Shipments Entry. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1328340">Y</a></span> - Use the 2-step transfer process to eliminate the need to receive the transfer. The 2-step transfer reduces the time required to complete a transfer. However, shipping errors may not be caught. If necessary, you can use Inventory Adjustment Entry to correct the inventory balance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1328344">N </a></span>- Use use the regular transfer process (enter, print, ship, and receive).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1346512">For </a><span style="font-style: italic;">Transfer Branch Hold</span>, determine if a transfer goes on hold when the available quantity of an item goes below the safety stock at the shipping warehouse. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1328362">Y</a></span> - The transfer goes on Branch Manager Hold when it lowers the quantity of an item below the safety stock level, if the shipping warehouse is not in the replenishment path.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1328368">M</a></span> - The transfer goes on Branch Manager Hold when it lowers the quantity of an item below the safety stock level regardless of the replenishment path. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1328366">N</a></span> - The transfer does not go on Branch Manager Hold when it lowers the stock level of a product below safety stock.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1346546">For </a><span style="font-style: italic;">Auto Transfer Generation</span>, determine if you can automatically generate a transfer in Sales Order Entry, Work Order Entry, or sales order conversions. This flag only applies to items with a <span style="font-style: italic;">Supply Code</span> of <span style="font-weight: bold;">T</span> (transfer) or <span style="font-weight: bold;">R</span> (emergency transfer). Also, you must be authorized to automatically generate transfers. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1328409">Y</a></span> - Prompt to generate a transfer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1328413">W </a></span>- Automatically generate a transfer without prompting first.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1328414">N</a></span> - Do not automatically generate transfers.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1347995">For </a><span style="font-style: italic;">Rec. Transfers By Buye</span>r, determine if the recommended stock transfers generated by Nightly Processing are separated by buyer on the Recommended Stock Transfer Report. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1348004">Y</a></span> - Recommended stock transfers are separated by buyer. The buyers for transfers are set for each vendor in Vendor Maintenance, but can be overridden in Vendor Line Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1348005">N</a></span> - Recommended stock transfers are not separated by buyer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1348015">For </a><span style="font-style: italic;">Transfer Freight Prompt</span>, determine if the Freight Closeout screen should appear when you complete a transfer shipment. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1348035">Y</a></span> - The Freight Closeout screen appears when you complete a transfer shipment to allow the shipping warehouse to determine the freight amount. If you are using freight matrixes, you can override the calculated amount, if necessary.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1348043">N</a></span> - The Freight Closeout screen does not appear when you complete a transfer shipment.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1348044">For </a><span style="font-style: italic;">Transfer Receipt Header Upd</span>, determine if you can change and update the <a href="javascript:WWHClickedPopup('ics', 'stock_transfer_header.htm#1370595', '');">Stock Transfer Header screen</a> in Transfer Receipts Entry and Batch Transfer Receipts Entry or if you can only view the header screen. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1329165">Y</a></span> - You can edit the Stock Transfer Header.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1329173">N</a></span> - You can view, but not edit, the Stock Transfer Header.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">8	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1329185">For </a><span style="font-style: italic;">Allow Overage</span> <span style="font-style: italic;">in TRE</span>, determine if an item that is over-received in Transfer Receipts Entry or Batch Transfer Receipts Entry is allocated to a linked sales order. Choose from the following: </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1329218">Y</a></span> - The excess quantity is allocated to the linked sales order, and the quantity on the sales order is increased to the total received quantity.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1329222">N</a></span> - The excess quantity is put into stock. The linked sales order only receives the quantity originally ordered.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">9	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1329235">For </a><span style="font-style: italic;">Allow Over Ships on Xfers</span>, determine if an item that is over-received in Stock Receipts Entry or Batch Stock Receipts Entry is allocated to a linked stock transfer. Choose from the following: </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1336427">Y</a></span> - The excess quantity is allocated to the linked transfer and the quantity on the transfer is increased to the total received quantity.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1336428">N</a></span> - The excess quantity is put into stock. The linked transfer only receives the quantity originally ordered.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">10	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1440229">For </a><span style="font-style: italic;">Transfers to Rec Whse BQI</span>, determine where the Buyer Queue Inquiry is updated for transfers:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1440230">Y </a></span>- Update the Buyer Queue Inquiry for the <span style="font-style: italic;">To</span> warehouse when a stock transfer is generated.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1440231">N</a></span> - Update the Buyer Queue Inquiry for the <span style="font-style: italic;">From</span> warehouse when a stock transfer is generated.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">11	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1347076">For </a><span style="font-style: italic;">Auto Shp Whse Correction</span>, determine if inventory is automatically adjusted at the shipping warehouse when an item is over-received in Transfer Receipts Entry or Batch Transfer Receipts Entry. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1329756">Y</a></span> - Automatically adjust inventory at the shipping warehouse when an item on a transfer is over-received at the receiving warehouse. Lot controlled items are adjusted also.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1329760">N</a></span> - Do not automatically adjust inventory. You must manually adjust inventory at the shipping warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">12	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1329717">If </a><span style="font-style: italic;">Auto Shp Whse Correction </span>is set to <span style="font-weight: bold;">Y, </span>enter a <span style="font-style: italic;">Default Reason Code</span> to assign when inventory is automatically adjusted. Refer to <a href="javascript:WWHClickedPopup('ics', 'Inventory_Management.6.13.htm#1313181', '');">Establishing Inventory Adjustment Reason Codes</a>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">13	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1329722">For </a><span style="font-style: italic;">Round Transfer to Pkg Qt</span>y, determine if Nightly Processing rounds to package quantities on recommended stock transfers. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1329793">Y</a></span> - Nightly Processing rounds to the closest package quantity (up or down) when recommending a stock transfer, regardless of turns and maximum quantity calculations.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1329801">N</a></span> - Nightly Processing does not round to package quantities when recommending a stock transfer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1408504">U</a></span> - Nightly Processing always rounds up to the nearest whole package quantity.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">14	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1329727">For </a><span style="font-style: italic;">Transfer Consolidation</span>, determine if batch printing consolidates stock transfers with the same ship-to/ship-from warehouse combination, the same ship via, and the same transfer type:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1394340">Y</a></span> - Transfers are consolidated during batch printing. A separate line is created for each line item updated on the first transfer and linked sales orders are updated. This only applies for transfer types 01, 02, and 05 (refer to <a href="javascript:WWHClickedPopup('ics', 'Transfering_Stock.9.3.htm#1328166', '');">Defining Transfer Types</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1340969">N</a></span> - Transfers are not consolidated during batch printing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1423499">Consolidation Exceptions</a></div>
+            <div class="TableText"><a name="1448101">This flag does not apply to:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1423507">Warehousing stock transfers.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1423512">Transfers that use continuous printing.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1423514">Transfers that have the </a><span style="font-style: italic;">Unusual Usage</span> <span style="font-style: italic;">Flag</span> set to <span style="font-weight: bold;">Y</span>.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1423698">Transfers with a future date that is different that the other transfers.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText"><a name="1423659">A separate line item is created on the transfer if:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-style: italic;"><a name="1423672">Ship Complete</a></span> for the line is set to <span style="font-weight: bold;">Y</span>. </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1423677">The </a><span style="font-style: italic;">Emg?</span> flag is set different for a line item.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1423696">Line items have different costs.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1423697">A linkage exists.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Numbered_outer" style="margin-left: 0pt;margin-top: 15.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">15	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1411248">For </a><span style="font-style: italic;">Prorate Transfer Rate</span>, determine if freight on a partial transfer receipt is pro-rated by the number of products received:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1411285">Y</a></span> - Pro-rate the freight according to the transfer receipt quantity. The freight for each product is allocated according to the percentage set in Product Maintenance (refer to the <a href="javascript:WWHClickedPopup('ics', 'pm_freight_info.htm#1309261', '');">Freight Information Screen</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1411304">N</a></span> - Allocate all freight to the first receipt of the transfer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Entering Stock Transfers", "ics", "Transfering_Stock.9.4.htm#1310410");
+          WWHAddRelatedTopic("Printing Stock Transfers", "ics", "Transfering_Stock.9.12.htm#1312701");
+          WWHAddRelatedTopic("Shipping Stock Transfers", "ics", "Transfering_Stock.9.15.htm#1365101");
+          WWHAddRelatedTopic("Receiving Stock Transfers", "ics", "Transfering_Stock.9.20.htm#1309953");
+          WWHAddRelatedTopic("Transfer Inquiries", "ics", "Transfering_Stock.9.33.htm#1314219");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Transfering_Stock.9.1.htm#1307543">Stock Transfers</a>:Establishing Transfer Options</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

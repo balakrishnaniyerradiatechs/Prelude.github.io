@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Faxing Documents with VSI-Fax</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1121639">Faxing Documents with VSI-Fax</a></div>
+      <div class="Body"><a name="1121640">Prelude works in conjunction VSI-FAX, a third party software that enables you to fax documents to </a>vendors and customers. The VSI-FAX software resides on the UNIX box and requires a dedicated modem and port to send faxes. Several maintenance flags must be setup to customize faxes and the faxing process.</div>
+      <div class="Body"><a name="1121641">If the VSI-FAX server is down when a document (sales order, quote, purchase order, etc.) is faxed, you </a>are notified of the error by email or screen prompt . Jobs that were submitted are held until the server is back up. Also, the system administrator is emailed if VSI-FAX must be restarted, or if one of the modems is down.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1121642&quot;);"><a name="1121642">User Identificaton Maintenance (/USER.ID.MNT)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1121642", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1121642", false);</script>
+      <div class="Path"><a name="1121643">Path: Systems &gt;System Parameter &gt; Maintenance &gt; User Identification Maintenance</a></div>
+      <div class="Body"><a name="1121644">E-mail notifications are sent to individual users on the results of faxes. to receive fax notifications, the </a>e-mail field in User Identification Maintenance must be filled in. Each buyer in Buyer Maintenance must be established with a user ID. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121645">User I.D. code: </a></span>Enter the User ID of the employee using the VSI-FAX.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121646">E-mail Address: </a></span>Enter the email address where the fax notifications will be sent.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1121647&quot;);"><a name="1121647">Company Maintenance (COMPANY.MNT &gt; F6)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1121647", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1121647", false);</script>
+      <div class="Path"><a name="1121648">Path: Systems &gt;System Parameter &gt; Maintenance &gt; Company Maintenance &gt; F6-Modules</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121652">Fax Integration: </a></span>Select <span class="Bold">V</span> to use VSI-FAX for faxing purposes. This brings up the following screen:<img class="Default" src="images/VSI-FAX_GUI.12.1.1.jpg" width="537" height="168" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121653">VSI-FAX Path: </a></span>Enter the UNIX path to VSI-FAX in this field. The default UNIX path is \/usr/vsifax3/bin/vfx.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121654">Coverpage Path: </a></span>Enter the name of the cover page to use for all faxes for the company. All cover pages for VSI-FAX reside in a directory therefore it is only necessary to specify the name of the cover page, and not the path. This field is not mandatory and if left blank the default cover page is used. to pass the company and warehouse information to VSI-FAX, the cover page tag must be entered in this field.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121655">Email Notification Address: </a></span>Enter the System Administrator's e-mail address. This address is set up for the purpose of receiving any VSI-FAX error or failure messages, as well as any e-mail notifications of faxes sent by a user without an e-mail address setup in User Identification Maintenance. VSI-FAX also includes e-mail confirmations for both successfully and unsuccessfully sent faxes.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121656">Document Logo and Document Overlay: </a></span>These fields are informational and only used for reference.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121657">Email Type: </a></span>Determines when fax notifications should be sent to the user via email:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121658">B</a></span> - Always notify whether the fax was successful or unsuccessful.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121659">O</a></span> - Notify only for successful faxes.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121660">F</a></span> - Notify only for failed faxes.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121661">E</a></span> - Notify on each attempt.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121662">N</a></span> - Never notify and never send an email notification.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121663">Whse Info for Coverpage: </a></span>Determines which records containing information such as <span class="Italics">Company </span><span class="Italics">Name, Address </span>and <span class="Italics">phone numbers</span> are extracted from.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121664">N </a></span>- The information for the cover page is pulled from the data in Company Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121665">Y</a></span> - The data is pulled from the Warehouse Maintenance file. to use this option, the default coverpage tag must be selected in the <span class="Italics">Coverpage Path </span>field. If you select not to use this feature, the default data in the VSI-FAX setup is used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121666">Note:</a></span> VSI-FAX attempts to send out a fax 5 times before it is considered failed or unsuccessful.</div>
+      <div class="Body"><span class="Bold"><a name="1121667">Note:</a></span> In versions 16 and higher, a program change was made to remove the F5-Multi Fax Queues option from VSI-Fax Parameters screen. This feature does not have logic to support standard software.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1121668&quot;);"><a name="1121668">Fax Control</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1121668", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1121668", false);</script>
+      <div class="Path"><a name="1121669">Path: Systems &gt;System Parameter &gt; Maintenance &gt; Fax Control</a></div>
+      <div class="Body"><a name="1121670">To customize your faxing process for each warehouse and fax type, you can set flags for each type of </a>document that will be faxed. The information in each of these programs is very similar to the information setup in company maintenance, but each one is for faxed documents for a warehouse. The information in the Fax Control screen overrides the information in Company Maintenance. Prelude fax types are:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121671">Purchase Order</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121672">Invoice</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121673">Quote</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121674">Credit Application</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121675">Vendor Claim</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121676">Debit Memo</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121677">Return Goods Authorization</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121678">Statement</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121679">Sales Order Acknowledgement</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121680">Vendor Request For Quote</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121681">Credit Collections</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121682">Fax Vendor Expedite</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1121683">As each of the fax types listed above is selected, the Fax Control Record Maintenance screen displays. </a>Enter the warehouse number you would like to setup, press <span class="Bold">ENTER</span>, then select <span class="Bold">F5-VSI-FAX Options</span> to display the following VSI-FAX Whse Fax Control screen. Enter the information that applies to this warehouse and fax type.<img class="Default" src="images/VSI-FAX_GUI.12.1.2.jpg" width="525" height="211" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121687">Fax Notification Address: </a></span>All e-mail notifications for a designated fax type for the assigned warehouse can be sent to a user. If this field is left blank, the notification is sent back to the user sending the fax.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121688">Document Logo and Document Overlay: </a></span>These fields are informational only and used for reference.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121689">Fax Destination: </a></span>VSI-FAX allows for the setup and addition of as many classes of fax modems as needed. Each fax modem contains a fax destination (<span class="Italics">Ex:</span> fax1, fax2). This field allows you to control the destination of a fax (more than 1 modem for VSI-FAX is required to set this flag). For example, if multiple modems are setup, you can send all quotes to be faxed through one modem, allowing another modem available to send all other faxes. The default class is outgoing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121690">Fax Coverpage: </a></span>This can be used to enter a cover page for a warehouse and fax type. This also follows the same format as Company Maintenance. If this field is left blank the cover page in Company Maintenance is used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121691">Suppress Coverpage: </a></span>This field allows you to suppress the cover page for a warehouse and fax type.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;vertical-align: baseline;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;"><span class="Bold"><a name="1121692">Overnight/Immediate:</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121693">I</a></span> - To fax this document type immediately.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121694">O</a></span> - To fax this document overnight. In this case the following field must be filled in.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121695">Overnight Time: </a></span>If the previous flag is set to O, enter the Military time for the fax to be sent. (This can be overridden at the time the fax is entered).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121696">F5-Memo Message: </a></span>Up to 8 lines (48 characters long) of text can be entered to display in the Memo field on the cover page. For example; to request that vendors reply to this P/O in 24 hours to confirm it was received, place the request in the Memo Message screen, and the message automatically shows up on the cover page for all P/Os for this warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121697">Note:</a></span> If a VSI-FAX error occurs while sending a fax, you will receive an e-mail notifying you of a failure with the VSI-FAX scheduler. This is different than the e-mail notification of a fax. If you are currently using more than one fax modem, it is possible the fax was completed successfully despite the fact an error message was sent. This error indicates that there is an error on at least one of the fax modems, but not necessarily the one being used to send out the fax. At this point vfxstat must be executed in UNIX to identify the problem.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1121698&quot;);"><a name="1121698">VSIFax Log (/VP)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1121698", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1121698", false);</script>
+      <div class="Path"><a name="1121699">Path: Order Processing &gt; Reports &gt; Miscellaneous Reports &gt; VSIFAX Log</a></div>
+      <div class="Body"><a name="1121700">This process includes information on VSI-FAX transmissions that were performed or are currently in </a>process.<img class="Default" src="images/VSI-FAX_GUI.12.1.3.jpg" width="333" height="117" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121704">All: </a></span>Displays all fax jobs being processed and sent in the system.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121705">Expired: </a></span>Displays only fax jobs that did not go through and are expired. For example, if the maximum number of attempts was reached and the fax sent was unsuccessful, it would be included when viewing expired jobs.<img class="Default" src="images/VSI-FAX_GUI.12.1.4.jpg" width="630" height="342" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121709">F2-Exit:  </a></span>Closes the VSI-FAX screen and goes back to the menu.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121710">F4-Cancel Job: </a></span>Cancels the VSI-FAX job. An email will be sent to the user ids email address to notify them that the job was cancelled.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121714">F5-Examine Job: </a></span>Displays the Fax Inquiry screen showing all information for a fax transmission.<img class="Default" src="images/VSI-FAX_GUI.12.1.5.jpg" width="576" height="310" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121715">F6-Retry Job: </a></span>Prompts for a fax number to be entered. The original fax number is defaulted, but can be changed. This function key is only available for use with expired jobs.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121716">F7-Refresh: </a></span>Updates the VSI-FAX log screen with additional faxes submitted to the queue since accessing the inquiry screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1121717">F8-Modem Status: </a></span>Displays the status of the fax modems.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1121578">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.41.htm#1121639">VSI-Fax</a>:Faxing Documents with VSI-Fax</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

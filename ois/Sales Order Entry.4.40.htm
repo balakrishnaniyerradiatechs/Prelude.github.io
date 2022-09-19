@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Setting Pick Ticket Rules</title>
+    <link rel="StyleSheet" href="css/Sales%20Order%20Entry.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1462879">Setting Pick Ticket Rules</a></div>
+      <div class="Body"><a name="1496132">The </a><span style="font-style: italic;">Pick Ticket Date</span> in the <a href="javascript:WWHClickedPopup('ois', 'ord_hdr.htm#1362231', '');">Sales Order Header screen</a> indicates when a pick ticket will print. You can set maintenance options by customer, warehouse, or company to calculate pick ticket days, set minimum and maximum dollar levels, determine information to print on pick tickets, and establish shipping routes.</div>
+      <div class="Body"><a name="1462884">Pick ticket days are set at multiple levels in the system. The hierarchy to </a>determine which level to use first is as follows:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1462885">1</a><span class="tm" style="font-size: 8.0pt; font-style: italic; vertical-align: super;">st </span>- <span style="font-style: italic;">Pick Ticket Def Days</span> in Route Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1554358">2</a><span class="tm" style="font-size: 8.0pt; font-style: italic; vertical-align: super;">n</span><span class="italics" style="font-size: 12.0pt; font-variant: normal; text-transform: none; vertical-align: baseline;"> - Pick Days </span><span class="italics" style="font-style: normal;">in Customer Ship-to Maintenance.</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1462886">3</a><span class="tm" style="font-size: 8.0pt; font-style: italic; vertical-align: super;">rd</span> - <span class="italics" style="font-style: italic;">Pick Days </span><span class="italics" style="font-style: normal;">in Customer Maintenance.</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1462887">4</a><span class="tm" style="font-size: 8.0pt; font-style: italic; vertical-align: super;">th</span> - <span class="italics" style="font-style: italic;">Pick Ticket Default Days</span> Warehouse Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1462888">5</a><span class="tm" style="font-size: 8.0pt; font-style: italic; vertical-align: super;">th</span> - <span class="italics" style="font-style: italic;">Pick Ticket Default Days</span> in Order Processing Parameters.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1462889">Refer to the following: </a></div>
+      <div class="DropDownStart" style="margin-top: 14.0pt;" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1584190&quot;);"><a name="1584190">Route Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1584190", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1584190", false);</script>
+      <div class="NumberedIntro"><a name="1554394">To calculate pick ticket days for a truck delivery route:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1554406">Select </a><span style="font-weight: bold;">Order Processing &gt; Maintenance &gt; Customer Control Files &gt; </span><span style="font-weight: bold;">Route Codes</span> to open the <a href="javascript:WWHClickedPopup('ois', 'route_mnt.htm#1426876', '');">Route Maintenance Screen</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1555038">For</a><span style="font-style: italic;"> Pick Ticket Def Days</span>, enter the number of days to subtract from the required date to calculate the pick ticket date for this route code. This value overrides the <span style="font-style: italic;">Pick Days </span>in Customer Ship-To Maintenance, Customer Maintenance, Warehouse Maintenance, and Order Processing Parameters.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1603357">Press </a><span style="font-weight: bold;">F5-Picking Days</span> to open the Picking Rules screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1603358">For each day of the week, enter one of the following:</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1603359">Y</a></span><span class="bold" style="font-weight: normal;"> - The day is</span><span class="bold" style="font-weight: bold;"> </span>available for picking.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1603360">N</a></span> - The day is not available for picking.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1603361">Press </a><span style="font-weight: bold;">F2-Save</span> twice to save the pick ticket days information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1554393&quot;);"><a name="1554393">Customer Ship-To Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1554393", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1554393", false);</script>
+      <div class="NumberedIntro"><a name="1462890">To calculate pick ticket days for a customer ship-to account:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462891">In Select </a><span style="font-weight: bold;">Customer Ship-To Maintenance</span> &gt; <span style="font-weight: bold;">F5-Add Info</span> to open the Ship-To Additional Information screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462892">For </a><span style="font-style: italic;">Pick Days</span>, enter the number of days to subtract from the required date to calculate the pick ticket date. Enter <span class="bold" style="font-weight: bold;">T</span> to always default to today. This value overrides the <span style="font-style: italic;">Pick Days</span> in Customer Maintenance, Warehouse Maintenance, and Order Processing Parameters.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1555156">For </a><span style="font-style: italic;">Price Pick Tick</span>, determine if sales prices print on pick tickets and packing slips for this customer ship-to.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1555157">Y</a></span> - Print sales prices on the picking tickets and packing slips.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1555158">N</a></span> - Do not print sales prices on the picking tickets and packing slips.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462893">Press </a><span style="font-weight: bold;">F2-Save</span> twice to save the pick days information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" style="margin-top: 14.0pt;" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1462894&quot;);"><a name="1462894">Customer Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1462894", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1462894", false);</script>
+      <div class="NumberedIntro"><a name="1462895">To set pick ticket options for a customer account:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462896">In Select </a><span style="font-weight: bold;">Customer Maintenance &gt; F7-Order &gt; F5- Add Info</span> to open the <a href="javascript:WWHClickedPopup('ois', 'cust_add_ord_info.htm#1407329', '');">Additional Order Information Screen</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462897">For </a><span style="font-style: italic;">Price Pick Tick</span>, determine if sales prices print on pick tickets and packing slips for this customer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462898">Y</a></span> - Print sales prices on the picking tickets and packing slips.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462899">N</a></span> - Do not print sales prices on the picking tickets and packing slips.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462900">For </a><span style="font-style: italic;">Pick Days</span>, enter the number of days to subtract from the required date to calculate the pick ticket date. Enter <span class="bold" style="font-weight: bold;">T</span> to always default to today. This number overrides the <span class="italics" style="font-style: italic;">Pick Ticket Default Days </span>in Warehouse Maintenance and Order Processing Parameters.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1496142">Press </a><span style="font-weight: bold;">F2-Save</span> 3 times to save the pick ticket information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1462901&quot;);"><a name="1462901">Warehouse Maintenance </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1462901", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1462901", false);</script>
+      <div class="NumberedIntro"><a name="1616043">To set pick ticket information for a warehouse:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1616044">Select </a><span style="font-weight: bold;">Warehouse Maintenance </span>&gt; <span style="font-weight: bold;">F5-Add Info</span> to open the Additional Information screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462904">For </a><span style="font-style: italic;">Pick Ticket Default Days</span>, enter the number of days to subtract from the required date to calculate the pick ticket date. Enter <span class="bold" style="font-weight: bold;">T </span>to default to today. This value overrides <span style="font-style: italic;">Pick Ticket Default Days </span>in Order Processing Parameters<span style="font-style: italic;">.</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462905">Press </a><span style="font-weight: bold;">F6-Picking Days</span> to open the Picking Rules screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462906">For each day of the week, enter one of the following:</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462907">Y</a></span><span class="bold" style="font-weight: normal;"> - The day is</span><span class="bold" style="font-weight: bold;"> </span>available for picking.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462908">N</a></span> - The day is not available for picking.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462909">Press </a><span style="font-weight: bold;">F2-Save</span> twice to return to the Warehouse Maintenance screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462910">Press </a><span style="font-weight: bold;">F6-Printing</span> to open the Continuous Printing Setup screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462911">For </a><span style="font-style: italic;">S/O Pick Ticket</span>, choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462912">Y</a></span> - Pick tickets print upon completion of each sales order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462915">N</a></span> - Pick tickets print by batch (Refer to <a href="javascript:WWHClickedPopup('ois', 'PTPR.htm#1462974', '');">Printing Pick Tickets by Batch</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1470890">D</a></span> - Multiple printers continuously print pick tickets so you must designate the printer number or accept the default printer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">8	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462917">For</a><span style="font-style: italic;"> Prt</span>, enter the port number (created in Continuous Printer Port Maintenance) used to control continuous printing. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">9	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462918">For</a><span style="font-style: italic;"> Form Queue</span>, enter the printer number where pick tickets print.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">10	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462919">Press </a><span style="font-weight: bold;">F2-Save</span> twice to save the printer information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1462920&quot;);"><a name="1462920">Order Processing Parameters</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1462920", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1462920", false);</script>
+      <div class="NumberedIntro"><a name="1462921">To set default pick ticket information at the company level:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462922">Select </a><span style="font-weight: bold;">Option Parameters &gt; Order Processing Parameters</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1616052">For </a><span style="font-style: italic;">Pick Ticket Default Days</span>, define the number of days to subtract from the required date to calculate the pick ticket date. Enter <span class="bold" style="font-weight: bold;">T </span>to default to today. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462923">For </a><span style="font-style: italic;">Print CPO on Pick Tickets</span>, determine if CPO comments should print on pick tickets (i.e., comments entered in Sales Order Entry to print on the purchase order). Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1462924">Y </a></span>- CPO comments print on pick tickets. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1462925">N </a></span>- CPO comments do not print on pick tickets.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462926">Press </a><span style="font-weight: bold;">F5 - Add Info</span> to open the Additional Information screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462927">For </a><span style="font-style: italic;">Print B/O On Pick Tickets</span>, choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462928">Y </a></span>- Include backordered items on the initial pick ticket.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462929">N</a></span> - Do not include backordered items on the pick ticket.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462930">A</a></span> - Always print backordered items on all pick tickets.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462931">For</a><span style="font-style: italic;"> Pick Ticket Suppress w/No CC Auth Code</span>, choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462932">Y</a></span> - Do not print credit card orders that do not have a valid credit card authorization. Depending on system settings (refer to <a href="javascript:WWHClickedPopup('ois', 'Credit_Card_Processing.9.2.htm#1406155', '');">Setting up Your System for Credit Cards</a>) the order must be released from Administrative Order Hold before a pick ticket prints.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1462933">N</a></span><span style="font-size: 13.0pt;"> -</span> Print credit card orders even if they do not have a valid credit card authorization.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462934">Press </a><span style="font-weight: bold;">F5-Add Info</span> to open the Additional Options screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">8	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462935">For </a><span style="font-style: italic;">Pick Ticket Minimum Dollar, </span>enter the minimum dollar amount required to print a pick ticket. If the total pickable value (pick qty x price for each line item) is greater than this amount, the sales order is released. If the total pickable value for each warehouse (pick qty x price for each line item) is less than this amount, the sales order is not released. This field works with the <span class="italics" style="font-style: italic;">Pick Ticket Minimum Percen</span><span style="font-style: italic;">t</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">9	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1527291">For </a><span style="font-style: italic;">Pick Ticket Minimum Percent</span>, enter the percentage of merchandise that must be available before the pick ticket will print. If the percentage calculated from the total pickable amount (pick qty x price for each line item) divided by the total on the sales order is greater than this value, the sales order is released. If the percentage calculated from the total pickable amount (pick qty x price for each line item) divided by the grand total on the sales order is less than this value, the order is not released. This field works with the <span class="italics" style="font-style: italic;">Pick Ticket Minimum Dollar</span>. If both fields have a value and one of the conditions is met, the sales order is released.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><a name="1496838">Batch pick ticket printing does not check for minimum dollar values or percents. The </a>releases will print even if they are below the minimum.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">10	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1496759">Press </a><span style="font-weight: bold;">F2-Save</span> twice to return to the Order Processing Parameters screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">11	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462938">Press</a><span style="font-weight: bold;"> F6-Holidays </span>to open the Holiday Mnt screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">12	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462939">Enter the dates that your company is closed and does not pick inventory.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">13	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462940">Press </a><span style="font-weight: bold;">F2-Save</span> twice to save the pick ticket information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" style="margin-top: 14.0pt;" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1462941&quot;);"><a name="1462941">Company Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1462941", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1462941", false);</script>
+      <div class="NumberedIntro"><a name="1462942">To set pick ticket information for a company:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462943">Select </a><span style="font-weight: bold;">Company Maintenance &gt; F5-Add Info</span> to open the Additional Information screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462944">For </a><span style="font-style: italic;">Bin Loc Sort - S/O</span>, determine how pick tickets are sorted:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1462945">Y</a></span> - Sort releases in bin location sequence. Kit components on sales orders print in bin location sequence.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1462946">N</a></span> - Sort pick tickets by product number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462947">Press</a><span style="font-weight: bold;"> F2-Save</span> twice to save the pick ticket information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" style="margin-top: 14.0pt;" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1462948&quot;);"><a name="1462948">Product Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1462948", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1462948", false);</script>
+      <div class="NumberedIntro"><a name="1462949">To set pick ticket information for a product:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462950">Select </a><span style="font-weight: bold;">Product Maintenance &gt; F5-Add Info &gt; F5-Add Info</span> to open the Additional Product Maintenance Information screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1462951">For </a><span style="font-style: italic;">S/O PTP Dependent</span>, determine if the product depends on other products for a pick ticket to print:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1462952">Y</a></span> - The pick ticket will not release unless the sales order contains another pickable item. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1462953">N</a></span> - A release will generate when this product is available even if the other items on the sales order are not available.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" style="margin-top: 14.0pt;" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1462954&quot;);"><a name="1462954">Sales Order Entry </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1462954", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1462954", false);</script>
+      <div class="Body"><a name="1462955">Once pick days are established throughout the system, the calculated </a><span style="font-style: italic;">Pick </span><span style="font-style: italic;">Ticket Date</span> appears on the <a href="javascript:WWHClickedPopup('ois', 'ord_hdr.htm#1362231', '');">Sales Order Header screen</a>. You can override this date for each sales order and line item.</div>
+      <div class="Body"><a name="1635591">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Printing Pick Tickets by Batch", "ois", "PTPR.htm#1462974");
+          WWHAddRelatedTopic("Route Maintenance Screen", "ois", "route_mnt.htm#1426876");
+          WWHAddRelatedTopic("Additional Order Information Screen", "ois", "cust_add_ord_info.htm#1407329");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Sales%20Order%20Entry.4.1.htm#1462879">Sales Order Entry &amp; Printing</a>:<a class="WebWorks_Breadcrumb_Link" href="Sales%20Order%20Entry.4.39.htm#1462879">Printing Pick Tickets</a>:Setting Pick Ticket Rules</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

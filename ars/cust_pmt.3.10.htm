@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Issuing Charge Back Invoices</title>
+    <link rel="StyleSheet" href="css/cust_pmt.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head3"><a name="1418891">Issuing Charge Back Invoices</a></div>
+      <div class="Body"><a name="1419164">To charge a customer for fees associated with the invoice (e.g., bounced </a>check), you can enter the charge back in Cash Receipts Entry. </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1441904">Accounts Receivable Option Parameters for Charge Back Invoices</a></div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1441905">Consol. Chargeback Invoices</a></span> determines if charge back invoices are consolidated onto one invoice:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1441906">Y</a></span> - Charge back invoices are consolidated into one invoice per reason code for a customer in Cash Receipts Entry.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1441907">N</a></span> - Each charge back invoice is on a separate invoice for a customer in Cash Receipts Entry.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1441908">Charge Back Inv By Cust P/O?</a></span> determines if a customer P/O number is required for each reason code in Cash Receipts Entry:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1441909">Y</a></span> - A customer P/O is required for each charge back invoice. In this case, you cannot consolidate charge back invoices (<span style="font-style: italic;">Consol. Chargeback Invoices</span> must be set to<span style="font-weight: bold;"> N</span>).</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1441910">N</a></span> - Customer P/O numbers are not required for each charge back invoice.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="NumberedIntro"><a name="1419168">To charge back a customer:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1419172">In the </a><a href="javascript:WWHClickedPopup('ars', 'cash_detail_entry.htm#1331148', '');">Cash Receipts Invoice Detail Entry screen</a>, choose <span style="font-weight: bold;">C</span> for <span style="font-style: italic;">M/C. </span>Depending on how your Account Receivable Option Parameters are set to handle charge backs, one of the following occurs:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1433209">If </a><span style="font-style: italic;">Chargeback Inv by Cust P/O? i</span>s set to <span style="font-weight: bold;">Y,</span> you can continue with the cash application. When you press <span style="font-weight: bold;">F2-Save</span> to finish the batch, the <a href="javascript:WWHClickedPopup('ars', 'field_defs.9.7.htm#1351488', '');">Cash Receipts Chargeback By Customer P/O Number screen</a> appears. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1433220">If </a><span style="font-style: italic;">Chargeback Inv by Cust P/O? i</span>s set to <span style="font-weight: bold;">N</span>, the <a href="javascript:WWHClickedPopup('ars', 'cash_rec_chrgbck_entry.htm#1331152', '');">Charge Back Entry screen</a> appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1419222">For </a><span style="font-style: italic;">Reason</span>, enter the charge back reason code to explain why you are charging the customer. Refer to <a href="javascript:WWHClickedPopup('ars', 'setup.2.7.htm#1335096', '');">Creating Charge Back Reason Codes</a> for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1425226">Enter the </a><span style="font-style: italic;">Customer P/O</span> if customer P/O numbers are required (only applicable if Option Parameter <span style="font-style: italic;">Chargeback Inv by Cust P/O? i</span>s set to <span style="font-weight: bold;">Y</span>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1419226">For </a><span style="font-style: italic;">Debit Amount</span>, enter the amount you are charging back to the customer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1425250">Enter additional reason codes and debit amounts until the total of the </a><span style="font-style: italic;">Debit Amount</span> equals the total <span style="font-style: italic;">Amount Left To Distribute</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1419230">Press </a><span style="font-weight: bold;">F2-Save</span> to save the charge back information and to return to the <a href="javascript:WWHClickedPopup('ars', 'cash_detail_entry.htm#1331148', '');">Cash Receipts Invoice Detail Entry screen</a>. The <span style="font-style: italic;">Balance</span> for the invoice line should now be zero if there are no other discrepancies.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1419894">When you finish applying cash for this check number, the </a><a href="javascript:WWHClickedPopup('ars', 'cash_rec_chrgbck_coa.htm#1350688', '');">Charge Back Invoice Entry screen</a> appears.</div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1420079">Choose one of the following to enter the</a><span style="font-style: italic;"> Invoice Number</span> to bill the customer:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1419906">Enter </a><span style="font-weight: bold;">NEW</span> for the next sequential invoice number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1419910">Enter any number to assign to the invoice. If you enter the original </a>number, you must add a character to it so that it is not exactly the same. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">8	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1420053">Enter the </a><span style="font-style: italic;">Invoice Date</span> for the charge back invoice.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">9	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1420085">If necessary, edit the </a><span style="font-style: italic;">Comments</span> regarding the charge back. The comments are added when the reason code is created (refer to <a href="javascript:WWHClickedPopup('ars', 'setup.2.7.htm#1335096', '');">Creating Charge Back Reason Codes</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">10	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1420063">Press </a><span style="font-weight: bold;">F2-Save</span> to complete the charge back invoice. Depending on how Accounts Receivable Option Parameters are set to consolidate charge backs, one of the following occurs:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1425296">If </a><span style="font-style: italic;">Consol Chargeback Invoices</span> is set to <span style="font-weight: bold;">Y</span>, all charge backs for each reason code are consolidated into one invoice per customer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1425303">If </a><span style="font-style: italic;">Consol Chargeback Invoices</span> is set to <span style="font-weight: bold;">N</span>, a separate invoice is created for each charge back, even if they have the same reason code.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">11	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1425260">Repeat steps 7-10 for each additional charge back invoice to create.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1425332">Refer to </a><a href="javascript:WWHClickedPopup('ars', 'invoices.4.9.htm#1422700', '');">Printing Charge Back Invoices</a> for information on transmitting the charge back invoice to the customer.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Creating Charge Back Reason Codes", "ars", "setup.2.7.htm#1335096");
+          WWHAddRelatedTopic("Printing Charge Back Invoices", "ars", "invoices.4.9.htm#1422700");
+          WWHAddRelatedTopic("Reconciling Partial Payments", "ars", "cust_pmt.3.8.htm#1417670");
+          WWHAddRelatedTopic("Applying Cash to Invoices", "ars", "cust_pmt.3.4.htm#1418217");
+          WWHAddRelatedTopic("Cash Receipts Reports", "ars", "reports.8.12.htm#1333768");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="cust_pmt.3.1.htm#1418891">Cash Receipts</a>:<a class="WebWorks_Breadcrumb_Link" href="cust_pmt.3.2.htm#1418891">Receiving Customer Payments</a>:<a class="WebWorks_Breadcrumb_Link" href="cust_pmt.3.8.htm#1418891">Reconciling Partial Payments</a>:Issuing Charge Back Invoices</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

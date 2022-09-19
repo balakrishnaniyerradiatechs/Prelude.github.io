@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>EDI Mapping</title>
+    <link rel="StyleSheet" href="css/admin_edi.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1065644">EDI Mapping</a></div>
+      <div class="Body"><a name="1065645">A new EDI mapping module has been developed in Prelude that will aid its customers by setting up </a>relationships with new EDI customers or vendors. The new mapping module was developed to provide more flexibility and ease of design for Prelude support personnel and our customers alike when setting up EDI transaction sets.</div>
+      <div class="Body"><a name="1065646">Previously, EDI was set up in a way to where each transaction, whether outgoing or incoming, basically </a>had a default layout within the system. Whenever a new transaction set or existing transaction with a new partner needed to be created, a default model was used as a starting point. From there, ‘patches’ were installed or created as needed that would allow changing the basic model Where patches would not work, programs were simply hard-coded with trading partner exceptions. This wasn’t necessarily a bad way of getting things done; it just didn’t allow much flexibility in terms of creating new EDI relationships. There wasn’t a great deal our customers could do to aid in the process. They had to strictly rely on Prelude personnel for setting up each transaction set.</div>
+      <div class="Body"><a name="1065647">However, now the customers have a choice in the matter. Prelude will continue to be in the EDI </a>business to assist our customers that rely on our EDI knowledge and software expertise. But, if new or existing customers would like to try their hand at setting up new transactions, we have better tools for this purpose. They are contained within our EDI map maintenance. Realize that Prelude will have to continue to program brand new transaction document sets that we have previously not created. However, for standard purchase orders, invoices, etc, the customer should be able to create new trading partner maps on their own with little or no programming on their part. Knowledge of basic Prelude file structure and system builder field definitions is required though.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065648&quot;);"><a name="1065648">EDI Map Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065648", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065648", false);</script>
+      <div class="Body"><a name="1065649">The starting point for the mapping process is the EDI Map Maintenance. From this screen, a map can </a>be created for a transaction. This map is keyed by transaction type, GS version, (I)nbound or (O)utbound, and finally by map name. Since the map is not keyed by trading partner, the same map may be used for different partners.</div>
+      <div class="Path"><a name="1065653">Path: Electronic Data Interchange Maintenance EDI Map Maintenance<img class="Default" src="images/EDI%20Mapping_GUI.3.1.1.jpg" width="534" height="349" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1065654">This first screen contains information about the transaction header. Every segment that will be sent by </a>the trading partner is entered here. If the segment is mandatory, an “M” will appear in the “REQ” field. In the example above, an ST segment will be sent, followed by a BIG segment, etc. This sequence must follow the ANSI X12 standard for that GS version. </div>
+      <div class="Body"><a name="1065655">The next field, “LP” describes the looping nature of a group of segments. In the above example, the N1, </a>N3, N4 sequence can repeat if different addresses are sent (i.e. ship-to, bill-to, etc.) During processing, the map program will read in the EDI data and loop through each address until the last N4 segment is found. If a single segment repeats, it is denoted with an “*”.</div>
+      <div class="Body"><a name="1065656">The final field, “INC”, specifies whether that field has additional information. Answering “Y” will take the </a>user into EDI Map Line Maintenance.<img class="Default" src="images/EDI%20Mapping_GUI.3.1.2.jpg" width="546" height="321" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1065660">The EDI Map Line Maintenance screen allows for detail entry of segment information. The screen above </a>shows information entered for the BIG segment. The leftmost column, “REF”, lists the element numbers for the segment and the accompanying description. The third column, “REQ”, lists whether that element is required or not. Following the required column is the “TYPE” column, which specifies the data that is sent in this element (specified by the X12 ANSI standards). This information is not maintainable and is strictly informational. The final column, “INC”, designates whether the user wishes to add additional information to this element. A new screen will appear if the user answers “Y”.<img class="Default" src="images/EDI%20Mapping_GUI.3.1.3.jpg" width="546" height="129" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1065664">This screen is the heart of the mapping process. The screen above shows element maintenance for an </a>inbound document. At this point, the user specifies the location in Prelude that EDI information in that element will be mapped to. In most situations, the file that the information is mapped to is CONVERT.DATA (See appendix for layouts).</div>
+      <div class="Body"><a name="1065665">In the above example, for element 328 (Release number), the user is specifying that data in this position </a>will be written to the CONVERT.DATA header record (because H is specified for “Rec”, “L” designates writing to the CONVERT.DATA.LINE record.) in the 9th attribute. The destination field may be multi-valued by inserting a “.” (i.e. Attribute 14 mulitvalue 3 would be represented at 14.3). Multiple destinations may be specified, separated by commas.</div>
+      <div class="Body"><a name="1065666">The source, destination, and program fields allow for advanced options. A map may require that header </a>information be loaded into a work field and used at some point later in the map. For this case, a destination of W and a number may be used to indicate a work variable (i.e., W3 is work variable 3). At this point the Source field becomes necessary. If the user wishes to load the contents of a work variable into CONVERT.DATA instead of the EDI data, then the user would enter the work variable in Source. This will override any EDI information for this element.</div>
+      <div class="Body"><a name="1065667">During the design phase, it became obvious that it would be impossible to program for every situation </a>in the map maintenance. With this in mind, the program prompt was added. This prompt functions as a user-exit function in Prelude. If a program name exists in this prompt, the program is executed before any data is written out. This allows for such tasks as manipulating the data before writing it out, calling other maintenance or audit programs during the EDI process, using complex conditional logic, etc. Work variables can be accessed from within these programs, as well as any other System Builder common variable.<img class="Default" src="images/EDI%20Mapping_GUI.3.1.4.jpg" width="532" height="174" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1065671">If the map is for an outgoing transaction, a different element maintenance screen will appear. In the </a>example above, the map calls for element 328 to include the fill-with product number. The fill-with product number is derived by creating an expression over to the PRODUCT file from the P/O.LINE file. This is one reason it is imperative that some knowledge of System Builder field definitions is required. Unless all items that will be transmitted out through EDI data are contained within a source data file (i.e., P/O.LINE), expressions will need to be built that travel through the paths of other files or other expressions. </div>
+      <div class="Body"><a name="1065672">However, all data fields built may not be quite as complex. If a simple product number is all that is </a>required, a simple attribute field would be filled in and that would be all that is required.<img class="Default" src="images/EDI%20Mapping_GUI.3.1.5.jpg" width="489" height="162" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1065676">In the above example, we are simply grabbing the product number from attribute 27 of the implied data </a>file. The implied data file may be one of any number of files depending upon the transaction set. However, for outgoing purchase orders, the implied data file at the line item detail level is P/O.LINE. </div>
+      <div class="Body"><a name="1065677">Qualifiers may also be used for data formatting etc. In the next screen example, a purchase order date </a>is sent out and has a ‘D’ as a qualifier. This will accomplish the task of converting the date (stored in an internal date format) into a more EDI friendly date (i.e. 08/10/02). For those worried about Y2K compliance, have no fear. There is inherent logic in the Prelude EDI document creating processes that will convert all GS versions 4010 and greater and make all date fields contain century positions (i.e., 08/10/2002). <img class="Default" src="images/EDI%20Mapping_GUI.3.1.6.jpg" width="510" height="168" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1065681">As you can see, the process of building the map to receive in or send out EDI data is not all that </a>complex. The difficult portion is agreeing with your customer or vendor on what data is to actually be sent out. That is something that we at Prelude unfortunately have no control over.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065682&quot;);"><a name="1065682">Appendix</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065682", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065682", false);</script>
+      <div class="Body"><a name="1065686">The following layout is for the file CONVERT.DATA_AP.<img class="Default" src="images/EDI%20Mapping_GUI.3.1.7.jpg" width="570" height="348" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">EDI Mapping</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

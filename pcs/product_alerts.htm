@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Product Alerts</title>
+    <link rel="StyleSheet" href="css/Buyer_Functions.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1366157">Product Alerts</a></div>
+      <div class="Body"><a name="1367727">The Product Alert work queue alerts the buyer when a product’s purchasing </a>parameters should be reviewed and/or adjusted for the following reasons:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1367770">Min/Max Spike</a></span>: When usage for a min/max product, with frozen purchasing parameters, exceeds the maximum usage quantity setting. This alert helps the buyer to adjust min/max settings for new products until a sufficient amount of history is available to accurately calculate product usage. The buyer must be set up as the purchasing buyer in Warehouse Manager Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><a name="1393229">You can freeze a product’s purchasing parameters by entering </a><span style="font-weight: bold;">Y</span> in <span style="font-style: italic;">Frozen Controls</span> in the Product Purchasing Parameters Maintenance screen. When you freeze controls for a product, the purchasing parameters calculated by end-of-month processing are ignored. </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Bullet_outer" style="margin-left: 9pt;margin-top: 13.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1391705">Safety Allowance</a></span>: When the product is received and the available quantity falls above or below the safety allowance tolerances defined for the product’s class. Safety allowance tolerances are calculated by multiplying:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-style: italic;"><a name="1393124">S/A High%</a></span> x <span style="font-style: italic;">Safety Quantity</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-style: italic;"><a name="1393125">S/A Low% </a></span>x <span style="font-style: italic;">Safety Quantity</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><span style="font-style: italic;"><a name="1393148">Safety Quantity</a></span> is set for each product in the Product<span style="font-style: italic;"> </span>Purchasing Parameters Maintenance screen.</div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1393149">S/A High% </a></span>and <span style="font-style: italic;">S/A Low%</span> are set by company for each product class in the Product Class Settings screen (<span style="font-weight: bold;">Purchasing Controls &gt; Purchasing Parameters &gt; F6-Class Settings</span>).</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Bullet_outer" style="margin-left: 9pt;margin-top: 13.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1403990">Early Warning</a></span>: When a product’s usage exceeds a pre-defined percentage of its <span style="font-style: italic;">Forecast</span> quantity by the day of the month defined in Product Alert Parameters. For example, if by the 7th of the month, actual usage for the product exceeds 75% of the <span style="font-style: italic;">Forecast quantity</span>, it will appear in the buyer queue.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><a name="1393213">The Product Alert Parameters screen (</a><span style="font-weight: bold;">Purchasing Controls &gt; Purchasing Parameters </span><span style="font-weight: bold;">&gt; F7-Product Alerts</span>) allows you to set a day of the month to evaluate a product’s usage and the percentage of the product’s <span style="font-style: italic;">Forecast</span> that causes an Early Warning alert. If a product’s usage by that day exceeds the defined percent of its <span style="font-style: italic;">Forecast</span>, an <span style="font-weight: bold;">Early </span><span style="font-weight: bold;">Warning</span> product alert appears in the Buyer Queue.</div>
+            <div class="TableText"><a name="1394432">A product’s </a><span style="font-style: italic;">Forecast</span> is set up in Product Purchasing Parameters Maintenance.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Bullet_outer" style="margin-left: 9pt;margin-top: 13.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1414817">Lost Sales</a></span>: When a sale was lost. The lost sale reason code displays to identify why the sale was lost. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><span style="font-style: italic;"><a name="1414820">Update Product Alerts</a></span> in Lost Sales Reason Code Maintenance (<span style="font-weight: bold;">Order Processing </span><span style="font-weight: bold;">Maintenance &gt; Misc Code Files &gt; Lost Sales Reason Codes</span>) must be set to <span style="font-weight: bold;">Y</span> so that a lost sale with this reason code updates the Buyer Queue.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1367353&quot;);"><a name="1367353">Reviewing and Adjusting Purchasing Parameters</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1367353", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1367353", false);</script>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1414896">Purchasing Buyer</a></div>
+            <div class="TableText"><a name="1414925">You can assign a </a><span style="font-style: italic;">Purchasing Buyer </span>in <span style="font-weight: bold;">Warehouse Manager Maintenance</span> (systems menu) to the buyer responsible for Product Alerts for a warehouse. If blank, the buyer assigned to each vendor or vendor line is notified of product alerts. </div>
+          </td>
+        </tr>
+      </table>
+      <div class="NumberedIntro"><a name="1367362">To review and adjust purchasing parameters for products on alert:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1367371">Select one of the following methods to access the Buyer Product Alert </a>Inquiry screen:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1367372">Purchasing</a></span> &gt; <span style="font-weight: bold;">Inquiries</span> &gt;<span class="Bold"> Buyer Queue Inquiry. </span><span class="Bold" style="font-weight: normal;">P</span>lace the cursor in front of <span style="font-style: italic;">Product Alerts </span>and press <span class="Bold">F5-Review</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1367373">Purchasing</a></span> &gt; <span style="font-weight: bold;">Inquiries</span> &gt;<span class="Bold"> Buyer Queue Inquiries </span>&gt; <span class="Bold">Product </span><span class="Bold">Alerts</span>. Enter the <span style="font-style: italic;">Buyer</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indent"><a name="1367374">The items on product alert appear.</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1367451">Highlight the item to review and select </a><span style="font-weight: bold;">F5-Review</span> to open the Product Purchasing Parameters Maintenance screen. Refer to the “Product Purchase Parameters Maintenance screen” in the Inventory documentation for detailed information on each field.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1367509">If necessary, you can adjust the </a><span style="font-style: italic;">Minimum, Maximum</span>, <span style="font-style: italic;">Safety Allowance</span> %, or <span style="font-style: italic;">Forecast</span> values to more accurately match the actual usage of the item. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1367528">Press </a><span style="font-weight: bold;">F2-Save</span> to save any changes. You then have the option to remove the item from the work queue.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1367527">After reviewing and adjusting all the items on alert, press </a><span style="font-weight: bold;">F2-Save</span> to close the screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1367534&quot;);"><a name="1367534">Field &amp; Function Key Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1367534", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1367534", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 396pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1367537">Field / Function</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1367539">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367541">Product Number</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367543">The product number on alert whose Product Parameters should be </a>reviewed.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367696">Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367698">The description of the product number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367545">Whse</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367547">The number for the warehouse where the item’s Product Parameters </a>should be reviewed.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367549">Reason</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367551">The reason why the product is on alert:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1367796">Min/Max Spike - When usage for a min/max product, with frozen </a>purchasing Parameters, exceeds the maximum usage quantity setting. This alert helps the buyer to adjust min/max settings for new products until a sufficient amount of history is available to accurately calculate product usage. The buyer must be set up as the purchasing buyer in Warehouse Manager Maintenance.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1391652">Safety Allowance - When the product is received and the available </a>quantity falls above or below the Safety Allowance tolerances defined for the product. Safety tolerances are calculated by multiplying the<span style="font-style: italic;"> S/A High%</span> or the <span style="font-style: italic;">S/A Low% </span>in the Product Class Settings screen (<span style="font-weight: bold;">Purchasing Controls &gt; Purchasing Parameters </span><span style="font-weight: bold;">&gt; F6-Class Settings</span>) by the <span style="font-style: italic;">Safety Quantity </span>set up for the product <span style="font-style: italic;">(</span><span style="font-weight: bold;">Product</span><span style="font-style: italic;"> </span><span style="font-weight: bold;">Purchasing Parameters Maintenance</span>).<span style="font-weight: bold;"> </span><span style="font-weight: bold;"><br /></span>This setting is not applicable for min/max products or linked products. Products with a safety allowance of zero are not included.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1393001">Early Warning - When a product’s usage exceeds a pre-determined </a>percentage of it’s <span style="font-style: italic;">Forecast </span>quantity by a pre-defined day of the month. The product’s <span style="font-style: italic;">Forecast</span> is set up for a product in Product Purchasing Parameters Maintenance. <br />This alert is activated in<span style="font-weight: bold;"> Purchasing Controls &gt; Purchasing </span><span style="font-weight: bold;">Parameters &gt; F7-Product Alerts</span>. You can set the day of the month for the system to evaluate the usage and the percentage of the Forecast that the product’s usage must exceed to activate the alert.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1414109">Lost Sales - The lost sale reason code displays to identify why the </a>sale was lost. Lost sales reason codes are created in <span style="font-weight: bold;">Order </span><span style="font-weight: bold;">Processing Maintenance &gt; Misc Code Files &gt; Lost Sales Reason </span><span style="font-weight: bold;">Codes</span>.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367553">Alert Date</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367555">The date the item went on alert.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367557">F2-Save</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367559">Closes the Buyer Product Alert Inquiry screen.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367561">F5-Review</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367563">Opens the Product Purchasing Parameters Maintenance screen for the </a>product to allow you to adjust the <span style="font-style: italic;">Minimum, Maximum, </span>or<span style="font-style: italic;"> Safety </span><span style="font-style: italic;">Allowance</span> quantity for the item.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367565">F6-II</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367567">Opens the Inventory Inquiry screen to allow you to view the inventory </a>status of the item.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367569">F7-TAI</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1367571">Opens the Transaction Audit Inquiry screen for the item to allow you to </a>view transactions involving the item.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1420721">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Buyer Queue Inquiry", "pcs", "bqi.htm#1261443");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Buyer_Functions.5.1.htm#1366157">Buyer Queue Inquiry</a>:<a class="WebWorks_Breadcrumb_Link" href="bqi.htm#1366157">Buyer Queue Inquiry</a>:Product Alerts</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

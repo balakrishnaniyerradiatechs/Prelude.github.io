@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>General Ledger</title>
+    <link rel="StyleSheet" href="css/v14_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1003834">General Ledger</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003840&quot;);"><a name="1003840">Journal Entries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003840", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003840", false);</script>
+      <div class="Subhead"><a name="1003847">Journal Entry</a></div>
+      <div class="Body"><a name="1003854">This process was modified to work with the </a><span class="Italics">Bal G/L Posting By Location</span> option parameter. If the option parameter is set to Y, the system will verify that the entry balances by location upon exiting. If it does not, the system will prompt for a password. Either the entry must balance by location or a valid password must be entered to exit a journal entry. This option uses the password process called ONE.SIDE.PASSWORD. If this password process is not set up then you will not be allowed to exit the journal entry without a balanced entry. If the option parameter is set to N, the system will work as it did in the past by checking that the debits and credits are balanced. If not, you are warned and prompted for a password. The system will not allow you to continue if a password is not set up unless the journal entry is balanced. See System Option Parameter Maintenance for more information.</div>
+      <div class="Subhead"><a name="1003872">G/L Balances Posting</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1003880">Job Accounting</a></span> is a new option used for posting the job accounting module. This module will post both sides of the job accounting processing; the Sales Order Invoice Processing which does the inventory relief, and the job billing which posts the transaction to the customer. The job accounting is also listed as a separate module in the inquiries with a code of JA. The drill down inquiries will access new job history inquiries in place of the standard order history inquiries. See General Information Job Accounting for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003898">The balancing posting processes were modified to no longer stop posting all items </a>when certain errors are found with a transaction. Instead it updates an audit file, marks the transaction, and continues posting the rest of the transactions in the module. The errors that this works with are Multi-Value Mismatch, Debits/Credits Out of Balance, Missing Account Number, and Location Out of Balance if the option parameter is set to Y. If an error other than those mentioned is found then the system will stop posting for the module and notify the user of the problem. The Unposted G/L Error report will list transaction information for reconciliation purposes. See System Option Parameter Maintenance and General Ledger Reports for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003912">This process was modified to work with the </a><span class="Italics">Bal G/L Posting By Location</span> option parameter. If the option parameter is set to Y, the system will verify that the transaction balances by location. If not then it marks the transaction, updates the audit file, and continues to the next transaction. A report may be run for these transactions. If the option parameter is set to N, the system will just check (as it did previously) that the debits and credits are balanced. See System Option Parameter Maintenance and General Ledger Reports for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1014233">This process was modified to work with the </a><span class="Italics">Multiple Fiscal Periods</span> flag in Company Maintenance. G/L Balances Postings will, behind the scenes, post to the correct fiscal period on the location’s fiscal account. All postings will be done from the live account. The posted fiscal period for the fiscal account is determined by the transaction’s fiscal period on the live account instead of the transaction date.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1003948">The system will determine if the </a><span class="Italics">Multiple Fiscal Periods</span> flag is set to Y and if so will locate the <span class="Italics">Separate Fiscal</span> value for the transaction’s location. If one is found, the system will next determine the fiscal period to post to on the fiscal account. This is accomplished by determining the fiscal period on the live account and then checking the cross-reference fiscal period table for the fiscal account to determine the corresponding fiscal period. If that fiscal period is closed, the system will determine the next available fiscal period to post to. The system then posts the transaction to the live account and copies the transaction to the appropriate fiscal account with the correct fiscal period for that fiscal account. For example, the <span class="Italics">Separate Fiscal</span> field for location 10 is set to MAR. A transaction for warehouse 10 with a fiscal period of 99-05 will post on the live account to fiscal period 99-05 (if open) and a copy of the transaction is made in the MAR fiscal account with a fiscal period of 99-08.</div>
+      <div class="Body"><a name="1003976">The actual posting on the fiscal account will depend on which system platform you are on. </a>G/L Balances Postings when ran on the live account will copy the transactions to the correct fiscal account. Pick clients will need to log to each fiscal account and run the G/L Balances Postings. For Unidata clients, when the G/L Balances Postings are run on the live account, the system will spawn off phantom processes that run the G/L Balances Postings on the fiscal accounts. Prelude will need to set up these phantom processes for you. For both platforms, you will need to log to the fiscal accounts to close a period and/or run fiscal reports.</div>
+      <div class="Body"><a name="1003985">See System Company Maintenance, System Location Maintenance, and System Mult-</a>Fisc Period Table Maintenance for more information.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003995&quot;);"><a name="1003995">Financial Report Printing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003995", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003995", false);</script>
+      <div class="Body"><span class="Italics"><a name="1004001">Report in Native</a></span> is a new prompt that allows you to define if the report should print in native currency. This prompt is only available if multiple currency is turned on. If this flag is set to Y, the system will display all accounts in native currency. If this flag is set to N, the system will display all accounts in their own currency. For example, US accounts will display in dollars, English accounts will display in pounds, Japanese accounts will display in Yen, and etc. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1004016&quot;);"><a name="1004016">End of Year Closing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1004016", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1004016", false);</script>
+      <div class="Body"><a name="1004022">This process was modified to work with multiple </a><span class="Italics">Retained Earnings</span> accounts. The General Ledger End of Year Closing process closes out all income and expense accounts to the retained earnings account defined in the General Ledger Table. In other words, it creates journal entries to zero out all income and expense accounts and posts the balance of each account to the retained earnings account(s). The journal entry for the retained earnings posting uses a fiscal period of XX-YE where XX is the current year (I.E. 99-YE). If a wildcard is used in the prefix of the <span class="Italics">Retained Earnings</span> account in the G/L table, the number of retained earnings accounts updated is equivalent to the number of different prefix combinations for the income and expense accounts.</div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span class="Bold"><a name="1004040">Examples</a></span></div>
+      <div class="Body"><a name="1004043">If wildcards are used, each income and expense account is posted to it own prefix. For </a>example, if the G/L table accounts are set up as follows: </div>
+      <div class="Body"><a name="1004046">Retained Earnings </a>	01 XX 01 9109</div>
+      <div class="Body"><a name="1004058">Income / Expense 1 </a>	01 10 00 1234 	balance = 50.00</div>
+      <div class="Body"><a name="1004067">Income / Expense 2 </a>	01 20 00 5678 	balance = 10.00</div>
+      <div class="Body"><a name="1004076">Then the year end procedure would post to the following retained earnings accounts:</a></div>
+      <div class="Body"><a name="1004082">50.00 into account 01 10 01 9109</a></div>
+      <div class="Body"><a name="1004094">and</a></div>
+      <div class="Body"><a name="1004103">10.00 into account 01 20 01 9109 </a></div>
+      <div class="Body"><a name="1004112">If wildcards are not used, all income and expense accounts are posted to the retained </a>earnings account defined in the G/L table. For example, if the G/L table accounts are set up as follows:</div>
+      <div class="Body"><a name="1004118">Retained Earnings </a>	01 10 01 9109</div>
+      <div class="Body"><a name="1004130">Income / Expense 1 </a>	01 10 00 1234 	balance = 50.00</div>
+      <div class="Body"><a name="1004139">Income / Expense 2 </a>	01 20 00 5678 	balance = 60.00</div>
+      <div class="Body"><a name="1004148">Then the year end procedure would post to the following retained earnings account:</a></div>
+      <div class="Body"><a name="1004154">110.00 into account 01 10 01 9109 </a></div>
+      <div class="Body"><a name="1004166">When the General Ledger End of Year Closing procedure is ran and the </a><span class="Italics">Retained </span><span class="Italics">Earnings</span> account is set up in the G/L Table with wildcards, the system will verify that all the appropriate <span class="Italics">Retained Earnings</span> accounts are set up in Chart of Accounts Maintenance. If some are missing, a message (similar to the one below) is displayed informing you of the missing accounts that need to be set up before this procedure can be completed. </div>
+      <div class="Body"><a name="1004176">Once these retained earnings accounts are established in Chart of Accounts </a>Maintenance, the general ledger end of year closing process can be performed to update the appropriate retained earnings accounts. See General Ledger Table Maintenance for more information. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1004179&quot;);"><a name="1004179">Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1004179", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1004179", false);</script>
+      <div class="Subhead"><a name="1004186">Chart Of Accounts</a></div>
+      <div class="Body"><a name="1004192">This procedure was modified to work with the </a><span class="Italics">Multiple Fiscal Periods</span> flag in Company Maintenance. When <span class="Italics">Multiple Fiscal Periods</span> is turned on and if the location points to a fiscal account, the system will automatically update the location’s fiscal account when a chart of account is added or changed in the live account. For example, the <span class="Italics">Separate Fiscal</span> field for location 10 is set to MAR. When adding account 5845 for Work Order Expense in the live account for location 10, the same account is also created in the MAR account. Chart of Accounts should be maintained in the live account instead of in the fiscal accounts. See System Company Maintenance and System Location Maintenance for more information.</div>
+      <div class="Subhead"><a name="1004214">Chart Of Accounts Description</a></div>
+      <div class="Body"><a name="1004220">This procedure was modified to work with the </a><span class="Italics">Multiple Fiscal Periods</span> flag in Company Maintenance. When <span class="Italics">Multiple Fiscal Periods</span> is turned, the system will automatically update each fiscal account when an item is added or changed in the live account. For example, the description for account 4100 is changed from DIRECT SALES to SALES - DIRECT. When this screen is saved and exited, account 4100 in each fiscal account will be updated with the new description. When a new account description is created, the new account description will be copied behind the scenes to each fiscal account. Chart of Accounts descriptions should be maintained in the live account instead of in the fiscal accounts. See System Company Maintenance for more information.</div>
+      <div class="Subhead"><a name="1004230">Chart Of Accounts Duplication</a></div>
+      <div class="Body"><a name="1004236">This procedure was modified to work with the </a><span class="Italics">Multiple Fiscal Periods</span> flag in Company Maintenance. When <span class="Italics">Multiple Fiscal Periods</span> is turned on and if the To location points to a fiscal account, the system will automatically update the To location’s fiscal account when G/L accounts are duplicated in the live account. For example, the <span class="Italics">Separate Fiscal</span> field for location 30 is set to OCT. When copying prefix 01!!10!00 to 02!!30!00 in the live account, the accounts are also created in the OCT account. Chart of Accounts Duplication should be run in the live account and not in the fiscal accounts. See System Company Maintenance and System Location Maintenance for more information.</div>
+      <div class="Subhead"><a name="1004262">General Ledger Table Maintenance</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004268">Core Receivable</a></span> is a new account that is debited for the cost of the core when a sales order with an exchange item but not the core item is invoiced. This is a situation where the <span class="Italics">Auto Core Charge</span> option parameter is set to N and the <span class="Italics">Bill Core Charge</span> prompt in sales order entry was answered No. This account is credited for the cost in the pending core record when a core item is billed against a pending core record in Sales Order Entry, when a core item is returned in Inventory Adjustment Entry against a sales order (pending core record), when a core bank item is applied against a pending core record in Core Bank Issues Entry or in the Automatic Core Application Process, or when a pending core is written off in Core Bank Issues Entry. See Order Processing Sales Order Entry, Inventory - Inventory Adjustment Entry, Inventory Processes Core Bank Issues Entry, and Inventory Processes Automatic Core Application Process for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004293">Inventory Warranty In Transit</a></span> is a new account that is used to hold the value of warranty inventory in transit and takes the place of the Inventory In Transit To Location account that is used for normal transfers. This account is debited in the shipping location when a type 03 transfer is shipped in Transfer Shipment Entry and credited in the shipping location when a type 03 transfer is received in Transfer Receipts Entry. See Inventory Stock Movements for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004303">A/P Not Invoiced </a></span><span class="Italics">–</span><span class="Italics"> Inventory</span> can now be overridden at the product line level. See Inventory Product Line Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004315">Core Bank Payable</a></span> is a new account that is credited for the cost of the core when a core item is placed into the core bank in Inventory Adjustment Entry. This account is debited for the cost in the core bank record when a core bank item is applied in sales order entry or when a core bank item is applied against a pending core record in Core Bank Issues Entry or in the Automatic Core Application Process. See Inventory - Inventory Adjustment Entry, Order Processing Sales Order Entry, Inventory Processes Core Bank Issues Entry, and Inventory Processes Automatic Core Application Process for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004325">Customer Job Use Tax Payable</a></span> is a new account that is credited from job invoice processing when a line item is flagged as use tax instead of sales tax. See General Information Job Accounting for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004339">Customer Job Use Tax Cost</a></span> is a new account that is debited from job invoice processing when a line item is flagged as use tax instead of sales tax. See General Information Job Accounting for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004353">Transfer Cost Of Goods</a></span> is a new account that is debited in the shipping location when a Transfer Revenue Matrix is maintained between warehouses and product is transferred between two locations. The amount posted is the cost of the product on the transfer extended by the quantity received in Transfer Receipts Entry. See Inventory Misc Code File Maintenance for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004363">Transfer Revenue</a></span> is a new account that is credited in the shipping location when a Transfer Revenue Matrix is maintained between warehouses and product is transferred between two locations. The amount posted is the cost of the product on the transfer multiplied by the matrix markup extended by the quantity received in Transfer Receipts Entry. See Inventory Misc Code File Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004373">Retained Earnings</a></span> was modified to allow for a wildcard division, region, location, department, and/or cost center. This allows a posting to different <span class="Italics">Retained Earnings</span> accounts based on G/L prefixes instead of to just one account. When using wildcards, a retained earnings account must be established in Chart of Accounts Maintenance for each possible combination. You are warned in the Year End process if an account is not established for a combination. See Year End Closing Process for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004385">Sales Customer Job</a></span> is a new account used with the Job Accounting module. Credits are posted to this account when sales are processed through the Job Billing process. See General Information Job Accounting for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004395">Core Cost Variance</a></span> is a new account that is debited for the cost of the pending core record when a pending core is written off in Core Bank Issues Entry. This account is posted to for the difference between the cost in the pending core record and the cost in the core bank record when a core banked item is applied to a pending core record in Core Bank Issues Entry or in the Automatic Core Application Process. This account is also posted to when the applied core bank quantity does not match the pending core quantity in Sales Order Entry, Inventory Adjustment Entry, and Core Bank Issues Entry. See Order Processing Sales Order Entry, Inventory - Inventory Adjustment Entry, Inventory Processes Core Bank Issues Entry, and Inventory Processes Automatic Core Application Process for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004405">MFGR Rep Commission Due</a></span> is a new account that is posted to when a type 17 Manufacturer Rep sales order is invoiced. The gross profit of the sale is posted to this account. This account is overridden if an account is specified in Product Line Maintenance. See Order Processing Sales Order Entry for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004419">MFGR Rep Sales</a></span> is a new account that is posted to when a type 17 Manufacturer Rep sales order is invoiced. The amount of the sale minus the commission is posted to this account. This account is overridden if an account is specified in Product Line Maintenance. See Order Processing Sales Order Entry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004433">MFGR Rep Cost of Sales</a></span> is a new account that is posted to when a type 17 Manufacturer Rep sales order is invoiced. The total merchandise amount of the sale is posted to this account. This account is overridden if an account is specified in Product Line Maintenance. See Order Processing Sales Order Entry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004447">Customer Job Work In Process</a></span> is a new account used with the Job Accounting module. Debits are posted to this account during invoice processing for sales orders with a job number whose <span class="Italics">Change Order Control </span>flag is set to Y. This account is credited during the Job Billing process. See General Information Job Accounting for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1004463&quot;);"><a name="1004463">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1004463", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1004463", false);</script>
+      <div class="Body"><span class="Italics"><a name="1004470">Unposted G/L Error Report</a></span> is a new report that displays all transactions that have failed the balance posting routine due to a location out of balance, a multi-value mismatch, a missing account number, and/or debits/credits out of balance. This report is mainly for Prelude to use to fix problems postings. This report will display the posting error(s), account numbers, debits, credits, and the out of balance amount for ease of correcting the problem. See General Ledger G/L Balances Posting for more information.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v14_new_features.6.1.htm#1003834">V14 New Features</a>:General Ledger</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

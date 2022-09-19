@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Including Future Price Increases</title>
+    <link rel="StyleSheet" href="css/Nightly_Processing.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2" style="margin-top: 25.0pt;"><a name="1284183">Including Future Price Increases</a></div>
+      <div class="Body"><a name="1284184">Flag settings in Purchasing Parameters determine if the buyer should </a>purchase more of an item due to a future price increase. Both the <a href="javascript:WWHClickedPopup('pcs', 'po_act_rpt.htm#1248422', '');">Recommended Purchase Order Action Report</a> and the <a href="javascript:WWHClickedPopup('pcs', 'preprice_rpt.htm#1293797', '');">PrePrice Increase Report</a> suggest a quantity of each item in a vendor’s line that would balance the savings gained by ordering before a price increase, against the cost of maintaining additional material in inventory.</div>
+      <div class="Body"><a name="1284185">The system compares the </a><span style="font-style: italic;">Effective Date</span> for a new cost in Product Vendor Maintenance, Product Maintenance, or Product Warehouse Maintenance to the <span style="font-style: italic;">Review Cycle Days </span>in the <a href="javascript:WWHClickedPopup('pcs', 'vlm_targ_param.htm#1394205', '');">Vendor Line Target Parameters Screen</a>. If the <span style="font-style: italic;">New Cost Effective Date </span>precedes the next review cycle date, a recommended purchase quantity is calculated. The calculation is as follows:</div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-align: Center; text-transform: none; vertical-align: baseline;"><span style="color: #000000; font-family: Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><a name="1286691">24 x (% increase) / ROAI + KCost%</a></span></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1286692">% increase = the percent change in cost from the current cost to the </a>future cost.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1286842">ROAI = the return on additional investment (explained below).</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1286843">KCost = carrying cost (i.e, the cost to carry the product in inventory).</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="report" style="text-align: left; width: 393.75pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 3.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top; width: 124.49952pt;">
+            <div class="TableSubhead"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><a name="1286649">Related Reports</a></span></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 3.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top; width: 269.25048pt;">
+            <div class="TableSubhead"><a name="1286651">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a href="javascript:WWHClickedPopup('pcs', 'preprice_rpt.htm#1293797', '');" name="1286655">PrePrice Increase Report</a></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a name="1286658">Products that you should consider purchasing due to a future </a>price in their product record.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a href="javascript:WWHClickedPopup('pcs', 'po_act_rpt.htm#1248422', '');" name="1286668">Recommended Purchase Order Action Report</a></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a name="1286670">The information required to convert system-generated </a>recommended purchase orders into actual purchase orders</div>
+          </td>
+        </tr>
+      </table>
+      <div class="NumberedIntro"><a name="1284189">To set the flags that affect price increases:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1284190">Select </a><span style="font-weight: bold;">Purchasing Controls &gt; Purchasing Parameters.</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1284192">For </a><span style="font-style: italic;">ROAI</span>, enter the percent of cost to use as the return on additional investment (ROAI). This factor is used in the pre-price increase calculation. When you buy in advance of a price increase, you’re assuming that usage and price for the product will not decrease in the future. You would normally need a significant return on your investment to justify this risk. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1284193">For </a><span style="font-style: italic;">Perform Pre Price Update</span> choose one of the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1284194">Y</a></span> - Nightly Processing updates the temporary purchase orders on the <a href="javascript:WWHClickedPopup('pcs', 'po_act_rpt.htm#1248422', '');">Recommended Purchase Order Action Report</a> with products that should be purchased due to future price increases. The reason code <span class="bold" style="font-weight: bold;">E</span> (price) indicates that temporary purchase order was created due to a future price increase. These items also appear on the <a href="javascript:WWHClickedPopup('pcs', 'preprice_rpt.htm#1293797', '');">PrePrice Increase Report</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1284195">N</a></span> - Nightly Processing does not create temporary purchase orders for items with future price increases.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1284196">Press </a><span style="font-weight: bold;">F2-Save</span> three times to save any changes.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Nightly Processing", "pcs", "Nightly_Processing.3.1.htm#1240770");
+          WWHAddRelatedTopic("PrePrice Increase Report", "pcs", "preprice_rpt.htm#1293797");
+          WWHAddRelatedTopic("Recommended Purchase Order Action Report", "pcs", "po_act_rpt.htm#1248422");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Nightly_Processing.3.1.htm#1284183">Nightly Processing</a>:<a class="WebWorks_Breadcrumb_Link" href="Nightly_Processing.3.2.htm#1284183">Setup Requirements for Nightly Processing</a>:Including Future Price Increases</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

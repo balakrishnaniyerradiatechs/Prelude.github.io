@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Warehousing</title>
+    <link rel="StyleSheet" href="css/v14_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1003348">Warehousing</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003355&quot;);"><a name="1003355">Route Processing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003355", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003355", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003361">The </a><span class="Italics">Drivers Manifest Report</span> will now display the amount from the <span class="Italics">Addl Collection Amt</span> field in the customer’s record. See Order Processing Customer Maintenance for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003381">This process will now check the document printing options in Warehouse Maintenance </a>to determine if a Bill of Lading, packing list, price label, invoice, and/or RGA will print during route processing. See System Warehouse Maintenance for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003390&quot;);"><a name="1003390">Bin Individual Move Entry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003390", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003390", false);</script>
+      <div class="Body"><a name="1003396">This process was modified to update the linked sales order line item with the new To Bin </a>if a bin move is done after the stock receipt was processed and an order line(s) exists with the dock type From Bin loaded on the order line. After the To Bin is selected and if the From Bin is a dock type bin, the system will check for open sales orders for the product that have linkage history and currently have a line item bin that matches the From Bin. If there is only one sales order then the bin for that order line item will be updated behind the scenes. If there is more than one order, the system will display the order numbers and the user must choose one to be updated. Only one order per bin move line entry can be updated at a time. A new bin move entry line must be entered to take care of multiple sales orders. This allows the bin allocation rules to continue to work as they do now by allocating to the bin on the order line record. This works with both standard bin moves and RF bin moves and with RF Putaway Entry. </div>
+      <div class="Subhead"><a name="1003404">Bin Onhand Inquiry</a></div>
+      <div class="Body"><a name="1003410">F10-Action - </a><span class="Italics">Cube Inquiry</span> is a new option that displays Bin Cube (volume), Bin Cube Used, and Bin Cube Available for the current bin. See RF Putaway Entry for more information.</div>
+      <div class="Subhead"><a name="1003419">Radio Frequency Menu - Processes</a></div>
+      <div class="Body"><a name="1003427">Added the stocking UOM to the RF screens for bin moves.</a></div>
+      <div class="Subhead"><a name="1003433">Putaway Entry</a></div>
+      <div class="Body"><a name="1003439">This process was modified to update the linked sales order line item with the new To Bin </a>if a bin move is done after the stock receipt was processed and an order line(s) exists with the dock type From Bin loaded on the order line. See Bin Individual Move Entry for more information.</div>
+      <div class="Body"><span class="Italics"><a name="1003445">Putaway Method</a></span> has a new option of V for Volume, which is used to determine bin putaways according to the volume of the bin. Previously, the putaway methods were B for Bulk, M for Manual, and P for Primary. These methods do not check for available room like the new V method does. The hierarchy rules for directing putaway using this method are as follows:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003469">For special order products, there will be no directed putaway. The operator will indicate </a>a final destination bin location. This bin location will be updated to the sales order for bin allocation process. <span class="Bold">The Primary bin is considered first. </span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003483">If the putaway quantity is less than or equal to the quantity required to fill the bin using </a>bin maximum minus bin onhand, then the primary bin established in Product Maintenance is recommended. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003492">If the quantity in the primary bin is less than or equal to the bin minimum, then the </a>primary bin is filled to maximum and the rest is put into a reserve location (following the logic below). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003501">If the putaway quantity is greater then the quantity required to reach the bin maximum </a>and the quantity in the primary bin is greater than the bin minimum, then the system does not direct the putaway to the primary bin but goes to the next putaway rule.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003510">If there is a single bulk reserve bin location where the product already exists that can </a>hold the entire quantity to be putaway up to the fill level percent for that zone (defined in Zone Maintenance) and it resides in the same aisle as the primary bin, then that bulk bin is recommended.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003519">If there is a bulk reserve location where the product already exists on the same aisle </a>as the primary bin location that can take part of the putaway using the partial putaway quantity minimum percent (defined in Zone Maintenance), then that bulk bin is recommended. The remaining quantity is placed in another reserve location where the product already exists. The first preference is a bin on the same aisle, then the system looks for the closest aisle. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1003528">Note: if the putaway quantity cannot be completely placed in existing reserve locations, </a>the system will recommend an empty bin instead of the existing reserve locations. We do not want to receive 10 boxes of a product, place 5 in the only reserve location and place the remaining 5 in an empty bin. This example should place all 10 boxes in one empty bin.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003540">If there is an empty bin in the same aisle as the primary bin location, then that empty </a>bin is recommended.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003552">If there is a bulk reserve bin location in any aisle where the product already exists that </a>can hold the entire quantity to be putaway up to the fill level percent for that zone (defined in Zone Maintenance), then that bulk bin is recommended. The system will attempt to select a reserve location in the aisle closest to the primary bin location.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003561">If there is a bulk reserve bin location in any aisle where the product already exists that </a>can take part of the putaway using the partial putaway quantity minimum percent (defined in Zone Maintenance), then that bulk bin is recommended. The system will attempt to select a reserve location in the aisle closest to the primary bin location. The remaining quantity is placed in another reserve location where the product already exists.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1003570">Note: if the putaway quantity cannot be completely placed in existing reserve locations, </a>the system will recommend an empty bin instead of the existing reserve locations. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003582">The system recommends an empty bin as close to the primary bin as possible.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003596">If none of the criteria could facilitate the recommended putaway, no bin will be </a>recommended and the system will prompt the user to manually enter the bin.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1003605">Note: with the V putaway method, the system will not recommend a bin that does not have </a>a cube value.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v14_new_features.7.1.htm#1003348">V14 New Features</a>:Warehousing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Creating Credit Reason Codes</title>
+    <link rel="StyleSheet" href="css/credit_memos.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1424414">Creating Credit Reason Codes</a></div>
+      <div class="Body"><a name="1424415">When a customer returns material and you issue credit, inventory and the </a>general ledger are updated depending on the reason the material is returned. C<span class="italics">redit reason codes </span>define why the customer is returning material, how inventory is updated, and the appropriate general ledger account to post to.</div>
+      <table class="report" style="text-align: left; width: 397.49976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 3.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top; width: 166.5pt;">
+            <div class="TableSubhead"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><a name="1421602">Related Reports</a></span></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 3.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top; width: 230.99976pt;">
+            <div class="TableSubhead"><a name="1421604">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a href="javascript:WWHClickedPopup('ois', 'mly_cred_rsn_rpt.htm#2020222', '');" name="1421606">Monthly Credit Reason Report</a></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a name="1421640">Total credit memos issued for each product line for </a>a month, sorted by credit reason code.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a href="javascript:WWHClickedPopup('ois', 'hist_cred_rsn_rpt.htm#1737652', '');" name="1421646">Historical Percentage Credit Reason Report</a></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a name="1421657">Total amount of credit issued to customers for each </a>month.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="NumberedIntro"><a name="1421544">To create credit reason codes:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1421521">Select </a><span style="font-weight: bold;">Order Processing &gt; Maintenance &gt; Misc Code Files &gt; Credit </span><span style="font-weight: bold;">Reason Codes</span> to open the <a href="javascript:WWHClickedPopup('ois', 'credit_reason_mnt.htm#1333485', '');">Credit Reason Maintenance screen</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1421537">Enter a 1 or 2 digit </a><span style="font-style: italic;">Credit Reason Code</span> for credit memos and RGAs to identify why a product is returned. Refer to the following examples:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1421688">01</a></span> - Shipped wrong product.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1421692">02</a></span> - Defective product. Refer to <a href="javascript:WWHClickedPopup('ois', 'credit_memos.8.9.htm#1424906', '');">Creating Warranty Tags for Returned Products</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1421693">03</a></span> - Policy credit.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1421694">04</a></span> - Customer did not need.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1421695">05</a></span> - Pricing error.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1421696">CE</a></span> - Core exchange credit.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1421697">EQ</a></span> - Equipment trade-in credit. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1421721">Enter a </a><span style="font-style: italic;">Product Line</span> if you want to set up a general ledger account just for this credit reason/product line combination. Leave blank to use the general ledger account assigned to the product line or to use a general ledger table.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1421813">Enter the </a><span style="font-style: italic;">Description</span> of the credit reason. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indent"><a name="1421838">The Account Number Entry screen appears. </a></div>
+      <div class="Indent"><a name="1426236">You can also access this screen by pressing</a><span style="font-weight: bold;"> F5-G/L Accounts</span>.</div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1426242">Enter the </a><span style="font-style: italic;">Account#</span> information for the appropriate <span style="font-style: italic;">G/L Table Headings</span>. These G/L accounts override the G/L accounts from Customer Maintenance, Product Maintenance, Product Line Maintenance, and General Ledger Table Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1432941">To determine the percent to charge for restocking fees for this credit </a>reason code, choose one of the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1421876">For </a><span style="font-style: italic;">Restock Charge Percent</span>, enter the percent to deduct from the credit as a restocking charge per line item. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1432945">Press </a><span style="font-weight: bold;">F7-Restock </span>to open the <a href="javascript:WWHClickedPopup('ois', 'rstk_fee_mnt.htm#1452723', '');">Restocking Fee Ranges screen</a>. You can enter multiple restocking charges depending on the number of days since the invoice date. For example, you can have a 5 percent restock charge for a product returned less than 30 days since the invoice date, a 10 percent restock charge for a product returned 30 to 60 days since the invoice date, etc.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indent"><a name="1432946">This percent entered in either screen overrides a restocking percent at </a>the company level, but you can override it on a credit or RGA.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1421911">Restocking Charge Flags</a></div>
+            <div class="TableText" style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><a name="1432842">Restock Charge %</a></span><span style="font-style: normal;"> (</span><span style="font-style: normal; font-weight: bold;">Company Maintenance</span><span style="font-style: normal;">) determines the default restocking charge to </span><span style="font-style: normal;">add to returned products. </span></div>
+            <div class="TableText" style="margin-top: 6.0pt;"><span style="font-style: italic;"><a name="1432843">Soe Restock Charge Method (</a></span><span style="font-weight: bold;">Order Processing Parameters &gt; F5 &gt; F5)</span>. Determines if restocking charges are added to returned goods:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1421936">S</a></span> (or blank) - Only add restocking charges to material returned to stock.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1421940">A</a></span> - Add restocking charges to all types of returned goods.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText" style="margin-top: 6.0pt;"><span style="font-style: italic;"><a name="1421945">Restocking Charge</a></span> (<span style="font-weight: bold;">Customer Maintenance &gt; F7 &gt; F5</span>) determines if a restocking charge is calculated as each line item is entered on a credit memo:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1421952">Y</a></span> - Calculate a restocking charge for each line item when credit is issued.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1421953">N </a></span>- Do not calculate a restocking charges for each line when credit is issued.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Numbered_outer" style="margin-left: 0pt;margin-top: 7.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1421904">For </a><span style="font-style: italic;">Default Inventory Type</span>, identify the type of inventory that represents returned products for credit reason code. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421411">D</a></span> - Damaged.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421412">R</a></span> - Return to stock.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421413">S </a></span>- Scrapped.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421414">W</a></span> - Warranty/scrapped.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indent"><a name="1433346">If this field is blank, then the inventory type defaults to the type for the </a>product’s primary vendor. If no inventory type exists for the primary vendor, then it defaults to the <span style="font-style: italic;">Default Quantity Type For Credits</span> in Additional Option Parameters. If that is blank then the default is <span class="italics" style="font-style: italic;">Return </span><span class="italics" style="font-style: italic;">to Stock</span>.</div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">8	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1421984">For </a><span style="font-style: italic;">Update Credit Rsn Stats</span>, determine if credit reason statistics are updated when this reason code is used. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421418">Y</a></span> - Update credit reason statistics.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1422032">N</a></span> - Do update credit reason statistics.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">9	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422033">For</a><span style="font-style: italic;"> Update Customer Stats</span>, determine if customer statistics (<span style="font-style: italic;">YTD </span><span style="font-style: italic;">Returns</span>) are updated when a credit memo with this credit reason code is invoiced. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421422">Y</a></span> - Update customer statistics to appear on the <a href="javascript:WWHClickedPopup('ois', 'mly_cred_rsn_rpt.htm#2020222', '');">Monthly Credit Reason Report</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421423">N </a></span>- Do not update customer statistics.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">10	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422082">For </a><span style="font-style: italic;">Update Product Usage</span>, determine if product usage is updated when a credit memo with this credit reason code is invoiced. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421426">Y</a></span> - Update product usage (e.g., out of stock).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421427">N</a></span> - Do not update product usage (e.g., mistake).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">11	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1421428">For </a><span style="font-style: italic;">Exclude from Quality Reporting?</span>, determine if the credits using this credit reason code are excluded on the <a href="javascript:WWHClickedPopup('ois', 'cust_ontime_ship_rpt.htm#1752932', '');">Customer On-Time Shipments/Quality Report</a> when the credit memo is invoiced. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421430">Y </a></span>- Exclude credits using this credit reason code. You may want to choose this option so that returns are not factored in to on-time shipment calculations.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421431">N</a></span> - Include the credit reason code.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">12	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422185">For </a><span style="font-style: italic;">Equipment Trade In</span>, determine if the trade-in serial number information is required on credit memos that use this credit reason code. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1422203">Y</a></span> - Require equipment trade-in information to update the make, model, price, and cost for the new serial number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1422210">N</a></span> - Do not require trade-in information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">13	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1421432">For </a><span style="font-style: italic;">Update Picker Stats</span>, if you use the Warehousing Module, determine if pick error information is updated for the Picker Statistics report when a credit memo with this credit reason code is invoiced:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421434">Y</a></span> - Update pick error information (e.g., shipping error). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1421435">N</a></span> - Do not update pick error information (e.g., customer mistake).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><span style="font-weight: bold;"><a name="1422236">F5-G/L Accounts</a></span>: Allows you to update general ledger account information for the credit reason code.</div>
+            <div class="TableText"><span style="font-weight: bold;"><a name="1422250">F6-Disposition Inst</a></span>: Allows you to enter instructions for disposing of the material for this credit reason code.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Numbered_outer" style="margin-left: 0pt;margin-top: 10.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">14	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1421438">Press </a><span style="font-weight: bold;">F2-Save</span> to save the credit reason code information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Entering an RGA", "ois", "credit_memos.8.3.htm#1420951");
+          WWHAddRelatedTopic("Entering a Credit Memo", "ois", "credit_memos.8.8.htm#1420396");
+          WWHAddRelatedTopic("Monthly Credit Reason Report", "ois", "mly_cred_rsn_rpt.htm#2020222");
+          WWHAddRelatedTopic("Historical Percentage Credit Reason Report", "ois", "hist_cred_rsn_rpt.htm#1737652");
+          WWHAddRelatedTopic("Credit Reason Maintenance screen", "ois", "credit_reason_mnt.htm#1333485");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="credit_memos.8.1.htm#1424414">Credit Memos &amp; RGAs</a>:Creating Credit Reason Codes</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

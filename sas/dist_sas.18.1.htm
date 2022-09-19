@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Sales Analysis Year End Procedure</title>
+    <link rel="StyleSheet" href="css/dist_sas.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1001973">Sales Analysis Year End Procedure</a></div>
+      <div class="Body"><a name="998357">As the calendar year is drawing to a close, another year-end procedure to evaluate is the Sales Analysis </a>Year End Procedure.  But unlike the other year-end procedures, SAS Year End may not necessarily be run at calendar year-end or even fiscal year-end.  Though sales analysis may be captured on a calendar basis or on a fiscal basis it can also be captured on a user defined basis.  The dates making up a period can be defined and thus defining when a SAS year starts and ends. A sales analysis year and periods are defined in System Maintenance <span class="Italics">Sales &amp; Inventory Dates</span>. These periods should be reviewed prior to running SAS Year End to determine the actual sales analysis year-end.  The last day of a sales analysis year will be the day previous to the first day of the first period.  For example, if period 1 starts June 1st, then the last day of the sales analysis year would be May 31st.  After determining your sales analysis year-end mark your calendar to perform the SAS Year End Procedure on that day.</div>
+      <div class="Path"><a name="998369">Path: Sales Analysis &gt; Year End Procedure</a></div>
+      <div class="Body"><a name="998377">Sales analysis data is stored in a current year/previous year format, and the SAS Year End procedure </a>will roll current year to previous year and setup/clear current year.  Since the sales analysis file is updated through B-Update Invoice Processing, the SAS Year End Procedure should not be run until B-Update Invoice Processing has been run for the last period in the sales analysis year. After invoices and the B-update are run start the <span class="Italics">SAS Year End Procedure</span> found on the Sales Analysis menu.  While the SAS year end procedure is running, business may continue including invoicing, but the B-Update procedure should <span class="Bold">not</span> be run until the year end process has finished.</div>
+      <div class="Body"><span class="Bold"><a name="998387">Note:</a></span> If you plan on altering the sales periods for the new year, do not run invoices till the SAS year end procedure is complete and your periods have been changed. Please be aware that if the SAS Year End Process fails to get run at sales analysis year end then current sales analysis year information will accumulate with prior sales analysis year information.  It is vital that you determine your sales analysis year-end and run the year-end procedure on that day.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">Sales Analysis Year End Procedure</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

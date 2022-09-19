@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>System Parameters</title>
+    <link rel="StyleSheet" href="css/v17_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1001865">System Parameters</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1018740&quot;);"><a name="1018740">Product Number Duplicate Warning</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1018740", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1018740", false);</script>
+      <div class="Body"><a name="1018741">Product Number Duplicate Warning in Additional Option Parameters now includes </a>Purchase Orders. However, a duplicate warning message will only be displayed if the product numbers are physically entered on the order. The warning message will NOT be displayed for any orders that duplicate product numbers when using auto functions. Such as the Duplicate P/O process, converting temporary P/Os to actual P/Os and when a Kit Parent is entered and the components are exploded on a P/O when some of the components may already exist on the P/O. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1018742&quot;);"><a name="1018742">Serial # DS POs Non-Detail</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1018742", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1018742", false);</script>
+      <div class="Body"><a name="1018743">A new </a><span class="Bold">Serial # DS POs Non-Detail</span> flag was added to the Additional Option Parameters screen. This is a Y/N flag that determines if serial numbers can be entered for serialized products when Direct Ship Purchase Orders are received when the detail tracking flag in PM&gt; F5-Add Info is set to N. If this flag is set to Y you will can enter serial number for serialized products when a Direct Ships are received in Direct Ship Receipts Entry, Stock Receipts Entry or Vendor Invoice Reconciliation Entry.I</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001866&quot;);"><a name="1001866">Company Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001866", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001866", false);</script>
+      <div class="Subhead"><a name="1001867"> F5-Add Info&gt; G/L Rep Cst Default&gt; C</a></div>
+      <div class="Body"><a name="1001868">The functionality of the C flag setting for this option was modified. Previously, the system </a>would update the line item cost for the credit memo with the replacement cost if the average cost was $0.00. Therefore, if the replacement cost was also $0.00, the line item entered on the credit memo would then be updated with a $0.00 cost as well. This function has since been altered to provide the ability of allocating a product cost to line items that contain a $0.00 average and replacement cost. The system will now update the line item with the product cost entered at the time of entry when creating a credit memo regardless if the average and replacement costs are currently at $0.00. </div>
+      <div class="Subhead"><a name="1001869">F6-Modules&gt; Marketing&gt; Update Prospect Email</a></div>
+      <div class="Body"><a name="1001870">The Marketing options screen was enhanced with a new </a><span class="Bold">Update Prospect Email</span> flag. This is a Y/N flag that determines if the prospect e-mail address will be updated with the new e-mail address if it is changed in the Customer file. If this flag is set to Y, and the e-mail address is modified, the prospect file will then be updated with the e-mail change to match what is currently listed in the customer file. Therefore, the address in both the customer and prospect file would be the same. Select N to not update the prospect file with any e-mail address modifications made in the customer file. </div>
+      <div class="Subhead"><a name="1001871">F6-Modules&gt; Vertex Sales Tax&gt; Use Taxable Status From Ship-To?</a></div>
+      <div class="Body"><a name="1001872">A program change has recently occurred for the </a><span class="Bold">Use Taxable Status From Ship-To?</span> flag in the Vertex Sales Tax option for V15-17. From this point forward, if the Use Taxable Status From Ship-To? flag is set to Y, the system will then check the ship-to record for the <span class="Italics">Taxable</span> flag setting as well as the <span class="Italics">Exempt Number</span> for that sales order. If this flag is set to N, the system will automatically use the <span class="Italics">Taxable</span> flag setting and <span class="Italics">Exempt Number</span> information from the customer record. </div>
+      <div class="Subhead"><a name="1001873">Maintenance&gt; Company Maintenance&gt; GUI Options &gt; Records Per Block </a></div>
+      <div class="Body"><a name="1001874">The Company Maintenance screen was updated with a new </a><span class="Bold">Records Per Block</span> in the GUI Options. This feature was added to provide GUI users with the ability of determining how many records will be loaded into the inquiry screens at one given time. This new feature was created to make inquiry screens that contain a an abundance of records more manageable. Currently the default for this field is set at 200, however, this can be customized to better suit your company’s needs. with this option several inquiries were updated with two new function keys. These function keys allow users to view previous and next records that exist in the inquiry, but are displayed on additional pages due to the number established in the Records To Block field. The sF5-Prev Group <span class="Italics">(Shift-F5)</span> function allows you to view records on the previous page, the sF6-Next Group <span class="Italics">(Shift-F6)</span> allows you to view records on the next page. As of November 2002, this logic was added to nine of the system's existing inquiries. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001875">Sales Order Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001876">Sales Order History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001877">Purchase Order Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001878">Purchase Order History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001879">Work Order Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001880">Work Order History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001881">Transfer Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001882">Transfer History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001883">Inventory Adjustment Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001884&quot;);"><a name="1001884">Hierarchy Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001884", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001884", false);</script>
+      <div class="Body"><a name="1001885">The Hierarchy Maintenance screen has recently been updated with several new function </a>keys for prefix validations. V17+, now can setup valid prefixes for divisions, regions, locations, departments, and cost centers to be used when using wildcards to provide additional validations. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001886">F5-Div List</a></span> - enter valid division prefixes when using wildcards (XX).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001887">F6-Reg List</a></span> - enter valid region prefixes when using wildcards (XX). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001888">F7-Loc List</a></span> - enter valid location prefixes when using wildcards (XX) . </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1018168">F8-Dep List</a></span> - enter valid department prefixes when using wildcards (XX). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1018169">F9-Ccr List</a></span> - enter valid cost center numbers when using wildcards (XX). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001891&quot;);"><a name="1001891">Warehouse Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001891", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001891", false);</script>
+      <div class="Subhead"><a name="1001892">F5-Add Info&gt; Credit Bureau Override</a></div>
+      <div class="Body"><a name="1001893">A new </a><span class="Bold">Credit Bureau Override</span> flag was added to Warehouse Maintenance. This is a new Y/N flag that determines if manual authorizations for credit cards will be allowed to be entered at the warehouse level. to activate this override feature, it is required to have the warehouses allowing manual authorizations are using ICVerify. In addition, the Credit Bureau Auth Code flag in Order Processing Parameters must be set to allow manual entry throughout the system. </div>
+      <div class="Subhead"><a name="1001894">F6-Cont Setup</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001895">Vendor Claim </a></span>- This is a Y/N flag that was added to provide the option of printing or faxing vendor claims using the continuous printer process. In earlier versions, the vendor claims were printed using the Vendor Claim Printing process. with this flag, the P/O Document Option flag in Vendor Maintenance will need to be set as well. Currently the ability to e-mail vendor claims is not yet available. <span class="Bold">Note:</span> To use this new feature, your USER-FORMS must be changed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001896">Sample Pck Ticket</a></span> - This is a Y/N flag that determines if the Sample request pick tickets are printed to the continuous printer at the time of processing the sample requests in Sample Request Entry. Select Y to use the continuous print option, or select N to not. If you choose not to use this process, the sample request pick tickets can be printed with the Sample Pick Printing process. The new continuous printer option works with the update of functionality to the Sample Request Entry process. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001897">Shipping Conf.</a></span> - This flag was created to provide users the option of printing, e-mailing, or faxing shipping confirmations using the continuous printer process. This is typically a Y/N flag, however, if multiple continuous printers are used for shipping confirmations, the flag can also be set to D. If this flag is set to D you can select the printer for the shipping confirmations. If no print queue is established, the default shipping confirmations printer is used. With this new feature, additional flag settings were added in Customer Maintenance. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001898">F5-Cont Labels Setup </a></span>- Two new flag options were added to the Stk Rec Lbl field. Once you select Y and enter the Port Number for the printer (or left it blank) you go to the next (unlabelled) field on the left side of the field. Select U to print labels by batch after Stock Receipts or when the Batch Update Procedure for RF Stock Receipts. Select L to print each label separately as each item is received. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001899">Action&gt; Remit Info</a></div>
+      <div class="Body"><a name="1001900">The Warehouse Maintenance screen was updated with a new </a><span class="Bold">Remit Info</span> option. This new feature allows users the capability of entering Remit Information for warehouses. This information will be printed on USER-Forms documents or standard reports however, is for informational purposes only. <span class="Bold">Note</span>: to use this new feature, your USER-FORMS must be modified. </div>
+      <div class="Subhead"><a name="1001901">Action&gt; Addl Opts&gt; Form ID/Logo</a></div>
+      <div class="Body"><a name="1001902">A new </a><span class="Bold">Form ID/Logo</span> option was added to the Warehouse Maintenance screen to provide users the capability of assigning certain logos to be printed on each document such as pick tickets, invoices, packing slips etc. for a warehouse. This new option works with the Valid Response Maintenance routine in the System Parameters <span class="Italics">(listed in the </span><span class="Italics">Maintenance</span>&gt;<span class="Italics"> Miscellaneous Controls section of this New Features list). </span>Once the FORM.IDS validation code is established as a valid code and a list of applicable responses are created for the document types, the response can be entered as the Identifier in the Form ID/Logo entry screen. The response entered will be validated by the Valid Response Maintenance routine to ensure that the code entered is in fact a valid code. If an invalid code is entered, a warning message indicates an invalid response. Press F3 to see valid options. Press F5-Logo Name to select the correct Logo for the documents.<span class="Bold"> Note: </span>to use this feature, your USER-FORMS programs must be changed. </div>
+      <div class="Subhead"><a name="1001903">Action&gt; Addl Opts&gt; Form ID/Logo&gt; F5-Logo Name</a></div>
+      <div class="Body"><a name="1001904">In addition to the new Form ID/Logo process, a new </a><span class="Bold">F5-Logo Name</span> field has also been added to determine the logo that is to be assigned to each of the documents for a warehouse. The preferred logo is established in this field, therefore it will be used on the selected documents for this warehouse. Each warehouse has the ability of employing a different logo for each warehouse. <span class="Bold">Note:</span> Only one logo can be allocated to each warehouse.<span class="Bold"> Note: </span>to use this new feature, your USER-FORMS programs must be changed. </div>
+      <div class="Subhead"><a name="1001905">Action&gt; Addl Opts&gt; Transfer SSCC</a></div>
+      <div class="Body"><a name="1001906">Previously of Prelude, the </a><span class="Bold">Transfer SSCC</span> option was located in the F5-Add Info&gt; F8-Trans SSCC Info screen. This has since been relocated and is now listed on the Addl Info menu. The functionality of this screen remains the same as earlier versions. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001907&quot;);"><a name="1001907">Order Processing Controls</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001907", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001907", false);</script>
+      <div class="Body"><a name="1001908">A new 10 Payment Method has recently been added for V17. This </a><span class="Bold">10 Certificate A/R</span> method was created to allow partial payments to be made to the Credit Card, Check or Cash payment methods therefore, allowing the balance to be applied to the 10 Certificate A/R payment method. Once the amount is entered, the Certificate A/R payment method is then updated to the A/R balance for the customer at the time of invoicing. </div>
+      <div class="Body"><span class="Italics"><a name="1001909">Example:</a></span> If a customer is established with an A/R terms code for <span class="Italics">Credit Card, Check</span>, or <span class="Italics">Cash</span>, you can use the 10 method in the Cash Application screen for the amount that is to be applied for the certificate amount. The system will then calculate the balance to be charged to the established method and apply the balance certificate amount or vice versa. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001910&quot;);"><a name="1001910">Purchasing Controls</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001910", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001910", false);</script>
+      <div class="Subhead"><a name="1001911">Purchase Order Entry Types</a></div>
+      <div class="Body"><a name="1001912">Purchase Order Types </a><span class="Bold">12-OTW-Stock</span> and <span class="Bold">13-OTW-Direct</span> were added for the On The Water Conversion P/O Type. to use the On The Water Purchase Order Type Container Method, it is required to add both PO Types 12 and 13 to the list of Valid Purchase Order Types. with these PO types, additional criteria are required to be established for this feature to work correctly. A new P flag was added to the On The Water Conversion field in the Additional Option Parameters. A new On The Water Maintenance routine was added to the Stock Receipts menu. In addition, the functionality of the Stock Receipts Entry program has also been updated. Further information regarding these additional features can be found in their categories throughout the New Features list. </div>
+      <div class="Subhead"><a name="1001913">Purchasing Parameters</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001914">Product Class Method - The Product Class Method flag was updated to now include </a>an <span class="Bold">L</span> flag setting. If this flag is set to L, Product Line will classify products. with this new flag, additional functionality updates have also been made to accommodate this new feature. The Rebuild Product Classifications program as well as the Exec Prod Classify Rebuild (located in the End of Month Calendar Close option) routine were enhanced to perform the product classification process by Product Line if the Product Class Method is set to L. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001915">Spikes Exception- High </a></span>- to better determine spikes in the annual usage of a product, a new <span class="Bold">Spikes Exception-High</span> field was added for V17. This new field allows you to enter a percentage that is to be used in calculating the spike if the annual usage is &gt;= forecast usage multiplied by the percentage. For example, if the High is set to 2.50 %, the system will mark the usage for an item as a spike if annual usage is &gt;= forecast usage X 2.50. with this new field, the functionality of the ICS End of Month Calendar Close was updated to evaluate both the Spike Exception High &amp; Low percentages. If these fields are established with a percentage and the annual usage meets the criteria to detect a spike in usage (High or Low) the system will update the usage for an item with an S in the Exceptions column. In addition, several new fields such as Product Line, Product Number and Class were added to the Unusual Usage &amp; Exception Report. An Exception Code has also been added to allow you to restrict the results of the report based on items flagged as unusual usage, out of stock, or for spike conditions. These results will be based on the criteria entered on the GRIM screen. The Purchasing Parameters screen has also been updated with a Spikes Exception-Low flag. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1018105">Spikes Exception- Low -</a></span> to better determine spikes in the annual usage of a product, a new <span class="Bold">Spikes Exception-Low</span> field was added for V17. This new field allows you to enter a percentage that is to be used in calculating the spike if the annual usage is &lt;= forecast usage multiplied by the percentage. For example, if the Low is set to .50 %, the system will mark the usage for an item as a spike if annual usage is &lt;= forecast usage X.50. with this new field, the functionality of the ICS End of Month Calendar Close was updated to evaluate both the Spike Exception High &amp; Low percentages. If these fields are established with a percentage and the annual usage meets the criteria to detect a spike in usage (High or Low) the system will update the usage for an item with an S in the Exceptions column. In addition, several new fields such as Product Line, Product Number and Class were added to the Unusual Usage &amp; Exception Report. An Exception Code has also been added to allow you to restrict the results of the report based on items flagged as unusual usage, out of stock, or for spike conditions. These results will be based on the criteria entered on the GRIM screen. The Purchasing Parameters screen has also been updated with a Spikes Exception-High flag. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001917">Perform Prev Price Update</a></span> - Previously the previous price update process would automatically be performed during Nightly Processing .This new flag was added to provide you with the option of selecting N if you are not requiring the update process to be performed. If this flag is set to Y or left blank, the previous price update process will be performed, therefore creating temporary purchase orders for items with future price increases. In addition, the Recommended P/O Action Report will be updated with items that meet the criteria and will reference E (Price) as the basis for creating a temporary P/O. If this flag is set to N, this process will not be executed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001918&quot;);"><a name="1001918">Valid Response Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001918", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001918", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001919">TAX.GRP</a></span>: allow users to enter valid responses for tax areas in Customer, Product and Product Warehouse maintenance screens. Once the Responses were established for the TAX.GRP validation code, they will then be recognized as valid codes throughout the system where applicable. Currently, the logic pertaining to this code is used in Customer Maintenance (F7-Order&gt; F5-Add Info&gt; Sales Tax Group) and Product Maintenance (F5-Add Info&gt; Product Tax Group) and 3. Product Warehouse Maintenance (Product Tax Group) If using the Tax Group codes in any of the listed maintenance screens, it is required to enter a response that was previously established as a valid response in /VRM. However, if an entry is made that has is not identified as a valid response code, an Invalid Response! Please Try Again Or Press F3 For Options! <span class="Bold">WARNING</span> message appears for invalid responses </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001920">FORM.IDS</a></span>: allow you to assign logos to print on pick tickets, invoices, packing slips etc. This validation code works with the new Form ID/Logo option in the Addtl Opts of the Warehouse Maintenance screen in addition to the new F5-Logo Name option <span class="Italics">(listed on the Systems</span>&gt;<span class="Italics"> Warehouse Maintenance section of the New Features list)</span>. Therefore, you can enter a list of valid responses. Once responses are created, they are available as valid FORM.IDS and will be validated as such when entered as an identifier for a document.<span class="Bold"> Note: </span>to use this new feature, your USER-FORMS program must be changed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001921">PATTERN.CODE</a></span>: allow you to create valid pattern codes for Book/Sample Information screen in Product Maintenance. (Product Maintenance&gt; Action&gt; Addtl Opts) </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001922&quot;);"><a name="1001922">User ID Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001922", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001922", false);</script>
+      <div class="Subhead"><a name="1001923"> F5-Add Info&gt; Enter Credit Memos</a></div>
+      <div class="Body"><a name="1001924">The </a><span class="Bold">N</span> and <span class="Bold">R</span> flag settings for the Enter Credit Memos flag has recently been modified. Up to V16, you could not enter negative quantities for Kit Component items in Sales Order Entry unless Enter Credit Memos was set to Y. For V17, this was modified to allow you to enter negative quantities for components in Sales Order Entry. </div>
+      <div class="Body"><a name="1001925">For V17+, the current logic for the </a><span class="Bold">R</span> flag setting was revised to disallow an 09 order type to be changed to a 05 or an 06 order type in Sales Order Entry. If you attempt to change an 09 type order to a type 05 or 06 type order, the User ID Privileges Do Not Allow Conversion of RGA to Credit Memo message will be displayed, therefore not allowing the change in order types. </div>
+      <div class="Subhead"><a name="1001926">F5-Add Info&gt; Enforce Auth in GRI</a></div>
+      <div class="Body"><a name="1001927">to implement additional restriction options for users, a new </a><span class="Bold">Enforce Auth in GRI</span> field was added to the User Id Maintenance screen. This is a Y/N flag that determines if a User Id has permission to access GRIM based generated reports for divisions and locations other than what is currently assigned to them.<span class="Bold"> Example: </span>If this flag is set to Y for User SP currently assigned to Division Number 01, and you attempt to generate a GRIM related report for any other Divisions other than 01, the warning message Invalid Division For This User ID will be displayed disallowing SP from generating the report. If your User ID is restricted by Location Number you cannote enter another warehouse in the Warehouse Number field on the General Report Interface screen. The message Access Denied, Unauthorized Warehouse For this Operator appears. </div>
+      <div class="Subhead"><a name="1001928">F5-Add Info&gt; Require Original Invoice Number</a></div>
+      <div class="Body"><a name="1001929">A new Require Original Invoice Number field was added to the User Id Maintenance </a>screen. This is a Y/N flag that indicates if this user will be required to enter the Original Invoice Number when entering a credit. If this flag is set to Y, an Invoice Number Required For This User! message will be displayed on the screen if the Invoice Number field is left blank in the Credit Information screen when processing a return. 												</div>
+      <div class="Subhead"><a name="1001930">Action&gt; User Options&gt; Notes Edit Authorizations</a></div>
+      <div class="Body"><a name="1001931">A new feature was added to further enhance the options available in the User Id </a>Maintenance screen. The Notes Edit Authorization was created to determine if users should be permitted to edit notes in any or all of the Notes options. A majority of the entry screens throughout the system contain the F6-Edit Notes function available for editing previously entered notes. This new feature contains logic to verify which screens will or will not be accessible to users for editing purposes. If a user has privileges to edit any of the notes in the entry screens, the ALL (All Notes Editable) option should be selected. However, codes are also establish to only provide access to screens that contain the F6-Edit Notes function. <span class="Bold">Note:</span> It is recommended that the F6-Edit Notes function should only be used for editing previously entered notes rather than entering new ones. This is due to the fact that the date/time stamp is not updated for this function. to the date/time stamp for notes entered, it is suggested that the F5-Notes Entry process be used instead. In addition, the Update Notes In History flag in the Order Processing Parameters screen must also be set to Y. Reference Note: This new feature covers most of the standard entry screens (SOE, POE, etc) that contain header/line/conversion notes as well as a few maintenance screens. However, notes that relate to such modules as Problem Notes/Solution Notes in Service Order Entry have not yet been updated with the F6-Edit Notes option. Therefore, to allow a user to edit notes for the areas that are not currently listed with codes (Vendor Claim, Bill of Material Maintenance, Customer Contacts etc.) it would be required to establish the ALL code for this user to provide access to the notes screen where the F6-Edit Notes was added.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001932&quot;);"><a name="1001932">Option Parameters - General</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001932", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001932", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001933">A new </a><span class="Bold">General Parameters</span> menu option was added for V17. This new feature provides access to general parameters that will control how the system functions based on conditions. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001934">Update Notes in History</a></span> - moved to the new General Parameters menu for V17. This flag also works with the new Insert New Notes at Top flag that was added to the new General Parameters screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001935">Insert New Notes at Top</a></span> - This is a new Y/N flag that determines if the notes entered using F5-Notes Entry are updated at the top of the notes screen to allow you to view the most recent notes at the top of the page rather than having to page down through the entire notes screen. Set this flag to Y to update the notes at the top of the inquiry screen, these are the notes that were entered using the F5-Notes Entry screen. If this flag is set to N, the notes will be displayed at the bottom of the inquiry screen as it did Previously. In addition, we recommend that the Update Notes in History flag be set to Y in order update the latest notes entry with the date/time stamp at the top of the notes screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001936&quot;);"><a name="1001936">Option Parameters - Order Processing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001936", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001936", false);</script>
+      <div class="Subhead"><a name="1001937">F5-Add Info&gt; Administrative Order Hold (Y)&gt; Mgr</a></div>
+      <div class="Body"><a name="1001938">The Administrative Order Hold screen was updated with a new </a><span class="Bold">Mgr</span> field. This field was added to allow users to enter the manager code that is to be associated with each Administrative Order Hold type. The manager code entered will override the warehouse level manager code for the administrative order hold process in the Credit Manager Maintenance screen. </div>
+      <div class="Subhead"><a name="1001939">F5-Add Info&gt; F5-Add Info&gt; QFUI Dollar Limit</a></div>
+      <div class="Body"><a name="1001940">The Order Processing Parameters screen was updated with a new </a><span class="Bold">QFUI Dollar Limit</span> flag. This flag is used to determine the dollar amount criteria in which quotes will be displayed on the Quote Follow Up Inquiry. This flag is established at the company level. You can enter a dollar amount that is that is to be used as the source in determining that quotes equal to or exceeding the dollar amount entered will be displayed in the Quote Follow Up Inquiry. If quotes are less than the amount entered, these quotes will not be flagged to appear on the follow up inquiry. However, if this field is left blank, the Quote Follow Up Inquiry will be updated with all the quotes that have previously been entered in Quotation Order Entry for the written by as well as user. </div>
+      <div class="Subhead"><a name="1001941">F5-Add Info&gt; F5-Add Info&gt; Pick Ticket Minimum Dollar</a></div>
+      <div class="Body"><a name="1001942">The Order Processing Parameters menu was updated with a new</a><span class="Italics"> Pick Ticket Minimum </span><span class="Italics">Dollar</span> flag. This new flag was added to provide the ability to establish a minimum dollar amount to be required for each warehouse prior to releasing a pick ticket for processing. The Pick Ticket Minimum Dollar flag contains logic that will check the dollar amount for each pickable line item assigned to the same warehouse, calculate the pickable total and compare it to the minimum dollar amount previously entered for this flag. If the total amount of the pickable items is less than the amount established in the Order Processing parameters, a pick ticket will not be released for picking for this warehouse. If the pickable total meets or exceeds the pre-determined amount, the pick ticket release will continue to be processed. The logic for this option will in fact calculate the totals by each warehouse, however a Minimum dollar amount cannot be established per warehouse. The minimum dollar amount instituted will be used as the amount required to be met for each warehouse that pertains to the order. Therefore if multiple warehouses are used, each warehouse must meet the minimum dollar amount to release the pick ticket. If a sales order contains multiple warehouse items and only one of the warehouse pickable totals meet the minimum dollar amount a pick ticket for only this warehouse will be released. <span class="Bold">Note</span>: If using both features the Pick Ticket Minimum Dollar as well as the Pick Ticket Minimum Percent, only one of these conditions is required to be met prior to releasing the pick ticket for this order. </div>
+      <div class="Subhead"><a name="1001943"> F5-Add Info&gt; F5-Add Info&gt; Pick Ticket Minimum Percent</a></div>
+      <div class="Body"><a name="1001944">with the Pick Ticket Minimum Dollar flag, a </a><span class="Bold">Pick Ticket Minimum Percent</span> flag has also been added to allow a percentage to be required for sales orders prior to releasing pick tickets for processing. The Pick Ticket Minimum Percent flag contains logic that will check the dollar amount for each pickable line item assigned to the same warehouse, calculate the pickable total and divide it by the entire amount total of the line items allocated to the same warehouse. This calculation will determine if the percentage pickable amount meets the percentage amount previously established in the Order Processing Parameters menu. If the total amount of the pickable items is less than the percentage amount established, a pick ticket will not be released for picking for this warehouse. If the pickable total meets or exceeds the pre-determined percentage amount, the pick ticket release will continue to be processed. The logic for this option will in fact calculate the totals by each warehouse to determine if pick tickets will be printed, however a Minimum percent amount cannot be established per warehouse. The minimum percent amount instituted will be used as the amount required to be met for each warehouse that pertains to the order. Therefore if multiple warehouses are used, each warehouse must meet the minimum percentage amount to release the pick ticket. If a sales order contains multiple warehouse items and only one of the warehouse pickable totals meet the minimum dollar amount a pick ticket for only this warehouse will be released. Note: If using both features the Pick Ticket Minimum Percent as well as the Pick Ticket Minimum Dollar, only one of these conditions must be met to release a pick ticket. </div>
+      <div class="Subhead"><a name="1001945">F5-Add Info&gt; F5-Add Info&gt; PO Box Removal</a></div>
+      <div class="Body"><a name="1001946">A new Y/N PO Box Removal flag was added to the Order Processing Parameters screen. </a>This new flag determines if the PO Box address is to be included in the shipping address for the sales order due to the fact that shipments are typically not delivered to PO Boxes. Set this flag to N if you do not wish to remove the PO Box from the address and it is to be included as part of the shipping address. Set this flag to Y if you do wish to remove the PO Box and to not include the information with the shipping address. Note: This flag also pertains to quotes. Note: This feature does not require a USER-FORMS change. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001947&quot;);"><a name="1001947">Option Parameters - Inventory</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001947", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001947", false);</script>
+      <div class="Subhead"><a name="1001948">Product Tagging</a><span class="Bold">&gt;</span> N</div>
+      <div class="Body"><a name="1001949">The functionality of the Standard Product Lookup was enhanced for V17. Previously, if the </a>Product Tagging flag in Inventory Parameters was set to N, the <span class="Bold">Avail</span> column would not be displayed. This has since been modified to display the Avail column, which will provide the available on-hand quantity for all warehouses for the items. Therefore, regardless of the flag setting for the Product Tagging option, the Avail column will always be displayed in the Standard Product Lookups. Note: The F column (I for Inventory File or C for Catalog File) was removed from the standard product lookup for V17. </div>
+      <div class="Subhead"><a name="1001950">F5-Add Info&gt; Upd List/Disc in SRE / APPO</a></div>
+      <div class="Body"><a name="1001951">Inventory Parameters has recently been updated to include a new </a><span class="Bold">Upd List/Disc in SRE/</span><span class="Bold">APPO</span> flag. This is a Y/N flag that determines if the list price for a product is updated with the Gross Price from the Purchase Order in Stock Receipts Entry. If this flag is set to Y, the product's list price will be updated with the gross price of the Purchase Order in SRE. If the P/O contains a discount, the product replacement percent will then be updated with the discount percentage if the basis for replacement cost is List (Price 0), referred to as Retail in PM&gt; F7-Price/Cost. The system will then recalculate the replacement cost to reflect the discount amount. In addition, any cost adjustments made in APPO Entry will also update the product’s list price. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001952&quot;);"><a name="1001952">Option Parameters - Purchasing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001952", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001952", false);</script>
+      <div class="Subhead"><a name="1001953">Incl Susp S/O For Linkage</a></div>
+      <div class="Body"><a name="1001954">This flag was modified for Nightly Processing. Previously, Nightly Processing </a>automatically generated recommended P/O for work orders linked to a suspended sales order.To allow you to control if temporary purchases are created, additional logic was added. If you choose Y, Nightly Processing creates recomended P/Os for work order components linked to a suspended sales order, including non-stock components with a B supply code. </div>
+      <div class="Subhead"><a name="1001955">Automate P/O Generation From SOE</a></div>
+      <div class="Body"><a name="1001956">to eliminate a few unnecessary steps when generating purchase orders from in Sales </a>Order Entry, a new <span class="Bold">Automate P/O Generation From SOE</span> flag was added to Purchasing Parameters. This is a Y/N flag that will determine if the automatic generation of purchase orders will be done behind the scenes with the exception of the print prompts. If this flag is se to Y and you can generate P/Os while in Sales Order Entry, you can determine whether a purchase order is to be generated. If you choose to generate a P/O, you must choose a vendor number. The steps (as in displaying the Dialog Box prompting you to continue with P/O generation and the displaying the screen that lists vendors) that would typically be shown was omitted from the process. The purchase orders will now be generated behind the scenes automatically, only prompting you with the Print Box options for each P/O. If this flag is set to N and you can generate purchase orders from in SOE, you will then be prompted with the standard prompts as usual. Setting this flag to N will indicate that the system is to work exactly how it has Previously. </div>
+      <div class="Subhead"><a name="1001957">Automate Transfer Generation </a></div>
+      <div class="Body"><a name="1001958">to eliminate a few unnecessary steps when generating transfers from in Sales Order Entry </a>or Work Order Entry, a new <span class="Bold">Automate Transfer Generation </span>flag was added to Purchasing Parameters. This is a Y/N flag that will determine if the automatic generation of transfers will be done behind the scenes with the exception of the print prompts. If this flag is se to Y and you can generate transfers while in the Sales or Work Order Entry screens, you are prompted as normal to determine whether a transfer is to be generated. If you opt to generate a transfer, you are prompted for a warehouse number. The steps that would typically be shown such as asking you if you would like to proceed with the transfer generation was omitted from the process. The transfers will now be generated automatically with no required interaction. If this flag is set to N and you can generate transfers from in SOE and WOE, you will be prompted with the standard prompts as usual. Setting this flag to N will indicate that the system is to work exactly how it has Previously. <span class="Bold">Important Note:</span> to use this flag, the Auto Transfer Generation flag in the F5-Add Info screen in Inventory Parameters must be set to Y or W. </div>
+      <div class="Subhead"><a name="1001959">Maintain Suspended P/Os</a></div>
+      <div class="Body"><a name="1001960">The Purchasing Parameters screen was updated with a new </a><span class="Bold">Maintain Suspended P/Os</span> flag that will determine if Suspended purchase orders should be maintained for reference purposes. with this flag, several additional enhancements pertaining to this feature have also been added. If this flag is set to Y, Suspended P/Os will be tracked and updated to the Buyer Queue Inquiry. In addition, the S column in the Purchase Order Log Inquiry is also updated with an S on the Purchase Order line to indicate that this purchase order is currently suspended.</div>
+      <div class="Subhead"><a name="1001961">Set P/O Date as Output Date</a></div>
+      <div class="Body"><a name="1001962">A new Set P/O Date as Output Date field was added to the Purchasing Parameters </a>screen. This is a Y/N flag that determines if the purchase order date will be updated with the current date regardless of which P/O date was previously entered in the purchase order header. The date will be updated once one of the Printing, Faxing or E-mailing options is selected when processing the P/O in purchase order entry. If this flag is set to N, the P/O date will not be updated and the date entered in the P/O Date field will be used. For example, if this flag is set to Y and the P/O Date entered was 10/25/02, once this purchase order is processed, the P/O Date would be updated with the 09/25/02 date (current date). In the same example if this flag were set to N, the P/O Date would remain the same 10/25/02 date. Note: The date will NOT be updated on a suspended order until the purchase order has actually been processed and is no longer suspended.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001963&quot;);"><a name="1001963">Option Parameters - Accounts Receivable</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001963", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001963", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001964">Credit Hold / Unallocate Inv -</a></span> allows you to un-allocate inventory for orders on credit hold. All line items that were pickable are updated as backordered. Once the sales order is released from credit hold, the system will review all line items and commit inventory based on the available quantity of each line item at that time. If this flag is set to N, the normal process of allocating inventory to these sales orders will remain the same. If a Stock Receipt is entered, the system ill not allocate the inventory to the open sales order on credit hold since the allocation of inventory is done when the sales order is released from credit hold. Note: This flag setting does not pertain to linked or released sales orders. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001965&quot;);"><a name="1001965">Option Parameters - Accounts Payable</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001965", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001965", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001966">Print MICR on A/P Checks </a></span>- to provide the capability of printing the Bank Account, Routing Number, and Check Number in MICR (Magnetic Ink Character Recognition) format on A/P checks, a new Print MICR on A/P Checks flag was added to the A/P Maintenance screen. This is a Y/N flag that determines if the banking information will or will not be printed on the bottom of the A/P checks. to use this new feature, it is required that Optio is used for A/P check printing as well as implementing the necessary USER-FORM modifications for this option. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001967&quot;);"><a name="1001967">Option Parameters - Marketing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001967", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001967", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001968">Quote F/U-Activity Inq</a></span> allows you to include quote follow-ups in the Marketing Inquiry screens. If this flag is set to Y, the Q entries will be displayed in the Marketing Activity Inquiry (/MAI) and the Marketing Activity Contact Inquiry (/MACI) as well as the additional current activities codes T, P and M. If this flag is set to N the only the Q activities will not be displayed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001969&quot;);"><a name="1001969">Option Parameters - Rental</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001969", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001969", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001970">Rollup Billing</a></span> - determines if the activity for non-serialized items is rolled up into a single line at the time of invoicing. If this flag is set to Y the activity for the rental item will be rolled up into one line item. If this flag is set to N the process will work as it has Previously and the activity for these rental items will remain on lines. <span class="Bold">Note:</span> to use this feature to rollup the activity into a single line, we recommend you do not use this rollup billing feature for anything other than non-serialized items. In addition, the Rental Rate Method flag located on this screen must also be set to D (Daily) <span class="Italics">(this flag is typically </span><span class="Italics">used with the Rental Pre-Bill or Periodic Billing processes to bill rental orders in </span><span class="Italics">advance)</span>. If multiple rental items currently exist on the rental order, the rental activity is rolled up as a single line for each rental item. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001971&quot;);"><a name="1001971">File Update Parameters</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001971", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001971", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001972">The Keep Contact Detail screen was enhanced with a new </a><span class="Bold">Sample Requests</span> field that determines if sample requests appears in the Contact Diary Inquiry with the Code (Cd) R. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001973&quot;);"><a name="1001973">Default Parameters Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001973", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001973", false);</script>
+      <div class="Body"><a name="1001974">To enhance the consistency of the default settings in the inquiries, a new functionality was </a>added to determine if the sort defaults are to be listed in Ascending or Descending order. If the sort option for a inquiry is established with a single digit character, the inquiry information will be displayed in Ascending order. If the inquiry information is to be displayed in Descending order, the flag setting must be established with the proper sort character, followed by an uppercase D to indicate that this will be sorted in Descending order. This new feature applies to the following default flag settings. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001975">Default P/O Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001976">Default P/O History Inq</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001977">Default Order History Inq</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001978">Default Sales Order Inq</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001979">Default W/O Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001980">Default W/O History Inq</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001981">Default W/O Quote Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001982">Default Quote Inquiry Sort</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001983">Default Quote Hist Inq Sort</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001984">Default Quote Date Inq Sort</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001985">Default Quote WB Inq Sort</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1001986">The inquiries that were affected by this change are as follows:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001987">Sales Order Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001988">Sales Order History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001989">Quotation Order Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001990">Quotation Order History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001991">Quotation By Date Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001992">Quotation By Written By Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001993">Work Order Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001994">Work Order History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001995">Work Order Quote Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001996">Purchase Order Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001997">Purchase Order History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001998">Rental Order Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001999">Rental Order History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002000">Open Order Inquiry For Written By</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1002001">In addition, modifications were made to accommodate a new sort option. Previously, the </a>/WOQI used the Default W/O Inquiry sort option given that the sort options were the same. </div>
+      <div class="Subhead"><a name="1002002">Default Consign Accum Flag</a></div>
+      <div class="Body"><a name="1002003">A new </a><span class="Bold">A</span> option was created for the Default Consing Accum flag. This A setting was added to allow products to always be accumulated on a consignment order for a customer, regardless of any price differences. When creating a consignment order for a customer, the product numbers will be accumulated even though a price variance might exist for this product. The price will be updated on the type 08 consignment order each time the product is entered on an 07 consignment order and invoiced. The price of the accumulated products will be updated based on the allocated price of the last product entered and invoiced. </div>
+      <div class="Subhead"><a name="1002004">Manual AP Comments Default</a></div>
+      <div class="Body"><a name="1002005">The Default Parameters Maintenance screen has recently been enhanced with a new </a><span class="Bold">Manual AP Comments</span> flag. Based on the setting of this Y/N flag, will determine if the comment field in the A/P Manual Invoice Entry will be defaulted to Y or N. Previously, the comments field would always reflect a N preference. To provide you with the choice of default for this field this new alternative was added. </div>
+      <div class="Subhead"><a name="1002006">Default Vendor Inv Inq Sort</a></div>
+      <div class="Body"><a name="1002007">The Default Parameters screen was updated with a new </a><span class="Bold">Default Vendor Inv Ing Sort</span> and <span class="Bold">Default Customer INv Inq Sort</span> for selection critiera. However, you can override the current view by selecting a another view in the Display Sequence field on the inquiry screen. Options are: </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002008">C</a></span>-Descending Invoice Date</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002009">D</a></span>-Due Date</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002010">I</a></span>- Invoice Date</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002011">N</a></span>-Invoice Number</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002012">U</a></span>-Descending Due Date</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002013&quot;);"><a name="1002013">Program &amp; Menu Passwords </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002013", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002013", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002014">RCE.PRD.SUB</a></span> - require users to enter a valid password when substituting products in Release Confirmation Entry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002015">QTY.SHP.SOE</a></span> - require users to enter a valid password when entering a ship quantity override that would result in a negative inventory for an item in Sales Order Entry without a valid password. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002016">SHP.QTY.WOI</a></span> - require users to enter a valid password when entering a quantity issue override that would result in negative inventory for an item in Work Order Issues Entry without entering a valid password. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002017&quot;);"><a name="1002017">Additional Option Parameters</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002017", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002017", false);</script>
+      <div class="Subhead"><a name="1002018">On The Water Conversion</a></div>
+      <div class="Body"><a name="1002019">A new </a><span class="Bold">P</span> option has recently been added to the On The Water Conversion flag. This new flag setting determines if the Purchase Order Type method will be used for On The Water receiving. If P is selected, the Purchase Order Types 12-OTW-Stock and 13-OTW-Direct (new PO types in Purchase Order Entry Types) will be used to correctly use this feature. with this P setting, additional criteria are required to be established for this feature to work correctly. Two new Purchase Order Types 12-OTW-Stock and 13-OTW-Direct were added. A new On The Water Maintenance routine was added to the Stock Receipts menu. In addition, the functionality of the Stock Receipts Entry program has also been updated. Further information regarding these additional features can be found in their categories throughout the New Features list. </div>
+      <div class="Subhead"><a name="1002020">F6-ICS&gt; Use Whse Over Lot Cost</a></div>
+      <div class="Body"><a name="1002021">A program change has recently occurred pertaining to the </a><span class="Bold">Use Whse Over Lot Cost</span> flag in the ICS option in Additional Option Parameters. Previously, if this flag were set to N, the system would still display the Average Cost rather than the Lot Cost when using Cost Adjustment Entry. This has now been modified to display the Lot Cost of the product instead of the Average Cost while in Cost Adjustment Entry. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002022&quot;);"><a name="1002022">Purges</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002022", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002022", false);</script>
+      <div class="Subhead"><a name="1002023">Order Processing&gt; Quotations</a></div>
+      <div class="Body"><a name="1002024">A new </a><span class="Bold">Quotations</span> option was added to the Purge Utility Menu. This new process will purge open quotes that were converted and/or deleted with a disposition code without printing the Quotation Disposition Reports. This process can be used for converted quotes, lost quotes <span class="Italics">(quotes that were deleted with a disposition code)</span> or for both converted and lost quotes. Once this process is performed, each quote will be removed from the quote file and updated into the quote history file. The Quotation Log Inquiry will then be updated with the PUR code referencing that a purge transaction has taken place however, the Purge Log Report will not be updated for this purge. In addition, the Quote Order History Inquiry Quote History Product Inquiry. This purge routine is identical to the process performed following the printing of the Quotation Disposition Summary Report. The GRIM (General Interface Report Maintenance) screen that will be displayed is a duplicate of the report screen however, only the purge process will be performed. </div>
+      <div class="Subhead"><a name="1002025">Accounts Payable</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002026">The Purge Utility Menu was updated with a new </a><span class="Bold">Vendor Master Purge</span>. This purge was added to allow users to purge vendor master records from a saved-list or criteria that currently do not contain an A/P Balance or Open Purchase Orders. This is the same process as manually deleting vendors using the F4-Delete option. A warning message is displayed once this process was selected. <span class="Bold">WARNING!</span> This purge procedure will only purge the selected vendors as if you were to delete the vendors in Vendor Maintenance. The selection of vendors needs to be well thought out and researched to verify that you would not delete vendors that have a good history still available on the database. This procedure will NOT purge any history records or other records beyond the vendor and vendor statistics (VEND and VEND.STAT) file information. Do you wish to continue with the purge procedure? <span class="Bold">Important Note:</span> <span class="Italics">The </span><span class="Italics">Vendor Maintenance Audit Reports will be updated with the vendor numbers that are </span><span class="Italics">deleted during the Vendor Master Purge process if the Keep Vendor Maint Audit flag </span><span class="Italics">in the File Update Parameters screen is set to Y</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002027">To work with the new Vendor Master Purge , a new </a><span class="Bold">Vendor Master Purge Error </span><span class="Bold">Report</span> was added as well. This report was created to display information pertaining to customer records that have not been deleted when performing the Vendor Master Purge routine.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002028">Accounts Receivable</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002029">The Purge Utility Menu was updated with a new </a><span class="Bold">Customer Purge</span>. This purge was added to allow users to purge customer master records from a saved-list or criteria that currently do not contain an A/R Balance or Order Balance (open sales orders). This is the same process as manually deleting customers using the F4-Delete option. A warning message is displayed once this process was selected. <span class="Bold">WARNING!</span> This purge procedure will only purge the selected customers as if you were to delete the customers in Customer Maintenance. The selection of customers needs to be well thought out and researched to verify that you would not delete customers that have a good history still available on the database. This procedure will NOT purge any history records or other records beyond the customer and customer statistics (CUSTOMER and CUST.STAT) file information. Do you wish to continue with the purge procedure? <span class="Bold">Note:</span> <span class="Italics">The Customer Maintenance Audit Reports will be updated with the customer </span><span class="Italics">numbers that are deleted during the Customer Purge process if the Keep Customer </span><span class="Italics">Maint Audit flag in the File Update Parameters screen is set to Y</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002030">The functionality of the Customer Purge has also been updated to check for existing </a>books allocated to customer prior to allowing a user to use the F4-Delete function to delete the customer. to perform this process the Books/Samples flag in Company Maintenance must be set to Y. If the customer currently exists in the BOOKS.CUST file, the customer will not be deleted. If the customer does not exist in the BOOKS.CUST file, the customer is deleted. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002031">To work with the new Customer Purge, a new </a><span class="Bold">Customer Master Purge Report</span> was added. It lists information about customer records that were not deleted by the Customer Purge. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002032">In addition to the new </a><span class="Bold">Customer Master Purge Report</span> being created, an additional functionality has also been added. This report will also include a Books Exist for the Customer reference for customers that were not deleted, due to the fact that books were still outstanding for this customer. This logic works with the added functionality to the Customer Purge option pertaining to the Book/Sample Subsystem. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002033">Processes&gt; Rebuild Menu&gt; Purchasing Control&gt; Buyer Suspended P/O Inquiry</a></div>
+      <div class="Body"><a name="1002034">with several new options pertaining to Suspended purchase orders, a new Rebuild </a>process was incorporated to rebuild the records for the Suspended P/O Inquiry in Buyer Queue Inquiry. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v17_new_features.4.1.htm#1001865">V17 New Features</a>:System Parameters</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

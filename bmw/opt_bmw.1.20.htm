@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Automatically Generating Work Orders for Scheduled Maintenance</title>
+    <link rel="StyleSheet" href="css/opt_bmw.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1075952">Automatically Generating Work Orders for Scheduled Maintenance</a></div>
+      <div class="Body"><a name="1075953">Nightly Processing automatically generates a temporary work order for equipment </a>records that are scheduled for maintenance. The system tracks the last maintenance date and determines if it is time for the next scheduled maintenance based on a date, the number of days past the last maintenance, or the number of hours/wear past the last maintenance hours/wear. Temporary work orders are only generated for products whose <span class="Italics">Equipment Flag</span> in Product Maintenance is set to Y and that are set up as a bill-of-material. </div>
+      <div class="Body"><span class="Bold"><a name="1075954">Note:</a></span> This feature does not work with Daily Processing.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1075955&quot;);"><a name="1075955">Scheduled Maintenance Code Maintenance (/SMCM)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1075955", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1075955", false);</script>
+      <div class="Path"><a name="1075956">Path: Rental &gt; Equipment Subsystem &gt; Maintenance &gt; Scheduled Maintenance Code Maintenance</a></div>
+      <div class="Body"><a name="1075957">This program determines when to schedule maintenance for a piece of equipment. It </a>defines each maintenance routine performed on equipment and the days and hours between each scheduled maintenance entry. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075958">Maintenance Code: </a></span>Enter the code for a scheduled maintenance routine. For example: OC- oil change, TC- tire change, TU- tune up, etc.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075959">Description: </a></span>Enter the description for the maintenance code being created.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075960">Days: </a></span>Enter the number of days between each maintenance period. For example: in the above screen, an oil change is performed every 90 days.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075961">Hours: </a></span>Enter the amount of use between maintenance periods. This could be hours of use, mileage, or wear measurements such as on a drill bit (.001). Hours are defined in the <span class="Italics">Measurements Required</span> field in Product Maintenance. For example (using the above screen): if the products <span class="Italics">Measurements Required</span> field is set to H (hours), an oil change will be performed every 3000 hours. If the products <span class="Italics">Measurements Required </span>field is set to O (odometer), an oil change will be performed every 3000 miles.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1075962&quot;);"><a name="1075962">Equipment Maintenance (/EM &gt; Action Bar &gt; Parts List)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1075962", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1075962", false);</script>
+      <div class="Path"><a name="1075963">Path: Rental &gt; Equipment Subsystem &gt; Maintenance &gt; Equipment Maintenance &gt; *Action &gt; Parts List</a></div>
+      <div class="Body"><a name="1075964">Each scheduled maintenance entry for a piece of equipment is defined and tracked in this </a>program. The Parts List Entry is used to set up the parts needed for each maintenance routine performed on a piece of equipment. <img class="Default" src="images/Scheduled%20Mnt.14.1.2.jpg" width="438" height="269" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075968">Product#/Description: </a></span>Enter the valid product numbers needed for each scheduled maintenance routine performed on the piece of equipment.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075969">Maint Code: </a></span>Defines which scheduled maintenance routine the corresponding product is used for. For example: in the above screen, all parts used in an oil change are identified with the code of OC1. These codes are set up in Scheduled Maintenance Code Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075970">Quantity: </a></span>Enter the quantity of each product to use for this scheduled maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075971">F5 </a></span><span class="Bold">–</span><span class="Bold"> Maint Required: </span>This option in the Parts List screen is used to view or change the dates for a piece of equipment’s next scheduled for maintenance. An example of the screen is shown below.<img class="Default" src="images/Scheduled%20Mnt.14.1.3.jpg" width="440" height="179" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075975">Maint Code: </a></span>Identifies each maintenance routine scheduled for the piece of equipment. These codes represent the products entered on the previous screen and cannot be added, changed, or deleted in this screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075976">Last Date: </a></span>Defines the last date the corresponding maintenance routine was performed on the piece of equipment. This field is updated when a work order for the scheduled maintenance routine is completed in Work Order Completions. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075977">Next Date: </a></span>Defines the next date the corresponding maintenance routine should be performed on the piece of equipment. This field is updated when a work order for the scheduled maintenance routine is completed in Work Order Completions. The system calculates the next scheduled maintenance date based on the <span class="Italics">Days</span> defined in Scheduled Maintenance Code Maintenance for the corresponding maintenance code. For example: if the last maintenance date is 11/05/03 and the number of days between maintenance periods is 30, the next scheduled maintenance date will be 12/05/03.<br />If setting up a piece of equipment for the first time, use this field to enter the date each scheduled maintenance entry should first be performed. If both fields are left blank the system schedules maintenance the next time Nightly Processing is run. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075978">Last Hours: </a></span>This field defines the measurement (hours, mileage, wear) of the piece of equipment the last time the corresponding maintenance routine was performed. This field is updated when you enter the current measurement in Work Order Completions.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1075979">If setting up a piece of equipment for the first time, enter the date each scheduled </a>maintenance entry should first be performed in the <span class="Italics">Next Date </span>field. If both fields are left blank the system schedules maintenance the next time Nightly Processing is run. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1075980&quot;);"><a name="1075980">Nightly Processing (/NP)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1075980", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1075980", false);</script>
+      <div class="Path"><a name="1075981">Path: Purchasing &gt; Shortcut: /NP</a></div>
+      <div class="Body"><a name="1075982">Temporary work orders for equipment scheduled for maintenance are created in Nightly </a>Processing. The system only creates a temporary work order for one code at a time. In other words, if a piece of equipment needs two codes to be scheduled for maintenance, Nightly Processing only picks up one to create a temporary work order for. The second code is picked to create a temporary work order after the work order for the first code was completed and processed. </div>
+      <div class="Body"><a name="1075983">The system runs through a series of checks to determine if a temporary work order should </a>be created for scheduled maintenance on a piece of equipment. It first checks the <span class="Italics">Next </span><span class="Italics">Date</span> field in Equipment Maintenance for the piece of equipment. If that date is the current system date or earlier, then a temporary work order is built for the scheduled maintenance.</div>
+      <div class="Body"><a name="1075984">If the </a><span class="Italics">Next Date</span> has not occurred, the system compares the current system date with the <span class="Italics">Last Date </span>field in Equipment Maintenance. If the difference between them is greater than or equal to the value stored in the <span class="Italics">Days</span> field in Scheduled Maintenance Code Maintenance for the maintenance code then a temporary work order is built for the scheduled maintenance. The logic being that the <span class="Italics">Next Date </span>field may be manually changed but the scheduled maintenance routine should be performed on the piece of equipment every so many days. </div>
+      <div class="Body"><a name="1075985">If neither of the above conditions are met, the system compares the </a><span class="Italics">Current Meter Hours</span> field in Equipment Maintenance with the <span class="Italics">Last Hours </span>field in the Parts Lists Maintenance Dates screen. If the difference between them is greater than or equal to the value stored in the <span class="Italics">Hours</span> field in Scheduled Maintenance Code Maintenance for the maintenance code, then a temporary work order is built for the scheduled maintenance. </div>
+      <div class="Body"><a name="1075986">If one of the above conditions is met, Nightly Processing generates a temporary expense </a>(type 05) work order, which prints on the Recommended Maintenance Work Order Report produced by Nightly Processing.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1075987&quot;);"><a name="1075987">Work Order Entry (/WOE)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1075987", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1075987", false);</script>
+      <div class="Path"><a name="1075988">Path: BMW/Work Order &gt; Work Order Entry</a></div>
+      <div class="Body"><a name="1075989">Temporary work orders created by Nightly Processing for scheduled maintenance are </a>converted in Work Order Entry using the <span class="Bold">F5-Convert Work Order </span>function available at the <span class="Italics">Bill Number</span> prompt.<img class="Default" src="images/Scheduled%20Mnt.14.1.4.jpg" width="520" height="130" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075993">Temporary Work Order Number: </a></span>Enter the temporary work order number created by Nightly Processing to be converted to an expense work order. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075994">Product Number: </a></span>The system automatically pulls in the product number and description for the selected temporary work order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1075995">Correct Work Order Number?: </a></span>Prompts you to verify that the temporary work order number entered is the correct one. Set to <span class="Bold">Y</span> to convert the temporary work order to a type 05 expense work order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1075996">Once the conversion process is initiated, the system pulls in the components from the </a>equipment parts list for the scheduled maintenance being performed. For example: if the work order is for an oil change, then all the products in the parts list that have an OC1 maintenance code are pulled into the work order</div>
+      <div class="Body"><a name="1075997">Since the system creates a type ‘05 expense work order, you are prompted for the </a><span class="Italics">Expense Reason Code</span> and the <span class="Italics">Maintenance Code</span>. The <span class="Italics">Expense Reason Code </span>field allows you to define an override expense account to post the work order to. The <span class="Italics">Maintenance Code</span> field displays the scheduled maintenance code the work order was created for. </div>
+      <div class="Body"><a name="1075998">Expense work orders post to a defined expense account instead of to inventory. The </a>expense account is defined by the expense reason code, if one is given, or by the Expense Work Order header in G/L Table Maintenance. The Expense Work Order account defined in the G/L table is used if an expense reason code is not specified or if the expense reason code does not contain an override account number.</div>
+      <div class="Body"><span class="Bold"><a name="1075999">Note: </a></span>An expense work order for scheduled maintenance can be manually created as well. Create a type 05 work order for the desired piece of equipment. Enter the maintenance code for the scheduled maintenance being performed and the serial number for the piece of equipment it is being performed on. The system automatically pulls in the products from the parts list for the maintenance code entered and updates the maintenance dates when the work order is completed.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">Automatically Generating Work Orders for Scheduled Maintenance</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

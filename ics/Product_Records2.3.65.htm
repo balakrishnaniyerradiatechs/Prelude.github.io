@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Allocating Optimal Reel Quantities</title>
+    <link rel="StyleSheet" href="css/Product_Records2.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1385241">Allocating Optimal Reel Quantities </a></div>
+      <div class="Body"><a name="1385242">If you have a product that is sold in reels, you are often left with small </a>remaining quantities of the product. To prevent wasting the product, you can let the system determine the reels to cut. Reel optimization allows you to enter the quantity and length of reel cuts on a sales order and then let the system select the optimal lot(s) to fill the order. </div>
+      <div class="Indent"><span style="font-weight: bold;"><a name="1385243">Example</a></span>: If a customer orders 4 cuts of cable at 200 ft. lengths and an 800 ft. reel is available, the 800 ft. reel is used to fill the order. </div>
+      <div class="Body"><a name="1385244">The system avoids allocating a lot to a cut quantity to eliminate wasted </a>quantities and to leave as little on the reel as possible.</div>
+      <div class="Indent"><span style="font-weight: bold;"><a name="1385245">Example</a></span>: If a customer orders 1 cut at 200 ft.and you have a 150 ft. lot and a 50 ft. lot available, the 200 ft. cut is backordered even though you have 200 ft. in inventory.</div>
+      <div class="Body"><a name="1385246">You can also activate the Lot Reel Prompting screen to display in Sales </a>Order Entry to allow you to evaluate other open orders for the product that have not yet generated a pick ticket. You can shuffle the lot allocations from other orders to use the optimal reel based on the cut and lengths. However, the system will not un-allocate a quantity for a customer unless another appropriate quantity is available to allocate to the order.</div>
+      <div class="Indent"><span style="font-weight: bold;"><a name="1385247">Example</a></span>: If a customer orders a 200 ft. cable and all you have available is a 1000 ft. cable, the system will allocate the 200 ft. from the 1000 ft. cable. Then, later in the day, you receive a reel that is exactly 200 ft. and another customer wants a 1000 ft. cable.</div>
+      <div class="Indent"><a name="1385248">If the 200 ft. order has not yet printed a pick ticket, you can un-allocate </a>the 200 ft. order from the 1000 ft. cut and re-allocate it to the 200 ft. cut. Then you can allocate the 1000 ft. order to the 1000 ft. cut.</div>
+      <div class="Body"><a name="1385249">You can activate reel optimization by product or by warehouse. If all </a>products in your inventory are reels, you may want to activate reel optimization by warehouse. </div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1385251&quot;);"><a name="1385251">Optimizing Reels for a Warehouse</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1385251", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1385251", false);</script>
+      <div class="NumberedIntro"><a name="1385252">To optimize reel quantities for a warehouse:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1385253">Select </a><span style="font-weight: bold;">Warehouse Maintenance </span>from the system menu.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1385254">Enter the </a><span style="font-style: italic;">Warehouse</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1385255">Select</a><span style="font-weight: bold;"> Action Bar &gt; Addl Opts &gt; Reel Optimization</span> to open the Reel Optimization Maintenance screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1385256">For </a><span style="font-style: italic;">Sales Order Reel Optimization</span>, enter <span style="font-weight: bold;">Y</span> to use optimal allocation of a lot/reel quantity on sales orders. The system finds the lot number that contains the majority of the available quantity to fill the lot cut requirement.<br />If more than one sales order is entered for a lot reel quantity, the system evaluates the lot quantities available to find the best match of each reel quantity for each sales order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1385259&quot;);"><a name="1385259">Optimizing Reels for a Product</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1385259", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1385259", false);</script>
+      <div class="NumberedIntro"><a name="1385260">To optimize reel quantities for a product:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1385261">Select </a><span style="font-weight: bold;">Inventory &gt; Product Maintenance &gt; Product Maintenance</span> to open the Product Maintenance screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1385262">Enter the </a><span style="font-style: italic;">Product.</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1385266">Press </a><span style="font-weight: bold;">F5-Add Info</span> to open the <a href="javascript:WWHClickedPopup('ics', 'pm_add_info.htm#1407567', '');">Additional Information Screen</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1385270">For </a><span style="font-style: italic;">Lot Number Flag</span>, enter <span style="font-weight: bold;">Y</span> to open the <a href="javascript:WWHClickedPopup('ics', 'pm_lot_info.htm#1338005', '');">Lot Information Screen</a>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1385271">For </a><span style="font-style: italic;">Reel Optimization</span>, enter <span style="font-weight: bold;">Y</span> to use the optimal lot quantity available to allocate lots on sales orders. This flag is only checked if the <span style="font-style: italic;">Sales Order </span><span style="font-style: italic;">Reel Optimization </span>flag in Warehouse Maintenance is set to N.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1385272">For </a><span style="font-style: italic;">Reel Optimization Minimum</span>, enter the minimum quantity that should remain for each lot number for this product before the system allocates another lot number. For example, if the <span style="font-style: italic;">Reel Optimization Minimum</span> is 20, the system skips any lot that has less than twenty feet when allocating to an order for more than 20 feet.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1508115">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Lot Information Screen", "ics", "pm_lot_info.htm#1338005");
+          WWHAddRelatedTopic("Receiving Lot Number Products", "ics", "Stock_Receipts.8.25.htm#1379627");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Product_Records.2.1.htm#1385241">Product Maintenance</a>:Allocating Optimal Reel Quantities </div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

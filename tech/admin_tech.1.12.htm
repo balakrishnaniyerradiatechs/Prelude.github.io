@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Lists</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1125294">Lists</a></div>
+      <div class="Body"><a name="1125295">A list is an item containing selected item ID’s which can be retrieved and used to manipulate or report </a>data. These lists are stored using a SAVE-LIST command. The lists can then be retrieved and used by means of other list commands. These commands include COPY-LIST, DELETE-LIST, EDIT-LIST, GET-LIST, and SORT-LIST.</div>
+      <div class="Body"><a name="1125296">Lists may be saved in a system table called SAVEDLISTS. Unidata displays ‘&gt;’ rather than ‘:’ when the </a>active list has data. If a list name is not specified for any list command the default list “0” is used. </div>
+      <div class="Body"><a name="1125297">A saved list that exceeds approximately 34,810 characters is saved in multiple parts. Each part has an </a>extension to the specified list name beginning with 000 and incrementing sequentially.  Although it is not necessary to specify each part of the saved-list record ID when the GET.LIST command is executed, you must specify each part if the copy command or the AE command is used.</div>
+      <div class="Subhead"><a name="1125298">SAVE.LIST</a></div>
+      <div class="Body"><a name="1125299">The SAVE.LIST command in Unidata serves the same function as in Pick. The format is:</a></div>
+      <pre class="Report"><a name="1125300">SAVE.LIST{{listname}</a></pre>
+      <div class="Body"><a name="1125301">Listname is the name of the list to be retrieved. If no listname is specified, the default of “0” is used.  </a></div>
+      <div class="Body"><a name="1125302">Example:</a></div>
+      <pre class="Report"><a name="1125303">SELECT CUSTOMER</a></pre>
+      <pre class="Report"><a name="1125304">40000 records selected to list 0</a></pre>
+      <pre class="Report"><a name="1125305">&gt;SAVE.LIST CUST</a></pre>
+      <pre class="Report"><a name="1125306">40000 keys saved to 7 records.</a></pre>
+      <pre class="Report"><a name="1125307">LIST SAVEDLISTS = “[CUST]”</a></pre>
+      <pre class="Report"><a name="1125308">SAVEDLISTS</a></pre>
+      <pre class="Report"><a name="1125309">CUST000</a></pre>
+      <pre class="Report"><a name="1125310">CUST001</a></pre>
+      <pre class="Report"><a name="1125311">CUST002</a></pre>
+      <pre class="Report"><a name="1125312">CUST003</a></pre>
+      <pre class="Report"><a name="1125313">CUST004</a></pre>
+      <pre class="Report"><a name="1125314">CUST005</a></pre>
+      <pre class="Report"><a name="1125315">CUST006</a></pre>
+      <pre class="Report"><a name="1125316">7 records listed</a></pre>
+      <div class="Body"><a name="1125317">Note:  The “sample” command may be used in Unidata in the same way as “sampling” in Pick except </a>that the “sample” command automatically selects a sampling quantity of 10.</div>
+      <div class="Subhead"><a name="1125318">GET.LIST</a></div>
+      <div class="Body"><a name="1125319">The GET.LIST command retrieves a select list previously saved with the SAVE.LIST command. Any </a>process that can be executed after a select statement can also be executed after a GET.LIST statement. Records stored in a list can be retrieved repeatedly using a GET.LIST command. Once you retrieve a list with the GET.LIST command it is assigned the default list number “0” unless you assign a different list number. The format for this command is:</div>
+      <pre class="Report"><a name="1125320">GET.LIST{{acct.name}list.name}</a></pre>
+      <div class="Body"><a name="1125321">If the list does not reside in the SAVEDLISTS file in the current account, the acct.name parameter can </a>specify its location using a full pathname. If GET.LIST is used with no parameters, default list 0 is retrieved. </div>
+      <div class="Subhead"><a name="1125322">COPY.LIST</a></div>
+      <div class="Body"><a name="1125323">The COPY.LIST command copies a saved list to another list on the same account. It can be used to </a>store an entire list as a record in a Unidata file or send a saved list to the printer or terminal. The format is:</div>
+      <pre class="Report"><a name="1125324">COPY.LIST old.listname new.listname {-options}</a></pre>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1125325">Old.listname is the name of the existing list and new.listname is the name of the list to be copied to. </a>If new.listname is not specified, Unidata prompts for a TO list. There are 2 options for the TO list: </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1125326">Destination list </a>– the name of the list to which you are copying.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1125327">[DICT] (filename) {record.id} </a>– the filename and record to which you are copying. If this option is used, the source list becomes a record in the specified file. If no record.id is specified, Unidata uses the listname as the record.id.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1125328">Options:</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1125329">‘D’</a>	Deletes after copying. This cannot be used with the ‘p’ or ‘t’ option.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1125330">‘N’</a>	Suppresses auto paging. The display doesn’t stop until list end is reached. Only valid with the ‘t’ option.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1125331">‘O’</a>	Overwrites if the list already exists.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1125332">‘P’</a>	Sends output to the printer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1125333">‘T’</a>	Sends output to the terminal.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1125334">DELETE.LIST</a></div>
+      <div class="Body"><a name="1125335">The DELETE.LIST command deletes a list from the savedlists table. If the list does not exist or you do </a>not have permission to delete the list, an error message will display. The list will be deleted without prompting for confirmation that you want the list deleted.</div>
+      <div class="Body"><a name="1125336">Examples:</a></div>
+      <pre class="Report"><a name="1125337">DELETE.LIST CUST</a></pre>
+      <pre class="Report"><a name="1125338">‘CUST’ deleted.</a></pre>
+      <div class="Body"><a name="1125339">If the list does not exist:</a></div>
+      <pre class="Report"><a name="1125340">DELETE.LIST CUST</a></pre>
+      <pre class="Report"><a name="1125341">DELETE.LIST CUST failed.</a></pre>
+      <div class="Subhead"><a name="1125342">EDIT.LIST</a></div>
+      <div class="Body"><a name="1125343">The EDIT LIST command will allow you to edit a saved list in the savedlists file. The list listname is </a>opened in the editor. The data in the list can then be edited. If the size of the list is large, and multiple list records are present, the EDIT.LIST command will display the first part of the savedlist record, then prompt you to display subsequent parts.</div>
+      <div class="Body"><a name="1125344">Example:</a></div>
+      <pre class="Report"><a name="1125345">EDIT.LIST CUST</a></pre>
+      <pre class="Report"><a name="1125346">CUST</a></pre>
+      <pre class="Report"><a name="1125347">Top of ‘CUST000’ in ‘SAVEDLISTS’, 2012 lines, 34,806 characters</a></pre>
+      <pre class="Report"><a name="1125348">00100001</a></pre>
+      <pre class="Report"><a name="1125349">00100002</a></pre>
+      <pre class="Report"><a name="1125350">00100003</a></pre>
+      <pre class="Report"><a name="1125351">Quit “CUST000” in file “SAVEDLISTS” unchanged.</a></pre>
+      <pre class="Report"><a name="1125352">Do you want to continue with CUST001? (y/n/q)</a></pre>
+      <pre class="Report"><a name="1125353">?</a></pre>
+      <div class="Subhead"><a name="1125354">SORT.LIST</a></div>
+      <div class="Body"><a name="1125355">The SORT.LIST command sorts an existing saved list in record.ID order. The format is:</a></div>
+      <pre class="Report"><a name="1125356">SORT.LIST listname {-options}</a></pre>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1125357">Listname is the name of an existing list. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1125358">Options:</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1125359">‘R’</a>	Sorts the elements in descending order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1125360">‘N’</a>	Sorts the elements according to their numeric values.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1125361">If the ‘R’ option is not used, Unidata performs an ascending sort. If ‘N’ is specified, NULL values are </a>treated as zeros, otherwise they are treated as the smallest values in the list.</div>
+      <div class="Body"><a name="1125362">Example:</a></div>
+      <pre class="Report"><a name="1125363">SORT.LIST CUST (R</a></pre>
+      <div class="Subhead"><a name="1125364">CLEARSELECT</a></div>
+      <div class="Body"><a name="1125365">The CLEARSELECT command clears an active select list. This command is used at the active select </a>list prompt, “&gt;”.  The format is:</div>
+      <pre class="Report"><a name="1125366">CLEARSELECT </a></pre>
+      <div class="Body"><a name="1125367">Example:</a></div>
+      <pre class="Report"><a name="1125368">SELECT CUSTOMER</a></pre>
+      <pre class="Report"><a name="1125369">234  records selected to list 0.</a></pre>
+      <pre class="Report"><a name="1125370">CLEARSELECT</a></pre>
+      <div class="Body"><a name="1125371">The CLEARSELECT can be used from a GET-LIST command as well.</a></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.1.htm#1125294">UniData</a>:Lists</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Batch Pick Ticket Processing</title>
+    <link rel="StyleSheet" href="css/opt_whs.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head3"><a name="1109964">Batch Pick Ticket Processing</a></div>
+      <div class="Path"><a name="1109965">Path: Warehousing &gt; Sales Order Processing &gt; Batch Processing (Wrist Picking) &gt; Batch Pick Ticket </a>Processing (/BPTP)</div>
+      <div class="Body"><a name="1109966">After sales orders are entered, Batch Pick Ticket Processing selects pick tickets to print.</a></div>
+      <div class="Body"><a name="1109967">Enter the selection criteria, then either use the </a><span class="Bold">F5- Auto Select</span> key to let the system automatically select pick tickets depending on the criteria entered, or the <span class="Bold">F6 - Manual </span><span class="Bold">Select</span> key to manually enter sales orders for pick ticket release. Press <span class="Bold">F7 - Report to</span> print the Sales Order Staging report to preview the sales orders before printing. Press <span class="Bold">F8 </span><span class="Bold">- Release</span> to release the selected pick tickets to print.<img class="Default" src="images/Wrist%20Picking_GUI.23.1.2.jpg" width="442" height="210" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109971">Order Staging Batch: </a></span>Enter NEW to assign the next available batch number. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109972">Warehouse: </a></span>Enter the shipping warehouse number for the sales orders entered.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109973">Customer: </a></span>Enter the customer number to limit the batch pick ticket processing selection to a customer, or leave blank to include all customers.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109974">Required Date: </a></span>Enter the required date for the sales orders to be released.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109975">Maximum # of Orders: </a></span>Enter the maximum number of orders to be picked.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109976">Minimum # Order Lines: </a></span>Enter the minimum number of sales order lines to include.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109977">Maximum # Order Lines: </a></span>Enter the maximum number of sales order lines to include.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109978">Report Form Queue: </a></span>Enter the printer form queue where the Sales Order Staging Report should be printed when the <span class="Bold">F7-Report</span> option is selected.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109979">Printer Form Queue: </a></span>Enter the printer form queue where the pick tickets should be printed when the <span class="Bold">F8-Release</span> option is selected to generate the sales order releases.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109980">Number of Orders: </a></span>The total number of sales orders selected from the auto or manual selection is displayed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109981">Number Lines: </a></span>The total number of lines selected appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;vertical-align: baseline;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;"><span class="Bold"><a name="1109982">Header Built:</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1109983">X </a></span>- Indicates the header was built by pressing F5-Auto select or F6 - Manual Select.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1109984">O</a></span> - The header has not been built for the batch pick ticket process.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;vertical-align: baseline;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;"><span class="Bold"><a name="1109985">Auto Selection:</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1109986">X</a></span> - Indicates the F5-Auto Select option was used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1109987">O</a></span> - Indicates the F5-Auto Select option has not been used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;vertical-align: baseline;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;"><span class="Bold"><a name="1109988">Manual Selection:</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1109989">X </a></span>- Indicates the F6-Manual Select option was used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1109990">O </a></span>- Indicates the<span class="Bold"> </span>F6-Manual Select option has not been used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109991">F2-Save: </a></span>Saves all information on the Batch Pick Ticket Processing screen for the order staging batch number. This can be used to return to the batch later.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109992">F4-Del: </a></span>Deletes the order staging batch number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109993">F5-Auto Select: </a></span>Selects the sales orders available for pick ticket release depending on the criteria entered.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109994">F6-Manual Select: </a></span>Manually enter sales order numbers for pick ticket release.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109995">F7-Report: </a></span>Prints, emails, or faxes the Sales Order Staging Report. (Optional).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109996">F8-Release: </a></span>Releases pick tickets for the selected sales orders.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="opt_whs.1.8.htm#1109964">Entering, Picking, and Shipping Sales Orders</a>:<a class="WebWorks_Breadcrumb_Link" href="opt_whs.1.23.htm#1109964">Wrist Picking - Batch Processing</a>:Batch Pick Ticket Processing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

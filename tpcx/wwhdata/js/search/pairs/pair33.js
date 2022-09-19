@@ -1,0 +1,26 @@
+function FileData_Pairs(x)
+{
+x.t("unpost","dead");
+x.t("topic","three");
+x.t("mining","report");
+x.t("dead","stock");
+x.t("search","data");
+x.t("tpcx","website");
+x.t("three","subtopics");
+x.t("reporting",":dead");
+x.t("report","unpost");
+x.t("solutions","866-878-0574");
+x.t("972-403-3150","preludeeducation@activant.com");
+x.t("website","reporting");
+x.t("subtopics","dead");
+x.t("data","mining");
+x.t(":dead","stock");
+x.t("activant","solutions");
+x.t("stock","topic");
+x.t("stock","dead");
+x.t("stock","search");
+x.t("stock","activant");
+x.t("stock","using");
+x.t("866-878-0574","972-403-3150");
+x.t("using","tpcx");
+}

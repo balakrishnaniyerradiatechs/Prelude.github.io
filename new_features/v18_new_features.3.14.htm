@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Systems</title>
+    <link rel="StyleSheet" href="css/v18_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1002798">Systems</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002799&quot;);"><a name="1002799">System-Wide Changes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002799", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002799", false);</script>
+      <div class="Subhead"><a name="1002800">New Counter Range Rollover w/Alphas Flag </a></div>
+      <div class="Body"><a name="1002801">This new Rollover w/Alphas flag determines if the counter range is rolled over to the </a>beginning of the counter with an alpha prefix. This flag is only used if you are using prefixes to define your document number scheme. For example, a prefix of 10 for warehouse 10 can be used for a counter to update as 10xxxxxx. When the cycle counter rolls over to 999999, it will roll back over to the beginning number and assign document numbers that were used previously. If this flag is set to Y, the system will insert alphas and begin a new counter to retain unique numbers. For Ex., document 10999999 would roll over to 10A00001 versus 10000001 (which was used when originally setup).</div>
+      <div class="Subhead"><a name="1002802">New Insert New Notes At Top Flag Setting</a></div>
+      <div class="Body"><a name="1002803">A new R flag setting was added to display the notes in reverse order (newest to oldest </a>notes entered). </div>
+      <div class="Body"><span class="Bold"><a name="1002804">Note:</a></span> The R flag setting ONLY displays the notes in reverse order. The notes are still stored in the file in the original order. The Y flag setting actually stores the notes in the file in order from latest notes entered to earliest notes entered. The R flag setting was created to allow the client to set the flag to R to see all previous notes entered in reverse order. The Y flag setting ONLY displayed notes in reverse order after the flag setting was changed for new note entries. All previous notes entered are still displayed in original order entered (oldest to </div>
+      <div class="Subhead"><a name="1002805">Update To Keyword Options Functionality </a></div>
+      <div class="Body"><a name="1002806">This modification was made to allow the phone number fields in Customer and Vendor </a>Maintenance to be updated as keywords (if attributes setup in Keyword Controls) using 7 digits (excluding area code). Previously, keywords used the full 10 digits in the phone number field. If the area code were changed for the customer, the keyword would require the 10-digit phone number using the new area code. In V18+, you can search using the full 10 digit number with or without dashes and 7 digit number (excluding area code). When attribute 8 (Phone Number) and attribute 146 (Purchasing Phone Number) are customer keywords, these phone numbers are updated as part of the keyword list using the full phone number with dashes, full phone number without dashes, and 7 digits (area code excluded) when the customer is updated in Customer Maintenance.</div>
+      <div class="Subhead"><a name="1002807">Updated Maintenance Menu </a></div>
+      <div class="Body"><a name="1002808">The Maintenance and Miscellaneous Controls Menus in System Parameters were </a>reorganized for efficiency.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002809&quot;);"><a name="1002809">Option Parameters</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002809", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002809", false);</script>
+      <div class="Subhead"><a name="1002810">New Auto Shp Whse Correction Flag </a></div>
+      <div class="Body"><a name="1002811">The Inventory Parameters screen was updated with a new </a><span class="Bold">Auto Shp Whse Correction</span> flag. This flag determines if an over shipment received in Transfer Receipts Entry should prompt the system to generate an inventory adjustment. This process will update the shipping warehouse on the stock transfer to reflect the inventory count. If this flag is set to Y and an over shipment is received, the system will automatically create an inventory adjustment at the from warehouse behind the scenes. This adjustment will be performed for the shipping warehouse on the stock transfer, therefore reducing the inventory count. The bin associated with the inventory adjustment will be updated as TRNERR. If this flag is set to N, the system will not automatically generate an inventory adjustment, therefore requiring the user to manually create an inventory adjustment for any over shipments to correct the inventory count for the shipping warehouse. with this new process, a new Default Reason Code has also been added to this screen. </div>
+      <div class="Subhead"><a name="1002812">New Default Reason Code Field </a></div>
+      <div class="Body"><a name="1002813">with the new Auto Shp Whse Correction process, a new </a><span class="Italics">Default Reason Code</span> field has also been added. If using the Auto Shp Whse Correction feature, setting the <span class="Italics">Default </span><span class="Italics">Reason Code</span> field will be mandatory. The reason code entered, that is to be used for the automatically generated inventory adjustments, will be displayed on the Reason/Description line of the Inventory Adjustment. The valid Default Reason Codes are in the Inventory Adjustment Reason Code maintenance screen. <span class="Italics">(Inventory</span>&gt;<span class="Italics"> Maintenance</span>&gt;<span class="Italics"> Misc </span><span class="Italics">Code Files</span>&gt;<span class="Italics"> Inventory Adjustment Reason Codes.)</span> </div>
+      <div class="Subhead"><a name="1002814">New Auto W/O Deletion From SOE Flag </a></div>
+      <div class="Body"><a name="1002815">A new Auto W/O Deletion From SOE flag was added to the BMW/WO Parameters screen. </a>This option was added to allow linked work orders to be automatically deleted if the sales order line linked to the work order is deleted <span class="Italics">(using the backslash command for line </span><span class="Italics">deletion or the F4-Del function key)</span>. If this flag is set to Y, the system will automatically delete the linked work order if the sales order line that is linked is deleted. The deletion will then be processed using the normal work order deletion process. However, for this deletion to be processed, the work order must have a status of ENTERED <span class="Italics">(unreleased)</span>. If the user attempts to delete the sales order line linked to a work order that was previously been released for production and currently has a status of RELEASED, the deletion will be denied. The Deletion Denied, Linked Work Order was Released For Production! warning message will be displayed. Therefore, the linked work order must be deleted in Work Order Entry. An invalid work order deletion will prevent the deletion of the sales order line. </div>
+      <div class="Body"><span class="Bold"><a name="1002816">Note:</a></span> To ensure that this feature works correctly, set Auto Release to N, preventing the work order from automatically being released for production when created from in Sales Order Entry. If this flag is set to N, the automatic deletion of the linked work order when deleting the linked sales order line will not take place. </div>
+      <div class="Subhead"><a name="1002817">New Allow WO Over To Linked Xfer Flag </a></div>
+      <div class="Body"><a name="1002818">The BMW/Work Orders Parameters screen was updated with a new Allow WO Over To </a>Linked Xfer flag. This is an Y/N flag that will determine if overages received in Work Order Completion will affect the linked stock transfers. If this flag is set to Y and the line item is linked, the system will automatically allocate the overage to the linked stock transfer. Therefore, the line item quantity of the stock transfer will be increased by the overage quantity. If this flag is set to N and the line item is linked, the system will not allocate the overage to the stock transfer as a result, not changing the quantity of the line item. The overage quantity is updated to regular stock. </div>
+      <div class="Body"><span class="Bold"><a name="1002819">Note:</a></span> This flag only pertains to linked items.</div>
+      <div class="Subhead"><a name="1002820">New #/Months Classification Field </a></div>
+      <div class="Body"><a name="1002821">A new </a><span class="Italics">#/Months Classification</span> field was added to the Purchasing Parameters screen. This new feature allows a number of months between 1 and 12 to be entered to determine how many months a product needs to be in the system before product classification will start. If this field is left blank, the system will default to 12 months. For example, if 6 is entered, the system will only require products to have six months of usage to be included in product classification. Previously the system required 12 months of usage. with this new feature, the ICS End of Month Calendar Close, and the Rebuild Product Classifications processes <span class="Italics">(Referenced in the Inventory New Features list)</span> are also updated to check the number entered in the new <span class="Italics">#/Months Classification</span> field. </div>
+      <div class="Subhead"><a name="1002822">New Administrative Order Hold Type </a></div>
+      <div class="Body"><a name="1002823">A new Administrative Order Hold type was added to the list of available types. The E type </a>will place orders on administrative order hold if the sales order has exceeded the blanket purchase order amount for the customer p/o on the order. to reference that this order was placed on hold for this reason, an E will be displayed at the header level in Administrative Order Release Inquiry. with this new AOH type, a <span class="Italics">P/O Customer #</span> was added to Customer Maintenance<span class="Italics"> </span>and an update in functionality in <span class="Italics">Customer P/O #</span> in Sales Order Entry.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002824&quot;);"><a name="1002824">Default &amp; File Update Parameters</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002824", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002824", false);</script>
+      <div class="Subhead"><a name="1002825">New Transaction Audit Inquiry Flags</a></div>
+      <div class="Body"><a name="1002826">A new </a><span class="Italics">A/R Transaction Audit Inquiry</span> and <span class="Italics">A/P Transaction Audit Inquiry</span> flags were added to the Default Parameters Maintenance screen. These new flags define the sort sequence for the A/R and A/P Inquiries. Previously, the Transaction Audit Inquiry sort default was used for the A/R Transaction Audit Inquiry. Since the addition of the R flag and A/P Transaction Audit inquiry to version 18, new sort defaults were added for each transaction audit inquiry (inventory, A/P and A/R) has its own default sort option. </div>
+      <div class="Body"><span class="Bold"><a name="1002827">Note:</a></span> The R flag only pertains to the Transaction Audit Inquiry (inventory).</div>
+      <div class="Subhead"><a name="1002828">New TAI Sort Sequence Option </a></div>
+      <div class="Body"><a name="1002829">The Transaction Audit Inquiry flag was updated with a new F option. Selecting the F option </a>automatically sorts from newest to oldest. Once the F option is selected in the transaction audit inquiries, a Transaction Audit Inquiry Filter Options screen displays to allow you to enter the selection criteria for the results of the inquiry. Based on the criteria entered in the filter screen, determines which inquiry results are displayed. </div>
+      <div class="Subhead"><a name="1002830">Updated Keep Bookings? Flag Functionality </a></div>
+      <div class="Body"><a name="1002831">The functionality of the Keep Bookings? flag was slightly modified for Versions 18 &amp; </a>higher. If the Keep Bookings? flag is set to Y, the BOOKINGS file will be updated with the Order Source from the sales order at the time of invoicing. In addition, the BOOKINGS.LINE file will also be updated with the Shipping Warehouse from the sales order at the time of invoicing. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002832&quot;);"><a name="1002832">Company Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002832", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002832", false);</script>
+      <div class="Subhead"><a name="1002833">New Canada Info F10 Option</a></div>
+      <div class="Body"><a name="1002834">Company Maintenance was updated with three new tax id fields pertaining to Canada’s </a>tax information. The Tax Id field attributes are 111.1, 111.2 and 111.3 in the COMPANY file. These fields are information only.</div>
+      <div class="Subhead"><a name="1002835">New Function Keys </a></div>
+      <div class="Body"><a name="1002836">Some of inquiries were updated with new function keys to allow you to view blocks of </a>records. The number of records is in Records To Block with the GUI Options of Company Maintenance.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002837">sF5-Prev Group</a></span> (Shift-F5) shows the previous block of records. The number entered in the Records To Block field in Company Maintenance determines the number of records that display on the inquiry at a time. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002838">sF6-Next Group </a></span>(Shift-F6) shows the next block of records. The number entered in the Records To Block field in Company Maintenance determines the number of records that display on the inquiry screen at a time.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002839">New Mailroom Server Installed Flag </a></div>
+      <div class="Body"><a name="1002840">The Mailroom Server software is a third party interface that is sold separately from Satori </a>Software. This software validates and correct addresses from the Customer file, Customer ShipTo file, Prospect file and Prospect Contact file. A manual ship-to address entered on a sales order is also checked for a valid address. Set the <span class="Italics">Mailroom Server </span><span class="Italics">Installed</span> flag to Y if using this software. This new flag works with the new Verify Addresses rebuild option in the Ordering Control menu. Contact a sales representative for further details.</div>
+      <div class="Subhead"><a name="1002841">Renamed Document Sort-T/R Field</a></div>
+      <div class="Body"><a name="1002842">The </a><span class="Italics">Bin Loc Sort-T/R</span> field name was changed to <span class="Italics">Document Sort-T/R</span>. In addition the F3 search now displays all available options. Previously the F3 lookup only displayed Y/N options even though P is valid.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002843&quot;);"><a name="1002843">Warehouse Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002843", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002843", false);</script>
+      <div class="Subhead"><a name="1002844">New Email Address Field </a></div>
+      <div class="Body"><span class="Bold"><a name="1002845">Note:</a></span> To use this new feature, your USER-FORMS programmust be changed.</div>
+      <div class="Body"><a name="1002846">The Warehouse Maintenance screen was updated with a new </a><span class="Italics">Email Address</span> field. This new option allows an e-mail address to be used for each warehouse. This field is informational only. </div>
+      <div class="Subhead"><a name="1002847">New Display Open Qte/RGA Message </a></div>
+      <div class="Body"><a name="1002848">A new Display Open Qte/RGA Message was added to Warehouse Maintenance. This is </a>an Y/N flag that will determine if the Open Quote/RGA message will be displayed in Sales Order &amp; Quotation Order Entry if an existing quote or RGA exists for this customer/product combination. Setting this flag to Y will display the message if Open Quotes or RGAs exist. This flag setting will override the current setting for the <span class="Italics">Display Open Qte/RGA Message</span> field in Order Processing Parameters. If the quote has not yet expired or been assigned a Quote Lost Disposition Code, the message will be displayed. The flag setting of the <span class="Italics">Include Converted Quotes</span> field in Order Processing Parameters will determine if in fact converted quotes will be included in the warning message. </div>
+      <div class="Subhead"><a name="1002849">New Exclude Non-Net Bins 2nd Level Field </a></div>
+      <div class="Body"><a name="1002850">A new </a><span class="Italics">Exclude Non-Net Bins 2nd Level</span> field was added to the Bin Location Information screen in Warehouse Maintenance. This is an Y/N flag that will determine if the non-nettable bins will be included on the list of bins for the product in 2nd Level Cycle Count Entry. If this flag is set to Y, the non-nettable bins will be excluded in the list of bins for the product in the 2nd Level Cycle Count Entry. If this flag is set to N, the items will not be excluded therefore, these bins will appear on the list for the 2nd Level Cycle Count Entry. Previously, you could not exclude non-nettable bins. </div>
+      <div class="Body"><a name="1002851">Note: This flag pertains to non-nettable secondary bins; the primary bin is typically </a>nettable.</div>
+      <div class="Subhead"><a name="1002852">New F5-Purchasing Seq Function Key </a></div>
+      <div class="Body"><a name="1002853">A new F5-Purchasing Seq key was added to the Warehouse Maintenance option. This </a>new Purchasing Warehouse Sequence Maintenance option enables users to establish a purchasing list to use when creating temporary purchase orders, as well as for the Recommended Purchase Order Action Report. Establishing a list in this sequence screen allows you to customize the order in which warehouses and their surplus inventory appear. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002854">If a warehouse sequence is not entered in this new option, the original warehouse </a>sequence list will be used. with this new feature, additional updates have also been made throughout the software to incorporate this option. The Nightly Processing routine, as well as the Recommended Purchase Order Action Report were updated to now check the Warehouse Sequence Maintenance for the purchasing list when generating temporary purchase orders. In addition, the Purchase Order Conversion and the Purchase Order Entry processes have also been updated to now check the Warehouse Sequence Maintenance for the purchasing list when determining surplus inventory. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1031670">If the line item is linked on the temporary purchase order, the system will then use the </a>list of warehouses in the PROD.STAT record in determining the line item's surplus inventory. The new Purchasing List feature is used when Nightly Processing generates a temporary purchase order for a backorder (non-linked item).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002856">New Remit Phone Field </a></div>
+      <div class="Body"><span class="Bold"><a name="1002857">Note:</a></span> To use this new feature, your USER-FORMS programmust be changed.</div>
+      <div class="Body"><a name="1002858">The Warehouse Maintenance screen was updated to now include a new </a><span class="Italics">Remit Phone</span> field to enter a phone number for this warehouse. This is for information only. The <span class="Italics">Remit </span><span class="Italics">Phone</span> field is attribute 107 in WHSE.ADDR. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002859&quot;);"><a name="1002859">Emailing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002859", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002859", false);</script>
+      <div class="Subhead"><a name="1002860">Updated Email Document Maintenance Functionality</a></div>
+      <div class="Body"><a name="1002861">A program change was made to the Email Document Maintenance options. If there is a </a>format maintenance record with no text setups for a document type (OACK, OSHP), the program cannot determine what text record to use. The program will fail and no text email will be sent. At least one text record entry should be setup for each document type used. In format maintenance, the first text code setup in the list, for a document type, will be used as the default. If the program cannot find the default item defined in format maintenance, it will attempt to find a combination of a language code/text code record item (even though it may not be defined in Email Document Format Maintenance). If an exact match for the text code and language code combination is not found, the default will be used. For clients with a majority of English speaking customers, we recommend using the blank language code for the default. For shipping notifications, the program will first look for a format record for the shipping warehouse in the release since the selling and shipping warehouse may be different. For acknowledgement notifications, the selling warehouse will be used. If no warehouse setup exists, the system will try to find the default company format record. If neither the warehouse or company format record is found, the program will fail and no text email notification will be sent.</div>
+      <div class="Subhead"><a name="1002862">New Mail Type Field </a></div>
+      <div class="Body"><a name="1002863">This new flag determines how the email attachment is converted and sent to the email </a>address. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002864">U</a></span> - Unix Mail (outlook or Unix mail providers)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002865">M </a></span>– MPACK (Yahoo, Hotmail, etc. web based email providers) MPACK must be installed on the client’s system. If this software is not installed, the system will default to Unix mail.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1002867">Note:</a></span> To use the new features after upgrading to V18, programs will need to be modified to include the necessary logic for this process. The E-Mail Integration module must be licensed through Activant. All modifications that pertain to the E-Mail Integration module must be set up before it can be used. Please contact your Sales Representative for pricing or more information about this module.</div>
+      <div class="Subhead"><a name="1002868">New %CPO% Field </a></div>
+      <div class="Body"><a name="1002869">A new %CPO% tag was created with the new Stand-Alone Email Shipping Notice option. </a>The new Stand-Alone e-mail option enables users the ability of sending shipping confirmations in the form of text e-mail by simply entering the release number for the customer. If the %CPO% tag is listed on the Email Text Documents screen, the system will recognize that the customer p/o number should be included in the body of the text e-mail for order acknowledgements and shipping confirmations. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002870&quot;);"><a name="1002870">Purges, Utilities, &amp; Rebuilds</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002870", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002870", false);</script>
+      <div class="Subhead"><a name="1002871">Relocation Of The General Ledger History Purge Process </a></div>
+      <div class="Body"><a name="1002872">The General Ledger History Purge process was relocated from the main purge utility </a>menu to the General Ledger menu in the purge utility options.</div>
+      <div class="Subhead"><a name="1002873">New Project General Ledger Purge Process </a></div>
+      <div class="Body"><a name="1002874">The Project General Ledger Purge process deletes records in the PROJ.ID.HIST file </a>(updated from project id tracking) based on the criteria entered. </div>
+      <div class="Body"><span class="Bold"><a name="1002875">Note:</a></span> The Purge Log Report is not updated by this process.</div>
+      <div class="Subhead"><a name="1002876">New Purge Log Inquiry</a></div>
+      <div class="Body"><a name="1002877">A new Purge Log Inquiry was created to display the date; time and user id for the last time </a>data was purged.</div>
+      <div class="Subhead"><a name="1002878">New Usage Transaction Audit Purge </a></div>
+      <div class="Body"><a name="1002879">This new Usage Transaction Audit Purge process deletes records in the Usage Audit Xref </a>file based on the criteria entered. The Purge Log Report has also been updated with the Purge Type 49 (Usage Transaction Audit) to allow users to limit the report to only display purge type 49 results.</div>
+      <div class="Subhead"><a name="1002880">New Fill Rate Purge </a></div>
+      <div class="Body"><a name="1002881">This new purge process deletes records in the FILL-RATE file based on the criteria </a>entered. The Purge Log Report was updated with a new Purge Type 50 (Fill Rate) to allow users to limit the report to only display purge type 50 results.</div>
+      <div class="Subhead"><a name="1002882">New Pkg Content Purge Process </a></div>
+      <div class="Body"><a name="1002883">The Pkg Content Purge Process purges all records from the PKG.CONTENT file up to the </a>date entered. The Purge Log Report has also been updated to incorporate a Purge Type 46 (Package Content) to limit the report to only include purged package content records information. </div>
+      <div class="Subhead"><a name="1002884">New Saved List Mass Purge Process </a></div>
+      <div class="Body"><a name="1002885">The Saved List Mass Purge was created to delete records in the SAVEDLISTS file based </a>on the number of days old or a list of report-generated items. The GRIM screen for this Purge Process contains a <span class="Italics">Days Old</span> field which allows you to select D for deletion based on the number of Days Old. Or select R to purge the SAVEDLISTS file based on a list of report-generated items. If the D option is selected, the <span class="Italics">Older Than How Many Days </span>field can be used to determine the number of desired days that are to be checked when purging the SAVEDLISTS file. <span class="Italics">Example:</span> If 90 is entered, the system will then purge all report process names from the SAVEDLISTS file that are greater than 90 days old. </div>
+      <div class="Body"><span class="Bold"><a name="1002886">Note:</a></span> The Purge Log Report is not updated for this purge process.</div>
+      <div class="Subhead"><a name="1002887">New Time Card Purge Process </a></div>
+      <div class="Body"><a name="1002888">A new Emp Activity (Time Card) Purge was created to delete all the Time Card records in </a>the EMP.ACTIVITY file up to the date entered. In addition, any files relating to the Time Card records will also be purged during this process. The Purge Log Report has also been updated to incorporate a Purge Type 45 (Employee Activity) to limit the report to only include purged time card records information. </div>
+      <div class="Body"><a name="1002889">newest notes entered).</a></div>
+      <div class="Subhead"><a name="1002890">New ‘GRIM Screen for Quotation Inquiry and History Xref </a></div>
+      <div class="Body"><a name="1002891">The Quotation Inquiry and History Xref was updated with the standard GRIM interface.</a></div>
+      <div class="Subhead"><a name="1002892">New Clear Product Keyword Xref Utility </a></div>
+      <div class="Body"><a name="1002893">The new utility clears the additional keywords in the PRODUCT &amp; NS. PRODUCT files in </a>preparation for performing the Price Tape update. When this option is selected, the following message is displayed: This Rebuild will remove all additional Keywords form the Product and NS Product cross reference file in preparation of new additional keywords being added by the Price Update Tape process. Once Continue is selected, the GRIM selection screen for the Clear Product Keyword Xref is displayed. In the Product Line prompt, enter the product line(s). In the Product Prc Group prompt, enter the product price group(s).</div>
+      <div class="Subhead"><a name="1002894">New Verify Addresses Rebuild Process </a></div>
+      <div class="Body"><a name="1002895">This new rebuild process was designed to work with the new Mailroom Server software </a>option. This software is a third party software package. Please contact a Prelude Sales Representative for further information. This process performs the validation for verifying addresses in the system using the Mailroom Server interface. At the end of this process, there is a standard report available that can be printed, emailed, faxed or viewed on the screen. Included on this report are the customer #, customer name, Mailroom Server software error code and error message. The Y/N flag determining if this software is used is in the General Parameters menu in System Maintenance.</div>
+      <div class="Subhead"><a name="1002896">New Product Vendor Copy Menu Option </a></div>
+      <div class="Body"><a name="1002897">This process copies PRD-VEND records from one warehouse to another. If </a><span class="Italics">Primary </span><span class="Italics">Vendor</span> is blank, the PRD-VEND records for the TO warehouse are deleted. All PRD-VEND records from the FROM warehouse are copied to the TO warehouse. If <span class="Italics">Primary </span><span class="Italics">Vendor</span> is NOT blank, the PRD-VEND records for the TO warehouses are NOT deleted. The primary vendor is updated for the TO warehouse. The original primary vendor for the TO warehouse is updated with Primary Vendor flag set to N. Only PRD-VEND records with a primary vendor are copied. PRD.VEND.STAT &amp; PRE.PRICE are also updated for the TO warehouse. The Product Maintenance Audit Reports are updated if Keep Product Maint Audit? is Y in File Update Parameters.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002898&quot;);"><a name="1002898">User ID Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002898", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002898", false);</script>
+      <div class="Subhead"><a name="1002899">New IAE Line Limit Field </a></div>
+      <div class="Body"><a name="1002900">This new field determines the largest extended value that this user can adjust into/out of </a>inventory on a single line for INV type inventory adjustments. If the extended value on a single line of an INV type inventory adjustment exceeds this limit, the user will not be allowed to proceed. The user must change the quantity of the line item so the quantity multiplied by the item cost is less than the limit. The value of the entire inventory adjustment can exceed this limit. This feature only pertains to a line. If using the DOE convert process to create the inventory adjustment, the system will update the inventory adjustment with an invalid product number referencing the inventory adjustment line limit exceeded if the quantity X item cost is greater than the limit.</div>
+      <div class="Subhead"><a name="1002901">New Edit Notes Code</a></div>
+      <div class="Body"><a name="1002902">A new APCA </a>– A/P Cost Adjustment Line Notes code was added as a valid notes authorization code. </div>
+      <div class="Subhead"><a name="1002903">New Company Number Flag Setting </a></div>
+      <div class="Body"><a name="1002904">A new S Selective flag setting was created for the </a><span class="Italics">Company Number</span> field. This new option allows you to select the companies accessible to a user id. If this option is used, the user is only allowed access to the company numbers in the company selection screen for this user. If a company number is entered that has not been setup for this user, the system will prompt with an Access Denied, unauthorized to access company #### message.</div>
+      <div class="Subhead"><a name="1002905">Updated Noted Edit Authorizations Functionality</a></div>
+      <div class="Body"><a name="1002906">The Notes Edit Authorizations option was modified for Version 18. Previously, when a </a>user can edit line item notes, the notes could only be edited from the *Action&gt; Notes menu. With the current changes, the user can also edit notes using the F7-Notes function. The following codes were updated to allow F6-Edit Notes when using the F7-Notes function key. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002907">S</a></span> - Sales Order Line Item Notes </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002908">P</a></span> - Purchase Order Line Item Notes </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002909">Q</a></span> - Quote Line Item Notes</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002910">Update To Display Costs Flag </a></div>
+      <div class="Body"><a name="1002911">The functionality of the </a><span class="Italics">Display Costs</span> field was modified for Version 18. This flag is now checked to determine if the cost is displayed in Inventory Adjustment Entry for each line item on the main screen as well as the Line Item Detail screen. If this flag is set to N, the cost fields are not displayed. However, the cost will continue to be displayed on the Inventory Adjustment Display screen when accessed when selecting F5-Review in the Inventory Adjustment History and Transaction Audit Inquiry screens.</div>
+      <div class="Subhead"><a name="1002912">New Machine Name Field </a></div>
+      <div class="Body"><a name="1002913">A new </a><span class="Italics">Machine Name</span> field was added to User Id Maintenance with the new Prelude Notify Messaging notification method. Enter the name of the machine for this user id on the network.</div>
+      <div class="Subhead"><a name="1002914">New Notification Method Field </a></div>
+      <div class="Body"><a name="1002915">The User Id Maintenance screen was updated with a new </a><span class="Italics">Notification Method </span>field. This flag setting determines the method that is used for the work queues. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002916">A</a></span> – This option requires the Prelude Notify software to be loaded on a local pc to display the popup message. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002917">M</a></span> This option displays the work queues the same as previous versions of the software.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002918">E</a></span> Select E to email notification when the work queue is updated. For example, if a sales order is placed on administrative order hold, the administrative order hold manager id (if setup for Email Notification) receives an email notification for the sales order placed on hold. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1002919">The functionality of the work queues in Manager Maintenance was updated to work with </a>the new <span class="Italics">Notification Method</span> option in User Id Maintenance. This modification includes updates to the AOH, AIH, and AQH manager IDs with the new method as well. </div>
+      <div class="Subhead"><a name="1002920">New use Grids/Entry Flag </a></div>
+      <div class="Body"><a name="1002921">This is a new Y/N flag that determines if the primary entry screens will be displayed in a </a>character or GRID style graphical user interface. Select N to for character style which displays 4-5 lines per screen. Select Y for GRID style, which displays 15-16 lines per screen.</div>
+      <div class="Subhead"><a name="1002922">New 1024X786 Resolution Flag </a></div>
+      <div class="Body"><a name="1002923">This is a Y/N flag that that is set to indicate if you are using 1024 x 768 terminal resolution </a>to display GUI screens. Set this flag to Y if your terminal is set to 1024 x 768. This modification was made to allow the user with a 1024 X 786 resolution the option to load some of the screens to the right of the previous one instead of centering the screen. For example, if selecting /VM -&gt; F5 screen, the system is normally setup with GUI defaults to center all the screens. When the F5 screen is selected, the vendor number and description are no longer displayed for viewing because the Additional Information screen is centered on top of the main /VM screen. If the user has 1024 X 786 setup for screen resolution in the Control Panel, the ability to have to screen display to the right of the initial screen loaded was added.</div>
+      <div class="Subhead"><a name="1002924">New Documentation Option </a></div>
+      <div class="Body"><a name="1002925">This flag is set accordingly for viewing the online help available in the screens using the </a>F10-Action &gt; Help option in Shop, Forecasting, and Purchasing. Set this flag to I for view of the current screen selected. If the flag is set to I, only related topics for this area are available in the help screen that is displayed. Set this flag to F for full view of the help index for the current module. For example, if selecting the help option for Vendor Maintenance, the system would display the help screen for the maintenance screen as well as the index of help topics for the module to the left of the current screen. The user can search help topics that pertain to the module using the index. Set this flag to N for no view of the help screens in the system. A message is prompted that the user is not authorized if the help option is selected in the screens throughout the system.</div>
+      <div class="Subhead"><a name="1002926">New Define PC Applications Option </a></div>
+      <div class="Body"><a name="1002927">This option defines the pc applications for use in viewing the inquiries, reports, etc. in the </a>system. </div>
+      <div class="Body"><span class="Italics"><a name="1002928">Spreadsheet App:</a></span> This field refers to the spreadsheet application that is loaded when the L option is selected as the output for the inquiries, reports, etc. throughout the system. Enter E for Microsoft Excel or O for Open Office. for the system to load the report data into an excel spreadsheet, Microsoft Excel must be installed locally on the pc. for the system to load the report data into an Open Office document, Open Office must be installed locally on the pc.</div>
+      <div class="Body"><a name="1002929">If the </a><span class="Italics">Spreadsheet App</span> field is set to O for Open Office, the system will ALWAYS prompt with the Text Import screen after launching the Open Office software. The system requires the user to simply continue with the default options for converting the report data into Open Office or make changes on the Text Import screen before selecting to continue with converting the report data. If the <span class="Italics">Spreadsheet App</span> field is set to E for Microsoft Excel, the user is typically not prompted for an import screen as the Microsoft Excel software loads the report data into a spreadsheet as the default.</div>
+      <div class="Body"><a name="1002930">If the </a><span class="Italics">Spreadsheet App</span> field is set to an application that is NOT installed on the pc or the application path is not recognized, the system prompts for the application path. Once the correct application path is entered and recognized as a valid path for launching the application, the system does not prompt for the application path the next time the output L option is selected.</div>
+      <div class="Subhead"><a name="1002931">New Credit Limit Amount Field </a></div>
+      <div class="Body"><a name="1002932">A new </a><span class="Italics">Credit Limit Amount</span> field was added to the User ID Maintenance screen. The amount entered here determines the credit limit amount this user can enter without the credit memo, RGA or Sales Order (negative amount) going on Admin Invoice Hold. If this field is left blank, the user can enter credit limit values of any amount. If this field contains a value, Credit Memos, RGAs and Sales Orders that exceed this amount will be place on Administrative Invoice Hold. If this field is set to zero, all Credit Memos, RGAs and Sales Orders (negative quantity) by this user will automatically be placed on hold. In addition to this new field, the Sales Order Log Inquiry <span class="Italics">(Referenced in the Order Processing New </span><span class="Italics">Features list) </span>as well as the Administrative Invoice Release Inquiry <span class="Italics">(Referenced in the </span><span class="Italics">Accounts Receivables New Features list) </span>was updated to incorporate the new Credit Limit Amount feature.</div>
+      <div class="Subhead"><a name="1002933">New Warehousing Menu </a></div>
+      <div class="Body"><a name="1002934">A new Warehousing menu option was added to the User Options section of the User ID </a>Maintenance screen. This new menu option contains any flags and fields that pertain to Warehousing for this User ID. Previously the Pick Only Bin Available and the RF Primary Bin Update flags were located in the F5-Add Info screen in User ID maintenance, these have since been relocated to this new Warehousing menu option. In addition, a new Default to Bin flag has also been added to the menu.</div>
+      <div class="Subhead"><a name="1002935">New Default To Bin Field </a></div>
+      <div class="Body"><span class="Italics"><a name="1002936">Default To Bin</a></span> was added to the new Warehousing Menu in User ID Maintenance. </div>
+      <div class="Subhead"><a name="1002937">New Quote Limit Field </a></div>
+      <div class="Body"><span class="Italics"><a name="1002938">Quote Limit</a></span> was added to the User ID Maintenance screen. The amount entered here determines the largest quote amount this user can enter without the quote going on Admin Quote Hold. If this field is left blank, the user can enter quotes of any amount. If this field contains a value, Quotes that exceed this amount will be placed on Administrative Quote Hold. If this field is set to zero, all Quotes by this user will automatically be placed on hold. In addition to this new field, the Quotation Log Inquiry <span class="Italics">(Referenced in Order Processing </span><span class="Italics">New Features list) </span>as well as the Administrative Quote Release Inquiry <span class="Italics">(Referenced in the </span><span class="Italics">Order Processing New Features list)</span> was updated to incorporate the new Quote Limit.</div>
+      <div class="Subhead"><a name="1002939">New Vend Inv Recost Option </a></div>
+      <div class="Body"><a name="1002940">The Additional Information screen in User Id Maintenance was updated with a new Vend </a>Inv Recost % option. This new field was added to establish the largest vendor invoice percentage that this user can recost a product without the vendor invoice being placed on hold. If a percentage is set, a message will be displayed notifying the user that the receiver will be placed on hold due to the user recost percentage limit, if the amount to be adjusted exceeds the recost percentage allowed. If this field is left blank, the user will have the authority to approve vendor invoices regardless of the amount. </div>
+      <div class="Subhead"><a name="1002941">New Vend Inv Write-Off Limit Option </a></div>
+      <div class="Body"><a name="1002942">The User ID Maintenance screen was updated with a new Vend Inv Write-Off Limit option. </a>This is used to set a maximum amount that this user is allowed to write off for a single invoice in VIRE without being placed on hold. If this field is left blank or contains a $0.00 dollar amount, the user can enter write-offs for any amount. If this field contains a positive value, any vendor invoices greater than the allowed value entered will be placed on hold. Negative write-off amounts entered in VIRE are excluded from hold.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002943&quot;);"><a name="1002943">SAVEDLISTS Cleanup</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002943", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002943", false);</script>
+      <div class="Body"><a name="1002944">These reports delete the process name from the SAVEDLISTS file after the report runs: </a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002945">Accounts Payable - Vendor Invoice Distribution Register, Aged Payment Schedule, </a>Vendor Invoices on Hold Report, Vendor Invoice Distribution Register, Month End Aging and Month End Multi Currency A/P Aging</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002946">Belting - Belt Assignment/Release, Mly Sales Variance by Customer Reports</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002947">Accounts Receivable - Aged Accounts Receivable, Aged Accounts Receivable </a>– Master Customer, Aged Accounts Receivable – Month End, Replacement Equipment Aged A/R, Aged A/R User-Def Dates, Daily Cash Receipts Report, Monthly Cash Receipts Report, Customers with On Account Balances, Incomplete Cash Receipts, Credit Status Change, Credit Manager Release, Cash Deposit Report, </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002948">Customer/Vendor Activity Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002949">Inventory - Inventory Shortage Report, Putaway Documents Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002950">Work Orders - Open Work Order Detail Report, Work Order Status Report, Past Due </a>Work Orders Report, Bill of Material Costed Report, Bill of Material Cost Extended Report, Work Order Budget Comparison Report</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002951">G/L - Detail General Ledger Report, Trial Balance, Unposted G/L Error Report, Chart </a>of Accounts Balance Report, Equipment Profit &amp; Loss, Manual Depreciation, Units of Usage Depreciation, Depreciation By Method</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002952">Job Costing - Job Cost Analysis Worksheets, Job Cost Analysis Listing, Cust Job </a>Monthly Sales Tax Detail Report, Cust Job Monthly Sales Tax Summary Report </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1003042">New Password Processes</a></div>
+      <table class="FieldDesc" style="text-align: left; width: 488.00016pt;" cellspacing="0" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top; width: 128.00016pt;">
+            <div class="TableHead"><span class="Bold"><a name="1002955">Process</a></span></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top; width: 360pt;">
+            <div class="TableHead"><span class="Bold"><a name="1002957">Prevents users from...</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002959">TE.SUSPEND</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002961">Selecting 'Suspend' in Transfer Entry. </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002963">DELETED.ORDER.PURGE</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002965">Purging data from the Deleted Orders Report</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002967">CRE.CASH.DISC</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002969">Modifying Disc App in Cash Receipts Entry.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002971">PROD.COST.OV.SOE</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002973">Change cost in Enter Product Cost in SOE unless the cost is $0.00 or null. </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002975">CRED.COMM</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002977">Pressing F7-Credit Comment in Accounts Receivable Inquiry. </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002979">WO.DEL.REL</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002981">Deleting released work orders in Work Order Entry.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002983">CM.CPG.NUM</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002985">Editing Customer Price Group in Customer Maintenance &gt; F7-Order. </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002987">CUST.ORDER.TYPES</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002989">Accessing Order Types in the F7-Order screen in Customer Maintenance. </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002991">CREDIT.CARD</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002993">Viewing credit card data if a credit card exists and the pay type is 03 in Customer </a>Maintenance, Customer Inquiry, and Sales Order History Inquiry.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002995">PVM.UNIT.COST.VALID</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002997">Entering a cost in Product Vendor Maintenance.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1002999">NEW.PRODUCT</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003001">Creating new products in Product Maintenance.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003003">PWM.DELETE</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003005">Deleting product warehouse records.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003007">AUTO.SPLIT.QTY</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003009">Entering a quantity in Req Qty in the Auto Split Entry screen in SOE.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003011">CUST.ORDER.TYPES</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003013">Accessing Order Types in Customer Maintenance &gt; F7-Order.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003015">CM.ADD.DISC</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003017">Modifying Add Discount% in Customer Maintenance &gt; F7-Order &gt; F5-Add Info.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003019">PRD.VEND.UPDATE</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003021">Prevents users from deleting a Product Vendor Maintenance record.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003023">SSCE.DELETE</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003025">Deleting a container in Sales Order Serial Shipping Container Entry and RF Sales </a>Order Serial Shipping Container Entry.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003027">TSSCE.DELETE</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003029">Deleting a container in Transfer Serial Shipping Container Entry and RF Transfer </a>Serial Shipping Container Entry</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003031">VSSCE.DELETE</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003033">Deleting a container in Vendor Claim Serial Shipping Container Entry.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003035">PWM.6</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003037">Pressing F6-Purch Param in Product Warehouse Maintenance.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003039">SELL.PKG.ROUND</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1003041">Selling a quantity that is not a multiple of the selling package quantity.</a></div>
+          </td>
+        </tr>
+      </table>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v18_new_features.3.1.htm#1002798">V18 New Features</a>:Systems</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

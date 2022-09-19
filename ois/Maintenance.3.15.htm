@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Restricting Products for a State or Zip Code</title>
+    <link rel="StyleSheet" href="css/Maintenance.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1420263">Restricting Products for a State or Zip Code</a></div>
+      <div class="Body"><a name="1422410">If you want to restrict customers in a state from buying a product or product </a>line (e.g, for competition laws), you can create a restricted product matrix to identify the products or product lines that are not allowed. Within each state, you can limit the restrictions by zip code or warehouse. The system checks the state where the product ships from to determine if the product is allowed. If you change the ship-to on a sales order or quote, the system will check to see if the new ship-to address has a permit for the restricted product.</div>
+      <div class="Body"><a name="1477291">Refer to the </a><a href="javascript:WWHClickedPopup('ois', 'cust_permits.htm#1407347', '');">Customer Permit Information Screen</a> for information on restricting products for a customer.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1472322">Order Processing Parameters</a></div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1474442">Geographic Prod Restrict </a></span>(<span style="font-weight: bold;">Order Processing Parameters &gt; F5 &gt; F5</span>) must be set to <span style="font-weight: bold;">Y</span> so that Sales Order Entry will check for a restricted product matrix.</div>
+            <div class="TableText"><a name="1477278">The </a><span style="font-style: italic;">MSDS/Ship-To Specific </span>flag determines if restricted product information is stored for a customer at the ship-to level or the bill to level.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="NumberedIntro"><a name="1422411">To create a restricted product matrix:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422386">Select </a><span style="font-weight: bold;">Order Processing &gt; Maintenance &gt; Order Entry Control Files </span><span style="font-weight: bold;">&gt; Restricted Product Maintenance </span>to open the <a href="javascript:WWHClickedPopup('ois', 'rstr_prd_mat_mnt.htm#1333560', '');">Restricted Product Matrix Maintenance screen</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422435">For </a><span style="font-style: italic;">Matrix Type</span>, choose one of the following types of restrictions:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1422443">1</a></span> - Product line.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1422447">2</a></span> - Product.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1474671">For </a><span style="font-style: italic;">State Abbr</span>., enter the abbreviation for the state where the product or product line cannot be sold. The <a href="javascript:WWHClickedPopup('ois', 'rstr_prd_pl.htm#1348144', '');">Restricted Product Matrix Input screen</a> appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422492">Depending on the </a><span style="font-style: italic;">Matrix Type</span> you chose, enter either the <span style="font-style: italic;">Product</span> <span style="font-style: italic;">Number</span> or <span style="font-style: italic;">Product Line</span> to restrict customers in this state from purchasing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422488">For </a><span style="font-style: italic;">Req Permit Flag</span>, indicate if the sale of this product/product line is allowed as long as the customer has a permit on file:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1422586">Y</a></span> - Sales are allowed to customers with a permit.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1452896">N</a></span> - Sales are not allowed to any customers in this state.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indent"><a name="1452899">A customer’s permit information is in the </a><a href="javascript:WWHClickedPopup('ois', 'cust_permits.htm#1407347', '');">Customer Permit Information Screen</a>. A customer’s ship-to address permit information is located in the <a href="javascript:WWHClickedPopup('ois', 'shipto_permits.htm#1406310', '');">Permit Information Screen</a>.</div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422603">If you want to limit the restriction to just one or more zip codes; under </a><span style="font-style: italic;">Zip </span><span style="font-style: italic;">Code Ranges</span>, enter the <span style="font-style: italic;">From Zip</span> and the <span style="font-style: italic;">To Zip</span> codes where customers are not allowed to buy the products.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1452985">If you want to exclude zip codes from the zip code range that you </a>entered, press <span style="font-weight: bold;">F5-Zip Exclusion</span> to open the <a href="javascript:WWHClickedPopup('ois', 'zip_excl_scr.htm#1348220', '');">Zip Exclusions screen</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">8	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422661">For </a><span style="font-style: italic;">Zip Exclusions</span>, enter zip codes not included in the restricted product matrix. Customers whose shipping address is in these zip codes, can purchase the products listed on the Restricted Product Matrix Input.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">9	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422711">Press </a><span style="font-weight: bold;">F2-Save</span> to save the zip exclusion information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">10	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422667">To exclude one or more warehouses from the zip code range, press </a><span style="font-weight: bold;">F6-</span><span style="font-weight: bold;">Whse Exclusion</span> to open the <a href="javascript:WWHClickedPopup('ois', 'whse_excl_scr.htm#1362443', '');">Warehouse Exclusions screen</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">11	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422665">Enter any warehouses that you want to exclude from the restricted </a>product matrix in <span style="font-style: italic;">Whse Exclusions</span>. These Warehouses can to receive the products listed on the <a href="javascript:WWHClickedPopup('ois', 'rstr_prd_pl.htm#1348144', '');">Restricted Product Matrix Input screen</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">12	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422717">Press </a><span style="font-weight: bold;">F2-Save</span> twice to save the warehouse exclusion information and the restricted product information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Customer Permit Information Screen", "ois", "cust_permits.htm#1407347");
+          WWHAddRelatedTopic("Permit Information Screen", "ois", "shipto_permits.htm#1406310");
+          WWHAddRelatedTopic("Restricted Product Matrix Maintenance screen", "ois", "rstr_prd_mat_mnt.htm#1333560");
+          WWHAddRelatedTopic("Restricted Product Matrix Input screen", "ois", "rstr_prd_pl.htm#1348144");
+          WWHAddRelatedTopic("Warehouse Exclusions screen", "ois", "whse_excl_scr.htm#1362443");
+          WWHAddRelatedTopic("Zip Exclusions screen", "ois", "zip_excl_scr.htm#1348220");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Maintenance.3.1.htm#1420263">Optional Order Entry Features</a>:Restricting Products for a State or Zip Code</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

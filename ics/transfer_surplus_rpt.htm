@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Transferring Surplus Inventory</title>
+    <link rel="StyleSheet" href="css/Transfering_Stock.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1391686">Transferring Surplus Inventory</a></div>
+      <div class="Body"><a name="1391700">If it is your responsibility to keep the correct inventory levels in multiple </a>warehouses, you can use the Transfer Surplus Report &amp; Update to calculate and transfer surplus inventory between warehouses. You can either generate the transfer directly from the report or use the calculated information to create a manual transfer.</div>
+      <div class="Body"><a name="1314484">If you use the EOQ purchase method to purchase stock, the surplus quantity </a>is the EOQ plus the line point. If you use the min/max purchase method, surplus is the quantity over the maximum recommended quantity to keep in stock. Refer to the <a href="javascript:WWHClickedPopup('ics', 'product_purch_param_mnt.htm#1324533', '');">Product Purchasing Parameters Maintenance Screen</a> for information on surplus quantities and purchase methods.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><a name="1391763">In order for a product to appear on the report, it must have a </a><span style="font-style: italic;">Replenishment Method</span> of <span style="font-weight: bold;">T</span> (transfer) set in Product Warehouse Maintenance for the receiving warehouse.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="NumberedIntro" style="margin-top: 14.0pt;"><a name="1315151">To calculate surplus inventory and create a recommended transfer:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1315156">Select </a><span style="font-weight: bold;">Inventory &gt; Stock Movements &gt; Transfer Surplus Report &amp; </span><span style="font-weight: bold;">Update</span> to open the Transfer Surplus Report screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1315165">For </a><span style="font-style: italic;">Hub/Spoke Execution</span>, indicate whether you are reviewing replenishment from a central warehouse or individual warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1447372">Y</a></span> - Review all spoke locations that are configured as <span style="font-weight: bold;">T</span> replenishment from a central warehouse (Hub).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1447404">N</a></span> - Define the from/to warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1447365">For </a><span style="font-style: italic;">Surplus Warehouse</span>, enter the warehouse where the surplus inventory is located.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1315175">For </a><span style="font-style: italic;">Replenish Warehouse</span>, enter the warehouse to receive the surplus inventory.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1315176">For </a><span style="font-style: italic;">Product Line</span>, enter a product line to include in the surplus report. Leave this field blank to include all product lines.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1315177">For </a><span style="font-style: italic;">Sort by (P)roduct Line or (V)endo</span>r, indicate how to sort the report. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1315179">P</a></span> - By product line.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1315183">V</a></span> - By primary vendor.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1315178">Press </a><span style="font-weight: bold;">ENTER </span>to view the surplus products from the <span style="font-style: italic;">Surplus Warehouse</span> that have a Replenishment Method of <span style="font-weight: bold;">T</span> (refer to the <a href="javascript:WWHClickedPopup('ics', 'product_purch_param_mnt.htm#1324533', '');">Product Purchasing Parameters Maintenance Screen</a>) in the <span style="font-style: italic;">Replenish Warehouse.</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">8	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1315230">After the report generates, the following prompt displays:</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Question" style="text-align: left; width: 204.18768pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E8E8E8; border-bottom-color: #ffffff; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #ffffff; border-left-style: solid; border-left-width: 1px; border-right-color: #ffffff; border-right-style: solid; border-right-width: 1px; border-top-color: #ffffff; border-top-style: solid; border-top-width: 1px; padding-bottom: 5pt; padding-left: 3pt; padding-right: 3pt; padding-top: 5pt; vertical-align: top; width: 204.18768pt;">
+            <div class="DialogBox"><a name="1315244">Do You Wish to Convert This Report To A </a>Stock Transfer?</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Indent" style="margin-bottom: 2.0pt;"><a name="1315229">Choose from the following:</a></div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1315251">Y</a></span> - A stock transfer generates using the data from the report. The transfer number displays. Use Transfer Entry to edit and print the stock transfer. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1315297">N</a></span> - A stock transfer is not generated. You can use the information on the report to manually create the transfer in Transfer Entry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1315317&quot;);"><a name="1315317">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1315317", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1315317", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 404.24976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1315320">Column Heading</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1315322">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315324">Whse</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315326">The warehouse with the surplus inventory.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315328">Product Number</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315390">The product with a surplus quantity in inventory. If using the EOQ </a>purchase method, the surplus quantity is the order quantity plus the line point. If using the min/max purchase method, surplus is the quantity over the maximum recommended quantity to keep in stock.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315333">Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315338">Line 1: The product description.</a></div>
+            <div class="TableText"><a name="1315398">Line 2: The second line of description for the product, if applicable.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315340">On-Hand</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315342">The quantity on hand in the surplus warehouse.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315344">Commtd</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315346">The quantity committed to sales orders, work orders, vendor claims, </a>and transfers in the surplus warehouse.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315348">Op/Lp</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315350">The order point or line point of the product in the surplus warehouse.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315352">Type</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315354">The type of purchase method used by the surplus warehouse:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1330053">MAX - Min/max.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1330057">EOQ - Economic order quantity. </a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1338953">AWU - Average weekly usage.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1338954">DRP - Distribution requirements planning.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1338962">DS - Days supply.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315356">Max/Rbq</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315358">The maximum or the recommended buy quantity of the item.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315360">Surplus</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315362">The surplus quantity available to ship to the replenish warehouse.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315364">Cost</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1338963">The cost of the item depending on how your </a><span style="font-style: italic;">G/L Cost</span> flag is set:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1338967">Average cost if the </a><span style="font-style: italic;">G/L Cost</span> flag is set to A, L, or F.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1338968">Replacement cost if the </a><span style="font-style: italic;">G/L Cost</span> flag is set to R.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1338969">Standard cost if the </a><span style="font-style: italic;">G/L Cost</span> flag is set to S.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315368">Ext-Surplus</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315370">The extended surplus cost (</a><span style="font-style: italic;">Surplus </span>x <span style="font-style: italic;">Cost</span>).</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315372">Cls</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1315374">The inventory class. Refer to </a><a href="javascript:WWHClickedPopup('ics', 'Product_Records2.3.73.htm#1372594', '');">Classifying Products</a>.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="TableText"><a name="1315300">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1411078&quot;);"><a name="1411078">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1411078", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1411078", false);</script>
+      <pre class="Report"><a name="1447555">Activant Prelude</a></pre>
+      <div class="Body"><a name="1448369">Transfer Surplus Report By Vendor As Of 10:10:55 NOV 13 2007</a></div>
+      <div class="Body"><a name="1448370">Page: 1   </a></div>
+      <div class="Body"><a name="1448371">&nbsp;</a></div>
+      <div class="Body"><a name="1448372">Whse Product Number             Description                 On-Hand  Commtd  </a>Op/Lp  Type Max/Rbq Surplus    Cost     Ext-Surplus Cls</div>
+      <div class="Body"><a name="1448373">==== ========================== </a>=========================== ======= ======= ======= ==== ======= ======= ========== ============ ===</div>
+      <div class="Body"><a name="1448374">&nbsp;</a></div>
+      <div class="Body"><a name="1448375">Vendor 100118</a></div>
+      <div class="Body"><a name="1448376">&nbsp;</a></div>
+      <div class="Body"><a name="1448377">10   1840794-LG-BL              Custom-Fit Oxford LG BL         129       0      19 </a>EOQ       15      95     28.000     2,660.00   0</div>
+      <div class="Body"><a name="1448378">                                                                   </a></div>
+      <div class="Body"><a name="1448379">10   1840794-LG-GR              Custom-Fit Oxford LG GR         213       0      19 </a>EOQ       15     179     28.000     5,012.00   0</div>
+      <div class="Body"><a name="1448380">                                                                   </a></div>
+      <div class="Body"><a name="1448381">10   1840794-LG-PK              Custom-Fit Oxford LG PK         199       0      21 </a>EOQ       16     162     28.000     4,536.00   0</div>
+      <div class="Body"><a name="1448382">                                                                   </a></div>
+      <div class="Body"><a name="1448383">10   1840794-LG-WH              Custom-Fit Oxford LG WH          87       0      11 </a>EOQ       12      64     28.000     1,792.00   0</div>
+      <div class="Body"><a name="1448384">                                                                   </a></div>
+      <div class="Body"><a name="1448385">10   1840794-MED-GR             Custom-Fit Oxford MED GR        280       0      </a>19 EOQ       15     246     28.000     6,888.00   0</div>
+      <div class="Body"><a name="1448386">                                                                   </a></div>
+      <div class="Body"><a name="1448387">&nbsp;</a></div>
+      <div class="Body"><a name="1448388">               Candidates To Transfer To:   Whse Class On-Hand  Commtd  Op/Lp  </a>Type Max/Rbq  Usage    Qty</div>
+      <div class="Body"><a name="1448389">                                            ---- ----- ------- ------- ------- ---- ------- ------- -------</a></div>
+      <div class="Body"><a name="1448390">                                            20    NEW       82       0      56 EOQ       47      47      21</a></div>
+      <div class="Body"><a name="1448391">&nbsp;</a></div>
+      <div class="Body"><a name="1448392">10   1840794-MED-PK             Custom-Fit Oxford MED PK         74       0      </a>16 EOQ       14      44     28.000     1,232.00   0</div>
+      <div class="Body"><a name="1448393">                                                                   </a></div>
+      <div class="Body"><a name="1448394">10   1840794-MED-PU             Custom-Fit Oxford MED PU         98       0      </a>21 EOQ       16      61     28.000     1,708.00   0</div>
+      <div class="Body"><a name="1448395">                                                                   </a></div>
+      <div class="Body"><a name="1448396">10   1840794-MED-WH             Custom-Fit Oxford MED WH        340       0      </a>23 EOQ       17     300     28.000     8,400.00   0</div>
+      <div class="Body"><a name="1448397">                                                                   </a></div>
+      <div class="Body"><a name="1448398">&nbsp;</a></div>
+      <div class="Body"><a name="1448399">               Candidates To Transfer To:   Whse Class On-Hand  Commtd  Op/Lp  </a>Type Max/Rbq  Usage    Qty</div>
+      <div class="Body"><a name="1448400">                                            ---- ----- ------- ------- ------- ---- ------- ------- -------</a></div>
+      <div class="Body"><a name="1448401">                                            20    NEW      100       0      69 EOQ       57      57      26</a></div>
+      <div class="Body"><a name="1448402">&nbsp;</a></div>
+      <div class="Body"><a name="1448403">10   1840794-SM-BL              Custom-Fit Oxford SM BL         175       0      31 </a>EOQ       23     121     28.000     3,388.00   0</div>
+      <div class="Body"><a name="1448404">                                                                   </a></div>
+      <div class="Body"><a name="1448405">10   1840794-SM-PK              Custom-Fit Oxford SM PK         104       0      21 </a>EOQ       16      67     28.000     1,876.00   0</div>
+      <div class="Body"><a name="1448406">                                                                   </a></div>
+      <div class="Body"><a name="1448407">10   1840794-SM-PU              Custom-Fit Oxford SM PU          86       0       2 </a>EOQ        6      78     28.000     2,184.00   0</div>
+      <div class="Body"><a name="1448408">                                                                   </a></div>
+      <div class="Body"><a name="1448409">&nbsp;</a></div>
+      <div class="Body"><a name="1448410">               Candidates To Transfer To:   Whse Class On-Hand  Commtd  Op/Lp  </a>Type Max/Rbq  Usage    Qty</div>
+      <div class="Body"><a name="1448411">                                            ---- ----- ------- ------- ------- ---- ------- ------- -------</a></div>
+      <div class="Body"><a name="1448412">                                            20    NEW       13       0      17 EOQ       15      14      19</a></div>
+      <div class="Body"><a name="1448413">&nbsp;</a></div>
+      <div class="Body"><a name="1448414">10   1840794-SM-WH              Custom-Fit Oxford SM WH          90       0      </a>28 EOQ       21      41     28.000     1,148.00   0</div>
+      <div class="Body"><a name="1448415">                                                                   </a></div>
+      <div class="Body"><a name="1448416">10   1840794-XL-BL              Custom-Fit Oxford XL BL         117       0       8 EOQ       10      99     28.000     2,772.00   0</a></div>
+      <div class="Body"><a name="1448417">                                                                   </a></div>
+      <div class="Body"><a name="1448418">&nbsp;</a></div>
+      <div class="Body"><a name="1448419">               Candidates To Transfer To:   Whse Class On-Hand  Commtd  Op/Lp  Type Max/Rbq  Usage    Qty</a></div>
+      <div class="Body"><a name="1448420">                                            ---- ----- ------- ------- ------- ---- ------- ------- -------</a></div>
+      <div class="Body"><a name="1448421">                                            20    NEW       36       0      24 EOQ       20      20       8</a></div>
+      <div class="Body"><a name="1448422">&nbsp;</a></div>
+      <div class="Body"><a name="1448423">10   1840794-XL-PU              Custom-Fit Oxford XL PU         240       0      15 EOQ       14     211     28.000     </a>5,908.00   0</div>
+      <div class="Body"><a name="1448424">                                                                   </a></div>
+      <div class="Body"><a name="1448425">&nbsp;</a></div>
+      <div class="Body"><a name="1448426">               Candidates To Transfer To:   Whse Class On-Hand  Commtd  Op/Lp  Type Max/Rbq  Usage    Qty</a></div>
+      <div class="Body"><a name="1448427">                                            ---- ----- ------- ------- ------- ---- ------- ------- -------</a></div>
+      <div class="Body"><a name="1448428">                                            20    NEW       67       0      48 EOQ       40      40      21</a></div>
+      <div class="Body"><a name="1448429">&nbsp;</a></div>
+      <div class="Body"><a name="1451226">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Entering Stock Transfers", "ics", "Transfering_Stock.9.4.htm#1310410");
+          WWHAddRelatedTopic("Product Purchasing Parameters Maintenance Screen", "ics", "product_purch_param_mnt.htm#1324533");
+          WWHAddRelatedTopic("Stock Transfer Reports", "ics", "Inventory_Reports.14.15.htm#1794231");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Transfering_Stock.9.1.htm#1391686">Stock Transfers</a>:Transferring Surplus Inventory</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

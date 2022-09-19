@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Recording Product Usage</title>
+    <link rel="StyleSheet" href="css/Product_Usage.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1312794">Recording Product Usage</a></div>
+      <div class="Body"><a name="1312797">Monthly usage is the primary statistic the system uses to calculate </a>purchasing parameters for a product (refer to the <a href="javascript:WWHClickedPopup('ics', 'product_purch_param_mnt.htm#1324533', '');">Product Purchasing Parameters Maintenance Screen</a>). To calculate parameters correctly, you must record a product’s usage in the correct warehouse, which may not always necessarily be the warehouse where the product is sold or shipped from.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1313488">Customer Maintenance Usage Settings</a></div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1313489">Shipping Warehouse</a></span> (<span style="font-weight: bold;">Customer Maintenance &gt; F7-Order</span>) identifies the default shipping warehouse for the customer. It also determines which warehouse is updated with usage when a product is sold to the customer. You would want to record usage at the warehouse where the customer normally buys material, even when shipped out of another warehouse (presumably because the normal shipping warehouse was out of stock).</div>
+            <div class="TableText" style="margin-top: 12.0pt;"><span style="font-style: italic;"><a name="1313491">Override D/C </a></span>(<span style="font-weight: bold;">Customer Maintenance &gt; F7-Order &gt; F5 Add Info</span>) determines if usage for this customer follows the distribution center path to record usage:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span class="bold" style="font-weight: bold;"><a name="1313492">Y</a></span> - Usage for the customer is not recorded using the distribution center controls in Product Warehouse Maintenance and in Warehouse Maintenance.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span class="bold" style="font-weight: bold;"><a name="1313493">N</a></span> - Usage for the customer is updated following the normal distribution center path.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableSubhead" style="margin-top: 12.0pt;"><a name="1355750">Inventory Parameter Usage Settings</a></div>
+            <div class="TableText" style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><a name="1355669">Usage Update During SOE (</a></span><span style="font-style: normal; font-weight: bold;">Inventory Parameters &gt; F5-Add Info</span><span style="font-style: normal;">)</span><span style="font-style: normal; font-weight: bold;"> </span><span style="font-style: normal;">determines if usage </span><span style="font-style: normal;">is captured for product when it is entered on a sales order or when the order is invoiced:</span></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1355670">Y</a></span> - Update usage in Sales Order Entry or Credit Memo Entry.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1355671">N</a></span> - Update usage when the order is invoiced.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText" style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; margin-top: 12.0pt; text-transform: none; vertical-align: baseline;"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><a name="1355673">Ship Whse Usage Update (</a></span><span style="font-style: normal; font-weight: bold;">Inventory Parameters &gt; F5-Add Info) </span><span style="font-style: normal;">indicates where usage </span><span style="font-style: normal;">is updated when a product that is non-stock in the selling warehouse is a stock product in </span><span style="font-style: normal;">the shipping warehouse.</span></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1355674">Y</a></span> - Update usage in both the selling and shipping warehouses.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1355675">N</a></span> - Update usage in the selling warehouse only.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body" style="margin-top: 14.0pt;"><a name="1329853">If the sales order’s selling warehouse is the same as the line item’s shipping </a>warehouse, then usage is recorded in that warehouse. </div>
+      <div class="Body"><a name="1329854">If the sales order’s selling warehouse is not the same as the line item’s </a>shipping warehouse, then following distribution center path determines where to record product usage:</div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="italics" style="font-style: italic;"><a name="1329855">Distribution Ctr in </a></span><span style="font-weight: bold;">Product Purchasing Parameters Maintenance &gt; F5 </span><span style="font-weight: bold;">Add Info</span>. If this field contains a warehouse number and the customer’s <span class="italics" style="font-style: italic;">Override D/C Flag</span> is set to <span class="bold" style="font-weight: bold;">N</span>, usage is recorded in the distribution center warehouse rather than the selling or shipping warehouse. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="italics" style="font-style: italic;"><a name="1329856">Distribution Center</a></span> in <span style="font-weight: bold;">Warehouse Maintenance &gt; F5-Add Info</span>, for the line item’s shipping warehouse. If this flag is set to<span class="bold" style="font-weight: bold;"> Y</span> and the customer’s <span class="italics" style="font-style: italic;">Override D/C Flag </span>is set to <span class="bold" style="font-weight: bold;">N</span>, usage is recorded in the shipping warehouse. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="italics" style="font-style: italic;"><a name="1329857">Shipping Warehouse</a></span> in the Customer/Customer Ship-To record. If this field contains a warehouse number, usage from sales orders is recorded in that warehouse rather than the selling or shipping warehouse. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1329858">The selling </a><span style="font-style: italic;">Warehouse</span> for the sales order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1329859">Once the system determines where to record usage, it checks the </a><span class="italics" style="font-style: italic;">Status </span><span class="italics" style="font-style: italic;">Code </span>of the product in that warehouse. If the product is a stock product in the recording warehouse, usage is only updated in that warehouse. If the product is a non-stock product in the recording warehouse, the usage is updated in both the recording warehouse (usually the selling warehouse) and the shipping warehouse. </div>
+      <div class="Subhead"><a name="1330503">Distribution Center Path Usage Exceptions</a></div>
+      <div class="Body"><a name="1334503">The following order types and product types do not follow the distribution </a>center path to record usage.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1330505">Transfer Usage</a></span>: If a product is transferred following its normal replenishment path, then usage is updated in the shipping warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1319200">Inventory Adjustment</a></span>: The <span style="font-style: italic;">U</span><span class="italics">pdate Product Usage</span> flag in Inventory Adjustment Reason Code Maintenance (refer to <a href="javascript:WWHClickedPopup('ics', 'Inventory_Management.6.13.htm#1313181', '');">Establishing Inventory Adjustment Reason Codes</a>) determines if product usage is updated for the item when you enter the inventory adjustment reason code in Inventory Adjustment Entry (refer to <a href="javascript:WWHClickedPopup('ics', 'Inventory_Management.6.14.htm#1313419', '');">Adjusting Inventory Quantities</a>) to reduce inventory. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1312812">Work Order Usage</a></span>: When a bill of material is issued and completed on a work order, the work order usage is updated for the components of the bill of material item.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1314196">Direct Sales Order Usage</a></span>: Usage is only recorded for a direct sales order if the <span class="italics" style="font-style: italic;">Update Usage on Drop Ship Orders</span> flag is set to <span class="bold" style="font-weight: bold;">Y</span> in Additional Option Parameters.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1314216">Repair Order Usage</a></span>: Usage is not recorded for products on a type 10 - Repair sales order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1314238">Lost Sales Usage</a></span>:  If lost sales are updated and the lost sales reason code has the <span class="italics" style="font-style: italic;">Update Product Usage </span>flag set to <span class="bold" style="font-weight: bold;">Y</span>, then usage is updated.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1314242">Credit Memo Usage</a></span>: If the credit memo credit reason code has <span class="italics" style="font-style: italic;">Update </span><span class="italics" style="font-style: italic;">Product Usage</span> set to <span class="bold" style="font-weight: bold;">Y</span>, then usage is updated.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1312815">Merged/Superseded Product Usage</a></span>: If a product is superseded with another product (refer to <a href="javascript:WWHClickedPopup('ics', 'Product_Records2.3.30.htm#1383333', '');">Supercedure Products</a>), any override usage recorded for sales orders, transfers, and work orders includes the usage for the original product.<br />If a product is replaced or merged with another product (refer to <a href="javascript:WWHClickedPopup('ics', 'Product_Records2.3.48.htm#1384095', '');">Replace a Product Universally</a>), usage for sales orders, transfers, and work orders includes the usage of the original product.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1345929">Related Product Usage</a></span>: If a product has a <span style="font-style: italic;">Related Product </span>set up in Product Maintenance &gt; F6-Xref/Notes, the <span class="italics" style="font-style: italic;">Usage Product#</span> determines whether the original product or the related product is updated with usage. When you move product usage, usage for the last 12 months is moved. If you remove this product number, the usage goes back to the original part number. Refer to <a href="javascript:WWHClickedPopup('ics', 'Product_Records2.3.15.htm#1382589', '');">Related Products</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1314333">Unusual Usage</a></span>: Usage is not recorded if a sales order, work order, or transfer has the <span class="italics" style="font-style: italic;">Unusual Usage</span> <span style="font-style: italic;">Flag</span> set to <span class="bold">Y</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1345948">Consignment Order Usage</a></span>: The <span style="font-style: italic;">Ovr Shp Whse Cons Ord?</span> flag (Order Processing Parameters &gt; F5-Add Info &gt; F5-Add Info) determines if usage for an 08 consignment sales order updates the shipping or the billing warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Maintaining Product Usage", "ics", "Product_Usage.5.3.htm#1309061");
+          WWHAddRelatedTopic("Moving Product Usage", "ics", "Product_Usage.5.8.htm#1308653");
+          WWHAddRelatedTopic("Tracking Average Weekly Usage", "ics", "Product_Usage.5.10.htm#1313912");
+          WWHAddRelatedTopic("Evaluating and Adjusting Unusual Usage", "ics", "Product_Usage.5.13.htm#1317321");
+          WWHAddRelatedTopic("Usage Audit Inquiry", "ics", "usage_audit_inq.htm#1313923");
+          WWHAddRelatedTopic("Product Usage", "ics", "Product_Usage.5.1.htm#1347463");
+          WWHAddRelatedTopic("Related Products", "ics", "Product_Records2.3.15.htm#1382589");
+          WWHAddRelatedTopic("Supercedure Products", "ics", "Product_Records2.3.30.htm#1383333");
+          WWHAddRelatedTopic("Replace a Product Universally", "ics", "Product_Records2.3.48.htm#1384095");
+          WWHAddRelatedTopic("Adjusting Inventory Quantities", "ics", "Inventory_Management.6.14.htm#1313419");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Product_Usage.5.1.htm#1312794">Product Usage</a>:Recording Product Usage</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Warehousing</title>
+    <link rel="StyleSheet" href="css/v20_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1021267">Warehousing</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021268&quot;);"><a name="1021268">Bin Maintenance/Replenishment</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021268", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021268", false);</script>
+      <div class="Subhead"><a name="1021269">Moving Bins for Picked Sales and Work Orders</a></div>
+      <div class="Body"><a name="1021270">You can now move bins for a sales order or work order release.</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021271">Warehousing &gt; Maintenance &gt; Transaction Bin Move Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021272">Warehousing &gt; Handheld RF Menu &gt; Maintenance &gt; Trans Bin Move</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021273">Warehousing &gt; Truck Mount RF Menu &gt; Maintenance &gt; Trans Bin Move</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1021274">If a sales order release does not have any picked lines or is partially picked, the message </a>“Release Has Not Been Picked” appears. If you choose a work order without picked items the message “No Items Present” appears. Once the sales order or work order release is fully picked you and perform the bin move. The new screen allows you to enter:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021275">Warehouse: The warehouse number for the bin move.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021276">Transaction Type: The transaction type to be updated: S - sales order; W - work order.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021277">Transaction Number: The sales or work order release with the bin movement.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021278">To Bin: The bin number to be updated for the line items on the release.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1021279">When Transaction Bin Move Entry is used, the new code TBM appears in the Order Log </a>Inquiry, the MNMW code appears in TAI, and Product Bin Inquiry reflects the change.</div>
+      <div class="Subhead"><a name="1021280">Accessing </a><span style="font-style: italic;">From Bins</span> in Transaction Bin Move Entry</div>
+      <div class="Body"><a name="1021281">The new </a><span style="font-style: italic;">Trans Bin Move From Bin</span> flag in Warehouse Maintenance determines if you can enter multiple <span style="font-style: italic;">From</span> bins in Transaction Bin Move Entry. Only the quantity from the sales order release is moved to the <span style="font-style: italic;">To</span> bin. If this set to N, you cannot access the <span style="font-style: italic;">From Bins</span>.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021282">Systems &gt; Maintenance &gt; Inventory Controls &gt; Warehouse Maintenance &gt; F7-RTS </a>Maint &gt; F5-Warehousing &gt; <span style="font-style: italic;">Trans Bin Move From Bin</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021283">Warehousing &gt; Maintenance Transaction Bin Move Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021284">Moving Products Between Nettable and Non-Nettable Bins</a></div>
+      <div class="Body"><a name="1021285">When you perform a bin move, if the </a><span style="font-style: italic;">From Bin</span> is nettable and <span style="font-style: italic;">To Bin</span> is non-nettable and <span style="font-style: italic;">Auto Unallocate Flag</span> in Inventory Parameters is <span style="font-weight: bold;">Y</span>, standard unallocation occurs for the product's open documents (e.g., sales order, transfer, work order) without a release. No other bin move types, such as document picking, are included with this feature. Affected bin move programs are:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021286">Warehousing &gt; Maintenance &gt; Bin Individual Move Entry.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021287">Warehousing &gt; Handheld RF Menu &gt; Processes &gt; Indiv Bin Movement.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021288">Warehousing &gt; Truck Mount RF Menu &gt; Processes &gt; Indiv Bin Movement.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021289">New Selection Criteria for Bin Replenishment Min/Max Update</a></div>
+      <div class="Body"><a name="1021290">The Bin Replenishment Min/Max Update has 2 new selection criteria to allow you to select </a>by stock status and primary bin.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021291"> Warehousing &gt; Bin Replenishments Processing &gt; Bin Replenishment Min/Max </a>Update &gt; <span style="font-style: italic;">Status Code</span> and<span style="font-style: italic;"> Primary Bin Only?</span> </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021292">Changing Default Receiving Bins</a></div>
+      <div class="Body"><a name="1021293">The new Warehouse Default Receiving Bin Maintenance</a><span style="font-weight: bold;"> </span>option allows you to edit default receiving bins without going into Warehouse Maintenance. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021294">Warehousing &gt; Maintenance &gt; Warehouse Default Receiving Bin Maintenance</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span style="font-style: italic;"><a name="1021295">Default Recv S/T Bin</a></span> for a default bin at the receiving (To) warehouse. If the field is blank, the default receiving dock bin is used. The new default transfer receiving bin is used in:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021296">Transfer Receipts Entry.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021297">RF Transfer Receipts.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021298">RF Multi Trn Receipts.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021299">Truck Mount RF Transfer Receipts.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021300">Truck Mount RF Multi Trn Receipts.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021301">Batch Transfer Receipts Entry.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1021302">How Default Bins are Determined:</a></div>
+      <div class="Body"><a name="1021303">If the purchase order is a type 12 (OTW) and the item does not require an inspection bin, </a>the overrides to <span style="font-style: italic;">Default OTW Receiving Bin</span> in Stock Receipts Entry are used. If no overrides were entered in Stock Receipt Entry bin, the Default <span style="font-style: italic;">On The Water Bin</span> is used. If the <span style="font-style: italic;">Default On The Water Bin</span> is blank, the <span style="font-style: italic;">Default Receiving Dock Bin</span> or <span style="font-style: italic;">Default </span><span style="font-style: italic;">Linkage Receipt Bin </span>is used.</div>
+      <div class="Body"><a name="1021304">If the purchase order requires inspection, the overrides to </a><span style="font-style: italic;">Default Inspection Bin</span> at the beginning of Stock Receipts Entry are used. If no overrides were entered, the <span style="font-style: italic;">Default </span><span style="font-style: italic;">Inspection Bin</span> from User Identification Maintenance is used. If that is blank, the <span style="font-style: italic;">Default </span><span style="font-style: italic;">Inspection Bin</span> from Warehouse Maintenance is used.</div>
+      <div class="Body"><a name="1021305">If the line item is not a type 12 or inspection (all other p/o lines, linked or non-linked) and </a>the primary bin is in the <span style="font-style: italic;">Default Receiving Bin Range </span>for the warehouse, the <span style="font-style: italic;">Default Bin </span><span style="font-style: italic;">Number </span>is used. If the primary bin is not in the <span style="font-style: italic;">Default Receiving Bin Range</span>, the <span style="font-style: italic;">Default </span><span style="font-style: italic;">Receiving Dock Bin</span> (non-linked) or <span style="font-style: italic;">Default Linkage Receipt Bin </span>(linked) from the overrides in Stock Receipts Entry are used. If no overrides exist, the <span style="font-style: italic;">Default Rec Dock </span><span style="font-style: italic;">Bin/Default Linkage Bin</span> from User Identification Maintenance is used. If the user ID does not have a default, the <span style="font-style: italic;">Default Receiving Dock Bin (non-linked)</span> or <span style="font-style: italic;">Default Linkage Receipt </span><span style="font-style: italic;">Bin (linked)</span> from Warehouse Maintenance is used. If the warehouse does not have a default, the product’s <span style="font-style: italic;">Primary Bin</span> is used.</div>
+      <div class="Body"><a name="1021306">For transfers, overrides to </a><span style="font-style: italic;">Default Receiving Dock Bin (non-linked)</span> or <span style="font-style: italic;">Default Linkage </span><span style="font-style: italic;">Receipt Bin (linked) </span>from Transfer Receipts Entry are used. If no overrides exist, the <span style="font-style: italic;">Default S/T Recv Dock Bin </span>from Warehouse Maintenance is used. If the warehouse does not have a default, the product’s<span style="font-style: italic;"> Primary Bin</span> is used. Transfers no longer checks stock receipts bins.</div>
+      <div class="Subhead"><a name="1021307">New Bin Replenishment Matrix</a></div>
+      <div class="Body"><a name="1021308">You can set up a bin replenishment matrix in Warehouse Maintenance. For example, a </a>pick/shelf bin can be replenished with a source pick/pick bin (pick bin type, pick storage type). These matrices supersede all standard bin replenishment logic. Only source bins that match the replenishment bin type and storage type are available for bin replenishment.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021309">Systems &gt; Maintenance &gt; Inventory Controls &gt; Warehouse Maintenance &gt; F7-RTS </a>Maint &gt; F5-Warehousing &gt; F6-Bin Repl</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021310">Warehousing &gt; Bin Replenishments Processing</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021311">Emergency Bin Replenishment Features</a></div>
+      <div class="Body"><a name="1021312">The following picking processes were changed to accommodate new emergency bin </a>replenishment features:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021313">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Order Picking, Transfer Picking, </a>and Work Order Picking</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021314">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Order Picking, Transfer </a>Picking, and Work Order Picking</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1021315">The F7-EC button was renamed to F7-Add and the Emg Bin Repl option was added to </a>allow you to create an emergency bin replenishment for the item as you pick. The emergency bin replenishment is only generated if the product does not have a pending bin replenishment. The emergency bin replenishment is created using the product's primary bin based on Replenish Evaluation Method in Warehouse Maintenance &gt; F7 &gt; F5 &gt; F6 to determine if using bin onhand or bin available. If a bin replenishment is created, the message “Bin Replenish record created” appears. The Replenish Requirements Detail Report lists bin replenishment data for the item. One of the following messages appears if bin replenishment is generated:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021316">“Must be on a product line”</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021317">“Product does not have a primary bin”</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021318">“Primary bin does not have min/max”</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021319">“Primary bin not at or below min”</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021320">“Bin Replenish record exists”</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021321&quot;);"><a name="1021321">Sales Order Picking</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021321", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021321", false);</script>
+      <div class="Subhead"><a name="1021322">Default </a><span style="font-style: italic;">To Bin</span> for Order Picking</div>
+      <div class="Body"><a name="1021323">The new </a><span style="font-style: italic;">To Bin Default Method</span> flag in Warehouse Maintenance allows you to determine if the T<span style="font-style: italic;">o Bin</span> defaults as blank for the first line item on each release. The 2nd and following lines for each release default to the previous To Bin even for multiple releases. The Destination Bin screen that appears at the end of picking shows the customer description and customer P/O number below the sales order release number.</div>
+      <div class="Body"><a name="1021324">Note: </a><span style="font-style: italic;">Prompt For Dest Bin in RF Pick</span> setting must be <span style="font-weight: bold;">Y</span> for this feature.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021325">Systems &gt; Maintenance &gt; Inventory Controls &gt; Warehouse Maintenance &gt; F7-RTS </a>Maint &gt; F5-Warehousing &gt; <span style="font-style: italic;">To Bin Default Method</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021326">Picking for a Single Zone</a></div>
+      <div class="Body"><a name="1021327">In a user has a single zone set in </a><span style="font-style: italic;">RF Order Picking Zones</span> in User ID Maintenance, that zone defaults for that user in RF/Truck Mount Order Picking. You cannot change the zone and can only pick lines in that zone. To access RF Order Picking Zones in User Identification Maintenance, you must be assigned to a warehouse.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021328">Systems &gt; Maintenance &gt; User Identification Maintenance &gt; Action Bar &gt; User </a>Options &gt; Warehousing &gt; RF Order Picking Zones</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021329">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Order Picking </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021330">Increased Picking Quantity Fields</a></div>
+      <div class="Body"><a name="1021331">The </a><span style="font-style: italic;">Qty</span> field was increased by 2 digits to show 9 digits (7 numbers, 2 commas). The following screens on the Doc Picking menu (Handheld/Truck Mount) were updated:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021332">Doc Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021333">Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021334">Release Cfm Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021335">Bin Repl Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021336">Transfer Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021337">Work Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021338">Truck Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021339">Vendor Clm Picking.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1021340">The following screens on other Warehousing menus were updated:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021341">Warehousing &gt; Wrist RF Menu &gt; Doc Picking &gt; Order Picking Ent</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021342">Warehousing &gt; Maintenance &gt; Bin Individual Move Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021343">Warehousing &gt; Inquiries &gt; Bin Movement Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021344">Warehousing &gt; Segment Processing &gt; Segment Picking Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021345">Warehousing &gt; Bin Replenishment Processing &gt; Replenishment Picking Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021346">Warehousing &gt; Work Order Processing &gt; Work Order Picking Confirmation</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021347">Warehousing &gt; Stock Transfer Processing &gt; Transfer Picking Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1021348">When these fields are selected, the commas do not appear.</a></div>
+      <div class="Subhead"><a name="1021349">Assigning Pickers if No Items Were Picked</a></div>
+      <div class="Body"><a name="1021350">In RF/Truck Mount Order Picking, when you enter a sales order release and press F2-</a>Save before picking, your picking number is no longer assigned to the release.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021351">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Order Picking </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021352">Using RF Worksheets </a></div>
+      <div class="Body"><a name="1021353">The </a><span style="font-style: italic;">Rf Worksheet Qty Screen</span> flag in Warehouse Maintenance determines if you are prompted for the Worksheet Entry screen in the various RF and Truck Mount screens (e.g., picking, receipts, putaway). You can enter the number of cases, quantity per case, and broken cases. This field is only accessible if <span style="font-style: italic;">RF Quantity</span> is set to <span style="font-weight: bold;">W</span> in Warehousing Option Parameters.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021354">Systems &gt; Maintenance &gt; Inventory Controls &gt; Warehouse Maintenance &gt; F7-RTS </a>Maint &gt; F5-Warehousing &gt;<span style="font-style: italic;"> Rf Worksheet Qty Screen</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021355">Systems &gt; Maintenance &gt; Option Parameters &gt; Warehousing Parameters &gt; RF </a>Quantities</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021356&quot;);"><a name="1021356">Alternate Part Number Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021356", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021356", false);</script>
+      <div class="Subhead"><a name="1021357">Defaulting a Blank Alternate in Alternate PN Mnt</a></div>
+      <div class="Body"><a name="1021358">Alternate PN Mnt on the Handheld RF and Truck Mount RF menus now defaults to a blank </a>alternate number so you do not override the first alternate number that appears. You can use the up arrow to view/edit the existing alternate numbers for the product number. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021359">Warehousing &gt; Handheld RF Menu &gt; Maintenance &gt; Alternate PN Mnt</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021360">Warehousing &gt;Truck Mount RF Menu &gt; Maintenance &gt; Alternate PN Mnt</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021361&quot;);"><a name="1021361">Routes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021361", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021361", false);</script>
+      <div class="Subhead"><a name="1021362">Using Dynamic Routing</a></div>
+      <div class="Body"><a name="1021363">New Routing options in Warehouse Maintenance interface with 3rd-part dynamic routing </a>software to determine latitude and longitude. Custom modifications are required to include the necessary logic for this process. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021364">Systems &gt; Maintenance &gt; Inventory Controls &gt; Warehouse Maintenance &gt; Action Bar </a>&gt; Addl Opts &gt; Route Info &gt;<span style="font-style: italic;"> Dynamic Routing Longitude </span>and<span style="font-style: italic;"> Dynamic Routing Latitude</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0.0pt; text-align: justify; text-transform: none; vertical-align: baseline;"><a name="1021365">&nbsp;</a></div>
+      <div class="Subhead"><a name="1021366">Printing Bills of Lading for Will Call Orders in Truck Loading Entry</a></div>
+      <div class="Body"><a name="1021367">Truck Loading Entry prints Bills of Lading for the route being closed if the ship via is will </a>call. <span style="font-style: italic;">Print BOL in Rte Processing </span>must be set to <span style="font-weight: bold;">Y</span> in Warehouse Maintenance for the bill of lading to print.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021368">Warehousing &gt; Route Delivery Menu &gt; Truck Loading Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021369">Systems &gt; Maintenance &gt; Inventory Controls &gt; Warehouse Maintenance &gt; F7-RTS </a>Maint &gt; F5-Warehousing &gt; Action Bar &gt; Segments &gt; <span style="font-style: italic;">Print BOl in Rte Processing</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021370&quot;);"><a name="1021370">Work Orders</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021370", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021370", false);</script>
+      <div class="Subhead"><a name="1021371">Using Destination Bins for Work Orders</a></div>
+      <div class="Body"><a name="1021372">The new </a><span style="font-style: italic;">W/O Destination Bin Prompt </span>flag<span style="font-style: italic;"> </span>in Warehouse Maintenance determines if you are asked for a destination bin at the end of Work Order Picking. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021373">Systems &gt; Maintenance &gt; Inventory Controls &gt; Warehouse Maintenance &gt; F7-RTS </a>Maint &gt; F5-Warehousing &gt; F7-Work Orders &gt; <span style="font-style: italic;">W/O Destination Bin Prompt</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0.0pt; text-align: justify; text-transform: none; vertical-align: baseline;"><a name="1021374">&nbsp;</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021375">Warehousing &gt; Work Order Processing &gt; Work Order Picking Confirmation</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021376">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Work Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021377">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Work Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021378">Sorting Work Orders</a></div>
+      <div class="Body"><a name="1021379">When you press F3 to search for work orders to pick, the list that matches your search </a>criteria is sorted by emergency work orders, then pick date in:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021380">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Work Order Picking </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021381">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Work Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021382">Warehousing &gt; Work Order Processing &gt; Work Order Picking Confirmation</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021383">Triggering Emergency Cycle Counting from Work Order Picking</a></div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0.0pt; text-align: justify; text-transform: none; vertical-align: baseline;"><a name="1021384">&nbsp;</a></div>
+      <div class="Body"><a name="1021385">If a product is short or zero-picked in RF Work Order Picking, that product appears in the </a>Emergency Cycle Count Inquiry with the code WP (work order picking) and the bin move number in the reference fields. The picking processes that can trigger this emergency cycle count are:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021386">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Work Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021387">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Work Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021388">Warehousing &gt; Work Order Processing &gt; Work Order Picking Confirmation</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021389">Escaping from Work Order Entry</a></div>
+      <div class="Body"><a name="1021390">You cannot press ESC to close the last Bin screen for type 07 work orders.</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021391&quot;);"><a name="1021391">Stock Receipts</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021391", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021391", false);</script>
+      <div class="Subhead"><a name="1021392">Putaway by Batch</a></div>
+      <div class="Body"><a name="1021393">The new </a><span style="font-style: italic;">Stock Receipts Putaway Options</span> in Warehouse Maintenance allow you determine if all items appear for a vendor or multiple vendors in a batch for putaway </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021394">Systems &gt; Maintenance &gt; Inventory Controls &gt; Warehouse Maintenance &gt; F7-RTS </a>Maint &gt; F5-Warehousing &gt; F8-Recv &gt; <span style="font-style: italic;">Stock Receipts Putaway Options &gt; SR Putaway </span><span style="font-style: italic;">Ent-2 Method</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021395">Warehousing &gt; Handheld RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; SR Putaway </a>Ent-2</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021396">Warehousing &gt;Truck Mount RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; SR Putaway </a>Ent-2</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1021397">Additional updates to the SR Putaway Ent-2 are:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021398">Once you scan or enter a product number, you cannot change the product number or </a>add products to the putaway entry.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021399">If you putaway less than the quantity defaults, the remaining quantity to be putaway </a>for the next line item previously defaulted to the primary bin for the To bin. Now the default is the next available pick type bin with onhand (sorted by descending onhand quantity). After pick bins are used, the next available bulk type bin with onhand (sorted by descending onhand quantity) is used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021400">Defaulting UCC Quantity in Stock Receipts</a></div>
+      <div class="Body"><a name="1021401">Single and multi-P/O stock receipts for Handheld and Truck Mount RF were updated to </a>default the quantity received to the UCC quantity for the UCC number assigned to the product number. For example, if UCC number 145678594 is an alternate with a quantity if 5 for item AB553, the default UCC quantity is 5 in RF/Truck Mount Stock Receipts when you enter UCC number 145678594 for the product number. The following transactions are affected:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021402">Warehousing &gt; Handheld RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; Stock Receipts </a>and Multi P/O SRE</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021403">Warehousing &gt; Truck Mount RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; Stock </a>Receipts and Multi P/O SRE</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021404">New Inspection Required Message</a></div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0.0pt; text-align: justify; text-transform: none; vertical-align: baseline;"><a name="1021405">&nbsp;</a></div>
+      <div class="Body"><a name="1021406">When you receive an item that should be inspected, the message “Inspection Required - </a>Move to Bin XXXX” appears after saving the item in the stock receipt screen. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021407">Inventory &gt; Stock Receipts &gt; Batch Stock Receipts &gt; Batch Stock Receipts</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021408">Warehousing &gt; Handheld RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; Stock Receipts </a>and Multi P/O SRE</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021409">Warehousing &gt; Truck Mount RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; Stock </a>Receipts and Multi P/O SRE</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1021410">This message appears only if the Line Item option is selected for stock receipts. The </a>inspection bin in the message defaults from inspection bin in Warehouse Maintenance or User Id Maintenance.</div>
+      <div class="Subhead"><a name="1021411">Creating License Plate Batches for ASN.RECEIVE</a></div>
+      <div class="Body"><a name="1021412">You can use the new License Plate Manual Creation option on the Inventory Batch Stock </a>Receipts menu to create batch stock receipts in the ASN.RECEIVE file. You cannot include direct ship P/Os, lot-controlled, or serialized items.</div>
+      <div class="Body"><a name="1021413">If the user is assigned to a warehouse, that warehouse is the receiving warehouse in </a>ASN.RECEIVE. If the user is not assigned to a warehouse, the warehouse for the first P/O entered is used. Any subsequent P/Os must use the same vendor and use the same receiving warehouse. You cannot remove a P/O from the License Plate Manual Creation screen if lines were received qty. Note: The term “license plate” term is different than other license plate (lot-controlled items) in the system.</div>
+      <div class="Body"><a name="1021414">Choose ASN Stock Receipts on the Handheld or Truck Mount RF Menus (renamed from </a>LicPlate SRE) to update a license plate number with License Plate Manual Creation. If you received all quantities, choose <span style="font-weight: bold;">Yes</span> to update inventory. The ASN.RECEIVE number is the bin location. If you received partial quantities, select No to not update inventory and use SR Putaway Ent for partial putaway using the ASN.RECEIVE number as the bin location.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021415">Inventory &gt; Stock Receipts &gt; Batch Stock Receipts &gt; License Plate Manual Creation</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021416">Warehousing &gt; Handheld RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; ASN Stock </a>Receipts</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021417">Warehousing &gt; Truck Mount RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; ASN Stock </a>Receipts </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021418">Receiving On The Water Stock by RF</a></div>
+      <div class="Body"><a name="1021419">You can now receive on-the-water purchase orders by RF using the new OTW Stock </a>Receipts option on the Handheld and Truck Mount RF menus. When you enter a reference number, the list that appears includes type 12 purchase orders that match the reference number that are not on hold and that already have import costs entered. The standard RF Multi P/O Receiving screen also appears. You can scan the product number and quantity for the 1st purchase order. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021420">Warehousing &gt; Handheld RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; OTW Stock </a>Receipts</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021421">Warehousing &gt; Truck Mount RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; OTW Stock </a>Receipts</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021422">Creating Stock Receipts Batches and Receiving Batches by RF</a></div>
+      <div class="Body"><a name="1021423">You can use the new Batch Manual Creation on the Inventory Batch Stock Receipts menu </a>to create a batch of multiple purchase orders. When you create the batch, use Batch Stock Receipts on the Handheld and Truck Mount RF menus to receive stock for the batch. After you receive all lines and save the date, you can generate the Batch Stock Receipts Edit Report, and then run Batch Stock Receipts Update Procedure to update inventory. If the product exists on multiple lines or multiple purchase orders, the oldest P/O is received against. If the product is not on a P/O in the batch, you can enter the product in RF Batch Stock Receipts if your User ID is set to Y for <span style="font-style: italic;">Allow New Products in SRE</span>.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021424">Inventory &gt; Stock Receipts &gt; Batch Stock Receipts &gt; Batch Manual Creation</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021425">Warehousing &gt; Handheld RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; Batch Stk </a>Receipts</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021426">Warehousing &gt; Truck Mount RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; Batch Stk </a>Receipts </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021427">LicPlate Putaway - License Plate Bin Move</a></div>
+      <div class="Body"><a name="1021428">When you enter a license plate number, Prelude performs a bin move immediately instead </a>of waiting for you to enter all license plate numbers.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021429">Warehousing &gt; Handheld RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt; PN LicPlate </a>Putaway</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021430">Warehousing &gt; Truck Mount RF Menu &gt; Processes &gt; Recv &amp; Putaway &gt;PN LicPlate </a>Putaway</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021431">Defaulting Receiving Dock/Linkage/Inspection Bins for a User</a></div>
+      <div class="Body"><a name="1021432">Default receiving, linkage, and inspection bins were added to User ID Maintenance. </a>These bins override the default bins in Warehouse Maintenance &gt; Action Bar &gt; Addl Opts &gt; Bin Locator Information screen.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021433">Systems &gt; Maintenance &gt; User Identification Maintenance &gt; Action Bar &gt; User </a>Options&gt; Warehousing Information screen &gt; <span style="font-style: italic;">Default Rec Dock Bin, Default Linkage </span><span style="font-style: italic;">Bin, Default Inspection Bin</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1021434">The following programs check for these bins:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021435">Stock Receipts Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021436">RF Stock Receipts</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021437">Transfer Receipts Entry, </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021438">RF Transfer Receipts, </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021439">RF ASN Stock Receipts (LicPlate SRE) - partial receipts</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021440">Using RF Worksheets </a></div>
+      <div class="Body"><a name="1021441">The </a><span style="font-style: italic;">Rf Worksheet Qty Screen</span> flag in Warehouse Maintenance determines if you are prompted for the Worksheet Entry screen in the various RF and Truck Mount screens (e.g., picking, receipts, putaway). You can enter the number of cases, quantity per case, and broken cases. This field is only accessible if <span style="font-style: italic;">RF Quantity</span> is set to <span style="font-weight: bold;">W</span> in Warehousing Option Parameters.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021442">Systems &gt; Maintenance &gt; Inventory Controls &gt; Warehouse Maintenance &gt; F7-RTS </a>Maint &gt; F5-Warehousing &gt;<span style="font-style: italic;"> Rf Worksheet Qty Screen</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021443">Systems &gt; Maintenance &gt; Option Parameters &gt; Warehousing Parameters &gt; </a><span style="font-style: italic;">RF </span><span style="font-style: italic;">Quantities</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021444&quot;);"><a name="1021444">Stock Transfers</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021444", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021444", false);</script>
+      <div class="Subhead"><a name="1021445">Transfer Picking - Transfer Number/Single Shipment</a></div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0.0pt; text-align: justify; text-transform: none; vertical-align: baseline;"><a name="1021446">&nbsp;</a></div>
+      <div class="Body"><a name="1021447">Transfer picking processes were updated to consolidate shipping for multiple transfers. As </a>the transfer numbers are entered, they are consolidated into a single shipment transfer that does not exist in other transfer picking sessions. If you do not enter a transfer number to consolidate, the existing transfer is updated as normal. The affected picking programs are:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021448">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Transfer Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021449">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Transfer Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021450">Warehousing &gt; Stock Transfer Processing &gt; Transfer Picking Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1021451">For example, if you enter transfer 300027 in RF Transfer Picking, release 300027-1 is </a>created. If the -1 exists and has status of IN-PICK, the next picking batch for the transfer is updated on the -1. Once you update the -1 shipment transfer in Transfer Shipments Entry, a -2 is used for the transfer’s next picking batch for the transfer. If 2 or more transfer numbers are entered in RF Transfer Picking, the 1st transfer number entered is used for the -1 shipment transfer.</div>
+      <div class="Subhead"><a name="1021452">Triggering Emergency Cycle Count Inquiry from Transfer Picking</a></div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0.0pt; text-align: justify; text-transform: none; vertical-align: baseline;"><a name="1021453">&nbsp;</a></div>
+      <div class="Body"><a name="1021454">If a product is short or zero-picked in RF Transfer Picking, the product appears in the </a>Emergency Cycle Count Inquiry with the code TP (transfer picking) and the bin move number in the reference field. The picking processes that can trigger this emergency cycle count are:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021455">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Transfer Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021456">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Transfer Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021457">Warehousing &gt; Stock Transfer Processing &gt; Transfer Picking Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021458">Picking Transfers</a></div>
+      <div class="Body"><a name="1021459">Transfer Warehouse Picker Assignment allows you to assign a picker to a transfer. Press </a>F5-Review to view a list of transfers with the lines available for picking. Emergency transfers are indicated by a Y in the emergency flag column. Then press F7-Assign to assign a picker to the entire transfer or only emergency lines. If the picker is assigned to another transfer, the message “Picker has lines, no new transactions will be assigned” appears when you try to assign the next transfer for picking. The picker must pick the first transfer assigned to be assigned to another transfer. Once the line items are assigned to a picker, the message “Picking lines assigned” appears when you enter the from/to warehouse in RF transfer picking.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021460">Warehousing &gt; Stock Transfer Processing &gt; Transfer Warehouse Picker Assignment </a>&amp; Printing &gt; F5-Review &gt; F7-Assign</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021461">Transfer Number field added to Transfer Picking</a></div>
+      <div class="Body"><a name="1021462">The new transfer number field allows you to enter a transfer number for picking. If you </a>enter a transfer number, the lines are completely picked:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021463">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Transfer Picking.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021464">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Transfer Picking.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021465">Warehousing &gt; Stock Transfer Processing &gt; Transfer Picking Entry.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021466">GRIM Screen Added to Transfer Bin Allocation</a></div>
+      <div class="Body"><a name="1021467">Transfer Bin Allocation uses the GRIM interface.</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021468">Warehousing &gt; Stock Transfer Processing &gt; Transfer Bin Allocation</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021469">Transfer Warehouse Picking Inquiry</a></div>
+      <div class="Body"><a name="1021470">An asterisk (*) appears next to warehouses with an Emergency Bin Replenishment issue.</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021471">Warehousing &gt; Stock Transfer Processing &gt;Transfer Warehouse Picking Inquiry </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021472">RF Conveyer Label Picking Changes</a></div>
+      <div class="Body"><a name="1021473">Only one label will print for all transfers picked during a session. The label only prints the </a><span style="font-style: italic;">From</span> and <span style="font-style: italic;">To</span> warehouses and no longer includes the document number.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021474">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Transfer Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021475">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Transfer Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021476&quot;);"><a name="1021476">Labels</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021476", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021476", false);</script>
+      <div class="Subhead"><a name="1021477">Printing Barcoded Warranty Tag Labels</a></div>
+      <div class="Body"><a name="1021478">You can print barcoded warranty tag labels for rejected inventory continuously or by batch.</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021479">Warehouse Maintenance &gt; F7 &gt; F5 &gt; F8 - </a><span style="font-style: italic;">SR Putaway Ent-2 Method</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021480">Warehouse Maintenance &gt; F10 &gt; Addl Opts &gt; Route Info -</a><span style="font-style: italic;"> Dynamic Routing</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021481">Warehouse Maintenance &gt; F6 &gt; F5 &gt; </a><span style="font-style: italic;">SR Wty Tag Labels</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021482">RF Product Labels</a></div>
+      <div class="Body"><a name="1021483">Product Labels were added to the Warehousing Handheld and Truck Mount RF menus to </a>allow you to print product labels from RF units. You can specify the labels to print by product, number of labels and the printer.</div>
+      <div class="Subhead"><a name="1021484">Resort Option for Product Label Print By Receiver </a></div>
+      <div class="Body"><a name="1021485">Product Label Print By Receiver now allows you to choose Resort from the Action Bar to </a>resort the labels by product number, vendor product number, default receiving bin, or original document sequence. If items have multiple receiving bins, the first bin on the receive line record is used for resorting.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021486">Warehousing &gt; Labels &gt; Product Label Print By Receiver &gt; Action Bar &gt; Resort</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021487">RF Conveyor Labels</a></div>
+      <div class="Body"><a name="1021488">You can print conveyor labels continuously or by batch for sales orders, work orders, or </a>transfers. If you print continuously, the barcode label prints the work order number/sales order number/stock transfer number for each document being picked. The new F7-Option on picking screens allows you to reprint a label if necessary.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021489">Warehouse Maintenance &gt; F6 &gt; F5 &gt; </a><span style="font-style: italic;">RF Conveyor Label</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021490">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021491">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Transfer Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021492">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Work Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021493">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021494">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Transfer Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021495">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Work Order Picking</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021496&quot;);"><a name="1021496">Inventory Control</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021496", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021496", false);</script>
+      <div class="Subhead"><a name="1021497">Viewing Products that were Cycle Counted</a></div>
+      <div class="Body"><a name="1021498">The RF Cyc Cnt Ent - 1st screen has a new F7-Rev button that provides a summary </a>screen of each product/quantity counted. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021499">Warehousing &gt; Handheld RF Menu &gt; Physical &gt; Cyc Cnt Ent - 1st</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021500">Disallowing Product Number Change For Existing Tag</a></div>
+      <div class="Body"><a name="1021501">You cannot change the product number for an existing physical tag. </a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021502">Warehousing &gt; Handheld RF Menu &gt; Physical &gt; Phys Tag Ent</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021503">Warehousing &gt; Truck Mount RF Menu &gt; Physical &gt; Phys Tag Ent</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021504">Viewing the Next Manual Tag to Enter</a></div>
+      <div class="Body"><a name="1021505">After you generate manual tags in Physical Tag Printing, press F6-MTag to view the next </a>tag without data (e.g., product, bin, count). If manual tags do not exist or were all used, the message “No Manual Tags Available” appears. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021506">Warehousing &gt; Handheld RF Menu &gt; Physical &gt; Phys Tag Ent</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021507">Warehousing &gt; Truck Mount RF Menu &gt; Physical &gt; Phys Tag Ent</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021508&quot;);"><a name="1021508">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021508", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021508", false);</script>
+      <div class="Subhead"><a name="1021509">OTW P/O Inquiry (new)</a></div>
+      <div class="Body"><a name="1021510">The new OTW P/O Inquiry on both the Handheld and Truck Mount RF menus displays on-</a>the-water information. Press F6-Review to see all purchase orders updated from the OTW purchase order.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021511">Warehousing &gt; Handheld RF Menu &gt; Inquiry &gt; OTW P/O Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021512">Warehousing &gt; Truck Mount RF Menu &gt; Inquiry &gt; OTW P/O Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021513">Summary Bin Queue Inquiry</a></div>
+      <div class="Body"><a name="1021514">The Summary Bin Queue Inquiry has a new F7-Refresh button that displays document </a>and line numbers in the queue without closing and re-opening the inquiry.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021515">Warehousing &gt; Inquiries &gt; Summary Bin Queue Inquiry &gt; F7-Refresh</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021516">Bin Onhand Inquiry </a></div>
+      <div class="Body"><a name="1021517">The Bin Onhand Inquiry has a new resort feature that allows you to resort the bins by </a>descending bin onhand.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021518">Warehousing &gt; Inquiries &gt; Bin Onhand Inquiry &gt; Action Bar &gt; Resort &gt; Descending </a>Bin Onhand</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021519&quot;);"><a name="1021519">Reports </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021519", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021519", false);</script>
+      <div class="Subhead"><a name="1021520">RF Pick in Progress Report</a></div>
+      <div class="Body"><a name="1021521">Includes information on items that are not assigned for picking. The report sorts by picking </a>warehouse, transaction type, and user ID. This report is useful if you need to see items being picked if an RF gun was logged off or a session is disconnected.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021522">Warehousing &gt; Reports &gt; RF Pick in Progress Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021523">RF Picking Bin Changed Report</a></div>
+      <div class="Body"><a name="1021524">Lists bin moves in which the </a><span style="font-style: italic;">From Bin</span> is different from the suggested <span style="font-style: italic;">From Bin</span>.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021525">Warehousing &gt; Reports &gt; RF Picking Bin Changed Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021526">Work Order Pick Ticket Exception Report</a></div>
+      <div class="Body"><a name="1021527">Lists work orders that could not be picked. You can generate the report based on </a>warehouse, work order number, and required date.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021528">Warehousing &gt; Reports &gt; Work Order Pick Ticket Exception Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021529">Empty Bins Report </a></div>
+      <div class="Body"><a name="1021530">The </a><span style="font-style: italic;">Total Bins Reported </span>line<span style="font-style: italic;"> </span>was added to include a total number of empty bins listed on the report.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021531">Warehousing &gt; Reports &gt; Empty Bins Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021532">Replenishment Requirements Detail Report</a></div>
+      <div class="Body"><a name="1021533">The Replenishment Source (Repl Src) column is updated with </a><span style="font-weight: bold;">ST</span> if an emergency bin replenishment is generated due to a combination of a sales order line and a transfer line. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021534">Warehousing &gt; Reports &gt; Replenishment Detail Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021535">Renamed and Moved Reports</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021536">On the Inventory &gt; Physical Inventory &gt; Cycle Counting Procedure menu, the Paper </a>Site Count Sheet Printing option was renamed Paper Site Count Assignment &amp; Printing (1st Level).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021537">On the Warehousing &gt; Stock Transfer Processing menu, the Transfer Picking Report </a>was renamed Transfer Picking Assignment &amp; Printing. Also, the screen title changed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021538">On the Warehousing &gt; Bin Replenishments Processing menu, the Replenishment </a>Picking Report was renamed Replenishment Picking Assignment &amp; Printing. Also, the screen title has changed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021539">The Warehousing &gt; Reports &gt; RF Pick in Progress process was moved to top of the </a>menu. Also, the first and second level cycle count queues were added to the report. Also, for Transaction Type you can choose C for first level cycle count queue or S for second level cycle count queue.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1021540&quot;);"><a name="1021540">Miscellaneous</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1021540", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1021540", false);</script>
+      <div class="Subhead"><a name="1021541">New Menus Items for RF.LITE/RF.MISC</a></div>
+      <div class="Body"><a name="1021542">The menu options Putaway Process, Order Picking, and Inv Adjustments were moved to </a>a new menu that you can access by typing /M:RF.MISC.</div>
+      <div class="Subhead"><a name="1021543">Bin Number now Appears in Error Message</a></div>
+      <div class="Body"><a name="1021544">The warning message “Quantity Exceeds Available for Bin” now shows the bin number in </a>the following transactions:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021545">Order Processing &gt; Sales Order Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021546">Order Processing &gt; Release Confirmation Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021547">Inventory &gt; Stock Movements &gt; Transfer Shipments Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021548">Inventory &gt; Inventory Adjustments &gt; Inventory Adjustments Entry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021549">Converting RF Vendor Claim Picking into Open Vendor Claims</a></div>
+      <div class="Body"><a name="1021550">If you have open vendor claims and start using RF Vendor Claim Picking, this process can </a>bring vendor claims items picked by RF into open vendor claims. You must first run the Whseing V/C Picking Conversion on the ADS Inventory Utility menu.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021551">Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Vendor Claim Picking </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021552">Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Vendor Claim Picking </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021553">Systems &gt; Processes &gt; ADS Utilities &gt; Inventory Utilities &gt; Whseing V/C Picking </a>Conversion.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1021554">Warehousing Transfer Reset</a></div>
+      <div class="Body"><a name="1021555">You can now select all stock transfer line items for a shipping warehouse that have a </a>status of <span style="font-style: italic;">On-Order</span> and remove any bin commitments and allocations. Any RF transfer pickers that exist for the shipping warehouse are removed as well as control records for RF Transfer Pickers. Stock-transfer lines that are already picked are skipped. This modification is used to clear out any bin commitments and allocations for the open stock-transfer lines for the purpose of setting up a new warehouse with different bin locations. The transfer Bin Allocation Process must be run after the new setup to allocate open stock transfer lines to the new bin location.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1021556">Systems &gt; Processes ADS Utilities &gt; Inventory Utilities &gt; Warehousing Transfer Reset</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v20_new_features.1.1.htm#1021267">V20 New Features</a>:Warehousing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

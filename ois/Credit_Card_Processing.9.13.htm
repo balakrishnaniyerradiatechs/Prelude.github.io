@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Pre-Authorizing a Sales Order</title>
+    <link rel="StyleSheet" href="css/Credit_Card_Processing.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1420450">Pre-Authorizing a Sales Order</a></div>
+      <div class="Body"><a name="1422419">Once your system is set up for credit card processing (refer to </a><a href="javascript:WWHClickedPopup('ois', 'Credit_Card_Processing.9.2.htm#1406155', '');">Setting up Your System for Credit Cards</a>), you can pre-authorize the sales order before releasing the order for pick ticket printing or invoicing.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1456379">Direct Ships</a></div>
+            <div class="TableText"><a name="1456380">When you enter a Direct Ship order using a credit card, use the </a><span class="bold" style="font-weight: bold;">01 </span>regular order type instead of the <span class="bold" style="font-weight: bold;">04</span> direct order type. Set the supply code for each line item to <span class="bold" style="font-weight: bold;">D </span>for direct/drop ship so that the pre-authorization balances.</div>
+          </td>
+        </tr>
+      </table>
+      <table class="Warning" style="text-align: left; width: 396pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 5pt; padding-left: 3pt; padding-right: 3pt; padding-top: 5pt; vertical-align: top; width: 396pt;">
+            <div class="TableSubhead"><a name="1428455">Invoice Hold</a></div>
+            <div class="TableText"><a name="1467650">Use the </a><span class="italics" style="font-style: italic;">Administrative Invoice Hold</span> option in Order Processing Parameters to prevent invoicing confirmation (06) and direct (04) sales orders that are not pre-authorized.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="NumberedIntro"><a name="1420454">To pre-authorize a credit card sales order:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1430587">Enter the sales order as usual (refer to </a><a href="javascript:WWHClickedPopup('ois', 'Sales%20Order%20Entry.4.3.htm#1420189', '');">Entering a Sales Order</a>). When you complete the order, you must open the <a href="javascript:WWHClickedPopup('ois', 'ord_complete.htm#1362194', '');">Sales Order Completion screen</a> to access credit card information. Depending on the type of order, the sales order completion screen may automatically appear:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1446740">If the payment terms for the sales order are set up as credit card </a>payment terms (refer to <a href="javascript:WWHClickedPopup('ois', 'Credit_Card_Processing.9.5.htm#1435505', '');">Setting up Credit Card Payment Terms</a>) and <span style="font-style: italic;">Credit Card Entry Mode</span> in the Payment Terms type is set to <span style="font-weight: bold;">Y</span>, when you finish entering the line items and press <span style="font-weight: bold;">F2-Save</span>,<span style="font-weight: bold;"> </span>the Sales Order Completion screen automatically appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1446723">If the payment terms for the order are not set up as credit card </a>payment terms (e.g., cash sales order or any other customer who wants to pay by credit card), when you finish entering the line items, press <span style="font-weight: bold;">F2-Save</span> and choose <span style="font-weight: bold;">Complete</span>. The Sales Order Completion screen appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422639">Verify that the </a><span style="font-style: italic;">Terms Code</span> is set to credit card or cash. Refer to <a href="javascript:WWHClickedPopup('ois', 'Sales%20Order%20Entry.4.29.htm#1420533', '');">Using the Sales Order Completion Screen</a> for an explanation of the remaining fields on this screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422573">Press </a><span style="font-weight: bold;">F2</span> to save the Sales Order Completion screen, the <a href="javascript:WWHClickedPopup('ois', 'ord_cash_appl.htm#1354529', '');">Cash Application screen</a> appears. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1453449">Enter a</a><span style="font-style: italic;"> Pay Type</span> of <span style="font-weight: bold;">03</span> for Bank Card.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422692">Verify the </a><span style="font-style: italic;">Payment Amt</span> and press <span style="font-weight: bold;">ENTER</span> to open the <a href="javascript:WWHClickedPopup('ois', 'ord_credit_addit.htm#1354783', '');">Additional Credit Card Information screen</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422768">Depending on system settings and company procedures, choose one of </a>the following to obtain credit card information:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1422793">If the order has a credit card </a><span class="italics" style="font-style: italic;">Terms Code </span><span class="italics" style="font-style: normal;">and default credit card </span><span class="italics" style="font-style: normal;">information (refer to </span><span class="italics" style="font-style: normal;"><a href="javascript:WWHClickedPopup('ois', 'Credit_Card_Processing.9.2.htm#1406155', '');">Setting up Your System for Credit Cards</a></span><span class="italics" style="font-style: normal;">)</span>, the information defaults in the appropriate fields.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1422797">If no credit card information exists, enter the</a><span style="font-style: italic;"> Credit Card Type </span>(e.g., Visa, M/C), the <span style="font-style: italic;">Credit Card Number</span>, and the <span style="font-style: italic;">Expiration Date</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><a name="1422802">If you have a credit card swipe machine and no credit card </a>information exists, press <span style="font-weight: bold;">F6-Swipe Card</span> and swipe the card to fill in the information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422786">For </a><span style="font-style: italic;">CVV number</span>, if required, enter the 3 or 4 digit code on the back of the card. This number is used by some companies to prevent theft. It is not stored in the system.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">8	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422858">If you use the AVS (address verification service) enter the </a><span style="font-style: italic;">Address Line </span><span style="font-style: italic;">One </span>and the <span style="font-style: italic;">Zip Code</span> for the card user’s billing address. This information defaults from the customers <a href="javascript:WWHClickedPopup('ois', 'cc_bill_info.htm#1420152', '');">Bill To Information Screen</a> if the customer is already set up with credit card information (refer to <a href="javascript:WWHClickedPopup('ois', 'Credit_Card_Processing.9.6.htm#1430985', '');">Assigning Credit Card Information to a Customer</a>). If you do not use address verification, leave these fields blank. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">9	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422895">For </a><span style="font-style: italic;">Card ID#</span>, enter the purchase card ID number, if applicable. This ID is for American Express or Visa cards to define the user of a corporate card. For example, a company with multiple stores may have one account but each location could have an additional ID number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">10	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422896">For </a><span style="font-style: italic;">Description</span>, if applicable, enter a code that is passed on by credit card companies to Protobase. This information is used by American Express purchase cards and allows you to enter 4 lines of text stating what the purchase was for and to print on the statement. These fields are only used with Level II reporting. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">11	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422824">Press </a><span style="font-weight: bold;">F5-Authorize</span> to send the authorization request. The Authorization Info screen appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">12	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422997">If the authorization is successful, the approval code information appears. </a>This code guarantees the credit card for 3 to 30 days (depending on the customer’s bank) and deducts the amount of the sales order from the cardholder’s available-to-buy. If the card is declined, a decline message appears (e.g., 0060DECLINE).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><a name="1423086">If your credit card verification system is down, you can manually enter an authorization </a>code (refer to <a href="javascript:WWHClickedPopup('ois', 'Credit_Card_Processing.9.14.htm#1446315', '');">Manually Adding an Authorization Code</a>).</div>
+            <div class="TableText"><a name="1426543">If the message “Call” or “Referral” appears during pre-authorization, you must call for </a>authorization by phone. Then you can enter the <span style="font-style: italic;">Authorization Code</span> in the Additional Credit Card Information screen.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">13	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1420510">Press </a><span style="font-weight: bold;">OK</span> to return to the Additional Credit Card Information screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">14	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1423130">If the transaction was successful, the </a><span style="font-style: italic;">Authorization Code </span>appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">15	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1423137">Press </a><span style="font-weight: bold;">F2-Save</span> to return to the Sales Order Completion screen and complete the order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><a name="1423160">If </a><span style="font-style: italic;">Suppress CC Save Prompt</span> in the customer <a href="javascript:WWHClickedPopup('ois', 'cust_cc_info.htm#1409412', '');">Credit Card Information Screen</a> (Customer Maintenance &gt; F6- A/R &gt; F7-Credit Card) is set to <span style="font-weight: bold;">N</span>, a message appears to ask if you want to update the customer’s credit card information.</div>
+          </td>
+        </tr>
+      </table>
+      <table class="report" style="text-align: left; width: 402.00048pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 3.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; width: 128.25pt;">
+            <div class="Table.text" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><a name="1460324">Related Reports</a></span></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 3.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; width: 273.75048pt;">
+            <div class=""><a name="1460326">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a href="javascript:WWHClickedPopup('ois', 'Credit_Card_Processing.9.15.htm#1457844', '');" name="1460330">Sales Orders With No Credit Card Authorization Report</a></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a name="1462566">Sales orders with credit card payment terms that have no </a>authorization code.</div>
+            <div class="TableText"><a name="1460334">&nbsp;</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a href="javascript:WWHClickedPopup('ois', 'cc_auth_batch_rpt.htm#1457988', '');" name="1460338">Credit Card Authorization Batch Report</a></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a name="1460341">Sales orders that are pre-authorized but not yet invoiced or </a>post-authorized.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1460589">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Setting up Your System for Credit Cards", "ois", "Credit_Card_Processing.9.2.htm#1406155");
+          WWHAddRelatedTopic("Post-Authorizing Credit Card Transactions", "ois", "Credit_Card_Processing.9.17.htm#1424979");
+          WWHAddRelatedTopic("Additional Credit Card Information screen", "ois", "ord_credit_addit.htm#1354783");
+          WWHAddRelatedTopic("Sales Orders With No Credit Card Authorization Report", "ois", "Credit_Card_Processing.9.15.htm#1457844");
+          WWHAddRelatedTopic("Credit Card Authorization Batch Report", "ois", "cc_auth_batch_rpt.htm#1457988");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Credit_Card_Processing.9.1.htm#1420450">Credit Cards</a>:Pre-Authorizing a Sales Order</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

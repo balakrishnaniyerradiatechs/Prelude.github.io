@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>V16 New Features</title>
+    <link rel="StyleSheet" href="css/v16_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="ChapterName"><a name="998290">V16 New Features</a></div>
+      <div class="Head1"><a name="1016506">Order Processing</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998331&quot;);"><a name="998331">Sales Order Entry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998331", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998331", false);</script>
+      <div class="Subhead"><a name="1015430">Header Level</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1015432">The Purchasing contact  in the Sales Order Entry header was updated to display the </a>purchasing contact created in Customer Contact Management Maintenance. If no purchasing contact is currently established, this field will remain blank. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998362">A new Blind Shipment flag was added to the Sales Order Header screen. This flag </a>allows you to send out a shipment to a customer anonymously by not including the company logo, name or address on the packing slip. If you are currently using the 3<span style="vertical-align: super;">rd</span> party software package Optio, a user-forms change can be made to your existing user-forms program to NOT include the company information. If this flag is set to Y both the pick ticket and packing list will be printed without the company information and the Price Pick Ticket flag will automatically be set to Y. If a manual ship-to address is entered, the system will prompt the user to select Yes, No or Blind Shipment on the Price Pick Ticket option. If the Blind Shipment option is selected, both the Price Pick Ticket and Blind Shipment flags will be set to Y automatically. This new feature was added to Quotation Order Entry as well. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998380">The sales order header was updated with a new Consolidated Inv? Flag. This flag </a>setting will determine if this order will be considered a consolidated invoice. If this flag is set to Y, this order will not be printed but will be processed as if the invoice had actually been printed. The sales order will then be closed, an A/R record created and inventory relieved. Once the invoice number is entered in the Consolidated Invoice Printing screen, the original invoice will be marked as paid, and a new consolidated invoice will be created. <span class="Italics">Note: A User-Forms modification is required to be made to the </span><span class="Italics">Consolidated Invoice Printing User-Forms program to use this feature</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998404">A new function was added to the Reprice Order Options  in Sales Order Entry. This </a>option now requires a password prior to allowing the user to enter the Repricing menu. The password is established  in the Systems&gt; Maintenance&gt; Program &amp; Menu Passwords using the process defined as REPRICE.OPTION.CHK. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1015487">A new function key was added to the Product Tagging screen  in Sales Order Entry. </a>F7- Sort enables the user to modify the sort option that was established as the default. The sort options available are P for product number or D for product description. For example, if the <span class="Italics">Product Tagging Default Sort</span> flag  in Default Parameters Maintenance is set to P in which the products will be displayed in ascending order by product number, and the user prefers the products to be displayed in ascending order by product description, this function key can be used to change the product sort  in the tagging screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1015489">A new Order Function was added to the Sales Order Entry screen. This new feature </a>was created to allow users to reallocate inventory for backordered items from future require date sales order to current sales orders. Once this option was selected, and if inventory is available, for this item, backordered, on-hand, committed and available quantities will be displayed. Reallocation will only be permitted if the inventory is to be received prior to the future required date. Although kit parent items and bill of material products are excluded from this option, open stock transfer and work order lines are checked for available reallocation. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998462">A new F8- Switch Entry Mode function key was added to the Product Tagging screen  </a>in Sales Order Entry. This option allows the user to modify the position of the cursor from product number to quantity or vice versa when tagging products. A default of P for product number or Q for quantity is established in the <span class="Italics">Product Tagging Entry Mode</span> field  in Default Parameters Maintenance. For example, if the default is set to P, the cursor will be positioned at the product number, and the user prefers the cursor to be positioned at the quantity field, this function key can be used to change the cursor positioning  in the tagging screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="998476">Order Level</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998483">Sales Order Entry was updated with a new suspended order feature. You can require </a>the user to enter a password for any sales orders that are to be suspended. to activate this feature, the ORD.SUSPEND process must be established  in the Program &amp; Menu PassWords maintenance screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998499">Sales Order Entry was updated with a new prompt for password feature. You can </a>require the user to enter a password prior to selecting No to the messages <span class="Italics">Are You </span><span class="Italics">Ready to Release This Order For Invoicing?</span> (06 confirmation orders) and <span class="Italics">Print </span><span class="Italics">Invoice?</span> (05 counter invoices)  in Sales Order Entry. to activate this feature, the NO.INVOICE process must be established  in the Program &amp; Menu PassWords maintenance screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998518">A new option was added to Sales Order Entry. Previously, once /OLI was selected, the </a>Sales Order Number field  in the Order Log Inquiry screen would appear blank, the user now has the option of typing /OLI  in Sales Order Entry and the Order Log Inquiry screen will now default to the order number currently on the screen to display transactions that have taken place regarding this order. This same feature has also been added to Sales Order Inquiry and History Sales Order Inquiry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998531">A new accessory option was added to Version 16. A new Group option was created to </a>allow multiple accessory items to exist  in a single group. Therefore, in Sales Order Entry, the user has the option of reviewing multiple accessory items for a product. If a product is entered that contains accessory products, the user will be prompted with the message Do You Wish To Continue With Accessory Items Entry. If the user selects Yes, the Product Accessory Group Information screen will be displayed. To view product detail information, select the F5-Product Detail action key, this function will display the available accessory items that can be added to the sales order. Multiple products can be selected from accessory groups. Once the accessory groups were reviewed and the products were selected, the system will then add all accessory items to the sales order at that time.You must set these system flags to use this feature accurately. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998546">A new feature was added to Version 16 to allow inventory to be reserved for a </a>customer. Therefore resulting in some modifications to Sales Order Entry. The available quantity field  in the line item detail screen will include reserved inventory. In addition, there is a new RSVD ( ) field  in this screen to notify the user of the quantity reserved. However, if the quantity entered for this product produces an inventory level, below the reserved inventory level for a customer, the Insufficient Stock Requested Reserved Inventory! Placing Line Item on Hold! warning message will be displayed, placing the sales order on inter-branch hold. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998561">The Sales Order Entry screen was updated to incorporate a revised Obsolete Product </a>Warning Message. Previously, the Obsolete warning message was displayed at the bottom of the screen. This was modified for Version 16. To ensure that the user observes the warning message and is required to confirm that it has in fact been viewed. Once an obsolete product number is entered, a dialog box will be displayed with the message This Product was Classified as Obsolete. Sell Available Units Only!. At that point, the user will then be prompted to select Reprompt to notify the user again, that this product is in fact obsolete. Continue is the other available selection. This will allow the user to continue the entry of this product. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="998576">Completion Screen</a></div>
+      <div class="Body"><a name="998583">Charges that were entered  in any of the </a><span class="Italics">Handling, Delivery, Pick Up, Restocking Charge, </span><span class="Italics">Minimum Charge, </span>or<span class="Italics"> Disc/Allowance</span> fields  in the sales order completion screen, will be reflected on a new Other column that was added to the Invoice Detail Inquiry  in the Accounts Receivable Inquiries. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998600&quot;);"><a name="998600">Release Confirmation Entry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998600", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998600", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998606">The Release Confirmation Header screen was updated to include a new Handling </a>field. This field allows you to enter any additional handling charges that are to be charged to the customer at the time of invoicing. The handling charge amount entered, will be updated in the handling field  in the sales order completion screen as well. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998623">A new Warning message was added to the Release Confirmation Entry screen. The </a>message Quantity Exceeds Available For Bin! Continue? will be displayed to warn the user that the bin quantity entered is greater than the bin available. This new message enables the user to determine if they in fact would like to continue using this bin, in which will cause the bin quantity to go negative, or chose a bin with the available quantity. This feature is also used for Type 06 and 08 orders  in Sales Order Entry when the Bin Location information is entered in the Qty-Shp field and the quantity entered is greater than the available bin quantity. Note: this warning message will only be displayed for sales orders that are entered for branches using warehousing. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998639">Component Entry is a new function that was added to Version 16. This feature allows </a>the user to enter component items in place of the original products on the order during Release Confirmation Entry. The component items are not validated for on-hand inventory, the system assumes if this product is entered, the products listed are equivalent in stock. Therefore the original product on the sales order is not reflected in the on-hand quantity since the component items are relieved from inventory. Once the Release Confirmation Entry was processed, the original product on the sales order is updated as a kit item. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998652&quot;);"><a name="998652">Additional Subsystems</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998652", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998652", false);</script>
+      <div class="Subhead"><a name="998658">Product Tagging Screen</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998665">A new function key was added to the Product Tagging screen  in Quick Quote Entry. </a>F7- Resort enables the user to modify the sort option that was established as the default. The sort options available are P for product number or D for product description. For example, if the <span class="Italics">Product Tagging Default Sort</span> flag  in Default Parameters Maintenance is set to P in which the products will be displayed in ascending order by product number, and the user prefers the products to be displayed in ascending order by product description, this function key can be used to change the product sort  in the tagging screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998684">A new F8- Switch Entry Mode function key was added to the Product Tagging screen  </a>in Quick Quote Entry. This option allows the user to modify the position of the cursor from product number to quantity or vice versa when tagging products. A default of P for product number or Q for quantity is established in the <span class="Italics">Product Tagging Entry Mode</span> field  in Default Parameters Maintenance. For example, if the default is set to P, the cursor will be positioned at the product number, and the user prefers the cursor to be positioned at the quantity field, this function key can be used to change the cursor positioning  in the tagging screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998701">A new password option was added for the Quick Quotation Entry screen. Version 16 </a>now offers the choice of prompting the user for a password when No is selected for the Update Lost Quotations? message when deleting a line item from a quote. If a valid password is not entered when prompted, the Update Lost Quotations? message will again be displayed until the correct password is entered. Therefore not allowing the user to not update lost quotations. The process name for this new feature is QUOTE.LOST.SALES.UPDATE. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="998714">Quotation Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998720">The Quote Order Entry screen has added a new option due to the change in </a>functionality of the Campaign Priority Code  in the Marketing Parameters. This flag was modified to include Quotes when determining if a Campaign Code prompt is to be displayed when entering a quote. If this flag is set to N the user will not be prompted to enter a Campaign Code. If this flag is set to Y, the user will be prompted to enter a code, however it will not be mandatory. The user does have the option of bypassing this prompt by using the F2 key, the user will then be taken to the line item level to enter the line items for this quote. If this flag is set to O, the prompt will be displayed, however, entering a campaign code will be optional. If the user does not have a campaign code, the user has the ability of selecting the F2 function key and continuing with the quote. This feature works similar to the Campaign Code prompt  in Sales Order Entry, but not exactly. If the Campaign Priority Code flag is set to Y, it is mandatory to enter a campaign code prior to entering a order  in Sales Order Entry, but is NOT mandatory in Quote Order Entry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998734"> in the Quotation Entry process, you now have the option of selecting which line items </a>will or will not be converted into a Sales Order. To use this function, the new <span class="Italics">Line By </span><span class="Italics">Line Conversion in QOE</span> flag will need to be set to Y  in the Order Processing Parameters. Once this flag was set to Y and a quotation is converted to a sales order by selecting the Order option, the Quote Conversion screen will be displayed. The <span class="Italics">Conv?</span> Flag will be defaulted to Y, for all the lines listed on the quotation. If items on the quote are not to be updated on the sales order, you can change the convert flag to N. F2-Save will convert the line items marked as Y on the Quote Conversion screen to a sales order. If the quotation is converted again, the convert flag for those line items previously converted to sales orders will default to N. This feature also allows you to convert multiple quote lines. If converting quotes containing product characteristics, please note the Product Characteristics Information screen will not be displayed. The Product characteristics information will be updated once the quote line has actually been converted to a sales order. In addition, four new function keys were added. F6-Line Notes to display line item notes, F7-Header Notes to view header notes, F10&gt; Template to view Product Characteristics information may exist and F10&gt;Addl Desc to view additional descriptions for that product. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998757">Order Entry was updated with a new F7-Log that was added to the detail screen. This </a>new option allows the user to select the F7-Log to view all the transactions that have taken place for this quote, from  in the Quote Order Entry screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998769">A new Ship Via Number field was added to F5-Add Info on the line item detail screen. </a>This field allows you to enter a Ship Via for a line item, other than the default one that has previously been established  in Customer Maintenance. The Ship Via Code field on the Sales Order Line will be updated with the new Ship Via Number once the quote was converted to a sales order and the pick ticket was printed. <span class="Italics">*Note:</span> If a quote contains more than one line item, and Ship Via Numbers are entered for any of the items, separate release numbers will be generated  in Pick Ticket Printing to print a range of Pick Tickets to accommodate the different Ship Vias. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998782">A new password option was added for the Quotation Order Entry screen. Version 16 </a>now offers the choice of prompting the user for a password when No is selected for the Update Lost Quotations? message when deleting a line item from a quote. If a valid password is not entered when prompted, the Update Lost Quotations? message will again be displayed until the correct password is entered. Therefore not allowing the user to not update lost quotations. The process name for this new feature is QUOTE.LOST.SALES.UPDATE. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998792">Quotation Order Entry was updated with a new function key. The F8-Order Pad </a>function is identical to the F8-Order Pad function key located in Sales Order Entry. This option provides the user the option of viewing recent sales for a customer or purchasing contact by <span class="Italics">U Unit Sales, D Dollar Sales</span> or <span class="Italics">P Product Number Sort</span>. For accurate sales information to be displayed  in this screen, it is required that the Process Invoices (B Update) be processed and completed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998807">The Quote Functions  in the Quote Order Entry screen was updated with a new option. </a>The Campaign Priority Code feature was added to allow users the ability to change a campaign code for items entered on a quote. When this is used, the campaign code entered will act as the default code for all items keyed after the change was made, until it is changed again. Each item will be updated with that campaign code. This enables the user to attach campaign codes from multiple flyers or promotional campaigns for line items without having to enter a campaign code at each line item level. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998822">A new Output option was added to several inquiry screens, including the Quote Log </a>Inquiry. This new feature allows the user the opportunity of printing, saving or sending the information displayed on the inquiry screen by using one of the many options that are now offered. The available options are, <span class="Italics">Screen/ Print / Aux / Dif / Email / Fax / </span><span class="Italics">Excel</span>. Please note that if you have selected to save this information into an Excel spreadsheet, it is necessary to remain in the SB Client session until the Excel program was opened. This is due to the fact that is necessary for SB Client to communicate with the PC for the system to recognize that the Excel program needs to be open to successfully complete this process. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998838&quot;);"><a name="998838">Optional Entry &amp; Printing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998838", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998838", false);</script>
+      <div class="Subhead"><a name="998844">Shipment Processing Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998851">A new function key was added to the Product Tagging screen  in Work Order Entry. </a>F7- Sort enables the user to modify the sort option that was established as the default. The sort options available are P for product number or D for product description. For example, if the <span class="Italics">Product Tagging Default Sort</span> flag  in Default Parameters Maintenance is set to P in which the products will be displayed in ascending order by product number, and the user prefers the products to be displayed in ascending order by product description, this function key can be used to change the product sort  in the tagging screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998872">A new F8- Switch Entry Mode function key was added to the Product Tagging screen  </a>in Work Order Entry. This option allows the user to modify the position of the cursor from product number to quantity or vice versa when tagging products. A default of P for product number or Q for quantity is established in the <span class="Italics">Product Tagging Entry Mode</span> field  in Default Parameters Maintenance. For example, if the default is set to P, the cursor will be positioned at the product number, and the user prefers the cursor to be positioned at the quantity field, this function key can be used to change the cursor positioning  in the tagging screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998889">The RGA Entry process was updated to include RGA Type 09 orders to be eligible or </a>the Manual Administrative Order Hold option. Once a RGA Type 09 was entered and selected to be put on hold, the RGA printing process will not be allowed for this order, therefore will not print. Once the RGA was released from admin hold, the RGA can then be printed. The Order Log Inquiry will be updated with the standard Manual Administrative Hold and Release codes. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="998899">Void Sale</a></div>
+      <div class="Body"><a name="998907">The Credit Memo Entry process was updated with a new default type. Previously the order </a>type defaulted to the order type from the original order history record being voided. The default order type will now be 09 return goods. </div>
+      <div class="Subhead"><a name="998915">Serial Shipping Container Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998921">The Serial Shipping Container Entry process was modified for this version. The F6-</a>Delete Release function key allows you to delete a release number. Once a release number was entered, the user can than select the F6-Delete Release key, a message will be displayed prompting the user to confirm that the entire release is to be deleted. If the user selects Yes, that release number will then be deleted. This option was created to allow releases to be deleted in Release Confirmation Entry. Previously, the user would have to scan all the items containing a zero quantity  in Serial Shipping Container Entry and process the screen before the user as permitted to access the F4-Delete option  in RCE. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998936">The Release Number field was updated with a new functionality. Previously, if Yes or </a>Suspend was selected for this release, the release number would remain in the field, and the user would be required to clear to prepare for the next box to be entered. The Release Number field is now automatically cleared once Yes or Suspend are selected for this release. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998947&quot;);"><a name="998947">Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998947", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998947", false);</script>
+      <div class="Subhead"><a name="998953">Customer Maintenance</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998959">A new Potential Code field was added to the Customer Maintenance F5-Add Info </a>screen. This field enables you to enter or modify a Potential Code for a prospect. This new field works with the two new flags Update Customer Potential and Update Prospect Potential added to the Marketing Module Update Flags. Based on how the update flags are set, will determine if the customer file will be updated once any changes were made to the F5-Add Info file  in Marketing Entry or to the Potential Code filed  in Customer Maintenance. The potential codes are established in the Marketing Maintenance screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="998973">F6-A/R</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998979">A new B flag option was added to the Admin Hold Override field. If the Admin Hold </a>Override field is established with the B flag, the customer will always go on <span class="Italics">both</span> Admin Order and Admin Invoice hold. This new B flag represents a combination of O and I flags. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998998">The </a><span class="Bold">Master Account Flag</span>  in Customer Maintenance was modified for Version 16. Previously the flag setting could be changed from Y to N regardless of any children linked to this master account. This option to change this flag from Y to N was disallowed unless the children associated with this account are unlinked. If the user attempts to change this flag with linked children, the warning message <span class="Italics">Master Account </span><span class="Italics">Has Children, Cannot Change to N</span>. A new <span class="Bold">Master Account Cross Reference</span> inquiry was added to the Order ProcessingÆ InquiriesÆ Customer Info Inquiries as well. This inquiry allows the user to enter the customer number that was established as the master account, and this will display all children associated with this account. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="999020">F7-Order</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999026">A new flag was added to the Customer Maintenance option. The </a><span class="Bold">Consolidate Type</span> flag determines which type of consolidated invoices will be included in the consolidated invoice printing process. The <span class="Italics">Consolidate Invoice</span> flag must be established for this new feature to be used. The invoice printing process will check the Consolidate Type flag setting to determine if this customer’s sales orders are to be recognized as part of consolidated invoicing. If this flag is set to N the invoice printing process will proceed as normal. If this flag is set to B, S, V or left blank, the sales order will not be printed, however be processed as if it had. The sales order will then be closed, and A/R record created and inventory will be relieved. Once the Consolidated Invoice Printing Process was completed, the invoice will be included in the consolidated invoice that is printed. The available flag settings are:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="999045">B</a></span> – Sales &amp; Service Invoices are included in Consolidated Invoice Printing</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="999061">S </a>– Sales Invoices only are included in the Consolidated Invoice Printing</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="999073">N </a>– Sales &amp; Service Invoices are not included in Consolidated Invoice Printing</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="999086">If this field is left blank, the system will consider this setting the same as the B flag and </a>include both Sales &amp; Service Invoices in the Consolidated Invoice Printing process. <span class="Bold">Note:</span><span class="Italics" style="font-weight: normal;"> </span><span class="Italics" style="font-weight: normal;">A User-Forms modification is required to be made to the Invoice Printing and </span><span class="Italics" style="font-weight: normal;">Consolidated Invoice Printing User-Forms program to use this feature.</span></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999099">The Rental screen  in Customer Maintenance was updated with a new </a><span class="Bold">Environmental </span><span class="Bold">Charge</span> flag. This flag was added to determine if rental order customers should be evaluated to incur any environmental charges. The flag setting in this field will act as the default flag for the Rental Order Entry Order screen as well as override the flag setting that is set  in Rental Parameters. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="999118">Customer Contacts</a></div>
+      <div class="Body"><a name="999124">In prior versions, the Customer Contacts screen was the Customer Contact Management </a>Maintenance. This has since been modified for Version 16 to be listed as Customer Contacts. </div>
+      <div class="Subhead"><a name="999135">Update Picker Stats</a></div>
+      <div class="Body"><a name="999141">A new Update Picker Stats flag was added to the Credit Reason Code Maintenance </a>screen. This new flag was put into place to better determine pick errors associated with credit reason codes. If this flag is set to Y the attributes <span class="Italics">6.M</span>, <span class="Italics">7.M</span> and <span class="Italics">8.M</span>  in the PICKER.STATS file are updated once credit reason codes are entered and invoiced  in Credit Memo Entry. If this flag is set to N, the attributes will not be updated. This new feature is a result of the new 6.M, 7.M and 8.M attributes added to the PICKER.STATUS file, mentioned in Misc. section of the Warehousing New Features list.<span class="Italics"> </span></div>
+      <div class="Subhead"><a name="999158">Override shipping Warehouse Matrix</a></div>
+      <div class="Body"><a name="999164">The state field for Matrix Type 1 and Type 2 was modified. This field was changed to </a>accept and process the information entered without requiring the state field to contain state information. This new feature will eliminate the need to establish matrices. If a matrix currently exists for a state, the matrix for that state will be used. If a matrix is not assigned to a state, the matrix with no state will be used<span class="Italics">. Note:</span> <span class="Italics">Versions 16 and higher no longer </span><span class="Italics">require a state to be entered.</span></div>
+      <div class="Subhead"><a name="999177">Geo Codes / Zip Codes</a></div>
+      <div class="Body"><a name="999183">The Geo Codes / Zip Codes was updated to include Salesrep #1, Salesrep #2 and </a>Territory fields to the screen<span class="Italics">. </span>If a Geocode is entered for new or existing customer  in Customer Maintenance or Customer Ship-To Maintenance, these new fields will be updated from the information established  in the Geocode Maintenance screen. <span class="Italics">Note:*</span> <span class="Italics">This feature only applies to Non-Vertex users. This is due to the fact that the Geocode is </span><span class="Italics">pulled from the Vertex Software.</span></div>
+      <div class="Subhead"><a name="999204">Price Matrix Maintenance</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999210">A new Price Matrix Type 51 Customer Number-Rental was added to Price Matrix </a>Maintenance. This matrix type was created to allow a Customer Number-Rental price matrix to be used to determine calculate pricing for customers. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999227">A new Price Matrix Type 52 Customer Number-Rental Product Line was added to </a>Price Matrix Maintenance. This matrix type was created to allow a Customer Number-Rental Product Line price matrix to be used to determine calculate pricing for customers.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="999241">Price Matrix Listings</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999247">The Customer# / Rental Product # listing was added to the Price Matrix Maintenance </a>option allows you to generate information for the Customer# / Renal Product # price matrix. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999265">The Customer Number Rental listing was added to the Price Matrix Maintenance </a>option allows you to generate information pertaining to the Customer Number Rental price matrix. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999280">The Customer# / Rental Product Line listing was added to the Price Matrix </a>Maintenance option allows you to generate information pertaining to the Customer# / Rental Product Line matrix. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd999296&quot;);"><a name="999296">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd999296", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd999296", false);</script>
+      <div class="Subhead"><a name="999302">Open Sales Order Inquiry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999308">The Open Sales Order Inquiry along with several other inquiries were enhanced with </a>a quicker response time when retrieving information for the inquiry. Previously, based on the amount of information to be retrieved, the response time could be very lengthy. To provide the user with a more timely response, these inquiries return results more quickly. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999323">Previously, the Campaign Priority Code screen would be displayed once the user </a>selected to view F5-Hdr Scr. The Open Sales Order Inquiry has since been modified to include a new F10&gt;Order Info&gt;Campaign Priority Code feature to be accessed once you have selected to F5-Review a order. This option is used to view the campaign priority code for this order. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999339">A new Output option was added to several inquiry screens, including the Open Sales </a>Order Inquiry. This new feature allows the user the opportunity of printing, saving or sending the information displayed on the inquiry screen by using one of the many options that are now offered. The available options are, <span class="Italics">Screen/ Print / Aux / Dif / Email </span><span class="Italics">/ Fax / Excel</span>. Please note that if you have selected to save this information into an Excel spreadsheet, it is necessary to remain in the SB Client session until the Excel program was opened. This is due to the fact that is necessary for SB Client to communicate with the PC for the system to recognize that the Excel program needs to be open to successfully complete this process. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="999353">History Sales Order Inquiry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999359">A new option was added to History Sales Order Inquiry . Previously, once /OLI was </a>selected, the Sales Order Number field  in the Order Log Inquiry screen would appear blank, The user now has the option of typing /OLI  in History Sales Order Inquiry and the Order Log Inquiry screen will now default to the order number currently on the screen to display transactions that have taken place regarding this order. This same feature has also been added to Sales Order Entry and Sales Order Inquiry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999374">The History Sales Order Inquiry along with several other inquiries were enhanced with </a>a quicker response time when retrieving information for the inquiry. Previously, based on the amount of information to be retrieved, the response time could be very lengthy. To provide the user with a more timely response, these inquiries return the results more quickly. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999384">Previously, the Campaign Priority Code screen would be displayed once the user </a>selected to view F5-Hdr Scr. The History Sales Order Inquiry has since been modified to include a new F10&gt; Order Func&gt; Campaign Priority Code feature to be accessed once you have selected to F5-Review a order. This option is used to view the campaign priority code for this order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999401">A new Output option was added to several inquiry screens, including the History Sales </a>Order Inquiry. This new feature allows the user the opportunity of printing, saving or sending the information displayed on the inquiry screen by using one of the many options that are now offered. The available options are, <span class="Italics">Screen/ Print / Aux / Dif / Email </span><span class="Italics">/ Fax / Excel</span>. Please note that if you have selected to save this information into an Excel spreadsheet, it is necessary to remain in the SB Client session until the Excel program was opened. This is due to the fact that is necessary for SB Client to communicate with the PC for the system to recognize that the Excel program needs to be open to successfully complete this process. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="999417">Sales Order Log Inquiry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999423">The Sales Order Log Inquiry was updated to include a new SRV code. This code is </a>updated to reflect that a service document was printed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999437">A new TME code was added to the Sales Order Log Inquiry. This new code denotes </a>when a Timecard Batch Update was performed for each burden type code added to the service order. The Reference number for this code will be the product number that was established for the type entered in Service Timecard Entry. <span class="Italics">*For more information, </span><span class="Italics">review document Service Timecard Process in the Service menu*</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999448">A new option was added to Sales Order Inquiry. Previously, once /OLI was selected, </a>the Sales Order Number field  in the Order Log Inquiry screen would appear blank, the user now has the option of typing /OLI  in Sales Order Inquiry and the Order Log Inquiry screen will now default to the order number currently on the screen to display transactions that have taken place regarding this order. This same feature has also been added to Sales Order Entry and History Sales Order Inquiry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999459">A new PTR code was added to the Sales Order Log Inquiry. This new code indicates </a>that a Pick Ticket was reprinted. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999471">The LDE code will be updated to the Sales Order Log Inquiry. This indicates that </a>additional charges such as damage waiver, environmental and liability charges were deleted with line items on a rental order. These  in the Periodic Billing Entry screen by using the F5-Remove From Billing new feature. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999482">A new PBR code was added to the Sales Order Log Inquiry. This code identifies that </a>the Periodic Billing Removed process was performed on this rental order using the new F5-Remove From Billing function  in Periodic Billing Entry. . </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999494">A new Output option was added to several inquiry screens, including the Sales Order </a>Log Inquiry. This new feature allows the user the opportunity of printing, saving or sending the information displayed on the inquiry screen by using one of the many options that are now offered. The available options are, <span class="Italics">Screen/ Print / Aux / Dif / Email </span><span class="Italics">/ Fax / Excel</span>. Please note that if you have selected to save this information into an Excel spreadsheet, it is necessary to remain in the SB Client session until the Excel program was opened. This is due to the fact that is necessary for SB Client to communicate with the PC for the system to recognize that the Excel program needs to be open to successfully complete this process. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="999508">Open Release Inquiry</a></div>
+      <div class="Body"><a name="999514">The Open Release Inquiry was enhanced with a new F5-Access Tracking feature for </a>Version 16. This new option allows the user to view the tracking information for a order by automatically connecting to the carrier provider's (UPS, Fed Ex, Airborne) website, via the internet. This feature enables the user to enter a order number and select the actual box to be tracked. Once selected, the user will then automatically be connected to the carrier's tracking information website page that pertains to that box. This feature is accessible through the F5-Review Release&gt; F5-Hdr Scr&gt; F5-Freight Detail&gt; F5-Access Tracking. This is an essential feature for gathering tracking information for orders on a need to know now basis. To use this feature, it is required that SB Client as well as Internet Explorer are installed on your machine. Otherwise tracking information cannot be viewed. Additional Ship Via information is also required to accurately use this feature. The Ship Via Maintenance &gt; F10-Action&gt;Addl Optns&gt; Via Overrides screen will need to be completed with the necessary Tracking URL Prefix and Suffix information. Currently the Fed Ex and UPS carriers are established to connect the user directly to the tracking information page for the box selected. However Airborne and any other User-defined carriers will connect the user to the general tracking information website page and the user will then be required to manually enter the tracking number for the box or boxes being researched. </div>
+      <div class="Subhead"><a name="999541">Release History Inquiry</a></div>
+      <div class="Body"><a name="999547">The Release History Inquiry was enhanced with a new F5-Access Tracking feature for </a>Version 16. This new option allows the user to view the tracking information for a order by automatically connecting to the carrier provider's (UPS, Fed Ex, Airborne) website, via the internet. This feature enables the user to enter a order number and select the actual box to be tracked. Once selected, the user will then automatically be connected to the carrier's tracking information website page that pertains to that box. This feature is accessible through the F5-Review Release&gt; F5-Hdr Scr&gt; F5-Freight Detail&gt; F5-Access Tracking. This is an essential feature for gathering tracking information for orders on a need to know now basis. To use this feature, it is required that SB Client as well as Internet Explorer are installed on your machine. Otherwise tracking information cannot be viewed. Additional Ship Via information is also required to accurately use this feature. The Ship Via Maintenance &gt; F10-Action&gt;Addl Optns&gt; Via Overrides screen will need to be completed with the necessary Tracking URL Prefix and Suffix information. Currently the Fed Ex and UPS carriers are established to connect the user directly to the tracking information page for the box selected. However Airborne and any other User-defined carriers will connect the user to the general tracking information website page and the user will then be required to manually enter the tracking number for the box or boxes being researched. </div>
+      <div class="Subhead"><a name="999574">Open Order Inquiry for Written By</a></div>
+      <div class="Body"><a name="999580">A new inquiry was added to Version 16's Sales Order Processing Inquiries menu. The </a>Open Order Inquiry for Written By inquiry displays all open orders for a Written By User Id. This inquiry also includes Sort and Filter options to allow the user to specify the information that is to be displayed. </div>
+      <div class="Subhead"><a name="999591">Master Account Cross Reference</a></div>
+      <div class="Body"><a name="999597">This is a new inquiry that was added to the Order Processing menu to allow the user to </a>enter a Customer Number that has previously been established as a Master account. Once the master account number was entered, the inquiry will then display all the children accounts associated with this account.</div>
+      <div class="Subhead"><a name="999604">Product Sales Hist Inq-Sell/Ship Whse</a></div>
+      <div class="Body"><a name="999612">This is not a new inquiry to Version 16. The Product Sales History Inquiry in previous </a>versions has changed its menu name to Product Sales Hist Inq-Sell Whse. This inquiry references the same information as before, displaying the sales history by selling warehouse by a product number. Due to the changes  in this inquiry, it is required to run the Product Sales History Xref rebuild prior to using the inquiry to display valid information. </div>
+      <div class="Subhead"><a name="999623">Branch Release Inquiry</a></div>
+      <div class="Body"><a name="999629">A new R release inquiry code was added to the Branch Release Inquiry screen. This new </a>code indicates that a product falls below the reserved inventory level for a customer/product combination. If this order is rejected, the quantity on the sales order or transfer will then be updated in the backorder quantity column. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd999642&quot;);"><a name="999642">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd999642", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd999642", false);</script>
+      <div class="Subhead"><a name="999648">Monthly Lost Sales By Vendor </a></div>
+      <div class="Body"><a name="999654">To provide companies the ability to track lost sales by a Primary Vendor, Reason Code </a>and Beginning and Ending Lost sales dates, a new Monthly Lost Sales By Vendor Report was added to the Order Processing module<span class="Italics">. </span>This report will display information such as <span class="Italics">Customer #/Vendor #/Description, Order Number, Update Date, Product Number, </span><span class="Italics">Reason Code, Units, U/M, Ext. Price</span> and <span class="Italics">Gross Profit</span> that pertain to any lost sales that may have occurred for a vendor and time period. The lost sales information will be displayed on the report sorted first by Vendor, then by Reason Code.<span class="Italics"> </span></div>
+      <div class="Subhead"><a name="999670">Late Sales Order Reports</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999678">A new Late Sales Order Report was added to the Reports option of Version 16. This </a>new report provides an overview of late orders including days late by warehouse for the Current MTD as well as the previous two months. To use this report, the <span class="Italics">Keep Late </span><span class="Italics">Orders?</span> flag  in File Update Parameters must be set to Y for the system to recognize that this information needs to be tracked. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999694">A new Late Sales Order Detail Report was added to the Reports option of Version 16. </a>This new report provides an overview of late orders including days late by warehouse for the Current MTD as well as the previous two months. This report allows the user to enter criteria such as Warehouse Number, Days Late and by Warehouse or Salesrep to generate a report for information. To use this report, the <span class="Italics">Keep Late Orders?</span> flag  in File Update Parameters must be set to Y for the system to recognize that this information needs to be tracked. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="999709">Pricing Audit Reports</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999715">A new pricing audit report Price Maintenance Audit Report By User Id was added to </a>display any changes made to the Price Matrix Maintenance screen by a user Id and date range. Once this report has completed, the user will be prompted with the option to purge the information on this report. For this report to display the changes that have occurred in Price Matrix Maintenance, the <span class="Italics">Keep Price Matrix Maint Audit</span> flag  in the File Update Parameters must be set to Y, to create an audit file to track changes<span class="Italics">. </span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="999733">A new pricing audit report Price Maintenance Audit Report By Type was added to </a>display any changes made to the Price Matrix Maintenance screen by a matrix type and date range. Once this report has completed, the user will be prompted with the option to purge the information on this report. For this report to display the changes that have occurred in Price Matrix Maintenance, the <span class="Italics">Keep Price Matrix Maint Audit</span> flag  in the File Update Parameters must be set to Y, to create an audit file to track change<span class="Italics">. </span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd999748&quot;);"><a name="999748">Miscellaneous Features</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd999748", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd999748", false);</script>
+      <div class="Subhead"><a name="999754">Sales Analysis</a></div>
+      <div class="Body"><a name="999760">The Sales Source field default  in the General Report Interface screens for all the Sales </a>Analysis reports was changed. Previously, the Sales Source field would default to the WDI sales source code. This field no longer contains a default. This field will remain blank to allow the user to enter the desired sales source code for the report. In addition, service orders are now updated with the S sales source in the sales analysis files by the B Update process. </div>
+      <div class="Subhead"><a name="999772">Qte Line Conversion in SOE</a></div>
+      <div class="Body"><a name="999778">The </a><span class="Bold">Qte Line Conversion in SOE</span> is a new flag that was added to allow the conversion of existing quotations to be processed  in Sales Order Entry. If this flag is set to Y, the user will be prompted with a message that displays Customer Has Open Quotations For This Product! Do You Wish To Convert A Quote Line? If Yes is selected, the Quote Line Item Conversion screen will be displayed. For the Conv flag of the quote line item to be converted to a sales order, Y needs to be selected  in the conversion screen. If this line was converted on a previous sales order, this message will be displayed, This Line Has Already Been Converted, Continue With Conversion?. If trying to convert a quote that is currently on Administrative Quote Hold, the quote item will be displayed on the screen, but will not be available to be converted. <span class="Italics">022301A </span></div>
+      <div class="Body"><span class="Bold"><a name="999789">Note:</a></span> For this feature to be used, the <span class="Bold">Display Open/Quote/RGA Message</span> must be set to Y and the <span class="Bold">Open Quote Message</span> flag must be set to L or B.</div>
+      <div class="Subhead"><a name="999799">Optio Pick Ticket &amp; Packing List User-Forms</a></div>
+      <div class="Body"><a name="999805">user-forms were modified to not print company information on Pick Tickets and Packing </a>Lists based on the setting of the Blind Shipment Flag. If this flag is set to Y the user-forms will not print any company information such as logos name or addresses. This option allows you to send out shipments anonymously. If the flag is set to N, the information will be printed on both the pick tickets and packing lists. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd999814&quot;);"><a name="999814">Program Changes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd999814", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd999814", false);</script>
+      <div class="Body"><a name="999820">A program change was made to the Sales Order completion screen. Previously, the user </a>had the ability to change the tax jurisdiction code and the taxable flag  in the completion screen. However if the user opted to change either one of these flags, the tax amount would not be recalculated. Therefore the modification made for this version now disallows any changes to be made to the tax jurisdiction or the taxable flag (with the exception of deleting them entirely) if a line item is associated with a sales tax matrix  in Sales Tax Matrix Maintenance. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">V16 New Features</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

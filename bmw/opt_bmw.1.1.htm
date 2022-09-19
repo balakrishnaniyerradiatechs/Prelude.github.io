@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Expense Type Work Order</title>
+    <link rel="StyleSheet" href="css/opt_bmw.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1076927">Expense Type Work Order</a></div>
+      <div class="Body"><a name="1064144">An expense type work order is mainly used for in-house maintenance on rental or fleet </a>equipment where the entire transaction is expensed. When this type work order is completed, the system relieves on-hand inventory for the components used but the on-hand for the unit itself does not increase. Though an expense work order can be used for other things, this document mainly covers routine maintenance on a piece of equipment.</div>
+      <div class="Body"><a name="1064146">There are several maintenance steps required before using expense work orders. When </a>using an expense work order for equipment maintenance, the equipment part number should be set up as a bill-of-material. This allows you to track expenses for each piece of equipment. Work order expense reason codes must also be set up. These codes not only define the reason for the expense but also allow you to define separate G/L expense accounts for parts, labor, and sublet work performed outside your company.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1064148&quot;);"><a name="1064148">General Ledger </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1064148", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1064148", false);</script>
+      <div class="Body"><a name="1064149">A General Ledger Table Heading must be set up if expense work orders are used. Work </a>Order Completions post to this account instead of to the <span class="Italics">Inventory</span> account. This account is overridden if an account is defined in the work order expense reason code. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064151">Expense Work Order </a></span>Debits are posted to this account when an Expense type work order is processed in Work Order Completions. It is used for in-house expenses.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1064155&quot;);"><a name="1064155">Work Order Expense Reason Code Maintenance (/WERM)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1064155", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1064155", false);</script>
+      <div class="Path"><a name="1064428">Path: BMW/Work Order &gt; Maintenance &gt; Work Order Expense Reason Code Maintenance</a></div>
+      <div class="Body"><a name="1064449">This maintenance program creates and maintains expense reason codes used for </a>expense type work orders. A reason code may be entered for an expense work order to define why it was expensed and the accounts to post to in Work Order Completions. You may define a separate account for parts, labor, and sublet (outplant) for each reason code.<img class="Default" src="images/Expense%20type%20Work%20Order_GUI.6.1.2.jpg" width="502" height="270" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1067185">W/O Expense Reason #: </a></span>Enter the two digit expense reason code to create or edit.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1067187">Description: </a></span>Enter the description for the reason code.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1067189">Add-on Capital: </a></span>Determines if the <span class="Italics">Add-on Capital </span>bucket for the equipment id number is updated for maintenance and labor expenses for a type 05 expense work order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1067191">Y</a></span> - The Add-On Capital bucket on the Equipment Financial Info screen is updated with the dollars for Maintenance Expense - Parts (work order component costs) and Maintenance Expense - Labor (labor cost - miscellaneous entries). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1067192">N</a></span> - The Add-On Capital bucket on the Equipment Financial Info screen is NOT updated. Maintenance Expense - Parts (work order component costs) and Maintenance Expense - Labor (labor cost - miscellaneous entries) are updated.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;vertical-align: baseline;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;"><span class="Bold"><a name="1067193">G/L Table Headings:</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1067194">Parts Expense: </a></span>This account is posts non-service line items on the work order that with a service type of <span class="Bold">M</span> for Material or is not a labor or sublet expense.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1067196">Labor Expense: </a></span>This account is used to post any line item on the work order that has a service or burden type of <span class="Bold">L</span> for Labor.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1067198">Sublet Expense: </a></span>This account is used to post any line item on the work order that has a service type of <span class="Bold">S</span> for Sublet or a burden type of <span class="Bold">O</span> for Outplant.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1064170">If any of these headers do not have an account, the the </a><span class="Italics">Expense Work Order</span> account is posted to. For example (using the accounts defined in the above reason code), if a line item on a work order is in the parts expense category, that item posts to the <span class="Italics">Expense Work </span><span class="Italics">Order </span>account in the G/L table. This is due to the <span class="Italics">Parts Expense</span> account being blank in the reason code. If a line item on the work order falls into the labor expense category, the posting for that line item will be to the <span class="Italics">Labor Expense </span>account defined in the reason code.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1064173&quot;);"><a name="1064173">Equipment Maintenance (/EM &gt; Action Bar &gt; Parts List)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1064173", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1064173", false);</script>
+      <div class="Path"><a name="1064564">Path: Rental &gt; Equipment Subsystem &gt; Maintenance &gt; Equipment Maintenance &gt; * Action &gt; Parts List</a></div>
+      <div class="Body"><a name="1064174">The Parts List Entry option sets up the parts needed for each maintenance routine </a>performed on a piece of equipment. This is only one method used to enter components on a type 05 expense work order. The other methods are described in the Work Order Entry section.<img class="Default" src="images/Expense%20type%20Work%20Order_GUI.6.1.3.jpg" width="475" height="325" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064182">Product#/Description: </a></span>Enter the valid product numbers needed for each maintenance routine performed on the piece of equipment. For example, products were entered for an oil change and a tire change. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064183">Maint Code: </a></span>Defines which scheduled maintenance routine the corresponding product is used for. For example: in the above screen, all parts used in an oil change are identified with the code of OC1. This code is set up and maintained in Scheduled Maintenance Code Maintenance (/SMCM).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064184">Quantity: </a></span>Defines the quantity of the product to use when the piece of equipment is repaired.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1066960">F5-Maint Required: </a></span>Used to view or change the dates used to determine when a piece of equipment is next scheduled for maintenance. This option should only be used if you are letting the system keep up with your scheduled maintenance. For more information on scheduled maintenance see document Automatic Work Order Generation for Equipment Scheduled Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1064190&quot;);"><a name="1064190">Product Maintenance (/PM &gt; Action Bar &gt; Addtl Optns &gt; Rental Information)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1064190", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1064190", false);</script>
+      <div class="Path"><a name="1064639">Menu: Inventory &gt; Maintenance &gt; Product Maintenance &gt; Product Maintenance &gt; Action &gt; Addtl Opts &gt; </a>Rental Information</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064660">Rental Return Status: W</a></span> -To generate an expense type work order automatically at the time of rental return and invoicing (V17+).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1064195&quot;);"><a name="1064195">Work Order Entry (/WOE)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1064195", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1064195", false);</script>
+      <div class="Path"><a name="1064701">Path: BMW/Work Order &gt; Work Order Entry</a></div>
+      <div class="Body"><a name="1066997">The Work Order Entry program is used to enter an expense work order for routine </a>maintenance. There are three methods available to load products needed for routine maintenance. The first method is the most efficient, but the other methods can be used.</div>
+      <div class="Subhead"><a name="1067102">Pull Components By Using A Maintenance Code</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1066998">Bill Number: </a></span>For expense orders, this should be the serial number or equipment Id number of the item being serviced. The F3 lookup can be used to search by equipment id number or serial number. This means that the product number must also be set up as a bill of material. This allows the expenses to be tracked against a piece of equipment but only if the product tracks by serial number. For example, product number 9801 is set up for a Bobcat front-end loader. A bill number 9801 should also be set up in Bill Of Material Maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1064198">In the work order header screen, set </a><span class="Italics">Order Type</span> to <span class="Bold">05 Expense</span>. This Expense Information screen appears.<img class="Default" src="images/Expense%20type%20Work%20Order_GUI.6.1.4.jpg" width="486" height="156" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064738">Expense Reason Code: </a></span>Enter the code to define why the work order is expensed. This assigns the expense accounts to post to in Work Order Completions. If left blank, Work Order Completions posts to the <span class="Italics">Expense Work Order</span> account in the G/L table.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064205">Maintenance Code: </a></span>Used to automatically load components from the equipment parts list. Multiple maintenance codes may be entered. The system automatically pulls in the products from the equipment parts list for the maintenance code(s) entered. You may leave this field blank and define the components at the work order line item level.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1064207">When the work order header screen is exited and if the bill number tracks by serial </a>number, you are prompted for the serial number of the piece of equipment being serviced. This is how the system knows which equipment record to update with the maintenance/expense information. <img class="Default" src="images/Expense%20type%20Work%20Order_GUI.6.1.5.jpg" width="394" height="189" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1064213">When the serial number is entered, the rest of the information - if available - appears. In </a>the work order line item screen, components are displayed if a maintenance code was entered in the work order header and if the piece of equipment has components in its parts list for the defined maintenance code. Print and issue the work order as usual. Burdens and other functions of the work order system are the same. Though the previously described way to automatically pull in the products needed for a routine maintenance is the most efficient, there are two other ways to achieve the same result:</div>
+      <div class="Subhead"><a name="1067044">Pull Components From The Equipment Parts List </a></div>
+      <div class="Body"><a name="1067040">When using this method the system displays all the components defined in the equipment </a>parts list allowing you to select the ones you want to add to the work order.<img class="Default" src="images/Expense%20type%20Work%20Order_GUI.6.1.6.jpg" width="600" height="261" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064225">Available:</a></span> the quantity available in the warehouse for the product.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064226">Asm: </a></span>Displays ‘* if the corresponding product is set up as a bill of material. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064227">Asm Quantity: </a></span> the assembly quantity from the parts list for the quantity.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064228">Add To Order: </a></span>Indicates which products you wish to add to the work order. Change to <span class="Bold">Y</span> to add it to the order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064229">Quantity: </a></span>Enter the quantity of the product add to the order. A quantity should be entered even if it is the <span class="Italics">Asm Quantity.</span> If a quantity is not entered, the products are pulled into the work order without assembly quantities. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064230">Exp: </a></span>Indicates if a bill of material product (indicated by ‘* in  Asm) should be exploded on the work order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1067114">Y </a></span>- All the components in the bill of material will be placed on the work order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1067118">N</a></span> - Only the bill of material is placed on the work order. For example, using the bill of material 9801-OC, if this flag were set to N then 9801-OC is placed on the work order. If this flag were set to Y, then the components making up 9801-OC are placed on the work order. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064232">F5-Accept All: </a></span>Pull the components in the equipment parts list into the work order line item screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1072259">F2-Save:</a></span> All components whose <span class="Italics">Add To Order</span> flag is set to Y are pulled into the work order line item screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1072260">Create a Product Number and Bom</a></div>
+      <div class="Body"><a name="1072261">The components on the bill of material would be the products used to perform the routine. </a>For example, 9801-OC is created in Product Maintenance and in Bill Of Material Maintenance for an oil change on a 9801. The bill of material is created with the components of the oil change (oil, oil filter, and labor). The bill of material is then added to the equipment parts list or simply entered on a work order. </div>
+      <div class="Body"><a name="1072268">On the work order line item, enter the bill of material that identifies the service being </a>performed (i.e. 9801-OC). The system asks if the components of the bill of material should be exploded onto the work order. If you respond Yes, all the components in the bill of material will be placed on the work order. If you respond No, then only the bill of material will be placed on the work order. For example, using the bill of material 9801-OC, if you were to respond No then 9801-OC would be placed on the work order. If you were to respond Yes, then the components making up 9801-OC are placed on the work order.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1064241&quot;);"><a name="1064241">Work Order Issues (/WOIE)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1064241", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1064241", false);</script>
+      <div class="Path"><a name="1064894">Path: BMW/Work Order &gt; Work Order Processing &gt; Work Order Issues Entry</a></div>
+      <div class="Body"><a name="1064242">Issue the work order as usual. This process works the same way as for a regular work </a>order. (See Work Order Overview  document). On-hand inventory is relieved for the components. A credit is posted to the <span class="Italics">Inventory</span> account and a debit is posted to the <span class="Italics">Inventory Work In Process </span>account for the extended cost of all products issued. There are no postings to the expense accounts at this time. Below is a sample posting of an expense work order from Work Order Issues (first posting). The second posting is for a labor burden code added to the work order through Miscellaneous Entries.  <img class="Default" src="images/Expense%20type%20Work%20Order_GUI.6.1.7.jpg" width="589" height="162" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1064910&quot;);"><a name="1064910">Work Order Completions (/WOC)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1064910", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1064910", false);</script>
+      <div class="Path"><a name="1064931">Path: BMW/Work Order &gt; Work Order Completions</a></div>
+      <div class="Body"><a name="1064259">Work Order Completions for expense work orders are different than a regular work order. </a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064260">A regular work order when completed:</a></span> Increases on-hand inventory for the bill of material product; credits the <span class="Italics">Inventory Work In Process </span>account and debits the <span class="Italics">Inventory</span> account for the extended cost of work order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1064263">An expense type work order when completed:</a></span> Does not increase on-hand inventory for the bill of material product; credits the <span class="Italics">Inventory Work In Process </span>account for the extended cost of the work order and debits one or more Expense accounts.<img class="Default" src="images/Expense%20type%20Work%20Order_GUI.6.1.8.jpg" width="591" height="124" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1064277">In this example, the oil and filter posted to the </a><span class="Italics">Expense Work Order</span> account defined in the G/L table and the labor posted to the account defined in the reason code. Work Order Completions also updates the equipment record if the bill of material is the actual equipment product and if it is serialized. These can be viewed in Equipment Maintenance or Equipment Inquiry under the <span class="Bold">F8-Financial</span> function key. <img class="Default" src="images/Expense%20type%20Work%20Order_GUI.6.1.9.jpg" width="541" height="381" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1064285">The </a><span class="Bold">F5-Review Maint Exp</span> function key drills down into an Equipment Maint Expense Inquiry screen where all work orders that were expensed against the current piece of equipment are displayed. From this inquiry screen, you may drill down into Work Order History Inquiry to view the actual work order.</div>
+      <div class="Body"><span class="Bold"><a name="1064287">Note: </a></span>Only Add-On Capital, Maintenance Expense-Parts, Maintenance Expense-Labor, and Sublet Maint Expense-Labor are updated from work orders. The Add-On Capital field is ONLY updated from work orders if the work order expense reason code has the <span class="Italics">Add-</span><span class="Italics">On Capital </span>flag set to Y in Work Order Expense Reason Code Maintenance. All of these are updated from Manual Invoice Entry when asset tracking is turned on in the account and the asset tracking charge type is set to one of these types.</div>
+      <div class="Body"><span class="Bold"><a name="1064289">V18+:</a></span> You can create a fixed asset record for an '05' type expense work order. It is a sub asset of the original fixed asset. Also, the Master Asset Entry and Sub Asset Disp screens in Asset Maintenance show the Sub Asset record for the Master Asset or the Master Asset for the Sub Asset record.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">Expense Type Work Order</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

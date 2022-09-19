@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>EDI Transmissions</title>
+    <link rel="StyleSheet" href="css/admin_edi.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1066058">EDI Transmissions</a></div>
+      <div class="Body"><a name="1066059">This document covers the sending and receiving of EDI data through the Prelude System. The different </a>transmission protocols are not discussed, due to the differing nature of the protocols and VAN (Value Added Network) requirements. The assumption is made that the transmission scripts are already in place, and will be generically referred to as running the EDI session.To use these features, go to E-Commerce &gt; Electronic Data Interchange or type /M:EDI:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1066060">The File Transfers submenu contains all the menu commands to run an EDI session. The different </a>transmission types that are supported are contained there.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1066061">The Receive File Conversion submenu is the heart of the EDI system. From this menu, data is </a>converted into the appropriate database format, parsed into the different document types, and moved into (or out of) Prelude.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1066062">The Transaction Processes submenu is not used in the new EDI Mapping Scheme and will not serve </a>any function.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1066063">The Reports submenu contains all reports to display EDI control information such as trading </a>partners, host identifiers, etc.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1066064">The Maintenance submenu contains all commands to update EDI control information such as </a>trading partners, host identifiers, etc.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1066065&quot;);"><a name="1066065">Create GS/ISA Segments</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1066065", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1066065", false);</script>
+      <div class="Body"><a name="1066066">This is the first process to run when performing an EDI session. This process will bundle all outgoing </a>documents that are ready to send. It will create the appropriate ISA/GS headers for the data, group the documents together by trading partner, and also ready any 997 Functional Acknowledgements. At this point, the data has not been sent. It has simply been bundled and prepared to send together by trading partner, and also ready any 997 Functional Acknowledgements.</div>
+      <div class="Path"><a name="1066070"> Path: E-Commerce Electronic Data Interchange File Transfers Create GS/ISA Segments<img class="Default" src="images/EDI%20Transmissions_GUI.5.1.1.jpg" width="558" height="309" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1066071">At this point, the data has not been sent. It has simply been bundled and prepared to send.</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1066072&quot;);"><a name="1066072">Retransmit Single Document</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1066072", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1066072", false);</script>
+      <div class="Body"><a name="1066073">This process allows a single document number to be retransmitted.</a></div>
+      <div class="Path"><a name="1066077">Path: E-Commerce Electronic Data Interchange File Transfers Retransmission Menu Retransmit Single Document<img class="Default" src="images/EDI%20Transmissions_GUI.5.1.2.jpg" width="279" height="153" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1066078">In the above example, an Invoice 100452 is being selected for retransmission. This does not retransmit </a>the document, but the 810 will be selected and bundled when the Create GS/ISA Segments process is run. The documents that may be retransmitted at this point are 850.s, 810.s, and 856.s. </div>
+      <div class="Body"><a name="1066079">The transmission of an entire batch uses the General Report Interface that is common to all Prelude </a>reports. Simply enter a date and/or time range, then select the batch to send. After selection, proceed directly to the appropriate EDI session to send, there is no need to run the Create GS/ISA Segments process because the data already has this information from the previous send. The purge utility also uses the report interface. After selection, it will purge the selected batches. This should be done occasionally to free disk space.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1066080&quot;);"><a name="1066080">Retransmit Entire Batch</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1066080", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1066080", false);</script>
+      <div class="Body"><a name="1066081">This process allows an entire batch to be retransmitted.</a></div>
+      <div class="Path"><a name="1066085">Path: E-Commerce Electronic Data Interchange File Transfers Retransmission Menu Retransmit Entire Batch<img class="Default" src="images/EDI%20Transmissions_GUI.5.1.3.jpg" width="544" height="303" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1066086&quot;);"><a name="1066086">Retransmit Batch Purge</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1066086", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1066086", false);</script>
+      <div class="Body"><a name="1066087">This process performs the purge to delete the records from the retransmitted batch.</a></div>
+      <div class="Path"><a name="1066091">Path: E-Commerce Electronic Data Interchange File Transfers Retransmission Menu Retransmit Batch Purge <img class="Default" src="images/EDI%20Transmissions_GUI.5.1.4.jpg" width="537" height="297" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1066092&quot;);"><a name="1066092">Data Check &amp; Character Conversion</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1066092", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1066092", false);</script>
+      <div class="Body"><a name="1066093">This process converts the data into an attribute-delimited file, replacing the segment terminators with </a>attribute marks and the element terminators with value marks.</div>
+      <div class="Path"><a name="1066097">Path: E-Commerce Electronic Data Interchange Receive File Conversion Data Check &amp; Character Conversion<img class="Default" src="images/EDI%20Transmissions_GUI.5.1.5.jpg" width="534" height="295" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1066098">At the same time, the ISA and GS headers are analyzed to see which trading partner the data is from, </a>what ISA/GS versions have been received, and what determines the document type. This is the first process is that is run AFTER an EDI session has been performed. The only input required for this process is a mailbox number. Depending upon the communications setup, this may be a single mailbox number or multiple mailboxes (corresponding to one per VAN). If you are unsure of the appropriate mailbox number, please contact Activant. As this process runs, it will display to the screen the ISA identifiers that data has been received from, as well as a total byte count.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1066099&quot;);"><a name="1066099">Receive File Conversion</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1066099", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1066099", false);</script>
+      <div class="Body"><a name="1066100">Once the data has been formatted correctly, this process will take this data and create documents in </a>Prelude (i.e. 850.s will become Orders, 810.s will become Vendor Invoices, etc).</div>
+      <div class="Path"><a name="1066104">Path: E-Commerce Electronic Data Interchange Receive File Conversion Receive File Conversion<img class="Default" src="images/EDI%20Transmissions_GUI.5.1.6.jpg" width="546" height="304" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1066105">This process only prompts for a mailbox number. Once entered, the data will be parsed and an error </a>report will automatically be generated (prompting for print to screen or printer). If this report is blank, no errors were found. If errors did exist, please print this report and fax it to Activant. Documents that contained errors will remain in the EDI system until resolved, while the error-free documents will continue into Prelude.</div>
+      <div class="Body"><a name="1066106">Once the error report prints, if any documents were received to convert, this conversion process will </a>begin automatically. Occasionally the use may see messages flash along the bottom of the screen. This is perfectly normal output as the conversion process attempts to match incoming data (product numbers, ship-to numbers, etc.) with data in Prelude. Once the process finishes, the user is returned back to the menu. At this point, all data should be converted and EDI transactions now exist in Prelude as normal Prelude documents.</div>
+      <div class="Body"><a name="1066107">To find any documents that were received through EDI, run the appropriate open document report (i.e. </a>Open Sales Order Detail Report) and select an order source of "E" for EDI.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1066108&quot;);"><a name="1066108">Summary of the EDI Process</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1066108", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1066108", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1066109">EDI File Transfers Create GS/ISA Segments </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1066110">EDI File Transfers Run the appropriate file transfer</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1066111">EDI Receive File Conversion Data Check &amp; Character Conversion </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1066112">EDI Receive File Conversion Receive File Conversion &amp; Report </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1066113">Run any open document reports with source of "E" for EDI.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065642">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">EDI Transmissions</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

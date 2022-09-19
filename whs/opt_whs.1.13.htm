@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Radio Frequency Order Picking</title>
+    <link rel="StyleSheet" href="css/opt_whs.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1109821">Radio Frequency Order Picking</a></div>
+      <div class="Path"><a name="1109822">Path: Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Order Picking (/ROPE)</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109823">Picker Id.: </a></span>Enter the picker id for the person who will be picking the following orders.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109824">Release number:  </a></span>If the warehouse option <span class="Italics">Require Picker Assignment</span> is set to Y, then a release number must be entered and it must were assigned to this picker. Press F3 to search for releases assigned to this picker. The releases are sorted by the required date. In V18+, multiple releases can be picked in one session. The first five releases are displayed on the screen, but additional releases can be entered.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109825"># of lines: </a></span>If the picker has not entered or selected a release, then the system selects lines to pick based upon the entered criteria. In this situation the picker is gang picking lines regardless of what release they are on, and Radio Frequency Release Confirmation Packing is used to assemble the products by release.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109826">Zone:  </a></span>If appropriate, enter a picking zone. Defaults to the RF order picking zone if one exists for the user id.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1109827">The lines are selected from the data created during bin allocation, and sorted by bin sort </a>sequence. Each product appears with the description, from bin, and quantity. If <span class="Italics">Validate </span><span class="Italics">Radio Frequency</span> in Warehouse Maintenance is set to Y, then the bin number and the product number must be scanned. If not, then the return key can be used to accept the displayed information. The <span class="Italics">To</span> bin is prompted for which represents the pickers cart. At that time a bin move is done from the <span class="Italics">From</span> bin to the cart. After all of the lines selected by the picker were picked, enter a destination bin, which represents where the material is held awaiting shipment. If a partial quantity of a line item is picked, the balance of the pick quantity for that product appears after the first pick. The balance of the product is required for until the entire quantity was picked or a 0 pick quantity is entered.</div>
+      <div class="Body"><a name="1109828">In V18+, this process was updated to check </a><span class="Italics">Auto RCE After RF Picking</span> in Warehouse Maintenance F7 &gt; F5. RCE is performed for complely and partially picked lines.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="opt_whs.1.8.htm#1109821">Entering, Picking, and Shipping Sales Orders</a>:Radio Frequency Order Picking</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

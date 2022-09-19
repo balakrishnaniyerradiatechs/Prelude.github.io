@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Send Page Feature</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1126849">Send Page Feature</a></div>
+      <div class="Body"><a name="1126850">Operator can send a message to a pager of a single user or of multiple users. Users being paged must </a>have a <span class="Italics">Pager Id </span>set up in User Identification Maintenance and their pager number set up in Unix. The message server must be running at the Unix level for paging to operate. </div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1126851&quot;);"><a name="1126851">Message Server</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1126851", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1126851", false);</script>
+      <div class="Body"><a name="1126852">The client is required to purchase paging software of their choice. Activant uses HipLink as the message </a>server but another Unix paging software may be used. User should consult the Unix paging software they are using on how to set up the users and the pager numbers.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1126853&quot;);"><a name="1126853">HipLink (for System Administrator only)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1126853", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1126853", false);</script>
+      <div class="Body"><a name="1126854">HipLink is the message server Activant currently uses. It resides at the Unix level so the user must shell </a>out to Unix (!sh) to access it. At the Unix prompt type “hiplink”. HipLink is used to start and stop the message server and to maintain users. All users who can receive messages via a pager should be entered and maintained. The user’s pager ID, pager number, and service are required for this operation. This can be set up in the Config System &gt; Users option. Using the example from Customer Maintenance, Pat Smith would be “Psmith|9319005|PageNet”. To exit type and save type “:Q”. To exit without saving type “:Q!”.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1126855&quot;);"><a name="1126855">User Identification Maintenance </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1126855", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1126855", false);</script>
+      <div class="Body"><a name="1126856">The </a><span class="Italics">Pager Id</span> field (F6-Personal screen) must be established in User Identification Maintenance.</div>
+      <div class="Path"><a name="1126860">Path: System Parameter &gt; Maintenance &gt; User Identification Maintenance &gt; F6-Personal<img class="Default" src="images/Paging_GUI.30.1.1.jpg" width="537" height="228" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1126861">Pager Id:</a></span> this field defines the user’s pager ID as it is used at the Unix level. This maintains a cross-reference between Pick where the user resides and Unix where the pager number is stored. For example: if user Pat J. Smith (PJS) has a message server ID of “Psmith” then “Psmith” would be the <span class="Italics">Pager Id</span> for user PJS. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1126862&quot;);"><a name="1126862">Send Page (/PAGE)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1126862", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1126862", false);</script>
+      <div class="Body"><a name="1126866">Type /PAGE to send a message to a pager number or multiple pager numbers.<img class="Default" src="images/Paging_GUI.30.1.2.jpg" width="522" height="232" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1126867">User ID: </a></span>this field defines the user(s) that will receive the message. If manually entering multiple users, the user IDs should be comma delimited. For example: if a message needs to be sent to users AJT, LJT, and KAB then “AJT,LJT,KAB” would be entered.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1126868">Message: </a></span>this field is where the operator will type the message to be sent to the pager(s).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1126869">Sender ID:</a></span> this field defines who sent the message. This is a free-form field that defaults to the operator’s user ID but may be overridden. This is sent with the message so the user receiving the message will know who sent the pager message.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.47.htm#1126849">Printers</a>:Send Page Feature</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

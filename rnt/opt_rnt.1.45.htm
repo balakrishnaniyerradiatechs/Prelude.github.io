@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Periodic Billing</title>
+    <link rel="StyleSheet" href="css/opt_rnt.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head3"><a name="1097210">Periodic Billing</a></div>
+      <div class="Body"><a name="1097211">This process determines if any open rental orders set up for periodic billing need to be </a>invoiced for the current billing cycle and generates billing entries for those orders. This procedure checks each line item on the rental order to evaluate if it is available for billing. Periodic Billing may be run for a order, customer, and/or warehouse.</div>
+      <div class="Path"><a name="1097215">Path: Rental &gt; Processes Periodic Billing</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1097216">Billing Date:</a></span> enter the date for the system to check when selecting open rental orders to verify if a rental has completed a billing period.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1097217">Maximum Days In Cycle:</a></span> this field defaults to the number of days that translates to a month cycle for billing purposes. Basically, this is the minimum number of days past the on-rent or bill-through date before you can bill the order again. This field defaults to 2 weeks (14 days) plus the value in the <span class="Italics">Days Shift To Week</span> option parameter. (Three weeks is normally considered a month in the rental industry. Therefore this field defaults to the shortest number of days considered a month which is 2 weeks plus whatever it takes for another week.) If the <span class="Italics">Days Shift To Week</span> option parameter is set to ‘4’ then 18 days is the minimum number of days the item is on rent before you can bill it for another month. Remember that this is 18 days past the on-rent date (if first pass) or the bill-through date (if already billed once through periodic billing).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1097218">Order Number:</a></span> enter the order number to be invoiced during periodic billing or leave the field blank to generate invoices for all orders that meet the qualifications for periodic billing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1097219">Warehouse Number:</a></span> enter the warehouse number to only invoice orders for a warehouse or leave the field blank to generate invoices for all warehouses that meet the qualifications for periodic billing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1097220">Customer Number:</a></span> enter the customer number to only invoice orders for a customer or leave the field blank to generate invoices for all customers that meet the qualifications for periodic billing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1097221">When this screen is exited, the system will select all open rental orders set up for periodic </a>billing. It then compares the <span class="Italics">Billing Date </span>with the On-Rent date (if first pass through periodic billing) or the Bill-Through date (if already billed once through periodic billing) to determine if the <span class="Italics">Max Days In Cycle</span> has been reached or exceeded. If so, the order is set up for invoicing. For example, the <span class="Italics">Billing Date</span> is set to ‘07/14/02’ and the <span class="Italics">Max Days In </span><span class="Italics">Cycle</span> is set to ‘18’. A rental order whose on-rent date is 06/30/02 will not be selected during this run because it is not 18 days past the on-rent date. A rental order whose bill-through date is 06/24/02 will be selected during this run because it is 18 days past the bill-through date. The bill-through date on this rental order would be updated to 08/11/02 (based on a 28 day month). This allows you to get your money sooner.</div>
+      <div class="Body"><a name="1097222">If a rental order exceeds the customer's credit limit when periodic billing is performed and </a>the flag, <span class="Italics">Cred Chk in Periodic Billing</span>?, is set to ‘Y’, the rental order will go on credit hold. Once the rental order is released from credit hold, the rental order is setup for invoicing.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="opt_rnt.1.31.htm#1097210">Rental Financials</a>:<a class="WebWorks_Breadcrumb_Link" href="opt_rnt.1.42.htm#1097210">Periodic Billing</a>:Periodic Billing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

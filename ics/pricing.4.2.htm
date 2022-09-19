@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Implementing the Price/Cost Hierarchy</title>
+    <link rel="StyleSheet" href="css/pricing.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1352840">Implementing the Price/Cost Hierarchy</a></div>
+      <div class="Body"><a name="1352869">To automatically price sales orders and cost purchase orders based on </a>pricing structures negotiated with customers and vendors, you must understand the hierarchy the system uses to find a price or cost. Prices and costs are set up at multiple levels in the system and can be based on quantities, weight, types of products, product lines, or vendor lines. Once you set up the pricing structures, you can then assign the values to any customer/product combination or vendor/product combination.</div>
+      <div class="Subhead"><a name="1352845">Sales Price Hierarchy</a></div>
+      <div class="NumberedIntro"><a name="1352841">The system searches for price information in the following order to </a>determine the price to use on a sales order or quote:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1352842">1st: Matrix or contract</a></span> pricing set up for a customer. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1352750">2nd: Quantity break discounts</a></span> based on the quantity of a product purchased or <span style="font-weight: bold;">Sum and Reprice </span>discounts based on the quantity of total products purchased.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1352783">3rd: Column pricing </a></span>set up at the product level and the product/warehouse level. A <span style="font-style: italic;">Price Code</span> is assigned to a customer to determine which price column to use. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1352804">Best Price</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-style: italic;"><a name="1352811">Utilize Best Price </a></span>in <span style="font-weight: bold;">Order Processing Parameters</span> determines if the system searches all levels of pricing to determine the price on a sales order.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-style: italic;"><a name="1352812">Best Price</a></span><span style="font-weight: bold;"> </span>in <span style="font-weight: bold;">Customer Maintenance </span>determines if the system searches all levels of pricing to determine the price on a customer’s sales order. This setting overrides the <span style="font-style: italic;">Utilize Best Price</span> flag in Order Processing Parameters.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Subhead" style="margin-top: 14.0pt;"><a name="1352751">Cost Hierarchy</a></div>
+      <div class="NumberedIntro"><a name="1352861">The system searches for cost information in the following order to determine </a>the cost to use on a purchase order:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1352754">1st: </a></span>At the<span style="font-weight: bold;"> product/vendor/warehouse</span> level (refer to <a href="javascript:WWHClickedPopup('ics', 'Product_Records.2.39.htm#1403559', '');">Maintaining a Product by Warehouse/Vendor</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1352758">2nd</a></span>: At the <span style="font-weight: bold;">product/vendor</span> level (refer to <a href="javascript:WWHClickedPopup('ics', 'pricing.4.23.htm#1311852', '');">Using Company Vendor Cost</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1352762">3rd:</a></span> At the <span style="font-weight: bold;">product/ warehouse</span> level (refer to <a href="javascript:WWHClickedPopup('ics', 'pricing.4.16.htm#1308498', '');">Entering Prices/Costs for a Product - by Warehouse</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1352766">4th</a></span>: At the <span style="font-weight: bold;">product level</span> (refer to <a href="javascript:WWHClickedPopup('ics', 'pricing.4.6.htm#1308983', '');">Entering Prices/Costs for a Product</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Establishing Product Price Groups", "ics", "pricing.4.3.htm#1352626");
+          WWHAddRelatedTopic("Setting Up Discount Break Tables", "ics", "pricing.4.5.htm#1339017");
+          WWHAddRelatedTopic("Entering Prices/Costs for a Product", "ics", "pricing.4.6.htm#1308983");
+          WWHAddRelatedTopic("Entering Prices/Costs for a Product - by Warehouse", "ics", "pricing.4.16.htm#1308498");
+          WWHAddRelatedTopic("Using Company Vendor Cost", "ics", "pricing.4.23.htm#1311852");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="pricing.4.1.htm#1352840">Product Prices and Costs</a>:Implementing the Price/Cost Hierarchy</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

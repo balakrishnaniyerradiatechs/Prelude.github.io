@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Setting Up a Lot Product</title>
+    <link rel="StyleSheet" href="css/Stock_Receipts.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1380968">Setting Up a Lot Product</a></div>
+      <div class="Body"><a name="1642209">If you want to make sure that lot numbers are assigned to products before </a>they are part of inventory, you can set up products to requires a lot number when received.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1422513">Option Parameters</a></div>
+            <div class="TableText"><a name="1422514">The following flags in Additional Option Parameters apply to lot numbers:</a></div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1422519">Use Whse Over Lot Cost</a></span> determines which cost to use for lot numbers in the general ledger. Choose from the following:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1422520">Y</a></span> - Use warehouse cost for general ledger entries</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1422521">N</a></span> - Use average lot cost for general ledger entries.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1525547">Disallow Same Lot# For Diff P/N’s</a></span> determines if the same lot number is allowed for 2 part numbers. Choose from the following:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1525548">Y </a></span>- You cannot use the same lot number for different product numbers.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1525549">N </a></span>- You can use the same lot number for different product numbers.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText"><a name="1422522">You can override this setting for sales orders in the </a><span style="font-style: italic;">Disallow Same Lot# For Diff P/N’s </span>field<span style="font-style: italic;"> </span>in Order Processing Parameters &gt; F5-Add Info.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="NumberedIntro" style="margin-top: 14.0pt;"><a name="1382744">To set up a product to require a lot number in Stock Receipts Entry:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1381978">Select </a><span style="font-weight: bold;">Inventory &gt; Maintenance &gt; Product Maintenance &gt; Product </span><span style="font-weight: bold;">Maintenance</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1595544">Enter the </a><span style="font-style: italic;">Product Number</span> and press <span style="font-weight: bold;">F5-Add Info.</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1595548">For </a><span style="font-style: italic;">Lot Number Flag</span>, enter <span style="font-weight: bold;">Y</span>. The <a href="javascript:WWHClickedPopup('ics', 'pm_lot_info.htm#1338005', '');">Lot Information Screen</a> appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1595536">For </a><span style="font-style: italic;">Lot Exp Date Flag</span>, choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1381985">Y</a></span> - Expiration dates are required for each lot in stock receipts. You can review product expiration dates in the <a href="javascript:WWHClickedPopup('ics', 'lot_exp_date_rpt.htm#1680932', '');">Lot Shelf Life Expiration Report</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1381989">M</a></span> - Date of manufacture is required for each lot in stock receipts. In this case, the date of manufacture plus the <span style="font-style: italic;">Shelf Life Days</span> in the Product Maintenance <a href="javascript:WWHClickedPopup('ics', 'pm_add_info.htm#1407567', '');">Additional Information Screen</a> determines the expiration date. For example, if the date of manufacture is May 1, and the shelf life days is 90; the expiration date is August 1.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1381993">N </a></span>- Expiration dates are not required.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1382383">For </a><span style="font-style: italic;">Minimum Remnant Quantity</span>, you can enter the minimum quantity that is considered suitable to sell if you want to exclude small remnants from availability calculations.<br /><span style="font-weight: bold;">Example</span>: Pipes are usually cut to meet a customer’s request. Once the pipe is cut down to about 2 feet, it may not be a commonly used size. The pipe is still in stock and affects the purchasing of new pipes. This flag allows Nightly Processing to ignore the 2-foot pipe (as if it didn’t exist) to recommend a purchase quantity.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1381995">For </a><span style="font-style: italic;">Lot Priority Code</span>, choose from the following to determine which lots are picked first:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1381996">N</a></span> - No order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1381997">S</a></span> - Smallest lot that fills the requirement.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span class="bold" style="font-weight: bold;"><a name="1381998">O</a></span> - Oldest lot first.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1382000">For </a><span style="font-style: italic;">Lot Pack Flag</span>, indicate if you want to prompt for <span style="font-style: italic;">Lot Pack Quantity </span>and <span style="font-style: italic;">Number of Lot Packs</span> in Purchase Order Entry. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1382610">N</a></span> - The product is not sold in a pack. Go to step 15.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1382001">Y</a></span> - The product is sold in a pack.  The <a href="javascript:WWHClickedPopup('ics', 'pm_lot_add_info.htm#1436614', '');">Lot Additional Info screen</a> opens to allow you to fill in default package information to display when you enter the lot product on a purchase order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">8	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1382555">Enter the </a><span style="font-style: italic;">Description </span>of the package (e.g., pack, box, case). For information purposes only.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">9	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1382868">For </a><span style="font-style: italic;">Std Lot Pack</span>, enter the quantity in each lot pack. This number is the default on purchase orders. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">10	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1514899">For </a><span style="font-style: italic;">Lot Pack Per Pallet</span>, enter the number of packs usually bought at a time for this product. This number is used for the default on purchase orders. For example, one box of screws contains 100 screws. Screws are normally bought by the case, which contain 10 boxes. Therefore, the number of packs is 10.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">11	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1514900">Enter the </a><span style="font-style: italic;">Tariff Commodity Code</span> if this is an overseas vendor. Refer to <a href="javascript:WWHClickedPopup('ics', 'Product_Records2.3.88.htm#1346306', '');">Tariff Commodity Codes</a> for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">12	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1514903">Enter the </a><span style="font-style: italic;">Competitor Price</span> for the lot item if you track competitor prices. (Refer to <a href="javascript:WWHClickedPopup('ics', 'pricing.4.53.htm#1313917', '');">Tracking Competitor Prices</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">13	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1382911">For </a><span style="font-style: italic;">Split Lot Pack</span>, indicate if you can split a lot pack in Sales Order Entry. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1472829">Y</a></span> - Allow lot packs to be split on a sales order. When the Lot Pack Availability screen prompts for the lot pack(s) to commit to the sales order, press <span style="font-weight: bold;">F5-Split Lot Pack </span>to sell the product in quantities less than the lot pack quantity set in Product Maintenance. The remaining quantity is assigned a new lot number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1382982">N</a></span> - Do not allow lot packs to be split on a sales order. When the Lot Pack Availability screen prompts for the lot pack(s) to commit to the sales order, you can only sell the product in multiples of the lot pack quantities.<br />For example, if all the available lots have a lot pack quantity of 10, you can only sell multiples of 10. If multiple lots of 5 and 10 exist, you can enter a sales order for 10, 15, 20, or 25, etc, but not for a quantity of 12.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">14	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1383141">Press </a><span style="font-weight: bold;">F2-Save</span> to save the lot pack information and to return to the Lot Information screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">15	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1382003">For </a><span style="font-style: italic;">Price/Cost Required</span>, choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1382004">Y</a></span> - Prompt for commission cost and selling price when receiving lot products.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1382005">N</a></span> - Do not prompt for commission cost and selling price when receiving lot products.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">16	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1382006">Press </a><span style="font-weight: bold;">F2-Save</span> to save the lot information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Lot Maintenance Screen", "ics", "pwm_lot_mnt.htm#1364333");
+          WWHAddRelatedTopic("Lot Additional Info screen", "ics", "pm_lot_add_info.htm#1436614");
+          WWHAddRelatedTopic("Receiving License Plate Products", "ics", "Stock_Receipts.8.31.htm#1339812");
+          WWHAddRelatedTopic("Lot Shelf Life Expiration Report", "ics", "lot_exp_date_rpt.htm#1680932");
+          WWHAddRelatedTopic("Allocating Optimal Reel Quantities", "ics", "Product_Records2.3.65.htm#1385241");
+          WWHAddRelatedTopic("Transaction Audit By Lot Inquiry", "ics", "transaction_audit_lot_inq.htm#1403738");
+          WWHAddRelatedTopic("Lot Inquiry", "ics", "lot_inq.htm#1379630");
+          WWHAddRelatedTopic("Stock Receipts", "ics", "Stock_Receipts.8.1.htm#1307253");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Stock_Receipts.8.1.htm#1380968">Stock Receipts</a>:<a class="WebWorks_Breadcrumb_Link" href="Stock_Receipts.8.25.htm#1380968">Receiving Lot Number Products</a>:Setting Up a Lot Product</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

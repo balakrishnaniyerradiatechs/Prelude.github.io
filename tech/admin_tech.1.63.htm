@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Protobase FAQ</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1082258">Protobase FAQ</a></div>
+      <div class="Subhead"><a name="1082259">Q: “Batch Functions Locked Out.  Fix Error in Batch to release!”</a></div>
+      <div class="Body"><a name="1082260">The settlement will not be completed if an error occurs due to the timing out of a modem, the modem </a>being down or if the Protobase software is corrupted. If this happens, a “lock” will be placed on Prelude to prevent that batch from being altered any further until the issue has been resolved.</div>
+      <div class="Body"><a name="1082261">During the settlement/batch close process, two reports will always be generated:  The ‘Pre-Settlement’ </a>report and the ‘Settlement’ report.  The Pre-Settlement report is printed prior to actually closing the settlement to notify the user that the settlement is about to be closed.  Once the settlement dials out, Prelude will prompt the user to print the settlement report. </div>
+      <div class="Body"><a name="1082262">If an error occurs during the settlement, a lock will occur, therefore displaying the error message in </a>which indicates that a lock has been placed on Prelude.  Immediately after selecting &lt;ENTER&gt;, the user will be prompted to print the second report.  However, this does not indicate that the batch has closed.   What will be displayed at the bottom of this second report is the error message from the Protobase software, identifying what the problem was that occurred.  If the problem reported was in reference to the modem being timed out (which is a common issue within the Amex Processing Network), simply remove the lock in Prelude and attempt to close the batch later.</div>
+      <div class="Body"><a name="1082263">to delete this lock, go to TCL and type the following:  </a></div>
+      <pre class="Report"><a name="1082264">   DELETE CONTROL PB.BATCH.LOCKOUT</a></pre>
+      <div class="Body"><a name="1082265">Contact Prelude for assistance if any error messages other than the one listed is displayed.</a></div>
+      <div class="Body"><a name="1082266">For every failed attempt at settling, a new lock will be created on Prelude. Therefore, requiring the user </a>to remove the lock once again. This lock will only take place at the time of settlement. </div>
+      <div class="Body"><a name="1082267">Once the lock is in place and is not removed, this error will continue to be displayed if a settlement or a </a>post authorization is attempted.  Pre-authorizations will continue as usual.</div>
+      <div class="Subhead"><a name="1082268">Q: Is Protobase Running?</a></div>
+      <div class="Body"><a name="1082269">Prelude only sells a Unix version of Protobase.  To confirm it is running, type the following command in </a>Unix:</div>
+      <pre class="Report"><a name="1082270">ps </a>–ef | grep pb</pre>
+      <div class="Body"><a name="1082272">The following will be displayed if Protobase is running in ‘Demo’ mode:</a></div>
+      <div class="Body"><span class="Bold"><a name="1082273">*</a></span>Note the “d” on the ./pbdirect process line</div>
+      <pre class="Report"><a name="1082274">root</a>	18220	108158	0	Mar 24	0:00	pbcom /dev/tty66 PBD 0 0</pre>
+      <pre class="Report"><a name="1082275">root</a>	64152	1	0	Apr 23	0:00	./pbdirect . -qd        </pre>
+      <div class="Body"><a name="1082276">The following will be displayed if Protobase is running in ‘Live’ mode:</a></div>
+      <div class="Body"><span class="Bold"><a name="1082277">*</a></span>Note there is not a “d” listed on the ./pbdirect process line</div>
+      <pre class="Report"><a name="1082278">root</a>	18220	108158	0	Mar 24	0:00	pbcom /dev/tty66 PBD 0 0</pre>
+      <pre class="Report"><a name="1082279">root</a>	64152	1	0	Apr 23	0:00	./pbdirect . -q        </pre>
+      <div class="Body"><a name="1082280">A “d” listed on the ./pbdirect process line indicates that Protobase is running in DEMO mode. Prelude </a>is designed so that at the time of each pre-authorization, post-authorization or settlement, Prelude will verify that Protobase is running.  If Protobase is not currently running, the Protobase software will automatically be started by Prelude. Protobase will be started in either the Demo or Live mode based on a Prelude flag in Order Processing Parameters &gt; F5 &gt; Credit Bureau Auth Code &gt; Live/test Account.  </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.61.htm#1082258">Miscellaneous</a>:Protobase FAQ</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

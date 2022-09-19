@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Stock Transfer In-Transit Report</title>
+    <link rel="StyleSheet" href="css/gl_reports.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1364772">Stock Transfer In-Transit Report</a></div>
+      <div class="Body"><a name="1381889">The Stock Transfer In-Transit Report report displays open stock transfers </a>that shipped out of the <span style="font-style: italic;">From</span> warehouse but are not yet received at the <span style="font-style: italic;">To</span> warehouse. You can sort transfers either for the shipping or the receiving warehouse.</div>
+      <div class="Body" style="margin-top: 14.0pt;"><span style="font-weight: bold;"><a name="1364774">Menu Path</a></span>: Financial &gt; General Ledger &gt; Reports &gt; Inventory Balancing - In Transit Inventory &gt; Open Transfer In-Transit</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1364775&quot;);"><a name="1364775">Selection Criteria</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1364775", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1364775", false);</script>
+      <div class="Body"><a name="1364776">Use the following criteria to limit the information to print on the report:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1381899">Shipping Warehouse</a></span>. The warehouse that shipped transfers not yet received at the receiving warehouse. Leave blank to include all warehouses.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1381900">Receiving Warehouse</a></span>. The warehouse to receive the transfers from the shipping warehouse. Leave blank to include all warehouses.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1381901">Shipment Date</a></span>. The date the transfer shipped. Leave blank to view all shipped transfers for the selected warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1381902">Shipping/Receiving Whse</a></span>. Determines how to sort the transfers:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1381903">S</a></span> - Sort open transfers by the shipping warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1381904">R</a></span> - Sort open transfers by the receiving warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1381905&quot;);"><a name="1381905">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1381905", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1381905", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 404.24976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1381908">Column Heading</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1381910">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381912">Trans#/</a></div>
+            <div class="TableText"><a name="1381913">To (if you selected </a><span style="font-weight: bold;">S</span> to sort by shipping whse)</div>
+            <div class="TableText"><a name="1381914">From (if you </a>selected <span style="font-weight: bold;">R</span> to sort by receiving whse)</div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381916">Line 1: The open transfer release number.</a></div>
+            <div class="TableText"><a name="1381917">Line 2: The shipping/receiving warehouse:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1381918">The warehouse that will receive the material (if you selected </a><span style="font-weight: bold;">S</span> to sort by shipping whse).</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1381919">The warehouse that shipped the material (if you selected </a><span style="font-weight: bold;">R</span> to sort by receiving whse).</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381921">Date-Shp</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381923">The date the transfer shipped.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381925">Product Number</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381927">The products on the corresponding transfer.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381929">Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381931">Line 1: The product description.</a></div>
+            <div class="TableText"><a name="1381932">Line 2: The second line of description for the product.</a></div>
+            <div class="TableText"><a name="1381933">Lot#: The lot number if the product is part of a lot quantity.</a></div>
+            <div class="TableText"><a name="1381934">Ser#: The serial number if the product is a serialized item.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381936">S</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381938">The source of the product request, if applicable:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1381939">S - Sales order.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1381940">W - Work order.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381942">Qty-Req</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381944">The quantity of the product originally requested on the transfer. If the </a>product is linked to a sales order, work order, or transfer. The document number displays.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381946">Qty-Opn</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381948">The quantity available to ship.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381950">Qty-Shp</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381952">Line 1: The quantity shipped on this transfer release number.</a></div>
+            <div class="TableText"><a name="1381953">Line 2: The document number if the product is linked to a sales order, </a>work order, or transfer. The prefix indicates the document type:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1381954">S - Sales order.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1381955">W - Work order.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1381956">T - Transfer.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381958">Qty-B/O</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381960">The quantity backordered on this release number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381962">U/M</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381964">The unit of measure of the product as entered on the transfer.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381966">Cost/Ext</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1381968">Line 1: The unit cost.</a></div>
+            <div class="TableText"><a name="1381969">Line 2: The extended cost of the total shipped quantity (</a><span style="font-style: italic;">Qty-Shp</span> x <span style="font-style: italic;">Cost</span>).</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1381972">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1381973&quot;);"><a name="1381973">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1381973", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1381973", false);</script>
+      <pre class="Report"><a name="1401124">Activant Prelude                                                                                           User </a>Id SEM   Page 1</pre>
+      <pre class="Report"><a name="1416473">Stock Transfer In-Transit Report As Of 14:21:36 On 02/21/07</a></pre>
+      <pre class="Report"><a name="1416474">[Shipping/Receiving Whse = “S”]</a></pre>
+      <pre class="Report"><a name="1416475">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416476">Trans#/To     Date-Shp Product Number                 Description                   S Qty-Req </a>Qty-Opn Qty-Shp Qty-B/O U/M  Cost/Ext</pre>
+      <pre class="Report"><a name="1416477">============= ======== ============================== ============================= = ======= </a>======= ======= ======= === =========</pre>
+      <pre class="Report"><a name="1416478">10000078-1    12/01/06 3ZK59                          Coaxial Cable - Type RG6; PVC       168      </a>25      25       0 FT      0.165</pre>
+      <pre class="Report"><a name="1416479">Toronto Branch                                        2-Foil 2-Blade                                                           </a>4.13</pre>
+      <pre class="Report"><a name="1416480">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416481">                                                       Lot#: 10000372-071403</a></pre>
+      <pre class="Report"><a name="1416482">                       4JF48                          Ansell Perfect Fit Gloves Kni         5       </a>3       3       0 PR     13.312</pre>
+      <pre class="Report"><a name="1416483">                                                      Triple Strand Steel Size L                                              </a>39.94</pre>
+      <pre class="Report"><a name="1416484">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416485">                       54155                          Blue Heart Plastic Cat Id Tag         2       </a>2       2       0 EA      0.900</pre>
+      <pre class="Report"><a name="1416486">                                                                                                                               </a>1.80</pre>
+      <pre class="Report"><a name="1416487">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416488">10000079-1    12/01/06 12X50                          1/2”od X 50’ Copper Coil             10      </a>10      10       0 EA     23.608</pre>
+      <pre class="Report"><a name="1416489">Atlanta Branch                                                                                                               </a>236.08</pre>
+      <pre class="Report"><a name="1416490">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416491">                       138X20                         1-3/8”od X 20’ Copper Tubing         20      </a>20      20       0 FT      2.285</pre>
+      <pre class="Report"><a name="1416492">                                                      Type                                                                    </a>45.70</pre>
+      <pre class="Report"><a name="1416493">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416494">                       1L730                          D-Type Universal Joints Shaft        18      </a>14      14       0 EA     15.737</pre>
+      <pre class="Report"><a name="1416495">                                                      Couplings 1/2 in. 378 Torque                                           </a>220.32</pre>
+      <pre class="Report"><a name="1416496">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416497">                       3MH88                          Dewalt Pistol Grip Corded 3/8         2       </a>2       2       0 EA     46.383</pre>
+      <pre class="Report"><a name="1416498">                                                      Drill Model# Dw100 CK; 5.4a                                             </a>92.77</pre>
+      <pre class="Report"><a name="1416499">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416500">                       4A847                          Klein 3/8 Tip Screwdriver             2       </a>2       2       0 EA      7.105</pre>
+      <pre class="Report"><a name="1416501">                                                      8” Square Shank                                                         </a>14.21</pre>
+      <pre class="Report"><a name="1416502">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416503">                       4LL17                          Norton Abrasive A211 Adalox           1       </a>1       1       0 EA      0.425</pre>
+      <pre class="Report"><a name="1416504">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416505">10000094-1    12/01/06 4A845                          Klein 1/4” Tip Screwdriver           25       </a>5       5       0 EA      4.388</pre>
+      <pre class="Report"><a name="1416506">Toronto Branch                                        4” Square Shank                                                         </a>21.94</pre>
+      <pre class="Report"><a name="1416507">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416508">                       30625                          Deluxe Suspension Seat                6       </a>2       2       0 EA    403.000</pre>
+      <pre class="Report"><a name="1416509">                                                                                                                             </a>806.00</pre>
+      <pre class="Report"><a name="1416510">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416511">                       30769                          Cushion Seat GM200                    6       </a>2       2       0 EA    232.000</pre>
+      <pre class="Report"><a name="1416512">                                                                                                                             </a>464.00</pre>
+      <pre class="Report"><a name="1416513">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416514">                       30569                          62” Guardian Deck                     8       </a>4       4       0 EA   3148.000</pre>
+      <pre class="Report"><a name="1416515">                                                                                                                           </a>12592.00</pre>
+      <pre class="Report"><a name="1416516">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416517">10000127-1    01/09/07 4A844                          Klein 1/4” Slotted Screwdrive         5       </a>8       8       0 EA      3.107</pre>
+      <pre class="Report"><a name="1416518">Atlanta Branch                                        1 1/2” Shank                                                            </a>24.86</pre>
+      <pre class="Report"><a name="1416519">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416520">10000131-1    01/11/07 4A845                          Klein 1/4” Tip Screwdriver            5      </a>10      10       0 EA      4.388</pre>
+      <pre class="Report"><a name="1416521">Atlanta Branch                                        4” Square Shank                                                         </a>43.88</pre>
+      <pre class="Report"><a name="1416522">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416523">10000145-1    01/12/07 4A845                          Klein 1/4” Tip Screwdriver            5      </a>10      10       0 EA      4.388</pre>
+      <pre class="Report"><a name="1416524">Atlanta Branch                                        4” Square Shank                                                         </a>43.88</pre>
+      <pre class="Report"><a name="1416525">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416526">20000015-1    01/10/07 6C239                          Stanley Phillips 1/4                  1       </a>1       1       0 EA      2.938</pre>
+      <pre class="Report"><a name="1416527">Atlanta Branch                                        Screwdriver Length 4”                                                    </a>2.94</pre>
+      <pre class="Report"><a name="1416528">&nbsp;</a></pre>
+      <pre class="Report"><a name="1416529">90000045-1    02/05/07 5230                           Ruby Red 5” Balloons, Bulk 72         1       </a>1       1       0 EA      1.900</pre>
+      <pre class="Report"><a name="1416530">&nbsp;</a></pre>
+      <div class="Body"><a name="1364830">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("General Ledger Reports", "gls", "gl_reports.10.1.htm#1332082");
+          WWHAddRelatedTopic("General Ledger Balancing", "gls", "general_ledger_balancing.4.1.htm#1364525");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="gl_reports.10.1.htm#1364772">General Ledger Reports</a>:Stock Transfer In-Transit Report</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

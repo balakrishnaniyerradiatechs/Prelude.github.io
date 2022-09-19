@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>System Parameters</title>
+    <link rel="StyleSheet" href="css/v14_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1004478">System Parameters </a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1004484&quot;);"><a name="1004484">Maintenance…</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1004484", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1004484", false);</script>
+      <div class="Subhead"><a name="1004491">Company Maintenance</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1004498">F5-Add Info - </a><span class="Italics">Multiple Fiscal Periods</span> is a new field that determines if multiple fiscal periods are used when creating locations, chart of accounts, chart of account descriptions, and general ledger postings. Select Y to allow for multiple fiscal periods. Select N to not allow for multiple fiscal periods.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1004521">This flag provides a way to have multiple companies share inventory but post to different </a>fiscal periods. This is done by setting up a live account for the corporation and then fiscal accounts for each fiscal year-end month or company. For example, ABC Supply has stores in Dallas, Houston, Tulsa, and San Antonio. These stores need the ability to share inventory but the fiscal year end for Dallas is March, Houston’s fiscal year end is June, and Tulsa and San Antonio’s fiscal year end is October. So a live account is set up for ABC, which allows all the stores to share inventory, and fiscal accounts are set up for MAR, JUN, and OCT for fiscal period postings. Tulsa and San Antonio will share the same fiscal account. When a posting routine is ran, the system will post on the live account but it will also, behind the scenes, post to the correct fiscal period on the fiscal account. The correct fiscal period for the fiscal account is found by using a cross-reference fiscal period table.</div>
+      <div class="Body"><span class="Bold"><a name="1004555">Note</a></span>: all postings and account creation/maintenance should be performed in the live account.</div>
+      <div class="Body"><a name="1004565">Once the fiscal accounts and location records are set up, run /MULT.FISC.COPY from the </a>live account to set up related information in each fiscal account. You are prompted for a <span class="Italics">Fiscal Account Name</span>. This should be the name of the fiscal account you are setting up. This procedure sets up everything by mass copying existing related records over to each fiscal account. It copies the appropriate CA, CADF, and CA.STAT records from the live account to the specified fiscal account. It also copies all appropriate division/region/location type records.</div>
+      <div class="Body"><a name="1004576">See Location Maintenance, General Ledger Chart Of Accounts, General Ledger Chart Of </a>Accounts Description, General Ledger Chart Of Accounts Duplication, and General Ledger G/L Balances Postings for more information. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1004585">F6-Modules - </a><span class="Italics">Manifest Subsystem</span> is a new flag that determines if none, the UPS, or the PSS manifest system will be used. Set this flag to Y to use the UPS manifest system. The UPS Subsystem menu will be available from the Order Processing menu. Set this flag to P to use the PSS manifest system. A link to the PSS interface is available from the Order Processing menu. If this flag is set to N, neither of the above options are available on the Order Processing menu. See Order Processing Manifest Subsystem for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1004612">General Ledger Controls</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1004619">Location Maintenance - </a><span class="Italics">Separate Fiscal</span> is a new field that works with the <span class="Italics">Multiple </span><span class="Italics">Fiscal Periods </span>flag in Company Maintenance to define the fiscal account the location points to. Note: if the <span class="Italics">Multiple Fiscal Periods</span> company flag is turned on but a <span class="Italics">Separate </span><span class="Italics">Fiscal</span> account is not designated for a location, that location will post to the live account. See Company Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004640">Multi-Fisc Period Table Maintenance</a></span> is a new option used to define the fiscal periods for each fiscal account when the <span class="Italics">Multiple Fiscal Per</span>iod flag in Company Maintenance is turned on. This is a cross-reference for each fiscal period/company that tells the system which fiscal period to post to in each fiscal account. For example, a transaction posted in 99-08 in the live account may post to 99-12 in the fiscal account. See Company Maintenance and General Ledger G/L Balances Postings for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1004652">Inventory Controls</a></div>
+      <div class="Subhead"><a name="1004659">Warehouse Maintenance - F7-RTS Maint &gt; F5-Warehousing </a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004669">Prompt For Dest Bin In PKCE</a></span> is a new field that determines if the system will prompt for a destination bin in Pick Confirmation By Release or use the default bin Pick. If this flag is set to Y, the system will prompt for a destination bin. If this flag is set to N, the system will automatically set the destination bin to Pick. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004698">Replenish Evaluation Method</a></span> is a new field that defines if bin on-hand or bin available is used to determine if replenishment is needed. If this field is set to O, the current bin on-hand will be used in the bin replenishment evaluation. If this flag is set to A, the current bin available will be used to determine if replenishment is needed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004716">Replenish Rounding Method</a></span> is a new field that defines if a recommended replenish quantity is rounded down to a full case or a full pallet. If this flag is set to C or null, the quantity will be rounded down to a full case. If this flag is set to P, the quantity will be rounded down to a full pallet. For either setting, a quantity less than a single case/pallet will default to a quantity of 1 case/pallet. The case and pallet quantities are retrieved from the product master file. If there is not a case quantity or a pallet quantity, the system will default to a case/pallet quantity of one. The rounding method is only used for replenishing the primary bin location. This calculation is not used in the primary full case bin evaluation.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004734">Replenish Bin Sorting Method</a></span> is a new field that defines how the list for eligible bins will be sorted for the replenishment process. If this flag is set to O, the sort will be by ascending bin on-hand as it was previously. This method helps clean up the supplying bins with smaller bin on-hand quantities thus releasing bin space for other products. If this flag is set to D, the sort will be by ascending bin transaction date. This method will attempt a FIFO rotation of inventory. This is not a 100% pure FIFO rotation of stock. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1004752">Lot control should be used if you have a concern with product age or expiration dates. Lot </a>controlled products are excluded from this option and are allocated by oldest lot creation date. </div>
+      <div class="Subhead"><a name="1004767">F5-Transfers/Work Orders</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004773">S/T Bin Sort Method</a></span> is a new field that allows you to define if the sort for transfer picking is by ascending bin on-hand or by ascending bin transaction date. If this flag is set to O, the sort will be by ascending bin on-hand as it was previously. If this flag is set to D, the sort will be by ascending bin transaction date. This sort option is only used for non-lot controlled products.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004794">W/O Bin Sort Method</a></span> is a new field that allows you to define if the sort for work order picking is by ascending bin on-hand or by ascending bin transaction date. If this flag is set to O, the sort will be by ascending bin on-hand as it was previously. If this flag is set to D, the sort will be by ascending bin transaction date. This is a secondary sort  in the Allocation Priority for non-lot controlled products.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1004812">F6-Segments</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004818">Floored Cube Per Segment</a></span> is a new field that defines the cube limit if picking segments is by cube. A new segment will be started for ship-vias that are set for gang picking.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004831">Floored Seg Pick Multiple Per Cube</a></span> is a new field that defines if floored segments are combined for picking up to the cube limit. Multiple segments will be assigned until the cube limit was reached.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004841">Non Floored Cube Per Segment</a></span> is a new field that defines the cube limit if picking segments is by cube. A new segment will be started for ship-vias that are set for gang picking.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004851">Non Floored Seg Pick Multiple Per Cube</a></span> is a new field that defines if non-floored segments are combined for picking up to the cube limit. Multiple segments will be assigned until the cube limit was reached.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004861">Non Floored Segment Require Packing</a></span> is a new field that determines if non-floored segments are pack confirmed via terminal confirmation. Setting this flag to N will mark all segments as packed after the picking process. If this flag is set to Y, all segments must be manually confirmed packed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004879">Generate Segments Ascending/Descending</a></span> is a new field that defines if segments are built in ascending or descending delivery sequence/stop id order. If the delivery sequence/stop ids are arranged so that the largest delivery sequence number is the first stop loaded on the truck then set this flag to A for ascending. If the delivery sequence/stop ids are arranged so that the smallest number is the first stop loaded on the truck then set this flag to D for descending</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004897">Separate Segments Per Zone</a></span> is a new field that defines if separate picking segments are created per picking zone. This is for ship-vias that are set for gang picking.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004907">Cycle Count Products Not Loaded</a></span> is a new field that defines if unloaded products are set up for cycle counting. If this flag is set to Y and if all boxes have not been loaded at route processing time, the products will be backordered and set up for cycle counting. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004921">Print Ship Label In Seg Picking</a></span> is a new field that determines if the shipping label prompt will appear during segment picking confirmation entry. Set this flag to Y if you wish to get the prompt.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004935">Print BOL In Rte Processing</a></span> determines if a bill of lading will print during route processing. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004945">Print Pack List In Route Processing</a></span> determines if a packing list will print during route processing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004955">Print Price Lbl In Route Processing</a></span> determines if price labels will print during route processing. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004965">Print Invoices In Route Processing</a></span> determines if an invoice will print during route processing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1004975">Print RGAs In Route Processing</a></span> determines if an RGA will print during route processing. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1004987">Order Processing Controls</a></div>
+      <div class="Subhead"><a name="1004994">Order Type Defaults</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005000">Sales Order Entry Types has a new order type of 16 for Order Projection. This order </a>type must be listed here before it can be utilized in Sales Order Entry. Order type <span class="Italics">Order </span><span class="Italics">Projection</span> indicates that all products entered on the order will be completely backordered and must be manually allocated. See Order Processing Sales Order Entry for more information.<span class="Bold"> </span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005020">Sales Order Entry Types has a new order type of 17 for Manufacturer Rep. This order </a>type must be listed here before it can be utilized in Sales Order Entry. See Order Processing Sales Order Entry for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1005033">Commission Matrix Types &amp; Sequence</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005039">Evaluate WHS Types After DIR Types</a></span> is a new field that determines if the system will check for a WHS type matrix to apply if a DIR type matrix is not found. If this flag is set to Y and the system does not find a DIR type matrix, the system will check for a WHS type matrix. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005056">Security Access Codes Maintenance</a></span> was moved from this menu to the Miscellaneous Controls menu. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1005066">Miscellaneous Controls</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005072">Linkage Queue Reason Code Maintenance</a></span> is a new option used to define the codes used in the Linkage Queue Parameter Maintenance. These codes define what change has taken place between a linked sales order and purchase order. For example, a change in cost or in the delivery/required date. See Purchasing Option Parameters and Linkage Queue Parameter Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005085">Linkage Queue Parameter Maintenance</a></span> is a new option used with the <span class="Italics">S/O-P/O </span><span class="Italics">Linkage Work Queue</span> option parameter and defines the fields that will be checked for any changes between linked sales orders and purchase orders. Use this option to identify what fields in the sales order, when changed on a line item linked to a purchase order, will cause the buyer on the linked purchase order to be notified. It is also used to identify what fields in the purchase order, when changed on a line item linked to a sales order, will cause the person who wrote the linked sales order to be notified. Fields may be defined at the sales order header level, sales order line item level, purchase order header level, and purchase order line item level. Multiple fields may be defined for each level. You are prompted for the attribute of the field and the reason code. The reason code is used to define what change took place and will display in the inquiries. See Purchasing Option Parameters for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005097">Security Access Codes Maintenance</a></span> was moved to this menu from the Order Processing Controls menu. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1005107">User Identification Maintenance</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005114">The main screen was shifted around a bit. The </a><span class="Italics">E-Mail Address</span>, <span class="Italics">Desqtop Id</span>, and <span class="Italics">Location Profile</span> fields were moved into the top section of the screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005132">The </a><span class="Italics">Employee Number</span> field was moved to the F6-Personal screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005143">The </a><span class="Italics">Edit Delay</span> field was moved to the F5-Add Info screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005154">A Super Manager flag was added to each manager code field. If the flag is set to N, </a>the user can only review their assigned code for that inquiry. If the flag is set to Y or is null, the user can review any code for that inquiry. This effects the following fields:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1005171">Credit Manager</a>			Emg Cycle Counter</div>
+      <div class="Body"><a name="1005183">Branch Manager</a>			Inspection Mgr</div>
+      <div class="Body"><a name="1005192">Admin Order Mgr</a>			Freight Mgr</div>
+      <div class="Body"><a name="1005201">Admin Invoice Mgr</a>			Buyer</div>
+      <div class="Body"><a name="1005210">Admin Quote Mgr</a></div>
+      <div class="Body"><a name="1005219">For example, credit manager codes are CR1, CR2, and CR3. If a user is set up as a credit </a>manager for CR2 and the Super Manager flag is set to N, then the user can only see orders on hold for CR2 in Credit Release Inquiry. If a user is set up as a credit manager for CR2 and the Super Manager flag is set to Y, then the user can see orders on hold for CR1, CR2, and CR3 in Credit Release Inquiry. </div>
+      <div class="Subhead"><a name="1005236">F5-Add Info</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005242">Enter T/R from W/O </a></span>is a new flag that defines if the user is allowed to automatically generate transfers from  in Work Order Entry. See Bill of Material/Work Order - Work Order Entry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005255">The </a><span class="Italics">Edit Delay</span> field was moved here from the main screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005266">F8-Bank Sec</a></span> is a new option that allows you to define bank codes the user is allowed to access in cash receipts and check entries. Multiple bank codes may be entered. Leaving this field blank will allow the user to access all bank codes. This option allows you to restrict a user to a bank code(s). When an unauthorized bank code is used in Cash Receipts Entry, Check Printing, Manual Check Entry, or Void Check Entry, an error message is displayed informing the user that they are not authorized for that bank code.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1005276">F6-Personal</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005282">DID Phone Number</a></span> is a new field that allows you to enter the users DID extension or the entire direct phone number. This is informational only.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005295">The </a><span class="Italics">Employee Number</span> field was here from the main screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1005306&quot;);"><a name="1005306">Option Parameters </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1005306", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1005306", false);</script>
+      <div class="Subhead"><a name="1005313">Order Processing Parameters </a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005319">The Administrative Hold logic was modified to include direct (04) type sales orders.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005331">The </a><span class="Italics">Administrative Order Hold</span> flag has a new option of I for Incompatible Ship Via. This option allows you to place an order on admin order hold if the <span class="Italics">Ship Via Code</span> is incompatible for the customer or for the product. This is valid whether the incompatible ship via is entered at the header level or at the line item level. The Administrative Order Release Inquiry will display an I code at the header or line item level for this hold option.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1014299">Suppress Order Ship Via/Frt Upd in RCE</a></span> has a new option of S which will prevent sales orders from being updated with ship-via information entered or changed on the release header during release confirmation entry. Freight terms entered or changed on the release header during release confirmation entry will update the sales order. For example, an order’s <span class="Italics">Ship-Via </span>is set to 02 for UPS and the <span class="Italics">Freight Terms </span>is set to 03 for Inbound &amp; Outbound Freight. In Release Confirmation Entry, the <span class="Italics">Ship-Via </span>is changed to 03 for UPS Blue and the <span class="Italics">Freight Terms</span> is changed to 01 for Outbound Freight only. On the sales order, the <span class="Italics">Ship-Via </span>is still 02 for UPS but the <span class="Italics">Freight Term</span>s is now 01 for Outbound Freight.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005402">Check For Existing Orders</a></span> is a new option parameter that determines if the user is prompted in Sales Order Entry to add items to an existing order instead of creating a new order. This allows the user to add to an existing order for a customer until a pick ticket is printed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1005412">If this flag is set to Y, upon exiting the sales order header screen for a new order, the </a>system checks to see if previous orders exists for the customer/customer ship-to combination. If any orders are found matching the customer/customer ship-to combination, the system will then check that a pick ticket has not yet printed for the sales order, that the order is a type 01, and that the customer does not require a purchase order number. If an order is found meeting all these conditions, the user is prompted Do You Want To Add To Existing Sales Order? If the user responds Yes, the first sales order that is not in the pick ticket process will be displayed allowing the user to enter the items on the existing order. If the user responds No, the user will continue to enter the items on the newly created sales order. </div>
+      <div class="Body"><a name="1005440">If this flag is null or set to N, the user will not be prompted to add to an existing sales order.</a></div>
+      <div class="Body"><a name="1005453">This option parameter has a new option of P that works similar to the Y option except that </a>the system will only evaluate orders with a pickable quantity. If no order is found with a pickable quantity, the user will be returned to their original sales order.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005470">Price Override Reason Prompt</a></span> is a new option parameter that determines if the system will prompt for a reason code when the system generated price is overridden in sales order entry or in quotation entry. This option is used to explain why a price was overridden. If this flag is set to Y, a price override reason code is prompted for when the price is overridden in sales order entry or quotation entry. The reason code is prompted for regardless of how the price was overridden. The price can be overridden by changing the gross price, discount percentage, net price, or by using the F6-Totals method to revise all prices on a quote or sales order. If this flag is null or set to N, the user is not prompted for a reason code when the price is overridden. This option does not work with asterisk non-stock items. You will not be prompted for a reason code when overriding the price for an asterisk non-stock line item even if this flag is set to Y. Note: the system only prompts for a reason code the first time the price is changed. After that, a reason code is not prompted for when the price is changed. See Order Processing Maintenance for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005495">Invoice Days Old</a></span> is a new option parameter that defines the number of days old an invoice must be before a warning is displayed to the user in Sales Order Entry for an item that is being returned. When an item that is being returned is entered on a sales order and the user enters an original invoice number, the system will check the number of days old that invoice is. If the number of days old is more than the value set in this field, a warning message will be displayed. This will not stop the user from using that invoice. It will only warn the user and give the option of continuing or returning to the invoice number prompt. If the user chooses to continue, a flag will be stored in the order line record for reporting purposes. If this option parameter is blank or set to zero, no warning will be displayed to the user. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005505">Auto Core Charge</a></span> is a new option parameter that determines if a core charge is automatically billed in Sales Order Entry. If this flag is set to Y, the core charge is automatically placed on the sales order for billing. If this flag is set to N, you are prompted in Sales Order Entry to bill the core charge, not bill the core charge, or to apply a core bank item. Core Banking is only allowed if this flag is set to N. This flag works with the <span class="Italics">Keep Pending Cores</span> file update parameter. See Order Processing Sales Order Entry Line Item Level and System Maintenance File Update Parameters for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005529">Excl * Items From MatPrc</a></span> is a new option parameter that determines if asterisk products will utilize price matrix pricing. If this flag is set to Y, * items are excluded from any price matrix calculation. Pricing at the product header or warehouse level will still be enforced for these items. If this flag is set to N, asterisk items are included in price matrix calculations.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005555">The </a><span class="Italics">Freight Terms Handling</span> option parameter was renamed Freight Handling.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1005566">Inventory Parameters </a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005572">Prod Lookup Warning</a></span> is a new option parameter that allows you to define how many records are allowed in a product lookup prompt before the system displays a warning to the user. In other words, this is a record count that gives a warning to the user in all product lookup prompts that the keyword search retrieved more than this number. This gives the user an out if they get more than they can work with logistically. For example, lets say this option is set to 50. When a product search is performed and the system finds 42 records matching the select criteria then those items are displayed to the user without a warning. When a product search is performed and the system finds 68 records matching the select criteria then a warning is displayed to the user allowing them to continue or to abort the lookup.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1005585">The </a><span class="Italics">Product Tagging</span> screen was modified to work with Override Shipping Warehouse matrices. If this flag is set to Y and the product meets an override shipping warehouse matrix, the product tagging screen will display, for that product, the availability in the overriding shipping warehouse. Only products that are subject to an Override Shipping Whse Matrix will display the availability for the overriding warehouse. Otherwise, the warehouse from the Location Profile is used. For example, an override shipping warehouse matrix is set up for product ABC123 setting the override shipping warehouse to 20. When doing a keyword search on ABC the system returns 3 products: ABC123, ABC456, and ABC789. With the Location Profile warehouse set to 10, product ABC123 will display the available quantity for warehouse 20 but the other 2 products will display the available quantity for warehouse 10 (assuming no matrix is set up for these products). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005612">Print Core Receiving Tkt</a></span> is a new option parameter that determines if a core receiving ticket is printed when a core item is adjusted in. If this flag is set to Y, the system will prompt you to print a core receiving ticket in Inventory Adjustment Entry if the adjustment contains a core item. See Inventory - Inventory Adjustment Entry and Inventory Processes - Print Core Receiving Ticket for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005626">Copy Whse In Prod Copy</a></span> is a new option parameter that determines if the Product Copy function in Product Maintenance will automatically copy the warehouse records to the new product. If this flag is set to Y or is null, the system will copy any existing warehouse records for the from product to the to product. The new warehouse records will reflect the stock status of the original product. If this flag is set to N, then the system will only copy the product header record and no warehouse records will be established for the to product. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005644">F5-Add Info</a></span> was added to give more room for option parameters. Some of the flags from the original screen were moved into this screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005654">Two Step Transfer Process</a></span> is a new option parameter that allows transfer receipts to be done behind the scenes when transfer shipment entry is performed. If this flag is set to Y, users will use the two step process for inventory transfers. This will reduce time spent in receiving inventory in transfer receipts entry. This should only be used if there are a small number of errors in shipments since there is no check-in process at the receiving location. If the system cannot complete the receipts, the message Items Not Received Require Additional Information! is displayed. The items are shipped but receipts for the transfer will need to be done in Transfer Receipts Entry. If this flag is set to N, users will use the three steps currently performed for inventory transfers.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1005672">Purchasing Parameters</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005678">S/O-P/O Linkage Work Queue</a></span> is a new option parameter that defines if the sales order/purchase order linkage work queues are used to track changes between linked sales orders and purchase orders. The Linkage Work Queue will provide the ability to notify a customer service representative when items on a purchase order, linked to a sales order have information changed or to notify a buyer when items on a sales order, linked to a purchase order have information changed. Each department will have the opportunity to review the sales orders and purchase orders involved. The data fields that are checked are optional and must be setup in the Linkage Queue Parameter Maintenance. See Miscellaneous Controls and General Information Menu Message Inquiries<span class="Bold"> </span>for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1014337">P/O Cost Displayed List/Disc</a></span> is a new option parameter that can be used to cost purchase orders with a list price and discount from the product or product warehouse record. This feature is simple but must be set up precisely for it to work. If this flag is set to Y, the system will assign Retail/Price0 to the purchase orders <span class="Italics">Gross</span> field and the <span class="Italics">Disc%</span> field will be assigned to the discount defined for the product’s replacement cost. This flag will only work if the basis for <span class="Italics">Replacement Cost</span> points to 0/Retail price. Example: product ABCXYZ is set up with Retail = 9.99 and Replacement Cost = 25% of Retail. When product ABCXYZ is placed on a purchase order, <span class="Italics">Gross</span> is set to 9.99 and <span class="Italics">Disc%</span> is set to 25.00 for a <span class="Italics">Net-Cost</span> of 7.493.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005735">P/O Pricing Tolerance %</a></span> is a new option parameter that defines the percent used to determine if a price entered on a purchase order is outside a tolerance limit. When a user enters a price on a purchase order line item, if that net cost is greater than or less than the default price on the line item by more than the tolerance percentage applied to that default price, then a warning is displayed indicating the price is outside the tolerance limit. The user may continue with entry of the line item or return to the price field to key in a new entry. This field is checked whenever anything that effects the net cost is changed. For example, the gross, discount percent, or net cost fields. If this field is null, no price tolerance check is performed. If this field is set to zero, a warning will display each time the cost is changed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1005745">BMW / Work Order Parameters</a></div>
+      <div class="Body"><span class="Italics"><a name="1005751">Auto Enter Core Credit Line</a></span> is a new option parameter that determines if the system automatically enters a core credit line item on the work order after the exchange product line. If this flag is set to Y, the core credit line will be automatically added to the work order. If this flag is set to N, a core credit line will not be added to the work order.</div>
+      <div class="Subhead"><a name="1005766">Accounts Receivable Parameters</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005772">Consol. Chargeback Invoices</a></span> is a new option parameter that determines if the charge back invoices created in Cash Receipts Entry will be consolidated into one invoice for each charge back reason code or if a separate invoice will be created for each charge back reason code entry regardless of whether the same reason code is entered multiple times. To consolidate invoices, the <span class="Italics">Charge Back Invoice by Customer P/O </span>option parameter must be set to N. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1005791">If this flag is set to Y or null, the system will perform as it did previously by only creating </a>one invoice per reason code for the customer. To use this option, the <span class="Italics">Charge Back Invoice </span><span class="Italics">by Customer P/O </span>option parameter must be set to N. In Cash Receipts Entry, when line items are flagged to generate charge back invoices and the screen is exited, the system will prompt for invoice information for each reason code entered for the accumulated amount for that reason code. </div>
+      <div class="Body"><a name="1005815">If the flag is set to N, the system will create an invoice for each reason code entry for the </a>customer regardless of whether the same reason code is entered multiple times. For each charge back entry, the system will prompt for invoice information for each reason code. This is regardless of whether there are multiple lines with the same reason code. Each reason code entry will be processed separately. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005828">Charge Back Invoice by Customer P/O</a></span> is a new option parameter that determines if the user is prompted for a customer P/O number for each reason code entry. This option, if set to Y, will override the <span class="Italics">Consol. Chargeback Invoices</span> option parameter meaning that charge back invoice consolidation will not work. A separate charge back invoice is generated for every reason code entry for the customer even if the same reason code is used multiple times.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1005847">If this flag is set to Y, a modified version of the Charge Back Entry screen is displayed after </a>the Cash Receipts Detail Entry screen is exited and you are prompted to enter a customer P/O number for each reason code entered. The system will create an invoice for each reason code entry for the customer regardless of whether there are multiple lines with the same reason code. Each line will be processed separately.</div>
+      <div class="Body"><a name="1005863">If this flag is set to N, the Charge Back Entry screen is displayed when the </a><span class="Italics">M/C</span> field is set to C in the Cash Receipts Invoice Detail Entry screen for a charge back entry. The <span class="Italics">Consol. </span><span class="Italics">Chargeback Invoices</span> option parameter will determine how the entries are invoiced.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005884">High Volume C/R Method</a></span> is a new option parameter that determines if invoice numbers will primarily be entered in High Volume Cash Receipts Batch Entry. If this flag is set to I, the system will check that the invoice number input in the reference field in Batch Entry is a valid open A/R invoice number. If it isn’t, the user is warned but allowed to retain the entry if they wish for matching against an order number, release number, or customer P/O number. This setting also provides a lookup on the customer’s open invoices. If this flag is set to R, you have the ability, as before, to enter any value in the reference field to be used in the Best Match Check process. This setting will match against the invoice number, order number, release number, and customer P/O number to find a match.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005909">Bypass Security Access In Coll</a></span> is a new option parameter that determines if security access codes are used in the Credit Collections Subsystem. Set this flag to Y if you want to bypass security access in the collection subsystem. Set this flag to N if you want security access to be active in the collection subsystem.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1005927">This option was primarily installed to skip the </a><span class="Italics">Security Access Code</span> prompt in Credit Collections Schedule Entry allowing you to view all customers instead of just customers with a null security code. Previously, if this prompt was returned through, only customers with a null security code were displayed. Now, if the option parameter is set to N then it will work as it did previously. But if the option parameter is set to Y then this prompt is skipped and all customers are displayed.</div>
+      <div class="Subhead"><a name="1005949">General Ledger Parameters</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005955">Repl Cost in Vend Currency</a></span> is a new option parameter that defines if the replacement cost in the product header and/or product warehouse record is in the vendor’s currency or in native currency. If this flag is set to Y, it is in vendor currency and no currency conversion will be performed during Purchase Order Entry. If this flag is set to N, it is in native currency and a currency conversion will be performed during Purchase Order Entry. This flag will also effect all other areas of the software that look at the replacement cost for purchasing purposes. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005978">Display Currency Rate Screen</a></span> is a new option parameter that indicates if the currency rate screen is displayed to users. If this field is set to Y, the currency rate screen is displayed to users allowing change to the currency rate. If this flag is set to N, the currency rate screen is not displayed to users and the currency rate cannot be changed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1005996">Bal G/L Posting By Location</a></span> is a new option parameter that determines if your system will check that posting transactions balance by location. If this flag is set to Y, during the balance posting routine, the system will verify that the location is in balance before posting the transaction. If the General Ledger posting does not balance by location, an audit file will be updated. If this flag is set to N, during the balance posting routine, the system will verify that the debits and credits balance but it will not check that the location is in balance. The Unposted G/L Error report will list transaction information for reconciliation purposes. See General Ledger Journal Entries and G/L Balances Posting for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1006014">File Update Parameters</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1006020">Keep Customer Job</a></span> was moved under F6-Add Info.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1006033">Keep Pending Cores</a></span> is a new file update parameter used to track core items for the reporting of pending core charges. This is useful since it allows you to hold off billing the core charge till a later date. This keeps the A/R and gross profit from being inflated due to billing core items that will be returned by the customer. This information will be stored in the PENDING.CORE file. See Order Processing Sales Order Entry Line Item Level, System Maintenance Order Processing Option Parameters, and System Processes Purge Utility Menu for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1006045">F6-Add Info</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1006052">Keep Quote Job Number Index</a></span> is a new file update parameter used to track quotes that have a job number on them for verification in Quote Order Entry. This file update parameter is used to verify that the job number entered on the quote hasn’t been previously used.<br />When a job number is entered on a quote, the new index file is updated for that job number. A record is also written for each word that makes up the job number. For example, if the job number is Johnson School Project, there would be four records created; one for the entire job number and one for each of the words that make up the job number. If one of these words should already exist in the file, then that record is updated with the current quote number. See Order Processing Quotation Subsystem for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1006069">Keep Order Job Number Index</a></span> is a new file update parameter used to track sales orders that have a job number on them for verification in Sales Order Entry. This file update parameter is used to verify that the job number entered on the sales order hasn’t been previously used.<br />When a job number is entered on a sales order, the new index file is updated for that job number. A record is also written for each word that makes up the job number. For example, if the job number is Johnson School Project, there would be four records created; one for the entire job number and one for each of the words that make up the job number. If one of these words should already exist in the file, then that record is updated with the current sales order number. See Order Processing Sales Order Entry Header Level for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1006083">Program &amp; Menu Passwords</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006090">Added the process PMM.F5 to allow restriction to the F5-Purchase Cost function key </a>in Price Matrix Maintenance. See Order Processing Price Matrix Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006104">Added the process SV.DEFAULT to allow restrictions to the ship-via incompatible with </a>customer message’s accept option. The incompatible ship-via logic warns the user when an incompatible ship-via is entered at the header or line item level. The user has the ability to override and accept the incompatible ship-via. This process, if established, would require a password before the user could accept the incompatible ship-via. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006115">Added the process NEG.CC.AUTH to allow restrictions to a negative credit card </a>authorization. User is prompted for a password when the payment type is an 03 Bank Card and a negative amount is entered in the <span class="Italics">Payment Amt</span> field. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006130">Added the ability to password protect Y/N fields. This deals with fields who primarily </a>have a Yes/No response but may also include dictionary items that have a third option. Only dictionary items with a validation code of YES.NO.VAL can be used with this process. (Please contact Prelude customer support if you have questions about certain dictionary items.) User is prompted for a password when the value of the field is changed. The process name is <span class="Italics">filename.fieldname</span>. For example, you could password the <span class="Italics">Prohibit Sales</span> field in Customer Maintenance by using the process name CUSTOMER.PROHIBIT.SLS. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1006147">Printer Set-up</a></div>
+      <div class="Body"><span class="Italics"><a name="1006154">Form Queue Maintenance</a></span> is a new routine used to set up form queues and the warehouses that may print to those form queues. At this time, this process is only used in Release Pick Tickets to validate that the warehouse may print to a certain form queue. It is not used to validate the form queue itself.</div>
+      <div class="Body"><a name="1006161">A form queue may be assigned to a warehouse, multiple warehouses, or to all </a>warehouses. Leave the <span class="Italics">Warehouse# List</span> field null to print to all warehouses. If a form queue is entered In Release Pick Tickets, the system will first verify that the form queue entered is established here. If so, it will then verify that the form queue is valid for the warehouse the document is being printed in. If the form queue is not established here, the system will print to that form queue without validating the warehouse. For example using the screen above, you may only print documents for warehouse 20 in form queues 24 and 56 or in a form queue not defined in this maintenance routine. See Inventory Processes for more information.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1006174&quot;);"><a name="1006174">Processes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1006174", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1006174", false);</script>
+      <div class="Subhead"><a name="1006181">Create Index Procedure</a></div>
+      <div class="Body"><a name="1006188">This option was modified to allow you to rebuild indexes for selected files. Previously, your </a>only choice was to rebuild all files. An upfront screen of standard ADS indexes was added so you can define the indexes to rebuild. When this option is selected, the default for each file is N. You will have to select each file that needs to be rebuilt. If you want to rebuild each file then you need to set each one to Y. </div>
+      <div class="Subhead"><a name="1006202">Purge Utility Menu</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1006209">Purge Pending Cores</a></span> is a new routine used to purge Pending Cores records that were completely applied to. This routine may be run for a range of customers or for all customers and/or for a range of due dates. See Order Processing Sales Order Entry Line Item Level, Inventory - Inventory Adjustment Entry, Inventory Processes Core Bank Issues Entry, and Inventory Processes Automatic Core Application Process for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1006222">Core Bank Purge</a></span> is a new routine used to purge Core Bank records that were completely applied. This routine may be run for a range of customers or for all customers. See Order Processing Sales Order Line Item Level, Inventory - Inventory Adjustment Entry, Inventory Processes Core Bank Issues Entry, and Inventory Processes Automatic Core Application Process for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1006232&quot;);"><a name="1006232">Rebuild Menu</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1006232", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1006232", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006239">Inventory Control - </a><span class="Italics">Core Product Xref</span> is a new option that rebuilds the cross reference file for the Core Product Inquiry. See Inventory Core Inquiries for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006254">Ordering Control - </a><span class="Italics">Pending/Core Bank in Cust.Stat Rebuild</span> is a new option that rebuilds the pending cores keys and core bank keys in the CUST.STAT file.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v14_new_features.7.1.htm#1004478">V14 New Features</a>:System Parameters </div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

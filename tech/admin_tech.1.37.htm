@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Loading Files to 2 Mbit/s Series RF Guns</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1123765">Loading Files to 2 Mbit/s Series RF Guns</a></div>
+      <div class="Body"><a name="1123766">This document will list the steps to reprogram PDT6840, PDT6842 and PDT 3540 series RF guns. You </a>can see which model you are working on by looking at the back of the gun. Also these guns will only communicate with access points based on frequency hopping spread spectrum (FHSS) technology. (EX. AP-3021) </div>
+      <div class="NumberedIntro"><a name="1123767">Before you start you need a PC with the HEX files - LWP.HEX, UPD802.HEX and VTL46K.HEX - in a  </a>directory called C:\symbol and the Symbol utilities loaded (eg. SENDHEX). A cradle connected to PC with serial cable, and a battery. <img class="Default" src="images/rf_config_2mb_Page_2_Image_0001.jpg" width="385" height="319" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123771">First thing you need to do is format the flash memory on the gun.  Turn on the gun and while the files </a>are being loaded press control then c.  This will bring you to the D:\&gt; prompt where you will type in flshfmt.  Choose yes when you are prompted whether or not you are sure.  Once the message format a success appears you can power off the gun. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123772">Next on the PC open an MSDOS prompt.  To do this click Start/Run, and enter cmd and click OK. </a>Locate the directory containing the HEX files. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123773">Then on the RF gun hold down the "F" and "I" keys, press the PWR/On key, release the PWR/On </a>key then release the "F" and "I" keys.  This places the gun in a state where you can upload HEX files to it.   </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123774">Use the Up/Down arrow keys on the gun and select “Program Loader” by pressing enter. Use the </a>arrow keys to set the “Baud Rate” to 38400 (IMPORTANT: this figure must match the baud rate setting of the COM port on your PC, so if there are any problems check that setting).  The rest of the settings are default so continue to press enter until the message “Start?” appears then stop and move back to the PC. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123775">On the MSDOS prompt enter "SENDHEX LWP.HEX 38400 1" but do *not* press Return. This </a>command will take the file LWP.HEX and sends it to the gun at the baud rate 38400 on COM port 1. If the PC you are using differs from this setup you must adjust the numbers accordingly. Do *not* press Enter just yet because you need the gun to be listening first.            </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123776">Press enter on the gun so it can receive the file. If you do not press Enter on the gun quickly enough </a>or forget to do so, the gun will shutdown and you will need to repeat step 3, including setting the baud rate on the gun. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">7	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123777">Press Enter twice on the PC to execute the command “SENDHEX LWP HEX 384001”.The gun </a>should now start to receive the file. The display on the gun should indicate that it is receiving a file. Allow it to finish - pressing any keys on the gun may cause the upload to fail. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">8	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123778">When the upload is complete (the screen on the gun will have stopped changing and you should see </a>"0000" on the screen). Press the PWR/On button to switch off the gun. <span class="Bold">Do not press Enter</span> because this will erase what you have just uploaded. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">9	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123779">With the gun off, press the following keys at the same time "A", "B" and "D", and while holding them </a>down, press the PWR/ON button, release the PWR/On button then release "A", "B" and "D”.  This is a cold boot. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">10	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123780">When the gun boots back up it will ask you if you want to “REFORMAT FLASH?"  It looks like the </a>following and you need to Press 2. <br /><span class="TypedInText" style="font-size: 11.0pt;">INSTALLING </span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">LWP Hex Ver</span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">Spring: 3.06-07 </span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">802.11: 4.02-07 </span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">Loading system files </span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">Re-format flash </span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">User flash as-is </span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">Select [1,2] </span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">11	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123781">The gun will continue extracting files and return to a message saying “Load UPD802 Strike a key </a>when ready”, do not strike a key. Instead turn off the gun by pressing the PWR/On button. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">12	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123782">With the RF gun off hold down the "F" and "I" keys, press the PWR/On key, release the PWR/On </a>key then release the "F" and "I" keys.  You will select “Program Loader” and will see <span class="TypedInText" style="font-size: 11.0pt;">“&lt;ENTER&gt; to </span><span class="TypedInText" style="font-size: 11.0pt;">erase NUM”. </span>Press Enter and the gun will beep and erase the NVM.  From here you will set “Baud Rate” to 38400, and the rest you will leave the same until you get to the message “Start”.  Make sure to <span class="Bold">stop</span> at the message “Start”. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">13	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123783">On the PC, enter "SENDHEX UPD802.HEX 38400 1" but do *not* press Enter.  This command will </a>take the file UPD802.HEX and sends it to the gun at the baud rate 38400 on COM port 1. If the PC you are using differs from this setup you must adjust the numbers accordingly. Do *not* press Enter just yet because you need the gun to be listening first. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">14	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123784">Press Enter twice on the PC to execute the command “SENDHEX UPD802.HEX 38400 1”.The gun </a>should now start to receive the file. The display on the gun should indicate that it is receiving a file. Allow it to finish - pressing any keys on the gun may cause the upload to fail. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">15	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123785">When the upload is complete (the screen on the gun will have stopped changing and you should see </a>"0000" on the screen). Press the PWR/On button to switch off the gun. <span class="Bold">Do not press Enter </span>because this will erase what you have just uploaded. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">16	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123786">With the gun off, press the following keys at the same time "A", "B" and "D", and while holding them </a>down, press the PWR/ON button, release the PWR/On button then release the "A", "B" and "D” keys. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">17	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123787">The gun will extract and inflate files and this can take a few minutes. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">18	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123788">If the gun beeps and prompts you to remove from cradle go ahead and take the gun off the cradle </a>and allow it to continue.  Once the gun has stopped loading files power off the gun. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">19	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123789">With the RF gun off hold down the "F" and "I" keys, press the PWR/On key, release the PWR/On </a>key then release the "F" and "I" keys.  You will select “Program Loader” and will see<span class="TypedInText" style="font-size: 11.0pt;"> “&lt;ENTER&gt; to </span><span class="TypedInText" style="font-size: 11.0pt;">erase NUM”. </span>Press Enter and the gun will beep and erase the NVM.  From here you will set “Baud Rate” to 38400, and the rest you will leave the same until you get to the message “Start”.  Make sure to <span class="Bold">stop</span> at the message “Start”. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">20	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123790">On the PC, enter "SENDHEX VTL46K.HEX 38400 1" but do *not* press Enter.  This command will </a>take the file VTL46K.HEX and sends it to the gun at the baud rate 38400 on COM port 1. If the PC you are using differs from this setup you must adjust the numbers accordingly. Do *not* press Enter just yet because you need the gun to be listening first. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">21	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123791">Press Enter twice on the PC to execute the command “SENDHEX VTL46K.HEX 38400 1”.The gun </a>should now start to receive the file. The display on the gun should indicate that it is receiving a file. Allow it to finish - pressing any keys on the gun may cause the upload to fail. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">22	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123792">When the upload is complete (the screen on the gun will have stopped changing and you should see </a>"0000" on the screen). Press the PWR/On button to switch off the gun. <span class="Bold">Do not press Enter</span> because this will erase what you have just uploaded </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">23	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123793">With the gun off, press the following keys at the same time "A", "B" and "D", and while holding them </a>down, press the PWR/ON button, release the PWR/On button then release "A", "B" and "D”.  This is a cold boot. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">24	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123794">The gun will extract and inflate files and this can take a few minutes. If all is well you should see a </a>configuration screen. You should now be able to use the gun to connect to the host server and login to ADS. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.35.htm#1123765">RF Guns</a>:Loading Files to 2 Mbit/s Series RF Guns</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

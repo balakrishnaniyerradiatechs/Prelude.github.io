@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Overriding Shipping Locations for Products</title>
+    <link rel="StyleSheet" href="css/Maintenance.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1420266">Overriding Shipping Locations for Products</a></div>
+      <div class="Body"><a name="1422738">If you want a product or group of products to always ship out of a designated </a>warehouse, you can use a matrix to override a shipping warehouse. This matrix allows you to assign a default shipping warehouse either for a product, all products within a product line, or all products purchased from a vendor. For example, if a customer uses warehouse 30 as their shipping warehouse but you have a product that always has to ship out of warehouse 10, you can set up a shipping matrix to require that the product be picked and shipped in warehouse 10. You can also limit shipments to a zip code or zip code range within a state.</div>
+      <div class="Body" style="margin-top: 14.0pt;"><a name="1447479">When a product is entered on a sales order or quote, the shipping </a>warehouse is determined according to the following hierarchy:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1447480">Product.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1447481">Product Line.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1447482">Vendor.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1426131">Ship Complete Orders</a></div>
+            <div class="TableText"><a name="1426138">An 02 (Ship Complete) Sales Order overrides the shipping warehouse matrix since all </a>products must ship from the same warehouse.</div>
+            <div class="TableSubhead"><a name="1453276">Auto Split Orders</a></div>
+            <div class="TableText"><a name="1453277">If a shipping matrix is in effect for a product, the Auto Order Split screen will not appear if </a>quantities are available in other warehouses. Refer to <a href="javascript:WWHClickedPopup('ois', 'Sales%20Order%20Entry.4.18.htm#1551018', '');">Shipping Split Quantities out of Other Warehouses</a> for more information.</div>
+          </td>
+        </tr>
+      </table>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1472493">File Update Parameters</a></div>
+            <div class="Table.text" style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><span style="font-style: italic;"><a name="1474794">Ovr Ship Whse Matrix</a></span> in <span style="font-weight: bold;">File Update Parameters</span> must be set to <span style="font-weight: bold;">Y</span> to activate override shipping warehouses.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="NumberedIntro" style="margin-top: 14.0pt;"><a name="1472487">To set up an override shipping warehouse matrix:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422786">Select </a><span style="font-weight: bold;">Order Processing &gt; Maintenance &gt; Order Entry Control Files </span><span style="font-weight: bold;">&gt; Override Shipping Whse Matrix </span>to open the <a href="javascript:WWHClickedPopup('ois', 'shp_whse_matrix_mnt.htm#1333532', '');">Override Shipping Whse Matrix screen</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422816">For </a><span style="font-style: italic;">Type Code</span>, choose an override type:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1422908">1</a></span> - <span style="font-weight: bold;">Product line</span>. Opens the <a href="javascript:WWHClickedPopup('ois', 'prod_line_ent.htm#1348495', '');">Product/State Entry screen</a>. You can enter the <span style="font-style: italic;">Product Line</span> and if applicable, the <span style="font-style: italic;">State/Province </span>information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1422932">2</a></span> - <span style="font-weight: bold;">Product</span>. Opens the <a href="javascript:WWHClickedPopup('ois', 'prod_num_ent.htm#1348705', '');">Product Number/State Entry screen</a>. You can enter the <span style="font-style: italic;">Product</span> and if applicable, <span style="font-style: italic;">State</span>/<span style="font-style: italic;">Province</span> information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep_inner" style="width: 18pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep_inner"><span style="font-weight: bold;"><a name="1422935">3</a></span> - <span style="font-weight: bold;">Vendor/selling warehouse</span>. Opens the <a href="javascript:WWHClickedPopup('ois', 'vend_sell_ent.htm#1362417', '');">Vendor/Selling Warehouse Entry screen</a>. You can enter the <span style="font-style: italic;">Vendor Number</span> and <span style="font-style: italic;">Selling Warehouse</span> information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422851">After you enter the appropriate parameters for the </a><span style="font-style: italic;">Type Code</span>, the <a href="javascript:WWHClickedPopup('ois', 'ship_whse_ent.htm#1348415', '');">Shipping Warehouse Entry screen</a> appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422983">For </a><span style="font-style: italic;">Whse</span>, enter the warehouse number to use as the default shipping warehouse for the selected product, product line, or vendor/warehouse.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1422996">You can limit the shipping information to a zip code or enter a </a><span style="font-style: italic;">From Zip</span> and <span style="font-style: italic;">To Zip</span> to include a zip code range. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1423013">Enter as many warehouses and zip code ranges as necessary.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1423016">Press </a><span style="font-weight: bold;">F2-Save</span> to save the warehouse matrix information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Override Shipping Whse Matrix screen", "ois", "shp_whse_matrix_mnt.htm#1333532");
+          WWHAddRelatedTopic("Product/State Entry screen", "ois", "prod_line_ent.htm#1348495");
+          WWHAddRelatedTopic("Product Number/State Entry screen", "ois", "prod_num_ent.htm#1348705");
+          WWHAddRelatedTopic("Shipping Warehouse Entry screen", "ois", "ship_whse_ent.htm#1348415");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Maintenance.3.1.htm#1420266">Optional Order Entry Features</a>:Overriding Shipping Locations for Products</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

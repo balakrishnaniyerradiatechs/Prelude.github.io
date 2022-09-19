@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Inventory</title>
+    <link rel="StyleSheet" href="css/v19_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1017466">Inventory</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017467&quot;);"><a name="1017467">Product Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017467", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017467", false);</script>
+      <div class="Subhead"><a name="1017468">Part Option Added as a Product Type</a></div>
+      <div class="Body"><a name="1017469">The </a><span class="Italics">Product Type</span> field in Product Maintenance has a new <span class="Bold">P</span> option to designate the product as a part. You can use this option to group products by product type for custom reports.</div>
+      <div class="Subhead"><a name="1017470">Creating Base Master and Base Child Products</a></div>
+      <div class="Body"><a name="1017471">You can now designate a product as a base master (BM) or a base child (BC) in the </a><span class="Italics">Special Operations</span> field in Product Maintenance. When the master product or any of the child products are entered on a sales order or quote, the product tagging screen includes the master product and all the child products. When you update or change the master product, all child products are updated also. The stocking unit of measure should be the same for both the master and child products. Nightly Processing does not recommend a purchase order for the child products.</div>
+      <div class="Subhead"><a name="1017472">Using Product Tagging for Kit Components</a></div>
+      <div class="Body"><a name="1017473">The new </a><span class="Bold">T</span> option is available for <span class="Italics">S/O Modify</span> in Kit Maintenance. When you enter the kit parent on a sales order, the Product Tagging screen opens and prompts for the kit components (<span class="Italics">Kit Typ</span>e must be set to <span class="Bold">R</span> to use this option).</div>
+      <div class="Subhead"><a name="1017474">Exploding Kit Parents on Purchase Orders</a></div>
+      <div class="Body"><a name="1017475">The new </a><span class="Italics">P/O</span> field in Kit Maintenance determines if a kit parent explodes into its component parts when you enter it on a purchase order. If necessary, you can recalculate the cost so that the total cost of the kit line items equals the cost of the kit parent.</div>
+      <div class="Subhead"><a name="1017476">Adding Related Products</a></div>
+      <div class="Body"><a name="1017477">The new </a><span class="Italics">Type </span>field (Product Maintenance &gt; F6 &gt; Related Products) determines how to add a related product when the original product is entered on a sales order. The related product(s) can be required or optional. You can also set a multiplier and a price to determine the quantity and price of the related product. The original (default) behavior is also available.</div>
+      <div class="Subhead"><a name="1017478">Adding Product Notes Globally</a></div>
+      <div class="Body"><a name="1017479">The </a><span class="Italics">Doc </span>field (Product Maintenance&gt; F6-Xref/Notes &gt; Product Notes) has a new<span class="Bold"> G</span> (global text) option to indicate that the product notes should appear in all of the entry screens.</div>
+      <div class="Subhead"><a name="1017480">Printing Warehouse Product Notes</a></div>
+      <div class="Body"><a name="1017481">The Warehouse Product Notes screen in Product Warehouse Maintenance allows you to </a>print the product notes on the Recommended Stock Transfer Report and Vendor Request for Quotes.</div>
+      <div class="Subhead"><a name="1017482">Viewing SRT in Product Tagging Entry</a></div>
+      <div class="Body"><a name="1017483">The </a><span class="Italics">Avail</span> column in Product Tagging Entry now displays the SRT (Standard Repair Time) for service products with an SRT in PRoduct Maintenance. If the service product does not have an SRT, the <span class="Italics">Avail</span> Column shows SERVICE.</div>
+      <div class="Subhead"><a name="1017484">Extending Warranty for Service Items</a></div>
+      <div class="Body"><a name="1017485">Set Service Item Flag in Product Maintenance to </a><span class="Bold">W</span> to indicate that the product has an extended warranty. When you enter the product on a sales order either directly or as an accessory, the <span class="Italics">Warranty Period</span> Unit in Product Maintenance &gt; F5 &gt; F5 calculates the warranty expiration date. You can view customer warranty information in:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017486">Customer/Product and Product/Customer Warranty Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017487">Serial Number History Inquiry &gt; </a><span class="Italics">WtyExp/Mat</span> &amp; <span class="Italics">WtyExp /Lab</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017488">Product Purchasing Parameters Maintenance</a></div>
+      <div class="Body"><a name="1017489">The new Purchase Parameters Additional Information screen (Product Purchasing </a>Parameters Maintenance &gt; F7-Add Info) allows you to enter additional factors that may affect recommended purchase quantities. The <span class="Italics">Ann. Usage Override, W/O Mfg </span><span class="Italics">Production, Single Customer, </span>and<span class="Italics"> Distribution Ctr</span> fields were moved from the Product Purchasing Parameters Maintenance screen. The <span class="Italics">T/R Reserve Formula</span>, <span class="Italics">Percentage</span> and<span class="Italics"> </span><span class="Italics">Quantity</span> fields are new features.</div>
+      <div class="Subhead"><a name="1017490">Reserving Inventory for Sales Orders</a></div>
+      <div class="Body"><a name="1017491">The new </a><span class="Italics">T/R Reserve Formula</span> field in Product Purchasing Parameters Maintenance &gt; F7 allows you to reserve inventory for sales orders for a warehouse so that it is not available for transfers. You can either use a sales forecast formula and percent to reserve inventory or a set quantity. Nightly Processing and End of Month Calendar Close check this information when recommending a purchase quantity.</div>
+      <div class="Subhead"><a name="1017492">Checking Gross Profit for Admin Holds</a></div>
+      <div class="Body"><a name="1017493">The new </a><span class="Italics">Bypass Low Level GP</span> flag (Product Maintenance &gt; F5) determines if a product is included in the manager low level gross profit % check for Admin Order and Admin Quote Hold.</div>
+      <div class="Subhead"><a name="1017494">Updating Multiple Catalog Page Numbers</a></div>
+      <div class="Body"><a name="1017495">The new Catalog Purge Utility Maintenance allows you to enter or edit the catalog page </a>number for multiple products at once. The page number you enter here updates each product in Product Maintenance.</div>
+      <div class="Subhead"><a name="1017496">Disallowing Product Merges</a></div>
+      <div class="Body"><a name="1017497">You can no longer merge the following types of products in Universal Product Merge </a>Entry.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017498">A superceded and its superceding product.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017499">A lot product and a non-lot product.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017500">A serialized product and a non-serialized product.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017501">Products with different units of measure.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017502">Adding Options to Serialized Equipment</a></div>
+      <div class="Body"><a name="1017503">Two new programs, Equipment Option Code Maintenance and Equipment Option Group </a>Maintenance, allow you to create and group option codes to define any optional features that may apply to serialized equipment. </div>
+      <div class="Body"><a name="1017504">You can assign an option group (e.g., lawn mower, tractor) to a piece of equipment in </a>Product Maintenance &gt; F5 so that when you purchase the product, you can add options (e.g., heater, alarm) in the product’s option group. These options are added in Purchase Order Entry as comments. When you receive the piece of equipment in Stock Receipts Entry, you can confirm the options that are accurate. Option code information appears in:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017505">Serial Number History Inquiry &gt; Action Bar &gt; Opts</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017506">Serial Number History Inquiry by Serial Number &gt; Action Bar &gt; Opts</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017507">Open Purchase Order Detail Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017508">Lot Screen Available for Seed Control Items</a></div>
+      <div class="Body"><a name="1017509">When you enter </a><span class="Bold">S</span> (seed control) for the <span class="Italics">Lot Flag</span> (Product Maintenance &gt; F5-Add Info &gt; <span class="Italics">Lot Flag</span> = <span class="Bold">S</span>), the Lot Information screen now appears to allow you to enter lot information. Previously, only the Y setting opened the lot information screen. When the product is entered in inquiries or processes, you can now view or enter lot information.</div>
+      <div class="Subhead"><a name="1017510">Prompt for Lot Information in Sales Order Entry</a></div>
+      <div class="Body"><a name="1017511">To prompt for lot information on sales orders, you can set the new </a><span class="Italics">Lic Plate-SOE Lot </span><span class="Italics">Prompt</span> flag in the Lot Information screen (Product Maintenance &gt; F5-Add Info &gt; <span class="Italics">Lot </span><span class="Italics">Number</span> =Y) to <span class="Bold">Y</span>.</div>
+      <div class="Subhead"><a name="1017512">Using New Parker Reporting Marketing Codes</a></div>
+      <div class="Body"><a name="1017513">A new Parker Marketing Maintenance program allows you to set up marketing divisions </a>to assign to products. The following Parker maintenance programs now include the marketing codes.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017514">Parker Division Maintenance</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017515">Parker Division/Marketing Maintenance</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017516">Parker Division/Marketing/Product Maintenance</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017517">Product Maintenance and Product Line Maintenance &gt; Action Bar &gt; Addtl Opts &gt; </a>Parker Information</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017518">Gasket/Hose Subsystem</a></div>
+      <div class="Body"><a name="1017519">The new Gasket/Hose Subsystem (/M:Gasket) has maintenance options for gasket, hose, </a>and related product requirements (/PM &gt; Special Operations = G, GC, HK, or HC), a physical inventory menu, reports, and inquiries. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017520&quot;);"><a name="1017520">Product Cost</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017520", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017520", false);</script>
+      <div class="Subhead"><a name="1017521">Adjusting Cost for Vendor Consigned Inventory</a></div>
+      <div class="Body"><a name="1017522">The new Vendor Consigned Cost Adjustment Entry program allows you to change the </a>cost on products that are on consignment from a vendor. Once the inventory is sold and available for payment in A/P, you can no longer adjust the cost. You can view the adjustments in Daily Cost Adjustment Journal - Vendor Consigned and Monthly Cost Adjustment Journal - Vendor Consigned.</div>
+      <div class="Subhead"><a name="1017523">Tracking Vendor Cost</a></div>
+      <div class="Body"><a name="1017524">The new </a><span class="Italics">Vendor Cost Audit</span> flag in File Update Parameters determines if changes in unit cost, replacement cost, and direct ship cost are tracked in the system.You can also purge this data in Purge Utility Menu &gt; Inventory &gt; Vendor Cost Audit.</div>
+      <div class="Subhead"><a name="1017525">Rounding Replacement Cost by Product Lines</a></div>
+      <div class="Body"><a name="1017526">The new </a><span class="Italics">Replacement Cost</span> field in Product Line Maintenance (<span class="Italics">Round Prices</span> = Y) allows you to enter the number of decimal places to round replacement cost.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017527&quot;);"><a name="1017527">Product Usage</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017527", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017527", false);</script>
+      <div class="Subhead"><a name="1017528">Moving Product Usage</a></div>
+      <div class="Body"><a name="1017529">When you move product usage to another product, 12 months of usage are included. If </a>you add a usage product number in the Related Products screen in Product Maintenance, the usage from the original product moves to the usage product. If you remove the usage product, the usage goes back to the original product. The new <span class="Bold">PUA</span> code in the Usage Audit Inquiry indicates that usage was moved or added. </div>
+      <div class="Subhead"><a name="1017530">Recording Consignment Order Usage</a></div>
+      <div class="Body"><a name="1017531">The </a><span class="Italics">Over Shp Whse Cons Ord?</span> flag in Order Processing Parameters determines if usage on 08 consignment sales orders updates the shipping warehouse or the billing warehouse.</div>
+      <div class="Subhead"><a name="1017532">New Out of Stock and Unusual Usage Exception Flags</a></div>
+      <div class="Body"><a name="1017533">The new </a><span class="Italics">Out of Stock Exception </span>and<span class="Italics"> Unusual Usage Exception </span>flags in Purchasing Parameters Maintenance determine if Product Usage Maintenance and End of Month Calendar Close override purchasing parameters for products with unusual usage or out of stock exceptions.</div>
+      <div class="Subhead"><a name="1017534">Viewing Company Wide Usage</a></div>
+      <div class="Body"><a name="1017535">The new Company Wide Usage screen allows you to view product usage and override </a>information for the entire company. You can access from the Action bar in Product Usage Maintenance and Product Usage Inquiry.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017536&quot;);"><a name="1017536">Stock Receipts</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017536", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017536", false);</script>
+      <div class="Subhead"><a name="1017537">Allocating Linked Freight to Direct Ship Purchase Orders</a></div>
+      <div class="Body"><a name="1017538">The </a><span class="Italics">Allocate Linked Frt to S/O</span> flag in Purchasing Parameters now also applies to direct ship purchase orders in Direct Ship Receipt Entry. </div>
+      <div class="Subhead"><a name="1017539">Substituting and Recosting Received Superseded Product</a></div>
+      <div class="Body"><a name="1017540">When you receive a superseded product by line item and that product is linked to a sales </a>order, you may enter the number of the superseding product. A comment line is added to the linked sales order to reference the original product. You can also recost the product based on the superseding product. Choose <span class="Italics">Yes and Recost</span> to adjusts the cost and extended total.</div>
+      <div class="Subhead"><a name="1017541">Excluding Unusual Lead Times From Lead Time Calculations</a></div>
+      <div class="Body"><a name="1017542">When a product is received with a lead time that exceeds the warehouse’s </a><span class="Italics">Lead Time </span><span class="Italics">Exception Days</span> in Purchasing Parameters Maintenance, it is excluded from the <span class="Italics">Average </span><span class="Italics">Lead Time</span> calculated for the product in Product Vendor Maintenance.</div>
+      <div class="Subhead"><a name="1017543">Entering Manufacturer Information for License Plate Products</a></div>
+      <div class="Body"><a name="1017544">When you receive a license plate product and the License Plate Information screen </a>appears, you can press the new <span class="Bold">F5-Description</span> key to enter the <span class="Italics">Manufacturer Name, </span><span class="Italics">Manufacturer Lot Number, </span>and <span class="Italics">Manufacturer Date</span> information, if applicable.</div>
+      <div class="Subhead"><a name="1017545">Changing Warehouse by Line for Multi-Branch PO</a></div>
+      <div class="Body"><a name="1017546">If a purchase order is multi-branch, you can now change the warehouse by line item in </a>Purchase Order Entry and Stock Receipts Entry.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017547&quot;);"><a name="1017547">Transfers</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017547", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017547", false);</script>
+      <div class="Subhead"><a name="1017548">Link Key added to Transfers and Work Orders</a></div>
+      <div class="Body"><a name="1017549">The new F6-Link key in Transfer Entry and F7-Link key in Work Order Entry allow you to </a>link the product on the order to a backorder on another transfer, work order, or sales order.</div>
+      <div class="Subhead"><a name="1017550">Package Quantity Checked for Recommended Transfers</a></div>
+      <div class="Body"><a name="1017551">The new Transfer Information option in Product Warehouse Maintenance allows you to </a>enter a transfer package quantity that Nightly Processing checks to recommend stock transfer quantities if <span class="Italics">Round To Pkg Qty</span> in Inventory Parameters &gt; F5 is Y or U. This field overrides the transfer package quantity in Product Maintenance.</div>
+      <div class="Subhead"><a name="1017552">Transfer Checked for Completion in TSSCE/RTSSCE</a></div>
+      <div class="Body"><a name="1017553">When shipping a transfer in Transfer Serial Shipping Container Entry, the transfer is </a>checked for completion before you can continue into Transfer Shipments Entry. Previously, if you only shipped partial quantities and then suspended the shipment, the full quantity would ship. New messages warn you about the errors and you can return to Transfer Shipments Entry.</div>
+      <div class="Subhead"><a name="1017554">Using Transfer Buyers in Vendor and Vendor Line Maintenance</a></div>
+      <div class="Body"><a name="1017555">To recommend transfers by buyer, </a><span class="Italics">Rec. Transfer by Buyer</span> field in Inventory Parameters &gt; F5 must be set to <span class="Bold">Y</span>. The new <span class="Italics">Transfer Buyer </span>fields in Vendor Maintenance and Vendor Line Maintenance allow you to assign a vendor to transfers for this vendor’s products. Nightly Processing evaluates the Vendor Line Maintenance and Vendor Maintenance <span class="Italics">Transfer Buyer</span> before the <span class="Italics">Buyer</span> in Warehouse Maintenance, Vendor Line Maintenance, and Vendor Maintenance. To make the <span class="Italics">Buyer</span> for the vendor also the <span class="Italics">Transfer Buyer</span>, run the following new program: Processes &gt; ADS Utilities &gt; Purchasing Utilities &gt; Load Transfer Buyers (new option)</div>
+      <div class="Subhead"><a name="1017556">Update Buyer Queue Inquiry for </a><span class="Italics">To</span> or <span class="Italics">From</span> Warehouse</div>
+      <div class="Body"><a name="1017557">The new </a><span class="Italics">Transfers To Recv Whse BQI</span> flag in Inventory Parameters &gt; F5 determines if Nightly Processing recommends transfers to the buyer for the <span class="Italics">To</span> or the <span class="Italics">From</span> warehouse.</div>
+      <div class="Subhead"><a name="1017558">Partially Allocate Freight on Transfer Receipts</a></div>
+      <div class="Body"><a name="1017559">Set Prorate Transfer Rate in Inventory Parameters &gt; F5 to partially allocate freight to only </a>the items received on a partially received transfer. The percent of freight is allocated according to the freight class in Product Maintenance.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017560&quot;);"><a name="1017560">Vendor Claims &amp; Warranty Inventory</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017560", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017560", false);</script>
+      <div class="Subhead"><a name="1017561">Additional Reference Number in Vendor Claims</a></div>
+      <div class="Body"><a name="1017562">The new </a><span class="Italics">Ref#</span> field in the Vendor Claim Detail Information screen allows you to enter any additional reference information. This information can help find a vendor claim number when you are reconciling the claim.</div>
+      <div class="Subhead"><a name="1017563">Warranty Tag Bin Added for Reference</a></div>
+      <div class="Body"><a name="1017564">The new Warranty Tag Bin Maintenance screen (Inventory &gt; Vendor Claims) allows you </a>to assign a bin for a warranty tag product. You must use this new process to add inventory in this warranty bin. Any quantity added does not affect on-hand inventory; it only displays for reference in the warranty tag inquiry screens. To view bin information, choose F5 from Warranty Tag by Tag Inquiry, Warranty Tag by Vendor Inquiry, Warranty Tag by Product Inquiry, or Warranty Tag by Customer Inquiry.</div>
+      <div class="Subhead"><a name="1017565">Product Tagging Available</a></div>
+      <div class="Body"><a name="1017566">The Product Tagging screen is now available in Vendor Claim Entry as a means to enter </a>products/quantities on a vendor claim.</div>
+      <div class="Subhead"><a name="1017567">Vendor Claim Update Processing Checks for Claim Numbers</a></div>
+      <div class="Body"><a name="1017568">If you left the </a><span class="Italics">Beginning Claim Number</span> and the <span class="Italics">Ending Claim Number blank,</span> a message appears to warn you that you may unintentionally update some claims. You can continue, or to go back and enter claim numbers.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017569&quot;);"><a name="1017569">Cycle Counting/Physical Inventory</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017569", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017569", false);</script>
+      <div class="Subhead"><a name="1017570">Adding Bins to the First Level Cycle Count</a></div>
+      <div class="Body"><a name="1017571">The new Bin 1st Level Cycle Count Request Entry screen allows you to select a range of </a>bins to add to the first level cycle count queue. These products are in addition to the products selected by Cycle Count Nightly Processing.</div>
+      <div class="Subhead"><a name="1017572">Automatically Updating Products in First Level Cycle Count</a></div>
+      <div class="Body"><a name="1017573">The new </a><span class="Italics">Cycle Count Auto Update</span> field in Warehouse Maintenance determines if products with a zero on-hand are automatically updated as zero at the first level and not sent to the second level count queue. Previously, you had to enter the zero balance items for the first level cycle count.</div>
+      <div class="Subhead"><a name="1017574">Counts Remain if RF Gun Loses Connection</a></div>
+      <div class="Body"><a name="1017575">If an RF gun loses connection during the 2nd level cycle count entry, you can do a restart </a>without losing the product counts already entered for your user ID. You still need to recount the product being counted when the gun lost connection. </div>
+      <div class="Subhead"><a name="1017576">Bin Required in Physical Tag Entry</a></div>
+      <div class="Body"><a name="1017577">The Physical Inventory Tag Entry screen now requires a bin number. </a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017578&quot;);"><a name="1017578">Include Zone in Pick Ticket Printing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017578", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017578", false);</script>
+      <div class="Body"><a name="1017579">The </a><span class="Italics">Zone Type</span> field in Zone Maintenance indicates if the zone is pickable. The <span class="Italics">Generate </span><span class="Italics">Release By</span> flag (Warehouse Maintenance &gt; F5) must be Z (zone) to use this feature. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017580&quot;);"><a name="1017580">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017580", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017580", false);</script>
+      <div class="Subhead"><a name="1017581">Core Credit Eligibility Inquiry (new)</a></div>
+      <div class="Body"><a name="1017582">Displays core credit information for customer invoices (Inventory &gt; Inquiries &gt; Core </a>Inquiries).</div>
+      <div class="Subhead"><a name="1017583">Customer Invoice Core Inquiry (new)</a></div>
+      <div class="Body"><a name="1017584">Displays core charge invoices for a customer, including due dates and status (Inventory </a>&gt; Inquiries &gt; Core Inquiries).</div>
+      <div class="Subhead"><a name="1017585">Price Tape Update Log (new)</a></div>
+      <div class="Body"><a name="1017586">Provides an audit trail of the price tapes that updated your product prices. For each price </a>tape, you can view which files were updated (Inventory &gt; Processes &gt; Price Cost Update Procedure &gt; Price Tape Update).</div>
+      <div class="Subhead"><a name="1017587">Spike Exception Inquiry (new)</a></div>
+      <div class="Body"><a name="1017588">Displays products with high and low spike exceptions (Inventory &gt; Processes &gt; Usage </a>Exception Menu). Spike exceptions occur when usage is greater or less than the forecast.</div>
+      <div class="Subhead"><a name="1017589">Inventory Adjustment Inquiry (modified)</a></div>
+      <div class="Body"><a name="1017590">If a transfer is over-received, but inventory is not adjusted because it would bring the </a>balance at the shipping warehouse below zero, comments display in the Inventory Adjustment Inquiry to explain why inventory was not adjusted.</div>
+      <div class="Subhead"><a name="1017591">Inventory Inquiry (modified)</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017592">New </a><span class="Italics">Vend Cons Onhand</span> flag (F7-Add Info)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017593">Product Bin Inquiry now accessible (F5-Review on Non-Nettable)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017594">New </a><span class="Italics">LP/Max</span> field displays the line point and maximum quantity</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017595">Products Receipts History (modified)</a></div>
+      <div class="Body"><a name="1017596">The new </a><span class="Bold">F8-PO Log</span> key displays the Purchase Order Log Inquiry for the highlighted product.</div>
+      <div class="Subhead"><a name="1017597">Serial Number History Inquiry by Serial Number (modified)</a></div>
+      <div class="Body"><a name="1017598">The Book Value screen is now accessible from this inquiry. The book value for a serial </a>number is updated from stock receipts, depreciation, cost adjustments, equipment attachments, or capital repairs.</div>
+      <div class="Subhead"><a name="1017599">Vendor Claim Log Inquiry (modified)</a></div>
+      <div class="Body"><a name="1017600">When you press F5-Review for the APP code, you can now view the Vendor Claim History </a>Inquiry. Previously, the AP/PO Receiver History screen appeared.</div>
+      <div class="Subhead"><a name="1017601">Bin Location Inquiry (modified)</a></div>
+      <div class="Body"><a name="1017602">The bin cycle count history inquiry is now available in Bin Location Inquiry and Bin </a>Location Maintenance &gt; F5-Cycle Count History.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017603&quot;);"><a name="1017603">User Form Modifications</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017603", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017603", false);</script>
+      <div class="Body"><a name="1017604">The Freight field was increased to 8 characters in:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017605">Product Maintenance/Product Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017606">Product Line Maintenance/Product Line Listing</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017607">Freight Class/Freight Class Listing</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017608&quot;);"><a name="1017608">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017608", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017608", false);</script>
+      <div class="Subhead"><a name="1017609">Daily Cost Adjustment Journal - Vendor Consigned (new)</a></div>
+      <div class="Body"><a name="1017610">Lists adjustments to vendor consigned cost for a day. You can adjust vendor consigned </a>cost in Vendor Consigned Cost Adjustment Entry.</div>
+      <div class="Subhead"><a name="1017611">Import Cost Report (new)</a></div>
+      <div class="Body"><a name="1017612">Displays actual and received costs for imported merchandise.</a></div>
+      <div class="Subhead"><a name="1017613">Monthly Cost Adjustment Journal - Vendor Consigned (new)</a></div>
+      <div class="Body"><a name="1017614">Lists adjustments to vendor consigned cost for a month or fiscal period. You can adjust </a>vendor consigned cost in Vendor Consigned Cost Adjustment Entry.</div>
+      <div class="Subhead"><a name="1017615">Product Not Counted Report (new)</a></div>
+      <div class="Body"><a name="1017616">New report on both the Inventory Tag Procedure menu and the Handheld Tag Procedure </a>menu lists products with a saved on-hand quantity that were not counted in the physical inventory.</div>
+      <div class="Subhead"><a name="1017617">Bin Count Statistics Report (modified)</a></div>
+      <div class="Body"><a name="1017618">The Product Cycle Count Request Entry now updates month-to-date counts and rejects, </a>in addition to the year-to-date counts.</div>
+      <div class="Subhead"><a name="1017619">Current Inventory Value Report - FIFO (modified)</a></div>
+      <div class="Body"><a name="1017620">The new </a><span class="Italics">Fiscal Period</span> selection criteria allows you to enter the fiscal period for which you want to include the month-end inventory balance. The End of Month Closing process now saves FIFO layers of cost.</div>
+      <div class="Subhead"><a name="1017621">Cycle Count First and Second Level Reports</a></div>
+      <div class="Body"><a name="1017622">The source code now appears to indicate how a product was added to the first and second </a>level queues:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017623">BCCRE - Bin First Level Cycle Count Request Entry.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017624">CCRE - Cycle Count Request Entry.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017625">ECCI - Emergency Cycle Count Request Entry.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017626">Serial Number Recall Notification Report (modified)</a></div>
+      <div class="Body"><a name="1017627">The selection criteria now includes a </a><span class="Italics">Sold?</span> option, to let you determine if you want to the report to consist of sold or not sold serialized products. If you choose N (not sold) you can limit the report to a warehouse.</div>
+      <div class="Subhead"><a name="1017628">Current Consigned (Prod Type) Value Report</a></div>
+      <div class="Body"><a name="1017629">Sub totals by warehouse were added to the report.</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v19_new_features.1.1.htm#1017466">V19 New Features</a>:Inventory</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

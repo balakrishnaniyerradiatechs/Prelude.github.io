@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Order Processing</title>
+    <link rel="StyleSheet" href="css/v19_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1017717">Order Processing</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017718&quot;);"><a name="1017718">Administrative Holds</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017718", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017718", false);</script>
+      <div class="Subhead"><a name="1017719">New Admin Order and Quote Hold Types</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1017720">P - </a></span>Price Violation in Order Processing Parameters. Put an order on administrative order or quote hold if a price is lowered below cost, a gross profit percent, or a default price.You can now choose whether the order should go on admin order or admin invoice hold instead of always going on both types of hold.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1017721">WARNING! If you do not set parameters for the P option, none of the pricing violations </a>(minimum price, high gross profit, or low gross profit) will put the order on hold.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1017722">V </a></span>- Violated <span class="Italics">Mgr High Level GP%</span> in Order Processing Parameters. Occurs when the GP% is exceeded for a product on an order or quote. Must also use the <span class="Bold">P</span> option.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1017723">L</a></span> - Always Quote Hold. Enter Q in <span class="Italics">Admin Hold Override</span> in Customer Maintenance to place all quotes for the customer on admin quote hold. Administrative Quote Release Inquiry displays the <span class="Bold">L</span> reason code for all quotes for this customer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017724">Admin and Credit Hold for Suspended Orders</a></div>
+      <div class="Body"><a name="1017725">The new </a><span class="Italics">Suspend Order From Activities </span>flag in Order Processing Parameters determines if a sales order goes on administrative hold and credit hold if the order is suspended. </div>
+      <div class="Subhead"><a name="1017726">Un-Allocate Inventory for Orders on Admin Order Hold</a></div>
+      <div class="Body"><a name="1017727">The new</a><span class="Italics"> Hold/Unallocate Inv</span> flag in Order Processing Parameters allows you to un-allocate inventory committed to a sales order if the order is on admin order hold. </div>
+      <div class="Subhead"><a name="1017728">Admin Invoice Hold for Pre-authorized %</a></div>
+      <div class="Body"><a name="1017729">In the </a><span class="Italics">Exceed Preauth%</span> field in Order Processing Parameters, enter a percent that the total invoice must not exceed or it will go on Administrative Invoice Hold. The Administrative Invoice Inquiry displays an X for this hold option.</div>
+      <div class="Subhead"><a name="1017730">Message Option for Orders on Hold</a></div>
+      <div class="Body"><a name="1017731">When an order goes on admin order hold or admin quote hold, you can enter a message </a>that appears in the Administrative Order Release Inquiry or the Administrative Quote Release Inquiry. </div>
+      <div class="Subhead"><a name="1017732">Sort Option Added to Administrative Releases</a></div>
+      <div class="Body"><a name="1017733">A new sort option on the Action Bar allows you to sort orders by customer, ship-to, sales </a>rep, ship via, order type, user ID, order header reason code, or by order line reason code in Administrative Order Release Inquiry and Administrative Quote Release Inquiry.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017734&quot;);"><a name="1017734">Credit Holds</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017734", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017734", false);</script>
+      <div class="Subhead"><a name="1017735">Credit Hold for Zero Value Sales Orders</a></div>
+      <div class="Body"><a name="1017736">Sales orders with zero dollars now go on credit hold if the order has at least one line item. </a>The system allocates any inventory to backordered line items so you don’t have to run the full inventory allocation process when the sales order is released from credit hold.</div>
+      <div class="Subhead"><a name="1017737">Credit Reason Codes for Orders Always on Hold</a></div>
+      <div class="Body"><a name="1017738">When you enter a </a><span class="Italics">Credit Code</span> of <span class="Bold">H</span> (always hold orders) in Customer Maintenance &gt; F6, you can enter the credit reason code from Valid Response Maintenance.</div>
+      <div class="Subhead"><a name="1017739">Credit Hold for Floor Plan Customer</a></div>
+      <div class="Body"><a name="1017740">When you enter a sales order for a floor plan customer (the customer responsible for </a>payment), the floor plan customer’s credit manager ID is checked to determine if the order should go on hold. Previously, the credit manager ID for the original customer was checked.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017741&quot;);"><a name="1017741">Pricing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017741", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017741", false);</script>
+      <div class="Subhead"><a name="1017742">Reprice Line Items by a Percentage</a></div>
+      <div class="Body"><a name="1017743">The new </a><span class="Italics">Increase/Decrease Percentage</span> option on sales orders and quotes allows you to re-price a line item based on a percentage. To use this new feature, go to:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017744">Sales Order Entry &gt; Action Bar &gt; Order Func &gt; Reprice Order Options &gt; Increase/</a>Decrease Percentage.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017745">Quotation Order Entry, go to Action Bar &gt; Quote Func &gt; Reprice Quote Options &gt; </a>Increase/Decrease Percentage.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017746">Flexible Contract Dates in Contract Price Maintenance</a></div>
+      <div class="Body"><a name="1017747">You can now change the start and expiration dates for a contract price in Contract Price </a>Maintenance instead of Price Matrix Maintenance.</div>
+      <div class="Subhead"><a name="1017748">Promotional Price for Linked Blanket P/Os</a></div>
+      <div class="Body"><a name="1017749">The new </a><span class="Italics">Blanket Contract</span> field in Promotion Type Matrix Maintenance allows you to enter a blanket contract number from Blanket Contract Maintenance, which must match the customer’s P/O number to receive the promotional pricing. When you sell a product with a promotion matrix for a blanket contract, the Customer Promotion Matrix Inquiry lists the available promotions.</div>
+      <div class="Subhead"><a name="1017750">Assign a Vendor for Price Matrix Purchasing Cost</a></div>
+      <div class="Body"><a name="1017751">The new </a><span class="Italics">Vendor Number</span> field (Price Matrix Maintenance &gt; F5-Purchase Cost) allows you to assign a vendor to use for the purchasing cost for the price matrix. When you sell a product from this vendor using the B supply code in the line item detail screen, the purchase cost and assigned vendor automatically appear when you generate the purchase order. </div>
+      <div class="Subhead"><a name="1017752">Check for Best Price on Customer’s Contracts</a></div>
+      <div class="Body"><a name="1017753">The price matrix logic now checks for the best price of all contract matrices if Best Price </a>is Y. Previously, the first contract price matrix was automatically used.</div>
+      <div class="Subhead"><a name="1017754">Copy Prices Matrices</a></div>
+      <div class="Body"><a name="1017755">The new Price Matrix Mass Update option on the Price Matrix Maintenance menu allows </a>you to copy prices matrices from one product to another.</div>
+      <div class="Subhead"><a name="1017756">New Price Matrix Types</a></div>
+      <div class="Body"><a name="1017757">The following additional price matrix types are now available in Price Matrix Maintenance:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017758">28 - Customer/vendor/product line</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017759">35 - Product line</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017760">36 - Major group</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017761">55 - Price group/rental product</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017762">New Sales Tax Matrix Types</a></div>
+      <div class="Body"><a name="1017763">The following additional sales matrix types are now available in Sales Tax Matrix </a>Maintenance:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017764">5 - Customer ship-to/product</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017765">6 - Customer ship-to/tax group</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017766">New Promotion Type Matrix</a></div>
+      <div class="Body"><a name="1017767">The new </a><span class="Italics">Matrix Type</span> 2 (order) Promotion Type Matrix Maintenance allows you to enter a discount percent for each buy amount. The <span class="Italics">One Time Promo</span> flag determines if the promotion matrix is a one time promotion for each customer.</div>
+      <div class="Subhead"><a name="1017768">New Rebate Method in Price Matrix Maintenance</a></div>
+      <div class="Body"><a name="1017769">The new rebate method P (rebate percent - price basis) calculates the rebate amount as </a>the difference between actual cost and rebate cost. This method applies when the price fields used as the basis for the rebate are higher than the actual cost. If the system finds a rebated cost that is higher than the actual cost, a rebate is not calculated for the line item.</div>
+      <div class="Subhead"><a name="1017770">New Override Price Matrix Option</a></div>
+      <div class="Body"><a name="1017771">The new </a><span class="Bold">H</span> option for <span class="Italics">Ov</span> (override) in Price Matrix Maintenance allows you to increase a price, but not to decrease it lower, than the original gross price.</div>
+      <div class="Subhead"><a name="1017772">Create a Price Matrix From a Quote or Sales Order</a></div>
+      <div class="Body"><a name="1017773">The new Quote/Order Created Price Matrix process (Maintenance &gt; Pricing Structures &gt; </a>Price Matrix Maintenance) allows you to create a price matrix based on a quote or sales order. Updates are recorded in the Order Log Inquiry (<span class="Bold">PMM</span> code) and the Pricing Audit Reports.</div>
+      <div class="Subhead"><a name="1017774">Using Price Matrices with Child and Base Products</a></div>
+      <div class="Body"><a name="1017775">Prices matrices apply to base, not child products (Product Maintenance &gt; </a><span class="Italics">Special </span><span class="Italics">Operations</span> = CB or CC). When you order a child product the price matrix for the base product is used.</div>
+      <div class="Subhead"><a name="1017776">New Blanket Contract Method for Additional Discounts</a></div>
+      <div class="Body"><a name="1017777">When you enter a blanket contract for a customer in Blanket Contract Maintenance, the </a>new<span class="Bold"> A</span> option under <span class="Italics">Mtd</span> (method) allows you to enter an additional discount percent to apply to the line item on the blanket contract. This value overrides the <span class="Italics">Add Discount %</span> field in Customer Maintenance &gt; F7 &gt; F5.</div>
+      <div class="Subhead"><a name="1017778">Adding Customers to a Master Customer Blanket Contract</a></div>
+      <div class="Body"><a name="1017779">If you enter a master customer number in Blanket Contract Maintenance, now only child </a>customers for this master customer appear when you lookup a customer to add to the contract (F5-Hdr Scr - F5-Add Cust). If more than one child customer appears, you can use the space bar to tag multiple customers to add to the contract. </div>
+      <div class="Subhead"><a name="1017780">New Flag Determines if Backorders are Accepted</a></div>
+      <div class="Body"><a name="1017781">The new </a><span class="Italics">Accept Backorder</span> flag in the Blanket Contract Maintenance header screen allows you to determine if backorders are accepted for items on the blanket contract for the customer.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017782&quot;);"><a name="1017782">Kits/Components</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017782", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017782", false);</script>
+      <div class="Subhead"><a name="1017783">Pick Quantities Not Recalculated for Kit Components</a></div>
+      <div class="Body"><a name="1017784">Pick quantities for kit components on confirmation sales orders are no longer recalculated. </a>As a result, you no longer have to manually update the kit components once the backordered quantities are allocated. Previously, ship, pick, and backorder quantities were recalculated based on the kit parent available when the kit parent was entered.</div>
+      <div class="Subhead"><a name="1017785">Rollup Component Prices for Kit Parents</a></div>
+      <div class="Body"><a name="1017786">The new </a><span class="Italics">Precost Kit From Rollup</span> flag in Order Processing Parameters (F5- Add Info &gt; F5- Add Info) determines if a kit parent item defaults to the cost from the rollup of the components.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017787&quot;);"><a name="1017787">Shipping/Selling Warehouse</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017787", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017787", false);</script>
+      <div class="Subhead"><a name="1017788">Allocate Inventory from Available Warehouses</a></div>
+      <div class="Body"><a name="1017789">The new </a><span class="Italics">Shipping Warehouse Split Reassignment</span> flag in Order Processing Parameters (&gt; F5-Add Info &gt; F5-Add Info) determines how inventory allocates to backorders:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1017790">Y</a></span> - Prompts the salesperson to allocate inventory from an available warehouse</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1017791">A </a></span>- Allocates automatically</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1017792">N</a></span> - Backorders rather than allocate from another warehouse</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017793">Allow/Disallow Selling Warehouse</a></div>
+      <div class="Body"><a name="1017794">The new </a><span class="Italics">Selling Allowed</span> flag in Warehouse Maintenance &gt; F5 determines if you can use a warehouse as the selling warehouse for quotes and sales orders. Once the flag is changed to N, you cannot use that warehouse as a selling warehouse on new orders.</div>
+      <div class="Subhead"><a name="1017795">Geocode Default Shipping and Selling Warehouses </a></div>
+      <div class="Body"><a name="1017796">The new </a><span class="Italics">Selling Warehouse</span> and <span class="Italics">Shipping Warehouse</span> fields in Geographic Code Maintenance allow you to enter shipping and selling warehouses to default for this <span class="Italics">geocode</span> in Customer Maintenance or Customer Ship-To Maintenance.</div>
+      <div class="Subhead"><a name="1017797">Update Shipping Warehouse in Duplicate Orders</a></div>
+      <div class="Body"><a name="1017798">The </a><span class="Italics">New Warehouse Number?</span> field allows you to change the shipping warehouse when you duplicate a sales order or quote (Sales or Quotation Order Entry &gt; Action Bar).</div>
+      <div class="Subhead"><a name="1017799">Changing the Shipping Warehouse for an Auto Reversed Order</a></div>
+      <div class="Body"><a name="1017800">The </a><span class="Italics">Shipping Whse Assign</span> field was added to the Auto Reverse (Sales Order Entry &gt; Action Bar) screen. You can keep the original warehouse on the order or change it to the correct shipping warehouse. Every item on the voided order updates the assigned shipping warehouse.</div>
+      <div class="Subhead"><a name="1017801">D Ship-To Address Included in F3 Search for Ship-To Number</a></div>
+      <div class="Body"><a name="1017802">The F3 search for </a><span class="Italics">Ship-To Number</span> now includes the <span class="Bold">D</span> address from Customer Maintenance. </div>
+      <div class="Subhead"><a name="1017803">Consolidating Shipping</a></div>
+      <div class="Body"><a name="1017804">The new </a><span class="Italics">Shipping Whse Consolidation </span>flag in Order Processing Parameters determines if product shipment is consolidated. The following options are available:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1017805">S</a></span> - Manually consolidate shipping in the Shipping Consolidation screen in Sales Order Entry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1017806">A </a></span>- Automatically consolidate shipping. If at least 5 items can be filled from a warehouse, as many items as possible are shipped from that warehouse. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1017807">N</a></span> - No consolidation.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017808">Viewing Delivery Days for Consolidated Shipments</a></div>
+      <div class="Body"><a name="1017809">The value in the new </a><span class="Italics">Delivery Days</span> field in Ship Via Maintenance &gt; F6 displays in the Shipping Consolidation screen in Sales Order Entry if Shipping Whse Consolidation in Order Processing Parameters is S.</div>
+      <div class="Subhead"><a name="1017810">Sales Tax Jurisdiction Adjusted for Ship-To Number P</a></div>
+      <div class="Body"><a name="1017811">If you enter </a><span class="Bold">P</span> (pick-up) for the <span class="Italics">Ship-To Numbe</span>r in the Sales Order Header screen, the tax jurisdiction from the shipping warehouse applies. If you change the <span class="Italics">Ship-To Number</span> from P to another ship-to account, the tax jurisdiction changes accordingly.</div>
+      <div class="Subhead"><a name="1017812">Consolidate Releases for PSS Shipments</a></div>
+      <div class="Body"><a name="1017813">The new </a><span class="Italics">PSS Consolidation</span> flag in Customer Maintenance &gt; F7 &gt; F7 allows you to consolidate releases into one shipment using the PSS Manifest Interface. You can update and hold the releases in Release Confirmation Entry &gt; F7 and then accumulate them by customer, warehouse, and ship-to address.</div>
+      <div class="Subhead"><a name="1017814">Group Route Codes for Surcharges</a></div>
+      <div class="Body"><a name="1017815">If you use Route Processing, you can use the new Route Code Group Maintenance to </a>group route codes to add surcharges. The group’s surcharge amount is added to the outbound freight for the first release of the customer/ship via/route.</div>
+      <div class="Subhead"><a name="1017816">Voided Sales Allowed in the Point of Sale Subsystem</a></div>
+      <div class="Body"><a name="1017817">The new </a><span class="Italics">Disallow V/S From Alt Whse</span> flag in Point of Sale Options Maintenance determines if a sale can be voided if the Startup Maintenance selling warehouse does not match the selling warehouse on the order.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017818&quot;);"><a name="1017818">Quotes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017818", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017818", false);</script>
+      <div class="Subhead"><a name="1017819">New Frequency Options for Standing Quotes</a></div>
+      <div class="Body"><span class="Italics"><a name="1017820">Quote Type</a></span> 04 (Standing Quote) now allows you to enter a <span class="Italics">Frequency</span> of B (semi-monthly), Q (Quarterly), or S (semi-annually). Previously, you could only enter a frequency by number of days or by a day of the month.</div>
+      <div class="Subhead"><a name="1017821">Record Lost Sales for Deleted Quotes</a></div>
+      <div class="Body"><a name="1017822">If you track deleted sales orders (</a><span class="Italics">Keep Deleted Orders?</span> in File Update Parameters must be set to <span class="Bold">Y</span>),<span class="Bold"> </span>you can enter a lost sales reason code when you delete a quote. You can track this information on the Monthly Lost Sales and Monthly Lost Sales by Vendor Reports.</div>
+      <div class="Subhead"><a name="1017823">Reprinting Quotes</a></div>
+      <div class="Body"><a name="1017824">When you re-print a quote, the warning message now warns you that regardless of how </a>you transmitted the quote the first time, it will automatically be sent to the printer. If you want to email or fax the quote, you must go back into Quote Order Entry to select the method of transmission.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017825&quot;);"><a name="1017825">Credit Cards</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017825", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017825", false);</script>
+      <div class="Subhead"><a name="1017826">Masking Credit Card by User ID</a></div>
+      <div class="Body"><a name="1017827">The new </a><span class="Italics">View Credit Card# </span>flag in User Identification Maintenance allows you to determine if an employee can see the first 12 digits of a customer’s credit card number in all of the order entry and inquiry programs. Previously, the first 12 digits were masked for all users.</div>
+      <div class="Subhead"><a name="1017828">Defaulting AVS Information for Credit Cards</a></div>
+      <div class="Body"><a name="1017829">The new </a><span class="Italics">Default AVS For Credit Card</span> flag in Option Parameters determines if Address Verification System (AVS) information defaults from Customer Maintenance.</div>
+      <div class="Subhead"><a name="1017830">Manually Moving Credit Card Transactions to History</a></div>
+      <div class="Body"><a name="1017831">The new Credit Card Rejection Maintenance program (Order Processing &gt; Processes &gt; </a>Credit Card Processes &gt; Additional Batch Functions) allows you to manually move a rejected credit card transaction into history so that it does not appear on the rejection report. Post authorize the transactions after you move the rejected transactions. </div>
+      <div class="Subhead"><a name="1017832">Credit Card Markup Authorization</a></div>
+      <div class="Body"><a name="1017833">The new </a><span class="Italics">Add Markup To Pre-Auth Amt</span> flag in Order Processing Parameters &gt; F5 determines if the pre-authorization amount for the credit card is increased based on the merchandise amount and a percent in Credit Card Markup Table Maintenance in Order Processing Controls. You can add the Credit Card Markup Table number to a code in Ship Via Maintenance.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017834&quot;);"><a name="1017834">Miscellaneous</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017834", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017834", false);</script>
+      <div class="Subhead"><a name="1017835">Validating Geocodes for Updated Addresses</a></div>
+      <div class="Body"><a name="1017836">If you use vertex to calculate sales tax, the city, state, zip, and county fields are now </a>validated against the Vertex address information. If you change the address, the geocode is validated to make sure the address matches the zip code. </div>
+      <div class="Subhead"><a name="1017837">New Comment Codes</a></div>
+      <div class="Body"><a name="1017838">The following codes are not linked to the product on the previous line on a quote or sales </a>order and always appear at the bottom of the quote, pick ticket, or invoice:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017839">CS - removed after first invoice.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017840">CSB - remain for backorder items and all releases.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017841">Update Serial Number Information for Trade-Ins</a></div>
+      <div class="Body"><a name="1017842">The new </a><span class="Italics">Equipment Trade In</span> flag in Credit Reason Codes determines if you can enter the make, model, price, and cost for the new serial number when you enter a credit memo for an equipment trade-in.</div>
+      <div class="Subhead"><a name="1017843">Exchange Option added When Billing a Core Charge</a></div>
+      <div class="Body"><a name="1017844">The new </a><span class="Italics">Exchange</span> option automatically updates the core charge and the core credit on the order.</div>
+      <div class="Subhead"><a name="1017845">New Commission Matrix </a></div>
+      <div class="Body"><a name="1017846">The new type15 matrix in Commission Matrix Maintenance allows you to set up a </a>commission matrix by warehouse/route/product line.</div>
+      <div class="Subhead"><a name="1017847">New Purge Programs</a></div>
+      <div class="Body"><a name="1017848">The following purges were added to Purge Utility &gt; Order Processing:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017849">Customer Expired Credit Cards</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017850">Rebates</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017851">Lost Sales</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017852&quot;);"><a name="1017852">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017852", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017852", false);</script>
+      <div class="Subhead"><a name="1017853">Order Log Inquiry </a></div>
+      <div class="Body"><a name="1017854">The new </a><span class="Bold">JBC</span> code in the Order Log Inquiry indicates that a job is complete in the Shop Repair Recap Information screen.</div>
+      <div class="Subhead"><a name="1017855">Sales Order Inquiries</a></div>
+      <div class="Body"><a name="1017856">The following screens have new </a><span class="Bold">sF5</span> and <span class="Bold">sF6</span> keys that allows you to view the next or previous block of records:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017857">Consignment Order History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017858">Written By Order Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017859">Open Order Release Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017860">Customer/Product History Inquiry</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017861">Sales Order Inquiries</a></div>
+      <div class="Body"><a name="1017862">A list of kit components appears in the detail and summary recaps in Sales Order Inquiry </a>and Sales Order History Inquiry &gt; F5-Review &gt; Action Bar &gt; Order Func &gt; Summary or Detail GL Recap.</div>
+      <div class="Subhead"><a name="1017863">Customer Inquiries</a></div>
+      <div class="Body"><a name="1017864">The </a><span class="Bold">F6-Summary</span> key was added to the following screens to report summary statistics:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017865">Customer Maintenance/Customer Inquiry &gt; F9-Statistics</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017866">A/R &amp; Credit Comments Inquiry &gt; F9-Stats</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017867">Customer Inquiry</a></div>
+      <div class="Body"><a name="1017868">The Website Address was added to the Customer Inquiry. This field is for reference only </a>and does not launch into the customer’s website.</div>
+      <div class="Subhead"><a name="1017869">Customer Sales History Inquiry </a></div>
+      <div class="Body"><a name="1017870">The new </a><span class="Bold">F8-Vendor</span> key allows you to view the sales history for a customer/vendor/product.</div>
+      <div class="Subhead"><a name="1017871">Incomplete Order Inquiry</a></div>
+      <div class="Body"><a name="1017872">The new</a><span class="Bold"> F6-SOE</span> function key allows you to edit the suspended sales order from  in the Incomplete (Suspended) Order Inquiry.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1017873&quot;);"><a name="1017873">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1017873", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1017873", false);</script>
+      <div class="Subhead"><a name="1017874">Monthly Lost Sales Detail Reports (updated)</a></div>
+      <div class="Body"><a name="1017875">The order date was added to the selection criteria for the Monthly Lost Sales reports. Also, </a>you must purge the sales data from the new Lost Sales purge on the Order Processing Purge menu.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017876">Monthly Lost Sales Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017877">Monthly Lost Sales by Vendor Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017878">Lost Sales (New purge)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1017879">Purge Log Report</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1017880">Quotation Disposal Analysis Reports (updated)</a></div>
+      <div class="Body"><a name="1017881">The </a><span class="Italics">Disposition Analysis</span> code was added to the selection criteria to explain why the quote was deleted on the Quotation Disposal Analysis Detail and Quotation Disposal Analysis Summary Reports.</div>
+      <div class="Subhead"><a name="1017882">Freight Comparison Report (new)</a></div>
+      <div class="Body"><a name="1017883">Lists customers who were billed freight. Compares the inbound, outbound, and </a>manifested freight amounts.</div>
+      <div class="Subhead"><a name="1017884">Open Backorder Detail Report By Vendor (new)</a></div>
+      <div class="Body"><a name="1017885">Lists Sales Orders with open backorders, sorted by vendor.</a></div>
+      <div class="Subhead"><a name="1017886">Pending Orders Report (new)</a></div>
+      <div class="Body"><a name="1017887">Displays the number sales orders, number of lines, and the number of units that are ready </a>to pick in a warehouse, sorted by ship via code.</div>
+      <div class="Subhead"><a name="1017888">Monthly Credit Card Sales Register (updated)</a></div>
+      <div class="Body"><a name="1017889">Added new </a><span class="Italics">Sort by Credit Card Type</span> to the selection criteria on the GRIM screen.</div>
+      <div class="Subhead"><a name="1017890">Build Point of Sale</a></div>
+      <div class="Body"><a name="1017891">The Build Point of Sale process which is run before the Point of Sale Report, has a new </a>option for kit components. The <span class="Bold">O </span>option allows you to only include kit components and exclude kit parents. </div>
+      <div class="Subhead"><a name="1017892">Reorganized Miscellaneous Report Menus</a></div>
+      <div class="Body"><a name="1017893">The Miscellaneous Reports menu was re-organized to group reports and submenus that </a>pertain to customers and to pricing. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v19_new_features.1.1.htm#1017717">V19 New Features</a>:Order Processing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

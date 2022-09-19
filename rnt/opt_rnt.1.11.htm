@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Partially Checking In a Rental Item</title>
+    <link rel="StyleSheet" href="css/opt_rnt.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1074710">Partially Checking In a Rental Item</a></div>
+      <div class="Path"><a name="1123907">Path: Rental &gt; Processes &gt; Rental Checkin Processing (/RPUE)</a></div>
+      <div class="Body"><a name="1074711">You can check in rental items partially or completely using Rental Checkin Processing. If </a>an order is partially checked in, use the rental checkin history number to return the remaining items. The following message appears:</div>
+      <table class="Question" style="text-align: left; width: 204.18768pt;" cellspacing="0" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E8E8E8; border-bottom-color: #ffffff; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #ffffff; border-left-style: solid; border-left-width: 1px; border-right-color: #ffffff; border-right-style: solid; border-right-width: 1px; border-top-color: #ffffff; border-top-style: solid; border-top-width: 1px; padding-bottom: 5pt; padding-left: 3pt; padding-right: 3pt; padding-top: 5pt; vertical-align: top; width: 204.18768pt;">
+            <div class="DialogBox"><a name="1119325">This checkin document has been processed. </a>Do you wish to reopen?</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1074722">Select </a><span style="font-weight: bold;">No</span> to choose another checkin number or choose <span style="font-weight: bold;">Yes</span> to reopen the checkin document and return the remaining items on the rental order. The original rental checkin history record is erased and updated with the new rental checkin information.</div>
+      <div class="Subhead"><a name="1074723">Reports &amp; Injuries</a></div>
+      <div class="Path"><a name="1112564">Path: Rental &gt; Inquiries</a></div>
+      <div class="Subhead"><a name="1124112">Rental Checkin Inquiry (/RCKI)</a></div>
+      <div class="Body"><a name="1074724">This inquiry displays rental orders with a rental check-in document no actual checkin.<img class="Default" src="images/rental_checkin.jpg" width="331" height="221" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Subhead"><a name="1074729">Rental Checkin Document History Inquiry (/RPHI)</a></div>
+      <div class="Body"><a name="1074730">This inquiry displays rental orders that were processed through Rental Check-In Entry.<img class="Default" src="images/rental_checkin_hist.jpg" width="306" height="205" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Subhead"><a name="1074735">Order Log Inquiry (/OLI)</a></div>
+      <div class="Path"><a name="1120756">Path: Order Processing &gt; Inquiries &gt; Sales Order Inquiries &gt; Sales Order Log Inquiry</a></div>
+      <div class="Body"><a name="1074736">The following codes were added to Order Log Inquiry for rental check-in documents.:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1120778">SPL - the rental order is split due to a partial return of the rental items. Each line item </a>that is partially returned creates a SPL record. For example, if two rental items are partially returned, two split entries are displayed in Order Log Inquiry. Press F5 to view the split line items on partially returned orders. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1074742">CKO - the checkin document is reopened in Rental Checkin Processing to receive the </a>remaining rental items or allow the checkin document to be deleted. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1074743">CHD - the checkin history document in deleted.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1074746">Open Rental Checkin Report (/OPEN.CHECKIN.RPT)</a></div>
+      <div class="Body"><a name="1074747">This report lists open rental checkin documents based on the criteria entered.</a></div>
+      <div class="Path"><a name="1074748">Path: Rental &gt; Reports Open Rental Checkin Report</a></div>
+      <div class="Subhead"><a name="1074749">Rental Checkin History Xref Rebuild </a></div>
+      <div class="Body"><a name="1074750">A rebuild is available for rental checkin history transactions.</a></div>
+      <div class="Path"><a name="1074751">Path: System Parameter &gt; Processes ReBuild Menu Ordering Control Order Processing Inquiry Xref </a>Rental Checkin History Xref</div>
+      <div class="Subhead"><a name="1100741">Rental Checkin History Reprint</a></div>
+      <div class="Path"><a name="1123917">Path: Rental &gt; Document Printing &gt; Rental Checkin History Reprint (/RCHR)</a></div>
+      <div class="Body"><a name="1100742">This option allows you to reprint rental checkin history documents based on the Checkin </a>History Number.</div>
+      <div class="Body"><a name="1100749">For example, If a checkin was reopened and multiple checkin history records exist (-1,-2), </a>the last checkin history record is the only checkin history number available to be reprinted. For example, if checkin #000011 was processed as a partial return (not all items were returned) and reopened to return the remaining items, rental checkin #000011-1 would be created. Checkin #000011-1 is now the checkin document that is available for reprint. If rental checkin #000011 was entered to be reprinted, a message would display informing the user that reprints are not available for reopened history records.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="opt_rnt.1.8.htm#1074710">Rental Transactions</a>:Partially Checking In a Rental Item</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

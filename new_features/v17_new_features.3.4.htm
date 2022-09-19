@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Inventory</title>
+    <link rel="StyleSheet" href="css/v17_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1001247">Inventory</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001248&quot;);"><a name="1001248">Stock Receipts</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001248", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001248", false);</script>
+      <div class="Subhead"><a name="1001249">Stock Receipts Entry </a></div>
+      <div class="Body"><a name="1001250">If Overseas is set to P, only Type 12 P/O types can be received for the vendor. All open </a>type 01 and 02 purchase orders must be entered and received in On The Water Maintenance. Change the setting before receing stock or paying the invoice. </div>
+      <div class="Subhead"><a name="1001251">Stock Receipts&gt; On The Water Maintenance</a></div>
+      <div class="Body"><a name="1001252">On The Water Maintenance is a new receipts method to update original purchase orders </a>with merchandise received. This new feature allows products on open P/Os to be received once the product has arrived and compares the number of received items to the amount of open items on the open P/O. If the received quantity is larger than the open quantity, the following message appears: Quantity Entered Exceeds Total Quantity On Open Purchase Orders By (the overage quantity). Choose Accept Overage or Return to the screen to adjust the quantity. In addition, this also creates the Type 12 and 13 Purchase Orders. with this On The Water Maintenance, additional criteria are also required to be established for this feature to work correctly. Purchase Order Types 12-OTW-Stock and 13-OTW-Direct are new PO Types that were added to V17. A new P flag was added to the On The Water Conversion field in the Additional Option Parameters. In addition, the functionality of the Stock Receipts Entry program has also been updated. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001253&quot;);"><a name="1001253">Transfer Shipments Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001253", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001253", false);</script>
+      <div class="Body"><a name="1001254">The Stock Movements menu has recently been enhanced with a new Transfer Shipments </a>Maintenance option. This process performs the same function as the Suspend option in Transfer Shipments Entry with the exception that packing slips are printed if continuous printing function is currently setup. You can use this as a maintenance entry screen for Transfer Shipments Entry. The quantity shipped, bin location, serial number, lot number, etc. will be updated for each line item currently on the release. Once the data is saved, the transfer release is suspended using a new SAV (Transfer Shipments Maintenance code (which references the Transfer Release #) rather than the SUS code. Therefore, a packing slip printes if you print them continuously.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001255&quot;);"><a name="1001255">Vendor Claims Entry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001255", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001255", false);</script>
+      <div class="Subhead"><a name="1001256">Warning for Products on a Warranty Tag</a></div>
+      <div class="Body"><a name="1001257">A new WARNING message was added to the Vendor Claim Entry process for items </a>entered on a vendor claim that contain Open Warranty Tags. Once an open warranty tag product is entered, the Open Warranty Tags Exist For This Product! Do You Wish To… message will be displayed. You can choose to Return to the product line and selecting F7-Wty Tag# to use an open warranty number, or choose to Continue entry with the product entered for the Vendor Claim. </div>
+      <div class="Subhead"><a name="1001258">Continuously Faxing and Printing Vendor Claims</a></div>
+      <div class="Body"><a name="1001259">The Vendor Claim Entry process was updated with the ability of printing or faxing vendor </a>claims using the Continuous printing process. This new feature works with the new Vendor Claim flag that was added to the Continuous Printing Setup screen in Warehouse Maintenance. If the Vendor Claim flag is set to Y, vendor claims can be printed or faxed based on your selections. If you do not continuously print vendor claims, use Vendor Claim Printing to print vendor claims. Important Note: To use this new feature, it is required that a USER-FORMS change be made for customers upgrading from a previous versions. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001260&quot;);"><a name="1001260">Physical Inventory</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001260", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001260", false);</script>
+      <div class="Subhead"><a name="1001261">Inventory Sheet Procedure</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001262">Deviation Exception Report </a></span>- To list grand totals for a few of the columns listed on this report, the Deviation Exception Report was modified for V17. The StockOn, PhysCnt and Dev-Qty columns now display the grand totals for these columns. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001263">Build Physical Inventory Lists</a></span>&gt;<span class="Bold"> User Defined Criteria</span>&gt;<span class="Bold"> Sort By? </span>- to provide an additional sorting option when building physical inventory lists, a new M (Major Group) selection was added to the list of available Sort By options. You can create inventory lists by Major Group. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001264">Inventory Tag Procedure&gt; Deviation Exception Report By Tag</a></div>
+      <div class="Body"><a name="1001265">The Inventory Tag Procedure was updated with a new Deviation Exception Report By Tag </a>report. This report is comparable to the Deviation Exception Report in that it reflects products that have a variance between saved book on-hand and the physical count quantity entered in Physical Entry. However, this report sorts by Product Number rather than Deviation Value. In addition, it also provides more detailed information such as additional columns to display Product Description Two, Physical Tag Number and Bin Number. </div>
+      <div class="Subhead"><a name="1001266">Cycle Counting Procedure</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001267">Paper Site Count Sheet Printing</a></span> - Previously, the Cycle Counting sheets would be printed in the order that they were loaded in the bin location file. to simplify this process, the cycle counting sheets will now be printed in alphanumeric order for each bin location. Form #</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001268">Paper Site Count Sheet Entry (1st Level) </a></span>- with the modification made to the Paper Site Count Sheet Printing process, the functionality of the Paper Site Count Sheet Entry (first Level) has also been modified for V17+. Previously, the product numbers were displayed in the order they were loaded in the bin location file. to simplify this process, the products will now be sorted in alphanumeric order for each bin location. This modification also applies to the RF screens Inventory&gt; Physical Inventory&gt; Cycle Counting Procedure&gt; Radio Frequency Cycle Count Entry (first level) and Warehousing&gt; Radio Frequency Menu&gt; Physical&gt; Cyc Cnt Ent-1st. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001269">Up to V16, the</a><span class="Bold"> Paper Site Count Sheet Entry (2nd Level)</span> displayed and prompted for product numbers in the order they were loaded into the bin location file. This has since been modified. This process will now sort product numbers in the F3-Lookup and prompted in alphanumeric order for each cycle count date. Each day of entries will contain products sorted in alphanumeric order. This feature is also available in the RF screens (Inventory&gt; Physical Inventory&gt; Cycle Counting Procedure&gt; Radio Frequency Cycle Count Entry 2nd Level) and Warehousing&gt; Radio Frequency Menu&gt; Physical&gt; Cyc Cnt Ent-2nd). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001270">Second Level Queue Report</a></span> - display product numbers sorted in alphanumeric order for each bin . Previously the product numbers appear in the order they were added to the bin. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001271">HandHeld Sheet Procedure</a></div>
+      <div class="Body"><a name="1001272">Prelude was enhanced with a new inventory process, the Handheld Sheet Procedure </a>enables inventory to be performed using a handheld device. The Handheld Sheet procedure is very similar to the current Physical Inventory-Sheet menu with the addition of a few options for the new Handheld Sheet Procedure. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001273">Clear Temporary File:</a></span> Clear the temporary Unix file that is updated by the handheld device.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001274">Import Data to Temporary File:</a></span> This process will import data from the handheld device to the temporary file that is located in Unix.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001275">Discrepancy Report:</a></span> This report sill display discrepancies from the importing of data from the handheld device such as invalid product numbers or invalid scans that Prelude does not recognize as a valid product number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001276">All Products Loaded Report:</a></span> Lists products that were scanned with a handheld device.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001277">Update Product File:</a></span> This process moves the data imported into the temporary file from the handheld device.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001278">Clear ALL import items from Temporary file:</a></span> This process clears the temporary file that is located in Unix including discrepancies that is updated from the handheld device. This final process should not be performed until all processing is completed for the physical inventory handheld sheet procedure. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001279">Important Note:</a></span> This new option is only available once the Handheld module is purchased. Prior to using this feature, please contact Prelude to ensure that any modifications that may pertain to this option are established accordingly. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001280">HandHeld Tag Procedure</a></div>
+      <div class="Body"><a name="1001281">Prelude was enhanced with a new inventory process, the Handheld Tag Procedure </a>enables inventory to be performed using a handheld device. The Handheld Tag procedure is very similar to the current Physical Inventory-Tag menu with the addition of a few options that only apply to the new Handheld Tag Procedure. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001282">Import Data to Temporary File:</a></span> This process will import data from the handheld device to the temporary file that is located in Unix.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001283">Discrepancy Report:</a></span> This report will display discrepancies from the importing of data from the handheld device such as invalid product numbers or invalid scans that Prelude does not recognize as a valid product number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001284">All Products Loaded Report:</a></span> This report will display all products that were scanned into the system from the handheld device.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001285">Update Tags:</a></span> This process moves the data imported into the temporary file from the handheld device to the warehouse file.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001286">Clear ALL import items from Temporary file:</a></span> This process clears the temporary file that is located in Unix including discrepancies that is updated from the handheld device. This final process should not be performed until all processing is completed for the physical inventory handheld tag procedure. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Italics"><a name="1001287">Note:</a></span> This option is only available once the Handheld module is purchased. Prior to using this feature, please contact Prelude to ensure that any modifications that may pertain to this option are established accordingly. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001288&quot;);"><a name="1001288">Processes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001288", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001288", false);</script>
+      <div class="Subhead"><span class="Bold"><a name="1001289">Process Invoice&gt; Release Pick Tickets</a></span></div>
+      <div class="Body"><a name="1001290">to further enhance Prelude, the Release Pick Tickets process was updated with the GRIM </a>(General Report interface Maintenance) screen. The functionality of this routine was not modified. </div>
+      <div class="Subhead"><a name="1001291">Rebuild Product Classifications</a></div>
+      <div class="Body"><a name="1001292">The Rebuild Product Classifications option was updated to accommodate the new </a>Product Class Method L flag setting (located in Systems&gt; Maintenance&gt; Purchasing Controls&gt; Purchasing Parameters). The Rebuild process will now perform the classifications by the Product Line if the product class method is set to L. with the update to this functionality, the Exec Prod Classify Rebuild in the End of Month Calendar Close feature has also been updated. </div>
+      <div class="Subhead"><a name="1001293">Unusual Usage Menu &gt; Unusual Usage &amp; Exception Report</a></div>
+      <div class="Body"><a name="1001294">Several new fields were added to the Unusual Usage &amp; Exception Report GRIM screen. </a>In addition to the <span class="Bold">Product Line</span>, <span class="Bold">Product Number</span> and <span class="Bold">Class</span> fields that were added to narrow down the results of this report based on the information entered, a new <span class="Bold">Exception </span><span class="Bold">Code</span> field has also been added. This Exception Code works with two new Spike Exception flags as well as Unusual Usage and Out of Stock items. To restrict this report to only Unusual Usage items, enter U. Entering O will limit this report to Out of Stock items. If S is entered, this report will only display items that were flagged as a spike condition. The Inventory Month End Close process has also been updated to evaluate if the Spike Exception-High &amp; Low percentages established in Purchasing Parameters and the annual usage meets the criteria to detect a spike in usage. For more information pertaining the Spike Expectations-High &amp; Low, please see the New Features listing for Systems&gt; Maintenance&gt; Purchasing Controls.<span class="Bold"> </span></div>
+      <div class="Subhead"><a name="1001295">End of Month Calendar Close&gt; Exec Prod Classify Rebuild</a></div>
+      <div class="Body"><a name="1001296">The </a><span class="Bold">Exec Prod Classify Rebuild</span> option was updated to accommodate the new Product Class Method L flag setting (located in Systems&gt; Maintenance&gt; Purchasing Controls&gt; Purchasing Parameters). The Rebuild process will now perform the classifications by the Product Line if the product class method is set to L. with the update to this functionality, the Rebuild Product Classifications feature has also been updated. </div>
+      <div class="Subhead"><a name="1001297">Move Product Usage</a></div>
+      <div class="Body"><a name="1001298">A new Move Product Usage feature has recently been added for V17. This menu option </a>allows users the ability of copying usage information from one product to another product. in this feature, you can choose to copy the usage from the original product to the To product or if the usage is to be copied as well as cleared from the original product. Once this process was generated, the usage information that was copied will be reflected in the Override column in the Usage screens in Product Warehouse Maintenance of the To product. Please note that the quantity displayed in the Override column is not the amount of items that were moved as the result of the Move Product Usage process but the combined total usage of both the original product that was moved as well as the usage of the to product. In addition, if the Capture Weekly Usage flag in Inventory Parameters is set to Y, the weekly usage information will also be available to be copied along with the monthly usage. with this new option, a new MOV code has also been created for the Usage Audit Inquiry to indicate that the usage transaction in UAI is a result of a Move Product Usage process. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001299&quot;);"><a name="1001299">Product Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001299", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001299", false);</script>
+      <div class="Subhead"><a name="1001300">Product Number&gt; F5-Pattern</a></div>
+      <div class="Body"><a name="1001301">with the new PATTERN.CODE valid response code created as well as the update in </a>functionality of the Pattern field in the Book/Sample Information screen, a new <span class="Bold">F5-Pattern</span> function was added to the F3-Lookup screen. This new function enables users to lookup products by patterns. When selecting F3 on the Product Pattern field, the system will display any patterns that were setup as valid pattern codes in the Valid Response Maintenance screen. Once the pattern is selected, the product keyword process will then perform a search for any products that were established with that pattern and display the lookup accordingly. <span class="Bold">Note:</span> The F5-Pattern function will only be displayed on systems that currently have the Book/Samples flag in Company Maintenance to Y. </div>
+      <div class="Subhead"><a name="1001302"> F5-Add Info</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001303">Lot Number Flag=Y&gt; Lot Exp Date Flag: </a></span>A new <span class="Bold">M</span> flag option was added to the available options to calculate an Expiration Date. If this flag is set to M, a Mfg Date prompt will be displayed in Stock Receipts Entry, when receiving the quantity for this item. This will prompt you to enter a manufacture date for this lot product. The date entered here in combination with the shelf life days for this product will be used to calculate the Expiration date for this lot number. <span class="Bold">Note:</span> The Shelf Life Days for lot products in Product Maintenance&gt; F5-Add Info. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001304">Product Tax Group:</a></span> updated to accommodate a new TAX.GRP validation code established for the Valid Response Maintenance feature. With this new validation logic in place, any entry in the Product Tax Group field will be validated against the list of available responses created for the TAX.GRP validation code. If anything other than a valid response is entered, an Invalid Response! Please Try Again Or Press F3 For Options! WARNING message will be displayed disallowing the entry of an invalid response. In addition, the same functionality update for the Product Tax Group in Product Maintenance has also was added to the Sales Tax Group field in Customer Maintenance as well as the Product Tax Group field in the Product Warehouse Maintenance screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001305">Date Established</a></span>: relocated and renamed for V17. Previously, the Date Established field was located in the F5-Add Info screen in Product Maintenance. This is now titled <span class="Bold">Est Date</span> and is located in the main screen of Product Maintenance. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001306">Contact Prc/Delivery</a></span> - Previously a message highlighted in red would be displayed at the bottom of the screen to remind you to contact the manufacturer for Price and Delivery information. You must verify that you reviewed the message. The Contact Manufacturer For Price And Delivery For Product XXX message will be displayed. The system will automatically default to the Acknowledge Message option therefore, not permitting you to continue until the Message Acknowledged is selected. Once this was completed, you can continue with the entry process. This new feature was added to ensure that you are reviewing this message. <span class="Bold">Additional Notes: 1.</span> If a Purchase Order is created from in Sales Order Entry, or Direct Order Entry is used to create the P/O, the message will be displayed and will be updated in the header notes screen. <span class="Bold">2.</span> If this flag is set to Y for a kit parent item and you do not explode the components on to the purchase order, the kit parent item will be prompted with this new message. <span class="Bold">3.</span> If this flag is set to Y for components of a kit parent item and you explode the components on to the purchase order, the message will be updated in the header notes screen for the components. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001307">Allow Description Override</a></span> - This new feature allows the product description of items to be modified in any of the document entry screens. If this flag is set to Y for a product, and that product is entered on any of the document entry screens, (such as SOE, QOE, POE, SRE, TE, WOE etc.) you can edit the description in the Product Description box. If this flag is set to N, the Product Description prompt will NOT be displayed. However, despite the fact that this flag may be set to N, the Product Description box will in fact be displayed for any asterisk (*) items that are entered throughout the entry screens. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001308">F5-Add Info&gt; Floored Item:</a></span> The Floored Item flag was relocated for V17+. The functionality of this flag setting has not been modified. However, it is now on the new Warehousing Information screen in /PM&gt; Action&gt; Addtl Opts. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001309">F5-Add Info&gt; Box Type</a></span>: relocated for V17. The functionality of this flag setting has not been modified. However, it is now located in the new Warehousing Information screen in the /PM&gt; *Action&gt; Addtl Opts&gt; Warehousing Information screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001310">F5-Add Info&gt; Resale Exemption</a></span>: Determines if the customer product number should be considered a taxable or non-taxable product, due to the fact that the item will be resold by the customer. If the customer product is to be considered a non-taxable item and it is to be included in the sales tax exemptions, select Y. If this item is to be considered a taxable item and is not to be included in the tax exemptions, set this flag to N. This flag works with the Type flag established for the customer/customer ship-to record. <span class="Italics">Note: A Resale Exemption flag has also been added at the Customer Product </span><span class="Italics">Number level (listed in the Maintenance portion of the Order Processing New Features </span><span class="Italics">list) if, both flags are established, the flag setting at the Customer Product Number </span><span class="Italics">level will override the flag setting at this level</span>. <span class="Italics">Note: This feature is not available for </span><span class="Italics">Service Items (Service Item Flag=Y). </span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001311">F6-Xref/Notes</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001312">Related Product &gt; Usage Product #</a></span>: The Related Product function screen was modified to include a new <span class="Italics">Usage Product #</span> field. This new feature allows users to enter a product that to be used as the usage product for the original product entered. This new feature provides users the ability of setting up a product that is to be updated with usage information when the original product is entered in any of the Sales Order, Work Order or Transfer screens. If a product does in fact have a Usage Product # assigned, once the original product is entered and the orders are processed, Product Usage Maintenance will be updated for the usage product and will not reflect usage for the original product. In addition, the functionality of the Usage Audit Inquiry has also been enhanced to incorporate this new feature. When viewing the inquiry for the Usage Product, the original product number will be displayed in the description field for any products established as usage products. Note: If using the Move Usage Product feature, the Usage Product # will need to be used for this process rather than the original product number. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001313">Kit Parent &gt; Kit Type</a></span>: A new Kit Type <span class="Bold">E</span> was created to simply the kit component process. Setting the Kit Type to E will ask Do You Wish to Explode the Kit Components On To The Sales Order? when a kit parent item is entered on the sales order. If you select Y, the list of kit components will be moved onto the sales order. In addition a Beginning of Kit Parent comment appears at the start of the component list. An End of Kit Parent comment code will be displayed at the end of this list. These comment codes are generated to better identify which components are associated with which kit parent. <span class="Bold">Important Note:</span> Setting this flag to E will only enable kit parents to be exploded in Sales Order Entry. Therefore, if a type E kit parent is entered on a quote, the kit will perform as if it had an R Kit Type setting. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001314">F7-Column Qty Brk</a></div>
+      <div class="Body"><a name="1001315">The functionality of the </a><span class="Bold">Quantity Price Break</span> at the product level and product warehouse level was modified. The price breaks established on this screen are now included and recomputed based on the future prices updated in Nightly Processing. Up to V16, it was required to manually recomputed prices by using the F5-Recompute Prices or perform the Recompute Prices process for the price fields on the price break screens to be updated to reflect the new price. Form </div>
+      <div class="Subhead"><a name="1001316">Action&gt; Addtl Opts</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001317">Book/Sample Information&gt; Pattern: </a></span>The functionality of the <span class="Bold">Pattern</span> option in the Book/Sample Information screen was modified with the new PATTERN.CODE valid response code (referenced in the Miscellaneous Controls portion of the Systems New Features list). Once a pattern is entered for a number, the pattern code will be updated as a product keyword. Only pattern codes that have previously been established in Valid Response Maintenance will be considered valid pattern codes to be entered. <span class="Bold">Note:</span> A new F5-pattern function key has also been added to look up a product number by a pattern. (referenced in the Miscellaneous Controls portion of the Systems New Features list). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001318">Warehousing Information</a></span>: A new <span class="Bold">Warehousing Information</span> menu option was added to the Additional Options portion of Product Maintenance. This was created to allow warehouse related field and flag settings to be established for the warehousing module. In addition to the new W/O Over Allocation % field that is included in this menu, both the Floored Item and Box Type flags were relocated from /PM&gt; F5&gt;F5 to the new Warehousing Information screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001319">Warehousing Information&gt; W/O Over Allocation %: </a></span>The <span class="Bold">W/O Over Allocation %</span> flag was added to work with the Whsing Allocation field established for the bill of material in Bill of Material Maintenance. This option allows you to enter the percent to be allocated as the over percentage. If Whsing Allocation is O for the bill of material in Bill of Material Maintenance and the components have a percentage currently established in W/O Over Allocation %, the Work Order Bin Allocation process will pull the pick quantity, calculate the over percentage, and round up to the nearest selling package quantity for each component. The over percent is not used only if the bin available is less than the over percentage calculated. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001320">Maintenance&gt; Product Maintenance&gt; Global Product Maintenance Menu</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001321">Save-List Creation Process</a></span>: A new Global Product Update process was added to Prelude. with this new feature, a new <span class="Bold">Save-List Creation Process</span> has also been added. This process allows Save-Lists to be created for a range of products or product line entered.<span class="Bold"> Important Note:</span> When this process creates the save-list, the list is created with a prefix of TPME. <span class="Bold">Example: </span>If a Save-List name is entered as INV101 it will be updated as TPMEINV101. However, you must use the prefix if using a GET-LIST or edit function at TCL. The system will recognize INV101 as the save-list name in Global Product Update Process. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001322">Template Product Maint Entry:</a></span> In addition to the new Save-List Creation Process, a new <span class="Bold">Template Product Maint Entry</span> procedure has also been added with the Global Product Update Process. This new Template Product Maint Entry option allows users to create a template for an existing product. This maintenance screen resembles the Product Maintenance screen, however not all areas are accessible for modifications. Only areas can be changed. <span class="Bold">Important Note: </span>The product that is entered in the Template Product Maint Entry must currently exist in in a save-list that that<span class="Italics"> </span>was previously created in the Save-List Creation Process <span class="Italics">(either by product number or </span><span class="Italics">product line)</span>. for this process to recognize any changes made to the product and save those changes to the template, the system must recognize a flag or field where an actual change was made. <span class="Bold">Example: </span>If a product is entered in Template Maint Entry and the Description Two field is removed but a new description is not entered, this change will not be added to the template when F2-Save is performed and the template is created. Once all the changes are made and the F2-Save is processed, you must enter enter a template name for saving the changes made to the product. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001323">Global Product Update Process:</a></span> to process the updates made for products and/or product lines, the <span class="Bold">Global Product Update Process</span> routine will need to be performed. The Save-List Name and Template Name previously created for these products will need to be entered in this GRIM <span class="Italics">(General Report Interface Maintenance)</span> screen. Once the information is entered and the F2-Save process is selected, the update process will begin. The system will display the number of records processed for this update. Once this was completed, you can view the updated information by using the <span class="Italics">Product </span><span class="Italics">Maintenance Audit Report By User Id</span> or <span class="Italics">By Product</span> located in Inventory&gt; Reports&gt; Miscellaneous Reports&gt; Product Audit Reports. 120602B</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001324">Product Warehouse Maintenance&gt; Product Tax Group</a></div>
+      <div class="Body"><a name="1001325">The functionality of the </a><span class="Bold">Product Tax Group</span> field has recently been updated to accommodate a new TAX.GRP validation code for the Valid Response Maintenance feature. With this new validation logic in place, any entry in the Product Tax Group field will be validated against the list of available responses created for the TAX.GRP validation code. If anything other than a valid response is entered, an Invalid Response! Please Try Again Or Press F3 For Options <span class="Bold">WARNING</span> message will be displayed disallowing the entry of an invalid response. The F3 function key will display all the valid responses for this field. In addition, the same functionality update for the Product Tax Group in Product Warehouse Maintenance has also was added to the Product Tax Group field in Product Maintenance as well as Sales Tax Group in Customer Maintenance. </div>
+      <div class="Subhead"><a name="1001326">Product Usage Maintenance</a></div>
+      <div class="Body"><a name="1001327">Previously, the Previous Year's Usage would be displayed by selecting the F5-PY Usage </a>function key to view the Previous Year and Previous Year’s usage. To compress this information into one screen, the <span class="Bold">Product Usage Maintenance</span> screen was modified. This screen will now display current year's usage in addition to the <span class="Italics">Frcst</span> (Forecast) for each month and <span class="Italics">Exc</span> (Exceptions for unusual usage U, E, S). With this change in place, you can view the information for previous years by paging down instead of pressing a function key. </div>
+      <div class="Subhead"><a name="1001328">Onventory Adjustment Reason Codes&gt; Update Product Usage</a></div>
+      <div class="Body"><a name="1018634">This new Y/N </a><span class="Bold">Update Product Usage</span> flag was added to allow you to update usage based on an inventory adjustment reason code to reduce inventory (negative qty on INV adjustment type or positive qty on DMG, SCR, or WTY adjustment type). If this flag is set to Y, product usage will be updated in the Transfers column for the item in the Product Monthly Usage screen. If the flag is set to N, product usage will not be updated. with this new feature, modifications have also been made to the Usage Audit Inquiry as well as the Move Product Usage process. The ADJ code is updated if the Update Product Usage flag is set to Y and an Inventory Adjustment Entry is performed to reduce inventory. This transaction will reflect a T in the Type column referencing that the usage is updated in the Transfer column. The Move Product Usage was updated to include ADJ entries (Inventory Adjustment) as part of the move product usage process. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001330&quot;);"><a name="1001330">Product Control Files</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001330", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001330", false);</script>
+      <div class="Subhead"><a name="1001331">Product Characteristic Codes</a></div>
+      <div class="Body"><a name="1001332">A new </a><span class="Bold">Copy</span> option was created for V17. This new feature allows users to copy Product Characteristics Code information from existing codes to new codes. Please note that characteristic codes can only be copied to NEW codes that have not yet been established in the system. Once this process was generated, the identical information such as descriptions, flag settings, and additional information will be copied from the original and displayed on the new code created.</div>
+      <div class="Subhead"><a name="1001333">Product Line Maintenance</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001334">A program change has taken place for V16-17. Previously the F7-P/O Comments </a>option was available in V15 to add Comments in Product Line Maintenance. This feature was removed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001335">The Account Number Entry screen in the G/L Accounts portion of Product Line </a>Maintenance was updated with three new accounts, <span class="Bold">Cost Adjustments, Accrued </span><span class="Bold">Purchase Price Variance</span> and <span class="Bold">Purchase Price Variance</span>. You can enter the necessary G/L information for these new accounts. Any account information at the Product Line overrides the General Ledger Table settings. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001336&quot;);"><a name="1001336">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001336", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001336", false);</script>
+      <div class="Subhead"><a name="1021933">Product Inquiries&gt; Product Usage Inquiry</a></div>
+      <div class="Body"><a name="1021934">Previously, the Previous Year's Usage would be displayed by selecting the F5-PY Usage </a>function key to view the Previous Year and Previous Year 2’s usage. To compress this information into one screen, the <span class="Bold">Product Usage Inquiry</span> screen was modified. This screen will now display current year's usage in addition to the <span class="Italics">Frcst</span> (Forecast) for each month and <span class="Italics">Exc</span> (Exceptions for unusual usage U, E, S). With this change, you can view the information for previous years by paging down instead of pressing a function key. </div>
+      <div class="Subhead"><a name="1001339">Transaction Audit Inquiries&gt; Usage Audit Inquiry</a></div>
+      <div class="Body"><a name="1001340">The Usage Audit Inquiry was modified to accommodate two new usage codes. The new </a><span class="Bold">L/S</span> code works with the Update Product Usage flag in the Lost Sale Reason Maintenance screen. If this flag is set to Y, the L/S code will be displayed to reflect that this product usage was updated from a Lost Sale. The <span class="Bold">SUP</span> code will be displayed when a product is superceded in Supercedure Maintenance. </div>
+      <div class="Subhead"><a name="1001341">Transfer Inquiries&gt; Transfer Log Inquiry</a></div>
+      <div class="Body"><a name="1001342">A new </a><span class="Bold">SAV</span> code was added to the list of available Transfer Log Inquiry Codes to reflect transactions that were performed using the new Transfer Shipments Maintenance process. (new feature listed under the Stock Movements section of this New Features list) The SAV code references the Transfer Release Number that is generated when Transfer Shipments Maintenance is used. The Transfer Shipments Maintenance performs the same function as the Suspend option in Transfer Shipments Entry with the exception that the packing slip will be printed if continuous printing is established for packing slips. </div>
+      <div class="Subhead"><a name="1001343">Product / Serial Number Inquiries&gt; Serial Number History Inquiry</a></div>
+      <div class="Body"><a name="1001344">The </a><span class="Bold">Serial Number History Inquiry</span> has recently been enhanced for V17. You can view the Extension amount for any line containing a RTL code. This extension cost will be displayed below the dollar amount listed in the Price Column. Please note that the RTL code is the only transaction code that this new feature applies to, therefore the extension amount of any other transactions in this inquiry will not be displayed. </div>
+      <div class="Subhead"><a name="1001345">Core Inquiries&gt; Core Status Inquiry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001346">F5-Review Shipping&gt; *Action&gt; Examine</a></span>: The F5-Review function was slightly modified to work with the ability to now apply the original invoice to a pending core in Credit Memo Entry. <span class="Italics">(listed on the Order Processing New Feature List)</span> With the new option in place, the functionality of the F5-Review Shipping function will now display the invoice number of the credit memo applied against the pending core for reference. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001347">F6-Review</a></span>: The F6-Review function was slightly modified to work with the ability to now apply the original invoice to a pending core in Credit Memo Entry <span class="Italics">(listed on the </span><span class="Italics">Order Processing New Feature List)</span>. With the new option in place, the functionality of the F6-Review function will now display the reference Credit Memo when the credit memo is applied to the pending core. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001348&quot;);"><a name="1001348">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001348", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001348", false);</script>
+      <div class="Subhead"><a name="1001349">Stock Receipt Reports&gt; Projected Stock Receipts Report</a></div>
+      <div class="Body"><a name="1001350">The </a><span class="Bold">Projected Stock Receipts</span> was modified in several different areas for V17. The <span class="Italics">Total </span><span class="Italics">on Expected Date</span> subtotals are no longer displayed on the report as boxed totals. The Product Number and Product Description columns have since been combined as one column titled <span class="Italics">Product Number/Description</span>. The Open Amount column was renamed <span class="Italics">Open </span><span class="Italics">Quantity</span>. <span class="Italics">Grand Totals</span> were added to the report as well as a new <span class="Italics">Extended Amount</span> column was added to this report as well. </div>
+      <div class="Subhead"><a name="1001351">Stock Movements Reports&gt; Transfer Committed Inventory Report</a></div>
+      <div class="Body"><a name="1001352">The Inventory Reports menu was enhanced with a new </a><span class="Bold">Transfer Committed Inventory </span><span class="Bold">Report</span>. This report was created to display a Total Line Count, Pick Quantity and Weight for the stock transfer lines that are to be released in Transfer Bin Allocation. This report is updated when stock transfers are processed in Transfer Entry. Once the Transfer Bin Allocation process is completed and the stock transfer is printed, the # Lines, Pck-Qty and Weight columns on the report are reduced to reflect the changes made due to the Transfer Bin Allocation process. This report was intended for use with stock transfers using the warehousing module where the Transfer Bin Allocation process is performed. </div>
+      <div class="Subhead"><a name="1001353">Sales Status Reports&gt; Onhand w/No Sales Report&gt; # of Months For Analysis</a></div>
+      <div class="Body"><a name="1001354">The GRIM screen for this report was updated to include a new </a><span class="Bold"># of Months For Analysis</span> field. This new field allows you to enter the number of months to evaluate for usage activity. This report includes all products that were established for the analysis period with no activity for the same period and with onhand. <span class="Bold">Note:</span> This report uses Date Established in Product Warehouse Maintenance to determine which products to include on the report. Therefore, to include products that contain an onhand quantity but do not have any sales, use an established date before the number of months entered. <span class="Bold">Example:</span> If the current month/year is September 2002, and the # of months entered is 3, the establishm date of the products must be May 2002 or earlier for these products to appear on the report. </div>
+      <div class="Subhead"><a name="1001355">Sales Status Reports&gt; Inactive Product Report</a></div>
+      <div class="Body"><a name="1001356">The </a><span class="Bold">Inactive Product Report</span> was added to allow you to generate a report to determine which products are active or inactive. The information provided for this report is processed from the Transaction Audit Inquiry record. If a item listed on the TAI report contains a PHY code indicating that this product has not had any activity other than a Physical Inventory, it will not be included in the Inactive Product Report. You can select Y/N to the Totals Only option. Selects Y to see only the Primary Vendor Totals and Grand Total. Choose N to see detailed product information such as Dates, Reference numbers, Customer/Vendor numbers, Units Values, Costs and On-hand quantities will be displayed. </div>
+      <div class="Subhead"><a name="1001357">Miscellaneous Reports&gt; Product Bin Onhand Report</a></div>
+      <div class="Body"><a name="1001358">The functionality of this report was modified to allow 150 or more items to be displayed on </a>this report. Due to the capacity limitation of System Builder, a No Items Selected error message would be displayed when more than 149 products were processed to generate this report. This error message was displayed on Unidata. To correct this issue, the report now uses a save-list to generate the selection criteria for Pick and Unidata. </div>
+      <div class="Subhead"><a name="1001359">Vendor Claim Reports&gt; Vendor Claim Aging Report</a></div>
+      <div class="Body"><a name="1001360">The Vendor Claim Aging Report has recently been updated with a new feature for V17. A </a>new <span class="Bold">RMA#</span> column was added to the <span class="Italics">Summary</span> version of this report to display the RMA# entered in the Vendor RMA# field on the Vendor Claim Entry header screen. If the <span class="Italics">Detailed</span> version of this report is selected, the RMA# information will still be displayed, however, this version of the report does not contain a separate RMA# column. The RMA number will be reflected below the Date/Clm# column that currently already exists on the report. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001361&quot;);"><a name="1001361">Program Changes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001361", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001361", false);</script>
+      <div class="Body"><a name="1001362">The DOE Convert Purchase Order and Product Tagging processes were rewritten to use </a>the same program for creating purchase order lines and headers automatically.</div>
+      <div class="Body"><a name="1001363">The functionality of the G/L Postings that are created at the time of Warranty </a>Replacements was modified. This change was made to reflect the vendor claim cost accrual account if the replacement cost for the item was changed. Up to V16 the vendor claim cost difference accrual account was not reversed at the time of Warranty Replacements. For V17, this account will now be reversed at the time of Warranty Replacements to reflect the change in replacement cost. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001364&quot;);"><a name="1001364">Enhancements</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001364", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001364", false);</script>
+      <div class="Subhead"><a name="1001365">Standard Product Lookup</a></div>
+      <div class="Body"><a name="1001366">The functionality of the Standard Product Lookup was enhanced for V17. Previously, if the </a>Product Tagging flag in Inventory Parameters was set to N, the Avail column would not be displayed. This has since been modified to display the Avail column, which will provide the available on-hand quantity for all warehouses for the items. Therefore, regardless of the flag setting for the Product Tagging option, the Avail column appears in the Standard Product Lookups. </div>
+      <div class="Subhead"><a name="1001367">End of Month Calendar Close</a></div>
+      <div class="Body"><a name="1001368">The functionality of the </a><span class="Bold">End of Month Calendar Close</span> has recently been updated to work with the new Spike Exceptions-High and Spike Exceptions-Low flags added to the Purchasing Parameters screen for V17. This process will now evaluate the Spike Exceptions-High and Low percentages entered in Purchasing Parameters. If in fact values are established and the annual usage meets the criteria to detect a spike in usage (High or Low), the system will update the usage for an item with an S in the Exceptions column. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v17_new_features.3.1.htm#1001247">V17 New Features</a>:Inventory</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

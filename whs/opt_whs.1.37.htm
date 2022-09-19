@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Replenishing Bins</title>
+    <link rel="StyleSheet" href="css/opt_whs.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1110430">Replenishing Bins</a></div>
+      <div class="Body"><a name="1110431">Normal bin replenishment occurs when a product falls below its bin minimum and a </a>replenishment record is created to bring it back up to its maximum. Emergency replenishments occur when the Sales Order Bin Allocation procedure is run and detects a situation where a quantity on a sales order cannot be picked. A set of rules are established to determine the type of bin to replenish, the type of bin to replenish from, and in what sequence the bins are used. This document explains how to establish the maintenance flags for bin replenishment and the procedures to follow to activate the replenishment process. Radio Frequency procedures for bin replenishment processing are included also.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110506&quot;);"><a name="1110506">Bin Replenishment Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110506", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110506", false);</script>
+      <div class="Subhead"><a name="1112831">Non-RF Bin Replenishment Maintenance</a></div>
+      <div class="Path"><a name="1115064">Path: Warehousing &gt; Bin Replenishments Processing &gt; Bin Replenishment Maintenance (/BRM)</a></div>
+      <div class="Body"><a name="1110508">The minimum and maximum for each product / bin combination to be replenished are </a>maintained with this program. When using the different putaway methods, the system calculates the available bins using the minimum and maximum values. Product / bin combinations can be set with frozen controls and a thaw date. The Auto Bin Replenishment Min / Max Recalculation skips items marked as frozen until the thaw date is reached.<img class="Default" src="images/Bin%20Replenishment_GUI.2.1.4.jpg" width="453" height="240" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110512">Warehouse Number: </a></span>Enter the warehouse number to view the bin replenishment information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110513">Bin Path: </a></span>Enter the bin location to view the bin replenishment information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110514">Product Number: </a></span>Enter the product number in the specified warehouse and bin location to view the bin replenishment information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110515">Minimum Quantity: </a></span>Enter the minimum quantity to have in the bin location before standard bin replenishment is used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110516">Maximum Quantity: </a></span>Enter the maximum quantity to have in the bin location. When the bin reaches its maximum, the putaway methods distribute the excess items to the appropriate bins.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110517">Frozen Control: </a></span>Determines if the bin is to be included in the Bin Replenishment Process.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110518">Y</a></span> -To not include the bin in the Bin Replenishment Process. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110519">N</a></span> - To include the bin in the Bin Replenishment Process.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110520">M</a></span> - To allow the bin maximum flag to not be included in the bin replenishment process but allow the bin minimum flag to be included. If the bin minimum calculation is greater than the frozen bin minimum, the system sets the bin minimum to the frozen maximum quantity minus 1.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110521">Thaw Date: </a></span>Enter the date the bin was set to frozen control.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110522">F2 - Save: </a></span>Saves the Bin Replenishment information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1112821">RF Bin Replenishment Maintenance</a></div>
+      <div class="Path"><a name="1112825">Path: Warehousing &gt; Handheld RF Menu &gt; Maintenance &gt; Bin Rep Mnt (/RFBRM)<img class="Default" src="images/Bin%20Replenishment_GUI.2.1.8.jpg" width="213" height="279" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1112826">This is a radio frequency maintenance process similar to terminal bin replenishment </a>maintenance. The radio frequency unit can scan the bin location, scan the product number, and enter the bin minimum and maximum.</div>
+      <div class="Body"><a name="1112827">When a bin replenishment record is entered in the RF bin replenishment screen and the </a>Frozen Control flag in Bin Replenishment Maintenance is set to <span class="Bold">Y</span> or <span class="Bold">M</span>, the warning message, Frozen Controls are set displays to notify you that the bin replenishment record contains frozen control settings. Min/max values can continue to be entered for the bin replenishment record.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110523&quot;);"><a name="1110523">Bin Replenishmen t Processing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110523", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110523", false);</script>
+      <div class="Path"><a name="1110524">Path: Warehousing &gt; Bin Replenishments Processing &gt; Bin Replenishment Processing (/</a>BIN.REPLENISH.UPD)</div>
+      <div class="Body"><a name="1110525">This nightly process selects all bins with the Auto Replenish Flag set to </a><span class="Bold">Y</span> and evaluates each product in those bins. If the current available is below the minimum, then a replenishment request is generated to fill the bin to the maximum. The rules established in the maintenance programs define what type of bin should be replenished from and in what sequence the replenishment from bins are used. If the single bin replenishment in Warehouse Maintenance is set to <span class="Bold">Y,</span> then inventory is allocated from a single bin. If set to <span class="Bold">N</span> then inventory is allocated from multiple bins until the entire replenish quantity was met. In V18+, this process includes BUL bins.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110526&quot;);"><a name="1110526">Selective Bin Replenishment Process</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110526", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110526", false);</script>
+      <div class="Path"><a name="1110527">Path: Warehousing &gt; Bin Replenishments Processing &gt;Selective Bin Replenishment Process (/</a>SEL.BIN.REPL.UPD)</div>
+      <div class="Body"><a name="1110528">This is similar to the Bin Replenishment process listed above, although the analysis is only </a>done based on a defined range of bin locations.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110529&quot;);"><a name="1110529">Bin Replenishment Release Process</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110529", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110529", false);</script>
+      <div class="Path"><a name="1110530">Path: Warehousing &gt; Bin Replenishments Processing &gt;Bin Replenishment Release Process (/</a>BIN.REPL.DEL)</div>
+      <div class="Body"><a name="1110531">This process removes all current open bin replenishment transactions allowing the </a>committed inventory to be available for other transactions. The release is only done for products not currently assigned to a replenishment picker. After a warehouse number is entered, a warning message is displayed.<img class="Default" src="images/Bin%20Replenishment_GUI.2.1.5.jpg" width="378" height="177" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110535">Yes: </a></span>To release bin commitments.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110536">No: </a></span>To  not release bin commitments.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110537&quot;);"><a name="1110537">Bin Replenishment Min / Max Update</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110537", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110537", false);</script>
+      <div class="Path"><a name="1110538">Path: Warehousing &gt; Bin Replenishments Processing &gt;Bin Replenishment Min/Max update (/</a>BIN.REPL.MIN.MAX.CALC)</div>
+      <div class="Body"><a name="1110539">This process selects all products with a bin min/max quantity and recalculates these </a>values. The recalculation is done by taking the products average monthly usage, multiplied by the Bin Replenishment Min / Max Percent in warehouse address maintenance.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110540">Warehouse Number: </a></span>Enter the warehouse number to limit the process to a warehouse or leave this field blank to include all warehouses.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110541">Use Existing/Create New (E/N): </a></span>Enter the appropriate action for the process to recalculate the bins.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110542">E</a></span> -To recalculate bin min/max quantities for bins with existing min/max quantities. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110543">N</a></span> -To generate new min/max quantities for bins with no current min/max quantities.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;vertical-align: baseline;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;"><span class="Bold"><a name="1110544">Preview or Update:</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110545">P</a></span> - To print the preview report and not perform the Bin Replenishment Min/Max Update process. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1110546">U</a></span> - To perform the Bin Replenishment Min/Max Update process and skip the preview report.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1110547">The bin minimum and maximum fields default to 1 if no monthly usage exists for the </a>product/bin combination. The existing bin min/max figures are replaced with the new calculated values after the process is complete.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110548&quot;);"><a name="1110548">Replenishment Picking Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110548", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110548", false);</script>
+      <div class="Path"><a name="1110549">Path: Warehousing &gt; Bin Replenishments Processing &gt;Replenishment Picking Report (/</a>RELP.PICK.PRINT)</div>
+      <div class="Body"><a name="1110550">As a backup for the radio frequency terminal entry, it is possible to print a report to use for </a>replenishing. The report shows the <span class="Italics">product, quantity</span>, <span class="Italics">From Bin</span>, and <span class="Italics">To Bin</span> to replenish.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110551&quot;);"><a name="1110551">Bin Replenishment Picking</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110551", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110551", false);</script>
+      <div class="Subhead"><a name="1112896">Replenishment Picking Entry</a></div>
+      <div class="Path"><a name="1110552">Path: Warehousing &gt; Bin Replenishments Processing &gt;Replenishment Picking Entry (/RPE)</a></div>
+      <div class="Body"><a name="1110553">This process records the bin moves if the Replenishment Pick Report is used to do the </a>replenishing. The products, quantities and bins are displayed for confirmation.<img class="Default" src="images/Bin%20Replenishment_GUI.2.1.7.jpg" width="630" height="312" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110557">Warehouse: </a></span>Enter a valid warehouse for this transaction.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110558">User Id: </a></span>Enter the Id of the user performing the picking process.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110559"># of Lines: </a></span>Enter the number of lines to be picked for this session.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110560">From Zone: </a></span>Enter a zone to start picking from. F3 for options.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110561">To Zone: </a></span>Enter a <span class="Italics">to</span> zone or leave blank.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110562">Emg: </a></span>Enter <span class="Bold">Y</span> to select only products for emergency bin replenishments.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110563">Product Number: </a></span>Enter a product number if transactions are to be performed for just one product. Leave blank to bring up all the products in a zone.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110564">Move #: </a></span>Displays the next available <span class="Italics">Bin Move Number</span> pulled from Counter/Range maintenance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110565">Product Number: </a></span>Displays the product numbers in the zone.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110566">From Bin: </a></span>The current bin location is displayed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110567">Qty: </a></span>The current quantity of the bin location is displayed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110568">To Bin: </a></span>Enter the bin to move the product to.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1110569">F2 - Save: </a></span>Saves the bin move information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1112904">Radio Frequency Bin Replenishment Picking</a></div>
+      <div class="Path"><a name="1112905">Path: Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Bin Repl. Picking (/RRPE)</a></div>
+      <div class="Path"><a name="1112906">Path: Warehousing &gt; Truck Mount RF Menu &gt; Doc Picking &gt; Bin Repl. Picking (/TRRPE)</a></div>
+      <div class="Body"><a name="1112907">These programs move selected products from the queue being maintained for radio </a>frequency transactions to their own personal queue. The screen is slightly different for truck mount devices. Products needing replenishment are displayed along with the <span class="Italics">from </span><span class="Italics">bin </span>and quantity. The picker is guided through the warehouse in the logical picking sequence for each product. <img class="Default" src="images/Bin%20Replenishment_GUI.2.1.9.jpg" width="324" height="229" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112911">Warehouse: </a></span>Enter the appropriate warehouse number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112912"># of Lines: </a></span>Enter the number of lines to pick for this session. It is best if the picker only selects the number of lines that can be processed in a single picking session.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112913">Zone: </a></span>Enter the picking zone. F3 for options.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112914">To Zone: </a></span>If applicable, enter the zone the products will be moved to.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112915">Emergency: </a></span>Enter <span class="Bold">Y </span>to select only products for emergency bin replenishments.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112916">Product number: </a></span>Enter the product number to only process transactions for one item, or leave blank to include all in the zone.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1112917">If the </a><span class="Italics">Putaway to Pick Bin</span> (in Warehouse Maintenance) is set to <span class="Bold">Y</span>, then the <span class="Italics">To Bin</span> displays and the product is moved. If the <span class="Italics">Putaway to Pick Bin</span> is set to <span class="Bold">N</span>, then the mobile bin (cart) is prompted for. After all products are picked, the method of putaway is prompted for. The options are:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112918">Put</a></span> - Primary bin sequence,</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112919">Pick </a></span>- Picked sequence</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112920">Reverse</a></span> - Reverse of picked sequence.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110595&quot;);"><a name="1110595">Sales Order Bin Allocation</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110595", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110595", false);</script>
+      <div class="Path"><a name="1110596">Path: Warehousing &gt;Sales Order Processing &gt;Sales Order Bin Allocation (/SOBA)</a></div>
+      <div class="Body"><a name="1110597">This program determines if there is insufficient inventory in a pick bin and if there is </a>available inventory in another bin defined as a replenishment bin. It then generates an emergency bin replenishment request.</div>
+      <div class="Body"><a name="1110598">The quantity to be replenished is calculated by adding the quantity required for the sales </a>order to the quantity that brings the bin to its maximum inventory level. The sales order is not released for picking until the replenishment is complete.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1110599&quot;);"><a name="1110599">Bin Replenishment Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1110599", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1110599", false);</script>
+      <div class="Path"><a name="1110600">Path: Inventory &gt; Reports &gt; Miscellaneous Reports &gt; Bin Replenishment Report (/BIN.REPLEN.RPT)</a></div>
+      <div class="Body"><a name="1110601">This report displays information on bin replenishments based on the primary bin onhand </a>quantity. If a product does not contain any alternate bins with a positive quantity, it is not included in the report. If the product has quantity in the primary bin and at least one alternate (secondary) bin, it is included in the report depending on the selection criteria.<img class="Default" src="images/Bin%20Replenishment_GUI.2.1.10.jpg" width="627" height="100" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">Replenishing Bins</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

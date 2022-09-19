@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Prestores</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1124759">Prestores</a></div>
+      <div class="Body"><a name="1124760">Prestore commands are an easy way to manipulate data within many different records of a file without </a>editing each record separately (e.g., update the same attribute in many records of a file with the same data). The most common way to handle this mass replacement is to select the records you want to change and save these records in a save-list. Then EDIT the save-list to begin the prestore process. Following are examples of how to perform a prestore in a Unidata environment as well in a Pick environment.</div>
+      <div class="Body"><span class="Bold"><a name="1124761">Warning!!</a></span> When running prestores, if the attribute you are editing does not exist, Prelude udpates the last attribute in the record. For example if your prestore should change attribute 210 and the last attribute in the record is attribute 205, the prestore updates attribute 205.</div>
+      <div class="Body"><a name="1124762">A prestore in unidata has the following syntax:</a><span class="TypedInText" style="font-size: 11.0pt;"> =prestore.name `command.string`=prestore.name</span></div>
+      <div class="Body"><a name="1124763">The prestore is executed from the editor. For large amounts of data, run a select statement to get a </a>save-list of the records for the prestore. Once you have the save-list, you can begin manipulating the records. On the first record you can define your prestore and then execute it. Below is an example of a prestore run on a save-list of records in the Fix file. This prestore will go to attribute 1 and replace the text CTVTEST with the text CTV. The prestore then saves the record and moves to the next record until all records in the save-list are updated. </div>
+      <pre class="Report"><a name="1124764">:SELECT FIX WITH F1 = "CTVTEST" </a></pre>
+      <pre class="Report"><a name="1124765">2 records selected to list 0. </a></pre>
+      <pre class="Report"><a name="1124766">&gt;ED FIX </a></pre>
+      <pre class="Report"><a name="1124767">&lt; 1 &gt; Top of "CTV" in "FIX", 1 line, 7 characters. </a></pre>
+      <pre class="Report"><a name="1124768">*--: =ABC `1`R/CTVTEST/TEST`FI`=ABC </a></pre>
+      <pre class="Report"><a name="1124769">*--: =ABC </a></pre>
+      <pre class="Report"><a name="1124770">001: CTVTEST </a></pre>
+      <pre class="Report"><a name="1124771">Bottom. </a></pre>
+      <pre class="Report"><a name="1124772">001: TEST </a></pre>
+      <pre class="Report"><a name="1124773">Bottom. </a></pre>
+      <pre class="Report"><a name="1124774">Filed "CTV" in file "FIX". </a></pre>
+      <pre class="Report"><a name="1124775">&lt; 2 &gt; Top of "CTV2" in "FIX", 2 lines, 8 characters. </a></pre>
+      <pre class="Report"><a name="1124776">001: CTVTEST </a></pre>
+      <pre class="Report"><a name="1124777">001: TEST </a></pre>
+      <pre class="Report"><a name="1124778">Filed "CTV2" in file "FIX". </a></pre>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.1.htm#1124759">UniData</a>:Prestores</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Credit Manager Release Report</title>
+    <link rel="StyleSheet" href="css/reports.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1334169">Credit Manager Release Report</a></div>
+      <div class="Body"><a name="1355304">The Credit Manager Release Report displays all orders released from credit </a>hold for a credit manager ID (refer to <a href="javascript:WWHClickedPopup('ars', 'cred_rel_inq.htm#1344424', '');">Releasing Orders From Credit Hold</a>). </div>
+      <div class="Body"><a name="1361779">After you run the report, you can choose to purge the information so that it </a>does not appear the next time you run the report. If the report is run using the scheduler, the data is automatically purged.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><span style="font-style: italic;"><a name="1355317">Credit Mgr Release </a></span>in <span style="font-weight: bold;">File Update Parameters</span> must be set to <span style="font-weight: bold;">Y</span> to keep credit manager release information. </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body" style="margin-top: 14.0pt;"><span style="font-weight: bold;"><a name="1334441">Menu Path</a></span>: Financial &gt; Accounts Receivable &gt; Reports &gt; Credit Manager Release</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1334442&quot;);"><a name="1334442">Selection Criteria</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1334442", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1334442", false);</script>
+      <div class="Body"><a name="1334443">Use the following criteria to limit the information to print on the report:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1334444">Division</a></span>. The highest possible grouping in your company (e.g., Eastern Division, Western Division).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1334445">Region</a></span>. A subset of Division - if Division is used (e.g., Southeast Region, Northwest Region).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1334446">Department</a></span>. A subset of warehouse. Typically used to separate expenses within a warehouse (e.g., accounting, sales, warehouse).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1334447">Cost Center</a></span>. A subset of Department - if Department is used. Typically used to separate expenses within a warehouse or department (e.g., shipping, receiving, outside sales, inside sales).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1334448">Warehouse</a></span>. The selling warehouse. The selling warehouse is the warehouse that receives credit for the sale, regardless of which warehouse ships the merchandise.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1334449">Credit Manager</a></span>. The credit managers to include.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1355341">Release Date</a></span> <span style="font-weight: bold;">range</span>. The beginning and ending credit hold release dates to include.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1334450&quot;);"><a name="1334450">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1334450", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1334450", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 404.24976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1334453">Column Heading</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1334455">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334457">Whse</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334459">The selling warehouse assigned to the sales order.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334461">Customer</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334463">Line 1: The customer number.</a></div>
+            <div class="TableText"><a name="1355869">Line 2: The customer description.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334465">Order #</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334467">The sales order number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334469">Amt Released</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334471">The value of the order that was released.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334473">Rel-Date</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334475">The date the sales order was released.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334477">Time</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334479">The time at which the sales order was released.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334481">Released By</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334483">The name of the employee that released the sales order from credit </a>hold.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334485">Rsn</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><span class="bold"><a name="1355891">The credit reason code that indicates why the order went on Credit </a></span><span class="bold">Hold. Refer to the </span><span class="bold"><a href="javascript:WWHClickedPopup('ars', 'cred_rel_inq.htm#1348307', '');">Credit Hold Reason Codes</a></span><span class="bold"> for an explanation of </span><span class="bold">each code.</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334489">Credit Bal</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1355904">The customer’s credit balance when this order went on credit hold. </a>The credit balance is calculated as (<span style="font-style: italic;">Credit Limit</span> - <span style="font-style: italic;">A/R balance</span> - <span style="font-style: italic;">Ord </span><span style="font-style: italic;">Balance)</span>. </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334493">Cde </a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1356066">The Credit Code assigned to the customer in Customer Maintenance </a>that determines if and when orders can be placed for the customer:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1356067">A - You must enter an </a><span style="font-style: italic;">Authorization Code</span> in Sales Order Entry after you enter the customer number and before you enter the header information. Refer to <a href="javascript:WWHClickedPopup('ars', 'credit_holds.5.9.htm#1342199', '');">Credit Authorization Code Maintenance</a> for information on setting up authorization codes.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1356071">E or blank - Sales orders are subject to the customer’s </a><span style="font-style: italic;">Credit Limit</span>. If the customer is over their credit limit, the pick ticket will not print until the order is released from credit hold. Refer to <a href="javascript:WWHClickedPopup('ars', 'credit_holds.5.19.htm#1344499', '');">Excluding Sales Orders From the Credit Limit</a>.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1356075">H</a><span style="font-weight: bold;"> </span>- Sales orders can be entered but are always held until the credit manager releases them. You must enter the credit reason abbreviation code (established in Valid Response Maintenance) that explains why this customer’s orders always go on hold. If no code is entered, the code MAN (manual) is used.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1356076">N - No sales orders or quotes can be entered for this customer.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1355921">AH</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1356086">The customer’s automatic credit review hold status:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1356087">Y - The customer is placed on or off credit hold by the Auto Credit </a>Hold Procedure (refer to <a href="javascript:WWHClickedPopup('ars', 'auto_cred_hold.htm#1338836', '');">Automatically Placing Customers on Credit Hold</a>). If an invoice is more than the number of days past due indicated in <span style="font-style: italic;">Auto Credit Days,</span> and not flagged as disputed, then this flag is automatically changed to <span style="font-weight: bold;">H</span> (automatic credit hold). You can temporarily take the customer off hold by changing the <span style="font-weight: bold;">H</span> back to a <span style="font-weight: bold;">Y</span> until the Auto Credit Hold Procedure runs again. Other settings such as credit limits may affect this flag also.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1356105">H - The customer is on automatic credit hold.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1356106">N - The customer is not included in the Auto Credit Hold </a>Procedure.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334497">SaleDate</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1355927">The last time an order was entered for this customer, as of the date </a>this order went on credit hold.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1334501">PymtDate</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1355937">The last time payment was applied to this customer’s account, as of </a>the date the order went on credit hold.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1334514">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1355351&quot;);"><a name="1355351">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1355351", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1355351", false);</script>
+      <pre class="Report"><a name="1355409">Activant Prelude                                                                                          User </a>Id SEM   Page 1    </pre>
+      <pre class="Report"><a name="1371901">Credit Manager Release Report As Of 13:58:21 On 12/11/06                        </a></pre>
+      <pre class="Report"><a name="1371902">REL.DATE &gt;= “11/01/06” AND REL.DATE &lt;= “12/11/06”                               </a></pre>
+      <pre class="Report"><a name="1371903">Credit Manager CR1   </a></pre>
+      <pre class="Report"><a name="1371904">&nbsp;</a></pre>
+      <pre class="Report"><a name="1371905">Whse Customer         Order#   Amt Released Rel-Date  Time Released By             Rsn   Credit </a>Bal Cde AH SaleDate PymtDate</pre>
+      <pre class="Report"><a name="1371906">10   002005           10001569         1.81 12/05/06 11:38 Sue Middleton           EX     78,050.00     </a>Y  03/10/00 11/20/06</pre>
+      <pre class="Report"><a name="1371907">     ABC Plumbing Supply, Inc.     </a></pre>
+      <pre class="Report"><a name="1371908">10   000100           10000686         0.00 11/07/06 12:10 Sue Middleton           MAN 9,989,082.29        </a>11/06/06 10/27/06</pre>
+      <pre class="Report"><a name="1371909">     Fenway Steel                  </a></pre>
+      <pre class="Report"><a name="1371910">10   014883           10001135       805.50 11/09/06 13:45 Gretchen Withers        MAN    86,190.55 </a>H   Y  11/08/06         </pre>
+      <pre class="Report"><a name="1371911">     Newport Plumbing Inc          </a></pre>
+      <pre class="Report"><a name="1371912">10   014883           10001149        54.00 11/21/06 16:32 Sue Middleton           MAN    83,622.66     </a>H  11/13/06         </pre>
+      <pre class="Report"><a name="1371913">     Newport Plumbing Inc          </a></pre>
+      <pre class="Report"><a name="1371914">40   002022           40000131         5.79 11/07/06 12:10 Sue Middleton           OVR 9,926,599.68     </a>H  11/02/06 10/25/06</pre>
+      <pre class="Report"><a name="1371915">     Albany Supply Co              </a></pre>
+      <pre class="Report"><a name="1371916">10   013000           10000185     5,770.00 11/07/06 12:11 Sue Middleton           OVR   -</a>55,620.84     Y  09/30/06         </pre>
+      <pre class="Report"><a name="1371917">     J W Leinbach Hardware         </a></pre>
+      <pre class="Report"><a name="1371918">10   010000           10001018   219,500.00 11/07/06 12:11 Sue Middleton           OVR  -122,618.56     </a>Y  09/21/06 10/27/06</pre>
+      <pre class="Report"><a name="1371919">     Office Max                    </a></pre>
+      <pre class="Report"><a name="1371920">10   000100           10001087        14.77 11/08/06 14:16 JANICE ABRAHAM          OVR   -</a>11,433.61        11/06/06 10/27/06</pre>
+      <pre class="Report"><a name="1371921">     Fenway Steel                  </a></pre>
+      <pre class="Report"><a name="1371922">10   002022           10001153        95.95 11/10/06 09:23 Melanie Mason           OVR   -</a>74,003.50     Y  11/02/06 10/25/06</pre>
+      <pre class="Report"><a name="1371923">     Albany Supply Co              </a></pre>
+      <pre class="Report"><a name="1371924">10   000100           10001394        33.38 11/20/06 12:35 Melanie Mason           OVR    -</a>7,654.61        11/10/06 11/13/06</pre>
+      <pre class="Report"><a name="1371925">     Fenway Steel                  </a></pre>
+      <pre class="Report"><a name="1371926">10   000100           10001048         1.79 11/21/06 14:02 Sue Middleton           OVR    -</a>7,687.57        11/20/06 11/13/06</pre>
+      <pre class="Report"><a name="1371927">     Fenway Steel                  </a></pre>
+      <pre class="Report"><a name="1371928">10   002022           10001146        70.00 11/21/06 16:05 Sue Middleton           OVR 9,947,735.04     </a>Y  11/15/06 11/13/06</pre>
+      <pre class="Report"><a name="1371929">     Albany Supply Co              </a></pre>
+      <pre class="Report"><a name="1371930">10   001060           10001427        72.80 11/22/06 10:20 Sue Middleton           OVR    -</a>2,377.15     Y  10/27/06 11/20/06</pre>
+      <pre class="Report"><a name="1371931">     Borg Warner Automotive        </a></pre>
+      <pre class="Report"><a name="1371932">10   002022           10000959       695.00 11/03/06 11:51 Brandon Munro           PD  9,926,599.68     </a>H  11/02/06 10/25/06</pre>
+      <pre class="Report"><a name="1371933">     Albany Supply Co              </a></pre>
+      <pre class="Report"><a name="1371934">10   002022           10001063         5.79 11/08/06 10:35 Brandon Munro           PD  9,926,599.68     </a>H  11/02/06 10/25/06</pre>
+      <pre class="Report"><a name="1371935">     Albany Supply Co              </a></pre>
+      <pre class="Report"><a name="1371936">10   002022           10001064         6.75 11/08/06 10:41 JANICE ABRAHAM          PD  9,926,599.68     </a>H  11/02/06 10/25/06</pre>
+      <pre class="Report"><a name="1371937">     Albany Supply Co              </a></pre>
+      <pre class="Report"><a name="1371938">10   002022           10001066         8.17 11/08/06 10:45 JANICE ABRAHAM          PD  9,926,599.68     </a>H  11/02/06 10/25/06</pre>
+      <pre class="Report"><a name="1371939">     Albany Supply Co              </a></pre>
+      <pre class="Report"><a name="1371940">10   002022           10001083         0.00 11/21/06 16:32 Sue Middleton           PD  9,947,735.04     </a>Y  11/15/06 11/13/06</pre>
+      <pre class="Report"><a name="1371941">     Albany Supply Co              </a></pre>
+      <pre class="Report"><a name="1371942">10   002022           10000905        34.27 11/21/06 16:33 Sue Middleton           PD  9,947,735.04     </a>Y  11/15/06 11/13/06</pre>
+      <pre class="Report"><a name="1371943">     Albany Supply Co              </a></pre>
+      <pre class="Report"><a name="1371944">10   014883           10001165         4.29 11/21/06 16:42 Gretchen Withers        PD     83,576.94     </a>H  11/21/06         </pre>
+      <pre class="Report"><a name="1371945">     Newport Plumbing Inc          </a></pre>
+      <pre class="Report"><a name="1371946">10   014883           10001163        54.00 11/21/06 16:43 Gretchen Withers        PD     83,576.94     </a>H  11/21/06         </pre>
+      <pre class="Report"><a name="1371947">     Newport Plumbing Inc          </a></pre>
+      <pre class="Report"><a name="1371948">10   014883           10001357       192.00 11/21/06 16:43 Gretchen Withers        PD     83,576.94     </a>H  11/21/06         </pre>
+      <pre class="Report"><a name="1371949">     Newport Plumbing Inc          </a></pre>
+      <pre class="Report"><a name="1371950">10   014883           10000792       160.00 11/21/06 16:45 Gretchen Withers        PD     83,594.04     </a>H  11/21/06         </pre>
+      <pre class="Report"><a name="1371951">     Newport Plumbing Inc          </a></pre>
+      <pre class="Report"><a name="1371952">10   014883           10000927        80.00 11/22/06 17:01 Gretchen Withers        PD     83,520.44     </a>N  11/22/06         </pre>
+      <pre class="Report"><a name="1371953">     Newport Plumbing Inc          </a></pre>
+      <pre class="Report"><a name="1371954">40   002022           10000765        47.80 11/28/06 15:01 Brandon Munro           PD  9,946,424.32     </a>Y  11/28/06 11/13/06</pre>
+      <pre class="Report"><a name="1371955">     Albany Supply Co              </a></pre>
+      <pre class="Report"><a name="1371956">&nbsp;</a></pre>
+      <div class="Body"><a name="1355411">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Releasing Orders From Credit Hold", "ars", "cred_rel_inq.htm#1344424");
+          WWHAddRelatedTopic("Credit Holds", "ars", "credit_holds.5.1.htm#1350445");
+          WWHAddRelatedTopic("Accounts Receivable Reports", "ars", "reports.8.1.htm#1432352");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="reports.8.1.htm#1334169">Accounts Receivable Reports</a>:Credit Manager Release Report</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>UniData</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="ChapterName"><a name="1119257">UniData</a></div>
+      <div class="Head1"><a name="1121519">UniData's 2GB Limit for Static Files</a></div>
+      <div class="Body"><a name="1121520">Prelude software uses two types of UniData files, a static file and a dynamic file. </a></div>
+      <div class="Body"><a name="1121521">A UniData static file is a binary data file. You define the size of a static file when you create the file, by </a>specifying the number and size of groups. When you add records to the file, each record is hashed to a group using a proprietary hashing algorithm. </div>
+      <div class="Body"><a name="1121522">Static files can overflow, causing performance problems. A static hashed cannot be larger than 2 GB. </a>Before a file exceeds 2 GB, you must make it a dynamic file. A UniData dynamic file is a UNIX directory file, containing index, data, and overflow files. UniData dynamic files can grow and shrink with respect to modulo (number of groups) as records are added and deleted. If a static file size surpasses the 2 GB limit, UniData is unable to recognize the file because it gets truncated and will cause you to receive a block-size error. This is crucial, if this happens all users must logout of the system, to repair the file. In addition, once the file is repaired some data will be lost. All user transactions will need to be traced to get the system integrity back in good order.</div>
+      <div class="Body"><a name="1121523">The error message below is similar to the one you will receive.</a></div>
+      <pre class="Report"><a name="1121524">:LIST VENDORS</a></pre>
+      <pre class="Report"><a name="1121525">File size (209920) is not a multiple of block size (2048).</a></pre>
+      <pre class="Report"><a name="1121526">VENDOR is not a UniData data file</a></pre>
+      <pre class="Report"><a name="1121527">Open file error.</a></pre>
+      <pre class="Report"><a name="1121528">!quit</a></pre>
+      <pre class="Report"><a name="1121529"># ls -la VENDORS</a></pre>
+      <pre class="Report"><a name="1121530">-rwxrwxrwx 1 root ud 209920 Jun 29 15:26 VENDORS </a></pre>
+      <pre class="Report"><a name="1121531">[209920 / 2048 = 102.5 --&gt; or 102 complete 2048 byte blocks.</a></pre>
+      <div class="Body"><a name="1121532">The best solution to this it to prevent it. What should you do to prevent this from happening?</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121533">Check for files approaching the 2 GB limit in unix. Login to unix and change your directory to the path </a>where the data resides. We suggest you do the following procedures once a week.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <pre class="Report"><a name="1121534"># cd /ud/YOUR-DATA </a></pre>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1121535">Run the following command to list your Top 10 static files. Once a file reaches 1.5 GB (e.g., </a>WHSE.STAT) consider making it a dynamic file, or purging and resizing the file.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <pre class="Report"><a name="1121536"># ls -la | sort +4rn | head </a></pre>
+      <pre class="Report"><a name="1121537">-rwxrwxrwx 1 root ud 1534476288 Jul 29 14:01 WHSE.STAT </a></pre>
+      <pre class="Report"><a name="1121538">-rwxrwxrwx 1 root ud 1411479552 Jul 29 14:01 USG.AUDIT.TRANS </a></pre>
+      <pre class="Report"><a name="1121539">-rwxrwxrwx 1 root ud 1052377088 Jul 28 16:43 TEDI-HIST </a></pre>
+      <pre class="Report"><a name="1121540">-rwxrwxrwx 1 root ud 1036034048 Jul 29 13:58 TRN.HISTORY.LINE </a></pre>
+      <pre class="Report"><a name="1121541">-rwxrwxrwx 1 root ud 1007468544 Jul 29 14:01 PROD.WHSE.XREF </a></pre>
+      <pre class="Report"><a name="1121542">-rwxrwxrwx 1 root ud 966066176 Jul 29 13:52 PO.HISTORY.LINE </a></pre>
+      <pre class="Report"><a name="1121543">-rwxrwxrwx 1 root ud 947781632 Jul 29 14:01 ORDER-LOG </a></pre>
+      <pre class="Report"><a name="1121544">-rwxrwxrwx 1 root ud 754827264 Jul 29 14:01 AR.HIST </a></pre>
+      <pre class="Report"><a name="1121545">-rwxrwxrwx 1 root ud 705957888 Jul 29 14:01 CUST.PROD.XREF </a></pre>
+      <pre class="Report"><a name="1121546">-rwxrwxrwx 1 root ud 704909312 Jul 28 23:50 COMMISSION </a></pre>
+      <div class="Body"><a name="1121547">Unix parameters for files sizes must be set to unlimited, the default is set at 1 GB. To check this do the </a>following.</div>
+      <pre class="Report"><a name="1121548"># cd /etc/security</a></pre>
+      <pre class="Report"><a name="1121549"># pg limits</a></pre>
+      <pre class="Report"><a name="1121550">default: </a></pre>
+      <pre class="Report"><a name="1121551"> nofiles = 2000 </a></pre>
+      <pre class="Report"><a name="1121552"> fsize = -1 </a></pre>
+      <pre class="Report"><a name="1121553"> core = -1 </a></pre>
+      <pre class="Report"><a name="1121554"> cpu = -1 </a></pre>
+      <pre class="Report"><a name="1121555"> data = -1 </a></pre>
+      <pre class="Report"><a name="1121556"> rss = -1 </a></pre>
+      <pre class="Report"><a name="1121557"> stack = -1 </a></pre>
+      <div class="Body"><a name="1121558">The fsize should be set to -1, use the vi editor to change it or call Prelude Tech Support for assistance. </a>Once the change is made, all users must log completely off the system and log back on to incorporate the changes.</div>
+      <div class="Body"><a name="1121559">In conclusion, a UniData static file must not exceed the 2 GB limit. This can result in system down time </a>and lost data. Use these steps to prevent this from happening.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">UniData</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

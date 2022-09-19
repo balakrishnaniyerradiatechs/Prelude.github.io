@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Background Jobs</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1124939">Background Jobs</a></div>
+      <div class="Body"><a name="1124940">There are times when running a job from a terminal is not convenient. The terminal is tied up the entire </a>time it takes the job to run, which could be hours, and the terminal cannot be logged off. Fortunately, jobs can be set up to run in the background, or as phantoms, which allows the jobs to run without being associated to a physical terminal. This frees the terminal and the user to go on to other tasks. Accommodations must be made to handle any screen input or output the background job is expecting, since the job will not be interacting with a screen.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1124941&quot;);"><a name="1124941">Background Jobs in Unix</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1124941", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1124941", false);</script>
+      <div class="Body"><a name="1124942">A user can start an unlimited number of background jobs, keeping in mind the capabilities of the </a>processor and the job load that day. Each background job has a job number unique to the user and a process ID unique to the system. Use the “jobs” command to list the current background and stopped jobs with their job numbers and process IDs. You can use these numbers in Unix job control commands. Remember that a Unix background job cannot take input from the terminal but will send standard output to the terminal if not redirected. You can redirect input to be read from a file and redirect standard output and error to be saved in a file.</div>
+      <div class="Body"><a name="1124943">Example: </a><span class="TypedInText" style="font-size: 11.0pt;">cleanup.my.directory &gt; my.output  2&gt;my.errors &amp;</span></div>
+      <div class="Body"><a name="1124944">The ampersand (&amp;) says run the job “cleanup.my.directory” in the background, sending the output (&gt;) </a>to a file called “my.output” and any errors during runtime (2&gt;) to a file called “my.errors”.</div>
+      <div class="Body"><a name="1124945">A job currently running on the terminal can be stopped by hitting CTRL “z” and then resumed in the </a>background by typing “bg&lt;return&gt;”. Note: In some cases, Prelude has chosen an STTY setting that will require a CTRL “a” to stop the job rather than a CTRL “z”.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1124955&quot;);"><a name="1124955">Background Jobs in UniData</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1124955", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1124955", false);</script>
+      <div class="Body"><a name="1124956">The “PHANTOM” verb executes background jobs in UniData. All output is stored in the _PH_ file with a </a>record ID with the user’s login name, the internal time, and the process ID. An “INPUT” aborts the job if data was not provided. The “PHANTOM” command executes an existing login paragraph in the VOC as part of its normal processing. However, any interactive-only processing in the login paragraph may be conditionally bypassed by checking @USER.TYPE for phantom users.</div>
+      <div class="Body"><a name="1124957">Example: </a><span class="TypedInText" style="font-size: 11.0pt;">PHANTOM LIST ORDER</span></div>
+      <div class="Body"><a name="1124958">The UniQuery statement “LIST ORDER” runs in the background and the output is stored in _PH_. You </a>can use the verb “CHECK.PHANTOM” to invoke SB+ as it submits the background job (similar to “PHANTOM” in PICK).</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.1.htm#1124939">UniData</a>:Background Jobs</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

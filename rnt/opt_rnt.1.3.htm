@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Rental Rate Method</title>
+    <link rel="StyleSheet" href="css/opt_rnt.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1102767">Rental Rate Method</a></div>
+      <div class="Body"><a name="1102768">The rental rate method determines the rate the rental item is charged. You can define the </a>rental rate method at the customer or system level.</div>
+      <div class="Subhead"><a name="1102769">Rental Parameters</a></div>
+      <div class="Path"><a name="1120379">Path: System Parameter &gt; Maintenance &gt; Option Parameters &gt; Rental Parameters</a></div>
+      <div class="Body"><a name="1102770">In Rental Parameters, you can set the default </a><span style="font-style: italic;">Rental Rate Method</span> that is used if a customer does not have a rental rate method: Options are:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1102772">A - automatically review the rates and use the best rate based on the time material is </a>rented. This method would auto prorate and calculate the best rate for the rental item. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1120403">B - automatically review the rates and use the best rate based on the time material is </a>rented up to the first billing (either return of the material or the first periodic billing). Once the first bill in generated and material is returned, the billing is prorated by day. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1120404">N - use the rate and rental period from the rental order and round to the nearest whole </a>rental. For example, 10 days on a daily weekly rental would charge 2 weeks. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1120405">C - use a single rate based on the Billing Days. If Billing Days are M-F and rental item </a>is billed for 7 days, the billing rate is 1.4 (1 week + 2/5). The total number of billing days is the denominator (M-F = 5 billing days). The Billing Days are set in F5-Add Info.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1102773">Warehouse Maintenance (/WM)</a></div>
+      <div class="Body"><a name="1102774">The Billing Days in Warehouse Maintenance overrides the system parameter flags.</a></div>
+      <div class="Path"><a name="1102775">Path:  Warehouse Maintenance &gt; Action &gt; Addl Opts &gt; Rental Information<img class="Default" src="images/rental_pick_days.jpg" width="147" height="170" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Subhead"><a name="1102780">Customer Maintenance (/CM)</a></div>
+      <div class="Body"><a name="1102781">You can override the default Rental Rate Method in Customer Maintenance.</a></div>
+      <div class="Path"><a name="1102785">Path: Order Processing &gt; Maintenance &gt; Customer Maintenance &gt; F7-Order &gt; F5-Add Info &gt; F6-Rental<img class="Default" src="images/rental_cm.jpg" width="296" height="158" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Subhead"><a name="1102786">Rental Order Entry (/ROE)</a></div>
+      <div class="Body"><a name="1102787">The rental rate method defaults in Rental Header screen in Rental Order Entry from the </a>Customer Maintenance, if applicable, or Rental Parameters.</div>
+      <div class="Path"><a name="1102791">Path: Rental &gt; Rental Order Entry<img class="Default" src="images/rental_roe.jpg" width="178" height="223" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1102796">You can change the method for each rental item in Line Item Rental Detail &gt; F5-Add Info.<img class="Default" src="images/rental_roe_line_add.jpg" width="268" height="181" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="opt_rnt.1.1.htm#1102767">Maintenance Settings</a>:Rental Rate Method</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Fill Rate Detail Report</title>
+    <link rel="StyleSheet" href="css/Purchasing_Reports.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1315629">Fill Rate Detail Report</a></div>
+      <div class="Body"><a name="1319281">The Fill Rate Detail report displays the number and percent of stock items that were available when sales </a>orders were first entered, not when invoiced. This report can help determine if stock outages are a common problem. You can run the report by product line and/or by warehouse.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1374910">Products That Will Not Appear on the Fill Rate Reports</a></div>
+            <div class="TableText"><a name="1374917">If the following conditions exist for a product/warehouse, it will not update the fill rate:</a></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1374923">The stocking status is other than S (stock).</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1374927">Both the min and max quantities are set to zero.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1374930">It has an order point override of zero.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1374951">The calculated order point is zero and it does not have an override (other than zero).</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableText"><span style="font-style: italic;"><a name="1386544">Fill Rate</a></span> in <span style="font-weight: bold;">File Update Parameters</span> must be set to <span style="font-weight: bold;">Y</span> to capture fill rate information.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><a name="1316029">&nbsp;</a></div>
+      <div class="Body"><span style="font-weight: bold;"><a name="1386542">Menu Path</a></span>: Purchasing &gt; Reports &gt; Fill Rates at Order Entry Reports &gt; Fill Rate Detail Report</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1316034&quot;);"><a name="1316034">Selection Criteria</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1316034", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1316034", false);</script>
+      <div class="Body"><a name="1315857">Use the following criteria to limit the information to print on the report:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373309">Warehouse</a></span>. The warehouse where the orders were filled.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373315">Order</a></span> <span style="font-weight: bold;">Date</span> <span style="font-weight: bold;">Range</span>. The beginning and ending order entry dates to include.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373311">Product Line</a></span>. The product lines to include in the report. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1315865&quot;);"><a name="1315865">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1315865", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1315865", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 404.24976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1322381">Column Heading</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1322383">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322385">Whse </a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322387">The warehouse that shipped the items.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322389">Ord Date</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322391">The date the sales order was entered.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322393">Order #</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322395">The sales order number that contains the product(s).</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322397">Pline</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322399">The product line number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322401">Product </a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322403">The product number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322405">Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322407">The description of the product.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322453">OrdQty</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322455">The quantity originally ordered on the sales order.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322457">PckQty</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322459">The quantity of the item that was available for picking the first time the </a>pick ticket printed.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322461">#Lines</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322481">The number of lines on the sales order that contain the corresponding </a>product number.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322465">Filled</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322496">The number of lines on the sales order that were shipped complete. </a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322469">Percent</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1322504">The fill rate per line. If a line is 100% shipped then the fill rate for that </a>line is 100%. But if the line is less than 100% shipped then the fill rate for that line is zero. The total fill rate for each warehouse or product line is the percentage of lines items that shipped 100% complete (<span style="font-style: italic;">#Compl </span>divided by <span style="font-style: italic;">#Lines</span>).</div>
+          </td>
+        </tr>
+      </table>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1315941&quot;);"><a name="1315941">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1315941", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1315941", false);</script>
+      <pre class="Report"><a name="1315851">Activant Prelude                                                                                          User Id SEM   Page 1    </a></pre>
+      <pre class="Report"><a name="1388994">Fill Rate Detail Report at Order Entry As Of 15:22:06 On 10/29/07                                                                 </a></pre>
+      <pre class="Report"><a name="1388995">WHSE.NUM = “10” AND ORD.DATE &gt;= “10/01/07” AND ORD.DATE &lt;= “10/29/07”                                                              </a></pre>
+      <pre class="Report"><a name="1388996">&nbsp;</a></pre>
+      <pre class="Report"><a name="1388997">Whse Ord Date Order#   Pline  Description       Product      Description                    OrdQty PckQty #Lines </a>Filled   Percent</pre>
+      <pre class="Report"><a name="1388998">10   10/02/07 10000546 91001  Balloons          5230         Ruby Red 5” Balloons, Bulk 720      1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1388999">                       10000  Diamond Cutting S SURCHARGE    SURCHARGE PRODUCT                   1      1      1      1       100</a></pre>
+      <pre class="Report"><a name="1389000">              10000552 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389001">              10000553 10003  Hand Tools - Plie 4CP30        Cooper Tools Multi Long Nose        1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389002">     10/03/07 10000563 10001  Hand Tools - Scre 4A845        Klein 1/4” Tip Screwdriver         10     10      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389003">     10/09/07 10000580 10003  Hand Tools - Plie 4CP16        Cooper Xcelite Hard Wire 4”         1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389004">     10/10/07 10000587 91001  Balloons          52304        Ruby Red 3” Balloons, 72 Count     10      0      1      </a>0         0</pre>
+      <pre class="Report"><a name="1389005">                       91001  Balloons          52305        Ruby Red 5” Balloons, 72 Count     10      0      1      0         0</a></pre>
+      <pre class="Report"><a name="1389006">              10000588 91001  Balloons          52304        Ruby Red 3” Balloons, 72 Count     10      0      1      0         0</a></pre>
+      <pre class="Report"><a name="1389007">                       91001  Balloons          52305        Ruby Red 5” Balloons, 72 Count     10      0      1      0         0</a></pre>
+      <pre class="Report"><a name="1389008">              10000589 91001  Balloons          52304        Ruby Red 3” Balloons, 72 Count     10      0      1      0         0</a></pre>
+      <pre class="Report"><a name="1389009">                       91001  Balloons          52305        Ruby Red 5” Balloons, 72 Count     10      0      1      0         0</a></pre>
+      <pre class="Report"><a name="1389010">              10000590 10001  Hand Tools - Scre CDS.TEST1    NEW PN                              1      0      1      0         0</a></pre>
+      <pre class="Report"><a name="1389011">     10/29/07 10000592 91001  Balloons          5230         Ruby Red 5” Balloons, Bulk 720      2      0      2      </a>0         0</pre>
+      <pre class="Report"><a name="1389012">     10/10/07          10000  Diamond Cutting S SURCHARGE    SURCHARGE PRODUCT                   1      0      1      0         0</a></pre>
+      <pre class="Report"><a name="1389013">     10/11/07 10000594 50000  Pet Supplies      54154        Red Heart Plastic Cat Id Tag       10     10      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389014">     10/12/07 10000606 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389015">     10/13/07 10000610 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389016">              10000611 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389017">              10000615 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389018">              10000618 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389019">     10/15/07 10000621 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389020">              10000622 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389021">              10000623 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389022">              10000624 10003  Hand Tools - Plie *KLE         Miscellaneous Klein Tools           1      0      1      0         0</a></pre>
+      <pre class="Report"><a name="1389023">     10/17/07 10000628 643    product line gl o AB643        AB643 (prod line gl override)       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389024">              10000630 91001  Balloons          5230         Ruby Red 5” Balloons, Bulk 720     10      1      1      0         0</a></pre>
+      <pre class="Report"><a name="1389025">                       91001  Balloons          52345        Petal Pink 5” Balloons, 72         10      0      1      0         0</a></pre>
+      <pre class="Report"><a name="1389026">                       10000  Diamond Cutting S SURCHARGE    SURCHARGE PRODUCT                  10      1      1      0         0</a></pre>
+      <pre class="Report"><a name="1389027">     10/19/07 10000634 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389028">              10000636 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389029">              10000637 50000  Pet Supplies      54151        Blue Fish Plastic Cat Id Tag        1      1      1      1       100</a></pre>
+      <pre class="Report"><a name="1389030">              10000638 50000  Pet Supplies      54151        Blue Fish Plastic Cat Id Tag        1      1      1      1       100</a></pre>
+      <pre class="Report"><a name="1389031">     10/22/07 10000641 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389032">              10000642 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389033">              10000643 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389034">              10000644 10003  Hand Tools - Plie 4CP19        Cooper Tools Curved Thin Nose       1      1      1      </a>1       100</pre>
+      <pre class="Report"><a name="1389035">              10000646 10003  Hand Tools - Plie 4CP30        Cooper Tools Multi Long Nose        5      0      1      </a>0         0</pre>
+      <pre class="Report"><a name="1389036">&nbsp;</a></pre>
+      <div class="Body"><a name="1359515">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Purchasing Reports", "pcs", "Purchasing_Reports.10.1.htm#1240465");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Purchasing_Reports.10.1.htm#1315629">Purchasing Reports</a>:Fill Rate Detail Report</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

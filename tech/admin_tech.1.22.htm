@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Version 17 and Lower</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1127692">Version 17 and Lower</a></div>
+      <div class="Body"><a name="1127693">The following sections will describe how we setup and use ‘b-trees’ in the Unidata. Prelude has </a>implemented in the application the use of ‘b-trees’, however we use them selectively because of the overhead to the database of maintaining them.</div>
+      <div class="Body"><a name="1127694">Activant maintains the indexed files and their associated secondary key structures in a record stored in </a>the INSTALL file. The Unidata record is called ‘INDEXES.UDT’. The application also provides a utility to delete and create these indexes automatically. These routines reside on the Runtime &gt; Systems &gt; System Parameters &gt; Processes menu. </div>
+      <div class="Body"><a name="1127695">The Create Index Procedure will create and build the indexes contained in the INSTALL record. These </a>routines will cycle through the INSTALL record and delete and create logic for each file and secondary key in the list. Prelude has selectively defined indexes for the large database files. Therefore, this routine could take minutes to many hours depending on the size of the database being built. </div>
+      <div class="Body"><a name="1127696">Since the database maintains these b-trees automatically, it is very uncommon that these routines will </a>need to be executed. Since this routine will rebuild all files defined in the INSTALL record, you can also selectively rebuild one file by typing the same commands the Create Index Procedure (and the Delete Index Procedure for Advanced Pick) executes at TCL. </div>
+      <div class="Body"><span class="Bold"><a name="1127697">Note</a></span>: Since the database maintains these indexes automatically, you should not attempt to create or rebuild a ‘b-tree’ while users are currently active on the system. </div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1127698&quot;);"><a name="1127698">Overview Illustration</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1127698", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1127698", false);</script>
+      <div class="Body"><a name="1127699">We have an index created on the ORDER.HISTORY file based on a secondary key of ‘Company </a>Number!Fiscal Period!Invoice Date’. Therefore, whenever we write a new order history record in our application, the database updates the ‘b-tree’ with the order history key under the secondary key of the individual order history records company, fiscal period, and invoice date. If a customer processes 1000 orders on 04/01/99 (internal date of 11300) for fiscal period 99-04, then 1000 order history keys would be cross-referenced under ‘b-tree’ secondary key of ‘001!99-04!11300’. If the ORDER.HISTORY file contains 500,000 records, the selection time for reporting this one-day of business might take 15 minutes. If you could use the index, the selection time might take 2 seconds. This works by querying the database using the secondary key reference of ‘001!99-04!11300’ and the database quickly returning the 1000 keys cross-referenced.</div>
+      <div class="Body"><a name="1127700">Unidata creates an index using a dictionary that references the secondary key. Prelude as a default </a>creates a dictionary called ‘BTREE_DEFAULT’ for each ‘b-tree’ created for a file. If a second ‘b-tree’ was to be created for a file, the dictionary name would have to be unique (for ex. BTREE_DEFAULT2). The Create Index Procedure will take the secondary key information from the INSTALL INDEXES.UDT record and automatically create the BTREE_DEFAULT dictionary with the secondary key reference. The process then proceeds to create the index using the BTREE_DEFAULT dictionary. The secondary key is stored in attribute 2 of the dictionary item. Notice that if any attribute reference exists in the secondary key, that reference must also exist as a valid dictionary for that file. In this example, ‘F72’ is used in the secondary key and a dictionary called ‘F72’ references attribute 72 in the file. A dictionary ‘F68’ also exists and looks identical to the ‘F72’ dictionary.<img class="Default" src="images/btree1.7.1.1.jpg" width="379" height="273" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1127704">To create an index, at TCL, type </a></div>
+      <pre class="Report"><a name="1127705">CREATE.INDEX ORDER.HISTORY BTREE_DEFAULT </a></pre>
+      <div class="Body"><a name="1127706">If the index already exists, you should first delete the index by typing DELETE.INDEX </a>ORDER.HISTORY BTREE_DEFAULT.  </div>
+      <div class="Body"><a name="1127707">Following the CREATE.INDEX command, Unidata will ask for an ‘Alternate Key Length’ (the system </a>defaults to 20). This value represents the average length of the data assembled from the secondary key. This is similar to file sizing and the more accurate the average the better the performance. (Ex. The data in the screen displayed below would be optimized using an alternate key length of 15). </div>
+      <div class="Body"><a name="1127708">To actually build the index, type </a></div>
+      <pre class="Report"><a name="1127709">BUILD.INDEX ORDER.HISTORY BTREE_DEFAULT </a></pre>
+      <div class="Body"><a name="1127710">This process will build all the secondary key cross-reference with the data in the ORDER.HISTORY file. </a>Notice that the INSTALL INDEXES.UDT record contains the same file and secondary key structure. This will create and build the index with the company number (first 3 characters of the key @ID[1,3]), fiscal period (attribute 72), invoice date (attribute 68) and puts them together with a delimiter of a ‘!’ to form the secondary key for the index. You can also display some information details on the ‘b-tree’ by typing at TCL, LIST.INDEX ORDER.HISTORY BTREE_DEFAULT DETAIL. This will provide some statistics that could be used to optimize or verify the index.</div>
+      <div class="Body"><a name="1127711">With the ‘BTREE_DEFAULT’ dictionary, you can LIST or SORT the file using that dictionary and see the </a>secondary key for each ORDER.HISTORY record (below). You can also perform a Select Statement and retrieve in an active list the results. For example (using the screen below), the statement ‘SELECT ORDER.HISTORY WITH BTREE_DEFAULT = “001!96-08!10463”’ will instantly retrieve 7 items from the database. <img class="Default" src="images/btree1.7.1.2.jpg" width="354" height="214" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1127715">The other technique to retrieve an index is through actual basic programs. For example, look at the </a>program ‘ORDER.HISTORY.LOCATOR’. This program passes into the ‘READ.BTREE’ program the secondary key structure (INDEX.KEY variable) that you are searching for. The READ.BTREE program then performs the SELECT statement to retrieve the data.</div>
+      <div class="Body"><a name="1127716">&nbsp;</a></div>
+      <div class="Body"><a name="1127717">&nbsp;</a></div>
+      <div class="Body"><a name="1127718">&nbsp;</a></div>
+      <div class="Body"><a name="1123996">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.1.htm#1127692">UniData</a>:<a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.20.htm#1127692">Btree (Indexes)</a>:Version 17 and Lower</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

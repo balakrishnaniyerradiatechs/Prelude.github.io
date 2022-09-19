@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>RF Guns</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="ChapterName"><a name="1121468">RF Guns</a></div>
+      <div class="Head1"><a name="1123625">Programming a MC9060 RF Gun</a></div>
+      <div class="NumberedIntro"><a name="1123626">Before you can start you will need information from the customer as to how they want the guns setup: </a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123627">Make sure you have followed the instructions on how to setup your PC to program an RF MC9060. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123628">Confirm the Server host IP (the Prelude server). This is often different to the IP address that Activant </a>uses to connect to the server so what you need is the IP address that the users will be using to connect to the Prelude server.  </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123629">Whether they will be using Static or Dynamic IP addressing to supply the guns with IP addresses. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123630">Valid IP's for the guns if the guns will be using Static IP addresses (note this step is not required if </a>they use Dynamic) </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123631">The Subnet mask (not always obvious!) </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123632">The IP address of the Default Gateway </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">7	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123633">The IP address of the DNS server </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">8	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123634">The ESSID. This is the Wireless ID. If the customer already has AP’s and Guns ask them to confirm </a>this. If none is specified then the default ESSID is 101. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">9	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123635">Will Encryption be used? The MC9060 provides WEP and Kerberos encryption. Note that the AP </a>must be setup to match this. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1123636">The answers to these questions determine how much work you need to do! This is because of the </a>problem mentioned below where the gun loses settings when cold-booted or it loses power for an extended period. <img class="Default" src="images/rf_config_mc9060_gun_Page_02_Image_0001.jpg" width="720" height="427" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1123640">The rule is that If the customer:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123641">does not require Static IP’s setup (steps 2 and 3) </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123642">requires the default ESSID (101, step 7) and </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123643">does not require Encryption </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="NumberedIntro"><a name="1123644">then the setup is significantly simpler and requires much less time to do. This is because you do not </a>need to power-off IP addresses, which saves a lot of time. </div>
+      <div class="Body"><a name="1123645">If ANY of the above ARE REQUIRED - Static IP, non-default ESSID or Encryption </a>– then you MUST do step “4. Power-off IP address issue” below. Otherwise all the settings you put in will be lost the next time the gun is booted or loses power. So it is very important to determine what the customer wants in advance before you start to program the guns. </div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1123646&quot;);"><a name="1123646">Confirm the version of Wavelink TelnetCE on the gun and upgrade if required. </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1123646", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1123646", false);</script>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123647">Place a battery in the gun, then place the gun in a programming cradle. Power up the gun (if not </a>powered up automatically) by pressing the red button. You will be presented a “+” symbol. Using the stylus, run through the calibration steps (clicking on the cross and saving).  </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123648">Now double-click on the </a><span class="Bold">TelnetCE</span> icon to open it up, then on About… to see the version. If it is older than 4.25-21 you need to do this step. If not, move onto the next step. To load the newer version of Wavelink, open the shortcut to telnetconfig you created on the desktop to get the window below.  <img class="Default" src="images/rf_config_mc9060_gun_Page_03_Image_0001.jpg" width="326" height="269" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123652">If you need to send the Wavelink application to the gun (because the one on the gun is older than </a>4.2521) then click the button marked Application &amp; Config to install the files (note that it uses ActiveSync to load the files onto the Gun. Once the transfer is complete, go to the gun and run the Telnet session. Look at the version (About) to check that it is version 4.25-21. Prior versions have a bug which causes CAPS-lock to work incorrectly. This problem appears to be fixed in version 4.25-21.  </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1123653">NOTE: If you clicked on “Application &amp; Config” you will not need to do step 3 below. </a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1123654&quot;);"><a name="1123654">Configuring Wavelink on the RF Gun </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1123654", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1123654", false);</script>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123655">On the gun itself, within TelnetCE go to Options/Configure/Host Profiles, and when prompted enter </a>the password (which is “system”, by default). If you have followed step 1 you should already see a Profile called PRELUDE. Open this then rename the Profile with an alias which corresponds to the name of the company to whom the guns will be delivered (for example, if the gun is due to go to NTP, then make the alias name NTP. For Address enter the IP address of the host which corresponds to that customer (for example, if the customer is NTP, their IP address currently is 208.58.3.130). If you do not see any profiles in this screen check you have followed step 1 correctly. Or if the profile has been deleted, you can click on Add then add a new Profile. Within the profile, set emulation to VT220. Then click on Config then the Display tab, uncheck Vertical Scrollbar and Horiz Scrollbar.  Click on Hide menu, press top left button (F14), press X. Click in the Hide keyboard, press the top right button, press X. Click OK, Save then Done. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1123656&quot;);"><a name="1123656">Programming the F5 key (only required if site is not on v18 of Prelude).</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1123656", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1123656", false);</script>
+      <div class="Body"><a name="1123657">NOTE: If you clicked on “Application &amp; Config” in step 1 you will not need to do this step. Only do this </a>step: </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123658">if you require to make a change to the termconfig file on the gun, or </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123659">you discovered that the Wavelink software on the gun was already version 4.25-21 (or later) so </a>you skipped step 1 . Otherwise you can go to go to step 4 and skip this step.  </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1123660">There is currently an issue with the F5 key. You will find that prior to V18 of ADS the F5 key is used but </a>as standard the 9060 has a “Break” function in place of the F5.  To solve this problem you need to program the gun with a macro, as follows: If you are familiar with programming the PDT series guns, you will know that in the term.cfg file (on all guns except the 9000 series) there is an entry which sets up this macro: </div>
+      <div class="Body"><a name="1123661"># F1-F10 Keys </a></div>
+      <div class="Body"><a name="1123662">KeyMacro 3B00 = </a></div>
+      <div class="Body"><a name="1123663">KeyMacro 3C00 = </a></div>
+      <div class="Body"><a name="1123664">KeyMacro 3D00 = </a></div>
+      <div class="Body"><a name="1123665">KeyMacro 3E00 = </a></div>
+      <div class="Body"><a name="1123666">KeyMacro 3F00 = "\1b[16~" </a></div>
+      <div class="Body"><a name="1123667">KeyMacro 4000 = </a></div>
+      <div class="Body"><a name="1123668">KeyMacro 4100 = </a></div>
+      <div class="Body"><a name="1123669">KeyMacro 4200 = </a></div>
+      <div class="Body"><a name="1123670">KeyMacro 4300 = "&amp;" </a></div>
+      <div class="Body"><a name="1123671">KeyMacro 4400 = "*" </a></div>
+      <div class="Body"><a name="1123672">&nbsp;</a></div>
+      <div class="Body"><a name="1123673">A similar macro to this has been written into the configuration file to accommodate the MC9060 gun (see </a>figure)<img class="Default" src="images/rf_config_mc9060_gun_Page_05_Image_0001.jpg" width="576" height="397" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /><img class="Default" src="images/rf_config_mc9060_gun_Page_05_Image_0002.jpg" width="326" height="269" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1123680">Click “Config Only” to send the file to the RF gun. If you need to send the Wavelink application to the </a>gun (because the one on the gun is older than ) then you can do so by Clicking on “Application &amp; Config”. Next you need to fix a problem with the gun forgetting the IP address when the battery runs completely flat. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1123681&quot;);"><a name="1123681">Power-off IP address issue </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1123681", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1123681", false);</script>
+      <div class="Body"><a name="1123682">There is a problem with the MC9060s which means that it will lose the static IP address or its encryption </a>setup (if used) if the battery runs so low that the gun powers down or if the gun is cold booted. This procedure is for making an IP address allocation be retained even when the battery runs out. In order to make a Mobile Companion profile Persistent (stay through a cold boot) on a Gemini (MC90xx Series Terminal) you must create two customized registry files with the desired settings and place them in the ROM area of the terminal.  One registry file configures the TCP/IP settings for the terminal and the other contains the rest of the settings. </div>
+      <div class="Subhead"><a name="1123683">Symptoms: </a></div>
+      <div class="Body"><a name="1123684">Once the desired Mobile Companion Profile has been modified, saved and selected, the terminal is cold </a>booted or is allowed to rest out of charger long enough to lose all battery life: all settings are lost. </div>
+      <div class="Subhead"><a name="1123685">Cause:   </a></div>
+      <div class="Body"><a name="1123686">This information is stored only in the RAM or Volatile memory of the terminal, which gets rewritten upon </a>a cold boot or battery loss.   </div>
+      <div class="Subhead"><a name="1123687">Solution: </a></div>
+      <div class="Body"><a name="1123688">The registry files will be created using the existing registry of the terminal. Configure the terminal with </a>a Mobile Companion profile that you wish to make persistent.  Be sure to make the right choices for this profile including, Profile Name, ESSID, Encryption Settings and IP settings.  IMPORTANT:  This example will provide guidance for using a Mobile Companion profile that uses DHCP as it’s IP scheme and either 40 bit WEP, 128-bit WEP or Open System (no encryption) as its encryption method.   </div>
+      <div class="NumberedIntro"><a name="1123689">Once the terminal is configured with the desired Mobile Companion profile, you’ll want to make an RF/</a>Network connection using that profile to be sure it is activated. </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123690">After configuring the profile and connecting successfully with that profile, connect the terminal to the </a>PC (with Embedded Virtual C installed) via an ActiveSync session.  Once the terminal is configured with the desired Mobile Companion profile, you’ll want to make an RF/Network connection using that profile to be sure it is activated. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123691">While the terminal is connected, run the Embedded Visual C++ application.  From the Tools menu, </a>choose Remote Registry Editor and select the PDT9000 device from the pop-up window.   </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123692">Wait as the connection is being established. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123693">Expand the directory tree for the PDT9000 device and select the following key: </a><br />HKEY_LOCAL_MACHINE/COMM/Netwlan1/Parms. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123694">With Parms selected, choose “Export Registry File” from the Registry menu at the top of the page. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123695">Save the file as a .reg file and name it so that you’ll remember it is the Parms key.   </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">7	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123696">Now, select the following key:  HKEY_LOCAL_MACHINE/SOFTWARE/Symbol Technologies, Inc/</a>Profiles. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">8	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123697">With Profiles selected, choose “Export Registry File” from the Registry menu at the top of the page. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">9	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123698">Save the file as a .reg file and name it so that you’ll remember it is the Profiles key. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">10	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123699">WARNING: Once these files are on your PC, do not double click them.  </a>	Always right click to see a menu and choose to edit with notepad.  Double clicking will merge these files with your PC’s registry and might cause bad things to happen.   </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">11	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123700">Wait as the connection is being established. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">12	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123701">On the PC, and </a><span class="Bold">edit</span> the exported registry files as follows: </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123702">Right click on the Parms reg file and choose to edit with Notepad.  Please locate the tcp/ip section </a>of the Parms reg file that looks like this: <img class="Default" src="images/rf_config_mc9060_gun_Page_07_Image_0001.jpg" width="459" height="415" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123706">Edit the registry file by adding your own IP values for these four fields:  Default Gateway, Subnet </a>Mask, IP Address and DhcpWINS.  You’ll notice that these four values have been changed in the export process.  The goal is to put them in the right format. You’ll want to clear out the format that was exported and replace it with the following format:  “0.0.0.0” (using your values of course).  If you do not have a value, then change it to the right format using zeroes.  (for instance, if you are not using a WINS server, just change the DhcpWINS line to read:  "DhcpWINS"=”0.0.0.0”  The following pictures will show you how it should look.<img class="Default" src="images/rf_config_mc9060_gun_Page_08_Image_0001.jpg" width="459" height="444" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1123710">IMPORTANT: If you plan to use this file to configure multiple terminals, or rather, any terminal other than </a>the one you exported this file from, then you will <span class="Bold">also need to delete the following line</span>: </div>
+      <div class="Body"><a name="1123711">"NetworkAddress"="your_terminal’s_mac_address" </a></div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123712">SAVE THE CHANGES TO THE REG FILE. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123713">Right click on the Profiles reg file now and choose to edit it using notepad.exe.  You’ll find that the </a>values for the IP settings have, just as in the Parms export, been changed.  You’ll need to set these back to decimal values as well.  This is how the file will look after export: <img class="Default" src="images/rf_config_mc9060_gun_Page_09_Image_0001.jpg" width="540" height="521" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">13	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123717">You’ll notice that the values for Subnetmask, IpAddress and DefaultGateway have all been changed </a>in the export. You’ll want to edit this file such that the values are decimal based once again. The file should look like this when you are done:   <img class="Default" src="images/rf_config_mc9060_gun_Page_10_Image_0001.jpg" width="503" height="484" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">14	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123721">SAVE THE CHANGES TO THE REG FILE. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">15	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123722">Copy and paste both of these custom reg files into the Application directory of the terminal using </a>ActiveSync. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">16	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123723">Cold Boot the terminal (hold down power button for 20 seconds) and the profile you entered should </a>be listed in Mobile Companion and the terminal should try to connect to this profile first. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1123724">At the end of this procedure you should have two registry files, which you have copied across to the </a>Application folder on the gun, both names beginning PSI to make them easily identified. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1123725&quot;);"><a name="1123725">Courier Font </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1123725", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1123725", false);</script>
+      <div class="Body"><a name="1123726">This step is to provide the gun with the necessary font files required to display the horizontal and vertical </a>bar characters which are used around the RF menu screens. If you do not do this step these bars will not be displayed correctly. This step is fast. Copy the two files “cour.ttf” and “CourierFont.cpy” from the PC to the gun in the Application folder. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1123727&quot;);"><a name="1123727">Testing </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1123727", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1123727", false);</script>
+      <div class="Body"><a name="1123728">You should be able to cold-boot the gun and when you go to the Mobile Companion to check the IP </a>address matches the details you entered. Note: if the gun is using DHCP it will pickup an address at Prelude. If static IP it should correctly display all those details. Similarly you should see any changes you made to the ESSID and Encryption. If not, you will have to redo the above steps. </div>
+      <div class="Body"><a name="1123729">Double-click on the Wavelink terminal emulator and hit enter. The gun should attempt to connect to the </a>host server. Because that server is on the customer site, this will timeout, which is to be expected because the customer’s ADS server is not accessible from the Prelude network.  </div>
+      <div class="Body"><a name="1123730">If you wish to further confirm all is well, you can create a second Host profile for the development server </a>at Prelude and try connecting to that. But this will only work if the gun has a valid Prelude IP address, so usually it is more practical just to test that you can run the terminal application, rather than changing all the settings to make it work at Prelude then changing them all back to the customer settings. But this can be useful for diagnostic purposes. </div>
+      <div class="Body"><a name="1123731">This completes the programming of a 9000 series gun. </a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">RF Guns</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>V18 New Features</title>
+    <link rel="StyleSheet" href="css/v18_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="ChapterName"><a name="998290">V18 New Features</a></div>
+      <div class="Head1"><a name="1008634">Version 18 Warning</a></div>
+      <div class="Body"><a name="998476">Version 18 has some significant enhancements, but we wanted to give you information </a>about areas that are new or were significantly changed from prior versions. Please study this document and test and/or train around these items if they apply to your company.</div>
+      <div class="Subhead"><a name="998489">Indexes (B-Tree)</a></div>
+      <div class="Body"><a name="998496">Indexes are operating system-level cross-references that increase speed in selecting </a>large files and improve report execution time. Previously, Prelude had indexes for over 20 files that improved speed for selected and strategic reports. For example, in the Daily/Monthly Invoice Registers, the architecture of those indexes came from the Pick D3 heritage and was not used as widely as is currently possible using UniData’s architecture capabilities. In addition, those indexes were not readily available for you to use in your reports.</div>
+      <div class="Body"><a name="998530">Indexes require additional disk space to store cross-references. Therefore, we will delete </a>all indexes during the upgrade process that are in the primary files, which we used in the prior versions. We designed a new tool to help generate the new indexes and an area that helps you easily create indexes. You must determine if the indexes that we will delete are important and add those indexes back to the user area of the New Index Routine. We can help you find the files that have indexes and rebuild those indexes as they currently exist. We can also help you rewrite the routines that use the older index syntax to use the new model to not waste disk space.</div>
+      <div class="Subhead"><a name="998563">Work Queues Inquiries</a></div>
+      <div class="Body"><a name="998569">We significantly changed the logic that updates some of the work queue inquiries. The </a>update routines were significantly affected. Therefore, you must review your hold logic and process to verify that the queues works as you expect for your business. The primary changes are:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998585">Instant notification to the managers. Each manager (user) determines how they wish </a>to be notified that an order is on hold. The current work queues are still in place and were not changed. The manager can also be notified via email immediately and take advantage of the instant messaging capability in their email client software. We have another option that we will provide more information about in the near future.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998605">Unlimited notes between the operator and manager for transactions that are on hold.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998619">Consistent presentation and functionality between the work queue inquiries.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="998628">These changes affect the following work queues:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998636">Credit Hold Inquiry.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998647">Administrative Order/InvoiceQuote/ Hold Inquiry.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998680">Purchase Hold Inquiry. The purchase hold inquiry was also changed from only a single </a>buyer design to use manager codes like the other inquiries.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="998695">Email is available for all work queues except branch manager and emergency cycle count.</a></div>
+      <div class="Subhead"><a name="998704">Import Costs</a></div>
+      <div class="Body"><a name="998710">Many years ago, we partnered with a customer and designed/implemented the concept </a>of importing costs with options like Inland Freight, Insurance, Brokerage, and other defined fees with set methods of calculating those import costs. These defined fees became restrictive. Therefore, we redesigned import costs to be more flexible and handle the dynamic requirements for importing. The new design provides for unlimited importing fees. You can define the fees you wish to calculate as well as the rates, allocation method, and currency for the rates.</div>
+      <div class="Body"><a name="998734">Note: If you use the previous importing technique and want to use this new design, you </a>must set it up, train your users, and convert data. Please contact us once V18 is loaded on your TEST account, but before you upgrade, so we can discuss a conversion plan.</div>
+      <div class="Subhead"><a name="998751">New Financial Report Generator</a></div>
+      <div class="Body"><a name="998757">To accommodate some new requirements and suggestions from customers, we created </a>a new financial report generator that allows you to more easily generate reports, view your output on the screen, and drill down from the financial numbers to research where the amounts came from. The current financial report generator is still available in version 18 and was not modified.</div>
+      <div class="Body"><a name="998778">If you want to use this new report tool, you must prepare your accounts and convert your </a>existing reports to this new format. The primary feature we did not bring over to this new report functionality is the wildcard concept on the actual account number. However, we implemented a group concept to bundle those accounts for easy access on the reporting tool. Please take a look at it and you can decide if you want to use this new tool.</div>
+      <div class="Subhead"><a name="998792">RF (Radio Frequency) Applications</a></div>
+      <div class="Body"><a name="998803">Previously, we started all function key options on RF application screens using F5 and </a>then possibly F6 for additional options. We have come across some challenges with configuring the F5 key on some guns – especially the new guns. Therefore, we are starting to use F6 and beyond for executing additional options. If an RF gun had an option on F5, it was moved to F6 or F7. Therefore, please notify your warehouse personnel that use RF guns that the function key options may have moved to another function key spot.</div>
+      <div class="Subhead"><a name="998813">Documentation</a></div>
+      <div class="Body"><a name="998819">We have begun a new generation of online documentation. We still have the historical </a>field sensitive (F1) help, but we have added a new Help option to the Action Bar that launches our new screen-level online documentation in a browser. This documentation provides more expanded help for every field and function key on the screen and links to supporting or related documentation. Because this documentation is new, we could not completely document the entire application for this release. To allow us to easily add and update the documentation, we added the Help option to all screens in the application even though the documentation is not complete. Therefore, for Version 18 at this time, the Help option on the screens is only activated in Purchasing, Forecasting, and Shop/Repair. We are working on Accounts Payable, General Ledger and Inventory. As we complete modules, we can send them to you and activate them under your current version 18 release.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">V18 New Features</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

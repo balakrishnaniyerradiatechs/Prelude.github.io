@@ -1,0 +1,23 @@
+function FileData_Pairs(x)
+{
+x.t(":reporting","activant");
+x.t("areas","using");
+x.t("dead","stock");
+x.t("tpcx","website");
+x.t("trading","partner");
+x.t("reporting","areas");
+x.t("reporting","reporting");
+x.t("reporting","section");
+x.t("partner","connect");
+x.t("solutions","866-878-0574");
+x.t("972-403-3150","preludeeducation@activant.com");
+x.t("section","trading");
+x.t("website",":reporting");
+x.t("hub","contains");
+x.t("activant","solutions");
+x.t("stock","reporting");
+x.t("866-878-0574","972-403-3150");
+x.t("connect","hub");
+x.t("using","tpcx");
+x.t("contains","dead");
+}

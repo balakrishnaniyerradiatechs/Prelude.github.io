@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Work Orders</title>
+    <link rel="StyleSheet" href="css/opt_whs.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1105978">Work Orders</a></div>
+      <div class="Body"><a name="1114027">The work order process creates an order for components to be assembled for a bill of </a>material item. Radio frequency work order picking is used to pick products from pick or bulk bins in a logical picking sequence. The work orders are released and assigned to a picker. The products are moved to a <span class="Italics">Work in Process</span> bin as they are picked. At completion the <span class="Italics">Work in Process</span> bin is relieved and the finished good is added to inventory. Outplant Work Orders are used when products are taken out of stock and sent to a vendor for additional processing such as painting, plating, packaging, machining, etc. The finished product is then returned to the distributors warehouse. Refer to <a href="javascript:WWHClickedPopup('whs', 'opt_whs.1.4.htm#1111561', '');">Work Order Picking Options</a> for more information on warehouse options.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1112563&quot;);"><a name="1112563">Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1112563", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1112563", false);</script>
+      <div class="Subhead"><a name="1116555">Bin Location Maintenance</a></div>
+      <div class="Path"><a name="1112564">Path: Inventory &gt; Maintenance &gt; Bin Files &gt; Bin Location (BLM)</a></div>
+      <div class="Body"><a name="1112602">In Bin Location Maintenance, a </a><span class="Italics">Staging Bin</span> and a <span class="Italics">Work in Process</span> bin are created for each vendor. Another bin can be created if needed for <span class="Italics">Work in process line stock</span> if components are stored at the vendor site before the work order is entered. For <span class="Italics">Staging</span>  after picking and prior to sending to the vendor, set the following fields:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112603">Bin type: S</a></span> - For staging.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112604">Storage type: O</a></span> - For outplant.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1112605">For the </a><span class="Italics">Work in Process</span> bin where the product is kept while it is being completed, set the following fields:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112606">Bin type: W</a></span> - For work in process.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112607">Storage type: O</a></span> - For outplant.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1112608">For the optional bin to use if components are stored at the vendor site before the work </a>order is entered, set the following fields:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112609">Bin type: L</a></span> - For work in process line stock.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112610">Storage type: O</a></span> - For outplant.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1112611">Products are moved to this bin when they are shipped to the vendor.</a></div>
+      <div class="Subhead"><a name="1112579">Product Maintenance</a></div>
+      <div class="Path"><a name="1112580">Path: Inventory &gt; Maintenance &gt; Product Maintenance &gt;Product Warehouse Maintenance &gt; F6 Purch </a>Parameters (/PWM &gt; F6)</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112581">Replenishment Method: </a></span>The finished product should have a replenishment method of <span class="Bold">O</span> for outplant or M for manufacture.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1112587">Bill of Material Maintenance</a></div>
+      <div class="Path"><a name="1112588">Path: BMW/Work Order &gt; Maintenance &gt; Bill of Material Maintenance (/BOMM)</a></div>
+      <div class="Body"><a name="1112589">A Bill of Material is normally created with the finished product as the parent. The </a>components and burden item(s) represent the amount the vendor will charge to perform the processing. If these are not standard you can change them in  Work Order entry instead of Bill of Material Maintenance. See the Bill of Material Maintenance document on the Bill of Material / Work Order menu for more information.</div>
+      <div class="Subhead"><a name="1114042">Burden Maintenance</a></div>
+      <div class="Path"><a name="1114043">Path: BMW/Work Order &gt; Maintenance &gt; Burden Maintenance (/BUM)</a></div>
+      <div class="Body"><a name="1114044">Burden codes need to be created to reflect a charge to be added to a bill of material or </a>work order. These account for non material costs such as labor, overhead and other expenses directly associated with the assembly of a product. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1114045">Burden type: </a></span>the type of charge (outplant, labor)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;vertical-align: baseline;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;"><span class="Bold"><a name="1114046">Setup Charge:</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1114047">N</a></span> - If the charge is per piece.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1114048">Y</a></span> - If it is a flat charge for everything sent out.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1112568&quot;);"><a name="1112568">Entering Work Orders</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1112568", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1112568", false);</script>
+      <div class="Path"><a name="1112569">Path: Warehousing &gt; Work Order Processing &gt;Work Order Entry (/WOE)</a></div>
+      <div class="Body"><a name="1112570">This process creates a work order for components to be assembled for a bill of material </a>item. When you release the work order, you must choose a Work In Process bin. </div>
+      <div class="Body"><a name="1112620">For outplant work order, set </a><span class="Italics">Order Type</span> in the header screen to <span class="Bold">03</span> for<span class="Italics"> Outplant work order</span>. When you save the header screen,  you must indicate which vendor the BOM will be shipped to. It is assigned to an outplant staging bin.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1112636&quot;);"><a name="1112636">Picking Work Orders</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1112636", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1112636", false);</script>
+      <div class="Subhead"><a name="1113999">Work Order Bin Allocation</a></div>
+      <div class="Path"><a name="1112637">Path: Warehousing &gt; Work Order Processing &gt;Work Bin Allocation (/WOBA)</a></div>
+      <div class="Body"><a name="1112638">When work orders are ready to be picked, the Work Order Bin Allocation process must be </a>run. This determines which bin the components are picked from using the following rules:</div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1112639">Work orders are allocated from pick, bulk, and stock type bins.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1112640">A pick bin percentage is determined. This is done by taking the pick quantity divided </a>by the primary bins maximum quantity. If this pick bin percentage is less than the warehouse percentage, then the primay bin allocation is attempted first.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1112641">A list of available bins is determined. The main sort is linestock, bulk then pick. If the </a>pick bin percentage is valid, the bin sort is linestock, pick or bulk.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1113978">Work Order Picker Assignment / Unassignment</a></div>
+      <div class="Path"><a name="1113979">Menu Path:  Warehousing &gt; Work Order Processing &gt; Work Order Picker Assignment (/WOPA)</a><br />Warehousing &gt; Work Order Processing &gt;Work Order Picker Unassignment (/WOPU)</div>
+      <div class="Body"><a name="1113980">The work order is assigned to a picker using Work Order Picker Assignment.  If the work </a>order needs to be re-assigned it can be unassigned using Work Order Picker Unassignment then re-assigned at that time.  One or multiple work orders can be assigned to a picker.  The work in process bin must be entered at this time.</div>
+      <div class="Subhead"><a name="1113981">Radio Frequency Work Order Picking</a></div>
+      <div class="Path"><a name="1113982">Menu Path:  Warehousing &gt; Handheld RF Menu  &gt; Doc. Picking &gt; Work Order Picking (/RWPE)</a></div>
+      <div class="Body"><a name="1113983">Work Order picking allows RF picking by work order number.  You are prompted for work </a>order number and number of lines.  F3 displays all of your assigned work orders.  All line items on the selected work order are displayed showing the product number, description, bin to pick from, lot (if applicable) and quantity to pick.  You are guided through the warehouse in the logical picking sequence for each product.  As each product is picked it is moved to a cart.  After all products have been picked they are moved to a work in process bin which defaults to the bin entered when the work order was released or assigned.</div>
+      <div class="Body"><a name="1113984">If a partial quantity of a line item is picked, the balance of the pick quantity for that product </a>comes up right after the first pick.  The balance of the product is prompted until the entire quantity has been picked or a 0 pick quantity is entered.</div>
+      <div class="Subhead"><a name="1113985">Non-RF Work Order Picking</a></div>
+      <div class="Path"><a name="1113986">Menu Path:  Warehousing &gt; Work Order Processing &gt; Work Order Picking Report (/WO.PICK.RPT)</a></div>
+      <div class="Path"><a name="1115965">Menu Path:  Warehousing  &gt; Work Order Processing &gt;Work Order Picking Confirmation (/WOPC)</a></div>
+      <div class="Body"><a name="1113987">As a back up for the radio frequency terminal entry, a report can be printed to pick work </a>orders.  The prompts are the same and the report shows the product, quantity, bin to pick from, lot (if applicable) and the work in process bin. Work Order Picking Confirmation records the work order pick if the Work Order Picking Report was used to pick the work order.  The products, quantities and bins that were on the report are displayed for confirmation.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1115978&quot;);"><a name="1115978">Shipping and Receiving Outplant Work Orders</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1115978", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1115978", false);</script>
+      <div class="Subhead"><a name="1115979">Shipping Outplantt BOMs to a Vendor</a></div>
+      <div class="Body" style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; margin-bottom: 5.0pt; text-transform: none; vertical-align: baseline;"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><a name="1115980">Path: Warehousing &gt; Work Order Processing &gt; Outplant Processing &gt; Outplant Shipping Document (/</a></span><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;">OUTPLANT.SHIP.RPT)</span><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><br /></span><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;">Path: Warehousing &gt; Work Order Processing &gt; Outplant Processing &gt; Outplant Bin Movement (/</span><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;">OUTPLANT.MOVE)</span></div>
+      <div class="Body"><a name="1115981">The outplant shipping documents are printed by specifying the staging bin and work order </a>number.You can print three reports:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1115982">The Outplant Summary Shipment Report</a></span> prints all components and quantities that are being shipped. This is used to assemble and ship the products.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1115983">The Outplant Work Order Report </a></span>shows by work order, components, quantities, assembly instructions and burdens to describe for the vendor what needs to be done.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1115984">The Outplant Production Group Report</a></span> sorts all work orders by the product group in the parent product record.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1115987">Then use Outplant Bin Movement to identify products sent to the vendor by specifying the </a>staging bin and work order number. This is where the outplant work in process bin is identified, and this is the process that moves the components to that bin.</div>
+      <div class="Subhead"><a name="1115988">Receiving Outplant BOMs from Vendors</a></div>
+      <div class="Body" style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; margin-bottom: 5.0pt; text-transform: none; vertical-align: baseline;"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><a name="1115989">Path: Warehousing &gt; Work Order Processing &gt; Outplant Processing &gt; Outplant Receiving Document (/</a></span><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;">OUTPLANT.REC.RPT)</span><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><br /></span><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;">Path: Warehousing &gt; Work Order Processing &gt; Outplant Processing &gt; Outplant Receiving (/</span><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;">OUTPLANT.REC)</span></div>
+      <div class="Body"><a name="1115990">When the completed products are returned, a Receiving Documents Report may be </a>printed. This report is selected by entering the Outplant Work in Process bin. The Outplant Receiving process is executed to update inventory with the finished product. The work order number is required. This process completes the work order, puts the finished product in inventory and deducts the components from inventory.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1112507&quot;);"><a name="1112507">Completeing Work Orders</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1112507", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1112507", false);</script>
+      <div class="Path"><a name="1112508">Menu Path:  Warehousing &gt; Work Order Processing &gt; Work Order Completion (/WOC)</a><br />Menu Path:  Warehousing &gt; Handheld RF Menu &gt; Processes &gt;WO Completions (/RWOC)</div>
+      <div class="Body"><a name="1116026">Work Order Completion is performed after the product is assembled or received from </a>outplant.  This process deducts all components on the work order from the on hand balance in the Work In Process bin.  Note that these are the products and quantities on the work order, not necessarily the components that were picked, although they should be the same. This process also puts the completed product into the bin specified at completion. A warning message displays if all lines were not picked upon completion. For outplant work orders, when you complete the work order and receive the finished product, a receiver with the total of the Outplant burden items on the work order is created.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">Work Orders</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

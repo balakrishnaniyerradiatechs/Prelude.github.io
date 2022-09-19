@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Perpetual Work Order</title>
+    <link rel="StyleSheet" href="css/opt_bmw.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1074746">Perpetual Work Order</a></div>
+      <div class="Body"><a name="1074747">A perpetual work order is similar to a type 05 Expense work order except that it does not </a>close until you close it, it cannot be linked to a sales order, and the bill number cannot be a rental product. This type work order can be used to accumulate expenses and then post those expenses when the work order is run through Work Order Completions. Any items on the work order that were issued are posted and removed from the work order but the work order itself remains open until you tell it to close. This allows you to continue to accumulate expenses on the same work order. </div>
+      <div class="Body"><a name="1074748">This type work order can be used to track expenses for odd jobs, repairs in shop, normal </a>wear and tear maintenance, building repairs. For example, if a company has hundreds of chain hoists that need to be replaced every so often, a perpetual work order is used to expense the products used for maintenance. Monthly, the perpetual work order goes through Work Order Completions to post the expense items issued, but the work order remains open for the next months expenses. Since this type work order is similar to an expense work order, work order expense reason codes must be set up. These codes not only define the reason for the expense but also allow you to define separate G/L expense accounts for parts, labor, and sublet (work done outside your company).</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1074749&quot;);"><a name="1074749">General Ledger Table (/GLTABLE.MNT)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1074749", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1074749", false);</script>
+      <div class="Path"><a name="1074750">Path: General Ledger &gt; Maintenance &gt; General Ledger Table </a></div>
+      <div class="Body"><a name="1074751">If perpetual work orders are to be used, an Expense Work Order General Ledger Table </a>Heading must be set up. Work Order Completion posts to this account instead of to the <span class="Italics">Inventory </span>account, but can be overridden in the work order expense reason code.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074752">Expense Work Order: </a></span>Debits are posted to this account when a perpetual type work order is processed in Work Order Completions. It is used for in-house expenses.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1074753&quot;);"><a name="1074753">Work Order Expense Reason Code Maintenance (/WERM)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1074753", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1074753", false);</script>
+      <div class="Path"><a name="1074754">Path: BMW/Work Order &gt; Maintenance &gt; Work Order Expense &gt; Reason Code Maintenance</a></div>
+      <div class="Body"><a name="1074755">Expense reason codes can be created and maintained for expense and perpetual work </a>orders. A reason code may be entered for a perpetual work order to define why it is being expensed as well as the accounts to use when posting the work order in Work Order Completions. You may define a separate account for parts, labor, and sublet (outplant) for each reason code.<img class="Default" src="images/Perpetual%20Work%20Order_GUI.12.1.2.jpg" width="434" height="234" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074759">W/O Expense Reason #: </a></span>Enter the two digit expense reason code to create or edit.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074760">Description: </a></span>Enter the description for the reason code.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074761">Add-on Capital: </a></span>Determines if the <span class="Italics">Add-on Capital </span>bucket for the equipment id number is updated for maintenance and labor expenses for a type 05 expense work order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;vertical-align: baseline;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;"><span class="Bold"><a name="1074762">G/L Table Headings:</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1074763">Parts Expense: This account is used to post any line item on the work order that is a </a>non-service product, has a service type of M for Material, or is not defined as a labor or sublet expense.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1074764">Labor Expense: This account is used to post any line item on the work order that has </a>a service or burden type of L for Labor.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1074765">Sublet Expense:  This account is used to post any line item on the work order that </a>has a service type of S for Sublet or a burden type of O for Outplant.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1074766">If any of these headers do not have an account defined, the system posts to the </a><span class="Italics">Expense </span><span class="Italics">Work Order</span> account defined in G/L Table Maintenance. For example (using the accounts defined in the above reason code), if a line item on a work order falls into the parts expense category, the posting for that line item is to the <span class="Italics">Expense Work Order </span>account defined in the G/L table. This is due to the <span class="Italics">Parts Expense</span> account being blank in the reason code. If a line item on the work order falls into the labor expense category, the posting for that line item will be to the <span class="Italics">Labor Expense </span>account defined in the reason code.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1074767&quot;);"><a name="1074767">Work Order Entry (/WOE)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1074767", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1074767", false);</script>
+      <div class="Path"><a name="1074768">Path: BMW/Work Order &gt; Work Order Entry</a></div>
+      <div class="Body"><a name="1074769">In the work order header screen, set the </a><span class="Italics">Order Type</span> field to 06 Perpetual Work Order. A perpetual work order is only allowed if the work order is not linked and if the bill number is not a rental product. The following box prompts for additional expense information.<img class="Default" src="images/Perpetual%20Work%20Order_GUI.12.1.3.jpg" width="466" height="117" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074773">Expense Reason Code: </a></span>Enter the code to define why the work order is expensed. This assigns the expense accounts to post to in Work Order Completions. If left blank, Work Order Completions posts to the <span class="Italics">Expense Work Order</span> account defined in the general ledger table.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074774">Maintenance Code: </a></span>Leave this field blank for Type 06 perpetual work orders.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1074775">The system automatically sets the </a><span class="Italics">Quantity Ordered </span>field in the header screen to 1 and it cannot be changed. If a work order is changed from type 05 Expense to type 06 Perpetual, then the <span class="Italics">Quantity Ordered </span>is set to 1 and the line item quantities are adjusted as well.</div>
+      <div class="Body"><a name="1074776">This type work order is different from other work order types in that when the header </a>screen is exited, you are not prompted for a serial number for a serialized bill number since we are not concerned with tracking expenses against a piece of equipment. You will also notice that if the bill number has components set up in Bill of Material Maintenance, those components are not pulled into the work order so that you start out with an empty work order.</div>
+      <div class="Body"><a name="1074777">Enter the components to be expensed on the work order. Print and issue the work order </a>as usual. Since this work order is perpetual, multiple entries and issues may be performed over the life of the work order. Burdens and other functions of the work order system are the same.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1074778&quot;);"><a name="1074778">Work Order Issues Entry (/WOIE)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1074778", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1074778", false);</script>
+      <div class="Path"><a name="1074779">Path: BMW/Work Order &gt; Work Order Processing &gt; Work Order Issues Entry</a></div>
+      <div class="Body"><a name="1074780">This process works the same way as for a regular work order. On-hand inventory is </a>relieved for the components. A credit is posted to the <span class="Italics">Inventory</span> account and a debit is posted to the <span class="Italics">Inventory Work In Process </span>account for the extended cost of all products issued. There are no postings to the expense accounts at this time. Below is a sample posting of a perpetual work order from Work Order Issues.<img class="Default" src="images/Perpetual%20Work%20Order_GUI.12.1.4.jpg" width="717" height="129" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1074784&quot;);"><a name="1074784">Work Order Completions (/WOC)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1074784", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1074784", false);</script>
+      <div class="Path"><a name="1074785">Path: BMW/Work Order &gt; Work Order Completions</a></div>
+      <div class="Body"><a name="1074786">Though a perpetual work order works the same way as a regular work order on the front </a>end, Work Order Completions processes a perpetual type work order differently than a regular work order.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;vertical-align: baseline;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;"><span class="Bold"><a name="1074787">A regular work order performs the following when completed:</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1074788">Increases on-hand inventory for the bill of material product.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1074789">Credits the </a><span class="Italics">Inventory Work In Process </span>account.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1074790">Debits the </a><span class="Italics">Inventory</span> account for the extended cost of the work order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;vertical-align: baseline;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none;"><span class="Bold"><a name="1074791">An expense type work order when completed perform the following debits/</a></span><span class="Bold">credits:</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1074792">Does not increase on-hand inventory for the bill of material product.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1074793">Credits the </a><span class="Italics">Inventory Work In Process</span> account for the extended cost of the work order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1074794">Debits one or more Expense account.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1074798">Below is a sample posting for a perpetual work order from Work Order Completions.<img class="Default" src="images/Perpetual%20Work%20Order_GUI.12.1.5.jpg" width="718" height="129" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1074799">In this example, the components posted to the </a><span class="Italics">Expense Work Order </span>account defined in the G/L table. </div>
+      <div class="Body"><a name="1074800">In Work Order Completions, the system posts all items that were issued on a perpetual </a>work order. The system then removes the items from the work order. If a line item was partially issued, then the line item is adjusted to the quantity remaining. If a line item was fully issued, then the line item is removed from the work order. If the work order is completely issued (meaning that there are no lines left open on the work order) then you are prompted to close the order (below). <img class="Default" src="images/Perpetual%20Work%20Order_GUI.12.1.6.jpg" width="354" height="112" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074804">Yes: </a></span>The work order is closed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074805">No: </a></span>The work order remains open with no component lines. (default).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1074806">If the work order contains items that have not been issued, it remains open and you are </a>not prompted to close it. This allows you to issue the remaining expenses or to add additional expenses. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">Perpetual Work Order</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

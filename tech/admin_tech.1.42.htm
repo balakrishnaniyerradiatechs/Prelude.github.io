@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>VSI-Fax FAQs</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1121588">VSI-Fax FAQs</a></div>
+      <div class="Body"><span class="Bold"><a name="1121589">Q.</a></span> What version of VSI-Fax am I running? What is my serial number for VSI-Fax?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121590">A.</a></span> At the Unix level, log in as root and <span class="Bold">ENTER</span> <span class="TypedInText" style="font-size: 11.0pt;">vfxadmin license -I</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121591">Q.</a></span> How do I know if VSI-FAX is running?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121592">A. </a></span>At the Unix level, log in as Root and enter the following command <span class="TypedInText" style="font-size: 11.0pt;">vfxstat-r</span> or <span class="TypedInText" style="font-size: 11.0pt;">vfxstat | </span><span class="TypedInText" style="font-size: 11.0pt;">more</span> (for more details). A message displays if VSI-Fax goes down. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <pre class="Report"><a name="1121593">The Server on the F80 has been operating since 05/11 at 20:00.                        </a></pre>
+      <pre class="Report"><a name="1121594">                                                                   </a></pre>
+      <pre class="Report"><a name="1121595">Device       Comments                  State                           </a></pre>
+      <pre class="Report"><a name="1121596">-----------  --------------------      -------------                   </a></pre>
+      <pre class="Report"><a name="1121597">C/S          &lt;none&gt;                    </a>		Idle                            </pre>
+      <pre class="Report"><a name="1121598">fax01        &lt;none&gt;                    </a>	Idle                            </pre>
+      <pre class="Report"><a name="1121599">lb           LoopBack                  </a>	Idle                            </pre>
+      <pre class="Report"><a name="1121600">lcr          LCR hold queue            </a>	Not running [Holding queue only]</pre>
+      <pre class="Report"><a name="1121601">sm           SendMail                  </a>		Idle                            </pre>
+      <pre class="Report"><a name="1121602">&nbsp;</a></pre>
+      <div class="Body"><a name="1121603">This example represents how the fax device appears to determine if the device is idle or in the process </a>of sending. If State is anything other than Idle or Sending, please notify Activant.</div>
+      <div class="Body"><span class="Bold"><a name="1121604">Q.</a></span> How do I stop, start or restart the server?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121605">A.</a></span> At the Unix level, log in as Root and <span class="Bold">ENTER</span> one of the following commands:<br />To stop - <span class="TypedInText" style="font-size: 11.0pt;">vfxsched start</span>  <br />To start  - <span class="Bold"> </span><span class="TypedInText" style="font-size: 11.0pt;">vfxsched start</span><br />To restart - <span class="TypedInText" style="font-size: 11.0pt;">vfxsched restart</span><br />Once the command is completed, it will return with the message "Done".</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121606">Q.</a></span> Where does VSI-FAX reside on my Unix box?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121607">A.</a></span> VSI-FAX resides in the  <span class="TypedInText" style="font-size: 11.0pt;">/usr/vsifax3</span> directory. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121608">Q.</a></span> How much free disk space do I need for VSI-FAX to run?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121609">A.</a></span> VSI-FAX needs at least 60 mb free in the /usr directory to run. Prelude suggests that at least 100 meg be free. If statements are to going to be run, it should be taken into account the extra large jobs they produce. Therefore, Prelude suggests having at least 200 meg free if running statements. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121610">Q.</a></span> What do I do if my disk space in /usr falls under 60MB? </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121611">A.</a></span> A purge script is available within the <span class="TypedInText" style="font-size: 11.0pt;">/usr/vsifax3</span> directory. To run this purge, <span class="Bold">ENTER</span>  <span class="TypedInText" style="font-size: 11.0pt;">/</span><span class="TypedInText" style="font-size: 11.0pt;">vfpurge</span> at the command line. The script will display the process in which to shut down the system. Running this process will also prompt the user to enter the number of days that the information is to be kept. Prelude recommends keeping the information a maximum of 7 days. The script is generated will prompt the user to restart once the purge process is complete. In addition, the script can also be added to the 'Cron' tab for the script to be run at night.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121612">Q.</a></span> Where are the VSI-FAX logs kept?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121613">A.</a></span> VSI-FAX logs are kept in two separate areas, <span class="TypedInText" style="font-size: 11.0pt;">/usr/vsifax3/spool/logs</span> and <span class="TypedInText" style="font-size: 11.0pt;">/usr/vsifax3/</span><span class="TypedInText" style="font-size: 11.0pt;">spool/dbs</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121614">Q.</a></span> How do I send a test fax at Unix?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121615">A.</a></span> At the Unix level, log in as Root and <span class="Bold">ENTER</span> the following command:<br /><span class="Bold">vfx-n</span> &lt;fax number&gt; <span class="Bold">/etc/motd</span><span class="Bold"><br /></span> Once this command has been completed, the job number that VSI-FAX assigns is received. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121616">Q.</a></span> How do I send a test e-mail at Unix?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121617">A.</a></span> At the Unix level, log in as Root and <span class="Bold">ENTER</span> the following command:<br /><span class="Bold">vfx-n</span> &lt;email address&gt; <span class="Bold">/etc/motd</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1121618"> Once this command has been completed, the job number that VSI-FAX assigns is received.</a></div>
+      <div class="Body"><span class="Bold"><a name="1121619">Q.</a></span> How do I cancel a VSI-FAX job?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121620">A.</a></span> You can cancel the job from Via/VF in Prelude or at the Unix level. From the Unix level, log in as Root and <span class="Bold">ENTER</span> the following command:<br />vfxcancel &lt;job number&gt;</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121621">Q.</a></span> Where is VSI-FAX turned on in Prelude?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121622">A.</a></span> The VSI-FAX option is located in the  <span class="Bold">/COMPANY.MNT</span>&gt;<span class="Bold"> F6-Modules</span>&gt;<span class="Bold"> Fax Integration </span><span class="Bold">screen</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121623">Q.</a></span> Where do I setup email confirmations for users? </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121624">A.</a></span> All users should have an e-mail address in User Id Maintenance (/USER.ID.MNT). All confirmations for documents (except P/Os) go to the sender's e-mail address. P/O confirmations are sent to the buyer's e-mail address. Check <span class="Bold">Buyer Maintenance</span> (/BM) to view which users are assigned to which buyers. In addition, you can use fax control maintenance to setup blanket control of confirmations for each document type.  If an e-mail address exists in VSI-FAX options, confirmations are automatically sent to that address. If the system cannot find a valid e-mail address in any of these locations, the confirmation is sent to the e-mail address in the fax integration screen in <span class="Bold">Company Maintenance</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121625">Q.</a></span> Where are the VSI-FAX confirmation logs?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121626">A.</a></span> The confirmation logs are stored in <span class="TypedInText" style="font-size: 11.0pt;">/usr/vsifax3/spool/logs</span> under vmail.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121627">Q</a></span>. What do I do if VSI-FAX is running but not faxing?</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121628">A.</a></span> Stop and start the VSI-FAX scheduler.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121629">Q.</a></span> What if I stopped and started it and it still isn’t faxing.</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121630">A.</a></span> Check the disk space and phone line.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121631">Q.</a></span> What if I stopped and started it and the phone line is working.</div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121632">A. </a></span>Reset the VSI-FAX modem to confirm that it is or is not working correctly.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121633">Q.</a></span> What if I want to change the information on the cover page? </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121634">A.</a></span> The information on the coverage is generated from the information in <span class="Bold">Company Maintenance</span> (/COMPANY.MNT). Therefore, any changes made in Company Maintenance will be reflected on the cover page. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121635">Q.</a></span> What if we change our exchange server address? </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121636">A.</a></span> You can edit the IP address and server host name in the <span class="TypedInText" style="font-size: 11.0pt;">vsisrv.ini</span> file in the <span class="TypedInText" style="font-size: 11.0pt;">/usr/vsifax3/</span><span class="TypedInText" style="font-size: 11.0pt;">lib</span> directory. After this is completed, restart VSI-FAX.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1121637">Q.</a></span> Where do I get VSI-FAX documentation? What if I need to download the VSI-FAX software again? </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1121638">A.</a></span> VSI-FAX is supplied by Esker’s. You can get documentation, contact Tech Support, download patches and utilities as well as knowledge base articles.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.41.htm#1121588">VSI-Fax</a>:VSI-Fax FAQs</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

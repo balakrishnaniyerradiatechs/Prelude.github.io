@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>V17 New Features</title>
+    <link rel="StyleSheet" href="css/v17_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="ChapterName"><a name="998290">V17 New Features</a></div>
+      <div class="Head1"><a name="1008671">Accounts Payable</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998423&quot;);"><a name="998423">Vendor Invoice/Claim Reconciliation</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998423", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998423", false);</script>
+      <div class="Body"><a name="998445">You can split receivers/claims by partial line item quantities. Previously, the split receiver </a>option would only accommodate splitting receivers/claims based on the total quantity of the line itemin Qty-Inc on the Vendor Invoice Split Routine screen. However, to use this process correctly, criteria must be met. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998456">The quantity must be equal to or less than the quantity received of the line item. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998470">Serialized items- enter serials numbers for the split quantities. Delete the serial </a>numbers that do not apply.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998479">Lot items cannot be split by quantities; only the total quantity will be accepted.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998488">Freight Amount- split according to total freight % for all products on the receiver. If the </a>Freight Matrix is established, freight will be recalculated based on the matrix. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998497">Duty / Brokerage Amounts-split according to the total duty/brokerage % for </a>merchandise amount of each receiver.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="998506">If the Multiple P/O Sourcing flag is set to Y in Purchasing Parameters and a line item </a>has multiple linkages, the line is NOT allowed to be split by quantities- only the total quantity will be accepted.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1000522&quot;);"><a name="1000522">Recurring Vendor Invoice Posting</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1000522", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1000522", false);</script>
+      <div class="Body"><a name="998628">A </a><span class="Bold">New Invoice #</span> field was added to the Recurring Vendor Invoice Posting process. This option allows you to enter a new invoice number for this recurring invoice. Leave Invoice # blank to use the same invoice number.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998639&quot;);"><a name="998639">Check Processing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998639", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998639", false);</script>
+      <div class="Subhead"><a name="998645">Check Processing&gt; Payment Selection / Print&gt; F8-Print Checks&gt; Check Number</a><br />Manual Check Entry &gt; Check Number<br />Void Check Entry &gt; Check Number<br />Void Check Batch Entry &gt; Check Number</div>
+      <div class="Body"><span class="Bold"><a name="998675">Check Number</a></span> is now consistently 11 characters in all the Check Processing inquiries. </div>
+      <div class="Subhead"><a name="998685">Check Processing&gt; Payment Selection/Print&gt; Sort By Option?</a></div>
+      <div class="Body"><a name="998701">The Sort By Option? was updated with a new </a><span class="Bold">N Invoice Date</span> option. This new option sorts the payment selection by the <span class="Italics">Invoice Date</span>. Currently, the other two available sort sequence options are D to sort by Due Date and I to sort by Invoice Number. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998712&quot;);"><a name="998712">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998712", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998712", false);</script>
+      <div class="Subhead"><a name="998718">Inquiries&gt; Vendor Invoice Inquiry&gt; Check Number</a><br />Vendor Invoice History Inquiry &gt; Check Number<br />Accounts Payable Check Inquiry &gt; Check Number</div>
+      <div class="Body"><span class="Bold"><a name="998742">Check Number</a></span> is now consistently 11 characters in all the Check Processing inquiries. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998751&quot;);"><a name="998751">Vendor Discount Code Maintenance </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998751", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998751", false);</script>
+      <div class="Body"><a name="998771">This new maintenance allows you to create On and Off vendor discount codes. These </a>discount codes allow discount amounts and G/L accounts to offset the discounts. An On discount is a negotiated discount from the vendor that is reflected in the invoice amount. The discount is refelcted in Miscellaneous Amountwith Vendor Invoice Reconciliation Entry. Multiple G/L accounts can be offset for the discount. An Off discount is a negotiated discount from the vendor that is <span class="Bold">not</span> reflected in the invoice amount. The vendor receives two invoices (a credit invoice for the discount in addition to the original invoice). Once valid vendor discount codes were established, they are then used in the Vendor Maintenance screen as well as the Purchase Order Entry Header to apply the pre-determined amount. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998793&quot;);"><a name="998793">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998793", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998793", false);</script>
+      <div class="Subhead"><a name="998799">Reports&gt; Daily A/P Reports&gt; Check Register, Manual Check Register, Voided </a>Check Register</div>
+      <div class="Subhead"><a name="998839">Reports&gt; Monthly A/P Reports&gt; Check Register, Manual Check Resigister, Voided </a>Check Register, and Lost A/P Discounts Report</div>
+      <div class="Body"><span class="Bold"><a name="998875">Check Number</a></span> is now consistently 11 characters in all Check Processing inquiries. </div>
+      <div class="Subhead"><a name="998885">Reports&gt; Monthly A/P Reports&gt; Lost A/P Discounts Report</a></div>
+      <div class="Body"><a name="998902">A new </a><span class="Bold">Lost A/P Discounts Report</span> was added to the Monthly A/P Reports menu. This report was created to provide information pertaining to lost discounts due to the issuance of A/P checks after the discount date. This report displays Vendor #, Vendor Description, Invoice Number, Discount Date, Check Date, Check Number, and Discount Amounts regarding lost discounts. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd998912&quot;);"><a name="998912">Program Changes </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd998912", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd998912", false);</script>
+      <div class="Subhead"><a name="998919">Accounts Payable&gt; Check Processing&gt; Payment Selection/Print</a></div>
+      <div class="Body"><a name="998935">A program change was made for V15-17 regarding the Payment Selection/Print process. </a>In V14 and earlier the Payment Selection/Print option (APPS) did not include the GAIN/LOSS account in the G/L postings for the currency exchange rate if it had changed. Manual Check Entry was required to be performed to settle the currency exchange rate since this was not automatically performed during the APPS process. Since this modification was made, the Payment Selection/Print option will now include the GAIN/LOSS account in the G/L postings for the currency exchange rate if changed. Manual Check Entry is no longer required to be performed since the currency rate exchange settlement is performed as part of the APPS process. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">V17 New Features</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Debugging BASIC Programs</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1125525">Debugging BASIC Programs</a></div>
+      <div class="Body"><a name="1125526">There are command differences associated with the Pick debugger and the Unidata debugger. This </a>document will cover some of the basic differences in Pick and Unidata debugger commands. For more advanced debugging topics, please refer to the before mentioned help pages.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1125527&quot;);"><a name="1125527">Debug Statement Format</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1125527", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1125527", false);</script>
+      <div class="Body"><a name="1125528">The correct statement format to execute the debugger in both Pick and Unidata programs is as follows:</a></div>
+      <div class="Body"><a name="1125529">      IF USER.ID = “XXX” THEN DEBUG</a></div>
+      <div class="Body"><a name="1125530">When the DEBUG command is encountered, execution of the program is temporarily halted, and the </a>debugger is invoked. Another way to enter a debugger is to press the “break” key while a BASIC program is executing. Involuntary ways of entering a debugger occur if a runtime error is encountered, or if an “abort” statement is executed in the program.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1125531&quot;);"><a name="1125531">Debugger Commands</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1125531", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1125531", false);</script>
+      <div class="Body"><a name="1125532">The general layout of this section will be a Pick debugger command and its equivalent Unidata </a>command, followed by a description.</div>
+      <div class="Body"><a name="1125533">E{n m}</a></div>
+      <div class="Body"><a name="1125534">Specifies a certain number of lines, n, to execute before returning to the debugger. In the Unidata </a>debugger, m specifies the line at which to begin execution, defaulting to the current line.</div>
+      <div class="Body"><a name="1125535">V</a></div>
+      <div class="Body"><a name="1125536">Toggles on or off the display of the current source line when stepping through the program. When the </a>C function is on, the line is displayed AFTER it has been executed. With the V function in Unidata, the line is displayed BEFORE it has been executed. </div>
+      <div class="Body"><a name="1125537">This command steps through the program by the number of lines specified by the E command. For </a>example, if E1 is specified previously, &lt;cntl&gt;+J will execute 1 line of code (and display it if the C function has been specified).  &lt;cntl&gt;+J with E2 and C specified will execute and display 2 lines of code, and so on. </div>
+      <div class="Body"><a name="1125538">With Unidata, the E command not only specifies the number of lines to execute, it actually executes the </a>lines (and displays them if the V command has been invoked).</div>
+      <div class="Body"><a name="1125539">G{line number}</a></div>
+      <div class="Body"><a name="1125540">Exits the debugger and restarts program execution with the line specified and continues until the end of </a>the program. The default beginning is the current line. You cannot specify the number of lines to execute.</div>
+      <div class="Body"><a name="1125541">\{variable}</a></div>
+      <div class="Body"><a name="1125542">Displays the value of any variable within the runtime code being executed. In both cases the operator </a>is given the opportunity to change the requested value. If a &lt;return&gt; is entered at the "=" prompt, the symbol remains unchanged. Otherwise, any value entered is placed into the variable. </div>
+      <div class="Body"><a name="1125543">$</a></div>
+      <div class="Body"><a name="1125544">Displays the name of the program being debugged, and the current line number.</a></div>
+      <div class="Body"><a name="1125545">H</a></div>
+      <div class="Body"><a name="1125546">Displays a brief alphabetic listing of the available debugger commands. </a></div>
+      <div class="Body"><a name="1125547">END</a></div>
+      <div class="Body"><a name="1125548">Terminates the run-time portion of a BASIC program, exits the debugger, and returns control to TCL. </a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.1.htm#1125525">UniData</a>:Debugging BASIC Programs</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

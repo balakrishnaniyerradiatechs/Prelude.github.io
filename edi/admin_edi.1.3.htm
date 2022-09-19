@@ -1,0 +1,1495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Flat File Processing</title>
+    <link rel="StyleSheet" href="css/admin_edi.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1065719">Flat File Processing</a></div>
+      <div class="Body"><a name="1065720">The flat file module was created to provide a generic interface between Prelude and external data </a>sources. The interface provides the capability to bundle up data within the database and create a flat file from this data. Examples are outbound vendor purchase orders or outbound customer invoices. Likewise, the interface can take an incoming flat file and subsequently turn this file into a document within Prelude. Examples are incoming purchase orders converted into sales orders or incoming quote requests converted into quotes.</div>
+      <div class="Body"><a name="1065721">The flat files may be of fixed length or delimited and are nothing more than text files. They are currently </a>transferred using the FTP data transfer protocol. Documents may be transmitted directly to or received directly from a trading partner. However, data may also stop along the way for additional processing. Examples of this are third party translator software packages, alternate service providers or the rapidly growing Internet market places. It is irrelevant where the data comes from or where the data is going to as long as it can be mapped in a consistent meaningful manner.</div>
+      <div class="Body"><a name="1065722">The basic building blocks of the flat file module are trading partners (customer or vendor), flat file </a>mapping definitions, Prelude documents that are created from inbound flat files, and the flat files that are created from Prelude data. In simplistic terms, for incoming documents, the trading partner and transaction are determined from the flat file record. From this, the map definition is determined and the record is then processed through the interpretive engine. The engine takes the raw flat file data and inserts pieces of this data, based upon the mapping, into an Prelude data record. At this point, the Prelude data record may be the final destination for the flat file information OR further processing may need to take place for ultimate document conversion. </div>
+      <div class="Body"><a name="1065723">The exact interpretive engine is used for outbound documents, but the process is basically reversed. </a>The partner and transaction are determined from the Prelude data. Subsequently, the map definition is determined and the Prelude data is then mapped to a flat file record where it will be transferred externally.</div>
+      <div class="Body"><a name="1065724">Although the main purpose of the module is to interact with generic flat file data in terms of the mapping </a>and other tools that are used, there are many aspects of the module that deal specifically with the specialized world of EDI (Electronic Data Interchange). All of the tools contained within the module will be discussed in this document. Where necessary, the differences between generic flat file data and EDI data will be outlined.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065725&quot;);"><a name="1065725">Partner Maintenance (/FFPM)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065725", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065725", false);</script>
+      <div class="Body"><a name="1065726">A partner is any customer or vendor in which flat file data is sent or received. It is possible to have </a>relationships where a partner is both a customer and a vendor. The partner record is created to define the map definitions and business rules for each transaction type, to define the data format of the flat files generated, and to register the Prelude customer and vendor numbers associated with the partner. Likewise, all customer ship-to numbers and vendor ship-from numbers are input for documents that are created which allow for the selection of a shipping location.</div>
+      <div class="Path"><a name="1065730">Path: E-Commerce Flat Files Maintenance Partner Maintenance<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.1.jpg" width="398" height="188" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065731">Partner Number:</a></span> enter the trading partner name or number. This field may be up to 30 alphanumeric characters. If this is an EDI partner, this would be the ‘Host ID’ of that partner. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065732">Partner Description: </a></span>enter the free-form description for the partner (up to 30 alphanumeric characters).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065733">File Method: </a></span>enter the file method. Valid options here are ‘F’lat file or ‘E’DI. If the EDI file method is selected, we will be sending and/or receiving data to/from this partner in an EDI format that will need to be parsed according to the interpreter engine. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065734">Transfer Type:</a></span> the transfer type is the means by which the data for this partner will be sent and received. The type, described in detail below, contains all of the pertinent data communication information necessary for the transmittal of the flat file data.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065735">Transaction Types:</a></span> enter all of the transactions that will be conducted with this partner where the transmittal of flat file data will occur. Examples include inbound purchase orders and outbound customer invoices.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065736">File Map Definition:</a></span> enter the flat file map definition that corresponds with each transaction type. A map must be entered for each transaction type. The map will be instrumental in interpreting the incoming or outbound flat file data.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065737">Rules (‘R’):</a></span> If business rules exist for the partner/transaction combination, an asterisk (*) appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065738">Status (‘S’):</a></span> enter the current status for this partner/transaction combination. The status may be set to ‘A’ctive or ‘I’nactive. This is used for outbound transactions. If the status is set to an ‘S’, batch files in Prelude are updated and used in the transmission of the outgoing flat file data. This status is used when you are live with a transaction set. An ‘I’ status is used mostly during the initial set-up and testing of transactions. It’s use enables the majority of maintenance to be done for a partner/transaction combination without actually generating batch file information for the outbound data. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065739">For example, when entering a purchase order in Prelude for a flat file partner set up to transmit </a>outbound purchase orders, a dialog box option will be given at the end of purchase order entry to allow the operator to create a flat file from that purchase order. In essence, this is creating a batch file, or ‘tickler’ file, record to later be selected in the flat file data transmission. </div>
+      <div class="Body"><a name="1065740">This will only appear as an option if the status is active. If the partner has an inactive status for outbound </a>purchase orders, this option will not be present and the flat file data will never be transmitted. There are outbound tickler file records generated where no operator intervention is required. For example, outbound invoice tickler file records are created during invoice processing. The records are generated behind the scenes. Regardless of how the tickler file records are written out, the status flag evaluation will always be performed first.</div>
+      <div class="Body"><span class="Bold"><a name="1065741">Testing (‘T’):</a></span> this flag is used mainly for EDI formatted flat file records. It is used for outbound transactions. The flag allows an EDI record to be generated with a ‘testing’ status in the ‘envelope’ of the data. In the EDI world, many trading partners will require all documents that are received in a testing mode to have the test flag set. Currently, this field is not used with non-EDI flat file data.</div>
+      <div class="Body"><span class="Bold"><a name="1065742">F5-EDI</a></span> <span class="Bold">Info</span> is used only if the partner has data to send and/or receive using EDI standards. Most of the prompts deal with outbound data that is sent and only serve as overrides for data fields within the EDI envelope created for outbound documents. The technical terms here are EDI rather than Prelude specific.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.2.jpg" width="356" height="177" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065746">Host ID:</a></span> this is the EDI identification number assigned to this trading partner. If nothing is entered here, the partner number will be the host id that is used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065747">Sub element Delimiter:</a></span> this field is used in the outbound EDI envelope. CHAR(62) is used as a default.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065748">Segment Terminator:</a></span> this field is used in the outbound EDI envelope. CHAR(126) is used as a default.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065749">Element Separator:</a></span> this field is used in the outbound EDI envelope. CHAR(42) is used as a default.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065750">F/A Required:</a></span> enter ‘Yes’ if this trading partner requires an EDI functional acknowledgement to be sent back for all incoming documents received from the partner.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065751">Trans Level Ack:</a></span> enter ‘Yes’ if this partner requires a transaction level acknowledgement for incoming documents received rather than a higher level of group acknowledgement.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065752">Out F/A Required:</a></span> enter ‘Yes’ if outbound documents sent to this trading partner will require a receipt of functional acknowledgements from that partner. If acknowledgements are to be sent back, a cross-reference file is updated to allow for reporting on the documents sent and whether or not these documents have been acknowledged by the trading partner. This acknowledgement report will be discussed in a later section of this documentation.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065753">ISA Overrides:</a></span> the ISA segment is a header level identification segment within an EDI document. There are several elements that make up this segment. All of these individual elements are defaulted when an EDI document is built. However, there are instances where overrides are necessary. Those overrides are input here per trading partner.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065754">GS Overrides:</a></span> the GS segment is a header level identification segment within an EDI document. There are several elements that make up this segment. All of these individual elements are defaulted when an EDI document is built. However, there are instances where overrides are necessary. Those overrides are input here per trading partner.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065755">Control Sequence Numbers:</a></span> for EDI documents, control numbers exist in different segments of the data. These numbers normally will default to sequential numbers starting at 1 for each number and increment from there per EDI envelope and transaction. However, circumstances may exist where the control numbers need to be overridden for a trading partner. If that is the case, this section allows for it.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065756&quot;);"><a name="1065756">Group Maintenance (/FFGM)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065756", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065756", false);</script>
+      <div class="Body"><a name="1065757">Flat file groups define the data segments that are used in the flat file raw data and map definitions. The </a>map definitions will be further explained when map definitions are illustrated. Data segments are basically lines of data in the flat file record. Groups can be thought of as titles of these data segments. When the flat file record is reviewed during the data conversion process, a group is identified from each raw data record line, and matched up with the identical group in the map definition. When the correct map definition line is discovered, the data translation process proceeds from there.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.3.jpg" width="292" height="111" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1065761">Path: E-Commerce &gt; Flat Files &gt; Maintenance Group Maintenance</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1065762"> </a><span class="Bold">Flat File Group:</span> the flat file group may be a 1 to 20 character alphanumeric definition.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065763">Description:</a></span> enter a free form description of up to 30 characters may be entered for the flat file group.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065764&quot;);"><a name="1065764">Definition Maintenance (/FFDM)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065764", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065764", false);</script>
+      <div class="Body"><a name="1065765">The flat file map definition maintenance is the main ingredient of the flat file module. A map definition </a>will perform one of two functionalities. It will take incoming raw flat file data and interpret that data into an Prelude data record for further processing. It can also convert data in an Prelude record into a flat file to be transmitted to an external source. The common denominator in the flat file processing is the flat file itself. For our purposes, a flat file can be simply defined as a line or lines of text in a data record. </div>
+      <div class="Path"><a name="1065766">Path: E-Commerce Flat Files Maintenance Definition Maintenance</a></div>
+      <div class="Body"><a name="1065767">The file can be of fixed length or delimited. In a fixed length record, the length of each data element is </a>precisely defined. For example, a customer purchase order may be defined as being 20 characters. It should be no more and no less in terms of the positions the value takes up in the data. The actual number may be less than the 20 characters, but in that case, spaces must be supplied for the remaining number of characters less than 20. If the value is more than 20 characters, it gets truncated when the data is built or interpreted. </div>
+      <div class="Body"><a name="1065768">In contrast, a delimited record allows for any element of data to be any length. The only requirement in </a>this type of file is that a delimiter must separate the data elements. The delimiter can be any character, but only special characters are recommended. It is never a good idea to have a character separating data elements where possibilities exist that the character may exist in the normal data flow. The record below illustrates an example of delimited data. This type of record is the one that will be used in examples throughout this documentation. This example is one of an incoming purchase order. It may seem cryptic at first, but will eventually begin to make sense in terms of the flat file interpretation.</div>
+      <div class="Body"><a name="1065769">The map definition is the same for both inbound and outbound flat file records. The subtle differences </a>are explained in the upcoming sections.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.4.jpg" width="341" height="195" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065773">Map Name</a></span>: enter the name of this flat file map definition (up to 30 alphanumeric characters).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065774">Description:</a></span> enter the 1 to 30-character description of this map.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065775">Header File:</a></span> this is the main header file used for both inbound and outbound documents. For outbound documents, this is the header of a Prelude data file. For example, an outbound purchase order sent to a vendor would use the P/O header file. For an incoming purchase order (as shown in the illustration above), the file that is used for ultimate sales order conversion is the CONVERT.DATA file. However, this file is used exclusively in the conversion of incoming flat file records into Prelude documents. Examples include the incoming vendor invoice, the incoming customer quote request, the incoming remittance advice, and so on. The header file is used to interpret data not associated with product or any other type of detail. An example would be a customer purchase order found at the Prelude sales order header level.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065776">Detail File:</a></span> this is the detail level file used in the flat file data interpretation. An outbound document example would be the P/O.LINE file for outbound vendor purchase orders. For an incoming purchase order, the CONVERT.DATA.LINE file is used.	The detail file extracts information at the product detail level. Examples of this include product numbers or quantity ordered amounts.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065777">Detail Key Attribute:</a></span> this is the data attribute in the header file where the detail level file line keys are stored. For most every Prelude document that exists, a header file and detail file are used. In each case, there is a section in the header file that references the keys for each detail record associated with that header record. For example, a vendor purchase order P/O header record stores P/O detail line keys in attribute 118. Incoming documents work identically. Using the example of our incoming purchase order example, in which the CONVERT.DATA file is used, the attribute for the CONVERT.DATA.LINE keys is 2. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065778">Mode:</a></span> enter the type of document this represents in terms of inbound or outbound data. Choose ‘O’ or ‘I’.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065779">File Type:</a></span> the valid file types are ‘F’ixed length or ‘D’elimited as described above.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065780">Delimiter:</a></span> this option is only used for delimited file types. The value input here is the ASCII decimal character that will be used to separate data elements in each line of text in the flat file data record. For instance, an asterisk (*) is a popular choice for a data delimiter. The ASCII equivalent for an asterisk is 42. Therefore, the value 42 would be entered in this field</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065781">Group #Characters:</a></span> this option is only used for fixed length file types. It defines the number of characters to be used for each data group. This aids in the flat file interpretation for fixed length records. For example, data groups of ‘HDR’ or ‘DTL’ may be used in a flat file record. In this case, enter 3 for the group number of characters. Please note that in a fixed length file, each group must contain the same number of characters.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065782">Group:</a></span> enter the flat file groups that are used to either build or interpret inbound or outbound flat file data records. Data is interpreted in a top to bottom format and includes header or detail level segments.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065783">Description:</a></span> For each group input, the associated group description will be displayed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065784">H/D:</a></span> enter an ‘H’ if the group input is used with header level data or a ‘D’ if the group is associated with detail level data. The header/detail characterizations should correspond to the Prelude data records they will build. Header and detail sections must be grouped together.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065785">Rep:</a></span> this column is used to signify a data group that is repeating. Valid answers are ‘Y’es and ‘N’o. Repeating lines of data, otherwise known as looping data, might be called on for items such as shipping instructions or general notes. Take note that lines associated with product detail will not be marked as repeating even though product detail lines may repeat in the flat file or Prelude data. Detail level flat file data inherently repeats and is considered as such in the flat file driver engine programs. Used only for inbound documents.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065786">C/D:</a></span> a data segment may be defined as ‘C’ontrolling or ‘D’ependent. This is used for instances where segments of data (dependent segments) follow one master segment of data (controlling segment). For example, in our flat file raw data illustration shown above, there is a group of data segments used to transmit address information. There is a bill-to address and a ship-to address. When this incoming customer purchase order is converted into an Prelude sales order, the ship-to address information is imperative, but the billing address, already stored at the customer master level, is typically ignored. The address type is defined in the ‘N1’ data segment. This is the controlling data segment. A ‘BT’ or ‘ST’ on this line of data signifies the address type. In the interpretative engine, the controlling data segment, as well as all of its dependent segments, is selected. If the controlling data group represents the bit of information we are interested in (discussed in more detail when ‘subgroups’ are described), we translate the controlling and dependent data. However, we discard all controlling and dependent data segments that are not necessary for the complete data translation. In our raw data example, the N1, N3, and N4 bill-to address lines are ignored. The N1, N3 and N4 ship-to lines may be used. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065787">Also, be aware of the fact that a controlling data segment may exist without any dependent fields. In the </a>raw data example, there are two ‘PER’ data groups. These segments are used to transmit customer contact information. One contact is for general information while the other is for scheduling questions. The scheduling contact may be inserted into the Prelude sales order created. The general information contact will be ignored. Neither of these groups have dependent data segments; they only exist as controlling fields. The concept, however, is the same as the address example above. NOTE: The controlling/dependent field is only used for inbound documents.</div>
+      <div class="Body"><a name="1065791">F5-Add Info allows for additional flags to be setup for definitions.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.5.jpg" width="259" height="113" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065792">Error Checking:</a></span> Error checking is used for both inbound and outbound documents. If error checking is used, normal flat file processing will NOT proceed if any error is found within the data. Instead, reporting will need to be performed to pinpoint and eventually correct the error. Individual data elements may be checked for errors while several validation options are available. These options will be described at length later in the documentation.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065793">Report Only:</a></span> this option allows an outbound or inbound record to forego any document processing. Instead, a simple, but detailed, report of the document can be viewed or printed. Any data segment that can be mapped can also be displayed on the report. Reporting options will be described later.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065794">Keep History:</a></span> this option is used for inbound and outbound records. Valid answers are yes and no. If this option is used, historical reporting may be performed on flat file data regardless of the age of the data record. This option is also used for turnaround document purposes. A turnaround document is any outbound document that originally began as an incoming flat file data record. An example would include an outbound customer invoice from an Prelude sales order that originated as an incoming customer purchase order. The outbound flat file invoice record may need to reference some piece of information from the original customer purchase order. A supplier number provides a good illustration. The supplier number comes in on the original purchase order, but must be transmitted on the associated invoice. The supplier number may be easily retrieved from the original flat file document. This would be used mainly for items that are not typically stored on the Prelude document that is created from the beginning flat file data.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065795">Hist Key Attr</a></span>: the historical key attribute is used only for outbound map definitions. It is used with turnaround document items previously described. This is the data attribute in the map header file where the original flat file raw data key exists. It allows the interpretive driver program to read in the original flat file data record. An Prelude sales order can be created from an original incoming flat file purchase order record. While the sales order is created, the key to the original record is stored within the sales order. In this case, this key is stored in attribute 113 of the ORDER file.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065796">Process/Hold</a></span>: this option is used strictly for certain incoming documents. If yes is selected here, the document is processed within Prelude, but is placed in an administrative hold queue for further review. For an incoming customer purchase order, a sales order is created, but placed in the administrative order hold queue.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065797">F6-Group Detail</a></span> is where the mapping takes place for both inbound and outbound documents. In essence, the data records are mapped from top to bottom. Each screen of group detail defines one line of text in the flat file data record. Each line in the group detail screen defines one element of data in a complete data line. <img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.6.jpg" width="398" height="197" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065801">The beginning data element is always the ‘identification tag’ element. This is the data group name and </a>is necessary for further interpretation. The data translation proceeds from there. For illustration purposes, the raw flat file data record shown previously in the document will be repeated below, along with the group detail screen.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065802">Description</a></span>: enter a detailed description of the data element to be mapped. This is done strictly for internal documentation purposes. The description has no other bearing on the incoming or outbound data.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065803">Error Checking</a></span>: this column allows for error checking options for inbound and outbound data. Error checking will only be performed if the map definition is designated for it. As mentioned earlier, if any errors are returned in the data, the data will not proceed to further processing and must first be reviewed through a reporting mechanism. The following options are currently available. Select ‘C’ for Customer Validation for a valid Prelude customer number. Select ‘E’ for Existence Of Data for a data value check only. An error is returned only if the data element is empty. Select ‘N’ for No Error Checking. This flag setting is the default. No validation is performed on the data. Select ‘P’ for Product Number Validation to check for a valid Prelude product number. Select ‘S’ for Store Number to check for a valid ship-to store number located in the flat file partner record. Select ‘U’ for User Validation to allow for user error checking. Select ‘V’ for Vendor Validation to check for a valid Prelude vendor number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065804">Reporting:</a></span> the valid options for this flag are ‘Yes’, ‘No’, and ‘Key’. If ‘’Yes’ is selected, the raw data that is translated will be included in the flat file reports provided in the system. If ‘KEY’ is selected, this option will print the field on any report, but will also allow for selecting records that contain this value.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065805">Data Type:</a></span> the data type option allows for minor processing to be performed on the incoming or outbound data. Most data types allow for some form of formatting. However, data types can be used for other purposes, which will be described below.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065806">The following data types are available in the system:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065807">2</a></span> – This is a date formatting data type. It translates any date field into the month, day, and the last two digits of the year. For example, October 18, 2000 would be formatted to ‘101800’. Currently, this format is not widely used due to Y2K issues.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065808">4</a></span> – This is a date formatting data type. It translates any date field into the month, day, and all four digits of the year. For example, October 18, 2000 would be formatted to ‘10182000’. Currently, this is the preferred format because it is Y2K compliant.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065809">C (Cost)</a></span> – This type will convert any monetary amount that does not include decimals into an amount that contains decimals. The decimal position will coincide with the system cost decimal position. This field is used to transmit cost information and exists only for outbound documents. For example, product ABC has a cost of $2.750. In the system set up, three decimal positions are used for item costing. When this value is stored internally in Prelude, the value is 2750. When the cost is translated into an outbound flat file record, the value used is 2.750.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065810">M (Monetary)</a></span> – This data type is used for price extensions and document totals. Examples include purchase order or invoice totals. It is used for outbound documents only. Any value transmitted with this data type will contain a decimal and two positions after the decimal place. So an invoice total of $100.50, stored internally as 10050, will be transmitted on the flat file record as 100.50.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065811">N (Product Number)</a></span> – This data type is used only for inbound documents at the product detail level. It is used where a flat file detail line might contain multiple values for a product number. There are instances when a trading partner will send several values that represent a product number. The partner’s number for the product might be sent. The UPC code for the product may be used as well. In some rare cases, the partner will actually send their partner’s product number. When the partner sends products, a possibility exists that none, one or many of the product numbers will match the corresponding product in the Prelude product database. When this happens, the map definition must be set up in such a way that each possible occurrence of a product number is mapped to the Prelude detail file created. When the ‘N’ data type is used for a mapping occurrence, the system knows that multiple product number representations are possible and tries to find a correct match, rather than just matching the first or last occurrence.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065812">P (Price) </a></span>– The price data type works like the ‘C’ost data type with the exception of the number of decimal positions used. With this type, the system price decimal set-up is used to convert the outbound data. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065813">Q (Quantity) </a></span>– The quantity data type is used for inbound documents only. Its most common use is a product detail line ordered quantity or invoiced quantity. It is required only when the incoming quantity contains a decimal point. This field removes any trailing zeroes after the decimal position. If non-zero numbers trail the decimal, they are left as is. For example, if a quantity of 2.00 is translated, it is then converted into Prelude as 2. Conversely, if a quantity of 6.50 is received, the value 6.5 is accepted.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065814">S (Ship-To/Ship-From Identifier) </a></span>–This data type is used with a ship-to or ship-from number from a customer or vendor. Essentially, this allows us to identify the corresponding Prelude ship-to or ship-from number. In the previous raw data example, notice the number ‘0142’ at the end of the second ‘N1’ data segment line. This is the store number for the College Station, TX branch of the ABC Supply Company. This number may or may not correspond to the ship-to number set up in the Prelude customer ship-to database for this branch and customer. If the numbers do match, the data maps to the ship-to position in the Prelude conversion data file used. If the numbers do not match, the ‘S’ data type is used and the system will search the partner maintenance record for this ship-to value. When the value is located in the record, the system will extract the correct Prelude ship-to value. This technique is also used if the trading partner uses more than one customer or vendor number in the database. The logic works the same in that a ship-to or ship-from value is retrieved. However, the corresponding customer or vendor number is retrieved as well. In terms of how the ship-to/ship-from is mapped within the map definition, only the ship-to position in the Prelude conversion data file requires set-up. The customer number is obtained and placed in the proper attribute dependent upon the transaction type.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065815">T (Table) </a></span>– This data type is used with a cross-reference table previously described in the documentation. When a ‘T’ is input, a table number is prompted and validated.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065816">U Customer Number </a></span>– This data type is used when customers are established for the flat file.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065817">Data Source/Destination: </a></span>this column is the most important in the flat file map definition. It will do one of two things. For inbound documents, it communicates to the system the location placement of the value contained in the raw data. In other words, it indicates what Prelude data file attribute or holding position to place the data. For outbound documents, it instructs the system to retrieve data from an Prelude data file attribute or holding position and to build it into an outbound flat file record. The mapping functions the same regardless of the document mode. There are several different methods to map the flat file data with Prelude data. Each one of these methods will be discussed in detail below. Please refer back to the group detail screen previously illustrated for examples, as well as the CONVERT.DATA file layouts given below. For background purposes, the CONVERT.DATA file, as mentioned earlier, is used in most every instance of converting raw data into an Prelude document. However, for each transaction, the file is layed out a little differently. When looking at the file layouts for each transaction, the format of the layout key is CONVERT.DATA_XXX, where XXX is the type of transaction. For purposes here, CONVERT.DATA_ORD will be used. The detail line key works much the same way, except for the ‘.LINE’ that is placed in the key. For the conversion of sales orders, the key is CONVERT.DATA.LINE_ORD.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065818">The following data sources are available in the system:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065819">Literal </a></span>– This is any segment of ‘hard coded’ data not derived from any source. It is surrounded by quote marks and is always used in the identification tag segment. In our previous example, “BEG” is shown. The identification tag segment allows the system to easily identify the text line in the flat file record. This may also be used in outbound documents. For example, a customer requires a vendor supplier number on every invoice they receive and the supplier number never changes. We can place that supplier number, surrounded by quotes, in the map definition and embed it in the flat file data record that goes out with each customer invoice sent. The data that is transmitted originates in the map definition and comes from no other Prelude data source.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065820">Attribute</a></span> – For outbound documents, this is the Prelude data attribute from which the flat file value will derive. For incoming documents, this is the Prelude data attribute for which the flat file raw data will be placed for further processing. The attribute is surrounded by brackets. If the data is stored in a multi-value in the attribute, the multi-value number is placed after the attribute number separated by a decimal. In our previous example, please refer to the order date data element. The destination is &lt;5.1&gt;. This will place the incoming value for the order date into attribute 5 multi-valued 1 of the CONVERT.DATA header file. Referring to the CONVERT.DATA_ORD layouts above, notice that the attribute description for 5.1 is the order date. An outbound document will work in a similar fashion. For instance, in transmitting an outbound customer invoice when the invoice number is required, one method to map this invoice number is to use an attribute from the ORDER.HISTORY file. Review the layouts for the ORDER/ORDER.HISTORY file and note that attribute 63 is reserved for the invoice number. So, the data destination would be &lt;63&gt;.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065821">Dictionary </a></span>– This may be used for inbound and outbound documents and can replace the use of an attribute as described above. In the order date example, &lt;5.1&gt; may be replaced with a dictionary called ORD.DATE. As noted for the customer purchase order field, a dictionary name of CUST.PO.NUM was used. In terms of data extraction or placement, this works identically to the attribute concept. It simply provides a method of mapping the data using English-like dictionary names, rather than cryptic attribute and multi-value positions. ‘F3’ intuitive help is provided as well to provide a quick and efficient method of locating header and detail file dictionary names.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065822">Program </a></span>– This is a basic program call used to manipulate incoming raw data or outbound Prelude file data. The program can exist in any directory file within Prelude, but must be a cataloged program. The format used is B:&lt;program name&gt;. So in running a program called CUST.PO.NUM.CHECK for customer purchase order validation, type in B:CUST.PO.NUM.CHECK as the data destination program. Also, note here that multiple data sources for inbound documents can be used. The sources are simply separated by a semi-colon. In the case of this customer p/o, run a validation program and then insert the p/o number into the Prelude data file. The complete data source would be B:CUST.PO.NUM.CHECK;CUST.PO.NUM. A basic program is being called and data is inserted into the field position CUST.PO.NUM.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065823">Process </a></span><span class="Bold">–</span> This works much like the ‘program’ option above with one major difference. A standard System Builder process is being called rather than a basic program. The format is P:&lt;process name&gt;.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065824">Work Item </a></span>– On some occasions, a need may arise to temporarily store a data element to be used for future processing within the flat file map definition. For this purpose, a work item, or variable, is used. The format to store the data element is WORK&lt;27.1&gt;. This definition would store the current data element into the 27th attribute and first multi-value of the WORK variable. This is a common System Builder variable used in many processes within Prelude. Because of its commonality and extensive use, it is recommended that attribute 27 be the only attribute used for this purpose. If multiple work items are needed throughout the map definition, multi-value positioning can be easily used. With the data being stored in a work position, it can later be accessed within a System Builder process, basic program, etc.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065825">User </a></span>– This is used exclusively for inbound documents. It applies when incoming raw data is to be stored in some type of user attribute in the eventual Prelude document file. For example, when receiving some type of reference number in an originating customer purchase order document, there is not a standard position in the Prelude ORDER file for this number, but the number is needed for future processing involved with the sales order it will create. So, assuming this number will be stored in the ORDER file in attribute 211 (an attribute reserved for user fields), the format would be U:211. The ‘U’ signals a user field and the ‘211’ indicates the file attribute where the raw data will eventually be stored.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065826">F6-Group Detail F5-Ext Data Src </a></span>allows the user to view the entire data source/destination field if it exceeds the maximum character display on the screen. This occurs if multiple data sources are being used. It does nothing but display this field in its entirety.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065827"> F6-Group Detail F6-Hist Ref </a></span>is only used for outbound documents and allows the user to reference original raw flat file data used in an Prelude document conversion. It comprises the ‘turnaround document’ functionality mentioned earlier. For example, in our raw data sample, the third line of text is the ‘TAX’ data segment. The first data element after the group description is the customer’s tax identifier number. When the outbound customer invoice for this original sales order is transmitted to the customer, this tax identifier number is sent back in an ‘REF’ data segment. The data segment line is built in the following illustration on the next page.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.7.jpg" width="297" height="115" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065831">Historical Original Tag:</a></span> this entry describes the flat file group on the original raw data record referenced. In this example, the raw data record is the original customer purchase order received. The original flat file group is the ‘TAX’ group. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065832">Historical Delimiter:</a></span> the historical delimiter is the original ASCII character delimiter for the raw data record. In the above example, this is a character 42 or asterisk (*). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065833">Historical Data Position:</a></span> this is the spot in the original flat file data segment where the historical data resides. In this example, the tax identifier number is in the second spot in the data that is separated with an asterisk.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1065834">Note:</a></span> When a historical reference entry is made, the data source becomes ** Historical **. This cannot be overridden. If the data is typed over, it reverts back to this description when the line is returned. </div>
+      <div class="Body"><a name="1065835">Also, prompting for historical information on the detail line level works much the same way as header </a>historical information except for one main addition. For line items, knowledge of the location of the original data, as well as knowledge of how to locate the detail line in question is required. In this case, we provide additional prompting for a reference point that distinguishes a product detail line. The best example of this is a line number.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065836">F6-Group Detail F7-Proc After </a></span>is used for any type of data manipulation that will take place after each text line of data has been interpreted or built. It is used for both outbound and inbound documents.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.8.jpg" width="398" height="77" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065840">A System Builder process name is input in this field if a process will be used. It is commonly used for </a>user processing that must take place and can be viewed as a user exit routine within a map definition.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065841">F6-Group Detail F8-Sub Group </a></span>is used with controlling flat file segments that repeat. Pertinent data may exist in one of the actual segments, but other segments may contain data that serves no purpose in the translation. In our raw data example, the ‘N1’ segment repeats. One of the segments is used for bill-to address information while one is used for ship-to address information. Since the only information needed for conversion is the ship-to address information, the data in the second segment should be evaluated, while excluding the data in the first segment. to do this, the following sub group information is input.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.9.jpg" width="186" height="100" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065845">Sub Group Data Set:</a></span> the sub group data set is the data value the interpretative engine searches for to decide on whether the data segment and its controlling fields, if any, should be evaluated. In this case, the value ‘ST’ in the data segment is the element the system is keying. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065846">Sub Group Data Position:</a></span> for this field, the delimited position in the data segment where the sub group data set exists is entered. In this example, the data set resides in the second position of the line of text.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065847">F7-EDI Info</a></span> applies only to outbound documents built with an EDI flavor and are concerned with EDI versions. These values are overrides to default values that exist in the transfer type maintenance records.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.10.jpg" width="163" height="110" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065851">GS Version:</a></span> the GS version number is to all EDI transactions. Standards committees release EDI standards for each transaction type on an ongoing basis. The version number simply defines the standards that are being used in a document transmission.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065852">ISA Version:</a></span> the ISA version provides another means of identifying the EDI data.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065856">Action Copy allows an existing map definition to be copied to a new definition. <img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.11.jpg" width="342" height="127" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1065857">All information on the new map is identical to the original except the map description.</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065858&quot;);"><a name="1065858">XREF Table Maintenance (/FFXM)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065858", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065858", false);</script>
+      <div class="Body"><a name="1065859">The flat file cross reference table was created to provide a generic way of translating trading partner </a>‘codes’ to Prelude codes. A table may be defined in the flat file map definitions, discussed later, and can be used in the data translation of inbound or outbound documents. A code is simply a data value that defines segments of information. </div>
+      <div class="Path"><a name="1065860">Path: E-Commerce Flat Files Maintenance Xref Table Maintenance</a></div>
+      <div class="Body"><a name="1065861">For example, a ship via code is one that is used extensively in Prelude. A sales order may be shipped </a>a variety of ways by a variety of carriers. to define the shipping choices, a ship via code is used. For instance, UPS allows for ground shipping or other faster methods such as blue or red. The codes that could be used in Prelude might be UG (UPS ground), UB (UPS blue), or UR (UPS red). However, a flat file trading partner might use a completely different code set. UPS ground may be something as cryptic as 01. If a customer sends you an order to be shipped UPS red and their ship via code is 02, how does Prelude know how to interpret this to be your ship via code UR? This cross-reference table may be used for such a purpose. </div>
+      <div class="Body"><a name="1065865">The following illustration shows a ship via cross-reference table for ship via codes from ABC Supply </a>Company.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.12.jpg" width="261" height="190" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065866">Table Number:</a></span> enter the table name or number. This field may contain up to six alphanumeric characters</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065867">Description: </a></span>enter the free-form description for the table (up to 30 alphanumeric characters).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065868">Type:</a></span> the flat file xref table may be used for any set of codes between trading partners. Any data that can be defined using a code may be matched up. However, there are several types of code cross-references that have been defined in the system. These types are A/P terms, A/R terms, freight terms, and ship via codes. If one of these types is selected, it is validated. If this table does not apply to any codes, use Manual.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065869">Default Value: </a></span>this value is used as a ‘last resort’ value if a raw data code coming in cannot be matched up to an existing Prelude system code entered in the table. For example, a customer may have a default method of having orders shipped to them. The Prelude code for the default shipping method may be entered as the default in this table. The only instance where a separate code would be used would be where a value is one other than the default sent in, and can be cross referenced. This is not a mandatory field, but is recommended as a ‘stand by’ value, especially in situations where the partner might be sending brand new codes in the raw data. There may be a time lag in getting these new values input into the table.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065870">Flat File Value:</a></span> this is the raw flat file data code sent in from the trading partner. This is the value that will be matched up with the existing Prelude system code.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065871">System Code:</a></span> this value may be validated, depending upon the table type being used, and is used as the translated value for a raw data code sent in from a trading partner. These are values stored in Prelude.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065872&quot;);"><a name="1065872">Transfer Type Maintenance (/FFTTM)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065872", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065872", false);</script>
+      <div class="Body"><a name="1065873">A transfer type is defined as an external data source or repository location. The transfer type is an entity </a>where data can be retrieved or sent. The location can exist in many different places. It can exist on the same host machine as Prelude, another machine located on the same network as Prelude, a p/c package hosted on an NT server, or even an EDI value added network. The point being that the location can reside anywhere that data can be easily sent or received. Currently, the flat file module supports the FTP protocol of data transfer. During each flat file send/receive session, an FTP script is built and executed based upon the parameters described below.</div>
+      <div class="Path"><a name="1065877">Path: E-Commerce Flat Files Maintenance Transfer Type Maintenance<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.13.jpg" width="341" height="206" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065878">Transfer Type:</a></span> enter the transfer type name. This field may contain up to 10 alphanumeric characters.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065879">Description:</a></span> enter the free-form description for the transfer type. This field may contain up to 30 alphanumeric characters.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065880">External Information:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065881">IP Address:</a></span> enter the IP address of the machine where files will be transferred. As aforementioned, the current data transfer protocol in use is FTP so the IP address is necessary for FTP scripting.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065882">Login:</a></span> enter the login of the machine where files will be transferred. This is necessary for FTP scripting.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065883">Password:</a></span> enter the password of the machine where files will be transferred. This is necessary for FTP scripting.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065884">Incoming Path</a></span>: enter the system path where inbound flat files will be retrieved. This exists on the external data location. The path name should be preceded by a ‘\’. For example, if the system path is /tmp/flat.files.in, the path name would be \/tmp/flat.files. This is necessary for FTP scripting.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065885">Outgoing Path</a></span>: enter the system path where outbound flat files will be transferred to. This exists on the external data location. The path name should be preceded by a ‘\’. For example, if the system path is /tmp/flat.files.out, the path name would be \/tmp/flat.files.out. This is necessary for FTP scripting.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065886">Timeout Adj</a></span>: enter the timeout adjustment for the flat file data transmission session. This is the number of seconds to pause before the file transfer session begins. This is used when linking into systems where connection times may be delayed due to heavy traffic or other reasons. A higher timeout adjustment will provide a greater probability that a connection to a system has been made before the data transmission is attempted. For connections made on the existing network, a timeout adjustment of zero may be entered. On the other hand, when connecting into an EDI value added network such as Harbinger, a timeout adjustment of 20 is recommended, especially when sessions are executed during peak times.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065887">Internal Information:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065888">Incoming Path</a></span>: enter the host machine system data path where inbound flat file records will be transferred. The host machine, in this case is defined as the machine where Prelude resides and the flat file transfer sessions originate. This will be a unix-based machine or NT server. The path name should be the system path preceded by a ‘\’. For example, if the system path is /tmp/flat.files.in, the path name would be \/tmp/flat.files.in. This is necessary for FTP scripting.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065889">Outgoing Path</a></span>: enter the host machine system data path where outbound flat file records will be written to, before being transferred to the external data location. The path name should be the system path preceded by a ‘\’. For example, if the system path is /tmp/flat.files.out, the path name would be \/tmp/flat.files.out. This is necessary for FTP scripting.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065890">Archive Path:</a></span> enter the internal data path where incoming flat file data records will be archived. The path name should be the system path preceded by a ‘\’. For example, if the system path is /tmp/flat.files.in, the path name would be \/tmp/flat.files.in.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1065891">F5-Transactions</a></span> will allow input for ALL of the transaction types that will be used for this transfer type. Notice that transactions are notated with a 3 or 4 character abbreviation (i.e., IPO &gt; Inbound Purchase Order).<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.14.jpg" width="334" height="195" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1065895">If functional acknowledgements, used in EDI, are to be sent and/or received, they MUST be set up. </a>Transactions are entered here to cut down on the processing time of processing inbound and outbound flat file records. </div>
+      <div class="Body"><span class="Bold"><a name="1065896">F6-EDI Options</a></span> is used if transfer type flat files that are sent and received are in an EDI standards format. If this is the case, special programming has been coded within the flat file engine programs to interpret the EDI ‘envelopes’ that are received and to build the EDI ‘envelopes’ for all outbound flat file documents. Standard EDI functional acknowledgements can be both sent and received into the system. <img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.15.jpg" width="319" height="111" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065900">Interchange Standard ID: </a></span>this field is used in all EDI ‘envelopes’ that are built for outbound documents. It is inserted into the ISA segment of the EDI record.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065901">Interchange Version: </a></span>this field is used in all EDI ‘envelopes’ that are built for outbound documents. It is inserted into the ISA segment of the EDI record. This value may be overridden at the flat file definition level if necessary.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065902">GS Version: </a></span>this field is used in all EDI ‘envelopes’ that are built for outbound documents. It is inserted into the ISA segment of the EDI record. This value, more than anything else, defines the standards version for a EDI transaction. As such, this value may be overridden at the flat file definition level. The field here is only a default if the flat file definition field is empty.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065903">EDI Network: </a></span>enter the EDI value added network associated with this flat file transfer type. This will determine certain pieces contained within the FTP data communication scripts. Currently supported networks are Harbinger and Sterling. There is also an option of Local Network which, in essence, adds nothing to the ftp scripts normally required for value added networks. Note that simply because a transfer type uses EDI standards, the external data location does NOT have to be an EDI value added network. EDI raw data may be retrieved from or sent to a location contained within a local network.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065904&quot;);"><a name="1065904">Flat File Processing </a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065904", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065904", false);</script>
+      <div class="Body"><a name="1065905">The flat file processing option starts the entire data retrieval and translation routine. It allows the </a>operator to tailor the transactions involved or process all transactions for the incoming and outbound documents. The processing option uses the standard general report interface. A tremendous advantage of using this interface is that it allows for the scheduling of flat file processing and ‘lights out’ flexibility. Processing sessions need not be manual or constantly monitored. Rather, the processing may be scheduled periodically throughout the day and evening. The only monitoring required is that of a daily audit log that is provided for in the reports section. This will be described in detail in a later section of this documentation.</div>
+      <div class="Path"><a name="1065909">Path: E-Commerce Flat Files Processes Flat File Processing<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.16.jpg" width="348" height="193" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065910">Transfer Type: </a></span>enter the flat file transfer type for this session or scheduled sessions (mandatory).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065911">Transaction Type: </a></span>enter the transaction type or types for this session. Only the transactions selected are interpreted. If this field empty, all transactions are processed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065912">Auto Create Flag:</a></span> choose yes and no. If you choose yes, all documents are converted instantly during the session. If you choose no, the documents must be converted later time with human intervention. An example of this involves incoming flat file purchase orders. Purchase order data is converted into the CONVERT.DATA file. In turn, the CONVERT.DATA records are eventually turned into sales orders in Prelude. All conversion steps may be performed at once with the Auto Create Flag set to ‘Y’. This is a mandatory field. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065913">Import/Export Data:</a></span> the valid options for this field are ‘I’ for Import, ‘E’ for Export, or ‘B’ for Both. This option controls the processing flow in terms of the documents that are received or sent.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1065914">If a true ‘lights out’ processing option is desired, the flat file processing will be scheduled with all </a>transaction types selected, the auto create flag set to yes, and both importation and exportation of documents.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065915&quot;);"><a name="1065915">Document Conversions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065915", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065915", false);</script>
+      <div class="Body"><a name="1065916">The document conversion menu allows for the flexibility of converting flat file data into Prelude </a>documents outside of the main flat file processing function. In most instances, the document conversion utilities will be performed when the Flat File Processing step is processed. However, companies may wish to convert the data as a separate step in the process. </div>
+      <div class="Path"><a name="1065917">Path: E-Commerce Flat Files Processes Document Conversions</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065918&quot;);"><a name="1065918">Outgoing Documents Inquiry (/FFOI)</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065918", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065918", false);</script>
+      <div class="Body"><a name="1065919">The outbound documents inquiry accomplishes several tasks. The main purpose of the inquiry is to </a>display all of the current documents that are scheduled to generate flat file records.</div>
+      <div class="Path"><a name="1065923">Path: E-Commerce Flat Files Inquiries Outgoing Documents Inquiry<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.17.jpg" width="398" height="209" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1065924">However, the inquiry accomplishes much more. Another benefit of the inquiry is its ability to add an </a>outbound document to the queue. This was added for the purpose of re-transmitting documents, but it aids greatly in the testing process as well. When testing mapping definitions and other set-up maintenance, the same document can be set up for transmission as necessary. The only requirement is that the customer or vendor for the document must be set up as a flat file trading partner with the outbound document set up in the partner maintenance. Documents may also be removed from the flat file queue. This is a benefit if an outbound document has been queued up in error due to set-up or other issues. Another feature of the inquiry is its ability to preview and generate a flat file document. This provides a benefit when testing and verifying the accuracy of documents generated.</div>
+      <div class="Body"><span class="Bold"><a name="1065925">F5-Remove Document</a></span> can be used to remove an outbound document from the queue, the cursor must be on the line in question. When this option is selected, the user is given a warning. If the user continues, the document is removed permanently from the queue.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.18.jpg" width="211" height="81" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><span class="Bold"><a name="1065929">F6-Add Document </a></span>allows the user to add an outbound document to the current queue. As mentioned earlier, the customer or vendor must be a valid flat file partner and the document must be on the customer or vendor's list of documents to transmit.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.19.jpg" width="192" height="90" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><span class="Bold"><a name="1065936">F7-Preview/Generate Document </a></span>allows you to generate a raw report of the flat file document for a transaction.<img class="Default" src="images/Flat%20File%20Processing_GUI.1.1.20.jpg" width="398" height="172" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1065937">Please note that reporting options will need to be selected for the map definitions represented. Once </a>the preview report has been reviewed, the user has the option of returning back to the inquiry screen, or generating the actual flat file record for the transaction. Generating the flat file will do nothing except write a record out at the operating system level. The file will not be transmitted until the next flat file process is performed.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065938&quot;);"><a name="1065938">Listings</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065938", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065938", false);</script>
+      <div class="Body"><a name="1065939">All listings are found in </a><span class="Italics">E-Commerce &gt; Flat Files Listings &gt; Flat File Partners.</span></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1065940">Flat File Partner Definition Listing - Flat file partner definitions.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1065941">Flat File Partner Customer Info Listing - Customer flat file partners and their associated location </a>information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1065942">Flat File Partner Vendor Info Listing - Vendor flat file partners and their associated location </a>information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1065943">Flat File Groups Listing - Flat file groups and their descriptions.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1065944">Flat File Cross Reference Tables Listing - Flat file cross-reference tables.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1065945">Flat File Definitions Listing -  Detail related to each flat file map definition.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1065946&quot;);"><a name="1065946">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1065946", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1065946", false);</script>
+      <div class="Body"><a name="1065947">All reports are found in </a><span class="Italics">E-Commerce &gt; Flat Files Reports:</span></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065948">Incoming Flat File Report</a></span> - This report option provides the detail behind an incoming flat file data record. For in-depth reporting, data elements must be flagged in the flat file map definition. Report prompts include transaction type, flat file partner, process date, and an optional key field that can be identified in the map definition. At the end of printing, the user is given the option of purging the records just printed. This purge moves the records to a historical reporting file for inbound flat file data records. It does not erase the records.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065949">Outgoing Flat File Report</a></span> - This report option provides the detail behind an outbound flat file data record. For in-depth reporting, data elements must be flagged in the flat file map definition. Report prompts include transaction type, flat file partner, process date, and an optional key field that can be identified in the map definition. At the end of printing, the user is given the option of purging the records just printed. Instead of being deleted, the records are written to the file used for historical reporting of outbound flat file data records.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065950">Incoming Flat File History Report </a></span>- This report option provides the detail behind all historical incoming flat file data records. For in-depth reporting, data elements must be flagged in the flat file map definition. Report prompts include transaction type, flat file partner, process date, and an optional key field that can be identified in the map definition. At the end of printing, the user is given the option of purging the records just printed. For all historical reports, when selected, the records are permanently deleted from the system. Records are written to history with one of two methods. First, records can be written to history during original flat file processing if the keep history flag in the map definition is on. Second, records may be written to history when they are purged from the incoming flat file report. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065951">Outgoing Flat File History Report - </a></span>This report option provides the detail behind all historical outbound flat file data records. For in-depth reporting, data elements must be flagged in the flat file map definition. Report prompts include transaction type, flat file partner, process date, and an optional key field that can be identified in the map definition. At the end of printing, the user is given the option of purging the records just printed. For all historical reports, when selected, the records are permanently deleted from the system. Records are written to history with one of two methods. First, records can be written to history during original flat file processing if the keep history flag in the map definition is on. Second, records may be written to history when they are purged from the outbound flat file report.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065952">Flat File Acknowledgement Report -</a></span> The flat file acknowledgement report is used only for EDI type outbound transactions. The report prints outbound documents and information about the acknowledgement of these documents from the trading partners.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065953">Flat File Daily Audit Log - </a></span>The flat file daily audit log provides a status summary of the four main steps involved in flat file data conversion. The steps include the import of flat file data, the validation of the data, document conversion, and the export of flat file data. In this report, the flat file processing session steps are listed along with results of the process and any action that is required by the user. Users and process times are also provided. This log is essential when the flat file process is run in the scheduler mode. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1065954">Flat File Transfer Log -</a></span> The flat file transfer log provides for a detailed listing of the incoming and outbound flat file data transfer process. The log must run separately for outbound and inbound transfer sessions. This is essentially the output that is provided by the operating system during an FTP data transfer session. This report is instrumental in validating the successful transfer of data from Preluce to an external data repository and vice versa. A purge option is provided after printing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">Flat File Processing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

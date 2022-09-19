@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Using Consignment Sales Orders</title>
+    <link rel="StyleSheet" href="css/Sales%20Order%20Entry.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1421190">Using Consignment Sales Orders</a></div>
+      <div class="Body"><a name="1421380">A consignment order (07 order type) is used when material is removed from </a>on-hand inventory and shipped (or reserved for a customer) but not invoiced until later. When the pick ticket release is confirmed, a zero dollar invoice is created and the inventory is moved from on-hand to consigned inventory. An 07 becomes an 08 (Confirmation Consignment) order type when the order is invoiced. The line items accumulate on the 08 order according to the <span style="font-style: italic;">Accumulate</span> flag in the <a href="javascript:WWHClickedPopup('ois', 'ord_consign_type.htm#1333476', '');">Consignment Types screen</a> (appears when you enter an <span style="font-style: italic;">Order Type</span> of<span style="font-weight: bold;"> 07</span> or <span style="font-weight: bold;">08</span> on the Sales Order Header screen). If the material is returned to stock, the inventory can be added back into the on-hand balance without ever affecting accounts receivable.</div>
+      <table class="Hint" style="text-align: left; width: 408.00096pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 408.00096pt;">
+            <div class="TableSubhead"><a name="1618557">Order Processing Parameters</a></div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1618558">Consolidate Consign By Cust/Ship To</a></span>. Determines if consignment orders are consolidated by customer number or by ship-to number. You can override this setting for a customer:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span class="bold" style="font-weight: bold;"><a name="1618559">C</a></span> - Consolidate by customer number.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span class="bold" style="font-weight: bold;"><a name="1618560">S</a></span> - Consolidate by customer ship-to number.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText" style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; margin-top: 6.0pt; text-transform: none; vertical-align: baseline;"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><a name="1618561">Upd ‘07’ Order To Bookings. </a></span><span style="font-style: normal;">Determines if type 07 consignment orders update the bookings </span><span style="font-style: normal;">file:</span></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1618562">Y</a></span> - Type 07 consignment orders update the bookings file.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1618563">N</a></span> - Type 07 consignment orders do not update the bookings file.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText" style="margin-top: 6.0pt;"><span style="font-style: italic;"><a name="1618564">Ovr Shp Whse Cons Ord. D</a></span>etermines if the line item shipping warehouse for the <span class="bold" style="font-weight: bold;">08</span> consignment order should be the same as the selling warehouse:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1618565">Y</a></span> - If the selling and shipping warehouses are different, an 08 consignment order created at invoicing is updated with the selling warehouse for the line items. This allows the G/L and perpetual inventory to be maintained at the selling location. Only use this flag if the <span style="font-style: italic;">Default Consign Accum Flag </span>(explained below) is set to <span style="font-weight: bold;">C</span> or <span style="font-weight: bold;">A</span>.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span class="Bold"><a name="1618566">N</a></span> - The shipping and selling warehouse do not have to be the same.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableSubhead" style="margin-top: 6.0pt;"><a name="1618567">Customer Maintenance</a></div>
+            <div class="TableText" style="color: #000000; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><span style="color: #000000; font-family: Arial; font-size: 10.0pt; font-style: italic; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><a name="1618629">Consign Consolidate Method:</a></span></div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1618600">C</a></span> - Consolidate at the customer level.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1618601">S</a></span> - Consolidate at the customer ship-to level.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1618602">Blank - Use the system level setting in Order Processing Parameters.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableSubhead" style="margin-top: 6.0pt;"><a name="1618581">Default Parameters Maintenance</a></div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1618570">Default Consign Accum Flag</a></span>. Sets the default for <span style="font-style: italic;">Accumulate</span> in the <a href="javascript:WWHClickedPopup('ois', 'ord_consign_type.htm#1333476', '');">Consignment Types screen</a> (appears for <span style="font-style: italic;">Order Type</span> of<span style="font-weight: bold;"> 07</span> or <span style="font-weight: bold;">08</span> on the Sales Order Header screen):</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1618572">Y</a></span> - Accumulate orders by customer. All consignment sales orders invoiced for a customer are accumulated on one order. Each time a product is added to the consignment order, it is added as a new line on the sales order.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1618573">C</a></span> - Accumulate orders by product. All consignment sales orders invoiced for a product are accumulated on one line on a new consignment order if the selling warehouse and price for the item are the same. </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1618574">A</a></span> - Works the same as C except that all consignment sales orders invoiced for a product are accumulated on a new consignment. The first price found is used.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1618575">N</a></span> - Do not accumulate orders.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><span style="font-weight: bold;"><a name="1618576">E</a></span> - Expense. Consult with your systems administrator for information.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body" style="margin-top: 14.0pt;"><a name="1618578">Refer to the following for information on entering and invoicing consignment </a>sales orders:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;margin-bottom: 3.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a href="javascript:WWHClickedPopup('ois', 'Sales%20Order%20Entry.4.58.htm#1446353', '');" name="1446388">Entering a Consignment Order</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;margin-bottom: 1.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a href="javascript:WWHClickedPopup('ois', 'Sales%20Order%20Entry.4.59.htm#1421448', '');" name="1446396">Billing Consignment Orders</a>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Consignment Reports", "ois", "order_processing_%20reports.17.15.htm#1727728");
+          WWHAddRelatedTopic("Consignment Order History Inquiry", "ois", "ord_cons_inq.htm#1407053");
+          WWHAddRelatedTopic("Consignment Release Inquiry", "ois", "cons_release_inq.htm#1407055");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Sales%20Order%20Entry.4.1.htm#1421190">Sales Order Entry &amp; Printing</a>:Using Consignment Sales Orders</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

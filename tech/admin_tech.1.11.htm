@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Creating New Accounts</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1125250">Creating New Accounts</a></div>
+      <div class="Body"><a name="1125251">Accounts are maintained on the system for each customer. As new customers are added, an account </a>is created based on the customer’s name (typically 3-4 letters or the comapny name).  New accounts will be duplicated from the most recent version of the software. All customers have an account on the Advanced Pick (F50) machine.  Unidata customers,also have an account on the Unidata machine (G30).  In the following example, a new customer account will be created for Franks Supply, Inc.  The naming convention for new accounts uses the first letter of the company’s name, in this case FSI.</div>
+      <div class="Body"><a name="1125252">To create a new account on the Unidata platform, perform a copy function in Unix.  Copy the main </a>account directory, currently /ud/V14.0, to the new directory name.   Once the new directory has been created, the Unix permissions need to be set.  If the permissions were correct on the directory you copied from, the permissions should be correct on the new directory as well.</div>
+      <div class="Body"><a name="1125253">Log in as </a><span class="Bold">root *</span></div>
+      <div class="Body"><a name="1125254">Change directory to /ud </a>	<span class="Bold">cd /ud</span></div>
+      <div class="Body"><a name="1125255">Copy an existing directory to the new directory name </a>	<span class="Bold">cp </span><span class="Bold">–</span><span class="Bold">R /ud/V14.0  /ud/FSI</span></div>
+      <div class="Body"><a name="1125256">Change directory back to /ud </a>	<span class="Bold">cd /ud</span></div>
+      <div class="Body"><a name="1125257">Setup the correct permission for the new account.  While in the /ud directory, issue the following </a>commands.</div>
+      <div class="Body"><a name="1125258">chmod  -R  777 /ud/FSI</a></div>
+      <div class="Body"><a name="1125259">chgrp    -R  ud   /ud/FSI</a></div>
+      <div class="Body"><span class="Bold"><a name="1125260">chown   -R  root  /ud/FSI</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.1.htm#1125250">UniData</a>:Creating New Accounts</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

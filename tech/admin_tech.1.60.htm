@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Purging Customer Data</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1127523">Purging Customer Data</a></div>
+      <div class="Body"><a name="1127524">The Customer Purge process removes all customer records without A/P balance or open orders for the </a>saved-list name or criteria entered. This purge option process is the same as manually deleting the customer master record within Customer Maintenance using the F4-Delete option.</div>
+      <div class="Body"><span class="Bold"><a name="1127525">Note:</a></span> CUSTOMER and CUST.STAT files are the ONLY files that are updated during this purge process. All other files that pertain to the customer (Order history, A/R History, etc.) are NOT updated.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1127526&quot;);"><a name="1127526">Customer Master Purge</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1127526", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1127526", false);</script>
+      <div class="Body"><a name="1127527">This process will purge all customer master records from a saved-list or criteria entered that have no A/</a>R balance or Order Balance (open sales orders). If the customer number exists in the BOOKS.CUST file (existing books) and the Books/Samples flag (Company Maintenance &gt;F6-Modules screen) is set to 'Y', the customer number will NOT be deleted.</div>
+      <div class="Path"><a name="1127528">Path: System Parameter &gt;Processes &gt;Purge Utility Menu &gt;Accounts Receivable &gt;Customer Purge</a></div>
+      <div class="Body"><a name="1127532">When this process is selected, a warning message is displayed for reference to the user:<img class="Default" src="images/Customer%20Purge_GUI.4.1.1.jpg" width="375" height="288" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1127533">Once the user selects to continue with the purge process, the Customer Purge Utility appears with the </a>follwoing section criteria:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127534">Save-List Name:</a></span> enter a save-list name that contains an external selection performed of the list of customers to be purged. The user would create this save-list file manually.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127535">Description:</a></span> enter the partial description of the customers to be selected for purging. This field does not apply if the <span class="Italics">Save-List Name</span> field has a value.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127536">State:</a></span> enter the state to limit the purge routine to a state or leave this field blank to include all states. This field does not apply if the <span class="Italics">Save-List Name</span> field has a value.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127537">Zip Code:</a></span> enter the zip code to limit the purge routine to a zip code or leave this field blank to include all zip codes. This field does not apply if the <span class="Italics">Save-List Name</span> field has a value.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127538">Start Date &lt;=:</a></span> enter the date the customer was established to limit the purge routine to only include customers established on or before a date. The <span class="Italics">Start Date</span> field in Customer Maintenance &gt; F5-Add Info screen is updated when the customer master record is created. This date is checked when a date is entered here. This field does not apply if the <span class="Italics">Save-List Name</span> field has a value.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127539">Current Year Purchases &lt;=:</a></span> enter the current year purchases amount to limit the purge routine to only include customers with current year purchases less than or equal to the amount entered. The current year purchases information for each customer can be viewed in Customer Maintenance &gt; F8-Cy &amp; Py $ screen. This dollar amount is checked when a value is entered here. This field does not apply if the <span class="Italics">Save-List Name</span> field has a value.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127540">Previous Year Purchases &lt;=:</a></span> enter the previous year purchases amount to limit the purge routine to only include customers with previous purchases less than or equal to the amount entered. The previous year purchases information for each customer can be viewed in Customer Maintenance &gt; F8-Cy &amp; Py $ screen. This dollar amount is checked when a value is entered here. This field does not apply if the <span class="Italics">Save-List Name</span> field has a value.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1127541">If the purge process did not delete certain customers, the following message appears after the process </a>is completed: "Errors Occurred During Deletion, Please Review Customer Master Purge Report!"</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1127542&quot;);"><a name="1127542">Customer Master Purge Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1127542", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1127542", false);</script>
+      <div class="Body"><a name="1127543">This report includes information on the customer master records that were NOT deleted when the </a>Customer Purge process was performed.</div>
+      <div class="Path"><a name="1127547">Path: System Parameter &gt;Processes &gt;Purge Utility Menu &gt;Accounts Receivable &gt;Customer Purge Report<img class="Default" src="images/Customer%20Purge_GUI.4.1.3.jpg" width="622" height="273" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1127548">This report is overwritten each time the Customer Purge process is performed. For example, if the purge </a>process did not delete certain customers, the report would be updated with the customer numbers and reason why each customer could not be deleted (open balance). If the purge process deleted all customers successfully, the report would display blank as no customer numbers would need to be reviewed. It is recommended that this report be printed after the purge process is executed each time. If the customer was not deleted due to existing books, the reference “Books Exist for the Customer” is updated on the report.</div>
+      <div class="Body"><span class="Bold"><a name="1127549">Note:</a></span> If the <span class="Italics">Keep Customer Maint Audit</span> flag is set to 'Y' in File Update Parameters, the Customer Maintenance Audit Reports (Purchasing &gt; Reports &gt; Customer Audit Report menu) are updated with the customer numbers that have been deleted during the Customer Purge process.</div>
+      <div class="Body"><a name="1127550">&nbsp;</a></div>
+      <div class="Body"><a name="1126700">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.47.htm#1127523">Printers</a>:<a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.58.htm#1127523">Purging Data</a>:Purging Customer Data</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

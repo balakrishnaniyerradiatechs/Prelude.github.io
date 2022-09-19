@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Exchanging Rental Items</title>
+    <link rel="StyleSheet" href="css/opt_rnt.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1074834">Exchanging Rental Items</a></div>
+      <div class="Body"><a name="1074835">The rental exchange process is used to switch out a unit in the middle of the rental. For </a>example, the unit breaks down and therefore must be replaced with another. This process allows you to exchange a serialized item on a rental order or to exchange the original product for an entirely different product. The system tracks the time on rent for the original unit so the system can post rental income and days on rent for the unit. The new unit being placed on rent takes the place of the original unit on the same rental order without having to close the rental order and open a new one. This process works with both serialized and non-serialized products. </div>
+      <div class="Subhead"><a name="1074836">Setting Up Rental Exchanges</a></div>
+      <div class="Subhead"><a name="1119390">Rental Exchange Counter Range Setup</a></div>
+      <div class="Body"><a name="1074837">This maintenance routine is used to establish and maintain the number range and current </a>number to be used for rental exchanges. These must be set up before a rental exchange can be performed.</div>
+      <div class="Path"><a name="1074838">Path: System Parameter &gt; Maintenance &gt; Counter/Range Setup Rental Exchanges</a></div>
+      <div class="Subhead"><a name="1074839">Warehouse Maintenance (/WM)</a></div>
+      <div class="Body"><a name="1074840">Continuous printing for rental exchanges can be established in Warehouse Maintenance.</a></div>
+      <div class="Path"><a name="1074844">Path: System Parameter &gt; Maintenance &gt; Inventory Controls &gt; Warehouse Maintenance &gt; F6 <img class="Default" src="images/rental_printing.jpg" width="351" height="277" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074845">Cont. Rental Exchange:</a></span> determines how rental exchange documents are printed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><a name="1074846">Y - use continuous printing for rental exchange documents. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><a name="1074847">N - use Rental Exchange Printing by batch.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1074848">Rental Exchange Reason Code Maintenance (/RXCM)</a></div>
+      <div class="Body"><a name="1074849">All rental exchanges require a reason code to be entered to define why the exchange took </a>place. Enter as many reason codes as are needed and a description for each.</div>
+      <div class="Path"><a name="1074853">Path: Rental &gt; Maintenance Rental Exchange Reason Code Maintenance<img class="Default" src="images/rental_recm.jpg" width="228" height="107" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Subhead"><a name="1074854">Entering a Rental Exchange (/REE)</a></div>
+      <div class="Path"><a name="1124147">Path: Rental &gt; Processes &gt; Rental Exchange Entry</a></div>
+      <div class="Body"><a name="1074855">This entry program is used to perform the actual exchange of the items on the rental order. </a>The top portion of this screen will look similar to the one displayed below. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074860">Exchange Number:</a></span> enter ‘N’ or ‘New’ to assign the next available system generated rental exchange number or enter number of a suspended rental exchange. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074861">Rental Order Number:</a></span> the original rental order number for the item being exchanged. The <span class="Italics">Customer</span> field is automatically filled in when the rental order number is entered.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1074862">After the rental order number is entered, you are taken into the exchange order header </a>screen (below). The information entered in this screen is strictly for the exchange and will not affect the original rental order.<img class="Default" src="images/rental_exch_header.jpg" width="275" height="128" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074866">Entry Date:</a></span> defaults to the system date and time, not the date of the exchange. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074867">Ship-To Number:</a></span> this field is used to print the ship-to information on the rental exchange document if the new rental unit must be delivered or the original rental unit picked up. For the rental exchange only; does not change the rental order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1074869">After the rental exchange order header has been filled in, you are taken into the line item </a>detail screen (below). This is where the original rental unit and the exchange rental unit are entered. Both products must be either serialized or non-serialized. You cannot replace a serialized unit with a non-serialized unit or vice versa. <img class="Default" src="images/Exchanges_GUI.9.1.5.jpg" width="544" height="360" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074873">Original Product Number:</a></span> enter the rental product that is being exchanged from the original rental order. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074874">New Product Number:</a></span> enter the rental product number that is replacing the original rental unit or enter ‘R’ to repeat the original product number. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1074875">After the original product and the new product numbers are entered, you are taken into </a>the line item detail screen (below) and prompted for detailed information about each. Non-serialized products will only prompt for the exchange quantity, reprice flag, and reason code. All the other fields are for serialized products. <img class="Default" src="images/Exchanges_GUI.9.1.6.jpg" width="438" height="274" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074879">Xchg-Qty:</a></span> if the items are serialized, this field defaults to ‘1’ and may not be changed. If the items are non-serialized, enter the quantity being exchanged. If the product is serialized, you can only exchange one at a time. If the original line on the rental order has a quantity greater than one, the line item on the rental order will have to be split before the exchange can be made.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074880">Original Serial Number:</a></span> enter the serial number for the unit that is being exchanged. If the item is serialized, a serial number must be entered. This field is not prompted if the item is non-serialized.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112379">Original Meter Out:</a></span> defaults to the Meter Out reading from the rental order. Required if Measurements Required in Product Maintenance is H (hour meter) or O (odometer). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1112380">Original Meter In:</a></span> the current meter reading for the unit being exchanged. Required if Measurements Required in Product Maintenance is H (hour meter) or O (odometer). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1074883">If wear measurements or fuel charges are required for the unit being exchanged, the </a>system prompts for these on an additional screen (below) and adds additional lines to the original rental order for these charges.<img class="Default" src="images/Exchanges_GUI.9.1.7.jpg" width="546" height="229" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074887">New Serial Number:</a></span> enter the serial number for the unit that is replacing the returned unit. A serial number does not have to be assigned at this point but will be required before completing the rental order. This field is not prompted if the item is non-serialized. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1120632">New Meter Out:</a></span> the meter reading for the replacing unit if the product’s <span class="Italics">Measurements Required</span> in Product Maintenance is set to H (hour) or O (odometer).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1120633">New Wear Out:</a></span> the wear measurement for the replacing unit if the product’s <span class="Italics">Measurements Required</span> in Product Maintenance is set to W (wear).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074890">Reprice:</a></span> this field defines if the rates for the old unit will be carried over to the new unit. This flag is used to reprice the rental order for the new product number. This field will default to ‘Y’ if the new product number is different than the original product number. If the products are the same, the default is ‘N’. This flag is mainly used when the new product number is different than the original product number or if the new product number has a different rate structure than the original product number. If this flag is set to ‘Y’, the rental rates for the new product are calculated for the rental order. If this flag is set to ‘N’, the new product will retain the pricing from the original product. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074891">Reason:</a></span> enter the code that describes the reason for the exchange. This is a mandatory field. Reason codes are set up in Rental Exchange Reason Code Maintenance (/RXCM). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1074892">After all the exchange line items have been entered, use the F2-Save function key to exit </a>the entry program. At this point, you can print, complete, or suspend the exchange or to return to the line item detail screen. </div>
+      <table class="Question" style="text-align: left; width: 204.18768pt;" cellspacing="0" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E8E8E8; border-bottom-color: #ffffff; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #ffffff; border-left-style: solid; border-left-width: 1px; border-right-color: #ffffff; border-right-style: solid; border-right-width: 1px; border-top-color: #ffffff; border-top-style: solid; border-top-width: 1px; padding-bottom: 5pt; padding-left: 3pt; padding-right: 3pt; padding-top: 5pt; vertical-align: top; width: 204.18768pt;">
+            <div class="DialogBox"><a name="1120583">Do You Wish To...</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1074896">Print</a></span> - set the rental exchange up for printing. The rental exchange document can be used for delivery and pickup of the exchange items. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1074897">Suspend</a></span> - saves the rental exchange until you return to the order. Suspended rental exchanges appear in the Rental Exchange Inquiry and Open Rental Exchange Report. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1074898">Complete</a></span> - close the exchange transaction. Enter the date and time of the exchange. This date and time stop the rental on the original product and to start the rental on the new product. The line item must be manually adjusted for down time.<span class="Italics"><img class="Default" src="images/Exchanges_GUI.9.1.9.jpg" width="274" height="139" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1074902">At this point, the products are switched on the rental order along with serial numbers and </a>meter readings if applicable. The system keeps track of the charge for the original unit’s rental period and adds it to the charge for the new unit’s rental period. When a serialized product is exchanged, the status is set to ‘C’. The status will have to be manually changed through Rental Status Maintenance.</div>
+      <div class="Subhead"><a name="1074903">Printing a Rental Exchange Document</a></div>
+      <div class="Body"><a name="1074904">You can print a rental exchange document for a selected rental exchange, rental </a>exchanges for a warehouse, or all rental exchanges. This document can be used to deliver and/or pick up the rental unit from the customer’s site. The rental exchange document the rental exchange number, rental order number, original product, and new product and serial numbers and meter readings if available.</div>
+      <div class="Path"><a name="1074908">Path: Rental &gt; Document Printing &gt; Rental Exchange Printing</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074909">Rental Exchange Number:</a></span> enter the rental exchange number to be printed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074910">Warehouse Number:</a></span> the warehouse to limit the printing or leave blank to for all exchanges.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074911">Printer Form Queue:</a></span> enter the printer form queue where the document should print.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Path"><a name="1117780">Path: Rental &gt; Document Printing &gt; Rental Exchange RePrinting</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1074915">reprint a rental exchange document to the form queue entered.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074916">Rental Xchg History #:</a></span>  the rental exchange history number to reprint. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074917">Warehouse Number:</a></span>  the warehouse to limit the printing or leave blank to for all rental exchanges.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1074918">Printer Form Queue:</a></span> enter the printer form queue where the document should print.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1074919">Inquiries &amp; Reports</a></div>
+      <div class="Subhead"><a name="1112042">Order Log Inquiry (/OLI)</a></div>
+      <div class="Path"><a name="1112043">Path: Order Processing &gt; Inquiries Sales Order Inquiries Sales Order Log Inquiry</a></div>
+      <div class="Body"><a name="1112044">When a rental order is exchanged, the Order Log Inquiry is updated with the XCH code. </a>The Reference Number is updated with the rental exchange number. Drill down into the Rental Exchange Entry is available. Use the examine feature on the line item to view serial numbers and other information.</div>
+      <div class="Subhead"><a name="1108661">Rental Exchange Inquiry (/RXI)</a></div>
+      <div class="Body"><a name="1074920">Lists customer rental exchanges that were entered but not completed. You can drill down </a>into a rental exchange to view the document. </div>
+      <div class="Path"><a name="1074924">Path: Rental &gt; Inquiries Rental Exchange Inquiry<img class="Default" src="images/Exchanges_GUI.9.1.12.jpg" width="414" height="289" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Subhead"><a name="1074925">Rental Exchange History Inquiry (/RXHI)</a></div>
+      <div class="Body"><a name="1074926">Lists customer rental exchanges. You can drill down into a rental exchange to view the </a>document. The screen is similar to Rental Exchange Inquiry except the exchange date and time appear instead of the entry date and time.</div>
+      <div class="Path"><a name="1074930">Path: Rental &gt; Inquiries Rental Exchange History Inquiry<img class="Default" src="images/Exchanges_GUI.9.1.13.jpg" width="405" height="285" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Subhead"><a name="1074932">Open Rental Exchange Report</a></div>
+      <div class="Path"><a name="1112055">Path: Rental &gt; Reports Open Rental Exchange Report</a></div>
+      <div class="Body"><a name="1120708">Lists open rental exchanges for warehouse(s), customer number(s), and/or entry date </a>range. This report displays the original and new product, and detail information such as serial numbers, meter readings, and charges.</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1120709&quot;);"><a name="1120709">Rental Summary Inquiry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1120709", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1120709", false);</script>
+      <div class="Body"><a name="1105061">The Rental Summary Inquiry lists rental orders for a customer and job. The quantity is  the </a>total units of the product entered for a job. </div>
+      <div class="Path"><a name="1105065">Path: Rental &gt; Inquiries &gt; Rental Summary Inquiry (/PRJI)<img class="Default" src="images/rental_rsi.jpg" width="270" height="170" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1105066">Product Number:</a></span> the product number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1105067">Warehouse:</a></span> the warehouse number used on the rental orders for the product number.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1105068">Customer Number:</a></span> the customer number used on the rental orders.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1105069">Job Number:</a></span> the job number used on the rental orders.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1105070">Quantity On Order:</a></span> the quantity of the total number of rental orders for the product number, warehouse, customer number, and job number entered is displayed.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1105074">F5-Detail</a></span> opens the Sales Order Rental information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1105075">F5-Review Order</a></span> opens the Sales Order Inquiry for the rental order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1105076">F7-Log</a></span> opens the Order Log Inquiry for the rental order.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="opt_rnt.1.8.htm#1074834">Rental Transactions</a>:Exchanging Rental Items</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

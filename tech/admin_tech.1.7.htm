@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Record Locks</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1123151">Record Locks</a></div>
+      <div class="Body"><a name="1123152">A multi-user environment must have controls for users who might access the same record at the same </a>time.  A record is locked when the user is accessing a record and they have the ability of changing the data.  This will prevent two people from both trying to change the same thing at the same time. </div>
+      <div class="Subhead"><a name="1123154">List Current Locks</a></div>
+      <div class="Body"><a name="1123155">To view the current locks on the system you can do LIST.READU at TCL.  This is a Unidata ECL </a>command.   Two new processes were created to help with viewing locks.  At TCL, LLOCKS and in the System Builder environment, /LLOCKS.  These may not be available on all client systems currently, but should start being installed with Version 14. At TCL enter,</div>
+      <pre class="Report"><a name="1123156">LIST.READU</a></pre>
+      <pre class="Report"><a name="1123157">UNO   UNBR UID UNAME   TTY FILENAME      INBR   DNBR   RECORD_ID     M     TIME   DATE</a></pre>
+      <pre class="Report"><a name="1123158">  3  24484   0  root   pts/3 DEVPROCE  131090 216268   R*NCUS-SHP    X 14:30:02 APR 27</a></pre>
+      <pre class="Report"><a name="1123159"> 17   7262 209 c.row   ts/14  ADSLIB   358606 216268   RUN_PROD_S    X 11:31:01 APR 27</a></pre>
+      <pre class="Report"><a name="1123160"> 28  35308 211   psi   ts/17 /ud/V14.  811751 216268   001100206     X 14:26:02 APR 27</a></pre>
+      <pre class="Report"><a name="1123161"> 28  35308 211    ps   ts/17 /ud/V14.  811682 216268   001000111     X 14:26:02 APR 27</a></pre>
+      <pre class="Report"><a name="1123162"> 28  35308 211   psi   ts/17 /ud/V14.</a>	  812036 216268   001!KLE 60    X 14:26:02 APR 27</pre>
+      <pre class="Report"><a name="1123163"> 28  35308 211   psi   ts/17 /ud/V14.</a>	  829525 216268   001!KLE 60    X 14:25:02 APR 27</pre>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123164">UNO - The Sequential number Unidata assigns to the Unidata session</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123165">UNBR - Process group ID of the user who set the lock</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123166">UID - User ID of the user who set the lock</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123167">UNAME - Login name of the user who set the lock</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123168">TTY - Terminal device of the user who set the lock</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123169">FILENAME - File name in which the record is locked</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123170">INBR - I-node of the locked file</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123171">DNBF</a>	 - Used with INBR to define the file at the operating system level</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123172">RECORD ID - Record ID of the locked record</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123173">M - Type of lock. ‘X’ indicates an exclusive lock. ‘S’ indicates a shared lock</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123174">TIME - Time the lock was set</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123175">DATE - Date the lock was set</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1123176">Additional information is available in the online help.  At TCL, enter HELP LIST.READU.</a></div>
+      <div class="Body"><a name="1123177">The LIST.READU command works, but in the Prelude environment, some of the information needed is </a>truncated.  For example, the length of the Record Id is not long enough.  Activant has written a user version of the LIST.READU function called LLOCKS, expanding the display fields.  This program is on the Unidata System, Version 14,  in the Install file.</div>
+      <div class="Body"><a name="1123178">At TCL, enter</a></div>
+      <pre class="Report"><a name="1123179">LLOCKS</a></pre>
+      <pre class="Report"><a name="1123180">Uno Unbr Uid Name   TTY    Filename                   Inbr    Dnbr     Time   Date Record ID</a></pre>
+      <pre class="Report"><a name="1123181">3  24484   0 root   pts/3  DEVPROCESS            131090 2162689 14:26:02 APR 27 R*NCUS-SHP-PRD-SLS2*YLY.SLSM.RPT</a></pre>
+      <pre class="Report"><a name="1123182">17  7262 209 c.rowl pts/14 ADSLIB                  3586062 2162689 11:31:01 APR 27 RUN_PROD_SEARCH</a></pre>
+      <pre class="Report"><a name="1123183">28 35308 211 psi    pts/17 /ud/V14.0-DATA/ORDER     811751 2162689 14:26:02 APR 27 001100206</a></pre>
+      <pre class="Report"><a name="1123184">28 35308 211 psi    pts/17 /ud/V14.0-DATA/CUSTOMER  811682 2162689 14:26:02 APR 27 001000111</a></pre>
+      <pre class="Report"><a name="1123185">28 35308 211 psi    pts/17 /ud/V14.0-DATA/WAREHOUSE 812036 2162689 14:26:02 APR 27 001!KLE 600-1!10</a></pre>
+      <pre class="Report"><a name="1123186">28 35308 211 psi    pts/17 /ud/V14.0-DATA/PRODUCT   829525 2162689 14:25:02 APR 27 001!KLE 600-1</a></pre>
+      <div class="Body"><a name="1123187">There is also a new System Builder slash command /LLOCKS that shows a report writer output of the </a>LLOCKS data. You can view each page.</div>
+      <pre class="Report"><a name="1123188">/LLOCKS</a></pre>
+      <pre class="Report"><a name="1123189">&nbsp;</a></pre>
+      <pre class="Report"><a name="1123190">Development Company</a></pre>
+      <pre class="Report"><a name="1123191">User Id CDS  Page 1</a></pre>
+      <pre class="Report"><a name="1123192">List Locks Report</a></pre>
+      <pre class="Report"><a name="1123193">&nbsp;</a></pre>
+      <pre class="Report"><a name="1123194">UNO  Unbr Uid Uname  TTY Filename                  Inode Nbr    Dnbr Record ID         Time    Date</a></pre>
+      <pre class="Report"><a name="1123195">  1  5960 245 b.shaw pts/2 ITEMBIN                   1962078 2162689 141            18:09:02 APR 27</a></pre>
+      <pre class="Report"><a name="1123196"> 25  6688 211 psi    pts/13 /ud/V14.0-DATA/D_CONTROL  812680 2162689 LLOCKS         18:10:02 APR 27</a></pre>
+      <pre class="Report"><a name="1123197"> 28 35308 211 psi    pts/17 /ud/V14.0-DATA/ORDER      811751 2162689 001100206      14:26:02 APR 27</a></pre>
+      <pre class="Report"><a name="1123198"> 28 35308 211 psi    pts/17 /ud/V14.0-DATA/CUSTOMER   811682 2162689 001000111      14:26:02 APR 27</a></pre>
+      <pre class="Report"><a name="1123199"> 28 35308 211 psi    pts/17 /ud/V14.0-DATA/WAREHOUSE  12036 2162689  001!KLE 600-1!1014:26:02 APR 27</a></pre>
+      <pre class="Report"><a name="1123200"> 28 35308 211 psi    pts/17 /ud/V14.0-DATA/PRODUCT    829525 2162689 001!KLE 600-1  14:25:02 APR 27</a></pre>
+      <pre class="Report"><a name="1123201">&nbsp;</a></pre>
+      <pre class="Report"><a name="1123202">Page 1 from Column 1 - Cursor Scroll or Press &lt;Enter&gt; to Continue</a></pre>
+      <div class="Subhead"><a name="1123203">View Waiting Locks</a></div>
+      <div class="Body"><a name="1123204">At TCL, enter</a></div>
+      <pre class="Report"><a name="1123205">LIST-QUEUE</a></pre>
+      <pre class="Report"><a name="1123206">Number of requests in the waiting queue = 1                                     </a></pre>
+      <pre class="Report"><a name="1123207"> UNO   UNBR  UID UNAME   TTY FILENAME   INBR   DNBR  RECORD_ID M     TIME   DATE</a></pre>
+      <pre class="Report"><a name="1123208">  25       36688    211   psi           ts/13 /ud/V14.       811682  216268  001000111     X   18:40:02 APR 27</a></pre>
+      <div class="Body"><a name="1123209">The display shows that user.id 211 is waiting on record 001000111.</a></div>
+      <div class="Body"><a name="1123210">/LLOCKS shows that this record is locked by user.id 28.</a></div>
+      <pre class="Report"><a name="1123211">/LLOCKS</a></pre>
+      <pre class="Report"><a name="1123212">UNO   Unbr  Uid Uname      TTY Filename            Inode Nbr      Dnbr Record ID Time    Date  </a></pre>
+      <pre class="Report"><a name="1123213"> 28    35308   211 psi           pts/17 /ud/V14.0-DATA/CUSTOMER            811682   2162689 001000111                         14:26:02 APR 27</a></pre>
+      <div class="Subhead"><a name="1123214">Clear Record Locks</a></div>
+      <div class="Body"><a name="1123215">Only the root user can clear any record locks.  Once logged in as root, at TCL enter</a></div>
+      <div class="Body"><a name="1123216">SUPERRELEASE   pid # [inbr dnbr | record id].  PID# is the UNBR.  Inbr is the Inode Number.</a></div>
+      <div class="Body"><a name="1123217">To clear the above example, SUPERRELEASE   35308    811682    2162689</a></div>
+      <div class="Body"><a name="1123218">After clearing the record locks, be sure to logoff as root and login as normal!</a></div>
+      <div class="Body"><span class="Bold"><a name="1123219">NOTE: </a></span>Before clearing any record locks, all normal methods of freeing the record lock should be exhausted.  If a user has a record locked in Product Maintenance, they should try to exit out of the record.  Escaping back to the System Builder logon can also be done to free a lock.  Using this command freely without any effort given to research the source of the record lock can lead to data corruption.  Clearing a record lock should be done with great care and by a system administrator.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.1.htm#1123151">UniData</a>:Record Locks</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

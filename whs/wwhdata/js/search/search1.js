@@ -1,0 +1,19 @@
+function BookData_Search(x,y)
+{
+if(x.t("devices"))y.f("33,4,7,1,37,1,39,1,36,1,17,1,31,1,22,2");
+if(x.t("warns"))y.f("7,1");
+if(x.t("item"))y.f("33,4,7,3,37,6,36,1,35,4,12,1,19,2,34,5");
+if(x.t("(/pkce)"))y.f("13,1");
+if(x.t("user\u2019s"))y.f("21,1");
+if(x.t("asg"))y.f("25,1");
+if(x.t("negative"))y.f("33,2,37,2,39,2");
+if(x.t("mnt"))y.f("33,1,36,1");
+if(x.t("wwdd1108340"))y.f("34,2");
+if(x.t("shipments"))y.f("34,1");
+if(x.t("(e/n)"))y.f("36,1");
+if(x.t("additions"))y.f("37,1");
+if(x.t("difference"))y.f("37,2");
+if(x.t("denote"))y.f("37,1");
+if(x.t("(/sbqi)"))y.f("38,1");
+if(x.t("weeks"))y.f("39,1");
+}

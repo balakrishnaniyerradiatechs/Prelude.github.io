@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Picking by Segment</title>
+    <link rel="StyleSheet" href="css/opt_whs.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1109920">Picking by Segment</a></div>
+      <div class="Subhead"><a name="1113731">Radio Frequency Truck Order Picking</a></div>
+      <div class="Path"><a name="1109921">Menu path: Warehousing &gt; Handheld RF Menu &gt; Doc Picking &gt; Truck Order Picking (/RSPE)</a></div>
+      <div class="Body"><a name="1109922">If the ship via assignment maintenance is used, the system determines the next available </a>segment by the user’s ship via code. Each picker is assigned a segment and is guided through the warehouse in the logical picking sequence for each product. As each product is confirmed, each bin is updated on-line. Shipping labels for floored segments are generated at this time since floored products are taken directly to the staging area. The following program prints a paper version of the radio frequency picking process, which can be used in the event a radio frequency unit is inoperable, or as a backup method.</div>
+      <div class="Subhead"><a name="1109923">Non-RF Segment Picking</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1113735">Segment Printing (/SEG.PICK.PRINT) - This prints a manual printing report if the RF </a>device is not being used for picking.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1109925">Segment Picking Entry (/OSPE) - This is the manual picking entry confirmation screen </a>if RF picking is not being used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1109927">Segment Packing</a></div>
+      <div class="Path"><a name="1116399">Menu path: Warehousing &gt; Segment Processing &gt; Segment Packing (/SGPM)</a></div>
+      <div class="Body"><a name="1109928">Each segment is available for packing after the segment picking has been completed. </a>Segment packing is done for non-floored segments. Floored segments are automatically marked as packed after the picking update is performed. The packer enters the number and type of boxes for each segment. Shipping labels are printed for the segment so that each box has a unique sequential box number.</div>
+      <div class="Subhead"><a name="1109929">Loading the Truck</a></div>
+      <div class="Subhead"><a name="1113749">Radio Frequency Truck Confirmation Entry</a></div>
+      <div class="Path"><a name="1109930">Menu path: Warehousing &gt;Handheld RF Menu &gt; Processing &gt;Truck Cfm Entry (/TRCE)</a></div>
+      <div class="Body"><a name="1109931">The truck loader is shown the next stop ready for loading so that the truck can be loaded </a>in the correct sequence. Each box number is scanned and updated as it is loaded.</div>
+      <div class="Subhead"><a name="1109932">Non-RF Truck Loading</a></div>
+      <div class="Path"><a name="1116407">Menu path: Warehousing &gt; Segment Processing &gt; Truck Load Maintenance (/TRLM)</a></div>
+      <div class="Body"><a name="1109933">This can be used as a manual method of the radio frequency truck loading verification. </a>When a route number is entered, a list of segment numbers is generated for that route for each stop. This also shows the picked and packed flags for each segment. A drilldown is available for each packed segment showing box numbers, box type and a loaded flag. The route loading must start with the first stop on the screen and cannot continue with another stop until the previous stop is completed. Segments within a stop can be loaded as packing is completed.</div>
+      <div class="Subhead"><a name="1116420">Route Processing</a></div>
+      <div class="Path"><a name="1116421">Menu path: Warehousing &gt; Segment Processing &gt; Route Processing (/RTE.PROCESS.UPDATE)</a></div>
+      <div class="Body"><a name="1116422">Route processing occurs when all steps for the route have been completed. When the </a>completed route number is entered, all the sales orders are updated with the quantity shipped and are setup for invoicing.</div>
+      <div class="Body"><a name="1109936">At this time, printed documents are generated for each route. This can include a bill of </a>lading, an invoice, and also a driver’s manifest - based on the specific document print flag.</div>
+      <div class="Subhead"><a name="1109939">Inquiries</a></div>
+      <div class="Path"><a name="1109940">Menu path: Warehousing &gt; Segment Processing &gt; Inquiries</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109941">Sales Order Route Inquiry (/SORI) - </a></span>This inquiry allows the warehouse manager to view the status of a proposed route before doing the bin level allocation. Displays the total number of orders, line items, and weight.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109942">Ship Via Route Inquiry (/SVRI) - </a></span>Displays the current routes being processed by the warehouse. The information displayed includes ship via, route number and the number of picking segments.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109943">Segment Inquiry (/SOPI) - </a></span>Displays the information for a picking segment, product number, quantity picked, picker id, and packer id.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109944">Route Status Inquiry (/RSI) - </a></span>This inquiry provides the status of each of the segments. The user can enter the specific route for inquiry and the system displays a summary screen showing each stop and if that stop is ready for loading. A drill down is available to show the detailed information for each stop, including the list of segments and the picked and packed flags. An additional drill down is available to show the box number, type and loaded flag for each segment.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109945">Freight Status/Boxing Inquiry (/FRSI) - </a></span>This inquiry shows the status of segments for a ship via and route.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1109946">Route History Inquiry (/RSI) - </a></span>Displays the history record for a truck route including the customer number, order number and ship date.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1109947">Release Weight Report</a></div>
+      <div class="Path"><a name="1109948">Menu path: Warehousing &gt; Segment Processing &gt; Reports &gt; Release Weight Report (/REL.WGT.RPT)</a></div>
+      <div class="Body"><a name="1109949">This summary report displays the current weight of all the orders ready for a truck route. </a></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="opt_whs.1.8.htm#1109920">Entering, Picking, and Shipping Sales Orders</a>:Picking by Segment</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

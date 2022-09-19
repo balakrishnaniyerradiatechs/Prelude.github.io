@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Order Processing</title>
+    <link rel="StyleSheet" href="css/v17_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1001428">Order Processing</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001429&quot;);"><a name="1001429">Sales Order Entry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001429", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001429", false);</script>
+      <div class="Subhead"><a name="1001430">F5-Hdr Scr&gt; F7-Tax Jur&gt; Type</a></div>
+      <div class="Body"><a name="1001431">A new </a><span class="Bold">Type</span> flag was added to the Sales Tax Entry screen in Sales Order Entry. This new flag works with the Resale Exemption flag <span class="Italics">(listed on the Maintenance portion of the New </span><span class="Italics">Features list)</span> located in the Customer Product Number Maintenance screen. If the customer/customer ship-to currently has a sales tax exemption type established, it will be defaulted into the Type flag located in the header identifying the exemption type allocated for this customer. Currently the only tax exemption type that is available is the R type which represents the Resale Exemption. </div>
+      <div class="Subhead"><a name="1001432">Action&gt; Auto Reverse</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001433">Previously, the function of the Auto Reverse feature was referred to throughout the </a>system as Void Sale. In addition to this name change, the functionality of this process has also been modified to include a calculation of restocking charge. Up to V16, the restocking charge percent established for the credit reason code entered pulled from the company level was not calculated for the Void Sale performed in Sales Order Entry, Credit Memo Entry or RGA Entry when reversing the original sales order. The Restocking charge was only considered when entering a credit memo or RGA against the original sales order in Credit Memo Entry or RGA Entry. This has since been changed for V17 to now calculate the restocking charge percent that is established for the credit reason code entered or from the company level. The auto reverse process will now calculate the restocking charge percent the same as if you entered a credit memo or RGA against the original sales order in Credit Memo Entry or RGA Entry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001434">In addition to the process name change of this feature, the functionality of the Auto </a>Reverse process has also been modified. Previously, this process would not allow positive lines to be reversed. This has since been updated to permit the reversal of both positive as well as negative lines. The positive lines on the original sales order will be reversed as negative lines in Auto Reverse. The negative lines will be reversed to positive lines. The F3-Lookup on a invoice number field lists the invoices for the customer number (Positive totals-no credit memo lines, Positive Totals-some credit memo lines, Negative totals-all credit memo lines). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001435">A new </a><span class="Bold">Retain Additional Charges </span>prompt was added to the functionality of the Auto Reverse feature. This message appears and you can add charges such as outbound freight, handling, restocking charges that were calculated on the original sales order should be retained for reversal. Choose Yes to keep and reverse the additional charges in the Sales Order Completion screen. Select N to not retain the additional charges, therefore clearing out any added amounts in the completion screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001436">Line Item Level</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001437">A new message was created for Sales Orders linked to W/Os that contain core items </a>as components for a BOM or if a core item is manually entered on work orders. This message pertains to the option of rolling up the cost of the core items. The message Do You Want To Bill The Core Charge? appears. Select No to not include the cost of the core item when rolling up the cost to the item on the sales order. Once the work order is complete and the sales order is invoiced, the Core Status Inquiry is updated with the pending core. Select Yes to include the cost of the core item when rolling up the cost to the item on the sales order. When the W/O is complete and the sales order is invoiced, the Core Status Inquiry is not updated. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001438">Product Number field&gt; Skeleton Product Maintenance&gt; Weight </a></span>- The Skeleton Product Maintenance screen was updated with a new Weight field. This new option allows users to enter a weight for the new product number being created at the time of Sales Order Entry. It is required to enter the weight in pounds and it can be up to four decimals long. <span class="Italics">Note:</span> To see the Product Not on File, Create New Product? message to enter the Skeleton Product Maintenance screen, set Allow New Prod in S/O in Order Processing Parameters to Y. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001439">Q Line Item</a></span> - The functionality of the Quotation Entry process was enhanced to accommodate a new feature added for V17. Due to the fact that the Request For Quote process was updated, processes that relate to this procedure was modified as well. This process will now display a Q for the line item to reference that this is a product that was generated as a line item for Vendor RFQ. In addition, the *Action&gt; Examine option can be used to view the Vendor RFQ number that was assigned to this quote. <span class="Italics">Note: this will not be displayed when the product is entered, but will be </span><span class="Italics">displayed in the /QOE screen if the quote is re-entered.</span> Previously a separate vendor request for quote was generated for each product listed on the quote, this has since been changed to only generate one quote to include all the items listed on the quote. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001440">Completion Screen</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001441">The recalculation of sales taxes was corrected for Versions 15 and higher. Previously </a>if a line item on a sales order is flagged as nontaxable and the tax jurisdiction code is changed on the sales order completion screen, the taxable/non taxable amounts as well as the sales tax amounts were recalculating incorrectly. This issue has since been resolved and therefore all amounts are recalculated correctly if tax jurisdictions are changed on the sales order completion screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001442">A new </a><span class="Italics">Type</span> flag was added to the Sales Tax Entry screen in Sales Order Completion screen. This new flag works with the Resale Exemption flag (listed on the Maintenance portion of the New Features list) located in the Customer Product Number Maintenance screen. If the customer/customer ship-to currently has a sales tax exemption type established, it will be defaulted into the Type flag located in the completion screen to identify the exemption type allocated for this customer. Currently the only tax exemption type that is currently available is the R type which represents the Resale Exemption. Due to the inability to modify the Tax Jurisdiction and Taxable flags if the customer/customer ship-to record is established as a Resale Exception (Type R), a You Cannot Change Tax Information Associated With A Resale Exempt Customer! You Must Change In Header Screen warning message will be displayed. Therefore, only allowing modifications at the customer level or the header level of the order. Note: You cannot change the R type in the header, just the Tax? Flag. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001443&quot;);"><a name="1001443">Release Confirmation Entry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001443", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001443", false);</script>
+      <div class="Body"><a name="1001444">The functionality of the Release Confirmation Entry screen was updated to work in </a>concurrence with the new Shipping Conf. flag in Warehouse Maintenance as well as the additional flag settings that were added to the Email Ship Notice flag in Customer maintenance. V17 have now been enhanced with the ability to print, fax or e-mail shipping confirmations using the continuous printing process rather than the Shipping Confirmations Printing method. The Release Confirmation Entry screen now contains logic that will print, e-mail or fax the shipping confirmations based on the Email Ship Notice flag setting established for this customer, and If the Shipping Conf. flag is set to Y. The shipping confirmations will be printed, e-mailed or faxed at the time the Update option is selected when the release is processed. If the flag is set to N, users continue to can use the Shipping Confirmations Printing process to generate the shipping confirmations. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001445&quot;);"><a name="1001445">Invoice Preview &amp; Printing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001445", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001445", false);</script>
+      <div class="Body"><a name="1001446">The functionality of the Invoice Printing process was modified to perform inter company </a>postings for consignment orders with different selling and shipping locations. Previously, the G/L posting updated the inventory consigned account for the shipping location entered on the sales order. For V17, the G/L posting will update the inventory consigned account for the selling location entered on the sales order. The inter company Sales A/R and Inter company Sales A/P accounts must be established in the General Ledger Table Maintenance for the G/L postings to be updated correctly when the selling and shipping warehouses are different on the sales order. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001447&quot;);"><a name="1001447">Additional Subsystems - POS</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001447", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001447", false);</script>
+      <div class="Subhead"><a name="1001448">Inquiries&gt; Register Log Inquiry</a></div>
+      <div class="Body"><a name="1001449">A new </a><span class="Bold">Register Log Inquiry</span> was added to the POS Subsystem inquiries. This inquiry was created to display register activity for a register number and date entered. Information such as activity, time, user and cash amount will be included on the inquiry. </div>
+      <div class="Subhead"><a name="1001450">Maintenance&gt; Point of Sale Options</a></div>
+      <div class="Body"><a name="1001451">A new Point of Sale Options maintenance routine was added to the POS Subsystem </a>menu. This list of options allos you to establish additional setup options for cash registers. The options are:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001452">POS Password Method:</a></span> enter the point of sale password method. Select S to use System Builder and enter a system builder user id and password. Select A to use Prelude and enter Prelude like password.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001453">Override Customer:</a></span> this flag determines if the point of sale entry screen is stopped at the customer number prompt to enter a new customer number. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001454">Display Sales Comments:</a></span> this flag determines if the sales comments are prompted at the time of entry.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001455">RCSE &amp; SOE Password Required:</a></span> this flag determines if the retail cash sale entry and sales order entry screens are required to enter a System Builder password.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001456">Maintain Register Control:</a></span> this flag determines if register controls are to be maintained. This flag controls if an opening balance and closing of the register is required.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001457">Override Defaults:</a></span> this flag determines if the startup parameters (location profile) overrides the normal selling warehouse, shipping warehouse, and tax jurisdictions.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001458">Force Ship Quantities:</a></span> this flag determines if you can force ship quantities to be equal to order quantities regardless of the product availability.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001459">Allow Suspended Orders: </a></span>This is a Y/N flag that determines if in fact retail cash sales can be suspended. If Y is selected, the system will allow cash sales to be suspended, if the flag is set to N the suspension of cash sales will not be permitted. 080902A</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001460">Supress Line Item Detai: </a></span>This a Y/N flag that determines if the line item detail screen is suppressed in Point of Sale Entry. The order detail is built behind the scenes. Set this flag to Y to suppress the line item entry screen in Point of Sale Entry. Set this flag to N to not suppress the line item entry screen in Point of Sale Entry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001461&quot;);"><a name="1001461">Additional Subsystems - Quotation</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001461", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001461", false);</script>
+      <div class="Subhead"><a name="1001462">Quotation Entry&gt; F5-Hdr Scr&gt; F7-Tax Jur&gt; Type</a></div>
+      <div class="Body"><a name="1001463">A new </a><span class="Bold">Type</span> flag was added to the Sales Tax Entry screen in Quotation Entry. This new flag works with the Resale Exemption flag <span class="Italics">(listed on the Maintenance portion of the New </span><span class="Italics">Features list)</span> located in the Customer Product Number Maintenance screen. If the customer/customer ship-to currently has a sales tax exemption type established, it will be defaulted into the Type flag located in the header identifying the exemption type allocated for this customer. Currently the only tax exemption type that is available is the R type which represents the Resale Exemption. </div>
+      <div class="Subhead"><a name="1001464">Quotation Entry&gt; Line Item Detail screen&gt; *Action&gt; Entries&gt; Request For Quote </a>Entry</div>
+      <div class="Body"><a name="1001465">The functionality of the </a><span class="Bold">Request For Quote Entry</span> screen was modified to simplify this process. Previously a separate vendor request for quote was created for each product listed in the quote. This has since been enhanced to only create one vendor request for quote to include all items listed on the quote. In addition, a new message that allows you to continue with the Vendor RFQ that was just created. </div>
+      <div class="Subhead"><a name="1001466">Quotation Entry&gt; Q Line item</a></div>
+      <div class="Body"><a name="1001467">The functionality of the Quotation Entry process was enhanced to accommodate a new </a>feature added for V17. Due to the fact that the Request For Quote process was updated, processes that relate to this procedure was modified as well. This process will now display a Q for the line item to reference that this is a product that was generated as a line item for Vendor RFQ. In addition, the *Action&gt; Examine option can be used to view the Vendor RFQ number that was assigned to this quote. <span class="Italics">Note: this will not be displayed when the </span><span class="Italics">product is entered, but will be displayed in the /QOE screen if the quote is re-entered.</span> Previously a separate vendor request for quote was generated for each product listed on the quote, this has since been changed to only generate one quote to include all the items listed on the quote. </div>
+      <div class="Subhead"><a name="1001468">Quotation Entry&gt; Completion Screen&gt; F5-Tax Jur&gt; Type</a></div>
+      <div class="Body"><a name="1001469">A new </a><span class="Italics">Type</span> flag was added to the Sales Tax Entry screen in the Quotation Order Entry Completion screen. This new flag works with the Resale Exemption flag located in the Customer Product Number Maintenance screen. If the customer/customer ship-to currently has a sales tax exemption type established, it will be defaulted into the Type flag located in the completion screen to identify the exemption type allocated for this customer. Currently the only tax exemption type that is currently available is the R type which represents the Resale Exemption. Due to the inability to modify the Tax Jurisdiction and Taxable flags if the customer/customer ship-to record is established as a Resale Exception (Type R), a You Cannot Change Tax Information Associated With A Resale Exempt Customer! You Must Change In Header Screen warning message will be displayed. Therefore, only allowing modifications at the customer or the header of the order. <span class="Bold">Note</span>: You cannot change the R type in the header, just the Tax? Flag. </div>
+      <div class="Subhead"><a name="1001470">Processes&gt; Standing Quote Conversion</a></div>
+      <div class="Body"><a name="1001471">The functionality of the Standing Quote Conversion process was modified for V17. </a>Previously, the order date was updated with the quote date previously entered in Service Quote Entry. Now, the service order is updated with the conversion date when Standing Quote is convted. </div>
+      <div class="Subhead"><a name="1001472">Inquiries&gt; Quotation By Customer&gt; F5-Review</a></div>
+      <div class="Body"><a name="1001473">to reference that a Vendor RFQ was generated for a line item entered in Quotation Entry. </a>A new Q line item notifies you that it is associated with a Vendor RFQ. For further information, the *Action&gt; Examine screen can be used to view the Vendor RFQ Number related to this quote. </div>
+      <div class="Subhead"><a name="1001474">Quotation Order History Inquiry&gt; F5-Review</a></div>
+      <div class="Body"><a name="1001475">to reference that a Vendor RFQ was generated for a line item entered in Quotation Entry. </a>A new Q line itemnotifies you that it is associated with a Vendor RFQ. For further information, the *Action&gt; Examine screen can be used to view the Vendor RFQ Number related to this quote. </div>
+      <div class="Subhead"><a name="1001476">Quote Price Override Report</a></div>
+      <div class="Body"><a name="1001477">In V17, a new Quote Price Override Report is now available. This report lists information </a>about manually changed prices in Quotation Order Entry, Rental Quotation Entry or Service Quotation Entry. This report will display information such as Customer #, Product #, Override Date, Product Line , Original Price, Override Price, Cost and User ID. Once a price is changed and saved, the report is updated. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001478&quot;);"><a name="1001478">Additional Subsystems - Books/Samples</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001478", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001478", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001479">Maintenance&gt; Book Placement Freight Maintenance</a></span>: The Book/Sample Subsystem was updated with a new Book Placement Freight Maintenance option. This new routine allows freight information such as ship date, freight amount, waybill #, total boxes, weight per box, tracking # per box to be entered for a book placement number. The ship date will automatically default to today's date, however, can be overridden. The freight information is for reporting purposes only. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001480">Inquiries&gt; Book Placement Inquiry &gt; F7-Frt Info</a></span>: The Book Placement Inquiry was enhanced with a new F7-Frt Info function. This feature allows you to view the Freight Information in the Book Placement Freight Maintenance pertaining to a book placement number. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001481">Inquiries&gt; Book Placement Inquiry By Book: </a></span>A new Book Placement Inquiry By Book inquiry was created to work with the Book/Sample Subsystem. This inquiry will display book placement entries created in the Book Placement Entry process for a book code. Sort and Filter options are also available in this inquiry to allow you to limit and sort the information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="FieldDesc" style="text-align: left; width: 201.00024pt;" cellspacing="0" summary="">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top; width: 130.00032pt;">
+            <div class="TableHead"><span class="Bold"><a name="1001484">Sort</a></span></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top; width: 70.99992pt;">
+            <div class="TableHead"><span class="Bold"><a name="1001486">Filter</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1001488">A-Ascending Date</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1001490">Entry Date</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1001492">C-Customer Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1001494">Customer #</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1001496">D-Descending Date</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1001498">Salesrep #</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1001500">S-Sales Representative</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1001502">Territory #</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1001504">&nbsp;</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1001506">Type</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Subhead"><a name="1001507">Inquiries&gt; Book Placement Inquiry By Customer</a></div>
+      <div class="Body"><a name="1001508">A new Book Placement Inquiry By Customer inquiry was created to work with the Book/</a>Sample Subsystem. This inquiry will display book placement entries created in the Book Placement Entry process for a customer number. Sort and Filter options are also available in this inquiry to allow users the ability to limit and sort the information according to their needs. Note: Due to the fact that the customer number is used to view the book placement entries, only the C customer type book placement entries will be included on the inquiry. The additional book placement inquiries can be used to view the S Salesrep type book placement entries. . The Sort options are: </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001509">A-Ascending Date</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001510">B-Ascending Book Description</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001511">D-Descending Date</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001512">X-Descending Book Description</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001513">Samples&gt; Sample Request Entry</a></div>
+      <div class="Body"><a name="1001514">The functionality of the </a><span class="Bold">Sample Request Entry</span> process was modified to now can print a sample request pick ticket, sample request label or both. with this new feature, a new Sample Pck Ticket flag has also been added to the Continuous Printer Setup screen (referenced in the Warehouse Maintenance section of the Systems New Features list). The print option box was created with the following options: </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001515">Labels </a></span>This option will print sample request labels at the time of processing the sample request if continuous printing is established for labels. If continuous printing is not established, the sample request label must be printed in Sample Label Printing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001516">Pick Ticket:</a></span> This option will print a sample request pick ticket at the time of processing the sample request if continuous printing is established for sample request pick tickets. If continuous printing is not established, the sample request pick ticket must be printed in Sample Pick Printing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001517">Both:</a></span> This option will print a sample request pick ticket and label at the time of processing the sample request if continuous printing is established for sample request pick tickets and labels. If continuous printing is not established, the sample request pick ticket must be printed in the Sample Pick Printing and the sample request label must be printed in Sample Label Printing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001518">None:</a></span> Do not print a sample request pick ticket or label. You must open the sample request and choose Labels, Pick Ticket, or Both to print the pick ticket and/or labels.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001519">Return:</a></span> Goes back to the Sample Request Entry screen for editing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001520">The logic was modified to further enhance the functionality of the Sample Request </a>Entry screen. Users now can enter a customer part number as the product number. In addition, if a customer part number is entered that has previously established for another customer, a warning message indicates that the customer part numberis assigned to another customer. with this new feature, the Sample Request Inquiry By Customer has also been updated to accommodate this option. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001521">Requested By</a></span> - updated with the F3-Lookup option. If the contact management module is currently being used, the F3-Lookup will display the list of available contacts for the customer entered. Previously this functionality was not yet available. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001522">Attention</a></span> - was updated with the F3-Lookup option. If the contact management module is currently being used, the F3-Lookup will display the list of available contacts for the customer entered. Previously this functionality was not yet available. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001523">Project Location</a></span> - was added to the Sample Request Entry screen to allow users to enter a project location for reference purposes. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001524">Project State</a></span> - was added to the Sample Request Entry screen to allow users to enter a project state for reference purposes. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001525">Product Number</a></span> - modified to now check for obsolete an not available for sale items. If an obsolete product number <span class="Italics">(established in /PM-Obsolete Flag=Y)</span> is entered, the message Product Is Flagged As Obsolete appears; however, you can to continue with the product number entry. However, if the item entered is not available for sale <span class="Italics">(in /</span><span class="Italics">PM</span>&gt;<span class="Italics">F5-Add Info</span>&gt;<span class="Italics">Available For Sale=N)</span> a warning message Product Not Available For Sale appears and you cannot order this item. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001526">Quantity</a></span> - updated to condense the steps necessary for entering the quantity of sample requests. This field will now default in the same quantity for the product being entered as the quantity entered on the previous line item. Therefore,you do not have to enter a quantity for each line item unless it is different. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001527">F5-Header&gt; *Action&gt; Freight Detail: </a></span>Allow users to view the freight detail information that pertains to the PSS Interface for a sample request. Note: When entering the sample request # in the release field on the PSS Interface screen, the sample request number mist be entered with an A prefix (Example: A100253). In addition, this new feature is also now available in sample request inquiries. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001528">F7-Pattern</a></span> - added to the Sample Request Entry process screen. This option allows users to enter a pattern code and quantity of the sample items that are to be added to the sample request. The Pattern Codes that will be displayed as available, are codes that were previously established as pattern codes in the Valid Response Maintenance screen in the Systems menu. (referenced in the Maintenance portion of the Systems new features list) Once these codes were setup as valid pattern codes they will be included on the list displayed when F3-Lookup is selected on the Pattern field. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001529">Samples&gt; Sample Printing</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001530">Sample Label Printing: </a></span>Previously, this process was referenced as Print Sample Request Labels. The functionality is the same, but it is the <span class="Bold">Sample Label Printing</span> process. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001531">Sample Pick Printing: </a></span>The Sample Pick Printing process was added to allow sample request labels to be printed in batch mode if the Continuous Printer option is not going to be used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001532">Samples&gt; Sample Inquirie</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001533">Sample Request Open Inquiry</a></span> - added to the list of Sample inquiries. This inquiry will display information pertaining to all sample requests for a customer number that have not completely been processed or the sample request labels have not yet been printed. .</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001534">Sample Request History Inquiry</a></span> - added to the list of Sample inquiries. This inquiry will display information pertaining to all sample requests for a customer number that have already been processed and as well as had all the sample labels printed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001535">Sample Request Inquiry By Product Number </a></span>- added to the list of Sample inquiries available. This inquiry will display information for sample requests for a product number. This inquiry also includes Sort Options to set a criteria of how the information appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001536">Sample Request Inquiry By Customer Number </a></span>- added to the list of Sample inquiries . This inquiry will display information for sample requests for a customer product number. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1001537">The Sort options for all of these inquiries are:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001538">D-Entry Date</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001539">L-Project Location</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001540">N-Project Name</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001541">P-Specifier Number</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001542">S-Sample Number</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001543&quot;);"><a name="1001543">Optional Entry &amp; Printing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001543", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001543", false);</script>
+      <div class="Subhead"><a name="1001544">Credit Memo Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001545">Apply to Pending Core</a></span> - The functionality of the Credit Memo Entry process was modified to allow the original invoice to be applied to the pending core. Previously the invoice number that was entered could not be applied to the pending core. with this change, the F6-Review and F5-Review Shipping functions in the Core Status Inquiry <span class="Italics">(on the Inventory New Features List)</span> have also been updated to accommodate this modification. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001546">Credit Reason </a></span>- Previously, the F3-Lookup would display each credit reason code associated with each product line, therefore, possibly duplicating the same reason code displayed based on how many product lines contain a reason code. The logic of the F3-Lookup screen has since been changed to now only list the reason code once regardless of how many product lines are associated with this code. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001547">Action&gt; Auto Reverse </a></span>- Previously, the function of the Auto Reverse feature was referred to throughout the system as Void Sale. In addition to this name change, the functionality of this process has also been modified to include a calculation of restocking charge. Up to V16, the restocking charge percent established for the credit reason code entered pulled from the company level was not calculated for the Void Sale performed in Sales Order Entry, Credit Memo Entry or RGA Entry when reversing the original sales order. The Restocking charge was only considered when entering a credit memo or RGA against the original sales order in Credit Memo Entry or RGA Entry. This has since been changed for V17 to now calculate the restocking charge percent that is established for the credit reason code entered or from the company level. The auto reverse process will now calculate the restocking charge percent the same as if you entered a credit memo or RGA against the original sales order in Credit Memo Entry or RGA Entry. <br />In addition to the process name change of this feature, the functionality of the Auto Reverse process has also been modified. Previously, this process would not allow positive lines to be reversed. This has since been updated to permit the reversal of both positive as well as negative lines. The positive lines on the original sales order will be reversed as negative lines in Auto Reverse. The negative lines will be reversed to positive lines. The F3-Lookup on a invoice number field lists invoices for the customer number (Positive totals-no credit memo lines, Positive Totals-some credit memo lines, Negative totals-all credit memo lines). 092002B<br />A new <span class="Bold">Retain Additional Charges </span>prompt was added to the functionality of the Auto Reverse feature. This message appears and you can choose if any additional charges such as outbound freight, handling, restocking charges etc. that were previously calculated on the original sales order should be retained for reversal. If Yes is selected, the additional charges in the Sales Order Completion screen will be kept on the screen but with a reverse entry amount. Select N to not retain the additional charges, therefore clearing out any added amounts in the completion screen. 092002B </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001548">RGA Entry&gt; *Action&gt; Auto Reverse</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001549">Previously, the function of the Auto Reverse feature was referred to throughout the </a>system as Void Sale. In addition to this name change, the functionality of this process has also been modified to include a calculation of restocking charge. Up to V16, the restocking charge percent established for the credit reason code entered pulled from the company level was not calculated for the Void Sale performed in Sales Order Entry, Credit Memo Entry or RGA Entry when reversing the original sales order. The Restocking charge was only considered when entering a credit memo or RGA against the original sales order in Credit Memo Entry or RGA Entry. This has since been changed for V17 to now calculate the restocking charge percent that is established for the credit reason code entered or from the company level. The auto reverse process will now calculate the restocking charge percent the same as if you entered a credit memo or RGA against the original sales order in Credit Memo Entry or RGA Entry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001550">In addition to the process name change of this feature, the functionality of the Auto </a>Reverse process has also been modified. Previously, this process would not allow positive lines to be reversed. This has since been updated to permit the reversal of both positive as well as negative lines. The positive lines on the original sales order will be reversed as negative lines in Auto Reverse. The negative lines will be reversed to positive lines. The F3-Lookup on a invoice number lists invoices for the customer number (Positive totals-no credit memo lines, Positive Totals-some credit memo lines, Negative totals-all credit memo lines). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001551">A new </a><span class="Bold">Retain Additional Charges </span>prompt was added to the functionality of the Auto Reverse feature. This message appears and you can choose to retain additional charges such as outbound freight, handling, restocking charges etc. that were previously calculated on the original sales order for reversal. If Yes is selected, the additional charges in the Sales Order Completion screen are kept on the screen but with a reverse entry amount. Select N to discard the additional charges, therefore clearing out any added amounts in the completion screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001552">Warehouse Release Confirmation Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001553">A new Warehouse Release Confirmation Entry screen was created to perform the </a>same function as the No Update option in Release Confirmation Entry with the exception that a packing slip will be printed if continuous printing is set up. You can use this screen as a maintenance entry process for Release Confirmation Entry. The quantity shipped, bin location, serial number, lot number, kit components etc. can be updated for each line item on the release. Once the screen is processed, the system will update the release as a No Update but will print a packing slip only if continuous printing was established for packing slips. Note: In Release Confirmation Entry you can enter a substitute item on the product number field. The system updates the product as a substitute item and replaces the product with the substitute item; however, this feature is not available in Warehouse Release Confirmation Entry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001554">The functionality of the Warehouse Release Confirmation Entry screen was updated </a>to work in concurrence with the new Shipping Conf. flag in Warehouse Maintenance (listed on the Systems New Features List) as well as the additional flag settings that were added to the Email Ship Notice flag in Customer maintenance (listed on the Order Processing New Features List). V17 have now been enhanced with the ability to print, fax or e-mail shipping confirmations using the continuous printing process rather than the Shipping Confirmations Printing method. The Warehouse Release Confirmation Entry screen now contains logic that will print, e-mail or fax the shipping confirmations based on the Email Ship Notice flag setting established for this customer, and If the Shipping Conf. flag is set to Y. The shipping confirmations will be printed, e-mailed or faxed at the time the Update option is selected when the release is processed. If the flag is set to N, users continue to can use the Shipping Confirmations Printing process to generate the shipping confirmations. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001555&quot;);"><a name="1001555">Processes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001555", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001555", false);</script>
+      <div class="Subhead"><a name="1001556">Process Invoice&gt; B Update</a></div>
+      <div class="Body"><a name="1001557">to further enhance Prelude, the B Update process was updated with the GRIM (General </a>Report interface Maintenance) screen. The functionality of this routine was not modified. </div>
+      <div class="Subhead"><a name="1001558">Release Pick Tickets</a></div>
+      <div class="Body"><a name="1018405">to further enhance Prelude, the Release Pick Tickets process was updated with the GRIM </a>(General Report interface Maintenance) screen. The functionality of this routine was not modified.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001560&quot;);"><a name="1001560">Customer Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001560", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001560", false);</script>
+      <div class="Subhead"><a name="1001561">F4-Delete</a></div>
+      <div class="Body"><a name="1001562">with the Book/Sample Subsystem, a new </a><span class="Bold">WARNING</span> message was added when deleting a customer number. This new warning message will only be displayed if the customer being deleted currently has existing books in their possession. This is a notification message only. Choose Continue to delete. To use this feature, Books/Samples in Company Maintenance must be Y and the customer number be in BOOKS.CUST. </div>
+      <div class="Subhead"><a name="1001563">F5-Add Info</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001564">A new </a><span class="Bold">Mail?</span> Flag was added to the Customer Maintenance screen. This is a Y/N flag that determines if this customer would like to receive mailings. In addition, this information can be used for reporting purposes by modifying the GRIM screen in the Customer Labels process located in the Accounts Receivable&gt; Listings menu. Once you have selected the F5-Modify option, enter MAIL.FLG as the Dictionary Name, select F2-Save to add the Mail? prompt to the GRIM screen. Once this report is generated, it will include all customers with the Mail? Flag set to Y in the Customer Maintenance screen. In addition, this new flag contains logic that will update the Mail? flag in the prospect file to match the flag setting established here. Example: If the Mail? flag in Customer Maintenance is set to Y, the Mail? flag in Prospect Maintenance will automatically also be set to Y. If the flag in Customer Maintenance is changed to N, the flag in the prospect file will again be automatically updated to reflect the change and the Mail? flag in Prospect Maintenance will also be set to N. <span class="Bold">Note:</span> This update feature only applies to changes made to the flag setting in Customer Maintenance, if the change is made in Prospect Maintenance, the flag setting in the Customer Maintenance record will not be changed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001565">A new </a><span class="Bold">E-Mail?</span> flag was added to the Customer Maintenance screen to determine if this customer is to be included in the bulk e-mail list. If this flag is set to Y this customer will be incorporated into the e-mail list. This flag was created for informational purposes and is strictly used for grouping of customers for reporting functions. with this new flag, Customer Labels can be also be produced for this list of customers in the Accounts Receivable&gt; Listings&gt; Customer Labels menu option. to use the list that currently includes customers with the E-Mail flag set to Y in Customer Maintenance, this Customer Labels GRIM (General Report Interface Maintenance) screen will need to be modified with to add the E-mail?= flag to the selection screen. This is done by selecting the F5-Modify function key. Once this was selected, enter EMAIL.FLG as the dictionary name on the next available line. Once this screen is processed, the GRIM screen will include the new E-Mail? = field. Leave all other fields blank with the exception of the E-Mail?= flag, enter Y here. In addition, this new flag contains logic that will update the E-Mail? flag in the prospect file to match the flag setting established here. Example: If the E-Mail? flag in Customer Maintenance is set to Y, the E-Mail? flag in Prospect Maintenance will automatically also be set to Y. If the flag in Customer Maintenance is changed to N, the flag in the prospect file will again be automatically updated to reflect the change and the E-Mail? flag in Prospect Maintenance will also be set to N. <span class="Bold">Note:</span> This update feature only applies to changes made to the flag setting in Customer Maintenance, if the change is made in Prospect Maintenance, Customer Maintenance will not be changed. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001566">Type</a></span> was added to the Sales Tax Entry screen in Customer Maintenance. This new flag works with the Resale Exemption flag in Customer Product Number Maintenance. This flag determines the type of sales tax exemption that applies to the customer. Set the flag to R to indicate that this customer is included for resale exemptions only. Leave the flag blank to exclude the customer from the tax exemption. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001567">F6-Prospect Conv&gt; Customer Number</a></div>
+      <div class="Body"><a name="1001568">The process of the </a><span class="Bold">F6-Prospect Conv</span> process was updated to now automatically default in the customer number into the Prospect Number field when converting a customer into a prospect. Previously, you were required to manually enter the prospect number manually. </div>
+      <div class="Subhead"><a name="1001569">F7-Order&gt; F5-Add Info</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001570">Sales Tax Group</a></span> - accommodate a new TAX.GRP validation code established for the Valid Response Maintenance feature. With this new validation logic in place, any entry in the Sales Tax Group field will be validated against the list of available responses created for the TAX.GRP validation code. If anything other than a valid response is entered, an Invalid Response! Please Try Again Or Press F3 For Options! <span class="Bold">WARNING</span> message will be displayed disallowing the entry of an invalid response. The F3 function key will display all the valid responses for this field. In addition, the same functionality update for the Sales Tax Group in Customer Maintenance has also was added to Product Tax Group in Product Maintenance as well as the Product Tax Group field in the Product Warehouse Maintenance screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001571">Blind Shipment?</a></span> - was located in the Sales Order Header. You could set this flag to Y/N to determine if this order should be a blind shipment order. to simplify this process, the Blind Shipment? flag was added to Customer Maintenance to determine the Blind Shipment status at the Customer level rather than the sales order level for each sales order. In addition, a new A flag setting is also now available. Setting the flag to A will display a prompt at the time of sales order entry to allow you to select whether this order is a Blind Shipment. <span class="Italics">Note:</span> The default is from Customer Maintenance but can be modified per sales order by changing the flag setting in the sales order header. <span class="Bold">Note:</span> A USER-FORMS change will be required for the Optio pick ticket and Packing list user forms programs to use this new feature. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001572">Packing List? flag was added to the Customer Maintenance screen to work with the </a>new Blind Shipment? flag. This is a Y/N flag that will determine if a packing list will print for the customer based on Blind Shipment?. If the Blind Shipment? flag is set to Y and the Packing List? flag is also set to Y, a blind copy of the packing list will be printed for this customer. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001573">V17 were updated with the ability to print, e-mail or fax shipping confirmations using </a>the continuous printing process rather than using the batching printing procedure. with the new Shipping Conf. flag added to the F6-Continuous Printing Setup screen in Warehouse Maintenance <span class="Italics">(listed in the Systems New Feature List)</span>, additional settings have also been added to use this feature. Previously, the Email Ship Notice flag could only be set to Y, or N. With this new enhancement, the Email ship notice flag can be set to P to Print shipping confirmations. E to E-Mail shipping confirmations or F to Fax shipping confirmations. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001574">F7-Order&gt; F7 Frt Info&gt; Freight Paid Limit</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001575">A new </a><span class="Bold">Ship Via</span> flag was added to the Freight Paid Limit portion of the Freight Information screen. This new flag was created to allow multiple ship via codes to be associated with freight paid limits for prepaid freight for a customer. Previously, the prepaid freight amount was unable to be allocated to multiple ship via codes. Now each Ship Via Code that has the Prepaid Freight flag set to Y can be established with their own prepaid freight amount. If the Ship Via field is left blank, the system will then perform the Freight Pd Limit amount check for all ship via codes that have Prepaid Freight of Y. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001576">A new Review Date was added to the Freight Paid Limit portion of the Freight </a>Information screen with the new Ship Via flag. However, this field does not contain any logic that will affect the calculation of the freight paid limits. This new field is strictly used for custom reporting. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001577&quot;);"><a name="1001577">Customer Ship-To Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001577", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001577", false);</script>
+      <div class="Subhead"><a name="1001578">F5-Add Info&gt; Mail?</a></div>
+      <div class="Body"><a name="1001579">A new </a><span class="Bold">Mail?</span> Flag was added to the Customer Ship-To Maintenance screen. This is a Y/N flag that determines if this customer would like to receive mailings. In addition, this information can be used for reporting purposes by modifying the GRIM screen in the Customer Ship-Tos located in the Order Processing&gt; Listings menu. Once you have selected the F5-Modify option, enter MAIL.FLG as the Dictionary Name, select F2-Save to add the Mail? prompt to the GRIM screen. Once this report is generated, it will include all customers with the Mail? Flag set to Y in the Customer Maintenance screen. </div>
+      <div class="Subhead"><a name="1001580">F6- Sales Tax&gt; Type</a></div>
+      <div class="Body"><span class="Bold"><a name="1001581">Type</a></span> was added to the Sales Tax Entry screen in Customer Ship-To Maintenance. This new flag works with the Resale Exemption flag in Customer Product Number Maintenance. This flag determines the type of sales tax exemption that applies to the customer. Set the flag to R to indicate that this customer is included for resale exemptions only. Leave the flag blank to exclude the customer from the tax exemption. </div>
+      <div class="Subhead"><a name="1001582">F7-Order&gt; F7 Frt Info&gt; Freight Paid Limit</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001583">Ship Via</a></span> - allow multiple ship via codes to be associated with freight paid limits for prepaid freight for a customer ship-to. Previously, the prepaid freight amount was not allocatedd to multiple ship via codes. Now each Ship Via Code with Prepaid Freight flag set to Y can have its own prepaid freight amount. If Ship Via is left blank, the system checks the Freight Pd Limit for all ship via codes with Prepaid Freight set to Y. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001584">Review Date</a></span> - does not contain any logic that will affect the calculation of the freight paid limits. This new field is strictly used for custom reporting. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001585">Maintenance&gt; Misc Code Files&gt; Credit Reason Codes&gt; Update Product Usage?</a></div>
+      <div class="Body"><a name="1001586">This screen was updated with a new </a><span class="Bold">Update Product Usage?</span> Flag that allows you to determine if product usage should be updated when this Credit Reason Code is used when invoicing a credit memo. Previously, the system would automatically update product usage when a credit memo was processed and invoiced. With this new flag, you can select which Credit Reason Codes update product usage. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001587&quot;);"><a name="1001587">Customer Entry Control Files - Ship Via</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001587", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001587", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001588">The Ship Via Codes screen has added a new F8-Add Chrg function. This new feature </a>permits additional charges based on the ship via code and merchandise amount to be added to the sales order completion screen. The Ship Via Additional Charge screen allows the selection of the <span class="Italics">Additional Charge Type</span> such as Delivery, that is to be used to display the additional charges that will be applied to the sales order. Once the type was selected, the <span class="Italics">Merchandise $</span> amount is established as to qualify the amount of the corresponding charge that is to be applied to this sales order. The <span class="Italics">Charge $</span> field should contain the amount that is to be added to the sales order based on the merchandise amount. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001589">Action</a></span>&gt;<span class="Bold"> Addtl Optns&gt; PSS Manifest Interface</span> - A new PSS.XREF file was created in Prelude. This new file was added to allow the passing of the ship via code entered in the PSS Ship Via Code field for PSS Interface to Prelude. In addition, this XREF file allows the ship via to be changed in PSS and Prelude will recognize the new ship via if needed for changing on a release. Note: If the PSS Ship Via Code is currently established, however, needs to be changed, the existing Ship Via Code should be cleared out and the ship via code maintenance screen processed with a Null value. Pull up the ship via code again and enter the new PSS Ship Via Code to be updated. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001590&quot;);"><a name="1001590">Order Entry Control Files - Customer Product Numbers</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001590", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001590", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001591">Account Code </a></span>- allows the accounting code associated with this customer part number to be entered. The account code established in this field will automatically be defaulted into the Customer Acct Code field for the line item once the customer part number is entered at the Product Number field in Sales or Quotation Order Entry. to use this feature properly, it is required that the Require Acct Code field in the F7-Order screen in Customer Maintenance be set to Y. In addition, the accounting code entered for the customer part number must match the pattern established for the accounting code at the customer level. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001592">Resale Exemption</a></span> - determine if the customer product number is a taxable or non-taxable. If the customer product is non-taxable and should be exempt from sales tax, select Y. If this item is taxable, set this flag to N. This flag works with the Type flag established for the customer/customer ship-to record. Once the customer product number is entered on a sales order, the Resale Exemption flag in Customer Product Number Maintenance will override the Resale Exemption flag at the product level to determine the sales tax exemption. <span class="Italics">Note: This feature is not available for Service Items </span><span class="Italics">(Service Item Flag=Y). </span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001593">Notes</a></span> - added to the Customer Product Numbers screen. This was added to enable users to enter internal notes that are related to a customer and product number. Given that these notes are for internal purposes only, they will NOT be displayed anywhere else throughout the system. Note: these notes are attached to the product number entered in the Product Number field of the Customer Product Numbers Maintenance screen not Cust Product Number. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001594&quot;);"><a name="1001594">Price Matrix Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001594", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001594", false);</script>
+      <div class="Subhead"><a name="1001595">New Matrix Types</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001596">Type 19</a></span> - Customer Ship-To/Product Price Matrix type - discounts for a customer ship-to and product combination. In addition a new Customer Ship-To/Product listing has also been added to the Price Matrix Listing menu. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001597">Type 20</a></span> - Customer Ship-To/Product Price Group Price Matrix - discounts for a customer ship-to and product price group combination. In addition a new Customer Ship-To/Product Price Group listing has also been added to the Price Matrix Listing menu. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1001598">Type 30</a></span> - Customer Type/Product Price Group Price Matrix - discounts for a customer type and product price group combination. In addition a new Customer Type/Product Price Group listing has also been added to the Price Matrix Listing menu. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001599">Price Matrix Listings </a></div>
+      <div class="Body"><a name="1001600">To further enhance the customization ability of reports throughout Prelude, several </a>reports in the Price Matrix Listings menu were updated to use the GRIM (General Report Interface Maintenance) screen. The following listings were modified: </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001601">Price Matrix 1 (Customer Number/Product Number)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001602">Price Matrix 2 (Customer Number/Customer Product Number)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001603">Price Matrix 3 (Customer Number/Product Line)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001604">Price Matrix 4 (Customer Number/Vendor Number)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001605">Price Matrix 5 (Customer Number/Product Price Group)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001606">Price Matrix 11 (Customer Number/Major Group)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001607">Price Matrix 13 (Customer Number)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001608">Price Matrix 21 (Customer Number/Product Number Range)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001609">Quick Price Matrix Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001610">A Quick Price Matrix Entry menu option was added to Prelude. This new feature </a>enables users to view and/or modify multiple price matrices for a customer/customer price group using one entry rather than entries. However, only matrix types 1, 3, 6 and 8 can be modified in this process. The fields that are currently available to be modified are the Start Date, Expire Date, Method, Table, Price, Basis and Percent. In addition, the product number/ product line can be added, edited to deleted from the price file. Note: Even though process uses the GRIM (General Report Interface Maintenance) screen, the F5-Modify Criteria is not permitted to add or edit the fields in this screen.Use the current fields. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001611">The GRIM screen in Quick Price Matrix Entry has a new </a><span class="Bold">Contract Number</span> field. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001612&quot;);"><a name="1001612">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001612", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001612", false);</script>
+      <div class="Subhead"><a name="1001613">Customer Price &amp; Availability Inquiry&gt; Weight</a></div>
+      <div class="Body"><a name="1001614">A new </a><span class="Bold">Weight</span> field has recently been added to the Customer Price &amp; Availability Inquiry screen. The weight will now be displayed for this item. No Form #</div>
+      <div class="Subhead"><a name="1001615">Administrative Order Hold Parameter Inquiry (/AOHI) </a><span class="Italics">(not on a menu)</span></div>
+      <div class="Body"><a name="1001616">A new </a><span class="Bold">Administrative Order Hold Parameter Inquiry </span>was added to Prelude. This inquiry was created to display the administrative order hold parameter options established in the Order Processing Parameters&gt; F5-Add Info&gt; Administrative Order Hold =Y.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001617&quot;);"><a name="1001617">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001617", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001617", false);</script>
+      <div class="Subhead"><a name="1001618">Daily Order Detail Reports&gt; Order/Quote Profitability Report</a></div>
+      <div class="Body"><a name="1001619">The Daily Order Detail Reports menu was updated with a new Order/Quote Profitability </a>Report. This report displays profitability information for a quote or order, including information such as Line #, Product Number, Order Qty, Extension Price, Extension Cost, Profit and Profit %. Each line item and the total is displayed. <span class="Italics">Note: This report can only be </span><span class="Italics">generated for a order or quote</span>. </div>
+      <div class="Subhead"><a name="1001620">Daily Accounting Reports&gt; Deposit Balance Report</a></div>
+      <div class="Body"><a name="1001621">A new </a><span class="Bold">Deposit Balance Report</span> was created in the Daily Accounting Report menu. This report was added to display information pertaining to sales orders that were invoiced however, still contains remaining deposit amounts. This report will display a total for the Dep Balance column for each warehouse as well as a grand total for all the warehouses listed. In addition this report will also include the Order #, Customer # and Description. </div>
+      <div class="Subhead"><a name="1001622">Miscellaneous Reports&gt; VSIFAX Log</a></div>
+      <div class="Body"><a name="1001623">to provide users the ability of viewing faxes that were sent as well as faxes that are </a>currently in process in the system, a new <span class="Bold">VSIFAX Log</span> was created. This new log will display information such as Job #, Date, Time, User, Fax # Status Error and # of tries. In addition, a F5-Examine Job function is also available to display the Fax Inquiry screen which exhibits the detailed fax information fro example, the To/From Company name, Fax #s, Subject, 3 of pages etc. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001624&quot;);"><a name="1001624">Program Changes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001624", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001624", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001625">The Line Item Delete process using the backslash process to delete was modified. </a>This process was re-written. The backslash command will now work identical to the F4-Delete. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001626">To further enhance Prelude, the </a><span class="Bold">B Update</span> process was updated with the GRIM <span class="Italics">(General Report interface Maintenance) </span>screen. The functionality of this routine was not modified. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001627">The Invoice Summary USER-FORM was added to the list of available standard </a>USER_FORMS for Optio Printing in addition to a new flag setting. The Invoice Summary flag can now be set to O to use the Optio process for printing summary invoices. <span class="Italics">Note:</span> The Summary Invoice Printing USER-FORMS program will need to be modified for customers upgrading from an earlier version of the software.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001628&quot;);"><a name="1001628">System Enhancements</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001628", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001628", false);</script>
+      <div class="Subhead"><a name="1001629">Gift Certificate Processing…</a></div>
+      <div class="Body"><a name="1001630">V17 were updated with a new Gift Certificate Process to provide customers the ability of </a>using gift certificates for their organization. to use this new feature, several areas of the software such as flag settings as well maintenance routines throughout the system will be required to be setup. Once the necessary settings were established, additional reports and listings have also been added to Prelude to provide information pertaining to the gift certificate transactions. For further details on how to get started with gift certificates, please refer to the Gift Certificate documentation located in the Order Processing menu. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v17_new_features.4.1.htm#1001428">V17 New Features</a>:Order Processing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

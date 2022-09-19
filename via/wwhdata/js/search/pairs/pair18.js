@@ -1,0 +1,27 @@
+function FileData_Pairs(x)
+{
+x.t(":invoice","returns");
+x.t("change","via");
+x.t("orders","submitted");
+x.t("verbiage","maintenance");
+x.t("text","print");
+x.t("menu",":invoice");
+x.t("via","requires");
+x.t("via","retail");
+x.t("requires","user-forms");
+x.t("invoice","returns");
+x.t("user-forms","change");
+x.t("maintenance","invoice");
+x.t("maintenance","enter");
+x.t("maintenance","activant");
+x.t("solutions","866-878-0574");
+x.t("972-403-3150","preludeeducation@activant.com");
+x.t("retail","menu");
+x.t("enter","text");
+x.t("print","invoices");
+x.t("submitted","via");
+x.t("activant","solutions");
+x.t("866-878-0574","972-403-3150");
+x.t("returns","verbiage");
+x.t("invoices","orders");
+}

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Warehousing</title>
+    <link rel="StyleSheet" href="css/v16_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1006357">Warehousing</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1006364&quot;);"><a name="1006364">Bin Replenishment Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1006364", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1006364", false);</script>
+      <div class="Body"><a name="1006372">A new option was added to the Frozen Control flag for Version 16. This new M option will </a>freeze only the Bin Max Quantity and allow the Bin Replenishment Min/Max update to receive the Min Qty. If the bin minimum calculation is greater than the frozen bin maximum, the system will set the bin minimum to the frozen maximum quantity minus 1. </div>
+      <div class="Subhead"><a name="1006384">Bin Replenishment Min/Max Update</a>	</div>
+      <div class="Body"><a name="1019807">The Bin Replenishment Min/Max Update was enhanced to now include a new Preview or </a>Update field. If P is selected, a preview report will then be generated. If this flag is set to U, the update process will be performed without printing a preview report first. </div>
+      <div class="Subhead"><a name="1019808">Summary Bin Queue</a></div>
+      <div class="Body"><a name="1006406">The Summary Bin Queue Inquiry is a new inquiry that was added to display the number </a>of pending transactions that are to be picked for a warehouse, using the RF unit. These transactions include Sales Orders, Stock Transfers, Work Orders, Bin Replenishments and 1<span style="vertical-align: super;">st</span> &amp; 2<span style="vertical-align: super;">nd</span> level cycle counts. The inquiry screen will be updated by reducing the number that is displayed  in the #Documents and #Lines columns, once the transaction was picked and processed using the RF Unit. </div>
+      <div class="Subhead"><a name="1006422">Product Label Print By Receiver</a></div>
+      <div class="Body"><a name="1006428">To provide users the ability to print barcodes for a Purchase Order or Transfer Receiver </a>#, as well as Product Numbers, a new feature was added to Version 16. The Product Label Print By Receiver is a new printing process that allows you to enter a Warehouse #, Printer Form Queue, Document Type, Receiver Number, or Product Number information for barcode printing. If Document Types <span class="Italics">P</span> (Purchase Order) or <span class="Italics">T</span> (Transfer) are selected, and the valid Receiver number is entered, the user will then be prompted to choose one of three barcode printing options. The <span class="Italics">Single</span> option will display all the products listed on this receiver. The # Labels column will be defaulted to display O for labels to print, the user then has the option of entering the number of labels required for this product. If the <span class="Italics">Exception</span> option is chosen, only the products that have a received quantity will be displayed, the # Labels field  in this screen will automatically be defaulted with the quantity received for this product. However, the user has the capability of changing this number if needed. If <span class="Italics">Complete</span> is selected, the system will automatically calculate the # of labels needed based on the quantity received and print that number of barcode labels. If Document Type <span class="Italics">M</span> is entered for this process, an additional screen will be displayed, prompting the user to enter the product and the number of labels to be printed for this item. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1006451&quot;);"><a name="1006451">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1006451", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1006451", false);</script>
+      <div class="Subhead"><a name="1006457">Picker Statistics Report</a></div>
+      <div class="Body"><a name="1006464">with some modifications that were made  in the system The Picker Statistics Report was </a>updated to accommodate these new features. For Version 16, three attributes were added to the PICK.STATS file to better track pick errors associated with Credit Reason Codes. <span class="Italics">(For more information on this feature view the MISC. topic  in this document.)</span> In addition, the Credit Reason Codes Maintenance screen has also been updated with a new Update Picker Stats flag that will determine if in fact the new attributes  in the PICKER.STATS file will be updated once a credit reason code is entered and invoiced  in Credit Memo Entry. <span class="Italics">(For more information on this feature view the MAINTENANCE. topic  in this document.) </span>As far as the additions made to the Picker Statistics Report, three new columns were added to represent the new attributes added. The Pick Err Rsn column represents attribute 6.M to identify the Credit Memo Reason Code. The #PckErr column represents attribute 7.M that will display the Number of Pick Errors for that reason code. The Pckerr Qty column will represent attribute 8.M in which displays the Total Qty of Pick Error Lines per reason code. </div>
+      <div class="Body"><a name="1006477">The Picker Statistics Report was updated with a new Unt/Zn column. This new column will </a>represent the total number of units picked per zone. The information that will be displayed in this field is generated from Attribute 5.M (NUM.UNITS.ZONE)  in the PICK.STATS file once the Sales Order Bin Allocation was processed and the release was updated. Please note, that the 5.M Attribute is multi valued with the zone being contained  in Attribute 1.M. In addition to the updating of the sales orders, work orders, stock transfers, bin replenishments, and any other processes that may update this file will display total number of units picked as well. </div>
+      <div class="Subhead"><a name="1006484">Receiving Statistics Report</a></div>
+      <div class="Body"><a name="1006491">A new Receiving Statistics Report has currently been added to the Warehousing module. </a>This report displays information regarding any warehousing activities that were received through Stock Receipts (terminal or RF process) or Stock Transfers. In addition, this report was formatted to list the total number of received lines for each user and transaction date under the <span class="Italics">#Received</span> column. To better identify the transactions that pertain to this report, two new Transaction Types were created as well. The SRR-Stock Receipts type identifies entries received  in <span class="Italics">Stock Receipts Entry</span> (/SRE), <span class="Italics">RF Stock Receipts</span> (/RFSRE), <span class="Italics">RF Multi P/O SRE</span> (/RFMSR), <span class="Italics">Direct Ship Receipt Entry</span> (/DSRE) and <span class="Italics">Batch Update </span><span class="Italics">Procedure</span> (/BSRE). The TRR-Stock Transfer Receipts type references transactions received through <span class="Italics">Transfer Receipts Entry</span> (/TRE) and <span class="Italics">Batch Update Procedure</span> (/BTR.UPDATE.PROCESS). </div>
+      <div class="Subhead"><a name="1006517">Rf Release Picked Report</a></div>
+      <div class="Body"><a name="1006524">The Warehousing module has added a new RF Release Picked Report  in the Reports </a>screen. This new report displays all releases that were completely picked on RF Units and are waiting to be updated through the Release Confirmation Entry process. Once the releases were confirmed through RCE, they will no longer appear on the report. </div>
+      <div class="Subhead"><a name="1006533">Warehouse Activity Report</a></div>
+      <div class="Body"><a name="1006540">Version 16 has added a new report to the Warehousing module. The Warehouse Activity </a>Report was created to display warehouse activity by a warehouse as well as beginning and ending activity dates. This report displays information such as <span class="Italics">Sales Order Pick Lines</span> (updated at time of Pick Confirmation By Range or Pick Confirmation By Release). <span class="Italics">Sales </span><span class="Italics">Order Pack Lines</span> (updated at time of SSCC Entry). <span class="Italics">Transfer Pick Lines</span> (updated at time of Transfer Picking Entry). <span class="Italics">Transfer Pack Lines</span> (updated at time of Transfer SSCC Entry). <span class="Italics">Work Order Pick Lines</span> (updated at time of Work Order Picking Confirmation). <span class="Italics">Replenishment Lines</span> (updated at time of Replenishment Picking Entry). <span class="Italics">Cycle Count </span><span class="Italics">Lines</span> (updated at time of Cycle Count Entry-1<span style="vertical-align: super;">st</span> &amp; 2<span style="vertical-align: super;">nd</span> level). This information is advantageous to those users that are required to view warehouse activities for a warehouse or activity date. In addition, a new Warehouse Activity Purge routine has also been added for this report. This purge routine will purge all warehouse activity up to the activity date selected. A Purge Type 38 has also been created for the Purge Log Report. This new type can be entered to view only purged information that relates to Warehouse Activity. </div>
+      <div class="Subhead"><a name="1006574">Bin Velocity Summary Report</a></div>
+      <div class="Body"><a name="1006580">The Bin Velocity Summary Report was added to the Warehousing module reports to </a>provide users with the capability of generating a report that summarizes how many times a bin was picked from. This report can be processed for a Warehouse Number, Bin Number or Product Number. The BIN.VELOCITY file is used to retrieve the information necessary for this report.</div>
+      <div class="Subhead"><a name="1006589">Bin Velocity Detail Report</a></div>
+      <div class="Body"><a name="1006592">The Reports option  in the Warehousing module was updated with a new Bin Velocity </a>Detail Report. This allows the user to generate a report to provide detailed information pertaining to how many times a bin was picked from as well as the transaction type, such as Sales Orders, Stock Transfers, Bin Replenishments and Work Orders. The BIN.VELOCITY file is used to update the records for this report. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1006599&quot;);"><a name="1006599">Radio Frequency Processes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1006599", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1006599", false);</script>
+      <div class="Subhead"><a name="1006605">Putaway Ent.</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006612">The Putaway Ent option was restructured to allow a user to have the ability to update </a>a primary bin during the RF Putaway Entry process. This option can only be used if the new RF Putaway Bin Update flag  in User Id Maintenance is set to Y.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006626">A modification was made to the Putaway Ent process. If the FROM bin location has a </a>bin type D for dock and the quantity being putaway is less than the quantity displayed, the user will be prompted to choose if the putaway of this item should be placed in different bin location. The user will be prompted with the following message: Complete Putaway of this Item to Another Bin? If the user selects No, the process continues on to the next product for putaway. The remaining quantity will remain in the dock bin until the next putaway entry for that product is performed. If the user selects Yes, a new line will be inserted in the bin move record duplicating the product number and the FROM bin location with the remaining quantity. The TO bin location is left blank for the user to decide which bin location should be used for the remaining quantity. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1006636">Stock Receipts</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006642">The Stock Receipts function  in the RF process was enhanced with a new feature for </a>Version 16. The user now has the ability to create UPC codes while in the RF Stock Receipts Entry screen. Two new flags were added to the Inventory Parameters screen to accommodate this new feature. If the <span class="Italics">Generate UPC Code</span> flag  in Inventory Parameters is set to R, UPC codes can be generated at time of RF Stock Receipts. If the flag is set to D UPC codes can be created using the check digit sum logic when in RF Stock Receipts Entry. If the flag is set to either R or D and the product entered does not contain an alternate product number that matches the company prefix, the user will then be prompted with a UPC Not On File! Do You Wish to Exit, Scan, or Generate message. At that point if the user chooses Exit, the user will be returned to the Product Number prompt. Or the user can choose Scan, which allows the product to be scanned or the UPC code to be entered. Once this function was processed, the UPC code will be updated as an alternate product number  in Product Maintenance. If the user selects Generate, a UPC code will then be generated. Once this was processed, the UPC code will then be updated as an alternate product number  in Product Maintenance. If the Generate UPC Code flag is set to R or D and the product entered  in the Stock Receipts, does in fact already have an alternate product number attached that matches the company prefix, the system will continue processing the RF Stock Receipt and the user will not be prompted with the generate UPC Codes message. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006661">The functionality of the </a><span class="Bold">Bin Location</span> prompt  in the Stock Receipts screen was updated for Version 16. Previously, it was required that the user manually enters the bin location for each product. The Bin Location prompt now will use the 1<span style="vertical-align: super;">st</span> bin location entered for the product received as the default location until the user changes it. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006677">A new WARNING message was added to the Stock Receipts Entry screen for this </a>version. The message <span class="Bold">Quantity Received is Greater Than Tolerance Limits! Is </span><span class="Bold">Quantity Received Correct?</span> will be displayed if the quantity received in Stock Receipts is greater than the open quantity on the Purchase Order, by more than the percentage established  in the <span class="Italics">Over Rcvd Unit Var Pct</span> field in the <span class="Italics">Warehouse </span><span class="Italics">Maintenance&gt; F5-Add Info</span> screen. Therefore allowing the user the ability to modify the amount being received or accept it. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006695">The Weight Required field  in the Inventory parameters was updated with a new </a>functionality, therefore creating a modification  in the RF Stock Receipts screen. If a product is entered that does not contain a weight  in the Product Maintenance&gt; F10&gt; Addtl Opts&gt; Package Information screen, it will be required for the user to enter one before the receipt can be updated. However, once the weight is entered and the transaction is updated, the weight information will then be updated to the Product Maintenance file. Therefore not requiring the user to continue entering the weight for the same product over and over again. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1006715">Multi P/O SRE</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006721">A Multi P/O SRE function  in the RF process was added to Version 16. The user now </a>has the ability to incorporate multiple Purchase Orders at the time as Stock Receipts using the RF Scanning devices. The user also has the ability of creating UPC codes while in the RF Multi P/O screen. Two new flags were added to the Inventory Parameters screen to accommodate this new feature. If the <span class="Italics">Generate UPC Code</span> flag  in Inventory Parameters is set to R, UPC codes can be generated at time of RF Stock Receipts. If the flag is set to D UPC codes can be created using the check digit sum logic when in the RF Multi P/O Entry screen. If the flag is set to either R or D and the product entered does not contain an alternate product number that matches the company prefix, the user will then be prompted with a UPC Not On File! Do You Wish to Exit, Scan, or Generate message. At that point if the user chooses Exit, the user will be returned to the Product Number prompt. Or the user can choose Scan, which allows the product to be scanned or the UPC code to be entered. Once this function was processed, the UPC code will be updated as an alternate product number  in Product Maintenance. If the user selects Generate, a UPC code will then be generated. Once this was processed, the UPC code will then be updated as an alternate product number  in Product Maintenance. If the Generate UPC Code flag is set to R or D and the product entered  in the Stock Receipts, does in fact already have an alternate product number attached that matches the company prefix, the system will continue processing the RF Stock Receipt and the user will not be prompted with the generate UPC Codes message. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006743">The functionality of the Bin Location prompt  in the Multi P/O SRE screen was updated </a>for Version 16. Previously, it was required that the user manually enters the bin location for each product. The Bin Location prompt now will use the 1<span style="vertical-align: super;">st</span> bin location entered for the product received as the default location until the user changes it. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006759">A new WARNING message was added to the Multi P/O SRE screen for this version. </a>The message Quantity Received is Greater Than Tolerance Limits! Is Quantity Received Correct? will be displayed if the quantity received in Stock Receipts is greater than the open quantity on the Purchase Order, by more than the percentage established  in the <span class="Italics">Over Rcvd Unit Var Pct</span> field in the <span class="Italics">Warehouse Maintenance&gt; F5-</span><span class="Italics">Add Info</span> screen. Therefore allowing the user the ability to modify the amount being received or accept it. <span class="Italics">102801B</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006777">The Weight Required field  in the Inventory parameters was updated with a new </a>functionality, therefore creating a modification  in the RF Multi P/O in SRE screen. If a product is entered that does not contain a weight  in the Product Maintenance&gt; F10&gt; Addtl Opts&gt; Package Information screen, it will be required for the user to enter one before the receipt can be updated. However, once the weight is entered and the transaction is updated, the weight information will then be updated to the Product Maintenance file. Therefore not requiring the user to continue entering the weight for the same product over and over again. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006797">A new </a><span class="Bold">Reject</span> option was added to the Stock Receipts screen  in RF Processes. This new feature enables warranty tag rejections to be performed  in RF Stock Receipts. Once the cursor is positioned at the OK to Upd? prompt, the user can then select the F6-Add key to display the Reject screen. In this screen, the Reason Code (established  in the Rejection Claim Reason Codes Maintenance screen), the Quantity and Tag # can be entered for rejected warranty tags. The quantity is required to be entered before the Reject screen can be used. If partial quantities are going to be received and rejected  in RF Stock Receipts while using Warranty Tag Rejections, it will be necessary to use the Batch Stock Receipts Entry process to update the total rejection quantity with the first warranty tag created for this product.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1006813">Processes</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006826">A new </a><span class="Bold">Quick Scan</span> option was added to the Stock Receipts screen  in RF Processes. This new feature allows a default Quantity and Bin Location to be established for products being scanned into RF Stock Receipts. This prevents the user from having to continuously enter the Quantity and Bin Location for each item. If a UCC code is entered, the quantity that was established in Product Maintenance will be used for the quantity received. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006842">This new option was added for Version 16. The </a><span class="Bold">RF</span> <span class="Bold">Trn SSCC Entry</span> screen is a slightly different version of the standalone entry program. The functionality of this screen is identical to that of the Transfer Serial Shipping Container Code Entry program with the exception, that this is modified to fit a standard RF Gun. Therefore can only display one product at a time rather than multiple products at once. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006860">The Sales Order Entry screen was updated with a new </a><span class="Bold">Route</span> field. This new feature allows the user to enter a valid route code for this sales order. The route code must first be established as a valid routing code  in Route Code Maintenance. <span class="Italics">Form </span><span class="Italics">#032301A</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006876">The </a><span class="Bold">WO Completions</span> is a new option that was added to the RF Processes menu. This new feature allows Work Order Completions through the RF process using RF Units.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006893">The functionality of the Bin Location prompt  in the Transfer Receipts screen was </a>updated for Version 16. Previously, it was required that the user manually enters the bin location for each product. The Bin Location prompt now will use the 1<span style="vertical-align: super;">st</span> bin location entered for the product received as the default location until the user changes it. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006913">The functionality of the Bin Location prompt  in the Multi Trn Receipts screen was </a>updated for Version 16. Previously, it was required that the user manually enters the bin location for each product. The Bin Location prompt now will use the 1<span style="vertical-align: super;">st</span> bin location entered for the product received as the default location until the user changes it.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1006928&quot;);"><a name="1006928">Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1006928", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1006928", false);</script>
+      <div class="Subhead"><a name="1006934">Alternate Pn Mnt</a></div>
+      <div class="Body"><a name="1006941">To implement some better time management practices, Version 16 has updated the </a>Alternate PN Maintenance with new fields to provide users the ability of adding UCC Codes on the fly  in the RF process and picking screens. If an alternative product does not exist for a 13 digit barcode that is scanned, the user will be prompted with the message Product Does Not Exist! Set Up as Alternate Product?. If the user selects Y, the RF ADD screen will then be displayed, allowing the user to enter the ADS stocking product number that is to be updated as an alternate product with the barcode number scanned  in Product Maintenance. Therefore, ensuring that this product will be recognized as an alternate product when scanned in the future. Once the product number is entered, and if alternate products currently exist, the Alternates field will then display the first alternate product listed for this product. If multiple alternates exist, the down arrow key can be used to move through the list of alternates. Once the Alternate number was selected, the remaining information pertaining to this alternate can then be entered. The UPC field is a Y/N flag that determined if this product should be identified as a UPC code. The UCC flag determines if this alternate should be established as a UCC Code. This code can be identified as a M-Master Pack, P- Pallet Pack, S-Shelf Pack, or select N to not update this product as an UCC code. If something other than N is selected for the UCC flag, the user will then be prompted to enter additional UCC information. Enter the quantity of items for this UCC Code in the UCC Qty field. This quantity will automatically be defaulted to the Serial Ship Container Entry for label printing purposes. Next, the user will then be required to enter the Unit of Measure in the U/M field. The user is then brought in to the Cat ID field to enter a valid Catalog id code for this product. The Alt Ppg field requires that the associated alternate product price group to be entered for this UCC code in this field. In addition to this screen, the option of adding UCC Codes on the fly was added to several other screens as well. Such as, <span class="Italics">Individual Bin Movement, Emergency Cycle Count Entry, </span><span class="Italics">Cycle Count Entry-2nd Level, Putaway Entry, Stock Receipts, Multi P/O SRE, SR </span><span class="Italics">Putaway Entry, RGA Entry, RF SSCE Entry, RF Sales Order Entry, Bin Repl Picking</span> and <span class="Italics">Transfer Picking</span>.</div>
+      <div class="Subhead"><a name="1006958">Bin Repl Mnt</a></div>
+      <div class="Body"><a name="1006965">A new frozen control warning message was added to the Bin Repl Mnt screen. If the </a><span class="Italics">Frozen Control</span> flag  in Bin Replenishment Maintenance is set to Y or M for a bin, and a user attempts to enter products using the RF Bin Repl Mnt screen, a <span class="Bold">Frozen Controls </span><span class="Bold">Are Set!</span> warning message will be displayed, disallowing this process. However, this warning message will not be displayed  in the standard Bin Replenishment Maintenance screen considering the Frozen Control flag is currently displayed. </div>
+      <div class="Subhead"><a name="1006977">Product S/N Mnt</a></div>
+      <div class="Body"><a name="1006985">To allow better utilization of Serial Number feature  in the RF Menu, a new process was </a>added for Version 16 of the software. With this new option, the user now has the ability of adding serial numbers to products that contain an on-hand quantity that also exist on open sales orders, open stock transfers, open purchase orders as well as open work orders. The <span class="Bold">Product S/N Mnt</span> option, does however, have certain conditions that apply to allow this to process to continue once the product number was entered. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1006995">Allowed Entries</a><br />The product exists on an open stock transfer with status = On-Order.<br />The product exists on an open work order with status = Entered. <br />The product exists on an open purchase order<br />Open Sales Orders not released for Billing or Invoicing</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1007038">Disallowed Entries</a><br />If the product exists on an open stock transfer that contains a status other than On-Order<br />If the product exists on an open work order that contains a status other than Entered<br />Sales Orders released for invoicing or confirmation orders.<br />Stock Receipts in process.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1007084">Physical</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1007098">The functionality of the 1</a><span style="vertical-align: super;">st</span> level Cycle Count screen has bee updated for Version 16. If an item is updated with discrepancies in the 1<span style="vertical-align: super;">st</span> level queue, the reject count will be updated  in the BIN.LOC file. If the item also appears in the 2<span style="vertical-align: super;">nd</span> level queue, and is again updated with discrepancies, the reject count will continue to be updated. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1007119">A new </a><span class="Bold">Skip</span> option was added to the Cyc Cnt Ent-1<span style="vertical-align: super;">st</span> process. This new option allows the user the ability of skipping a bin when filing out of the 1<span style="vertical-align: super;">st</span> level Cycle Count Entry screen. If the user selects the Skip option, the remaining products to be cycle counted will be skipped for that day. Therefore, the BIN.QUEUE record will be updated with a cycle count for the remaining products to be counted the next day.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1007147">The Cycle Counting process  in the Physical Inventory option was updated for Version </a>16. This new <span class="Bold"># Products</span> feature allows the user to define how many products will be displayed when the F3-Lookup option is selected  in the Cycle Counter Entry screen. If this field is left blank, all 2<span style="vertical-align: super;">nd</span> level products will be assigned. This was added to allow the user the ability to customize the number of products being displayed. This is beneficial for companies that may have multiple users doing 2<span style="vertical-align: super;">nd</span> level cycle counting. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1007161">Miscellaneous Features</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1007173">tes were added to Version 16's PICKER.STATS file. The PICKER.STATS file was </a>modified with these new attributes to better track pick errors associated with Credit Reason Codes. with the new attributes that were added, the Picker Statistics Report was updated as well. The report now displays three new columns that represent information gathered from the updates generated in the PICKER.STATS file.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1007179">Attribute 6.M</a></span> - Credit Memo Reason Code</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1007192">Attribute 7.M</a></span> - Number of Pick Error Lines Per Reason Code</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Bold"><a name="1007202">Attribute 8.M</a></span> – Total Qty of Pick Error Lines Per Reason Code</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1007231">A new </a><span class="Bold">Skip From Bin</span> field was added to the Warehouse Maintenance screen. This is a new Y/N flag that determines if the RF picker is prompted for the FROM bin field during RF Order Picking. If this flag is set. To Y, the FROM bin WILL be skipped, and the RF picker will not have the option of picking products from a different location. The cursor will then go directly to the Qty field. If N is selected, the FROM field will NOT be skipped, and the user will be allowed to enter a different location for a product. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1007246">A new flag was added to the Warehouse Maintenance screen. The </a><span class="Bold">Allow New </span><span class="Bold">Products in RF SRE</span> allows ADS established products that do not exist on an original P/O to be received  in RF Stock Receipts. to use this option, the Warehousing Flag must be set to Y. Once the Allow New Products in RF SRE was established with the flag set to Y, new products can then be received on the RF unit without having to first add them to the open purchase order. When a new line item is added, the system will NOT prompt for an open order quantity or unit of measure. Any line items added at the time of RF Stock Receipts will be included on the Stock Receipts Exception Report once the P/O is received. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1007262">The Warehouse Maintenance screen was updated with a new </a><span class="Bold">Prompt for Dest Bin </span><span class="Bold">in PKCE</span> flag. This is a Y/N flag that will determine if a <span class="Italics">Destination Bin</span> prompt will be displayed  in Pick Confirmation Entry. If this flag is set to Y, the destination bin prompt will be displayed allowing the user the ability to enter the preferred staging bin for a order. If this flag is set to N, the prompt will not be displayed, therefore allocating all sales orders to the default PICK staging bin.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v16_new_features.5.1.htm#1006357">V16 New Features</a>:Warehousing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

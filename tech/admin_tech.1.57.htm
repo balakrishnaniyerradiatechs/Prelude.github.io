@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Scheduler Control Maintenance (/SCHED.CONTOL.MNT)</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1127141">Scheduler Control Maintenance (/SCHED.CONTOL.MNT)</a></div>
+      <div class="Body"><a name="1127142">This option allows a user whose </a><span class="Italics">Schedule GRI Process</span> flag is set to ‘A’ to maintain control records that govern the scheduling of reports.</div>
+      <div class="Path"><a name="1127146">Path: Jobstream &gt; Scheduler &gt; Scheduler Control Maintenance<img class="Default" src="images/GRIM_GUI.26.1.12.jpg" width="248" height="198" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127147">Sleep Time: </a></span>this field defines how long the phantom will sleep before it wakes up to look for jobs to run. In the above example, the scheduler will sleep five minutes between each run. If a relatively small time frame is entered, the system may get bogged down running phantom reports. Please monitor your system carefully till the timing is correctly set to meet your needs. If a time report like the Emergency Purchase Order Report needs to be ran quicker, you may want to set this at a smaller time frame. Running the scheduler every hour may not be soon enough to catch these items.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127148">History Records:</a></span> this field defines the number of old schedule records to keep in history. At this time these records are stored in history but there is not an inquiry to view them.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127149">Max Phantoms:</a></span> this field defines the number of jobs the scheduler will run at a time. When the scheduler “wakes up”, it determines how many jobs are still running. It will then check for jobs that need to be run and will queue however many it takes to meet the maximum number of jobs. For example, in the screen displayed above, <span class="Italics">Maximum Phantoms</span> is set to 16 jobs. When the scheduler wakes up, it determines that there are 12 jobs still running and that there are 5 jobs that need to run. So the scheduler will start the next 4 jobs. Had there only been 3 jobs that needed to run, the scheduler would have started all 3 jobs.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127150">Max Work Phantoms:</a></span> this field works with the <span class="Italics">Work Begins</span> and <span class="Italics">Work Ends</span> fields to define how many jobs the scheduler will run at a time during the “Work” hours. When the scheduler “wakes up” during the “work” hours, it determines how many jobs are still running. It will then check for jobs that need to be run and will queue however many it takes to meet the maximum number of jobs during work hours. For example, in the screen displayed above, the phantom will only run 6 jobs at a time between the hours of 8:30 a.m. and 6:45 p.m. When the scheduler wakes up, it determines that there are 2 jobs still running and that there are 8 jobs that need to run. So the scheduler will start the next 4 jobs. Had there only been 3 jobs that needed to run, the scheduler would have started all 3 jobs. At all other times, the scheduler will run up to 16 jobs at a time.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127151">Work Begins:</a></span> enter the time of day when work normally begins at the company.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1127152">Work Ends: </a></span>enter the time of day when work normally ends at the company.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.47.htm#1127141">Printers</a>:<a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.54.htm#1127141">Using the Scheduler</a>:Scheduler Control Maintenance (/SCHED.CONTOL.MNT)</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Convert Decimal Places</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1126664">Convert Decimal Places</a></div>
+      <div class="Body"><a name="1126665">WARNING:  Only execute this process when no users are on the system as it could corrupt data.</a></div>
+      <div class="Body"><a name="1126666">This process will convert decimal places in dictionary items and processes based on the Price/Cost/Qty </a>values set up in System Parameters, and then will regenerate source code for the processes that previously had source code generated. This process will generally be executed on the client’s Live account and the TEST account will be updated using the COPY.DICT process. Please note this process should only be executed if the client’s price/cost decimals are different from the standard Prelude price/cost decimals. </div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1126667&quot;);"><a name="1126667">Price/Cost/Qty Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1126667", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1126667", false);</script>
+      <div class="Body"><a name="1126668">This option is used to establish/maintain the number of decimal places that will be used for prices, costs, </a>and quantities. Normally these decimals would only be maintained before a client goes live, changing the decimals after data has been loaded will only change dictionaries and processes and will have no effect on data.<img class="Default" src="images/Convert_Decimals.10.1.2.jpg" width="549" height="291" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1126672">This maintenance routine is located in System Parameters &gt; Maintenance &gt; Inventory Controls.</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1126673&quot;);"><a name="1126673">Convert Decimal Places Process</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1126673", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1126673", false);</script>
+      <div class="Body"><a name="1126674">The Convert Decimal Places Process is basically the same for Unidata or Pick except for the prompts </a>at the beginning. This process is located in System Parameters &gt; Processes.<img class="Default" src="images/Convert_Decimals.10.1.3.jpg" width="511" height="273" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1126678">If you select “</a><span class="Bold">Y</span>es” to continue, the next prompt displayed will be different depending on the system platform. </div>
+      <div class="Body"><a name="1126679">The prompt is: Enter the FULL PATH of the account for “-DATA” files     /ud/DEV-DATA</a></div>
+      <div class="Body"><a name="1126680">You must enter the correct FULL path and case (upper and lower) in Unidata or the Convert Decimal </a>Process will not run correctly. The correct path format should be /ud/ACCOUNT.NAME-DATA. ACCOUNT.NAME is the account where the process will run.  </div>
+      <div class="Body"><a name="1126681">After you enter the correct path or account name, the process selects items to convert and begins </a>converting dictionaries and processes. When the data is converted and the dictionaries and processes are updated, you must regenerate System Builder expressions. The Convert Decimal Places process automatically executes the REGEN.EXP process.  Unless you want to baby sit the REGEN.EXP process error messages that appear, you can start the ‘Regenexp’ Script in SBCLIENT. To execute the script, choose Script &gt; Run Script and highlight regenexp and click OK<img class="Default" src="images/Convert_Decimals.10.1.4.jpg" width="342" height="282" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /> </div>
+      <div class="Body"><a name="1126685">When the REGEN.EXP process has finished, then you can stop the script by clicking Script &gt; Stop </a>Script.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.47.htm#1126664">Printers</a>:Convert Decimal Places</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

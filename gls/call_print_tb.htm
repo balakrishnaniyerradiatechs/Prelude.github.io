@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Trial Balance Report</title>
+    <link rel="StyleSheet" href="css/gl_reports.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1363610">Trial Balance Report</a></div>
+      <div class="Body"><a name="1363611">The Trial Balance report lists credit or debit information for each general </a>ledger account for a fiscal period. If the account is a Balance Sheet account, the balance sheet debit or credit balance is listed. If the account is a Profit and Loss account, the P&amp;L debit or credit balance is listed. This information is the same as the information on the <a href="javascript:WWHClickedPopup('gls', 'exp_mc_tb_inq.htm#1340612', '');">Expanded Trial Balance Inquiry</a>.</div>
+      <div class="Body"><span style="font-weight: bold;"><a name="1363612">Menu Path</a></span>: Financial &gt; General Ledger &gt; Reports &gt; Trial Balance</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1363613&quot;);"><a name="1363613">Selection Criteria</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1363613", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1363613", false);</script>
+      <div class="Body"><a name="1363614">Use the following criteria to limit the information to print on the report:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373603">Period to Report</a></span><span style="font-style: italic;">. </span>The fiscal period to include.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373604">Print Only This Period?</a></span>. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373605">Y</a></span> - Run the trial balance for only the fiscal period in <span style="font-style: italic;">Period to </span><span style="font-style: italic;">Report</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373606">N</a></span> - Run the year-to-date trial balance, up to the fiscal period in <span style="font-style: italic;">Period to Report</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373650">Division</a></span>. The highest possible grouping in your company (e.g., Eastern Division, Western Division).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373651">Region</a></span>. A subset of Division - if Division is used (e.g., Southeast Region, Northwest Region).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373652">Department</a></span>. A subset of warehouse. Typically used to separate expenses within a warehouse (e.g., accounting, sales, warehouse).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373653">Cost Center</a></span>. A subset of Department - if Department is used. Typically used to separate expenses within a warehouse or department (e.g., shipping, receiving, outside sales, inside sales).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373654">Location</a></span>. A warehouse location (e.g., Denver, Dallas) where inventory is kept or a corporate location where transactions may post to.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373608">Sort and Break By Location</a></span><span style="font-style: italic;">.</span> Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373609">Y</a></span> - Sort the balances by <span style="font-style: italic;">Location</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373610">N</a></span> - Only sort the balances by account.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373611">Suppress Zero Balances?</a></span><span style="font-style: italic;">. </span>Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373612">Y </a></span>- Exclude accounts with a zero balance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373613">N</a></span> - Include accounts with a zero balance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373614">Include Memo Accounts?</a></span>. Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373615">Y</a></span> - Include interim/memo accounts in the listing if Financial Report Printing is executed in the interim mode (only applies if you use the Financial Report Generator. <a href="javascript:WWHClickedPopup('gls', 'financial_report_%20manager.8.1.htm#1380609', '');">Financial Report Manager</a> is the recommended method)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373616">N</a></span> - Exclude interim/memo accounts in the listing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373617">(N)ative, (F)non-Native, All</a></span><span style="font-style: italic;">. </span>Choose from the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;margin-bottom: 3.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373618">N</a></span> - Print listings with native currency only.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373619">F</a></span> - Print listings with non-native currency only.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;margin-bottom: 3.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span style="font-weight: bold;"><a name="1373620">Blank </a></span>- Print all listings, regardless of the currency type.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1373621">Currency</a></span>. If you selected <span style="font-weight: bold;">F</span> (non-native currency), enter the currency types.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1363616&quot;);"><a name="1363616">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1363616", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1363616", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 404.24976000000003pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1363619">Column Heading</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1363621">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363623">Div</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1374079">The highest possible grouping in your company (e.g., Eastern </a>Division, Western Division). Refer to <a href="javascript:WWHClickedPopup('gls', 'general_ledger_%20table_%20maintenance.2.2.htm#1353363', '');">Setting up the General Ledger Hierarchy</a>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363627">Reg</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1374110">A subset of Division - if Division is used (e.g., Southeast Region, </a>Northwest Region). Refer to <a href="javascript:WWHClickedPopup('gls', 'general_ledger_%20table_%20maintenance.2.2.htm#1353363', '');">Setting up the General Ledger Hierarchy</a>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363631">Loc</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1374142">A warehouse location (e.g., Denver, Dallas) where inventory is kept or </a>a corporate location where transactions may post to.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363635">Dep</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1374117">A subset of warehouse. Typically used to separate expenses within a </a>warehouse (e.g., accounting, sales, warehouse). Refer to <a href="javascript:WWHClickedPopup('gls', 'general_ledger_%20table_%20maintenance.2.2.htm#1353363', '');">Setting up the General Ledger Hierarchy</a>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363639">Ccr</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1374124">A subset of Department - if Department is used. Typically used to </a>separate expenses within a warehouse or department (e.g., shipping, receiving, outside sales, inside sales). Refer to <a href="javascript:WWHClickedPopup('gls', 'general_ledger_%20table_%20maintenance.2.2.htm#1353363', '');">Setting up the General Ledger Hierarchy</a>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363643">Account</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363645">The general ledger account number.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363647">Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363649">The description of the general ledger account.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363651">BalSht Debits</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1428554">The total of balance sheet debits, if the account is a balance sheet </a>account.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363655">Balsht Credits</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1428569">The total of balance sheet credits, if the account is a balance sheet </a>account.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1363659">P&amp;L Debits</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1374360">The total of profit and loss debits, if the account is a P&amp;L account.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1374075">P&amp;L Credits</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1428580">The total of profit and loss credits, if the account is a P&amp;L account.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1363664">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1363665&quot;);"><a name="1363665">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1363665", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1363665", false);</script>
+      <pre class="Report"><a name="1373779">Trial Balance As Of 15:01:02 On 04/26/07                                                                                          </a></pre>
+      <pre class="Report"><a name="1428603">DIV.NUM = “001” [Period to Report = “07-04” AND Print Only This Period? = “Y” AND Suppress Zero </a>Balances? = “Y” AND Include Memo   </pre>
+      <pre class="Report"><a name="1428604">Accounts?                                                                                                                          </a></pre>
+      <pre class="Report"><a name="1428605">Currency Type US   US DOLLARS          </a></pre>
+      <pre class="Report"><a name="1428606">&nbsp;</a></pre>
+      <pre class="Report"><a name="1428607">Div  Reg  Loc  Dep  Ccr  Account      Description                     BalSht Debits BalSht Credits     </a>P&amp;L Debits    P&amp;L Credits</pre>
+      <pre class="Report"><a name="1428608">001       10             1000         Petty Cash                                     98,858,951.17                              </a></pre>
+      <pre class="Report"><a name="1428609">001       50             1000         Petty Cash                                          1,500.00                              </a></pre>
+      <pre class="Report"><a name="1428610">001       10             1010         Cash In Bank                                        2,000.00                              </a></pre>
+      <pre class="Report"><a name="1428611">001       50             1010         Cash In Bank                            26.36                                             </a></pre>
+      <pre class="Report"><a name="1428612">001       60             1010         Cash In Bank                                       92,897.10                              </a></pre>
+      <pre class="Report"><a name="1428613">001       70             1010         Cash In Bank                         1,153.12                                             </a></pre>
+      <pre class="Report"><a name="1428614">001       10             1100         Accounts Receivable                                 2,274.26                              </a></pre>
+      <pre class="Report"><a name="1428615">001       50             1100         Accounts Receivable             74,324,233.80                                             </a></pre>
+      <pre class="Report"><a name="1428616">001       50             1110         Accounts Receivable - Canada        23,296.03                                             </a></pre>
+      <pre class="Report"><a name="1428617">001       90             1110         Accounts Receivable - Canada            52.80                                             </a></pre>
+      <pre class="Report"><a name="1428618">001       50             1115         Currency Clearing A/R-Canada                        5,382.87                              </a></pre>
+      <pre class="Report"><a name="1428619">001       90             1115         Currency Clearing A/R-Canada                           12.18                              </a></pre>
+      <pre class="Report"><a name="1428620">001       10             1140         Accounts Receivable Intercompa       2,000.00                                             </a></pre>
+      <pre class="Report"><a name="1428621">001       50             1140         Accounts Receivable Intercompa                 99,362,658.38                              </a></pre>
+      <pre class="Report"><a name="1428622">001       60             1140         Accounts Receivable Intercompa                      8,628.35                              </a></pre>
+      <pre class="Report"><a name="1428623">001       70             1140         Accounts Receivable Intercompa                      1,021.01                              </a></pre>
+      <pre class="Report"><a name="1428624">001       90             1140         Accounts Receivable Intercompa           1.47                                             </a></pre>
+      <pre class="Report"><a name="1428625">001       70             1200         Inventory                                           8,268.98                              </a></pre>
+      <pre class="Report"><a name="1428626">001       90             1200         Inventory                            2,473.67                                             </a></pre>
+      <pre class="Report"><a name="1428627">001       10             1205         Inventory Received Not Invoice                         50.52                              </a></pre>
+      <pre class="Report"><a name="1428628">001       90             1205         Inventory Received Not Invoice       6,951.09                                             </a></pre>
+      <pre class="Report"><a name="1428629">001       90             1206         Inventory Ind/Link - Not Invoi          45.90                                             </a></pre>
+      <pre class="Report"><a name="1428630">001       10             1214         Inventory Service Not Invoiced       1,000.00                                             </a></pre>
+      <pre class="Report"><a name="1428631">001       90             1215         Inventory Indirect/Linked                             226.00                              </a></pre>
+      <pre class="Report"><a name="1428632">001       10             1227         Inventory Vendor Consigned             750.00                                             </a></pre>
+      <pre class="Report"><a name="1428633">001       70             1260         Inventory In Transit To Locati       8,525.57                                             </a></pre>
+      <pre class="Report"><a name="1428634">001       90             1260         Inventory In Transit To Locati                         32.21                              </a></pre>
+      <pre class="Report"><a name="1428635">001       50             2000         Accounts Payable                    24,888.31                                             </a></pre>
+      <pre class="Report"><a name="1428636">001       50             2001         Vendor Consigned Payables                             750.00                              </a></pre>
+      <pre class="Report"><a name="1428637">001       90             2010         Accts Pay Not Invoiced - Inven                      6,996.99                              </a></pre>
+      <pre class="Report"><a name="1428638">001       50             2021         Vendor Consign Payable Not Inv                     15,770.80                              </a></pre>
+      <pre class="Report"><a name="1428639">001       50             2035         Customer Deposits                                      85.53                              </a></pre>
+      <pre class="Report"><a name="1428640">001       90             2036         Customer Gift Certificate                             100.00                              </a></pre>
+      <pre class="Report"><a name="1428641">001       10             2040         Accounts Payable Intercompany                       2,099.48                              </a></pre>
+      <pre class="Report"><a name="1428642">001       50             2040         Accounts Payable Intercompany                      23,905.73                              </a></pre>
+      <pre class="Report"><a name="1428643">001       60             2040         Accounts Payable Intercompany       98,325.45                                             </a></pre>
+      <pre class="Report"><a name="1428644">001       70             2040         Accounts Payable Intercompany                       4,423.81                              </a></pre>
+      <pre class="Report"><a name="1428645">001       90             2040         Accounts Payable Intercompany                          11.68                              </a></pre>
+      <pre class="Report"><a name="1428646">001       50             2045         Sales Tax Payable                              74,970,951.84                              </a></pre>
+      <pre class="Report"><a name="1428647">001       50             2095         Currency Clearing A/P - Canada          68.87                                             </a></pre>
+      <pre class="Report"><a name="1428648">001       50             2100         Accrued Payroll                      1,500.00                                             </a></pre>
+      <pre class="Report"><a name="1428649">001       70             4000         Sales                                                             14,746.34               </a></pre>
+      <pre class="Report"><a name="1428650">001       10             4010         PLINE Override Test                                                7,200.00               </a></pre>
+      <pre class="Report"><a name="1428651">001       70             5000         Cost Of Sales                                                                    </a>10,322.53</pre>
+      <pre class="Report"><a name="1428652">001       10             5100         Cost Of Sales Direct                                                 100.00               </a></pre>
+      <pre class="Report"><a name="1428653">001       90             5400         Physical Inventory Adjustment                                                     </a>2,525.69</pre>
+      <pre class="Report"><a name="1428654">001       50             5428         Brokerage Clearing                                                                    </a>1.00</pre>
+      <pre class="Report"><a name="1428655">001       50             5429         Duty Clearing                                                                         </a>1.00</pre>
+      <pre class="Report"><a name="1428656">001       50             5430         Freight Clearing                                                                      </a>1.00</pre>
+      <pre class="Report"><a name="1428657">001       50             6320         Cash Discounts Allowed - Earne                                         </a>8.10               </pre>
+      <pre class="Report"><a name="1428658">001       50             6330         Cash Discounts Allowed - Unear                                                      </a>617.11</pre>
+      <pre class="Report"><a name="1428659">001       10             7180         Office Expense                                                     1,234.00               </a></pre>
+      <pre class="Report"><a name="1428660">001       10             9490         Write Off To Bad Debt                                                             </a>9,336.96</pre>
+      <pre class="Report"><a name="1428661">                                                                     -------------- ----------</a>---- -------------- --------------</pre>
+      <pre class="Report"><a name="1428662">   Totals for US   Currency                                          874,495,292.44 873,368,998.89      </a>23,288.44      22,805.29</pre>
+      <pre class="Report"><a name="1428663">                                                                     --------------                --------------</a></pre>
+      <pre class="Report"><a name="1428664">&nbsp;</a></pre>
+      <div class="Body"><a name="1363667">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("General Ledger Balancing", "gls", "general_ledger_balancing.4.1.htm#1364525");
+          WWHAddRelatedTopic("General Ledger Reports", "gls", "gl_reports.10.1.htm#1332082");
+          WWHAddRelatedTopic("Maintaining the General Ledger Chart of Accounts", "gls", "general_ledger_%20table_%20maintenance.2.3.htm#1344918");
+          WWHAddRelatedTopic("Chart of Accounts Maintenance", "gls", "general_ledger_%20table_%20maintenance.2.4.htm#1362692");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="gl_reports.10.1.htm#1363610">General Ledger Reports</a>:Trial Balance Report</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

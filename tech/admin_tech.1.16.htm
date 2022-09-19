@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Cataloging</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1125594">Cataloging</a></div>
+      <div class="Body"><a name="1125595">Cataloging is a way of telling the system where to find the object code to run. There are several </a>differences in how the cataloging procedure in Pick and Unidata work. The following sections of this document explain how the catalog procedure works in Pick and in Unidata.</div>
+      <div class="Body"><a name="1125596">The catalog command in Unidata copies the compiled object code of a UniBasic program into a catalog </a>space. By default, Unidata catalogs a program globally and copies it into a subdirectory of $UDTHOME/sys/CTLG, the system catalog. Multiple users can run globally cataloged programs simultaneously. Unidata brings one copy of the program into shared memory. These are parameters used with the CATALOG command; however, Prelude has a subroutine attached to the BASIC verb that determines how a program should be cataloged when it is compiled. Also note that Prelude has disabled the CATALOG command from performing any function at TCL.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1125597">DIRECT</a></span> - Catalogs the program locally without copying it to the local or system CTLG directory. Instead, Unidata creates an entry in the VOC file that is a pointer to the directory where the program resides. Direct cataloged programs must be cataloged in each account where they are used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1125598">FORCE</a></span> - Overwrites programs in a catalog that have the same name as filename. You can use the FORCE option with the DIRECT or LOCAL options. Unidata does not confirm before overwriting the object file.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1125599">LOCAL</a></span> - Catalogs the program locally and places a copy of it in a subdirectory of the local CTLG catalog (in the account where the user is running the program). Unidata creates a VOC pointer to the subdirectory. Local cataloged programs must be cataloged in each account where they are used.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1125600">Note: For multiple users to use a single program at the same time, Unidata retrieves a copy of a globally </a>cataloged program into shared memory. When you modify a program and recatalog it, any user who began using the program (the copy in shared memory) before you cataloged the new version continues to use the old version in shared memory. When a user either returns to the TCL prompt or logs off and back on, then they have access to the new version of the program in shared memory.</div>
+      <div class="Body"><a name="1125601">Prelude has a subroutine that is tied to the BASIC verb so that any time a program is compiled, it is </a>evaluated and cataloged appropriately depending on the account the user is on when the program is compiled. Because of this feature, programmers should not catalog any programs on a Unidata system.</div>
+      <div class="Body"><a name="1125602">If a user is on the live account when compiling a program on a Unidata system then the program will be </a>cataloged globally. This means that the object code for the program will be available in the global catalog space and multiple users can run the same version of the program simultaneously. Unidata brings one copy of the program into shared memory. This creates a huge performance gain. The path that Prelude uses when cataloging programs globally on customer’s LIVE accounts puts a copy of the object code into a subdirectory of:</div>
+      <pre class="Report"><a name="1125603">$UDTHOME/sys/CTLG/{program.name}</a></pre>
+      <div class="Body"><a name="1125604">$UDTHOME is the home directory. For example the home directory on the G30 here at Prelude is /usr/</a>ud40. An example of the program ORD.UPDATE cataloged globally on the G30 would create a VOC entry of:</div>
+      <pre class="Report"><a name="1125605">001  C</a></pre>
+      <pre class="Report"><a name="1125606">002  /usr/ud40/sys/CTLG/o/ORD.UPDATE</a></pre>
+      <pre class="Report"><a name="1125607">003  PROGS ORD.UPDATE</a></pre>
+      <div class="Body"><a name="1125608">In attribute 2 is the path to the global catalog space.</a></div>
+      <div class="Body"><a name="1125609">If a user is on the Test account when compiling a program on a Unidata system the program will be </a>cataloged using the DIRECT parameter. This compiles the program and catalogs it locally without copying it to the local or system CTLG directory. Instead there will be an entry made in the VOC file that is a pointer to the directory where the program resides.</div>
+      <div class="Body"><a name="1125610">An example of the program ORD.UPDATE cataloged using the DIRECT parameter on a test account </a>would be the following:</div>
+      <pre class="Report"><a name="1125611">001  C</a></pre>
+      <pre class="Report"><a name="1125612">002  /ud/V14.0/PROGS/_ORD.UPDATE</a></pre>
+      <div class="Body"><a name="1125613">In attribute 2 is the path to the directory where the program resides.</a></div>
+      <div class="Body"><a name="1125614">If you compile a PROGS program that is shared between a Live and Test account via both accounts </a>using the same EXEC account, then you can actually be running two different version of the program in the Test and Live accounts. This is because of the differences in the way the cataloging occurs on the two accounts. If you make changes to a PROGS program and only compile the program on the Test account, then only the test account will notice the changes because the cataloging was performed using the DIRECT parameter. The version on the live account will still be the old version of the object code that is in the global catalog space.</div>
+      <div class="Body"><a name="1125615">Note: The system knows if you are on a Test account or a Live account by checking the DMACCOUNTS </a>record for the account you are on. For example, if I am on the V14.0 account on the G30 and I am compiling a program then the Basic verb will check attribute 6 of the DMACCOUNTS V14.0 record. If attribute 6 contains TEST then the program will be cataloged using the DIRECT parameter. If attribute 6 contains LIVE then the program will be cataloged globally. If attribute 6 is not populated then the system will look to see if the account you are on is TEST and if it is then it will set the DMACCOUNTS record attribute 6 to TEST. If none of these situations are met then the user will be asked if the account is a LIVE account or a TEST account, so be prepared to answer correctly or the cataloging of the program will be incorrect.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.1.htm#1125594">UniData</a>:Cataloging</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

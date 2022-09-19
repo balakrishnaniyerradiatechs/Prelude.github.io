@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Bill of Materials/Work Order</title>
+    <link rel="StyleSheet" href="css/v14_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1003111">Bill of Materials/Work Order</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003118&quot;);"><a name="1003118">Work Order Entry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003118", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003118", false);</script>
+      <div class="Subhead"><a name="1003125">Line Item Level</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003131">Work Order Entry was modified to better deal with product notes for a bill of material. </a>Previously, the product notes were not displayed if a bill of material was entered as a component and exploded. Now, the product notes will appear after the comment line stating Beginning Of BOM. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003143">Work Order Entry was enhanced to allow automatic transfer generation for line items </a>with a T or R supply code. The system will check the user id record to determine if the user has authority to generate transfers from  in Work Order Entry. The Automatic Transfer Generation procedure will work the same way it does in sales order entry. See System User Id Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1003160">Line Item Detail Level</a></div>
+      <div class="Body"><a name="1003166">The </a><span class="Italics">Type</span> field has a new option of V (vendor claim expense) that is used to define products for which a vendor credit is expected. Setting the Type to V for a line item tells the system to track the item as a vendor claim expense allowing the user to create a vendor claim once the work order was completed and to post the item accordingly. You are prompted for an <span class="Italics">Expense Reason Code</span> and the <span class="Italics">Vendor Number</span>. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003186">The </a><span class="Italics">Expense Reason Code</span> field defines why the item is expensed as well as the account used when posting the expense line item in Work Order Completions. The account defined for the reason code in Work Order Expense Reason Code Maintenance is also used for the vendor claim miscellaneous charge line item when the vendor claim is automatically generated. If the reason code does not contain an account number in Work Order Expense Reason Code Maintenance, the system will use the <span class="Italics">Expense Work Order</span> account defined in General Ledger Table Maintenance. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003202">The </a><span class="Italics">Vendor Number</span> field defines the vendor to claim the credit from. This field defaults to the product’s primary vendor but may be overridden.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1003215">This feature offers the ability to expense products on a work order for which a credit is </a>expected from the vendor. These are items that were repaired in-house but for which the vendor will issue a credit. For example, a unit is returned from the customer because it failed to perform. You decide to repair the unit in-house and issue a claim to the vendor instead of sending it back to the vendor for repairs. This is accomplished by defining the lines on the work order that are to be expensed (claimed for credit) and then creating a vendor claim with a miscellaneous charge line item for the expected credit amount. The vendor claim may be automatically generated after the work order is completed through Work Order Completions.</div>
+      <div class="Body"><a name="1003221">To identify those products for which a claim is expected, set the </a><span class="Italics">Type</span> field to V (vendor claim expense) in work order entry. Print and Issue the work order as usual. See Work Order Completions for the rest of this procedure. Refer to the ADS BMW/Work Order documentation for examples, posting information, and additional information. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003230&quot;);"><a name="1003230">Work Order Completions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003230", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003230", false);</script>
+      <div class="Body"><a name="1003237">This routine was modified to work with vendor claim expense line items. Work Order </a>Completions will accumulate, by vendor by reason code, the cost of each line item on the work order with the<span class="Italics"> Type</span> field set to V. This allows the system to post certain lines on the work order to specified expense accounts and the remaining line items to Inventory thus updating average cost appropriately. Expense line items are excluded from reaveraging of cost. If the work order contains more than one expense reason code and different accounts are referenced, the system will accumulate cost by reason code and post accordingly. Once the work order is completed and if the work order contains a line item with <span class="Italics">Type</span> set to V, the system will ask if you wish to create a vendor claim for vendor claim expense line items.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003255">If you respond No, you will be taken back to the work order completion screen. You </a>must manually create the vendor claim with a miscellaneous charge line item and reference the correct account. Be aware that at this time there are no reports to inform you of expensed items that are not on a vendor claim.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003271">If you respond Yes, the Generate Vendor Claim for Expense Items screen is displayed </a>allowing you to generate the vendor claim(s) for the expensed items. This screen displays each vendor a claim needs to be created for, the warehouse it will be created in, and the number of lines that will be placed on the claim. The vendor claim number is displayed after the claim is created.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1003284">A regular (type 01) vendor claim is created for the vendor(s). A miscellaneous charge line </a>item is created for each reason code. The amount is the total of all lines with that reason code/vendor. An itemized detail listing of all the work order expense line items associated with the vendor claim and the cost associated of each is in the vendor claim header notes.</div>
+      <div class="Body"><a name="1003290">See Work Order Entry Line Item Detail for more information on this feature. A complete </a>write-up is available on the system in the ADS BMW/Work Order help menu. This write-up contains examples, posting information, and additional conditions you should be aware of before using this feature.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003293&quot;);"><a name="1003293">Release Pick Tickets</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003293", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003293", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1003299">Sales Orders</a></span>, <span class="Italics">Work Orders</span>, and <span class="Italics">Transfers</span> are three new prompts that allows you to specify what documents to release. Based on how these flags are set (Y/N), the process will release the appropriate documents. The default for these fields is Y.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1003320">Printer Form Queue</a></span> is a new prompt that allows you to redirect the print job for sales orders, transfers, and/or work orders to another form queue. These prompts are only accessible if this process is ran for a warehouse and if that warehouse is set up for continuous printing. For example, if in warehouse 10 sales order pick tickets are set up to print continuous but work order and transfer tickets are not, then you will only be prompted for a form queue for sales orders when this process is ran for warehouse 10. If the form queue is left blank, the standard default will apply. Note: if a pick ticket process that meets all the other requirements to prompt for a form queue is not selected, the system will skip the prompt. Using the previous example, if <span class="Italics">Sales Orders </span>is set to N then you will not be prompted for a form queue.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1003336">This field was modified so that if a form queue is entered, the system will check to see if </a>it is set up in Form Queue Maintenance. If it is, it will then verify that the form queue is valid for the specified warehouse. If the form queue is not established in Form Queue Maintenance, the system will print to that form queue without validating the warehouse. See System Maintenance Printer Set-up for more information. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v14_new_features.7.1.htm#1003111">V14 New Features</a>:Bill of Materials/Work Order</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

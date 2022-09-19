@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>PrePrice Increase Report</title>
+    <link rel="StyleSheet" href="css/Nightly_Processing_Reports.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1293797">PrePrice Increase Report</a></div>
+      <div class="Body"><a name="1294672">The PrePrice Increase report lists products that you should consider purchasing due to a future price in their </a>product record. Flags in Purchasing Parameters determine if you should purchase more of an item due to a future price increase (refer to <a href="javascript:WWHClickedPopup('pcs', 'Nightly_Processing.3.3.htm#1284183', '');">Including Future Price Increases</a>). The <span style="font-style: italic;">Recommended Purchase</span> quantity on the report suggests a quantity of each item in a vendor’s line that would balance the savings gained by ordering before a price increase, against the cost of maintaining additional material in inventory. This recommended quantity also appears on the <a href="javascript:WWHClickedPopup('pcs', 'po_act_rpt.htm#1248422', '');">Recommended Purchase Order Action Report</a> under the <span style="font-style: italic;">Replenish Quantity</span>.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1294745">Required System Flag Settings </a></div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1294920">Perform Pre Price Update</a></span> (Purchasing Controls &gt; Purchase Parameters) must be set to <span style="font-weight: bold;">Y</span>.</div>
+            <div class="TableText"><span style="font-style: italic;"><a name="1294924">Auto Recalc Prices</a></span> (Option Parameters &gt; Inventory Parameters) Must be set to <span style="font-weight: bold;">Y</span></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span style="font-weight: bold;"><a name="1294579">Menu Path</a></span>: Purchasing &gt; Reports &gt; Nightly Processing Reports &gt; Pre-Price Increase Report</div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1294580&quot;);"><a name="1294580">Selection Criteria</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1294580", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1294580", false);</script>
+      <div class="Body"><a name="1294581">Use the following criteria to limit the information to print on the report:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1294582">Warehouse</a></span>. The warehouse where the products are stocked.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1294583&quot;);"><a name="1294583">Column Descriptions</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1294583", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1294583", false);</script>
+      <table class="N2col.table" style="text-align: left; width: 397.5012pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1294586">Column</a></div>
+          </td>
+          <td style="background-color: SteelBlue; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 2.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableHead"><a name="1294588">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294590">Product</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294593">The product that should be purchased due to a future price increase.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294595">Description</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294597">The product description.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294599">Whse</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294601">The warehouse where the product should be replenished.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294603">Current/</a></div>
+            <div class="TableText"><a name="1294853">Revised Cost</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294605">Line 1: The current cost of the product in the product record.</a></div>
+            <div class="TableText"><a name="1295032">Line 2: The new future cost that will update the product on the </a><span style="font-style: italic;">Effective </span><span style="font-style: italic;">Date</span>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294623">Effective Date/</a></div>
+            <div class="TableText"><a name="1294854">Lead Time</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294625">Line 1: The date the future </a><span style="font-style: italic;">Revised</span> <span style="font-style: italic;">Cost</span> will go into effect.</div>
+            <div class="TableText"><a name="1295042">Line 2: The lead time of the product from Product Vendor Maintenance.</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294627">Incr Pct</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294629">The percent increase in cost from the </a><span style="font-style: italic;">Current Cost</span> to the <span style="font-style: italic;">Revised Cost</span>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294631">Extra Months </a>Stock</div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294633">The extra number of month’s supply to stock due to the price increase.</a></div>
+            <div class="TableText"><a name="1295056">(% Increase x 24)/ (ROAI x KCost). Refer to </a><a href="javascript:WWHClickedPopup('pcs', 'Nightly_Processing.3.3.htm#1284183', '');">Including Future Price Increases</a> for an explanation of the formula. </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294635">Usage Rate</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294637">The</a><span style="font-style: italic;"> Forecast</span> (monthly usage) quantity of the product from Product Purchasing Parameters Maintenance.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294901">Ord Pt/</a></div>
+            <div class="TableText"><a name="1295063">Ln Pt</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294903">Line 1: Order Point, If </a><span style="font-style: italic;">Purchase Method</span> is EOQ and available stock falls below this quantity, the system recommends replenishment.</div>
+            <div class="TableText"><a name="1295076">Line 2: Line Point. If </a><span style="font-style: italic;">Purchase Method</span> is EOQ and available stock falls below this quantity, the product is evaluated as part of a line buy if another product in the line is below its Order Point (OP). </div>
+            <div class="TableText"><a name="1295081">Refer to Product Purchasing Parameters Maintenance in the Inventory </a>documentation for the explanation of how these are calculated.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294893">On Order/</a></div>
+            <div class="TableText"><a name="1294911">On Hand</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294895">Line 1: The quantity of the product due to arrive into the warehouse on </a>purchase orders and transfers.</div>
+            <div class="TableText"><a name="1295082">Line 2: The quantity of the product on-hand in the warehouse, </a>regardless of whether or not it is available to sell.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294889">Orig</a></div>
+            <div class="TableText"><a name="1294915">Rec</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294891">The original </a><span style="font-style: italic;">Recommended Quantity </span>of the product from Product Purchasing Parameters Maintenance. This would be the recommended buy quantity if there were no future price increase.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1295087">Recommended</a></div>
+            <div class="TableText"><a name="1295086">Purchase</a></div>
+          </td>
+          <td style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 3pt; padding-left: 2pt; padding-right: 2pt; padding-top: 4pt; vertical-align: top;">
+            <div class="TableText"><a name="1294887">The quantity that you should consider purchasing due to the future price </a>increase.</div>
+            <div class="TableText"><a name="1295095">(% Increase x 24)/ (ROAI x KCost). Refer to </a><a href="javascript:WWHClickedPopup('pcs', 'Nightly_Processing.3.3.htm#1284183', '');">Including Future Price Increases</a> for an explanation of the formula. </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="1294640">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1294641&quot;);"><a name="1294641">Sample Report</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1294641", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1294641", false);</script>
+      <pre class="Report"><a name="1294654">Activant Prelude                                                                                          User Id SEM Page 1    </a></pre>
+      <pre class="Report"><a name="1295111">Preprice Increase Report As Of 11:15:52 On 03/05/07                                                                               </a></pre>
+      <pre class="Report"><a name="1295112">No Selection Criteria Defined                                                                                                     </a></pre>
+      <pre class="Report"><a name="1295113">Disregard unless raise sales price by effective date!!</a></pre>
+      <pre class="Report"><a name="1295114">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295115">                                                     Current/ Effective       Extra  Usage  Ord Pt On Order/  Orig   Recommended</a></pre>
+      <pre class="Report"><a name="1295116">                                                     Revised  Date/     Incr  Months Rate   /Ln Pt On Hand    Rec    Purchase</a></pre>
+      <pre class="Report"><a name="1295117">Product         Description                   Whse   Cost     Lead Time Pct   Stock</a></pre>
+      <pre class="Report"><a name="1295118">4A833                                         10        4.000 03/11/07  25.00   9.23    127      0       0      64      379</a></pre>
+      <pre class="Report"><a name="1295119">                 Klein 9-1/4” Pliers Side Cut           5.000   8                              110     383</a></pre>
+      <pre class="Report"><a name="1295120">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295121">4A845                                         10        4.388 03/15/07  25.34   9.36    112      0       0     111      452</a></pre>
+      <pre class="Report"><a name="1295122">                 Klein 1/4” Tip Screwdriver             5.500   8                               89     220</a></pre>
+      <pre class="Report"><a name="1295123">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295124">4A846                                         10        5.311 03/15/07  44.98  16.61     78      0       0      84      206</a></pre>
+      <pre class="Report"><a name="1295125">                 Klein 5/16 Tip Screwdriver             7.700   8                               62     262</a></pre>
+      <pre class="Report"><a name="1295126">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295127">4A847                                         10        7.105 03/15/07  23.86   8.81     96      0       0      81      300</a></pre>
+      <pre class="Report"><a name="1295128">                 Klein 3/8 Tip Screwdriver              8.800   8                               76     276</a></pre>
+      <pre class="Report"><a name="1295129">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295130">4A848                                         10        3.764 03/15/07   6.00   2.22     96      0       0     111       84</a></pre>
+      <pre class="Report"><a name="1295131">                 Klein Phillips #2 Screwdriver          3.990   8                               76     230</a></pre>
+      <pre class="Report"><a name="1295132">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295133">4A850                                         10        5.057 03/15/07   7.77   2.87     91      0       0      93      104</a></pre>
+      <pre class="Report"><a name="1295134">                 Klein Phillips #3 Screwdriver          5.450   8                               73     260</a></pre>
+      <pre class="Report"><a name="1295135">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295136">4A840                                         40       14.820 03/15/07   7.96   2.94    151      0       0      76      637</a></pre>
+      <pre class="Report"><a name="1295137">                 Klein 8” Diagional Cut Pliers         16.000   4                               96       0</a></pre>
+      <pre class="Report"><a name="1295138">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295139">4A845                                         40        4.388 03/15/07  25.34   9.36    135      0       0     122      774</a></pre>
+      <pre class="Report"><a name="1295140">                 Klein 1/4” Tip Screwdriver             5.500   4                                0    86      43</a></pre>
+      <pre class="Report"><a name="1295141">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295142">4A846                                         40        5.311 03/15/07  44.98  16.61    155      0       0     118      934</a></pre>
+      <pre class="Report"><a name="1295143">                 Klein 5/16 Tip Screwdriver             7.700   4                               98       0</a></pre>
+      <pre class="Report"><a name="1295144">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295145">4A848                                         40        3.764 03/15/07   6.00   2.22    127      0       0     127      342</a></pre>
+      <pre class="Report"><a name="1295146">                 Klein Phillips #2 Screwdriver          3.990   4                               80      20</a></pre>
+      <pre class="Report"><a name="1295147">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295148">4A850                                         40        5.057 03/15/07   7.77   2.87     80      0       0      87      279</a></pre>
+      <pre class="Report"><a name="1295149">                 Klein Phillips #3 Screwdriver          5.450   4                               51       2</a></pre>
+      <pre class="Report"><a name="1295150">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295151">4A840                                         70       14.820 03/15/07   7.96   2.94     81      0       0      51      304</a></pre>
+      <pre class="Report"><a name="1295152">                 Klein 8” Diagional Cut Pliers         16.000   4                                0    54      94</a></pre>
+      <pre class="Report"><a name="1295153">&nbsp;</a></pre>
+      <pre class="Report"><a name="1295154">&nbsp;</a></pre>
+      <div class="Body"><a name="1303053">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="Body"><a name="1292269">&nbsp;</a></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Nightly Processing Procedures", "pcs", "Nightly_Processing.3.13.htm#1250873");
+          WWHAddRelatedTopic("Including Future Price Increases", "pcs", "Nightly_Processing.3.3.htm#1284183");
+          WWHAddRelatedTopic("Recommended Purchase Order Action Report", "pcs", "po_act_rpt.htm#1248422");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Nightly_Processing.3.1.htm#1293797">Nightly Processing</a>:<a class="WebWorks_Breadcrumb_Link" href="Nightly_Processing_Reports.4.1.htm#1293797">Nightly Processing Reports</a>:PrePrice Increase Report</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

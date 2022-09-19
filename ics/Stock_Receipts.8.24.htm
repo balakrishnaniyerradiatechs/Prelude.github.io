@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Allocating Freight to Linked Sales Orders</title>
+    <link rel="StyleSheet" href="css/Stock_Receipts.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1374957">Allocating Freight to Linked Sales Orders</a></div>
+      <div class="Body"><a name="1375122">If a sales order is linked to a purchase order that incurs a freight charge, you </a>can allocate all or part of the freight charge to the customer.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1605136">Freight Allocations</a></div>
+            <div class="TableText"><span style="font-weight: bold;"><a name="1642191">Option Parameters &gt; Purchasing Parameters </a></span>&gt; <span style="font-style: italic;">Allocate Linked Frt To S/O </span>determines if the freight charge is allocated to a linked sales order when a purchase order is received:</div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1627537">Y - Freight is allocated proportionally to</a><span style="font-style: italic;"> Inbound Freight</span> for any linked sales orders. <br />If the calculated freight amount is lower than the <span style="font-style: italic;">Minimum LInked Frt Amt</span> in <span style="font-weight: bold;">Warehouse Maintenance &gt; F5-Add Info</span>, the system uses the <span style="font-style: italic;">Minimum LInked Frt </span><span style="font-style: italic;">Amt </span>from Warehouse Maintenance for <span style="font-style: italic;">Inbound Freight</span>.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1627541">I - Same as Y, but it also includes the freight cost paid expenses as part of the G/L </a>posting for the receiver.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableBullet_outer" style="margin-left: 5.976000000000001pt;">
+              <table border="0" cellspacing="0" cellpadding="0" summary="">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TableBullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TableBullet_inner"><a name="1627542">N - Freight for received material is not automatically passed on to linked sales orders.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TableText"><a name="1627534">For more information on allocating freight, refer to “Allocating Freight” in the Purchasing </a>documentation.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="NumberedIntro" style="margin-top: 14.0pt;"><a name="1375102">To allocate freight to a linked sales order:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1427366">After you receive all the line items on the purchase order and press </a><span style="font-weight: bold;">F2-</span><span style="font-weight: bold;">Save</span> (refer to <a href="javascript:WWHClickedPopup('ics', 'Stock_Receipts.8.2.htm#1310218', '');">Receiving Stock</a>), the Freight Closeout screen appears. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1605174">Verify or change the </a><span style="font-style: italic;">Freight Amount</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1605175">Press </a><span style="font-weight: bold;">F2-Save</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1605176">The Freight to Sales Order screen appears if the purchase order </a>includes a linked sales order (and if <span style="font-style: italic;">Allocate Linked Frt To S/O</span> in Purchasing Parameters is set to <span style="font-weight: bold;">Y</span> or <span style="font-weight: bold;">I</span>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1600290">For </a><span style="font-style: italic;">Total Freight</span>, accept or enter total amount of the freight charge.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1375117">For </a><span style="font-style: italic;">Percent Of Freight To S/O</span>, enter the percentage of the total freight to allocate to the linked received items, based on the freight allocation method (e.g., dollars, weight, units, or volume). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">7	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1375125">Press </a><span style="font-weight: bold;">F2-Save</span> to allocate the freight and complete the stock receiver. When the linked sales order is invoiced, the freight charge is automatically billed to the customer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="report" style="text-align: left; width: 399.00024pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 3.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top; width: 121.5pt;">
+            <div class="TableSubhead"><a name="1422663">Report</a></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 3.0pt; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top; width: 277.50024pt;">
+            <div class="TableSubhead"><a name="1422665">Description</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a href="javascript:WWHClickedPopup('ics', 'link_no_frt_rpt.htm#1506237', '');" name="1422667">Linked Merchandise Received With Zero Freight Report</a></div>
+          </td>
+          <td style="background-color: #E6E6E6; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 2pt; padding-left: 3pt; padding-right: 3pt; padding-top: 3pt; vertical-align: top;">
+            <div class="TableText"><a name="1422713">Allows you to follow-up on orders that require additional freight </a>billing. The report displays all receivers, including linked products, that have the <span style="font-style: italic;">Total Freight</span> amount set to zero in the Freight To S/O screen in Stock Receipts Entry.</div>
+          </td>
+        </tr>
+      </table>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Receiving Stock", "ics", "Stock_Receipts.8.2.htm#1310218");
+          WWHAddRelatedTopic("Linked Merchandise Received With Zero Freight Report", "ics", "link_no_frt_rpt.htm#1506237");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Stock_Receipts.8.1.htm#1374957">Stock Receipts</a>:Allocating Freight to Linked Sales Orders</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

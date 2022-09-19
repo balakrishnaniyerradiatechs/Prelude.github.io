@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Create Unidata TEST and TEST-DATA Accounts from Tape</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1122086">Create Unidata TEST and TEST-DATA Accounts from Tape</a></div>
+      <div class="Body"><a name="1122087">There are four major steps to adding a TEST account:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122088">Check for amount of free disk space</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122089">Restore the data files</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122090">Change the VOC pointers to point to the correct data account</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122091">Reset permissions in the new account</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1122092&quot;);"><a name="1122092">Check Free Disk Space</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1122092", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1122092", false);</script>
+      <div class="NumberedIntro"><a name="1122093">To check how much space you have free, do the following:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122094">Log into unix as root.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122095">Type </a><span class="TypedInText" style="font-size: 11.0pt;"># cd /ud</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122217">Type </a><span class="TypedInText" style="font-size: 11.0pt;"># df -kt</span>. The statement will return data similar to the following:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="" style="margin-bottom: 12.0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 6.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; text-align: left; text-align: left; width: 606.0002400000001pt;" summary="">
+        <caption></caption>
+        <tr>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top; width: 120.00024pt;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122098">File system</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top; width: 120.00024pt;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122100">10024-blocks</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top; width: 93.00024pt;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122102">Used</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top; width: 86.99976pt;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122104">Free</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top; width: 79.99992pt;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122106">% Used</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top; width: 105.99984pt;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122108">Mounted on</a></span></pre>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122110">/dev/hd4</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122112">65536</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122114">48004</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122116">17532</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122118">74%</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122120">/</a></span></pre>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122122">/dev/hd2</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122124">1474560</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122126">311248</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122128">163312</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122130">89%</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122132">/usr</a></span></pre>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122134">/dev/hd9var</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122136">229376</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122138">35888</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122140">193488</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122142">16%</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122144">/var</a></span></pre>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122146">/dev/hd3</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122148">1048576</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122150">65252</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122152">983324</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122154">7%</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122156">/tmp</a></span></pre>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122158">/dev/hd1</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122160">32768</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122162">6328</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122164">26440</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122166">20%</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122168">/home</a></span></pre>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122170">/dev/udhome</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122172">557056</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122174">40356</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122176">16700</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122178">98%</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122180">/usr/ud41</a></span></pre>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122182">/dev/ud</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122184">52428800</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122186">39741632</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122188">2687168</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122190">76%</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122192">/ud</a></span></pre>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122194">/proc</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122196">-</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122198">-</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122200">-</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122202">-</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122204">/proc</a></span></pre>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122206">/dev/hd10opt</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122208">32768</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122210">7952</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122212">24816</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122214">25%</a></span></pre>
+          </td>
+          <td style="border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 1pt; padding-left: 2pt; padding-right: 2pt; padding-top: 1pt; vertical-align: top;">
+            <pre class="Report" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; margin-bottom: 4.0pt; margin-top: 4.0pt; text-transform: none; vertical-align: baseline;"><span class="TypedInText"><a name="1122216">/opt</a></span></pre>
+          </td>
+        </tr>
+      </table>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122218">Note the number in the 'Free' column where /ud is mounted.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122219">Determine the size of your LIVE account:</a><br /><span class="TypedInText" style="font-size: 11.0pt;"># cd /ud</span><br /><span class="TypedInText" style="font-size: 11.0pt;"># du -sk LIVE</span>     (replace the word 'LIVE' with the name of your LIVE account)<br />The statement will return data similar to:<span class="TypedInText" style="font-size: 11.0pt;"> 684452  LIVE</span>   </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122220">Then check to see how big your LIVE-DATA account is:</a><br /><span class="TypedInText" style="font-size: 11.0pt;"># cd /ud</span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;"># du -sk LIVE-DATA </span>  (replace the word 'LIVE' with the name of your LIVE data account)<br />The statement will return data similar to the following: <span class="TypedInText" style="font-size: 11.0pt;">1027721        LIVE-DATA</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">7	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122221">Total the size of the LIVE and LIVE-DATA accounts: 684452 + 1027721 = 1712173</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">8	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122222">Subtract the total from the amount of 'Free' space to determine if you have enough space to add the </a>accounts in /ud: 2687168 - 1027721 = 1154995  </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1122223&quot;);"><a name="1122223">Restore the Data Files</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1122223", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1122223", false);</script>
+      <div class="Body"><a name="1122224">If the answer is a positive number, you can create the new accounts.  If the answer is a negative number, </a>contact Tech Support to determine if more space or file systems can be added.</div>
+      <div class="Subhead"><a name="1122225">Creating the New Accounts</a></div>
+      <div class="NumberedIntro"><a name="1122226">If there is enough space in /ud:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122227">Insert your existing backup tape into the tape drive</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="TypedInText" style="font-size: 11.0pt;"><a name="1122228"># cd /ud</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="TypedInText" style="font-size: 11.0pt;"><a name="1122229"># mkdir RESTORE</a></span> (the contents of RESTORE will move to TEST at the end of the process)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="TypedInText" style="font-size: 11.0pt;"><a name="1122230"># mkdir RESTORE-DATA</a></span>  (the data in RESTORE-DATA will move to TEST-DATA at the end of the process)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1122231">**NOTE**  </a></span>The process below will be completed twice if you are creating both TEST and TEST-DATA.  The first time through will be to create TEST, and the second time through will be to create TEST-DATA.  The example below is based on creating TEST.  When restoring TEST-DATA, replace 'RESTORE' with 'RESTORE-DATA'.</div>
+      <div class="Body"><a name="1122232"> # smit sysback</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122233">Choose Backup &amp; Recovery Options &gt; Restore Data from a Backup Tape</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122234">Enter </a><span class="TypedInText" style="font-size: 11.0pt;">/dev/rmt0  Xmm Tape Drive</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">7	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122235">Enter Backup Sequence Number</a>	<span class="TypedInText" style="font-size: 11.0pt;">[1]</span> (May take a few minutes.)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">8	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122236">Select - Directory (all files within)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">9	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122237">Search word or ENTER for full list</a>	<span class="TypedInText" style="font-size: 11.0pt;">[/ud/LIVE] </span>  (replace the word 'LIVE' with your live account name)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">10	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122238">Move cursor to top item, /ud/LIVE, and press F7.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <pre class="Report"><a name="1122239">  Hostname of server                                                        </a></pre>
+      <pre class="Report"><a name="1122240">  Device name                                         /dev/rmt0             </a></pre>
+      <pre class="Report"><a name="1122241">  Restore data type                                   Regular_File          </a></pre>
+      <pre class="Report"><a name="1122242">  Report output type                                  both                  </a></pre>
+      <pre class="Report"><a name="1122243">  Device name for remote volume prompt                [ ]                     </a></pre>
+      <pre class="Report"><a name="1122244">  Allow restore of system data?                       no                    </a></pre>
+      <pre class="Report"><a name="1122245">  Allow restore of incremental backup?                no                    </a></pre>
+      <pre class="Report"><a name="1122246">  Destination (if different)                         [/ud/RESTORE] </a></pre>
+      <div class="Subhead"><a name="1122247">**** VERY IMPORTANT!! ENTER THE CORRECT DESTINATION ACCOUNT OR YOU WILL </a>OVERWRITE YOUR LIVE OR LIVE DATA ACCOUNT!!! ****</div>
+      <pre class="Report"><a name="1122248">  Exclude..                                                             </a></pre>
+      <pre class="Report"><a name="1122249">  File..                                                                </a></pre>
+      <pre class="Report"><a name="1122250">  Data to restore (of above type)                    [/ud/LIVE]</a></pre>
+      <pre class="Report"><a name="1122251">-------------------------------------------------------------</a></pre>
+      <div class="Body"><a name="1122252">When complete, it should say successful in upper right corner.</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">11	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122253">Press </a><span class="Bold">F3</span> until you get back to a # sign.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">12	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122254">Repeat the process to restore your LIVE-DATA account to RESTORE-DATA.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">13	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122255">Once the accounts are restored to RESTORE and RESTORE-DATA, move the data to TEST and </a>TEST-DATA:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">14	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="TypedInText" style="font-size: 11.0pt;"><a name="1122256"># cd /ud/RESTORE</a></span>   </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">15	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="TypedInText" style="font-size: 11.0pt;"><a name="1122257"># mv LIVE /ud/TEST</a></span>    (replace the word 'LIVE' with your live account name)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">16	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="TypedInText" style="font-size: 11.0pt;"><a name="1122258"># cd /ud/RESTORE-DATA</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">17	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="TypedInText" style="font-size: 11.0pt;"><a name="1122259"># mv LIVE-DATA /ud/TEST-DATA</a></span>   (replace the word 'LIVE' with your live account name)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">18	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="TypedInText" style="font-size: 11.0pt;"><a name="1122260"># cd /ud</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">19	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="TypedInText" style="font-size: 11.0pt;"><a name="1122261"># rmdir RESTORE</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">20	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><span class="TypedInText" style="font-size: 11.0pt;"><a name="1122262"># rmdir RESTORE-DATA</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><span class="Bold"><a name="1122263">*** NOTE:  The data account must be named XXXX-DATA for PSICOPY to function correctly ***</a></span></div>
+      <div class="Subhead"><a name="1122264">After Contacting Tech Support</a></div>
+      <div class="NumberedIntro"><a name="1122265">Tech Support will restore the accounts so that you can move them into  the proper unix directories:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122266"># cd /ud/TEST/LIVE   (replace the word 'LIVE' with your live account name)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122267"># mv * /ud/TEST                  (may have to be done in multiple steps, i.e. A*,B*)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122268"># cd /ud/TEST</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122269"># rmdir LIVE    (replace the word 'LIVE' with your live account name)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122270"># cd /ud/TEST-DATA/LIVE-DATA   (replace the word 'LIVE' with your live account name)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122271"># mv * /ud/TEST-DATA (may have to be done in multiple steps, i.e. A*, B*)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">7	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122272"># cd /ud/TEST-DATA</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">8	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122273"># rmdir LIVE-DATA    (replace the word 'LIVE' with your live account name)</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1122274&quot;);"><a name="1122274">Point VOC Pointers to TEST-DATA</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1122274", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1122274", false);</script>
+      <div class="NumberedIntro"><a name="1122275">To point to TEST-DATA, log into TEST and:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122276">At TCL, type </a><span class="TypedInText" style="font-size: 11.0pt;">SELECT VOC WITH F1 = "DIR" "F"  &lt;enter&gt;</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122277">ESEARCH VOC  &lt;enter&gt;</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122278">String:  '-DATA'  &lt;enter&gt;</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122279">At the TCL prompt '&gt;' enter </a><span class="TypedInText" style="font-size: 11.0pt;">AE VOC  &lt;enter&gt;</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122280">Enter  </a><span class="TypedInText" style="font-size: 11.0pt;">=P1 R99*LIVE*TEST*`FI` =P1  &lt;enter&gt; </span> (replace the word 'LIVE' with your live account name)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122281">View the list of VOC pointers on the screen. They should point to TEST-DATA.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1122282&quot;);"><a name="1122282">Set Permissions And Ownership</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1122282", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1122282", false);</script>
+      <div class="Subhead"><span class="Bold"><a name="1122283">*** Make sure you are logged into unix as root ***</a></span></div>
+      <pre class="Report"><a name="1122284"># cd /ud</a></pre>
+      <pre class="Report"><a name="1122285"># chmod -R 777 TEST TEST-DATA</a></pre>
+      <pre class="Report"><a name="1122286"># chown -R root TEST TEST-DATA</a></pre>
+      <pre class="Report"><a name="1122287"># chgrp -R ud TEST TEST-DATA</a></pre>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1122288&quot;);"><a name="1122288">Ensure Users Can Access the TEST Account</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1122288", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1122288", false);</script>
+      <div class="NumberedIntro"><a name="1122289">To grant users access to TEST:</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122290">From the SBMENU, go to Admin &gt; Security&gt; Group Security Setup</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122291">In the 'Group Id Code' field, type in 'ROOT'.  Add 'TEST' to either the list of 'Accounts with No </a>Restrictions' or 'Accounts with Restrictions', based on what you want your users to be able to access.  Always start at the top of the tree when adding accounts.  If you add an account to a group, the same account must be accessible from that group's parent.  Proceed down the tree adding 'TEST' to the appropriate list of accounts for each group that you want to have access to the TEST account.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.1.htm#1122086">UniData</a>:Create Unidata TEST and TEST-DATA Accounts from Tape</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

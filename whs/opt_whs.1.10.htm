@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Sales Order Bin Allocation and Pick Ticket Printing</title>
+    <link rel="StyleSheet" href="css/opt_whs.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head3"><a name="1109810">Sales Order Bin Allocation and Pick Ticket Printing</a></div>
+      <div class="Path"><a name="1109811">Path: Warehousing &gt;Sales Order processing &gt; Sales Order Bin Allocation (/SOBA)</a></div>
+      <div class="Body"><a name="1109812">This process allocates inventory from the available bin locations and releases the pick </a>tickets. It can be run continuously so that orders can be allocated automatically as soon as the order is set up for picking, or it can be run in a batch mode. The batch process must be run periodically anyway to handle inventory that becomes available for picking due to bin movements, stock receipts, inventory adjustment, etc. This procedure prints a pick ticket or creates a picking queue for radio frequency picking or both, depending on the way the <span class="Italics">Sales Order Picking Paperless</span> flag is set in the warehouse record.</div>
+      <div class="Body"><a name="1109813">The order of bin allocation is determined by a set of rules established by your company. </a>These rules define what bin types are available for sales order picking and in what sequence they should be used. Rules are established for both lot controlled and non-lot controlled products. If the product is available in the warehouse but not in a bin type that was identified as available to pick from, then an emergency bin replenishment can be created (see Bin Replenishment), and the order will not be set up for picking. The lines that are available to pick are put on a Bin Queue file ready to be selected by a picker. If pick tickets are being used, they will print at this time.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="opt_whs.1.8.htm#1109810">Entering, Picking, and Shipping Sales Orders</a>:<a class="WebWorks_Breadcrumb_Link" href="opt_whs.1.9.htm#1109810">Sales Order Picking/Shipping</a>:Sales Order Bin Allocation and Pick Ticket Printing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

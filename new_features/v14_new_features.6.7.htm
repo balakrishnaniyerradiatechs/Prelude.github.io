@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Accounts Receivable/Accounts Payable</title>
+    <link rel="StyleSheet" href="css/v14_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1003621">Accounts Receivable/Accounts Payable</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003629&quot;);"><a name="1003629">Cash Receipts Entry</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003629", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003629", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003636">This routine was modified to allow an incomplete batch to be placed on hold till the user </a>can complete it at a later time. An incomplete batch is one where the <span class="Italics">Deposit Total</span> (batch total) amount does not match the Batch Total Applied amount. Previously, the user was not allowed to exit this process till the total cash applied matched the batch total. Now the user can exit a batch that is out of balance and call it up at a later time for additional cash applications. If a batch is incomplete, a general ledger posting will be made for the total cash applied amount, keeping the general ledger in balance. Batches on hold will not show up on any cash receipts reports. They will only display on the Incomplete Cash Receipts Report. See Reports for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Italics"><a name="1003650">And Hold Flag Equal To </a></span>is a new prompt on <span class="Italics">Batch Number</span> F3-lookup that allows only those batches on hold to be displayed. If this field is set to H, only those batches on hold will be displayed. If this field is left blank, all batches will be displayed. The lookup screen will display the hold flag for all batches displayed so the user can identify batches that are on hold. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003669">When creating Charge Back Invoices, the system will take the </a><span class="Italics">Consol. Chargeback </span><span class="Italics">Invoices</span> option parameter and the<span class="Italics"> Charge Back Invoice by Customer P/O </span>option parameter into account to determine how the charge back invoices will be created. Unfortunately, these flags do not work together. To consolidate charge back invoices, the <span class="Italics">Charge Back Invoice by Customer P/O</span> flag must be turned off. If you wish to prompt for a customer P/O number then you cannot consolidate charge back invoices. See System Accounts Receivable Option Parameters for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1003687">This process was modified to update, for each invoice paid, the amount paid, whether </a>or not the payment was received  in the <span class="Italics">Eligible Days to Pay</span> days from the Invoice Date (hereafter know as the eligibility period), and the percent of the order paid  in the eligibility period. These fields are used in the rebate reports to calculate the rebate amount. If part or all of an invoice is paid before the eligibility period expires, that invoice is eligible for a rebate. The system updates the percentage of the invoice paid before the eligibility period expires. The percentage is updated by each cash receipt so that it will reflect the cumulative payments made prior to the expiration of the eligibility period. For example, if only half the invoice is paid during the eligibility period, then the customer will only receive a rebate on half the eligibility amount and not on the whole amount. See Order Processing Customer Rebates Maintenance, Order Processing Invoice Processing, Accounts Receivable Customer Rebate Maintenance, and Order Processing Reports for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003698&quot;);"><a name="1003698">Service Charge Processing</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003698", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003698", false);</script>
+      <div class="Body"><a name="1003704">Service charges generated through Auto Service Charge Entry or entered in Manual </a>Service Charge Entry will be created in the customer’s currency defined in Customer Maintenance. If the customer does not have a currency rate defined, the system will determine if the daily exchange rate will be used or the currency table. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003712&quot;);"><a name="1003712">Customer Rebate Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003712", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003712", false);</script>
+      <div class="Body"><span class="Italics"><a name="1003721">Customer Rebate Maintenance</a></span> is a new maintenance routine used to view rebate information for a customer’s invoices and to maintain rebates calculated during the cash receipts procedure. It can also be used to turn invoices off or on for rebates. This screen displays the invoice number, the <span class="Italics">Eligible Days to Pay</span> (number of days from the invoice date that the rebate is good for), the invoice amount, the amount paid to date, the amount eligible for a rebate (for the entire invoice not for the paid amount), the percentage eligible for a rebate (from payments), the <span class="Italics">Credit Report Freq</span>, and whether a rebate will be given or not (Y/N). The system also gives you the ability to view invoice information. See Accounts Receivable Cash Receipts Entry, Order Processing Invoice Processing, Order Processing Customer Rebates Maintenance, and Order Processing Reports for more information.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003734&quot;);"><a name="1003734">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003734", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003734", false);</script>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1003741">Customer Invoice Inquiry</a></span> - The <span class="Italics">Stat</span> field was modified to display a P if the invoice number is specified on an RGA. A P will only display if the invoice is open and has no prior status (disputed, etc). The P is removed once the RGA is converted to an actual credit memo and there are no other open RGAs against the invoice or if the invoice status is manually changed. Pending RGAs may be viewed by invoking the F5-Review Invoice &gt; F7-Pending RGAs option for the current invoice. See Invoice Detail Inquiry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1003773">Invoice Detail Inquiry</a></span> - <span class="Italics">F7-Pending RGAs</span> is a new function key that displays all pending RGAs for the current invoice. User has the ability to drill down into the RGA. See Customer Invoice Inquiry for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1003787">Cash Receipts Reports</a></span> - <span class="Italics">Incomplete Cash Receipts Report</span> is a new report that displays batches that were placed on hold in Cash Receipts Entry because the total cash applied did not match the batch total. This report can be run for a bank code, deposit date range, and/or batch number range. See Cash Receipts Entry for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003799&quot;);"><a name="1003799">AP/PO Subsystem</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003799", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003799", false);</script>
+      <div class="Subhead"><a name="1003806">Vendor Invoice Reconciliation </a></div>
+      <div class="Body"><a name="1003812">Added logic to capture the actual freight amount per serialized item. The system </a>proportions the freight amongst the line items and adds it to the landed cost. If the item is a serialized product, the freight amount per serial number is captured and stored in the Prod.SN file. The actual freight will replace the estimated freight captured at stock receipts time. See Inventory Stock Receipts for more information. </div>
+      <div class="Subhead"><a name="1003818">Vendor Claim Reconciliation</a></div>
+      <div class="Body"><a name="1003824">For the </a><span class="Italics">Receiver Number</span> field, added <span class="Italics">Vendor RMA#</span> to the lookup options which gives you the ability to search for a receiver by entering an RMA number. Only an exact match will be returned. For example, if the RMA number is RTN-3095, entering RTN or 3095 will not find the receiver. You must enter this number exactly to find the corresponding receiver. If the system finds more than one receiver with the same RMA number then those receivers will be displayed in a selection box for you to determine the correct receiver to process. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v14_new_features.6.1.htm#1003621">V14 New Features</a>:Accounts Receivable/Accounts Payable</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

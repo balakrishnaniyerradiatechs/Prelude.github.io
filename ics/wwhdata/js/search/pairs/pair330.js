@@ -1,0 +1,27 @@
+function FileData_Pairs(x)
+{
+x.t("inquiries","available");
+x.t("inquiries","activant");
+x.t("inquiries","stock");
+x.t("inquiries","following");
+x.t("available","view");
+x.t("inquiry","product");
+x.t("inquiry","stock");
+x.t("product","receipts");
+x.t("receipts","inquiries");
+x.t("receipts","inquiry");
+x.t("receipts","discrepancy");
+x.t("receipts",":stock");
+x.t("solutions","866-878-0574");
+x.t("972-403-3150","preludeeducation@activant.com");
+x.t("discrepancy","inquiry");
+x.t("view","information");
+x.t("information","received");
+x.t("received","stock");
+x.t("activant","solutions");
+x.t("stock","receipts");
+x.t("stock","stock");
+x.t("following","inquiries");
+x.t("866-878-0574","972-403-3150");
+x.t(":stock","receipts");
+}

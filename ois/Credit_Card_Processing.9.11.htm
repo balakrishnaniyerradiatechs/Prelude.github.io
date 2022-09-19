@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Adding a Markup to the Pre-Authorization Amount</title>
+    <link rel="StyleSheet" href="css/Credit_Card_Processing.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1452517">Adding a Markup to the Pre-Authorization Amount</a></div>
+      <div class="NumberedIntro"><a name="1468805">If you want to pre-authorize sales orders for more than the merchandise </a>amount (e.g., to account for freight charges), you can set up a credit card table to determine the markup percent to add to the merchandise amount pre-authorized on a credit card. Then if the freight charge ends up being more that what was pre-authorized, it won’t be rejected when you post-authorize. You can enter multiple levels of markups.</div>
+      <table class="Hint" style="text-align: left; width: 398.25072pt;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td style="background-color: #E6E6E6; padding-bottom: 4pt; padding-left: 3pt; padding-right: 3pt; padding-top: 4pt; vertical-align: top; width: 398.25072pt;">
+            <div class="TableSubhead"><a name="1467314">Order Processing Parameters</a></div>
+            <div class="TableText"><a name="1467342">To access the CC Table Maintenance screen, </a><span style="font-style: italic;">Add Markup To Pre-Auth Amt </span>in <span style="font-weight: bold;">Order </span><span style="font-weight: bold;">Processing Parameters &gt; F5-Add Info</span> must be set to <span style="font-weight: bold;">Y</span>. Refer to <a href="javascript:WWHClickedPopup('ois', 'Credit_Card_Processing.9.9.htm#1421707', '');">Integrating Protobase with Prelude</a>.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">1	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1452519">Select </a><span style="font-weight: bold;">Credit Card Table Maintenance</span> in Order Processing Controls to open the CC Table Maintenance screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">2	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1452708">Enter the </a><span style="font-style: italic;">Table Number</span> to create.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">3	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1452521">For </a><span style="font-style: italic;">Markup Limit</span>, indicate how large an order must be to be excluded from adding a markup.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">4	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1452522">Enter the cutoff </a><span style="font-style: italic;">Amount </span>that determines when to add a markup percent. For example, if you enter <span style="font-weight: bold;">10</span>, all orders that are $10 or less will have the corresponding <span style="font-style: italic;">Markup %</span> added to their order. You can enter more than one cutoff amount.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">5	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1467606">Enter the </a><span style="font-style: italic;">Markup %</span> the customer will receive when they purchase up to the corresponding <span style="font-style: italic;">Amount</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">
+                <span class="Bold">6	</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1467620">Press </a><span style="font-weight: bold;">F2-Save</span> to save the markup information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body" style="margin-bottom: 2.0pt; margin-top: 14.0pt;"><a name="1453409">Once you set up credit card tables, you can assign the table number to:</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;margin-bottom: 2.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1467626">A ship via code</a></span> in the Credit Card Options screen (refer to the <a href="javascript:WWHClickedPopup('ois', 'shipvia_mnt.htm#1426864', '');">Ship Via Maintenance Screen</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;margin-bottom: 0.0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span style="font-weight: bold;"><a name="1471283">All credit card sales orders:</a></span> Set <span style="font-style: italic;">Add Markup To Pre-Auth Amt</span> to <span style="font-weight: bold;">Y</span><span style="font-style: italic;"> </span>in the Add CC Software Info screen (refer to <a href="javascript:WWHClickedPopup('ois', 'Credit_Card_Processing.9.9.htm#1421707', '');">Integrating Protobase with Prelude</a>).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          // Add related topics
+          //
+          WWHAddRelatedTopic("Setting up Your System for Credit Cards", "ois", "Credit_Card_Processing.9.2.htm#1406155");
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="Credit_Card_Processing.9.1.htm#1452517">Credit Cards</a>:<a class="WebWorks_Breadcrumb_Link" href="Credit_Card_Processing.9.2.htm#1452517">Setting up Your System for Credit Cards</a>:Adding a Markup to the Pre-Authorization Amount</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

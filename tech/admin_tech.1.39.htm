@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Troubleshooting RF guns with DOS Operating Systems</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1123820">Troubleshooting RF guns with DOS Operating Systems </a></div>
+      <div class="NumberedIntro"><a name="1123821">To configure the RF gun’s network settings to connect to your access point (AP):</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123822"> With the gun off, press the following keys at the same time "A", "B" and "D", and while holding them </a>down, press the PWR/ON button, release the PWR/On button then release "A", "B" and "D”.  This is a cold boot. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123823">Allow the gun to load files until a screen comes up with the following: </a><br />For a PDT6846 RF gun you see:<br /><span class="TypedInText" style="font-size: 11.0pt;">Using 11 Mbps </span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">Flash Terminal </span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">LWP 11 Hex 5.00-38 </span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 12.0pt;"><br /></span>For PDT6840, PDT6842 and PDT 3540 series RF guns you see:<br /><span class="TypedInText" style="font-size: 11.0pt;">Using 802.11</span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">FLASH TERMINAL </span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">LWP Hex V 4.02-07</span><span class="TypedInText" style="font-size: 11.0pt;"><br /></span><span class="TypedInText" style="font-size: 11.0pt;">RF V1.07</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123824">Once the gun continues to the next screen press control c until you are prompted “Halt Batch </a>Process (Y/N)?” Choose y for yes, which will bring you to D:\&gt; where you would type in cfg11 for PDT6846 units or cfg24 for PDT6840, PDT6842, and PDT3540 units then press Enter. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123825">Use the arrow keys to guide you through the menu which looks like the following: </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <pre class="Report"><a name="1123826">CONFIGURATOR 2.18 </a></pre>
+      <pre class="Report"><a name="1123827">View config </a></pre>
+      <pre class="Report"><a name="1123828">ESS Id </a></pre>
+      <pre class="Report"><a name="1123829">Boot Mode </a></pre>
+      <pre class="Report"><a name="1123830">Perf Index  </a></pre>
+      <pre class="Report"><a name="1123831">Tx Rate  </a></pre>
+      <pre class="Report"><a name="1123832">Intl Roaming  </a></pre>
+      <pre class="Report"><a name="1123833">Antenna  </a></pre>
+      <pre class="Report"><a name="1123834">MU Sleep Mode </a></pre>
+      <pre class="Report"><a name="1123835">Buffer Count </a></pre>
+      <pre class="Report"><a name="1123836">ReXmit Delay </a></pre>
+      <pre class="Report"><a name="1123837">Encryption </a></pre>
+      <pre class="Report"><a name="1123838">Exit  </a></pre>
+      <div class="Body"><a name="1123839">View config will display the RF gun’s hardware address, IP, Subnet Mask, Router, ESS ID, whether or </a>not the gun is associated with an access point, and your current encryption status. Use the CLR key to go back to the main menu. If you want to set up how the gun obtains an IP highlight BOOT MODE and press enter. This will bring you to another screen.  Highlight Set Mode and press Enter. Use the arrow keys to go through the different options. (EX. DHCP)  If you choose DHCP use the CLR key to escape out back to the main menu.  If you choose manual press the CLR key once to the previous menu and enter the MU IP, Subnet Mask, and Default Router assigned to the gun.  Use the BKSP key to clear any previous entries. Once you have enter the information press the CLR key once to get you back to the main menu. </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123840">Next you need to make sure the ESS ID is set to your AP’s ESS ID.  Highlight ESS ID and press </a>Enter. Use the BKSP key to erase the current ID if incorrect and enter the correct one. Press CLR twice and you save your new setting while exiting the configuration screen.  Once you are back at the D:\&gt; power off the gun and perform a cold boot (See Step 1). </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="NumberedIntro"><span class="Bold"><a name="1123841">To change the host IP in Wavelink on the gun: </a></span></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123842">Power up the gun and wait for all the files to load.  You should end up at a screen with the following: </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <pre class="Report"><a name="1123843">No host connection </a></pre>
+      <pre class="Report"><a name="1123844">&lt;Enter&gt; to connect </a></pre>
+      <div class="Body"><a name="1123845">Note: If you do not see this then you have not connected to your AP and need to follow the steps for </a>configuring your RF gun to connect to your AP.</div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123846">Press FUNC then CTL then r in that order.  You will be prompted for a password.  The default </a>password is system.  Press y when prompted “Warning:  Any Active session will be terminated.”, and you will see a menu with different options.  Press 2 to configure the host profile. Highlight the host profile you want to configure and press enter. You can change the Host IP Address and Host Profile Name.  Then press CLR to exit and save. Press 3 to return to login. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1123847">Login information to our server: </a></span></div>
+      <div class="Body"><a name="1123848">Login:symbol </a><br />Password: Ask your tech support team. <br />2nd login:sym <br />Password: Ask your tech support team. </div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1123849&quot;);"><a name="1123849">Symbol RF Setup</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1123849", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1123849", false);</script>
+      <div class="Body" style="margin-bottom: 6.0pt;"><a name="1123850">When you obtain Symbol RF guns to be used with the Prelude Warehousing Module, the following items </a>must be setup to enable each gun to function:</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123851">An IP address must be established.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123852">An ESS identification must be assigned.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1123853">A host configuration must be setup.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="NumberedIntro"><a name="1123854">A process called cfg24 is used to set up the IP address and the ESS ID. Then the host configuration </a>screen can be set up. The following steps will guide you through the proper procedures.</div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123855">Cold boot the gun by turning the power off.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123856">Hold down the </a><span class="Bold">A</span>+<span class="Bold">B</span>+<span class="Bold">D</span> keys at the same time while turning the power back on.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123857">Release the </a><span class="Bold">A</span>+<span class="Bold">B</span>+<span class="Bold">D</span> keys. As the screen begins to scroll with information, look for:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123858">Symbol Technologies</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123859">Copyright 1995-1998</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123860">BOOTP Ver 2.xx</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123861">Connecting…</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123862">When the above information appears, press and release the </a><span class="Bold">CTL</span> key followed by <span class="Bold">BKSP</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123863">The gun prompts if you want to halt the batch process. Answer Yes and you are taken to the</a><span class="Bold"> D:</span> prompt.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123864">Enter </a><span class="Bold">cfg24</span> to access the configuration menu.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">7	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123865">Arrow down to the prompt for </a><span class="Bold">ESS Id </span>and press ENTER.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">8	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123866">Set the ESS Id to uppercase </a><span class="Bold">PSI</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">9	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123867">Press ENTER to get back to the main menu.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">10	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123868">Arrow down to the </a><span class="Bold">MU IP</span> Address option and press ENTER.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">11	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123869">Enter the IP address for the gun then press ENTER to return to the main menu. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">12	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123870">Arrow down to the </a><span class="Italics">Exit </span>option and press ENTER. This brings you to the <span class="Bold">D:</span> prompt.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">13	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123871">Cold boot the gun again by turning the gun off.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">14	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123872">Hold down the </a><span class="Bold">A</span>+<span class="Bold">B</span>+<span class="Bold">D</span> keys and turn the power back on.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">15	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123873">Release the </a><span class="Bold">A</span>+<span class="Bold">B</span>+<span class="Bold">D</span> keys.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">16	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123874">Once the unit has finished booting, you can set up the host configuration screen by pressing </a><span class="Bold">FUNC,</span> <span class="Bold">CTRL</span>, <span class="Bold">R</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">17	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123875">The password is lowercase </a><span class="Bold">system</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">18	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123876">The screen will display a warning, Any Active Session Will Be terminated, Continue?, answer</a><span class="Bold"> Y</span> to continue. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">19	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123877">You will then be at the CONFIG HOST screen. Press ENTER to get to the actual host configuration </a>setup. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">20	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123878">Enter the </a><span class="Italics">Host IP address</span> when prompted.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">21	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123879">Enter the </a><span class="Italics">Host Profile Name</span> when prompted. This is the name of the host you are connecting to. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">22	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123880">When prompted for </a><span class="Italics">Port </span>use <span class="Bold">23</span> as the port number. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">23	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123881">Enter </a><span class="Bold">VT220</span> as the <span class="Italics">Terminal Type</span>. If you <span class="Bold">CTRL</span>+<span class="Bold">N</span>, the terminal types scroll down or you can enter VT220.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">24	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123882">To save this information, press </a><span class="Bold">CTRL</span>+<span class="Bold">S</span> to save the screen. This brings back the CONFIG HOST screen. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">25	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123883">Press </a><span class="Bold">CTRL</span>+<span class="Bold">S</span> to save this screen.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body" style="margin-bottom: 6.0pt;"><a name="1123884">The RF gun is now setup to login to an Prelude session at the IP address that you entered in the host </a>configuration screen.</div>
+      <div class="Subhead" style="margin-top: 12.0pt;"><a name="1123885">Access Point Setup</a></div>
+      <div class="NumberedIntro"><a name="1123886">Use the following steps to set up the Net ID and IP address for the access point.</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123887">Power up the AP and plug it into the COMM1 port on your PC with a null modem cable.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123888">The Main menu of the Access Point can be accessed using a HyperTerminal session on your PC. </a>The HyperTerminal session must be configured as follows:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123889">Phone Number: </a><span class="Bold">Direct to COMM1</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123890">Terminal Keys: </a><span class="Bold">Checked</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123891">Emulation: </a><span class="Bold">Auto Detect</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123892">Bits per Second: </a><span class="Bold">19200</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123893">Data Bits:</a><span class="Bold"> 8</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123894">Parity: </a><span class="Bold">None</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123895">Stop Bits: </a><span class="Bold">1</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123896">Flow Control: </a><span class="Bold">None</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123897">Save this HyperTerminal session under any name you choose and then double click the </a>HyperTerminal session to start it up. The Main Menu Screen appears.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123898">Choose option </a><span class="Bold">A</span> for <span class="Italics">Enter Admin Mode</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123899">The password is </a><span class="Bold">Symbol</span> (make note of the uppercase S and lower case ymbol).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123900">Choose </a><span class="Bold">P</span> for AP Installation and change the <span class="Bold">IP Address</span>, which is the IP address for the Access Point.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">7	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123901">Change the </a><span class="Bold">NET_ID</span> to be set to the same as the ESS Id on the gun, (uppercase <span class="Bold">PSI</span>). This is a security check so that only RF guns with the ESS Id set to the same name as the Access Points NET _ID can communicate through the AP and into your system.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">8	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123902">Once you have set these, press </a><span class="Bold">F1</span> to save the settings.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">9	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123903">At the main menu close the HyperTerminal session and the Access Point is ready.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">10	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123904">Once the Access Point has an IP address, then you can access the Main Menu of the Access Point </a>by teleneting to the IP address you assigned to the Access Point.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">11	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123905">Once you have set up the RF gun and AP and you plug the AP into the network, then you can login </a>into the system (if you have the user security setup correctly.)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.35.htm#1123820">RF Guns</a>:Troubleshooting RF guns with DOS Operating Systems </div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

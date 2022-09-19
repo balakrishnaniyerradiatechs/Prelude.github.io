@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Taking An Existing Report To Excel</title>
+    <link rel="StyleSheet" href="css/admin_tech.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1122980">Taking An Existing Report To Excel</a></div>
+      <div class="NumberedIntro"><a name="1122981">In addition to creating your own downloads by using SBClient’s Smart Query, you can also download </a>existing reports to a PC spreadsheet. Although may seem confusing and require more work, the process gets easie. In our example we will take an Accounts Receivable Aging Report and download it to Microsoft Excel. Once you have filled out the prompts in the A/R Aging Report screen and you begin to run the report you should get a prompt back asking you which printer you want the report to go to. </div>
+      <div class="NumberedIntro"><a name="1122985">Note: If you do not get this prompt, a your user security must be changes. <img class="Default" src="images/SB%20Client.30.1.8.jpg" width="298" height="111" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122986">Set Assign Options to “HS” to hold the job in the spooler instead of printing. Once this screen is </a>saved you should notice a message on the screen telling you which job number this report will be. (Ex: Hold Entry # 50)</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122987">Once you know the job number then go to TCL and type: SP-EDIT XX (C where XX is the hold entry </a>job number. In this next step we will take the hold job in the spooler and convert it to a PICK file, you should see: <br />Entry # 50 Display (y/n/s/d/x)? - Answer N here<br />String:- 	 - Press Return Here<br />Spool (y/n=cr/t/tn/f)?- 	 - Answer F, which is for file<br />File Name? - 	- Enter a file name for the hold job (e.g., AR) or use “FIX”. Item id</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1122988">Next we will use SBClient Host To PC Transfer to download the FIX AR record to a PC File. The best </a>format is ASCII, though you may experiment with other formats to see if you get better results. <img class="Default" src="images/SB%20Client.30.1.9.jpg" width="438" height="313" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1122992">Note:</a></span> If the ASCII format is used you do not need to specify any display fields. </div>
+      <div class="Body"><a name="1122994">The hold jobs are kept in a file called _HOLD_ which we can directly access. When you print a report </a>the system should come back and give you the item id of the hold job which looks something like: Hold Entry _HOLD_/ACT50_1234 where ACT is the user id of the person running the report. Then in the Host To PC Data Transfer screen you can put _HOLD_ in the host file and dictionary fields and “ACT50_1234” in the Select Records field using the double quotes before and after the item id. </div>
+      <div class="Body"><a name="1122995">Now that the file is downloaded to the PC, you can go to your spreadsheet application and open the PC </a>file. When you try to open the file, Excel’s Import Wizard guides you through setting up the appropriate columns. <img class="Default" src="images/SB%20Client.30.1.10.jpg" width="508" height="345" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="1122999">In the Import Wizard choose Fixed Width for the Data Type and then be sure to set up your columns </a>appropriately. When you are done you should have a spreadsheet that looks something like this:<img class="Default" src="images/SB%20Client.30.1.11.jpg" width="556" height="288" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="admin_tech.1.23.htm#1122980">SBClient</a>:Taking An Existing Report To Excel</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

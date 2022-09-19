@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Inventory</title>
+    <link rel="StyleSheet" href="css/v14_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1001608">Inventory</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001615&quot;);"><a name="1001615">Stock Receipts</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001615", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001615", false);</script>
+      <div class="Body"><a name="1001622">Added logic to stock receipts to capture the estimated freight amount per serialized item. </a>The system proportions the freight amongst the line items and adds it to the landed cost. If the item is a serialized product, the freight amount per serial number is captured and stored in the PROD.SN file. For example, stock receipts are done on a purchase order containing one line item for 2 pieces of a serialized product. The product’s cost is 10.00 and the estimated freight is 6.00. The system proportions the freight between the two products giving each a landed cost of 13.00 and a freight amount of 3.00 per serial number. Note: remember that a proportional freight amount is calculated per line item. See Accounts Payable Vendor Invoice Reconciliation for more information. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001638&quot;);"><a name="1001638">Stock Movements</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001638", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001638", false);</script>
+      <div class="Subhead"><a name="1001645">Transfer Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001652">03-Warranty Inventory</a></span> is a new transfer type used to transfer warranty inventory from one branch to another. This transfer type is strictly for warranty inventory with a corresponding tag number. User will not be able to mix regular and warranty tag inventory on the same transfer. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001665">To add a product to this type transfer, use the F7-Wty Tag# function. Though a </a>comment may be added, this is the only way to add a product to the transfer. Once the tag number was entered, all the products on that tag will be pulled into the transfer. User will not be allowed to access the line item detail information. All the information is pulled from the tag and should not be altered. Multiple tags may be entered per transfer.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1001674">Note: Warranty tag inventory is only transferable on a type 03-Warranty Inventory </a>transfer. The F7-Wty Tag# function is only available in Transfer Entry and only if the transfer type is 03-Warranty Inventory.</div>
+      <div class="Body"><a name="1001686">See Transfer Shipment Entry, Transfer Receipts Entry, General Ledger Maintenance, </a>Inventory Inquiries, and Inventory Reports for more information. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001695">F7-Ship-To</a></span> is a new option that allows you to control the ship-to address that appears on the transfer shipping document. A transfer ship-to code may be entered to automatically pull in an existing address or you may manually input a ship-to address. If nothing is entered in this screen, then the To warehouse address will print on the transfer shipping document as it did previously. <span class="Bold">Note to existing clients: </span>changes will have to be made to the transfer print user-form program before this option can be utilized. See Transfer Ship-To Maintenance for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001710">Transfer Shipment Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001717">This routine was modified to not allow the user into the line item detail on a type 03-</a>Warranty Inventory transfer. Therefore, this type transfer must be completely shipped since the user will not be able to define a partial ship quantity. See Transfer Entry for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1001729">General ledger posting were modified when dealing with a type 03-Warranty Inventory </a>transfer. General ledger postings will be used to move the warranty inventory from one location to another by using the <span class="Italics">Inventory Warranty In Transit </span>account from the General Ledger Table. General ledger postings will credit the shipping warehouse <span class="Italics">Inventory </span><span class="Italics">Warranty Return </span>account and debit the shipping warehouse <span class="Italics">Inventory Warranty In Transit </span>account for the extended cost of the products shipped. See General Ledger Maintenance for more information. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001747">This routine was modified to work with the </a><span class="Italics">Two Step Transfer Process</span> option parameter. If this option parameter is set to Y, transfer receipts will be performed behind the scenes after transfer shipment entry is updated for a transfer. See System Inventory Option Parameter Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1001765">Transfer Receipts Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001772">On a type 03-Warranty Inventory transfer, user will only have access to the quantity-</a>received field in the line item detail screen. A line item on this type transfer cannot be over received (receive more than was shipped) nor may products be added. See Transfer Entry for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001784">General ledger posting were modified when dealing with a type 03-Warranty Inventory </a>transfer. For the shipping location, general ledger postings will debit the <span class="Italics">Transfer </span><span class="Italics">Inventory Out</span> account and credit the <span class="Italics">Inventory Warranty In Transit </span>account for the extended cost of the products shipped. For the receiving warehouse, general ledger postings will debit the <span class="Italics">Inventory Warranty Return </span>account and credit the <span class="Italics">Transfer </span><span class="Italics">Inventory In</span> account for the extended cost of the products received. See General Ledger Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001801&quot;);"><a name="1001801">Inventory Adjustments</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001801", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001801", false);</script>
+      <div class="Subhead"><a name="1001808">Inventory Adjustment Entry</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001815">This process was modified to prompt for a </a><span class="Italics">Core Return Type</span> when a core item is entered. Return through this field if you are correcting inventory counts. Enter S for Sales Order if returning cores against an order that was previously invoiced. In other words, this is used to apply against the PENDING.CORES file. You will be prompted for the sales order number the cores should be applied to. This process allows the quantity applied to be different than the quantity in the pending core record. The cost difference will posted to the Core Cost Variance account. Enter CB if returning cores to the Core Bank. You will be prompted for the <span class="Italics">Exchange Type</span> and <span class="Italics">Customer Number</span> the cores belong to. <span class="Italics">Exchange Type</span> options are: R- Repair and Return, E- Exchange, U- Used, W- Warranty, and O- Other. This process is also used to adjust out core bank items to correct an error. This is done by entering a negative quantity and defining the customer and the original adjustment number. The system will reverse the G/L postings and decrease the core bank quantity. See Order Processing Sales Order Entry Line Item Level, Inventory Processes, Order Processing Sales Order History Inquiry, Inventory - Inventory Adjustment Inquiry, Order Processing Miscellaneous Reports, Inventory - Inventory Adjustment Reports, Inventory Core Inquiries, Inventory Misc Code File Maintenance, General Ledger G/L Table Maintenance, and System Processes Rebuild Menu for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1001866">When exited, this process will now prompt the user to print a core receiving ticket if the </a>adjustment contains a core item and if the <span class="Italics">Print Core Receiving Tkt</span> option parameter is set to Y. Only core products will print on the core receiving ticket. See System Maintenance Inventory Option Parameters and Inventory Processes for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001881&quot;);"><a name="1001881">Physical Inventory</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001881", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001881", false);</script>
+      <div class="Subhead"><a name="1001888">Cycle Counting Procedure</a></div>
+      <div class="Subhead"><a name="1001895">Paper Site Count Sheet Printing</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001901">Print Bin Onhand</a></span> is a new prompt that allows the user to print the bin on-hand quantity on the report. If this field is set to Y, the bin quantity will print on the report. If this field is set to N, the bin quantity will not print on the report.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001922">Print Inv Bins</a></span> is a new prompt that allows the user to print the on-hand quantity for the Inv bin on the report. If this field is set to Y, the Inv bin quantity for the product will print on the report. If this field is set to N, the Inv bin quantity for the product will not print on the report. Note: the Inv bin is the bin a product is moved into when it was confirmed shipped but has not yet been invoiced. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1001944&quot;);"><a name="1001944">Processes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1001944", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1001944", false);</script>
+      <div class="Subhead"><a name="1001951">Release Pick Tickets</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001958">Sales Orders</a></span>, <span class="Italics">Work Orders</span>, and <span class="Italics">Transfers</span> are three new prompts that allows you to specify what documents to release. Based on how these flags are set (Y/N), the process will release the appropriate documents. The default for these fields is Y. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1001979">Printer Form Queue</a></span> is a new prompt that allows you to redirect the print job for sales orders, transfers, and/or work orders to another form queue. These prompts are only accessible if this process is ran for a warehouse and if that warehouse is set up for continuous printing. For example, if in warehouse 10 sales order pick tickets are set up to print continuous but work order and transfer tickets are not, then you will only be prompted for a form queue for sales orders when this process is ran for warehouse 10. If the form queue is left blank, the standard default will apply. Note: if a pick ticket process that meets all the other requirements to prompt for a form queue is not selected, the system will skip the prompt. Using the previous example, if <span class="Italics">Sales Orders </span>is set to N then you will not be prompted for a form queue. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1001995">This field was modified so that if a form queue is entered, the system will check to see if </a>it is set up in Form Queue Maintenance. If it is, it will then verify that the form queue is valid for the specified warehouse. If the form queue is not established in Form Queue Maintenance, the system will print to that form queue without validating the warehouse. See System Maintenance Printer Set-up for more information. </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002007">Print Core Receipt Ticket</a></span> is a new option that allows you to print a core receiving ticket for an adjustment that contains a core item. This option prompts for the adjustment number and/or warehouse and the printer form queue to print to. Only core products will print on the core receiving ticket. See Inventory - Inventory Adjustment Entry and System Maintenance Inventory Option Parameters for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002021">Core Bank/Issues Entry</a></span> is a new option used to identify available core bank items and apply them to pending cores for a customer. You are prompted for the customer number and the return type. <span class="Italics">Return Type</span> allows you to define if all pending cores for the customer are displayed or if only those pending cores with a remaining quantity are displayed. This routine displays pending cores records for the selected customer along with the quantity shipped, quantity applied, and quantity remaining for each record.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1002034">Pressing F5-Review on a record will drill down into the Core Order Info screen. This </a>screen displays the pending cores for the selected order. For each core product number, the core type code (from product maintenance), the quantity shipped, the quantity applied, the quantity remaining, and the bank available quantity is displayed. Bank Avail is the number of cores available in the core bank for the current product. This screen gives you several options. You can press F6-Apply and apply a banked core to the pending core or reverse a previously applied core bank. You can press F7-Write Off and manually apply/write off the pending core. A match to a core bank record is not required with the write-off option. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1002046">The F6-Apply screen gives you the option to display all core bank records for the </a>customer with a quantity available, all core bank records for the current customer/product that have a quantity available, or all core bank records that were fully applied. This screen will display the core bank product number, the adjustment number, core type, the quantity placed into the core bank, the quantity applied to a pending core record, and the quantity available. To apply a core, choose the banked core to apply and enter a quantity in the Quantity field. This process allows the quantity applied to be different than the quantity in the pending core record. The cost difference would be posted to the Core Cost Variance account. When this screen is exited and if a quantity is entered for one or more core bank records, the pending core record is updated with the quantity applied, the current date, and the associated transfer line item key for the associated core bank item. The core bank record is update with the associated pending core line item key. This provides a proper link between the pending core and the core bank records. You are then taken back to the initial Core Bank Issue Entry screen and the record shows applied or is no longer visible depending on the Ret Type flag. This screen also gives you the ability to reverse the application of a core bank to a pending core such as to correct an error. The system allows you to enter a negative quantity to reverse a previous application. This would reverse the general ledger postings and also establish the quantity back on the pending cores and core bank records.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Italics"><a name="1002055">F7-Write Off</a></span> gives you the ability to write off a pending core record. A match to a core bank record is not required. The quantity entered is the quantity that will be written off. The update process will reduce the remaining quantity on the pending core record by the quantity entered and makes the appropriate postings to the general ledger. Note: the quantity entered cannot be greater than the quantity remaining for the pending core record.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1002066">See Order Processing Sales Order Entry Line Item Level, Inventory Processes Auto Core </a>Application Process, Order Processing Sales Order History Inquiry, and General Ledger G/L Table Maintenance for more information.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002079">Automatic Core Application Process</a></span> is a new option that will automatically apply available core bank items to pending core records. The system selects all customers with available core bank items and then all pending core records for those customers. Only E type core bank items are used in this process. The system will match each core bank item with a pending core of the same core product and it will use the oldest core bank item first. The pending core record is updated with the quantity applied, the current date, and the adjustment line item key for the applied core bank item. The quantity available for the core bank record is reduced by the quantity applied and the core bank record is update with the pending core line item key it was applied to. This provides a proper link between the pending core and the core bank records. See Order Processing Sales Order Entry Line Item Level, Order Processing Sales Order History Inquiry, and General Ledger G/L Table Maintenance for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002097&quot;);"><a name="1002097">Maintenance</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002097", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002097", false);</script>
+      <div class="Subhead"><a name="1002104">Product Maintenance </a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002111">Weight</a></span> and <span class="Italics">Volume</span> were moved into the Packaging Info screen under F10-Action &gt; Addtl Optns.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002128">Service Item Flag</a></span> has a new option of C for Core. In Work Order Completions, the system will track the value for any product with this flag set to C (as it currently does for L and M) and will add it to the core value of the item. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002154">F5-Add Info</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002160">The </a><span class="Italics">Always Available</span> flag was renamed <span class="Italics">Availability Type</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002176">This flag has a new option of B which will always backorder the product on a sales </a>order, transfer, or work order. If this flag is set to B, this product will never be allocated to. Instead the user must manually allocate inventory to this product. This type product usually does not involve picking and shipping. An example of this type product would be a product used for sales projection in which the customer projects how many of a certain type product they expect to buy over a period of time.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002193">This flag has a new option of D for always direct ship which will always backorder the </a>product on a sales order and default the supply code to a D. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002210">The </a><span class="Italics">Special Operation</span> field’s Length (L) option was changed to prompt for <span class="Italics">Length </span><span class="Italics">Pattern</span> and <span class="Italics">Length Rounding</span>. These should be set up if an XXXX generic length product number is NOT being used. Previously you had to have an XXXX generic length product number to set this flag to L but this locked you into the XXXX length pattern. Now, a regular base product may be used and the length pattern defined when this flag is set to L. This allows you to retain the same functionality as the generic length product number but gives you flexibility in the length pattern. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002239">Length Pattern</a></span> defines a length pattern for a product if the generic length pattern of XXXX is not desired. For example: product XYZ has a length pattern of 999.999. In Sales Order Entry, a length of 159 inches is entered. The 159 will be zero filled to the length pattern (159.000) and the result will be appended to the product XYZ (XYZ159.000). If this product already exists, processing will proceed as normal. If it does not already exist, then a new product, warehouse, bill of material, etc. records will be created for the new product XYZ159.000. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002255">Length Rounding</a></span> defines the increment to use for rounding the length. For example, if .50 is entered, the length will be rounded up to the next half foot. For example, a product has a length pattern of 999.99 and a rounding of .50. In sales order entry, 99 is entered as the length. The product would be XYZ099.000</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002273">Core Product</a></span> was moved to this screen from the PM &gt; F5-Add Info screen. This field will now display all exchange products associated with the core when you return through this field.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002285">Core Type</a></span> is a new field that allows you to define the core type code for the core product. This field is mainly used with core banking to group cores together. See Inventory Core Type Code File Maintenance for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002295">F6-Xref/Notes - Substitutes</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002303">Product Substitution Type</a></span> is a new field that defines how the substitute product is added to the order. The options for this field are for customers that allow substitutes. For those customers that do not allow substitutes, the system will treat the current product as if this flag were set to S or Null with the excepting of pricing which works as defined for the setting. See Order Processing Sales Order Line Item Level for more information. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1002320">A - when the product is added to an order and there is a backordered quantity, the </a>system will automatically replace the product with the first substitute product with available inventory. Pricing is based on the substitute product.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1002336">P - when the product is added to an order and there is a backordered quantity, the </a>system will automatically replace the product with the first substitute product with available inventory but the pricing is based on the original product.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1002348">B - when the product is added to an order, the system will automatically replace the </a>product with the substitute product regardless of the availability of the original product. This type substitution is used for special promotions such as when the customer receives the requested product and some extra for free. For example, the vendor provides a pack of four instead of the usual pack of three. Once the bonus product runs out, the system will default back to the original product. Pricing is based on the substitute product.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1002360">S or Null </a>– when the product is added to an order, no automatic substitution will take place. Instead, the user must manually choose to substitute a product by selecting F6-Subs at the line item detail level and choosing the substitute product from the available list. Pricing is based on the substitute product.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002375">Product Substitution Comment 1</a></span> is a new field that allows you to enter a first line of comment that will be added to the sales order if a substitution is made. See Order Processing Sales Order Line Item Level for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002388">Product Substitution Comment 2</a></span> is a new field that allows you to enter a second line of comment that will be added to the sales order if a substitution is made. See Order Processing Sales Order Line Item Level for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002398">Product Notes</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002404">Doc</a></span> has a new option R that will print product notes on the Putaway Report. Product notes will print on the Putaway Report for any product containing notes of this type. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002421">Doc</a></span> has a new option W that will print product notes on the Work Order Pick Ticket. Work Order Entry will check the product being entered for product notes with the <span class="Italics">Doc</span> field set to W. If found, the appropriate comment line(s) will be created on the work order for the product. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002441">Surcharge Product</a></div>
+      <div class="Body"><span class="Italics"><a name="1002447">Qty</a></span> is a new field that is used to determine whether or not a surcharge will be added to a sales order or quote. This field gives you the ability to set a quantity limit where the surcharge will not be charged to the customer. It also gives you the ability to prompt the user to add the surcharge product in Sales Order Entry. You can not add the surcharge product to the order if they wish. If the quantity entered on the order is less than the value entered for this field, the system will prompt the user to add the surcharge to the order. You can add or not. If the quantity entered on the order is greater than or equal to the value entered for this field, the system does not prompt nor does it add the surcharge to the order. If no quantity is established, the surcharge will automatically be added to the sales order without a quantity check. Example: the surcharge quantity is set to 25. A line item for 20 pieces or less will prompt the user to add the surcharge. A line item for 25 pieces or more will not prompt the user nor will it add the surcharge to the order.</div>
+      <div class="Subhead"><a name="1002454">F7-Pricing</a></div>
+      <div class="Body"><a name="1002460">Added the ability to password protect the F5-Recompute function. The process name is </a>RECOMPUTE.PM.</div>
+      <div class="Subhead"><a name="1002468">F10-Action </a></div>
+      <div class="Body"><a name="1002474">Copy This feature was modified to also work with items in the catalog (NS.PRODUCT) </a>file. The newly created product will also reside in the catalog file. This feature was modified to work with the <span class="Italics">Copy Whse In Prod Copy</span> option parameter which determines if the from product’s warehouse records will be copied to the to product. See System Inventory Option Parameter Maintenance for more information. </div>
+      <div class="Subhead"><a name="1002490">Addtl Optns</a></div>
+      <div class="Body"><span class="Italics"><a name="1002496">Language Codes</a></span> is a new option where the product’s description can be maintained in multiple dialects. The user is prompted for a Language Code which defines the dialect of the product description that follows. User should then enter the product’s Description One and Description Two in the dialect defined by the language code. For example: if the language code is 1 for Spanish then the description should be entered in Spanish. These descriptions are in addition to the descriptions entered on the first screen of product maintenance. Which description is printed on pick tickets, packing lists, invoices, quotes, and purchase orders will depend on the language code defined by the customer or vendor records. </div>
+      <div class="Body"><a name="1002511">Note: this option is also available in Quick Product Maintenance and in Skeleton Product </a>Maintenance.</div>
+      <div class="Body"><a name="1002514">See Order Processing Customer Maintenance, Customer Ship-To Maintenance, Sales </a>Order Entry, and Quotation Entry; and Purchasing Vendor Maintenance and Purchase Order Entry for more information.</div>
+      <div class="Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span class="Bold"><a name="1002519">Note: this feature requires User-Form modifications that are billable on a Time &amp; </a></span><span class="Bold">Material basis. Standard ADS forms utilize both English and French.</span></div>
+      <div class="Body"><span class="Italics"><a name="1002522">Package Info</a></span> is a new option that allows you to set the quantity, weight, and cube (volume) for a single item, inner pack, case pack, and/or pallet. The single weight and cube fields will work are usual. (These are the fields that use to be on the main screen.) The weight and cube fields for inner pack, case pack, and pallet are informational. Inner Pack is a break down of a case pack. For example, you normally ship a product in quantities of 8 but will break the case down to ship in a quantity of 4.</div>
+      <div class="Subhead"><a name="1002526">Product Warehouse Maintenance</a></div>
+      <div class="Subhead"><a name="1002532">F7-Price/Cost</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002538">The </a><span class="Italics">Basis</span> field was modified to allow the user to identify a price column from the product header record. This is done by preceding the column number with an H. For example, if the price should be calculated off of Price1 in the product header then H1 is entered in the <span class="Italics">Basis</span> field. If a price should be calculated off of Price1 in the product warehouse record then 1 is entered in the <span class="Italics">Basis</span> field. If a cost should be calculated off the Replacement Cost field in the product header record then HR is entered in the <span class="Italics">Basis</span> field. This feature is also available in the F10-Action &gt; Future screen. Note: this feature does not work in the quantity break tables. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002564">Added the ability to password protect the F5-Recompute function. The process name </a>is RECOMPUTE.PWM.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002575">F10-Action</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002581">The </a><span class="Italics">Copy</span> feature was modified to also work with items in the catalog (NS.WAREHOUSE) file. The newly created product will also reside in the catalog file. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002597">Notes</a></span> is a new feature that allows you to enter, at the warehouse level, notes for a product.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002607">F5-Usage - he F5 usage screen was updated to now display an additional year of </a>product usage associated with sales orders, work orders and stock transfers. This Previous Year Two usage screen is located in F5-Usage&gt; F5-Py Usage&gt; F5-Py Usage</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Italics"><a name="1002622">Note:</a></span> The reports and listings that pertain to product usage, Product Usage Listing, for example, have not been updated to include previous two year totals.</div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002635">Generate/Create New Warehouse</a></span> is a new option used to copy all existing product warehouse records from one warehouse to another. You are prompted for the warehouse to copy from and the warehouse to copy to. Only product warehouse records not previously existing in the To warehouse will be copied over. In other words, a product warehouse record already existing in the To warehouse will not be overlaid during the copy. Usage is not copied. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002648">Misc Code Files</a></div>
+      <div class="Subhead"><a name="1002655">Major Group Codes</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002661">Product Group</a></span> is a new field that defines the product group to which the major group belongs. This is another way of grouping products. A commission matrix may be set up to define commissions by product group. See Product Group Maintenance and Order Processing Commission Matrix Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002674">Product Group Code Maintenance</a></span> is a new maintenance routine used to create and/or maintain product group codes used in Major Group Maintenance. User is prompted for a product group code and a description. See Major Group Code Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002684">Transfer Revenue Matrix</a></span> is a new matrix used to charge a markup on cost when shipping from one warehouse to another. This can be done at the warehouse or at the warehouse/product line level. The actual markup is done behind the scenes so the user never sees the markup cost in Transfer Entry, Transfer Shipping Entry, or in Transfer Receiving Entry. The markup for a transfer between warehouses is calculated and posted when the transfer is received in Transfer Receipts Entry. See General Ledger G/L Table Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002694">Core Type Code File Maintenance </a></span>is a new maintenance routine used to create and/or maintain core type codes used in product maintenance to group core products. See Product Maintenance for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002704">Core Exchange Type Maintenance </a></span>is a new maintenance routine that allows you to change the exchange type for core bank records and pending core records. You are prompted for a customer which is a mandatory field. You are also prompted for a <span class="Italics">Core </span><span class="Italics">Product#</span>. If one is entered, only core bank and pending core records for that product will be displayed. If a core product is not entered, all core bank and pending core records for the customer will be displayed. You are also prompted for a <span class="Italics">Select By</span>. If this flag is set to P, only pending core records for the customer/ product combination will be displayed. If this flag is set to C, only core bank records for the customer/product combination will be displayed. If this flag is set to A, all pending core and core bank records for the customer/product combination will be displayed. This screen displays the document number, document date, core product number, whether the line is a pending core record or a core bank record, and the current core exchange type. To change the core exchange type for a record, place the cursor on the desired line and press &lt;Enter&gt;. This takes you to the <span class="Italics">Change</span> <span class="Italics">Type To</span> field where you can enter the new core exchange type. When this screen is exited, the system will update the appropriate record for any line item that contains an exchange code in the <span class="Italics">Change</span> <span class="Italics">Type To</span> field. See Inventory - Inventory Adjustment Entry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002738">Product Control Files</a></div>
+      <div class="Body"><a name="1002745">Product Line - F5-G/L Accounts - A/P Not Invoiced </a>– Inventory is a new heading that will override the same header in the general ledger table. The stock receipts routine will first check for an account assigned in the product line. If one is not found, the system will use the account from the general ledger table. </div>
+      <div class="Subhead"><a name="1002757">Bin Files - Zone Maintenance</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002765">Floored Cube/Segment</a></span> is a new field that defines the segment floored cube size. This is used in calculations when building segments for truck route processing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002778">NonFloored Cube/Segment</a></span> is a new field that defines the segment non-floored cube size. This is used in calculations when building segments for truck route processing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002788">Bin Fill Level Percent</a></span> is a new field that defines the fill level percent for bins in a zone when using cube logic (Volume method) in stock receipts putaway. When using radio frequency stock receipts putaway, the V method will calculate the available cube of the reserve stock locations. A reserve location is recommended if it can hold the putaway quantity filling the bin up to this percent. For example, recommend the bin if it does not exceed 95%. See Warehousing RF Putaway Entry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002806">Bin Putaway Qty Minimum Percent</a></span> is a new field that defines a percentage used in the RF stock receipts putaway when the volume method is used. In radio frequency stock receipts putaway, V method, this percentage will be used in the bin recommendation. If the percent is 50%, then a bin will only be recommended if it can hold at least 50% of the putaway quantity. This would not recommend more than two reserve bin locations for putaway. 25% would recommended no more than four bin locations, 100% would only recommend a single reserve bin location that can hold the entire quantity to be putaway. See Warehousing RF Putaway Entry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002816">Transfer Ship-To Maintenance </a></div>
+      <div class="Body"><a name="1002823">This is a new option that allows you to set up alternate ship-to addresses for transfers. </a>This gives you the ability to control the ship-to address that appears on the transfer shipping document. See Transfer Entry and Inquiries for more information.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002829&quot;);"><a name="1002829">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002829", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002829", false);</script>
+      <div class="Subhead"><a name="1002836">Inventory Inquiry - F10-Action &gt; Prod Info</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002846">Core Product Info</a></span> is a new option that allows you to see core information related to the product. If the product currently being inquired upon is a core exchange product, this screen will display the core product number assigned to the product, the total average cost (sum of the exchange product’s average cost and the core product’s average cost), the exchange product’s average cost, the core product’s average cost, and any labor or overhead cost. If the product currently being inquired upon is a core product or another type product, this screen will display the product’s average cost in the <span class="Italics">Total </span><span class="Italics">Average Cost</span> field. All other fields will be blank.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002871">Product Notes</a></span> is a new option that allows you to see the product notes from Product Maintenance &gt; F6-Xref/Notes &gt; Product Notes feature.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002885">Transfer Inquiries</a></div>
+      <div class="Body"><span class="Italics"><a name="1002892">Transfer Log Inquiry</a></span> has a new code of TAG that indicates that a warranty tag was added to the transfer in Transfer Entry. This will also indicate a type 03-Warranty Inventory transfer since a warranty tag may only be placed on this type transfer. See Transfer Entry for more information. </div>
+      <div class="Subhead"><a name="1002903">Inventory Adjustment Inquiry</a></div>
+      <div class="Body"><a name="1002910">For core items, the F10-Examine screen will now display the invoice number the line item </a>is associated with in the pending core record. See Inventory - Inventory Adjustment Entry for more information.</div>
+      <div class="Subhead"><a name="1002916">Transfer Ship-To Inquiry</a></div>
+      <div class="Body"><a name="1002923">This is a new inquiry that displays the ship-to address for the entered transfer ship-to </a>code. See Maintenance for more information. </div>
+      <div class="Subhead"><a name="1002929">Core Inquiries</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002936">The </a><span class="Italics">Core Eligibility Inquiry</span> was moved from the Order Processing Inquiry menu.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002950">Core Bank Inquiry</a></span> is a new inquiry that displays for a customer how many cores were received into the core bank, how many were applied, and how many remain in the core bank. You are prompted for the customer which is a mandatory field. You are also prompted for a <span class="Italics">Return Type</span>. If this flag is set to A, all records for the customer will be displayed. If this flag is set to E, only records that have a remaining quantity will be displayed. You also have the ability to drill down into the adjustment record and to see the order numbers the cores were applied against. See Inventory - Inventory Adjustment Entry, Order Processing Sales Order Entry Line Item Level, Inventory Processes Core Bank Issues Entry, and Inventory Processes Auto Core Application Process for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002970">Core Status Inquiry</a></span> is a new inquiry that displays for a customer how many cores were sold, how many were returned, and how many are still to be returned for each invoice with a core charge. You are prompted for the customer which is a mandatory field. You are also prompted for a <span class="Italics">Core Product#</span>. If one is entered, only pending core records for that product will be displayed. If a core product is not entered, all pending core records for the customer will be displayed. You are also prompted for a <span class="Italics">Return Type</span>. If this flag is set to A, all records for the customer/product combination will be displayed. If this flag is set to E, only records for the customer/product combination that have a remaining quantity will be displayed. You also have the ability to drill down into the sales order the core was shipped on and into the adjustment record if there is a quantity applied. See Order Processing Sales Order Entry Line Item Level, Inventory - Inventory Adjustment Entry, Inventory Processes Core Bank Issues Entry, and Inventory Processes Auto Core Application Process for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1002992">Core Product Inquiry</a></span> is a new inquiry that displays the status of core bank records and pending core records for a core item. This inquiry is a combination of the core status inquiry and the core bank inquiry screens consolidated into a single screen. You are prompted for the core product number, which is a mandatory field. You are also prompted for a <span class="Italics">Return Type</span>. If this flag is set to A, all core bank and pending core records for the core product will be displayed. If this flag is set to E, only core bank and pending core records that have a remaining quantity will be displayed. This screen displays the document number (order# or adjustment#), document date, due date, whether the line is a core bank record or a pending cores record, the customer number, the quantity shipped/received, quantity applied, and quantity remaining. You also have the ability to drill down into the order/adjustment record and to see the order/adjustment number the cores were applied against.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Italics"><a name="1003012">F5-Review Ship/Rec</a></span> will display the corresponding sales order history record or inventory adjustment record depending on if the current line item is a pending core record or a core bank record. For pending core item, this function key drills down into sales order history inquiry. For core bank item, this function key drills down into the inventory adjustment record.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><span class="Italics"><a name="1003025">F6-Review Applied</a></span> - the applied order or adjustment number depending on if the current line item is a pending core record or a core bank record. For pending core items, this function key displays the adjustment number(s) that was applied to it. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="1003035">See Order Processing Sales Order Entry Line Item Level, Inventory - Inventory </a>Adjustment Entry, Inventory Processes Core Bank Issues Entry, and Inventory Processes Auto Core Application Process for more information.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1003041&quot;);"><a name="1003041">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1003041", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1003041", false);</script>
+      <div class="Subhead"><a name="1003048">Stock Receipts Reports</a></div>
+      <div class="Body"><span class="Italics"><a name="1003055">Putaway Documents Report</a></span> was modified to print product notes for any product containing type R notes. See Product Maintenance for more information.</div>
+      <div class="Subhead"><a name="1003067">Stock Movements Reports</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1003074">Open Wty Transfer In-Transit Report</a></span> is a new report that will display all open type 03-Warranty Inventory transfers that were confirmed shipped but have not yet been received. This report is similar to the Open Transfer In Transit report. See for more information. See Transfer Entry for more information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Italics"><a name="1003087">Transfer Receiving Report</a></span> is a new report used at the receiving location to print selected transfer releases for checking in material received. This report will print transfer comments and the bin locations to put the material after the transfer is received. User may only select transfer releases that were shipped through TSE. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1003097">Inventory Adjustment Reports</a></div>
+      <div class="Body"><span class="Italics"><a name="1003104">Cores Received Report</a></span> is a new report that displays cores received from the customer regardless of whether they were applied to a pending core record or placed in the core bank. This report can be printed by customer, core type, and/or core product number. This report sorts and breaks by customer. It displays the core product number, description, date received from the customer, the adjustment or order number, return type, source (pending or core bank), the quantity received, quantity applied, and the quantity remaining. See Inventory - Inventory Adjustment Entry for more information.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v14_new_features.6.1.htm#1001608">V14 New Features</a>:Inventory</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

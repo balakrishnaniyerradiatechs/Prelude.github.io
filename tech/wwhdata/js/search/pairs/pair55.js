@@ -1,0 +1,22 @@
+function FileData_Pairs(x)
+{
+x.t("scheduler","printers");
+x.t("scheduler","start");
+x.t("scheduler","stop");
+x.t("scheduler","jobstream");
+x.t("scheduler",":starting");
+x.t("scheduler","starting");
+x.t("scheduler","activant");
+x.t("printers","using");
+x.t("start","scheduler");
+x.t("stop","scheduler");
+x.t("jobstream","scheduler");
+x.t(":starting","stopping");
+x.t("starting","stopping");
+x.t("solutions","866-878-0574");
+x.t("972-403-3150","preludeeducation@activant.com");
+x.t("stopping","scheduler");
+x.t("activant","solutions");
+x.t("866-878-0574","972-403-3150");
+x.t("using","scheduler");
+}

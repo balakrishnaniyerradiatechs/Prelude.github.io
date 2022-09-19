@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Order Processing</title>
+    <link rel="StyleSheet" href="css/v18_new_features.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head1"><a name="1002462">Order Processing</a></div>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002463&quot;);"><a name="1002463">Sales Orders</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002463", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002463", false);</script>
+      <div class="Subhead"><a name="1002464">Updated Customer P/O# Functionality</a></div>
+      <div class="Body"><a name="1002465">The functionality of </a><span class="Italics">the Customer P/O#</span> field was updated to accommodate the new E Administrative Order Hold type. Versions 18 &amp; higher were enhanced with a new Administrative Order Hold process that will place orders on hold that exceed the pre-determined blanket purchase order amount. This update works with the new E AOH type <span class="Italics">(Referenced in the Systems New Features list)</span> as well as the new <span class="Italics">P/O Customer #</span> field in the Require P/O Number screen in Customer Maintenance. Once a customer number is entered in the Customer P/O# field, the system will review this customer's blanket p/o information. The F3-Look up option is also available to display all the blanket P/Os for this customer to allow you to select one if multiple blanket P/Os exist. If the total dollar amount of the items entered on the sales order exceed the amount available on the blanket P/O, the message Order was Placed on Administrative Hold! is displayed after you select Pick Ticket. In addition, the message Warning, Blanket Purchase Order Limit was Exceeded! will also be displayed, notifying the customer of the reason this order was placed on hold.</div>
+      <div class="Subhead"><a name="1002466">New Auto Cancellation Date Field</a></div>
+      <div class="Body"><a name="1002467">The Sales Order Entry screen was updated with a new </a><span class="Italics">Auto Cancellation Date</span> field. This new feature provides users with the capability of entering a date that will be evaluated during Nightly Processing when the date is reached, therefore, determining if this order should be cancelled. Each line on the sales order will be assessed separately and cancelled if no linkages or pick quantities currently exist. This option is primarily beneficial for canceling sales orders that contain items on backorder. In addition, an <span class="Italics">Auto </span><span class="Italics">Cancellation Date</span> field has also been added to the F5-Add Info screen at the Line Item level. This allows users to establish cancellation dates for each line item. The date at the Line Item level will override the date entered at the header level. However, if the cancellation date is null at the line item level, the date set up at the header level will be used. With this new option, several updates throughout the system have also been made to incorporate this feature. The logic in the Nightly Processing routine was modified to accommodate this new auto cancel option. The Monthly Lost Sales and Monthly Lost Sales By Vendor reports were updated to include a CD lost sales reason code to identify which sales were lost due to the Auto Cancellation Date process.<span class="Italics"> </span>The Sales Order Log Inquiry has also been updated with a new CAN code. This code will be displayed indicating that a line item was deleted during the Nightly Processing routine due to the auto cancellation date. The Reference column in the Order Log Inquiry will display the product number that was deleted. In addition, the Order Log Inquiry will also display DEL indicating that the entire sales order was deleted due to the auto cancellation date. The Reference column will be updated with the Auto B/O Cancellation reference. </div>
+      <div class="Body"><span class="Bold"><a name="1002468">Note</a></span>: To update product usage due to the auto cancellation date, set CD as a Lost Sales Reason Code. </div>
+      <div class="Subhead"><a name="1002469">New Return To Product Option</a></div>
+      <div class="Body"><a name="1002470">The Warning!! This Product Number was Previously Entered. message was updated with </a>a new Return To Product option. Previously, the only options available were Return to Order which returns the user back to the order to allow a different product to be entered. Continue which returns the user to the Line Item Detail screen and allow the duplicate product to be entered. The new Return To Product option takes the user to the first occurrence of the product number and removes the duplicate product number.</div>
+      <div class="Subhead"><a name="1002471">Updated A/R Terms Functionality In Sales Order Entry</a></div>
+      <div class="Body"><a name="1002472">The completion screen in Sales Order Entry was modified with a new feature. This applies </a>to customers associated with an A/R Terms code that have the Deposit Required flag set to Y. The Deposit Required flag is a new flag that was added to the A/R Terms Code screen in the Customer Control Files option. If a sales order is entered for a customer that currently is attached to an A/R terms with the Deposit Required flag set to Y and the Acknowledge Flag is not set to Print, Fax or E-mail. A message will be prompted. The message Do You Wish To Print An Acknowledgement For Receipt Of Deposit? will be displayed, providing the user with the option of printing an acknowledgement for this order. Acknowledgements will only be printed for sales orders generated from in SOE or converted from quotes. This feature does not apply to orders generated from DOE. In addition, several other areas were updated or added to incorporate this new feature. A new DPA Order Log Inquiry code as well as a new Summary G/L Recap option was added in the Open Sales Order Inquiry. </div>
+      <div class="Body"><span class="Bold"><a name="1002473">Note:</a></span> A USER-FORMS modification will be required for customers upgrading from Versions 17 and earlier.</div>
+      <div class="Subhead"><a name="1002474">New Promotional Matrix Functionality</a></div>
+      <div class="Body"><a name="1002475">The Sales Order Entry screen was updated with a new functionality when entering a </a>product that is currently associated with a promotional matrix. Once a product is entered that contains a promotional matrix, the Customer Promotion Matrix Inquiry screen will be displayed, providing a list of promotions currently available pertaining to this product. Once reviewed and F2 is selected, the detail screen will then be displayed allowing the user to select the quantity for this promotional item. If multiple promotional matrices exist, the promotional item given to the customer is based on the promotion that matches the quantity entered. When the order is complete, the Promo List Display box lists all the promotional items added to the order. </div>
+      <div class="Body"><span class="Bold"><a name="1002476">Note:</a></span> The Promo List Display feature is not available with confirmation orders (06).</div>
+      <div class="Subhead"><a name="1002477">New Currency Conversion Screen</a></div>
+      <div class="Body"><a name="1002478">The completion screen in Sales Order Entry was updated with a new Currency </a>Conversion screen to allow you to automatically convert the US dollar amounts entered for additional charges to the correct currency type for this customer. This new option simplifies the process of applying additional charges such as Inbound and Outbound freight, Handling, Delivery, Pickup, Restock, or Minimum charges to an order that is not currently associated with a US currency customer. When entering additional charges on an order for a non-US currency customer, the user can select the Currency Conversion option this screen will display the currency rate for this customer. The user then has the ability of entering the dollar amounts in US currency for each of the additional charges that apply. Once completed, select F2 to convert the amounts entered to the correct currency for this customer. If changes need to be made to the amounts once they were converted, the user can simply select the conversion process again and re-enter the amounts. After the F2-Save option is selected, the completion screen will be updated with the modified dollar amounts. </div>
+      <div class="Subhead"><a name="1002479">Updated Salesrep Number 2 Functionality</a></div>
+      <div class="Body"><a name="1002480">The functionality of the Salesrep Number 2 related to the Sample Request Entry process </a>was modified for Versions 18 &amp; higher. If the Salesrep Number 2 in the specifier ship-to is left null, the Salesrep 2 for the customer ship-to number will default into the Salesrep Number 2 field. Once this process was completed, the system will be updated with the Salesrep 2 from the customer ship-to as the Salesrep Number 2 to be used for the ship-to.</div>
+      <div class="Subhead"><a name="1002481">Updated Equipment Maintenance Functionality</a></div>
+      <div class="Body"><a name="1002482">The functionality of the Equipment Number has recently been enhanced. Now, when a </a>non-rental serialized item is entered on a sales order and the order was invoiced, the system will update both the equipment and fixed asset record for that serial number. The disposal information will be updated in Equipment Maintenance, whereas in earlier versions of the software, this information was not updated at all.</div>
+      <div class="Subhead"><a name="1002483">Comment Codes</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002484">A new CA comment code was added to print on acknowledgements only. </a><br /><span class="Bold">Note:</span> To use this new feature, your USER-FORMS program for Acknowledgements must be modified. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002485">The functionality of the Invoice Printing process was slightly modified to accommodate </a>new logic added for this process. Previously, any C Comment Lines entered on type 07 consignment orders would not be carried over and printed on the 08 Final Invoice for the consignment order. For Versions 18 &amp; higher, this was updated to carry over these comment lines as well as printing them on the final invoice. Each C comment on the 08 consignment sales order will be listed below its corresponding product number. <br /><span class="Bold">Note:</span> A USER-FORMS change is not required for this feature. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002486">New Price Matrix Types</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002487">Type 53 - Type 53 matrices allow you to set up special pricing for a Customer Number/</a>Product Prefix combination. The new matrix Type 53 will allow price discounts to be calculated for a customer number and product prefix combination. With this new matrix type, the Price Matrix Listings menu option has also been updated with a new Customer/ Product Prefix listing to incorporate this new type. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><a name="1002488">Type 54 - Type 54 matrices allow you to set up special pricing for a Customer Price </a>Group/Product Prefix, combination. The new matrix Type 54 will allow price discounts to be calculated for a customer price group and product prefix combination. With this new matrix type, the Price Matrix Listings menu option has also been updated with a new Customer Price Group/ Product Prefix listing to incorporate this new type. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="1002489">Note:</a></span> These new types can only be used if Product # Prefix is Y in Inventory Parameters.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002490&quot;);"><a name="1002490">Picking &amp; Shipping</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002490", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002490", false);</script>
+      <div class="Subhead"><a name="1002491">Update to Warehouse Release Confirmation Entry functionality </a></div>
+      <div class="Body"><a name="1002492">The functionality of Warehouse Release Confirmation Entry now allows you to choose to </a>print a packing list. Select Y to send the packing list to the continuous printer. Select N to not print the packing list. </div>
+      <div class="Body"><span class="Bold"><a name="1002493">Note:</a></span> The continuous printer must be setup to print sales order packing lists to use this option.</div>
+      <div class="Subhead"><a name="1002494">Update To The Fill Rate Detail Report Functionality</a></div>
+      <div class="Body"><a name="1002495">Due to the new Fill Rate Purge process, the Fill Rate Detail Report will no longer prompt </a>the user to purge the data at the end of running the report.</div>
+      <div class="Subhead"><a name="1002496">New Stand-Alone Email Shipping Notice</a></div>
+      <div class="Body"><a name="1002497">A new Stand-Alone Email Shipping Notice option was added to the Optional Entry &amp; </a>Printing menu. This new feature enables users to send text e-mail shipping notices for release numbers. Once the Release Number was entered, <span class="Italics">(which is pulled from the </span><span class="Italics">ORDER file or ORDER.HISTORY file based on if the order was invoiced yet or not)</span> the Customer Number and email associated with the release are defaulted. You can change the e-mail. </div>
+      <div class="Body"><span class="Bold"><a name="1002498">Note:</a></span> To use this feature, the Email Ship Notice flag for customers must be set to N (Customer Maintenance&gt; F7-Order&gt; F5-Add Info). In addition to this new option, a new %CPO% tag has also been added as a valid tag in the Email Document Text Maintenance screen. This new tag denotes that the customer p/o number will be printed in the body of the text e-mail for order acknowledgements and shipping confirmations. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002499&quot;);"><a name="1002499">Inquiries</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002499", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002499", false);</script>
+      <div class="Subhead"><a name="1002500">New Summary G/L Recap Option</a></div>
+      <div class="Body"><a name="1002501">A new Summary G/L Recap option was added to the Order Info menu in SOI. This new </a>feature was created to display the G/L Entry for the deposit amount that was received for this sales order. This works with the new Deposit Required feature added in the Customer Control Files.<span class="Italics"> </span></div>
+      <div class="Body"><span class="Bold"><a name="1002502">Note:</a></span> These new types can only be used if Product # Prefix is Y in Inventory Parameters. To view the G/L Entry information, the Display Cost? field in your User ID Maintenance must be set to A.</div>
+      <div class="Subhead"><a name="1002503">New Sales Order Log Inquiry Codes</a></div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002504">CAN</a></span> - To accommodate the new Auto Cancellation Date field in the Add Info screens at both the Line Item level and Header level, the Sales Order Log Inquiry was updated. A new CAN code will be displayed indicating that a line item or multiple line items were cancelled due to the Auto Cancellation Date process. The CAN code will be displayed for each line item cancelled. In addition, the reference column in the inquiry will reference the actual item number that was deleted. <span class="Bold">Note:</span> The CAN code is primarily for items; DEL is for entire sales order. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002505">DEL</a></span> - To accommodate the new Auto Cancellation Date field in the Add Info screens at both the Line Item level and Header level, the Sales Order Log Inquiry was updated. The DEL code will now also represent sales orders that were deleted due to the Auto Cancellation Date process. In addition, the reference column in the inquiry will reference Auto B/O Cancellation. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002506">DPA</a></span> - With the new Deposit Required flag added to the A/R Terms Code Maintenance screen, a new DPA code was created to distinguish that a deposit was applied for an order. The reference column displays Deposit Applied and the amount.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002507">H-C -</a></span> With a new Credit Limit Amount field added to User ID Maintenance, the Sales Order Log Inquiry was updated. The inquiry will now reference any Sales Orders, Credit Memos and RGAs that were placed on Administrative Invoice Hold due to exceeding the credit limit amount in the Credit Limit Amount field. The reference for the AIH code will be displayed as the Manager Code followed by H-C. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet_outer" style="margin-left: 9pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet_inner" style="width: 9pt; white-space: nowrap;">•	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet_inner"><span class="Bold"><a name="1002508">J </a></span>- With a new Quote Limit field <span class="Italics">(Referenced in the Systems New Features list) </span>added to User ID Maintenance, the Administrative Quote Release Inquiry was updated to incorporate this new feature. Once a quote is updated from Quote Hold due to exceeding the Quote Limit in User ID Maintenance, the J code will be updated to reference this. When the quote is released from hold, the system will now prompt you to Print or Suspend. Select Print to set the quote up for printing or. The system will then determine the print output, whether it be to print, email or fax the quote based on the print box selected at the time of processing the quote in Quotation Order Entry. If Suspend is selected, the quote is suspended and not available for printing. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Subhead"><a name="1002509">Updated Continuous Printer Functionality</a></div>
+      <div class="Body"><a name="1002510">The functionality of the Continuous Printer for Administrative Order Release Inquiry was </a>modified for V18+. Now when a sales order that is linked to a work order is released from credit hold in Credit Release Inquiry, the system now checks the linked work order to see if released (Auto Release flag set to Y in BMW/Work Order Parameters) and continuous printing is used. If the criteria is met, the system sends the work order pick ticket to the continuous printer. Previously, you had to run the Release Pick Tickets process to find the available work orders released from administrative order hold available for printing.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002511&quot;);"><a name="1002511">Reports</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002511", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002511", false);</script>
+      <div class="Subhead"><a name="1002512">New Page Break Feature </a></div>
+      <div class="Body"><a name="1002513">A new Page Break on Salesrep/WB field was added to the GRIM screen for the Open </a>Sales Order Detail Report. This is a Y/N field that allows the user to select if a page break is to take place when generating this report. The page break will occur after the salesrep or the written by, based on the flag setting in the Sort By Cust, Salesrep, WB flag. If the sort by flag is set to S, the report will break after each salesrep's information. If the sort by flag is set to W, the report will break after each written by information. If this flag is set to N, this report will not be generated with any page breaks. </div>
+      <div class="Subhead"><a name="1002514">New Cash Sales Breakdown Register Report </a></div>
+      <div class="Body"><a name="1002515">A new report was created for the Point of Sale Subsystem. Generating this new Cash </a>Sales Breakdown Register report will provide cash register sales breakdown information by Cash, Check, Credit Card and Gift Certificates for a date. However, gift certificate information will not be updated until the 05 order is invoiced. </div>
+      <div class="Subhead"><a name="1002516">New Daily Deposit Received Report </a></div>
+      <div class="Body"><a name="1002517">A new Daily Deposit Received Report was added with the new Deposit Required flag. This </a>report will display information pertaining to deposits received from sales orders that are associated with A/R terms codes that have the Deposit Required flag set to Y. The information on this report will include Order #, Customer #, Payment, Terms and Deposit amounts. In addition, this report breaks and totals for each cash pay type. </div>
+      <div class="Subhead"><a name="1002518">Updated Monthly Lost Sales Report </a></div>
+      <div class="Body"><a name="1002519">To accommodate the new Auto Cancellation Date field in the Add Info screens at both the </a>Line Item level and Header level, the Monthly Lost Sales report was modified. This report will now display a CD lost sales reason code to indicate that a line item or the entire sales order was deleted due to the Auto Cancellation Date process.</div>
+      <div class="Subhead"><a name="1002520">New ‘Ent-Date and Ent-Time columns </a></div>
+      <div class="Body"><a name="1002521">The Customer, Pricing, Product, Vendor, and Contract Audit reports are updated with a </a>new Ent-Date and Ent-Time column. These columns display the date and time that the modifications were made to customers, pricing, products, vendors and contacts.</div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002522&quot;);"><a name="1002522">Retail</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002522", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002522", false);</script>
+      <div class="Subhead"><a name="1002523">Updated Retail Cash Sale Entry Functionality</a></div>
+      <div class="Body"><a name="1002524">The Retail Cash Sale Entry screen was updated with a new functionality when entering a </a>product that is currently associated with a promotional matrix. Once a product is entered that contains a promotional matrix, the Customer Promotion Matrix Inquiry screen will be displayed, providing a list of promotions currently available pertaining to this product. Once reviewed and F2 is selected, the detail screen will then be displayed allowing the user to select the quantity for this promotional item. If multiple promotional matrices exist, the promotional item given to the customer will be based on the promotion that matches the quantity entered. When the order is complete, the Promo List Display lists all the promotional items that were added to the order. </div>
+      <div class="Subhead"><a name="1002525">New Retail Credit Sales Entry Option</a></div>
+      <div class="Body"><a name="1002526">The POS Subsystem was enhanced with a new Retail Credit Sale Entry option. This new </a>feature enables credits to be entered for cash refunds on returned items. This procedure is similar to the Credit Memo Entry process in which the line item detail screen defaults to a negative quantity and refund amount. However, you can still enter a positive quantity as well as a positive amount for any re-bill situations. It is recommended to use this entry process for entering returns if the <span class="Italics">Suppress Line Item Detail</span> flag in Point of Sale Options Maintenance is set to Y. Due to the fact that the detail information screen is not prompted in Retail Cash Sale Entry. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <div class="DropDownStart" onclick="WebWorks_ToggleDIV(WebWorksRootPath, &quot;wwdd1002527&quot;);"><a name="1002527">Quotes</a><script type="text/javascript" language="JavaScript1.2">WebWorks_WriteArrow(WebWorksRootPath, "wwdd1002527", false);</script></div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVOpen("wwdd1002527", false);</script>
+      <div class="Subhead"><a name="1002528">New Return To Product Option</a></div>
+      <div class="Body"><a name="1002529">The Warning!! This Product Number was Previously Entered. message was updated with </a>a new Return To Product option. Previously, the only options available were Return to Order which returns the user back to the order to allow a different product to be entered. Continue which returns the user to the Line Item Detail screen and allow the duplicate product to be entered. The new Return To Product option takes the user to the first occurrence of the product number and removes the duplicate product number and removes the duplicate product number entered. This new feature is available in Sales Order Entry, Quotation Order Entry, Purchase Order Entry and Work Order Entry.</div>
+      <div class="Subhead"><a name="1002530">Updated Manager Code Functionality</a></div>
+      <div class="Body"><a name="1002531">With a new Quote Limit field added to User ID Maintenance, the Quotation Log and QUote </a>Release Inquiries uses the code AQH to reference Quotes that were placed on Administrative Quote Hold due to exceeding the quote limit amount in the Quote Limit field. The Manager Code followed by H-J. </div>
+      <script type="text/javascript" language="JavaScript1.2">WebWorks_WriteDIVClose();</script>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="v18_new_features.3.1.htm#1002462">V18 New Features</a>:Order Processing</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

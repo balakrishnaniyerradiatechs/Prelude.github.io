@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- MOTW-DISABLED saved from url=(0014)about:internet -->
+    <title>Renting from a Vendor and Renting to a Customer</title>
+    <link rel="StyleSheet" href="css/opt_rnt.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body class="" style="" onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <blockquote>
+      <div class="Head2"><a name="1074345">Renting from a Vendor and Renting to a Customer</a></div>
+      <div class="Body"><a name="1074346">You can rent an item from a vendor so you can rent it to a customer by receiving and billing </a>the rental item multiple times until the rental is complete. Typically, non-stock product is ordered and linked to a type 11 Recurring Billing purchase order. When you receive the vendor’s invoice and reconcile it with the receiver in Vendor Invoice Reconciliation Entry, the vendor is setup for payment and the customer is invoiced for the same amount if the product is non-rental. If it is a rental product then the customer is invoiced through periodic billing. The rental/sales order and purchase order stay open until the rental item is returned and the final bill is received from the vendor. </div>
+      <div class="Subhead"><a name="1074348">Purchase Order Entry Types</a></div>
+      <div class="Path"><a name="1123499">Path: System Parameter &gt; Maintenance &gt; Purchasing Controls Purchase Order Entry Types</a></div>
+      <div class="Body"><a name="1074349">Purchase order type 11 (Recurring Billing</a><span class="Italics">)</span> must be available in Purchase Order Entry Type maintenance before it can be used in Purchase Order Entry. If this purchase order type is not listed simply add it to the list.</div>
+      <div class="Subhead"><a name="1074354">Product Maintenance (/PM)</a></div>
+      <div class="Body"><a name="1074355">For each product (typically nonstock), you can indicate if recurring billing can be used:.</a></div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123536">Y - use to recurring billing in Vendor Invoice Reconciliation Entry until the rental is </a>complete. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Bullet2_outer" style="margin-left: 18pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Bullet2_inner" style="width: 9pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="Bullet2_inner"><a name="1123537">N - do not use recurring billing. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Path"><a name="1074359">Path: Inventory &gt; Maintenance &gt; Product Maintenance F5-Add Info &gt; F5-Add Info<img class="Default" src="images/rental_pm.jpg" width="342" height="255" style="display: block; float: none; left: 0.0; text-align: center; top: 0.0;" alt="" /></a></div>
+      <div class="Subhead"><a name="1074361">Recurring Billing Steps</a></div>
+      <div class="NumberedIntro"><a name="1074362">Recurring billing may be done with a rental or non-rental product. Using a rental product </a>allows you to use the periodic billing process if the order is set up for periodic billing. Using a non-rental product allows you to by-pass periodic billing and bill the customer immediately after receiving the bill from the vendor. </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1074363">Enter the non-stock product on an order. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span class="Bold"><a name="1074364">For a Rental  Product</a></span>: In Rental Order Entry (or Sales Order Entry) enter an part with a <span class="Italics">Product Type</span> of N (rental) and with <span class="Italics">Recurring Billing</span> set to Y. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BulletStep2_outer" style="margin-left: 36pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BulletStep2_inner" style="width: 18pt; white-space: nowrap;">-	</div>
+            </td>
+            <td width="100%">
+              <div class="BulletStep2_inner"><span class="Bold"><a name="1074365">For a Non-Rental Type Product</a></span>: In Sales Order Entry enter an non-stock part without a <span class="Italics">Product Type</span> of N and with <span class="Italics">Recurring Billing</span> of Y. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Indent"><a name="1074366">In both cases, the supply code is D when the line is linked to a type 11 recurring P/O.</a></div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1074367">Link the rental product to a type 11 Recurring Billing P/O either through the </a>automatically in rental/sales order entry or manually in purchase order entry. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1074369">Start the clock on the rental using Vendor Invoice Reconciliation Entry. On the first </a>receiver, enter a rental start date and time for rental products. You can start the clock before receiving the item by updating the start and time in VIRE, but not the A/P information.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123800">Receive the P/O as many times as needed. The original order quantity is never </a>decreased; the purchase order remains the way it was when first entered. When you save these receivers and are asked if the rental is complete, choose No so that the pick quantity on the  is updated but the linkage is not removed and the P/O stays open.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1123778">When you finish renting the item, close the P/O in VIRE. When you save the final </a>receiver in VIRE, choose Yes when you are asked if the rental is complete. The rental/sales order is not set up for invoicing. You must manually set up the last invoice to the customer for billing.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_outer" style="margin-left: 0pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Numbered_inner" style="width: 18pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_inner"><a name="1074374">Bill the customer.  For rental products, the order is not set up for invoicing. Instead </a>periodic billing picks it up and invoices it. For non-rental products, the linked sales order is set up for billing if <span class="Italics">A/P Auto Direct Invoice Setup</span> is Y. If the <span class="Italics">A/P Auto Direct </span><span class="Italics">Invoice Setup</span> system option is set to ‘N’, then you must manually set the order up for invoicing. The invoice is generated the next batch.  </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="opt_rnt.1.8.htm#1074345">Rental Transactions</a>:Renting from a Vendor and Renting to a Customer</div>
+    <br />
+    <table align="right" summary="">
+      <tr>
+        <td class="WebWorks_Company_Name_Bottom">
+          <a href="wdncustomer.activant.com" target="_blank">Activant Solutions Inc.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Phone_Bottom">866-878-0574</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Fax_Bottom">972-403-3150</td>
+      </tr>
+      <tr>
+        <td class="WebWorks_Company_Email_Bottom">
+          <a href="mailto:PreludeEducation@activant.com">PreludeEducation@activant.com</a>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>
